@@ -631,10 +631,12 @@ const Collection = () => {
             variants={videoVariants}
             initial="initial"
             whileInView="animate"
+            poster='/designindianhomes-video-poster.png'
           >
             <source
-              src="/video/video-interior-designer-company-in-delhi-gurgaon-noida-india.mp4"
+              src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).webm?updatedAt=1708376524924"
               type="video/mp4"
+              
             />
             Your browser does not support the video tag.
           </motion.video>
