@@ -634,7 +634,7 @@ const Collection = () => {
             poster='/designindianhomes-video-poster.png'
           >
             <source
-              src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).webm?updatedAt=1708376524924"
+              src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).mp4?updatedAt=1708375803011"
               type="video/mp4"
               
             />

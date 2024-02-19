@@ -4,7 +4,7 @@ const nextConfig = {
     // ...other configurations
   
     images: {
-      domains: ['www.modularkitcheninnoida.com','api.designindianwardrobe.com', 'images.unsplash.com'],
+      domains: ['www.modularkitcheninnoida.com','api.designindianwardrobe.com', 'images.unsplash.com', 'www.imagekit.io'],
     },
     experimental: {
       missingSuspenseWithCSRBailout: false,
