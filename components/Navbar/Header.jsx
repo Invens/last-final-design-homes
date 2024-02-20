@@ -51,143 +51,85 @@ const Header = () => {
   const getImageForItem = (item) => {
     const imageMapping = {
       //interior
-      '1bhk':
-        '/images/interiors/best-designs-for-1-bhk-residence-flat-in-delhi-gurgaon-noida-india (1).png',
-      '2bhk':
-        '/images/interiors/2-bedroom-flat-design-ideas-concept-budget-makeovers-interior-designs-in-delhi-gurgaon-noida-india (1).jpeg',
-      '3bhk':
-        '/images/interiors/3-bhk-flat-interior-apartment-design-in-delhi-gurgaon-noida-india (1).webp',
-      '4bhk':
-        '/images/interiors/gallery-collection-pictures-of-4bhk-4-bedroom-flat-interior-designing-ideas-in-delhi-gurgaon-noida-india (4).jpg',
-      farmhouse:
-        '/images/interiors/best-farmhouse-interior-design-ideas-architects-in-delhi-gurgaon-noida-india (4).jpg',
-      pent: '/images/interiors/best-pent-house-designs-inspiration-in-delhi-gurgaon-noida-india-faridabad (4).jpg',
-      office:
-        '/images/interiors/residential-office-makeovers-interiors-designs-redesigning-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
-      studio:
-        '/images/interiors/best-designs-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
-      bunglow:
-        '/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
-      duplex:
-        '/images/interiors/best-interior-design-ideas-for-duplex-in-delhi-gurgaon-noida-faridabad-india (6).jpg',
-      cottage:
-        '/images/interiors/beautiful - cottage - interior - design - in - delhi - gurgaon - noida - faridabad.jpg',
-      villa:
-        '/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
+     ' 1bhk':'/images/interiors/bebeautiful-designs-for-1bhk-flats-interiors-residences-in-delhi-gurgaon-noida-india (1).jpeg',
+     '2bhk':'/images/interiors/2bhk-2-bedroom-interior-designing-cost-price-makeover-redesigning-services-in-delhi-gurgaon-noida-india (1).jpg',
+      '3bhk':'/images/interiors/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpg',
+      '4bhk':'/images/interiors/amazing-4bhk-designs-4-bedrooms-for-interiors-designing-ideas-in-delhi-gurgaon-noida-india (7).jpg',
+      farmhouse: '/images/interiors/beautiful-farmhouses-designs-interiors-in-delhi-gurgaon-noida-faridabad-india (1).jpeg',
+      pent: '/images/interiors/beautiful-elegant-pent-house-designs-ideas-concepts-apartments-flats-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpeg',
+      office:'/images/interiors/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg',
+      studio:'/images/interiors/beautiful-interior-designs-renovations-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
+      bunglow:'/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
+      duplex:'/images/interiors/amazing-beautiful-designs-interiors-gallery-collection-pictures-for-duplex-flats-residences-apartments-in-delhi-gurgaon-noida-india (1).jpg',
+      cottage:'/images/interiors/beautiful - cottage - interior - design - in - delhi - gurgaon - noida - faridabad.jpg',
+      villa:'/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
 
       //renovation
-      structural:
-        '/images/renovation/complete-building-structures-end-to-end-builders-developers-in-delhi-gurgaon-noida-india (6).jpg',
-      bathroom:
-        '/images/renovation/bathroom-redesigning-services-in-delhi-gurgaon-noida-india (4).jpeg',
-      livingroom:
-        '/images/renovation/beautiful-small-living-room-decor-designing-interiors-designs-in-delhi-gurgaon-noida-faridabad-india (2).jpg',
+      structural:'/images/renovation/complete-building-structures-end-to-end-builders-developers-in-delhi-gurgaon-noida-india (6).jpg',
+      bathroom:'/images/renovation/bathroom-redesigning-services-in-delhi-gurgaon-noida-india (4).jpeg',
+      livingroom:'/images/renovation/beautiful-small-living-room-decor-designing-interiors-designs-in-delhi-gurgaon-noida-faridabad-india (2).jpg',
       gym: '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      interiorRenovation:
-        '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      terrace:
-        '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      bedroom:
-        '/images/renovation/top-bedroom-design-ideas-concepts-interior-designers-architects-delhi-gurgaon-noida-india (1).jpg',
-      mandir:
-        '/images/renovation/top-mandir-manufacturers-in-delhi-gurgaon-noida-india (7).jpg',
-      farmhouseRenovation:
-        '/images/renovation/end-to-end-farmhouse-renovations-services-turnkey-farmhouse-designing-building-in-delhi-gurgaon-noida-india (7).jpg',
-      wardrobeRenovation:
-        '/images/renovation/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
-      villRenovation:
-        '/images/renovation/beautiful-villa-designs-in-delhi-gurgaon-noida-india (1).jpg',
-      banquet:
-        '/images/renovation/banquet-designers-developers-architects-builders-in-delhi-gurgaon-noida-india (2).jpeg',
-      hotel:
-        '/images/renovation/best-hotel-interior-designs-renovations-redesigning-hotels-architects-interior-designers-delhi-gurgaon-noida-india (1).jpg',
-      modularKitchen:
-        '/images/renovation/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
+      interiorRenovation:'/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
+      terrace: '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
+      bedroom:'/images/renovation/top-bedroom-design-ideas-concepts-interior-designers-architects-delhi-gurgaon-noida-india (1).jpg',
+      mandir: '/images/renovation/top-mandir-manufacturers-in-delhi-gurgaon-noida-india (7).jpg',
+      farmhouseRenovation: '/images/renovation/end-to-end-farmhouse-renovations-services-turnkey-farmhouse-designing-building-in-delhi-gurgaon-noida-india (7).jpg',
+      wardrobeRenovation: '/images/renovation/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      villRenovation: '/images/renovation/beautiful-villa-designs-in-delhi-gurgaon-noida-india (1).jpg',
+      banquet:'/images/renovation/banquet-designers-developers-architects-builders-in-delhi-gurgaon-noida-india (2).jpeg',
+      hotel: '/images/renovation/best-hotel-interior-designs-renovations-redesigning-hotels-architects-interior-designers-delhi-gurgaon-noida-india (1).jpg',
+      modularKitchen:'/images/renovation/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
       loungRenovation: '/images/renovation/loung renovation.jpg',
 
       //Architectural large
-      luxury:
-        '/images/consultancy/larg_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (9).jpg',
-      consultant:
-        '/images/consultancy/larg_image/Architect - consultant - in - delhi - gurgaon - noida.jpg',
-      design:
-        '/images/consultancy/larg_image/beautiful - design - project -planing - in - delhi - gurgaon - noida.jpg',
-      renovation:
-        '/images/consultancy/larg_image/structural-designing-buildings-developers-architects-services-renovations-in-delhi-gurgaon-noida-india (1).jpg',
-      project:
-        '/images/consultancy/larg_image/villa-renovation-services-in-delhi-gurgaon-india-noida (3).jpg',
+      luxury:'/images/consultancy/larg_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (9).jpg',
+      consultant: '/images/consultancy/larg_image/Architect - consultant - in - delhi - gurgaon - noida.jpg',
+      design:'/images/consultancy/larg_image/beautiful - design - project -planing - in - delhi - gurgaon - noida.jpg',
+      renovation:'/images/consultancy/larg_image/structural-designing-buildings-developers-architects-services-renovations-in-delhi-gurgaon-noida-india (1).jpg',
+      project:'/images/consultancy/larg_image/villa-renovation-services-in-delhi-gurgaon-india-noida (3).jpg',
 
       //Architectural small
-      luxurysm:
-        '/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg',
-      consultantsm:
-        '/images/consultancy/Consultancy - in delhi - gurgaon - noida - faridabad.jpg',
-      designsm:
-        '/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpg',
-      renovationsm:
-        '/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg',
-      projectsm:
-        '/images/consultany/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg',
+      luxurysm:'/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg',
+      consultantsm: '/images/consultancy/Consultancy - in delhi - gurgaon - noida - faridabad.jpg',
+      designsm: '/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpg',
+      renovationsm:'/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg',
+      projectsm:'/images/consultany/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg',
 
       //Modular Kitchen large
       type: '/images/modular_kitchen/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (2).jpg',
-      modular:
-        '/images/modular_kitchen/larg/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
-      luxury_modular:
-        '/images/modular_kitchen/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (4).jpg',
-      kitchen_renovation:
-        '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (7).jpg',
-      renovationss:
-        '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      modular:'/images/modular_kitchen/larg/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
+      luxury_modular: '/images/modular_kitchen/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (4).jpg',
+      kitchen_renovation: '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (7).jpg',
+      renovationss:'/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
 
       //WardRobes
 
-      types_wardrobe:
-        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
-      luxury_wardrobe:
-        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (4).jpg',
-      wardrobe_design:
-        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg',
-      glass_wardrobe:
-        '/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
-      wardrobe_renovation:
-        '/images/wardrobe/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (1).jpg',
+      types_wardrobe:'/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
+      luxury_wardrobe: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (4).jpg',
+      wardrobe_design: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg',
+      glass_wardrobe:'/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
+      wardrobe_renovation: '/images/wardrobe/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (1).jpg',
 
       //Living
 
-      tv_units:
-        '/images/living/larg/best-design-for-tv-units-in-delhi-gurgaon-noida-faridabad.jpg',
-      crockery_unit:
-        '/images/living/larg/best-design-for-crockery-units-in-delhi-noida-gurgaon.jpg',
-      bookshlaves:
-        '/images/living/larg/Beautiful-design-bookshelves-in-noida-gurgaon-faridabad.jpg',
-      glass_partition:
-        '/images/living/larg/designer-glass-partitions-dealers-in-delhi-gurgaon-noida-india (5).jpg',
-      dressing:
-        '/images/living/larg/beautiful-dressing-unit-in-delhi-gurgaon-noida.jpg',
-      home_office:
-        '/images/living/larg/ideas-budget-interior-designs-for-residential-offices-in-delhi-gurgaon-noida-india (2).webp',
-      shoes_rack:
-        '/images/living/larg/best-design-shoe-racks-in-delhi-gurgaon-noida.jpg',
-      living_renovation:
-        '/images/living/larg/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (2).jpg',
+      tv_units:'/images/living/larg/best-design-for-tv-units-in-delhi-gurgaon-noida-faridabad.jpg',
+      crockery_unit: '/images/living/larg/best-design-for-crockery-units-in-delhi-noida-gurgaon.jpg',
+      bookshlaves:  '/images/living/larg/Beautiful-design-bookshelves-in-noida-gurgaon-faridabad.jpg',
+      glass_partition: '/images/living/larg/designer-glass-partitions-dealers-in-delhi-gurgaon-noida-india (5).jpg',
+      dressing: '/images/living/larg/beautiful-dressing-unit-in-delhi-gurgaon-noida.jpg',
+      home_office:'/images/living/larg/ideas-budget-interior-designs-for-residential-offices-in-delhi-gurgaon-noida-india (2).webp',
+      shoes_rack: '/images/living/larg/best-design-shoe-racks-in-delhi-gurgaon-noida.jpg',
+      living_renovation:'/images/living/larg/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (2).jpg',
 
       //Modular Interior
 
-      mandir_interior:
-        '/images/modular_interior/larg/designer-mandir-dealers-manufacturers-in-delhi-gurgaon-noida-india (3).jpg',
-      chest_drawer:
-        '/images/modular_interior/larg/beautiful-design-shoe-racks-in-delhi-gurgaon-noida.jpeg',
-      bar_unit:
-        '/images/modular_interior/larg/beautiful-design-bar-unit-in-delhi-gurgaon-noida.jpg',
-      side_table:
-        '/images/modular_interior/larg/side-table-design-in delhi-gurgaon-noida-faridabad.jpg',
-      foldable_bed:
-        '/images/modular_interior/larg/beautiful-foldable-bed-in-delhi-gurgaon-noida-faridabad.jpg',
-      foyer_cabinet:
-        '/images/modular_interior/larg/foyer-area-wooden-cabinets-dealers-manufacturers-delhi-gurgaon-noida-india (1).jpg',
-      bathroom_vatities:
-        '/images/modular_interior/larg/bathroom-designs-in-delhi-gurgaon-noida-india (1).jpeg',
+      mandir_interior:'/images/modular_interior/larg/designer-mandir-dealers-manufacturers-in-delhi-gurgaon-noida-india (3).jpg',
+      chest_drawer:'/images/modular_interior/larg/beautiful-design-shoe-racks-in-delhi-gurgaon-noida.jpeg',
+      bar_unit:'/images/modular_interior/larg/beautiful-design-bar-unit-in-delhi-gurgaon-noida.jpg',
+      side_table:'/images/modular_interior/larg/side-table-design-in delhi-gurgaon-noida-faridabad.jpg',
+      foldable_bed:'/images/modular_interior/larg/beautiful-foldable-bed-in-delhi-gurgaon-noida-faridabad.jpg',
+      foyer_cabinet: '/images/modular_interior/larg/foyer-area-wooden-cabinets-dealers-manufacturers-delhi-gurgaon-noida-india (1).jpg',
+      bathroom_vatities: '/images/modular_interior/larg/bathroom-designs-in-delhi-gurgaon-noida-india (1).jpeg',
     }
     return imageMapping[item] || '/images/top4.jpeg'
   }
@@ -366,6 +308,48 @@ const Header = () => {
               <li>Commercial Architectural Services</li>
             </Link>
             <Link href=""></Link>
+          </ul>
+          <ul className="text-sm">
+            <h3 className="text-lg font-bold">Selected Homes</h3>
+            <Link href="/astounding-lobby-area-designs">
+              <li>Astounding Lobby Areas</li>
+            </Link>
+            <Link href="/artistic-bedroom-designs">
+              <li>Artistic Bedroom</li>
+            </Link>
+            <Link href="/comforting-balcony-area-designs">
+              <li>Comfort balcony Area</li>
+            </Link>
+            <Link href="/soulful-kids-room-designs">
+              <li>Soulful kids Room</li>
+            </Link>
+            <Link href="/relaxed-walk-in-wardrobe-designs">
+              <li>Relaxed Walk in Wardrobe</li>
+            </Link>
+            <Link href="/handsome-modular-wardrobe-designs">
+              <li>Handsome Modular Wardrobe</li>
+            </Link>
+            <Link href="/exquisite-bathroom-remodel-designs">
+              <li>Exquisite Bathroom</li>
+            </Link>
+            <Link href="/chilled-party-bar-unit-designs">
+              <li>Chilled Out Bar & Party Areas</li>
+            </Link>
+            <Link href="/blissful-parents-room-designs-ideas">
+              <li>Blissful Parents Rooms</li>
+            </Link>
+            <Link href="/spellbinding-living-room-designs">
+              <li>Spellbinding Living Rooms</li>
+            </Link>
+            <Link href="/delicious-modular-kitchen-designs">
+              <li>Delicious Kitchens</li>
+            </Link>
+            <Link href="/mesmerizing-modern-home-interiors">
+              <li>Mesmerising Modern Interiors</li>
+            </Link>
+            <Link href="/wholesome-modern-interiors-designs">
+              <li>Wholesome Modern Interiors</li>
+            </Link> 
           </ul>
         </div>
 
@@ -647,11 +631,11 @@ const Header = () => {
           <div className="text-left">
             <h1 className="text-4xl font-bold w-[400px]">Top Architectural Services</h1>
             <p className="text-black w-[400px]">
-              Architecture Tips, Designs & Executions,<br/> Ideas and Advice from
+              Architecture Tips, Designs & Executions,<br /> Ideas and Advice from
               Experts
             </p>
             <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-             <Link href="/architectural-designs">Explore Now</Link> 
+              <Link href="/architectural-designs">Explore Now</Link>
             </button>
           </div>
         </div>
@@ -660,15 +644,15 @@ const Header = () => {
             <ul className="">
               {/* { Starting, this is the sub-category} */}
               <div className="flex gap-2">
-               
-                  <Image
-                    src="/images/consultancy/short_image/Consultancy - in delhi - gurgaon - noida - faridabad.jpeg"
-                    alt=""
-                    width={100}
-                    height={70}
-                    className=" rounded-lg"
-                  />
-              
+
+                <Image
+                  src="/images/consultancy/short_image/Consultancy - in delhi - gurgaon - noida - faridabad.jpeg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+
                 <div>
                   <Link href="/architectural-consultancy">
                     <h3
@@ -685,15 +669,15 @@ const Header = () => {
               </div>
 
               <div className="flex gap-2 mt-3 ">
-               
-                  <Image
-                    src="/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpeg"
-                    alt=""
-                    width={100}
-                    height={70}
-                    className=" rounded-lg"
-                  />
-               
+
+                <Image
+                  src="/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpeg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+
                 <div>
                   <Link href="/architectural-brand-in-india">
                     {' '}
@@ -711,15 +695,15 @@ const Header = () => {
               </div>
 
               <div className="flex gap-2 mt-3">
-                
-                  <Image
-                    src="/images/consultancy/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg"
-                    alt=""
-                    width={100}
-                    height={70}
-                    className=" rounded-lg"
-                  />
-              
+
+                <Image
+                  src="/images/consultancy/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+
                 <div>
                   <Link href="/top-architects-in-india">
                     <h3
@@ -739,15 +723,15 @@ const Header = () => {
               {/* 
               ---- */}
               <div className="flex gap-2 mt-3">
-              
-                  <Image
-                    src="/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg"
-                    alt=""
-                    width={100}
-                    height={70}
-                    className=" rounded-lg"
-                  />
-               
+
+                <Image
+                  src="/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+
 
                 <div>
                   <Link href="/commercial-architectural-delhi-india">
@@ -766,15 +750,15 @@ const Header = () => {
               </div>
               {/* ---- */}
               <div className="flex gap-2 mt-3">
-                
-                  <Image
-                    src="/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg"
-                    alt=""
-                    width={100}
-                    height={70}
-                    className=" rounded-lg"
-                  />
-              
+
+                <Image
+                  src="/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+
                 <div>
                   <Link href="/home-renovation-services">
                     <h3
@@ -827,7 +811,7 @@ const Header = () => {
             <h1
               className="text-4xl font-bold w-[400px]"
             >
-             Modular Kitchen Largest Manufacturers
+              Modular Kitchen Largest Manufacturers
             </h1>
             <p className="text-black w-[400px]">
               Exclusive Modular Kitchen Designs, Tips, Ideas and Advice from Our
@@ -847,8 +831,8 @@ const Header = () => {
                   src="/images/modular_kitchen/short/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (5).jpg"
                   alt=""
                   width={100}
-                    height={70}
-                    className=" rounded-lg"
+                  height={70}
+                  className=" rounded-lg"
                 />
                 <div>
                   <Link href="/modular-kitchen-types">
@@ -872,7 +856,7 @@ const Header = () => {
                   alt=""
                   width={100}
                   height={70}
-                    className=" rounded-lg"
+                  className=" rounded-lg"
                 />
                 <div>
                   <Link href="/modular-kitchen-designs">
@@ -896,8 +880,8 @@ const Header = () => {
                   src="/images/modular_kitchen/short/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (7).jpg"
                   alt=""
                   width={100}
-                    height={70}
-                    className=" rounded-lg"
+                  height={70}
+                  className=" rounded-lg"
                 />
                 <div>
                   <Link href="/luxury-modular-kitchen-india">
@@ -915,58 +899,58 @@ const Header = () => {
                 </div>
               </div>
               <div className="flex gap-2 mt-3 ">
-              <Image
-                src="/images/modular_kitchen/short/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (5).jpg"
-                alt=""
-                width={100}
-                    height={70}
-                    className=" rounded-lg"
-              />
+                <Image
+                  src="/images/modular_kitchen/short/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (5).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
 
-              <div>
-                <Link href="/modular-kitchen-renovation-services">
-                  <h3
-                    className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
-                    onMouseOver={() =>
-                      handleMouseOverImage('kitchen_renovation')
-                    }
-                  >
-                    Kitchen Renovation
-                  </h3>
-                </Link>
+                <div>
+                  <Link href="/modular-kitchen-renovation-services">
+                    <h3
+                      className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
+                      onMouseOver={() =>
+                        handleMouseOverImage('kitchen_renovation')
+                      }
+                    >
+                      Kitchen Renovation
+                    </h3>
+                  </Link>
 
-                <p className="text-xs text-black">
-                  Connect with the top end to end interior Brand
-                </p>
+                  <p className="text-xs text-black">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex gap-2 mt-3">
-              <Image
-                src="/images/modular_kitchen/short/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (7).jpg"
-                alt="top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india"
-                width={100}
-                    height={70}
-                className=" rounded-lg"
-              />
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/modular_kitchen/short/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (7).jpg"
+                  alt="top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india"
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
 
-              <div>
-                <Link href="/modular-kitchen-price-estimator">
-                  <h3
-                    className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
-                    onMouseOver={() => handleMouseOverImage('renovations')}
-                  >
-                    Get Estimate
-                  </h3>
-                </Link>
-                <p className="text-xs text-black">
-                  Connect with the top end to end interior Brand
-                </p>
+                <div>
+                  <Link href="/modular-kitchen-price-estimator">
+                    <h3
+                      className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
+                      onMouseOver={() => handleMouseOverImage('renovations')}
+                    >
+                      Get Estimate
+                    </h3>
+                  </Link>
+                  <p className="text-xs text-black">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
               </div>
-            </div>
             </ul>
           </div>
 
-         
+
         </div>
         <div className="w-1/3">
           <Image
@@ -981,12 +965,12 @@ const Header = () => {
             layout="fixed"
           />
 
-<div className='flex justify-center'>
+          <div className='flex justify-center'>
 
-<p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
+            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
 
 
-</div>
+          </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
       </div>
@@ -1092,56 +1076,56 @@ const Header = () => {
                 </div>
               </div>
               <div className="flex gap-2 mt-3">
-              <Image
-                src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
-                alt=""
-                width={100}
-                height={70}
-                className=" rounded-lg"
-              />
+                <Image
+                  src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
 
-              <div>
-                <Link href="/lacquer-glass-wardrobe-designs">
-                  <h3
-                    className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
-                    onMouseOver={() => handleMouseOverImage('glass_wardrobe')}
-                  >
-                    Lacquer Glass Wardrobe Designs
-                  </h3>
-                </Link>
+                <div>
+                  <Link href="/lacquer-glass-wardrobe-designs">
+                    <h3
+                      className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
+                      onMouseOver={() => handleMouseOverImage('glass_wardrobe')}
+                    >
+                      Lacquer Glass Wardrobe Designs
+                    </h3>
+                  </Link>
 
-                <p className="text-xs">
-                  Connect with the top end to end interior Brand
-                </p>
+                  <p className="text-xs">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex gap-2 mt-3">
-              <Image
-                src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (6).jpg"
-                alt=""
-                width={100}
-                height={70}
-                className=" rounded-lg"
-              />
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (6).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
 
-              <div>
-                <Link href="/wardrobe-renovation-services">
-                  {' '}
-                  <h3
-                    className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
-                    onMouseOver={() =>
-                      handleMouseOverImage('wardrobe_renovation')
-                    }
-                  >
-                    Wardrobe Renovation Services
-                  </h3>
-                </Link>
-                <p className="text-xs">
-                  Connect with the top Wardrobe Renovator Brand
-                </p>
+                <div>
+                  <Link href="/wardrobe-renovation-services">
+                    {' '}
+                    <h3
+                      className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
+                      onMouseOver={() =>
+                        handleMouseOverImage('wardrobe_renovation')
+                      }
+                    >
+                      Wardrobe Renovation Services
+                    </h3>
+                  </Link>
+                  <p className="text-xs">
+                    Connect with the top Wardrobe Renovator Brand
+                  </p>
+                </div>
               </div>
-            </div>
             </ul>
           </div>
         </div>
@@ -1159,10 +1143,10 @@ const Header = () => {
           />
           <div className='flex justify-center'>
 
-<p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
+            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
 
 
-</div>
+          </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
       </div>
@@ -1405,8 +1389,8 @@ const Header = () => {
                   src="/images/living/beautiful-design-tv-unit-in-delhi-gurgaon-noida.jpg"
                   alt=""
                   width={100}
-                    height={70}
-                    className=" rounded-lg"
+                  height={70}
+                  className=" rounded-lg"
                 />
                 <div>
                   <Link href="/mandir-designs">
@@ -1501,55 +1485,55 @@ const Header = () => {
                 </div>
               </div>
               <div className="flex gap-2 mt-3 ">
-              <Image
-                src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
-                alt=""
-                width={100}
-                    height={70}
-                    className=" rounded-lg"
-              />
+                <Image
+                  src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
 
-              <div>
-                <Link href="/foldable-area-designs">
-                  <h3
-                    className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
-                    onMouseOver={() => handleMouseOverImage('foldable_bed')}
-                  >
-                    Foldable Beds
-                  </h3>
-                </Link>
+                <div>
+                  <Link href="/foldable-area-designs">
+                    <h3
+                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() => handleMouseOverImage('foldable_bed')}
+                    >
+                      Foldable Beds
+                    </h3>
+                  </Link>
 
-                <p className="text-xs mt-8">
-                  Connect with the top end to end interior Brand
-                </p>
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="flex gap-2 mt-3">
-              <Image
-                src="/images/living/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (6).jpg"
-                alt=""
-                width={100}
-                    height={70}
-                    className=" rounded-lg"
-              />
-              <div>
-                <Link href="/vanity-designs">
-                  {' '}
-                  <h3
-                    className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
-                    onMouseOver={() =>
-                      handleMouseOverImage('bathroom_vatities')
-                    }
-                  >
-                    Bathroom Vanities
-                  </h3>
-                </Link>
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (6).jpg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/vanity-designs">
+                    {' '}
+                    <h3
+                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() =>
+                        handleMouseOverImage('bathroom_vatities')
+                      }
+                    >
+                      Bathroom Vanities
+                    </h3>
+                  </Link>
 
-                <p className="text-xs mt-8">
-                  Connect with the top end to end interior Brand
-                </p>
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
               </div>
-            </div>
             </ul>
           </div>
 
@@ -1597,10 +1581,10 @@ const Header = () => {
           />
           <div className='flex justify-center'>
 
-<p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
+            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
 
 
-</div>
+          </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
       </div>
@@ -1624,7 +1608,7 @@ const Header = () => {
             <Link href="/about-best-interior-designers-architects">
               <h3 className="text-lg"> About Us</h3>
             </Link>
-           
+
             <Link href="/collaborate-with-architects-interior-designers">
               <h3 className="text-lg">Collaborate with Us</h3>
             </Link>
@@ -1651,35 +1635,35 @@ const Header = () => {
             </button>
           </Link>
         </div>
-       <div className='w-2/3'
-       
-       >
-       
-        <div
-              className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
-              style={{
-                backgroundImage:
-                  "url('https://ik.imagekit.io/hlsvvxksxg/spacejoy-9M66C_w_ToM-unsplash.jpg?updatedAt=1707545903911')",
-                backgroundSize: 'fit',
-                backgroundRepeat: 'no-repeat',
-                objectFit: 'cover',
-                width: '850px',
-                height: "400px"
-              }}
-            >
-              <div className="relative z-10 m-16">
-                <Link href="/calculator">
-                  <h1 className="text-xl md:text-4xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
-                    Get Your Estimates Free
-                  </h1>
-                </Link>
-              </div>
-              {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
+        <div className='w-2/3'
+
+        >
+
+          <div
+            className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
+            style={{
+              backgroundImage:
+                "url('https://ik.imagekit.io/hlsvvxksxg/spacejoy-9M66C_w_ToM-unsplash.jpg?updatedAt=1707545903911')",
+              backgroundSize: 'fit',
+              backgroundRepeat: 'no-repeat',
+              objectFit: 'cover',
+              width: '850px',
+              height: "400px"
+            }}
+          >
+            <div className="relative z-10 m-16">
+              <Link href="/calculator">
+                <h1 className="text-xl md:text-4xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
+                  Get Your Estimates Free
+                </h1>
+              </Link>
+            </div>
+            {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
                 LOVE ALL SERVER ALL
               </h1> */}
-            </div>
-      
-       </div>
+          </div>
+
+        </div>
       </div>
     </div>
   )
@@ -1794,9 +1778,8 @@ const Header = () => {
       <div className=" invisible xl:visible lg:flex">
         {/* Desktop Header */}
         <div
-          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${
-            scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
-          }`}
+          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
+            }`}
           style={{
             position: 'fixed',
             top: 30,
@@ -2052,11 +2035,12 @@ const Header = () => {
             className={`bg-white bg-white text-black w-full h-16 flex items-center justify-around`}
           >
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faHome} size="2x" />
-              Home
+              <FontAwesomeIcon icon={faHome} size="2x" style={{height: "25px", width: "25px"}} />
+              <Link href="/"> Home</Link>
+             
             </button>
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faPalette} size="2x" />
+              <FontAwesomeIcon icon={faPalette} size="2x" style={{height: "25px", width: "25px"}} />
               Design
             </button>
             <button className="flex flex-col items-center text-sm font-bold relative">
@@ -2065,20 +2049,20 @@ const Header = () => {
                   className="bg-yellow-500 rounded-full p-2"
                   style={{ marginBottom: '50px' }}
                 >
-                  <FontAwesomeIcon icon={faPencil} size="3x" />
+                  <FontAwesomeIcon icon={faPencil} size="3x" style={{height: "25px", width: "25px"}} />
                 </div>
               </div>
               <span className="mt-7">Let&apos;s Design</span>
             </button>
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faNewspaper} size="2x" />
-              Magazine
+              <FontAwesomeIcon icon={faNewspaper} size="2x" style={{height: "25px", width: "25px"}} />
+             <Link href="/magazine"> Magazine</Link>
             </button>
             <button
               className="flex flex-col items-center text-sm font-bold"
               onClick={toggleMobileMenu}
             >
-              <FontAwesomeIcon icon={faEllipsisH} size="2x" />
+              <FontAwesomeIcon icon={faEllipsisH} size="2x" style={{height: "25px", width: "25px"}} />
               More
             </button>
           </div>
@@ -2089,9 +2073,11 @@ const Header = () => {
 
       <div
         className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-8 fixed top-0 w-full"
-        style={{ zIndex: '200' }}
+        style={{ zIndex: '190' }}
       >
         <div>
+          <Link href="/">
+         
           <Image
             src="/images/Logo.gif"
             alt="left logo"
@@ -2105,6 +2091,7 @@ const Header = () => {
               marginBottom: '20px',
             }}
           />
+           </Link>
         </div>
         <div>
           <Link
@@ -2345,6 +2332,48 @@ const Header = () => {
                               </Link>
                             </div>
                           </ul>
+                          <ul className="text-base text-black">
+            <h3 className="text-3xl">Selected Homes</h3>
+            <Link href="/astounding-lobby-area-designs">
+              <li>Astounding Lobby Areas</li>
+            </Link>
+            <Link href="/artistic-bedroom-designs">
+              <li>Artistic Bedroom</li>
+            </Link>
+            <Link href="/comforting-balcony-area-designs">
+              <li>Comfort balcony Area</li>
+            </Link>
+            <Link href="/soulful-kids-room-designs">
+              <li>Soulful kids Room</li>
+            </Link>
+            <Link href="/relaxed-walk-in-wardrobe-designs">
+              <li>Relaxed Walk in Wardrobe</li>
+            </Link>
+            <Link href="/handsome-modular-wardrobe-designs">
+              <li>Handsome Modular Wardrobe</li>
+            </Link>
+            <Link href="/exquisite-bathroom-remodel-designs">
+              <li>Exquisite Bathroom</li>
+            </Link>
+            <Link href="/chilled-party-bar-unit-designs">
+              <li>Chilled Out Bar & Party Areas</li>
+            </Link>
+            <Link href="/blissful-parents-room-designs-ideas">
+              <li>Blissful Parents Rooms</li>
+            </Link>
+            <Link href="/spellbinding-living-room-designs">
+              <li>Spellbinding Living Rooms</li>
+            </Link>
+            <Link href="/delicious-modular-kitchen-designs">
+              <li>Delicious Kitchens</li>
+            </Link>
+            <Link href="/mesmerizing-modern-home-interiors">
+              <li>Mesmerising Modern Interiors</li>
+            </Link>
+            <Link href="/wholesome-modern-interiors-designs">
+              <li>Wholesome Modern Interiors</li>
+            </Link> 
+          </ul>
                         </div>
 
                         <div>

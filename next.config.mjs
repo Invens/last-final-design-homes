@@ -465,7 +465,33 @@ const nextConfig = {
         { source: '/glass-partition-designs', destination: '/' },
         { source: '/modular-kitchen-price-estimator', destination: '/' },
         { source: '/dressers-designs', destination: '/' },
-  
+
+        { source: '/astounding-lobby-area-designs', destination: '/selected-homes/astounding-lobby-area-designs' },
+
+        { source: '/artistic-bedroom-designs', destination: '/selected-homes/artistic-bedroom-designs' },
+
+        { source: '/comforting-balcony-area-designs', destination: '/selected-homes/comforting-balcony-area-designs' },
+
+        { source: '/soulful-kids-room-designs', destination: '/selected-homes/soulful-kids-room-designs' },
+
+        { source: '/handsome-modular-wardrobe-designs', destination: '/selected-homes/handsome-modular-wardrobe-designs' },
+
+        { source: '/exquisite-bathroom-remodel-designs', destination: '/selected-homes/exquisite-bathroom-remodel-designs' },
+
+        { source: '/chilled-party-bar-unit-designs', destination: '/selected-homes/chilled-party-bar-unit-designs' },
+
+        { source: '/blissful-parents-room-designs-ideas', destination: '/selected-homes/blissful-parents-room-designs-ideas' },
+
+        { source: '/spellbinding-living-room-designs', destination: '/selected-homes/spellbinding-living-room-designs' },
+
+        { source: '/delicious-modular-kitchen-designs', destination: '/selected-homes/delicious-modular-kitchen-designs' },
+
+        { source: '/mesmerizing-modern-home-interiors', destination: '/selected-homes/mesmerizing-modern-home-interiors' },
+
+        { source: '/wholesome-modern-interiors-designs', destination: '/selected-homes/wholesome-modern-interiors-designs' },
+
+
+
         // Add more custom rewrites as needed
       ]
     },
