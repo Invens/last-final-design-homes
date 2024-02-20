@@ -17,7 +17,6 @@ import BrandImageSlider from './BrandsCarousel'
 
 // import BrandImageSlider from '@/components/Collection/BrandsCarousel'
 
-
 const falshResponsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -75,57 +74,57 @@ const StructureImageUrl = [
   },
 ]
 
-const flasherslider = [
-  {
-    id: 0,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 1,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 2,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 3,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 4,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 5,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-  {
-    id: 6,
-    firstImage:
-      'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
-    secondImage:
-      'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
-  },
-]
+// const flasherslider = [
+//   {
+//     id: 0,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 1,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 2,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 3,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 4,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 5,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+//   {
+//     id: 6,
+//     firstImage:
+//       'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+//     secondImage:
+//       'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+//   },
+// ]
 
 const KitchenImageUrl = [
   //First image url
@@ -174,28 +173,28 @@ const InteriorImageUrl = [
 const WardrobeImageUrl = [
   //First image url
   {
-    url: '/images/wardrobe/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (1).jpg',
+    url: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
   },
   {
-    url: '/images/wardrobe/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (2).jpg',
+    url: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (4).jpg',
   },
   //Second image url
   {
-    url: '/images/wardrobe/largest-collection-of-modular-kitchens-wardrobes-designs-in-delhi-gurgaon-noida-india (5).jpg',
+    url: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg',
   },
   //Third image url
   {
-    url: '/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg',
+    url: '/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
   },
 
   //Fourth image url
 
   {
-    url: '/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (6).jpg',
+    url: '/images/wardrobe/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (1).jpg',
   },
 
   {
-    url: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
+    url: '/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
   },
 ]
 
@@ -571,7 +570,7 @@ const Collection = () => {
             </h3>
           </div>
           <img
-            src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+            src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
             style={backgroundImageStyle}
           />
@@ -631,12 +630,11 @@ const Collection = () => {
             variants={videoVariants}
             initial="initial"
             whileInView="animate"
-            poster='/designindianhomes-video-poster.png'
+            poster="/designindianhomes-video-poster.png"
           >
             <source
               src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).mp4?updatedAt=1708375803011"
               type="video/mp4"
-              
             />
             Your browser does not support the video tag.
           </motion.video>
@@ -846,7 +844,7 @@ const Collection = () => {
                     </h1>
                   </div>
                   <img
-                    src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+                    src="/images/simple-gold-brush-stroke-banner-5.png"
                     alt="Paint Brush"
                     style={backgroundImageStyle}
                   />
@@ -1073,7 +1071,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1084,30 +1082,40 @@ const Collection = () => {
       <div className="section1 relative">
         {/*------------------------------------------ */}
         <div className="main1">
-  <svg id="rotatingText1" viewBox="0 0 200 200" width={200} height={200}>
-    <defs>
-      <path
-        id="circle"
-        d="M 100, 100
+          <svg
+            id="rotatingText1"
+            viewBox="0 0 200 200"
+            width={200}
+            height={200}
+          >
+            <defs>
+              <path
+                id="circle"
+                d="M 100, 100
            m -75, 0
            a 75, 75 0 1, 0 150, 0
            a 75, 75 0 1, 0 -150, 0"
-      ></path>
-    </defs>
-    {/* Place the image at the center of the circle */}
-    <image href="/images/left.gif" width={50} height={50} x="75" y="75" />
-    <text width={400}>
-      <textPath
-        alignmentBaseline="top"
-        xlinkHref="#circle"
-        className="text"
-      >
-        The Best Home Interior Brand of India -
-      </textPath>
-    </text>
-  </svg>
-</div>
-
+              ></path>
+            </defs>
+            {/* Place the image at the center of the circle */}
+            <image
+              href="/images/left.gif"
+              width={50}
+              height={50}
+              x="75"
+              y="75"
+            />
+            <text width={400}>
+              <textPath
+                alignmentBaseline="top"
+                xlinkHref="#circle"
+                className="text"
+              >
+                The Best Home Interior Brand of India -
+              </textPath>
+            </text>
+          </svg>
+        </div>
 
         {/* ------------------------------- */}
         <motion.section
@@ -1175,7 +1183,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1220,7 +1228,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1265,7 +1273,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1312,7 +1320,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1436,7 +1444,7 @@ const Collection = () => {
               </h1>
             </div>
             <img
-              src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+              src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
@@ -1464,35 +1472,41 @@ const Collection = () => {
       </div>
 
       <div className="flex items-center justify-c">
-      <div className="w-1/6 main2">
-  <svg id="rotatingText" viewBox="0 0 200 200" width={200} height={200}>
-    <defs>
-      <path
-        id="circle"
-        d="M 100, 100
+        <div className="w-1/6 main2">
+          <svg id="rotatingText" viewBox="0 0 200 200" width={200} height={200}>
+            <defs>
+              <path
+                id="circle"
+                d="M 100, 100
            m -75, 0
            a 75, 75 0 1, 0 150, 0
            a 75, 75 0 1, 0 -150, 0"
-      ></path>
-    </defs>
-    {/* Group for the image (static) */}
-    <g>
-      <image href="/images/left.gif" width={50} height={50} x="75" y="75" />
-    </g>
-    {/* Group for the text (rotating along the circle) */}
-    <g transform="rotate(-90, 100, 100)">
-      <text width={400}>
-        <textPath
-          alignmentBaseline="top"
-          xlinkHref="#circle"
-          className="text"
-        >
-          No.1 Architectural Brand in India
-        </textPath>
-      </text>
-    </g>
-  </svg>
-</div>
+              ></path>
+            </defs>
+            {/* Group for the image (static) */}
+            <g>
+              <image
+                href="/images/left.gif"
+                width={50}
+                height={50}
+                x="75"
+                y="75"
+              />
+            </g>
+            {/* Group for the text (rotating along the circle) */}
+            <g transform="rotate(-90, 100, 100)">
+              <text width={400}>
+                <textPath
+                  alignmentBaseline="top"
+                  xlinkHref="#circle"
+                  className="text"
+                >
+                  No.1 Architectural Brand in India
+                </textPath>
+              </text>
+            </g>
+          </svg>
+        </div>
 
         <div className="w-full">
           {/* <h1 className=" mr-[15%] text-center mx-auto">
@@ -1506,7 +1520,7 @@ const Collection = () => {
                 </h1>
               </div>
               <img
-                src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+                src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
               />

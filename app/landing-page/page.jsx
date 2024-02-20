@@ -867,20 +867,16 @@ const ConnectSection = () => {
 }
 
 const FIRST_IMAGE_MODERN = {
-  imageUrl:
-    'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+  imageUrl: '/images/landing/photo-1539922980492-38f6673af8dd.jpeg',
 }
 const SECOND_IMAGE_MODERN = {
-  imageUrl:
-    'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+  imageUrl: '/images/landing/photo-1697967464378-1498c293e1aa.jpeg',
 }
 const FIRST_IMAGE_CONT = {
-  imageUrl:
-    'https://source.unsplash.com/a-kitchen-with-blue-cabinets-and-a-black-refrigerator-zFGBEikZoRg',
+  imageUrl: '/images/landing/photo-1539922980492-38f6673af8dd.jpeg',
 }
 const SECOND_IMAGE_CONT = {
-  imageUrl:
-    'https://source.unsplash.com/a-ladder-and-buckets-of-paint-in-a-room-under-construction-XXanshmt5so',
+  imageUrl: '/images/landing/photo-1697967464378-1498c293e1aa.jpeg',
 }
 
 const BeforeAfterTabsSection = () => {

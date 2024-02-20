@@ -6,7 +6,6 @@ export const pagesData = [
     noItems: '2047',
     heading: 'Modular Kitchen Designs',
     desc: ' Get a Top Quality, functional, Affordable & Well Lit Modular Kitchen, using the Top Notch fittings. We Design from a basic simple modular kitchen to an exclusive luxury modular kitchen which perfects for convenience and aesthetics. All Our Modular Kitchens are budget friendly, and we assure you 100% guaranteed quotes across Delhi NCR, we have claimed for the past 9 years, that you bring us any Quote and we offer you Flat 7% off. We design your Modular Kitchen exactly as per bespoke requirements, in all shapes like L shape, G, U shape, Island kitchen, Open kitchen etc with distinctive types of finishes in acrylic, membrane, designer laminates, lacquer glass and veneer shutter. Check out some of the coolest kitchen designs we have with us.',
-   
   },
   {
     id: 1,
@@ -62,5 +61,13 @@ export const pagesData = [
     desc: 'Hey ! I feel like I can look at it for ages, that’s how your friends and family will exclaim after you have a TV unit from our Brand Design Indian Homes. All Our TV Units are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and Tinted mirrors. Check out our designs for some of the top ideas for your TV Units.',
     items: [],
   },
-
+  {
+    id: 7,
+    name: 'Our Homes',
+    slug: 'our-homes',
+    noItems: '1012',
+    heading: '2,3 & 4BHK Home Interior Designs',
+    desc: 'With over 75,000 happy homes delivered, DIH helps you build your dream home in your design and style. Browse through the homes we have delivered for some inspiration. Customised, budget-friendly home designs delivered across cities. Be it renovation or a full home design, apartment or villa home, we have got you covered.',
+    items: [],
+  },
 ]

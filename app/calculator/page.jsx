@@ -78,7 +78,14 @@ const YourStepperComponent = () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <MaxWidthWrapper>
+      <div
+        className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4"
+        style={{
+          backgroundImage: "url('/images/calculator/living_background.jpg')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
         <Container
           style={{
             border: '2px solid #3b82f6', // border-2 border-blue-500
@@ -147,7 +154,7 @@ const YourStepperComponent = () => {
             )}
           </div>
         </Container>
-      </MaxWidthWrapper>
+      </div>
     </Suspense>
   )
 }

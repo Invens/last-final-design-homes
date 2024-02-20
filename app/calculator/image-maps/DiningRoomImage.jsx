@@ -291,7 +291,7 @@ const SvgMap = ({ data, name }) => {
           viewBox="0 0 2856 1934"
           style={{
             backgroundImage:
-              'url("https://artifacts-110268756622-ap-south-1.s3.ap-south-1.amazonaws.com/smd/linedrawings/dining.jpg")',
+              'url("/images/calculator/dining.jpg")',
             backgroundSize: 'cover',
           }}
         >

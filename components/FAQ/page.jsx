@@ -133,7 +133,7 @@ const AccordionSection = () => {
             </h1>
           </div>
           <img
-            src="https://www.onlygfx.com/wp-content/uploads/2022/03/simple-gold-brush-stroke-banner-5.png"
+            src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
             style={backgroundImageStyle}
           />
