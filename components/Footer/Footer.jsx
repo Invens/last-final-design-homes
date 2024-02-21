@@ -454,7 +454,7 @@ export class Footer extends Component {
                 objectFit: 'cover',
               }}
             >
-              <div className="relative z-10 m-16">
+              <div className="relative  m-16">
                 <Link href="/calculator">
                   <h1 className="text-xl md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                     Get Your Estimates Free
