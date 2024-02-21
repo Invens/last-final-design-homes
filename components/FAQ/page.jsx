@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react'
+
 import {
   Accordion,
   AccordionDetails,
@@ -7,6 +8,7 @@ import {
   Typography,
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Image from 'next/image'
 
 const AccordionSection = () => {
   const accordionData = [
@@ -132,7 +134,9 @@ const AccordionSection = () => {
               <span className="font-extrabold">Design Indian Homes</span>
             </h1>
           </div>
-          <img
+          <Image
+          width={1000}
+          height={1000}
             src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
             style={backgroundImageStyle}

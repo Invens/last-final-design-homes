@@ -9,6 +9,7 @@ import Tabs from '../Tabs'
 import Head from 'next/head'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
+import Image from 'next/image';
 const Page = ({}) => {
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>([]);
   useEffect(() => {
@@ -87,7 +88,7 @@ const Page = ({}) => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
         {images.map((image) => (
-          <img key={image.id} src={`https://api.designindianwardrobe.com/uploads/${image.filename}`} alt={image.filename} style={{width: '450px', height: '250px', borderRadius: '10px'}}/>
+          <Image width={1000} height={1000} key={image.id} src={`https://api.designindianwardrobe.com/uploads/${image.filename}`} alt={image.filename} style={{width: '450px', height: '250px', borderRadius: '10px'}}/>
         ))}
         </div>
       </div>

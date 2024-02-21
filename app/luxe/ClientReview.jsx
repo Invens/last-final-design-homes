@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import Link from 'next/link'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
+import Image from 'next/image'
 
 const YouTubeCard = ({ imgUrl, videoLink, openModal, title, desc }) => {
   return (
@@ -14,7 +15,9 @@ const YouTubeCard = ({ imgUrl, videoLink, openModal, title, desc }) => {
           className="relative overflow-hidden rounded-lg cursor-pointer"
           onClick={openModal}
         >
-          <img
+          <Image
+          width={1000}
+          height={1000}
             src={imgUrl}
             alt="Thumbnail"
             className="w-full h-40 object-cover"

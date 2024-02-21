@@ -91,7 +91,7 @@ const StepperComponent = () => {
                 Our Design Process
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}

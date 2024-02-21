@@ -8,7 +8,7 @@ const tabData = [
   // Data for Tab 1
   [' /images/a.png', ' /images/b.png', ' /images/c.png', ' /images/d.png'],
   [' /images/e.png', ' /images/f.png', ' /images/g.png', ' /images/h.png'],
-  [' /images/i.png', ' /images/j.png', ' /images/k.png', ' /images/l.png'],
+  [' /imageWE ARE DELHI BASEDWE ARE DELHI BASEDs/i.png', ' /images/j.png', ' /images/k.png', ' /images/l.png'],
   // Data for Tab 2 (and so on...)
   // ...
 ]

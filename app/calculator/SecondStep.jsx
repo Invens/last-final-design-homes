@@ -8,6 +8,7 @@ import {
   setSpaceCounts,
   setSpaceAreas,
 } from '../../components/redux/actions/secondStepActions'
+import Image from 'next/image'
 
 const SecondStepSection = () => {
   const dispatch = useDispatch()
@@ -112,7 +113,7 @@ const SecondStepSection = () => {
           className="flex items-center justify-between h-20 mb-4 bg-white rounded-lg p-2 mx-4"
         >
           <div className="flex items-center">
-            <img src={space.img} alt={space.name} className="h-12 w-16 mr-4" />
+            <Image width={1000} height={1000} src={space.img} alt={space.name} className="h-12 w-16 mr-4" />
             <div>
               <h3 className="text-sm font-bold">{space.name}</h3>
               <p className="text-xxs sm:text-xs text-gray-600">{space.desc}</p>

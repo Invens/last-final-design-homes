@@ -6,6 +6,7 @@ import Header from '../../components/Navbar/Header'
 import Omsairam from '../../components/Navbar/Omsairam'
 import Footer from '../../components/Footer/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const WordPressPosts = () => {
   const [categories, setCategories] = useState([])
@@ -84,7 +85,9 @@ const WordPressPosts = () => {
                 className="bg-white h-96 p-4 mx-4 border rounded cursor-pointer shadow-md transition-transform transform hover:scale-105"
               >
                 {post._embedded && post._embedded['wp:featuredmedia'] && (
-                  <img
+                  <Image
+                  width={1000}
+                  height={1000}
                     src={post._embedded['wp:featuredmedia'][0].source_url}
                     alt={post._embedded['wp:featuredmedia'][0].alt_text}
                     className="mb-2 w-full h-52 object-cover rounded-t"

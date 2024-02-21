@@ -34,7 +34,7 @@ const Carousel = () => {
           key={index}
           className="outline-none focus:outline-none rounded-lg "
         >
-          <img src={image} alt={`Slide ${index + 1}`} className="rounded-lg" />
+          <Image width={1000} height={1000} src={image} alt={`Slide ${index + 1}`} className="rounded-lg" />
         </div>
       ))}
     </Slider>
@@ -91,7 +91,7 @@ const Display = () => {
     <>
       {/* 
       <div className="main">
-      <img src="/images/left.gif" width={50} height={50} />
+      <Image width={1000} height={1000} src="/images/left.gif" width={50} height={50} />
   
  <svg id="rotatingText" viewBox="0 0 200 200" width={200} height={200}>
    <defs>
@@ -120,7 +120,7 @@ const Display = () => {
                 Exquisite Designs - Exquisite Makeovers
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}

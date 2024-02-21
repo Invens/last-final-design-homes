@@ -10,6 +10,7 @@ import Nav from 'react-bootstrap/Nav'
 import Head from 'next/head'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page';
+import Image from 'next/image';
 
 const Page = ({}) => {
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -100,7 +101,9 @@ const Page = ({}) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
         {images.map((image, index) => (
             <div key={image.id} onClick={() => handleImageClick(index)} style={{ cursor: 'pointer' }}>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                 alt={image.filename}
                 style={{ width: '450px', height: '250px', borderRadius: '10px' }}

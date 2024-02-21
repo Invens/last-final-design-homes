@@ -7,6 +7,8 @@ import Customer from './Customer'
 import CustomerVideos from './CustomerVideos'
 import ArchitectSpeak from './ArchitechSpeak'
 import Link from 'next/link'
+import Image from 'next/image';
+
 const ScheduleChatSection = () => {
   return (
     <section
@@ -61,7 +63,9 @@ const SectionWithImage = () => {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <img
+        <Image
+              width={1000}
+              height={1000}
             src="/images/reviews-mouthshut.jpg"
             alt="Description of your image"
             className="w-full rounded"
@@ -82,7 +86,9 @@ const SocialReviews = () => {
       <div className="flex flex-wrap justify-evenly">
         {/* Column 1 */}
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex items-center">
-          <img
+        <Image
+              width={1000}
+              height={1000}
             src="/images/justDail.jpg"
             alt="Description for Image 1"
             className="w-2/3 h-auto rounded mr-4"
@@ -99,7 +105,9 @@ const SocialReviews = () => {
 
         {/* Column 2 */}
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex items-center">
-          <img
+        <Image
+              width={1000}
+              height={1000}
             src="/images/Sulekha.jpg"
             alt="Description for Image 2"
             className="w-2/3 h-auto rounded mr-4"
@@ -116,7 +124,9 @@ const SocialReviews = () => {
 
         {/* Column 3 */}
         <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex items-center">
-          <img
+        <Image
+              width={1000}
+              height={1000}
             src="/images/facebookReview.jpg"
             alt="Description for Image 3"
             className="w-2/3 h-auto rounded mr-4"

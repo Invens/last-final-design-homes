@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const CustomerReviewSection = () => {
@@ -67,7 +68,9 @@ const CustomerReviewSection = () => {
                   : 'h-auto md:h-[350px]'
               }`}
             >
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 src={customer.photo} // Replace with the actual path to customer photo
                 alt={customer.name}
                 className="w-16 h-16 object-cover rounded-full mx-auto mb-4"

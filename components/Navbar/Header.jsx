@@ -4007,5 +4007,5 @@ const AccordionSection = ({ title, isActive, onClick, children }) => {
     </div>
   )
 }
-
+Header.ssr= false;
 export default Header

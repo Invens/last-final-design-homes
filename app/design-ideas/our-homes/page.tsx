@@ -9,6 +9,7 @@ import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import HomesSlider from './HomesSlider'
+import Image from 'next/image'
 
 const Card = ({ project, handleImageClick }) => {
   return (
@@ -18,7 +19,9 @@ const Card = ({ project, handleImageClick }) => {
     >
       <div className="relative h-56">
         {' '}
-        <img
+        <Image
+        width={1000}
+        height={1000}
           className="absolute h-full w-full object-cover"
           src={project.images[0]}
           alt={project.heading}

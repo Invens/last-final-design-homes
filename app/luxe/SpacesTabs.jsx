@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Tabs, Tab, Box, Container, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
+import Image from 'next/image'
 
 // Sample data for images
 const tabData = [
@@ -103,7 +104,9 @@ const ResponsiveTabs = () => {
           <TabPanel key={index} value={value} index={index}>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {tabImages.map((image, imgIndex) => (
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   key={imgIndex}
                   src={image}
                   alt={`Image ${imgIndex + 1}`}

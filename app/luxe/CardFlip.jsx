@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Boxes, GraduationCap } from 'lucide-react'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
+import Image from 'next/image';
 
 const ImageCard = () => {
   return (
@@ -17,7 +18,9 @@ const ImageCard = () => {
           <div className="group h-48 md:h-96 w-64 [perspective:1000px]">
             <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0">
-                <img
+              <Image
+          width={1000}
+          height={1000}
                   src="https://hlwebsite.s3.ap-south-1.amazonaws.com/luxe/testimonial-1.png"
                   alt=""
                   className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
@@ -126,7 +129,9 @@ const ImageCard = () => {
           <div className="group h-48 md:h-96 w-64 [perspective:1000px]">
             <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0">
-                <img
+              <Image
+          width={1000}
+          height={1000}
                   src="https://hlwebsite.s3.ap-south-1.amazonaws.com/luxe/testimonial-1.png"
                   alt=""
                   className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
@@ -235,7 +240,9 @@ const ImageCard = () => {
           <div className="group h-48 md:h-96 w-64 [perspective:1000px]">
             <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               <div className="absolute inset-0">
-                <img
+              <Image
+          width={1000}
+          height={1000}
                   src="https://hlwebsite.s3.ap-south-1.amazonaws.com/luxe/testimonial-1.png"
                   alt=""
                   className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"

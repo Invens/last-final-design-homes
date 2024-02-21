@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import Marquee from 'react-fast-marquee'
-
+import dynamic from 'next/dynamic';
 import 'react-before-after-slider-component/dist/build.css'
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
@@ -11,8 +11,9 @@ import 'react-multi-carousel/lib/styles.css'
 
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import useMedia from 'use-media'
-import CarouselBeforeAfter from './CarouselBefore'
-import BrandImageSlider from './BrandsCarousel'
+//import BrandImageSlider from './BrandsCarousel'
+const CarouselBeforeAfter = dynamic(() => import('./CarouselBefore'));
+const BrandImageSlider = dynamic(()=> import('./BrandsCarousel'))
 // import CarouselBeforeAfter from '@/components/Collection/CarousalBefore'
 
 // import BrandImageSlider from '@/components/Collection/BrandsCarousel'
@@ -569,7 +570,10 @@ const Collection = () => {
               INDIA’S NO.1 INTERIOR & ARCHITECTURAL BRAND
             </h3>
           </div>
-          <img
+          <Image
+          width={0}
+          height={0}
+
             src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
             style={backgroundImageStyle}
@@ -843,7 +847,7 @@ const Collection = () => {
                       Our Exclusive Content
                     </h1>
                   </div>
-                  <img
+                  <Image width={1000} height={1000}
                     src="/images/simple-gold-brush-stroke-banner-5.png"
                     alt="Paint Brush"
                     style={backgroundImageStyle}
@@ -1070,7 +1074,7 @@ const Collection = () => {
                 Connect With Us
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1182,7 +1186,7 @@ const Collection = () => {
                 Best Trending Kitchens
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1205,7 +1209,7 @@ const Collection = () => {
           {KitchenImageUrl.map((imageUrl, index) => {
             return (
               <div className="slidering" key={index}>
-                <img src={imageUrl.url} alt="movie" />
+                <Image width={1000} height={1000} src={imageUrl.url} alt="movie" />
               </div>
             )
           })}
@@ -1227,7 +1231,7 @@ const Collection = () => {
                 Best Trending Wardrobes
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1250,7 +1254,7 @@ const Collection = () => {
           {WardrobeImageUrl.map((imageUrl, index) => {
             return (
               <div className="slidering" key={index}>
-                <img src={imageUrl.url} alt="kitchen" />
+                <Image width={1000} height={1000} src={imageUrl.url} alt="kitchen" />
               </div>
             )
           })}
@@ -1272,7 +1276,7 @@ const Collection = () => {
                 Best Trending Interiors
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1295,7 +1299,7 @@ const Collection = () => {
           {InteriorImageUrl.map((imageUrl, index) => {
             return (
               <div className="slidering" key={index}>
-                <img src={imageUrl.url} alt="kitchen" />
+                <Image width={1000} height={1000} src={imageUrl.url} alt="kitchen" />
               </div>
             )
           })}
@@ -1319,7 +1323,7 @@ const Collection = () => {
                 Best Trending Structures
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1342,7 +1346,7 @@ const Collection = () => {
           {StructureImageUrl.map((imageUrl, index) => {
             return (
               <div className="slidering" key={index}>
-                <img src={imageUrl.url} alt="kitchen" />
+                <Image width={1000} height={1000} src={imageUrl.url} alt="kitchen" />
               </div>
             )
           })}
@@ -1443,7 +1447,7 @@ const Collection = () => {
                 Brands you will find in our products
               </h1>
             </div>
-            <img
+            <Image width={1000} height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -1519,7 +1523,7 @@ const Collection = () => {
                   Our Corporate Presence
                 </h1>
               </div>
-              <img
+              <Image width={1000} height={1000}
                 src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
@@ -1551,4 +1555,5 @@ const Collection = () => {
   )
 }
 
+Collection.ssr = false;
 export default Collection
