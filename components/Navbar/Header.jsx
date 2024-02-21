@@ -167,6 +167,22 @@ const Header = () => {
             <Link href="/glass-partition-designs">
               <li>Glass Partitions</li>
             </Link>
+            <Link href="/mandir-designs">
+              <li>Mandir</li>
+            </Link>
+            <Link href="/bar-unit-designs">
+              <li>Bar</li>
+            </Link>
+            <Link href="/side-table-designs">
+              <li>Side Tables</li>
+            </Link>
+        
+            <Link href="/">
+              <li>Home Office</li>
+            </Link>
+            <Link href="/foyer-area-designs">
+              <li>Foyer Cabinets</li>
+            </Link>
           </ul>
         </div>
 
