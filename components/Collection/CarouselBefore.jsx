@@ -1,23 +1,23 @@
 'use client'
 // Import necessary modules and components
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
-import Image from 'next/image';
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import ReactBeforeSliderComponent from 'react-before-after-slider-component'
+import 'react-before-after-slider-component/dist/build.css'
+import Image from 'next/image'
 
 const containerStyle = {
   position: 'relative',
   height: 'fit-content', // Adjust as needed
   width: 'fit-content', // Adjust as needed
   display: 'inline-block', // Ensure the container only takes the size of its content
-};
+}
 
 const textContainerStyle = {
   zIndex: '1', // Ensure text is above the background image
   textAlign: 'center', // Center the text
   position: 'relative', // Position the text within the container
-};
+}
 
 const backgroundImageStyle = {
   position: 'absolute', // Position the image behind the text
@@ -27,52 +27,69 @@ const backgroundImageStyle = {
   height: '100%', // Set the height to 100%
   objectFit: 'cover', // Ensure the image covers the container
   opacity: '1', // Adjust the opacity as needed
-};
+}
 
 const CarouselBefore = () => {
-  const [idx, setIdx] = useState(1);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const totalImages = 4;
+  const [idx, setIdx] = useState(1)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+  const totalImages = 4
+
+  const handleImageLoad = () => {
+    console.log('Image loaded')
+  }
 
   const preloadImages = () => {
-    const imagePromises = [];
+    const imagePromises = []
     for (let i = 1; i <= totalImages; i++) {
-      // Use the Image component as a functional component instead of a constructor
-      const image1 = <Image src={`/images/beforeafter/after${i}.jpg`} alt={`After ${i}`} width={1} height={1} />;
-      const image2 = <Image src={`/images/beforeafter/before${i}.jpg`} alt={`Before ${i}`} width={1} height={1} />;
+      // Create Image elements with the onLoad event handler
+      const image1 = (
+        <Image
+          key={`after${i}`}
+          src={`/images/beforeafter/after${i}.jpg`}
+          alt={`After ${i}`}
+          width={1}
+          height={1}
+          onLoad={handleImageLoad}
+        />
+      )
+      const image2 = (
+        <Image
+          key={`before${i}`}
+          src={`/images/beforeafter/before${i}.jpg`}
+          alt={`Before ${i}`}
+          width={1}
+          height={1}
+          onLoad={handleImageLoad}
+        />
+      )
 
-      // Add both promises to the array
-      imagePromises.push(
-        new Promise((resolve) => {
-          // Use the onLoad prop to resolve the promise
-          image1.props.onLoad = image2.props.onLoad = resolve;
-        })
-      );
+      // Add both images to the array
+      imagePromises.push(image1, image2)
     }
 
     // Resolve the promise once all images are loaded
-    Promise.all(imagePromises).then(() => setImagesLoaded(true));
-  };
+    Promise.all(imagePromises).then(() => setImagesLoaded(true))
+  }
 
   // Call the preloadImages function when the component mounts
   useEffect(() => {
-    preloadImages();
-  }, []);
+    preloadImages()
+  }, [])
 
   const handleBack = () => {
-    setIdx(((idx - 2 + totalImages) % totalImages) + 1);
-  };
+    setIdx(((idx - 2 + totalImages) % totalImages) + 1)
+  }
 
   const handleNext = () => {
-    setIdx((idx % totalImages) + 1);
-  };
+    setIdx((idx % totalImages) + 1)
+  }
 
   const FIRST_IMAGE1 = {
     imageUrl: `/images/beforeafter/after${idx}.jpg`,
-  };
+  }
   const SECOND_IMAGE1 = {
     imageUrl: `/images/beforeafter/before${idx}.jpg`,
-  };
+  }
 
   return (
     <div className="flex flex-col justify-center items-center w-full ">
@@ -157,7 +174,7 @@ const CarouselBefore = () => {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default CarouselBefore;
+export default CarouselBefore

@@ -11,8 +11,8 @@ const MobileCard = ({ image, title, description, slug }) => {
     <div className="w-[340px] h-[400px] mx-auto bg-white rounded-md overflow-hidden shadow-lg m-4">
       <Link href={`/offers/${slug}`}>
         <Image
-         height={192}
-         width={0}
+          height={1000}
+          width={1000}
           src={image}
           alt="Card Image"
           className="w-full h-48 object-cover"
@@ -196,9 +196,9 @@ const Brands = () => {
                 Our Exclusive Packages
               </h1>
             </div>
-            <Image 
-            height={0}
-            width={0}
+            <Image
+              height={0}
+              width={0}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -220,10 +220,20 @@ const Brands = () => {
           {/* 1 */}
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card1.jpeg" alt="Man" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card1.jpeg"
+                alt="Man"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card1.jpeg" alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card1.jpeg"
+                  alt=""
+                />
                 <h3 className="post-mini"> On Top Priority</h3>
                 <h2 className="post-title">AFFORDABLE, YET WHOLESOME</h2>
               </div>
@@ -232,10 +242,20 @@ const Brands = () => {
           {/* 2 */}
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card2.jpeg " alt="Man" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card2.jpeg "
+                alt="Man"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card2.jpeg " alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card2.jpeg "
+                  alt=""
+                />
                 <h3 className="post-mini">Handcrafted for You</h3>
                 <h2 className="post-title"> POCKET FRIENDLY, YET WELCOMING</h2>
               </div>
@@ -245,10 +265,18 @@ const Brands = () => {
 
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card3.jpeg" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card3.jpeg"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card3.jpeg" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card3.jpeg"
+                />
                 <h3 className="post-mini"> Be Carefree & Happy </h3>
                 <h2 className="post-title">MINIMAL, YET OVERALL COVERAGE</h2>
               </div>
@@ -257,10 +285,19 @@ const Brands = () => {
           {/* 4 */}
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card4.jpeg" alt="Man" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card4.jpeg"
+                alt="Man"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card4.jpeg" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card4.jpeg"
+                />
                 <h3 className="post-mini">Over the Top</h3>
                 <h2 className="post-title">LUXURY, YET AFFORDABLE</h2>
               </div>
@@ -269,10 +306,20 @@ const Brands = () => {
           {/* 5 */}
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card5.jpeg" alt="Man" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card5.jpeg"
+                alt="Man"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card5.jpeg " alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card5.jpeg "
+                  alt=""
+                />
                 <h3 className="post-mini"> Premier Plus </h3>
                 <h2 className="post-title">
                   HIGH QUALITY WITH COMPLETE COMMITMENT
@@ -283,10 +330,20 @@ const Brands = () => {
           {/* 6 */}
           <Link href="/offers/#top-priority">
             <motion.div variants={imagesVariant} className="blog-post m-4">
-              <Image width={1000} height={1000} src="/images/hpcards/card6.jpeg " alt="Man" />
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/hpcards/card6.jpeg "
+                alt="Man"
+              />
 
               <div className="text-content">
-                <Image width={1000} height={1000} src="/images/hpcards/card6.jpeg" alt="" />
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/images/hpcards/card6.jpeg"
+                  alt=""
+                />
                 <h3 className="post-mini">Redefine Luxury </h3>
                 <h2 className="post-title">
                   TOP NOTCH LUXURY, WITH TOP NOTCH PRICING
@@ -315,11 +372,13 @@ const Brands = () => {
           <div style={containerStyle}>
             <div style={textContainerStyle} className="flex justify-center ">
               <h1 className="sm:text-4xl text-xl font-bold text-center">
-              Why We Deliver Inspiring Interiors
-              Why We Deliver Inspiring Interiors
+                Why We Deliver Inspiring Interiors Why We Deliver Inspiring
+                Interiors
               </h1>
             </div>
-            <Image width={1000} height={1000}
+            <Image
+              width={1000}
+              height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
