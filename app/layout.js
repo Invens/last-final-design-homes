@@ -17,7 +17,7 @@ const bioRhyme = BioRhyme({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-     <Script strategy='lazyOnLoad'>
+       <Script strategy='lazyOnLoad' id="hotjar">
         {`
           (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
