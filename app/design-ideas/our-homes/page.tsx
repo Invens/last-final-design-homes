@@ -9,16 +9,13 @@ import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import HomesSlider from './HomesSlider'
-<<<<<<< HEAD
 import Modal from 'react-modal' // Import react-modal
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import './HomesSlider.css'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-=======
 import Image from 'next/image'
->>>>>>> ee716a2168edaa1250728d17b60bf72e9427ea40
 
 const Card = ({ project, handleImageClick }) => {
   return (
@@ -29,8 +26,8 @@ const Card = ({ project, handleImageClick }) => {
       <div className="relative h-56">
         {' '}
         <Image
-        width={1000}
-        height={1000}
+          width={1000}
+          height={1000}
           className="absolute h-full w-full object-cover"
           src={project.images[0]}
           alt={project.heading}
@@ -151,22 +148,22 @@ const Page = ({}) => {
     console.log('facebook')
   }
 
-    const nextProject = () => {
-      setProjectIndex((prevIndex) => (prevIndex + 1) % tempData.length)
-      // setImagesArray(projects[currentProjectIndex].images)
-      setCurrentImageIndex(0)
-      console.log('currentProjectIndex', projectIndex)
-      console.log('imagesArray', tempData[projectIndex].images)
-    }
-    const prevProject = () => {
-      setProjectIndex(
-        (prevIndex) => (prevIndex - 1 + tempData.length) % tempData.length
-      )
-      // setImagesArray(projects[currentProjectIndex].images)
-      setCurrentImageIndex(0)
-      console.log('currentProjectIndex', projectIndex)
-      console.log('imagesArray', tempData[projectIndex].images)
-    }
+  const nextProject = () => {
+    setProjectIndex((prevIndex) => (prevIndex + 1) % tempData.length)
+    // setImagesArray(projects[currentProjectIndex].images)
+    setCurrentImageIndex(0)
+    console.log('currentProjectIndex', projectIndex)
+    console.log('imagesArray', tempData[projectIndex].images)
+  }
+  const prevProject = () => {
+    setProjectIndex(
+      (prevIndex) => (prevIndex - 1 + tempData.length) % tempData.length
+    )
+    // setImagesArray(projects[currentProjectIndex].images)
+    setCurrentImageIndex(0)
+    console.log('currentProjectIndex', projectIndex)
+    console.log('imagesArray', tempData[projectIndex].images)
+  }
 
   return (
     <>
@@ -174,7 +171,7 @@ const Page = ({}) => {
       <Omsairam />
       <Header />
 
-      <div className="mt-32 lg:mt-64 mb-16 mx-auto mx-8 sm:mx-16">
+      <div className="mt-24 lg:mt-32 mb-16 mx-auto sm:mx-16">
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
@@ -242,9 +239,11 @@ const Page = ({}) => {
                 <Slider {...sliderSettings} ref={sliderRef}>
                   {tempData[projectIndex].images.map((image, index) => (
                     <div key={index} className="overflow-hidden">
-                      <img
+                      <Image
+                        width={1000}
+                        height={1000}
                         src={image}
-                        alt={index}
+                        alt={'homes'}
                         className="w-full object-cover rounded-sm"
                       />
                     </div>
@@ -296,7 +295,9 @@ const Page = ({}) => {
                           onClick={handleWhatsapp}
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
-                          <img
+                          <Image
+                            width={1000}
+                            height={1000}
                             src="/images/gallery/whatsapp.png"
                             alt="Button 1"
                             className="w-full h-full object-cover"
@@ -307,7 +308,9 @@ const Page = ({}) => {
                           onClick={handleInstagram}
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
-                          <img
+                          <Image
+                            width={1000}
+                            height={1000}
                             src="/images/gallery/instagram.png"
                             alt="Button 2"
                             className="w-full h-full object-cover"
@@ -318,7 +321,9 @@ const Page = ({}) => {
                           onClick={handleFacebook}
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
-                          <img
+                          <Image
+                            width={1000}
+                            height={1000}
                             src="/images/gallery/facebook.png"
                             alt="Button 3"
                             className="w-full h-full object-cover"
@@ -329,7 +334,9 @@ const Page = ({}) => {
 
                     <div className="flex justify-evenly my-4 mt-6">
                       <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                        <img
+                        <Image
+                          width={1000}
+                          height={1000}
                           src="/images/gallery/top.png"
                           alt=""
                           className="w-12 self-center"
@@ -341,7 +348,9 @@ const Page = ({}) => {
                       </div>
 
                       <div className="flex justify-content-center flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                        <img
+                        <Image
+                          width={1000}
+                          height={1000}
                           src="/images/gallery/guarantee.png"
                           alt=""
                           className="w-12 self-center"
@@ -351,7 +360,9 @@ const Page = ({}) => {
                         </p>
                       </div>
                       <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                        <img
+                        <Image
+                          width={1000}
+                          height={1000}
                           src="/images/gallery/save.png"
                           alt=""
                           className="w-12 self-center"
@@ -361,7 +372,9 @@ const Page = ({}) => {
                         </p>
                       </div>
                       <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                        <img
+                        <Image
+                          width={1000}
+                          height={1000}
                           src="/images/gallery/fast-delivery.png"
                           alt=""
                           className="w-12 self-center"
@@ -469,7 +482,9 @@ const Page = ({}) => {
                         type="button"
                         className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
                       >
-                        <img
+                        <Image
+                          width={1000}
+                          height={1000}
                           src="/images/gallery/calculator.png"
                           alt="Calc"
                           className="w-8 h-8 mr-2"

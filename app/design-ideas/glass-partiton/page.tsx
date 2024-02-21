@@ -51,37 +51,55 @@ const Page = ({}) => {
       <Omsairam />
       <Header />
 
-      <div className="mt-32 lg:mt-64 mb-16 mx-auto mx-8 sm:mx-16">
+      <div className="mt-24 lg:mt-32 mb-16 mx-auto sm:mx-16">
         <Head>
-        <title>Glass Partitions Designs | Glass Partitions Dealers India</title>
+          <title>
+            Glass Partitions Designs | Glass Partitions Dealers India
+          </title>
 
-<meta name="description" content ="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India." />
+          <meta
+            name="description"
+            content="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India."
+          />
 
-
-<meta name="Author" content="Design Indian Homes" />
-<meta name="Generator" content="www.designindianhomes.com" />
-<meta name="Language" content="en" />
-<meta name="robots" content="index, follow" />
-<meta name="Copyright" content="©www.designindianhomes.com" />
-<meta name="Designer" content="Design Indian Homes Unit" />
-<meta name="Publisher" content="www.designindianhomes.com" />
-<meta name="Distribution" content="Global" />
-<meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/glass-partition-designs/" />
-<meta name="googlebot" content="index, follow" />
-<meta name="Yahoobot" content="index, follow" />
-<meta name="MSNbot" content="Index, Follow" />
-<meta name="allow-search" content="yes" />
-<meta name="country" content="India"/>
-<meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<meta name="dc.language" content="english"/>
-<meta name="geo.region" content="IN-DL" />
-<meta name="geo.placename" content="Delhi" />
-<meta property="og:url" content="https://designindianhomes.com/glass-partition-designs/" />
-<meta property="og:title" content="Glass Partitions Designs | Glass Partitions Dealers India" />
-<meta property="og:description" content="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India." />
-
+          <meta name="Author" content="Design Indian Homes" />
+          <meta name="Generator" content="www.designindianhomes.com" />
+          <meta name="Language" content="en" />
+          <meta name="robots" content="index, follow" />
+          <meta name="Copyright" content="©www.designindianhomes.com" />
+          <meta name="Designer" content="Design Indian Homes Unit" />
+          <meta name="Publisher" content="www.designindianhomes.com" />
+          <meta name="Distribution" content="Global" />
+          <meta name="Rating" content="general" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <link
+            rel="canonical"
+            href="https://designindianhomes.com/glass-partition-designs/"
+          />
+          <meta name="googlebot" content="index, follow" />
+          <meta name="Yahoobot" content="index, follow" />
+          <meta name="MSNbot" content="Index, Follow" />
+          <meta name="allow-search" content="yes" />
+          <meta name="country" content="India" />
+          <meta name="contactNumber" content="+91-98-99-26-49-78" />
+          <meta name="dc.language" content="english" />
+          <meta name="geo.region" content="IN-DL" />
+          <meta name="geo.placename" content="Delhi" />
+          <meta
+            property="og:url"
+            content="https://designindianhomes.com/glass-partition-designs/"
+          />
+          <meta
+            property="og:title"
+            content="Glass Partitions Designs | Glass Partitions Dealers India"
+          />
+          <meta
+            property="og:description"
+            content="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India."
+          />
         </Head>
         {/* breadcrumb */}
         <div className="p-4  ">
@@ -98,28 +116,42 @@ const Page = ({}) => {
         {/* tabs */}
         <Tabs id={3} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
-        {images.map((image, index) => (
-            <div key={image.id} onClick={() => handleImageClick(index)} style={{ cursor: 'pointer' }}>
+          {images.map((image, index) => (
+            <div
+              key={image.id}
+              onClick={() => handleImageClick(index)}
+              style={{ cursor: 'pointer' }}
+            >
               <Image
-              width={1000}
-              height={1000}
+                width={1000}
+                height={1000}
                 src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                 alt={image.filename}
-                style={{ width: '450px', height: '250px', borderRadius: '10px' }}
+                style={{
+                  width: '450px',
+                  height: '250px',
+                  borderRadius: '10px',
+                }}
               />
             </div>
           ))}
         </div>
       </div>
       {showSlider && (
-      <Slider
-        images={images}
-        initialSlide={photoIndex}
-        onClose={handleCloseSlider}
-        onNextSlide={() => setPhotoIndex((prevIndex) => (prevIndex + 1) % images.length)}
-        onPrevSlide={() => setPhotoIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length)}
-      />
-    )}
+        <Slider
+          images={images}
+          initialSlide={photoIndex}
+          onClose={handleCloseSlider}
+          onNextSlide={() =>
+            setPhotoIndex((prevIndex) => (prevIndex + 1) % images.length)
+          }
+          onPrevSlide={() =>
+            setPhotoIndex(
+              (prevIndex) => (prevIndex - 1 + images.length) % images.length
+            )
+          }
+        />
+      )}
       <Footer />
     </>
   )
