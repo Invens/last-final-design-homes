@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React from 'react'
 
 const ContactFormSection = () => {
@@ -34,7 +35,9 @@ const ContactFormSection = () => {
       <div className="container mx-auto flex sm:flex-row flex-col items-center justify-center">
         {/* Left Image */}
         <div className="sm:pr-8 pb-4 sm:pb-0">
-          <img
+          <Image
+          width={1000}
+          height={1000}
             src="/images/why-choose-us-form-removebg-preview.png" // Replace with the path to your image
             alt="Contact Form"
             className="w-full h-auto rounded"

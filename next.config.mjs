@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+
+    
+    
+
 // next.config.js
 const nextConfig = {
     // ...other configurations
@@ -495,6 +499,7 @@ const nextConfig = {
         // Add more custom rewrites as needed
       ]
     },
+    
   }
   
  export default nextConfig

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 // import { updateSpaceData } from '@/components/redux/actions/secondStepActions'
 import { updateSpaceData } from '../../components/redux/actions/secondStepActions'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 const ThirdStep = (props) => {
   const dispatch = useDispatch()
@@ -175,7 +176,9 @@ const ThirdStep = (props) => {
             >
               <div className="flex items-center">
                 {/* Adjust the image source based on your requirements */}
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-square.svg"
                   alt={space.name}
                   className="h-12 w-8 mr-4"

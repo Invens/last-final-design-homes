@@ -4,6 +4,7 @@ import Header from '../../components/Navbar/Header'
 import Omsairam from '../../components/Navbar/Omsairam'
 import ContactForm from '../../components/ContactForm/page'
 import Footer from '../../components/Footer/Footer'
+import Image from 'next/image'
 const FullWidthSection = () => {
   return (
     <section className="relative h-[200px] sm:h-[400px] bg-cover bg-center flex items-center justify-center mt-16 lg:mt-32 xl:mt-24">
@@ -148,7 +149,8 @@ const SectionWithImage = () => {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <img
+          <Image width={1000}
+          height={1000}
             src="/images/reviews-mouthshut.jpg"
             alt="Description of your image"
             className="w-full rounded"

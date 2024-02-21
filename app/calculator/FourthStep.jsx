@@ -11,6 +11,7 @@ import jsPDF from 'jspdf'
 import 'jspdf-autotable'
 import Modal from 'react-modal'
 import FormWithOTPVerification from './FormWithOTPVerification'
+import Image from 'next/image'
 const FourthStep = () => {
   const [spaceData, setSpaceData] = useState([])
   const [firstStepData, setFirstStepData] = useState([])
@@ -186,7 +187,9 @@ const FourthStep = () => {
           {spaceData.map((room, index) => (
             <Accordion key={index} className="mb-4">
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-square.svg"
                   alt={`Accordion ${index + 1}`}
                   className="h-6 mr-4 self-center"

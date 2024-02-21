@@ -180,7 +180,7 @@ const ImageGrid = () => {
                   Top Picks For You
                 </h1>
               </div>
-              <img
+              <Image width={1000} height={1000}
                 src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
@@ -217,7 +217,7 @@ const ImageGrid = () => {
                   </div> */}
                 <Link href={item.slug}>
                   <div className="mb-4 sm:w-[200px] w-[150px]">
-                    <img
+                    <Image width={1000} height={1000}
                       src={item.src}
                       alt={item.text}
                       className="w-full object-cover mr-4"

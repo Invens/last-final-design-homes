@@ -5,6 +5,7 @@ import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 import ImageListItemBar from '@mui/material/ImageListItemBar'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
+import Image from 'next/image'
 export default function TitlebarBelowMasonryImageList() {
   const [screenSize, setScreenSize] = useState('')
 
@@ -69,7 +70,9 @@ export default function TitlebarBelowMasonryImageList() {
         >
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 srcSet={`${item.img}?w=248&h=268&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=248&h=268&fit=crop&auto=format`}
                 alt={item.title}

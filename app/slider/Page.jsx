@@ -4,6 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Share2, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
   const [currentIndex, setCurrentIndex] = useState(initialSlide)
   const sliderRef = useRef(null)
@@ -137,7 +138,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 key={image.id}
                 className="h-[30vh] md:h-[80vh]  md:rounded-l-lg overflow-hidden"
               >
-                <img
+                <Image
+              width={1000}
+              height={1000}
                   src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                   alt={image.filename}
                   className="w-full h-full object-cover"
@@ -195,7 +198,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                   onClick={handleWhatsapp}
                 >
-                  <img
+                <Image
+              width={1000}
+              height={1000}
                     src="/images/gallery/whatsapp.png"
                     alt="Button 1"
                     className="w-full h-full object-cover"
@@ -206,7 +211,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                   onClick={handleInstagram}
                 >
-                  <img
+                 <Image
+              width={1000}
+              height={1000}
                     src="/images/gallery/instagram.png"
                     alt="Button 2"
                     className="w-full h-full object-cover"
@@ -217,7 +224,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                   onClick={handleFacebook}
                 >
-                  <img
+                  <Image
+              width={1000}
+              height={1000}
                     src="/images/gallery/facebook.png"
                     alt="Button 3"
                     className="w-full h-full object-cover"
@@ -228,7 +237,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
 
             <div className="flex justify-evenly my-4 mt-6">
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                <img
+              <Image
+              width={1000}
+              height={1000}
                   src="/images/gallery/top.png"
                   alt=""
                   className="w-12 self-center"
@@ -240,7 +251,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               </div>
 
               <div className="flex justify-content-center flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                <img
+              <Image
+              width={1000}
+              height={1000}
                   src="/images/gallery/guarantee.png"
                   alt=""
                   className="w-12 self-center"
@@ -250,7 +263,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 </p>
               </div>
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/gallery/save.png"
                   alt=""
                   className="w-12 self-center"
@@ -260,7 +275,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 </p>
               </div>
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/gallery/fast-delivery.png"
                   alt=""
                   className="w-12 self-center"
@@ -359,7 +376,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 type="button"
                 className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/gallery/calculator.png"
                   alt="Calc"
                   className="w-8 h-8 mr-2"

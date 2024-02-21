@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const ContactFormSection = () => {
@@ -64,7 +65,8 @@ const ContactFormSection = () => {
       <div className="container mx-auto flex sm:flex-row flex-col items-center w-2/3">
         {/* Left Image */}
         <div className="sm:w-1/3 w-full sm:pr-8 p-2 ">
-          <img
+          <Image
+          width={1000} height={1000}
             src="/images/contact-form.avif" // Replace with the path to your image
             alt="Contact Form"
             className="w-full h-auto rounded"

@@ -9,8 +9,14 @@ import ProgressBar from '../../components/Progressbar'
 // import Card from './Card'
 import MyForm from '../../components/MyForm'
 import Omsairam from '../../components/Navbar/Omsairam'
+<<<<<<< HEAD
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
+=======
+import Image from 'next/image';
+const Page = ({ }) => {
+  const [categoryDataArray, setCategoryDataArray] = useState<any[]>([]);
+>>>>>>> ee716a2168edaa1250728d17b60bf72e9427ea40
   const categoryFolderMapping: Record<number, string> = {
     64: 'kitchen-designs',
     65: 'wardrobe',
@@ -169,6 +175,7 @@ const Page = ({}) => {
               className="bg-white rounded-md shadow-md p-6"
             >
               {categoryData.image && (
+<<<<<<< HEAD
                 <Link
                   href={`/design-ideas/${
                     categoryFolderMapping[categoryData.id]
@@ -183,6 +190,19 @@ const Page = ({}) => {
                       borderRadius: '10px',
                     }}
                   />
+=======
+              <Link href={`/design-ideas/${categoryFolderMapping[categoryData.id]}`}>
+
+                <Image
+                width={1000}
+                height={1000}
+                  src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
+                  alt={categoryData.image.filename}
+
+                  style={{ width: '450px', height: '230px', borderRadius: '10px' }}
+                />
+               
+>>>>>>> ee716a2168edaa1250728d17b60bf72e9427ea40
                 </Link>
               )}
               <h2 className="text-xl font-semibold mb-4">

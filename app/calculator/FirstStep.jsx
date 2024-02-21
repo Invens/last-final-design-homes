@@ -10,6 +10,7 @@ import {
   setOptionSet4,
   setTextInput,
 } from '../../components/redux/actions/firstStepActions'
+import Image from 'next/image'
 
 const FirstStepSection = () => {
   const dispatch = useDispatch()
@@ -111,7 +112,8 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image width={1000}
+                 height={1000}
                   src="/images/apartment-icon.svg"
                   alt="Apartment"
                   className="w-8 h-8 mr-2" // Adjust the size and spacing as needed
@@ -128,7 +130,9 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/villa-icon.svg"
                   alt="Villa"
                   className="w-8 h-8 mr-2" // Adjust the size and spacing as needed
@@ -154,7 +158,9 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-icon.svg"
                   alt="1 BHK"
                   className="w-4 h-4 mr-4" // Adjust the size and spacing as needed
@@ -170,7 +176,9 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-icon.svg"
                   alt="2 BHK"
                   className="w-4 h-4 mr-4" // Adjust the size and spacing as needed
@@ -186,7 +194,9 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-icon.svg"
                   alt="3 BHK"
                   className="w-4 h-4 mr-4" // Adjust the size and spacing as needed
@@ -202,7 +212,9 @@ const FirstStepSection = () => {
                     : 'bg-white'
                 }`}
               >
-                <img
+                <Image
+                width={1000}
+                height={1000}
                   src="/images/bed-icon.svg"
                   alt="4+ BHK"
                   className="w-4 h-4 mr-4" // Adjust the size and spacing as needed

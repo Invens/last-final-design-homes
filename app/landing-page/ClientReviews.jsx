@@ -7,6 +7,7 @@ import Link from 'next/link'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import Image from 'next/image'
 const YouTubeCard = ({ imgUrl, videoLink, openModal, title, desc }) => {
   return (
     <>
@@ -15,7 +16,9 @@ const YouTubeCard = ({ imgUrl, videoLink, openModal, title, desc }) => {
           className="relative overflow-hidden rounded-lg cursor-pointer"
           onClick={openModal}
         >
-          <img
+          <Image
+          width={1000}
+          height={1000}
             src={imgUrl}
             alt="Thumbnail"
             className="w-full h-40 object-cover"

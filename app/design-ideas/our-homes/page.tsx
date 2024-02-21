@@ -9,12 +9,16 @@ import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import HomesSlider from './HomesSlider'
+<<<<<<< HEAD
 import Modal from 'react-modal' // Import react-modal
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import './HomesSlider.css'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+=======
+import Image from 'next/image'
+>>>>>>> ee716a2168edaa1250728d17b60bf72e9427ea40
 
 const Card = ({ project, handleImageClick }) => {
   return (
@@ -24,7 +28,9 @@ const Card = ({ project, handleImageClick }) => {
     >
       <div className="relative h-56">
         {' '}
-        <img
+        <Image
+        width={1000}
+        height={1000}
           className="absolute h-full w-full object-cover"
           src={project.images[0]}
           alt={project.heading}

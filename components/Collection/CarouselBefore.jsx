@@ -1,21 +1,23 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import ReactBeforeSliderComponent from 'react-before-after-slider-component'
-import 'react-before-after-slider-component/dist/build.css'
+// Import necessary modules and components
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ReactBeforeSliderComponent from 'react-before-after-slider-component';
+import 'react-before-after-slider-component/dist/build.css';
+import Image from 'next/image';
 
 const containerStyle = {
   position: 'relative',
   height: 'fit-content', // Adjust as needed
   width: 'fit-content', // Adjust as needed
   display: 'inline-block', // Ensure the container only takes the size of its content
-}
+};
 
 const textContainerStyle = {
   zIndex: '1', // Ensure text is above the background image
   textAlign: 'center', // Center the text
   position: 'relative', // Position the text within the container
-}
+};
 
 const backgroundImageStyle = {
   position: 'absolute', // Position the image behind the text
@@ -25,92 +27,52 @@ const backgroundImageStyle = {
   height: '100%', // Set the height to 100%
   objectFit: 'cover', // Ensure the image covers the container
   opacity: '1', // Adjust the opacity as needed
-}
+};
 
 const CarouselBefore = () => {
-  const [idx, setIdx] = useState(1)
-  const [imagesLoaded, setImagesLoaded] = useState(false)
-  const totalImages = 4
-  console.log('curr - ' + idx)
+  const [idx, setIdx] = useState(1);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const totalImages = 4;
 
   const preloadImages = () => {
-    const imagePromises = []
+    const imagePromises = [];
     for (let i = 1; i <= totalImages; i++) {
-      const image1 = new Image()
-      const image2 = new Image()
-
-      image1.src = `/images/beforeafter/after${i}.jpg`
-      image2.src = `/images/beforeafter/before${i}.jpg`
+      // Use the Image component as a functional component instead of a constructor
+      const image1 = <Image src={`/images/beforeafter/after${i}.jpg`} alt={`After ${i}`} width={1} height={1} />;
+      const image2 = <Image src={`/images/beforeafter/before${i}.jpg`} alt={`Before ${i}`} width={1} height={1} />;
 
       // Add both promises to the array
       imagePromises.push(
         new Promise((resolve) => {
-          image1.onload = image2.onload = resolve
+          // Use the onLoad prop to resolve the promise
+          image1.props.onLoad = image2.props.onLoad = resolve;
         })
-      )
+      );
     }
 
     // Resolve the promise once all images are loaded
-    Promise.all(imagePromises).then(() => setImagesLoaded(true))
-  }
+    Promise.all(imagePromises).then(() => setImagesLoaded(true));
+  };
 
   // Call the preloadImages function when the component mounts
   useEffect(() => {
-    preloadImages()
-  }, [])
-
-  // const handleBack = () => {
-  //   if (idx > 1) {
-  //     setIdx(idx - 1)
-  //     // console.log('new -' + idx)
-  //   } else {
-  //     console.log('idx is less then 1')
-  //   }
-  // }
-
-  // const handleNext = () => {
-  //   if (idx < 4) {
-  //     setIdx(idx + 1)
-  //     // console.log('new -' + idx)
-  //   } else {
-  //     console.log('idx is more then 4')
-  //   }
-  // }
+    preloadImages();
+  }, []);
 
   const handleBack = () => {
-    setIdx(((idx - 2 + totalImages) % totalImages) + 1)
-  }
+    setIdx(((idx - 2 + totalImages) % totalImages) + 1);
+  };
 
   const handleNext = () => {
-    setIdx((idx % totalImages) + 1)
-  }
+    setIdx((idx % totalImages) + 1);
+  };
 
   const FIRST_IMAGE1 = {
     imageUrl: `/images/beforeafter/after${idx}.jpg`,
-  }
+  };
   const SECOND_IMAGE1 = {
     imageUrl: `/images/beforeafter/before${idx}.jpg`,
-  }
-
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
+  };
 
   return (
     <div className="flex flex-col justify-center items-center w-full ">
@@ -127,7 +89,9 @@ const CarouselBefore = () => {
                   Before And After
                 </h1>
               </div>
-              <img
+              <Image
+                width={1000}
+                height={1000}
                 src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
@@ -193,7 +157,7 @@ const CarouselBefore = () => {
         </>
       )}
     </div>
-  )
+  );
 }
 
-export default CarouselBefore
+export default CarouselBefore;

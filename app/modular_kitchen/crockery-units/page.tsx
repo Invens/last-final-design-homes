@@ -8,6 +8,7 @@ import Tabs from '../Tabs'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
 import Head from 'next/head'
+import Image from 'next/image'
 const Page = () => {
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
     []
@@ -104,7 +105,9 @@ const Page = () => {
               onClick={() => handleImageClick(index)}
               style={{ cursor: 'pointer' }}
             >
-              <img
+              <Image
+              width={1000}
+              height={1000}
                 src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                 alt={image.filename}
                 style={{

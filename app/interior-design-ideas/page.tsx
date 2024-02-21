@@ -8,6 +8,7 @@ import ProgressBar from '../../components/Progressbar'
 // import Card from './Card'
 import MyForm from '../../components/MyForm'
 import Omsairam from '../../components/Navbar/Omsairam'
+import Image from 'next/image';
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] =useState<any[]>([]);
   const categoryFolderMapping: Record<number, string> = {
@@ -114,7 +115,9 @@ const Page = ({}) => {
             <div key={categoryData.id} className="bg-white rounded-md shadow-md p-6">
                {categoryData.image && (
               <Link href={`/interior-design-ideas/${categoryFolderMapping[categoryData.id]}`}>
-              <img
+              <Image
+              width={1000}
+              height={1000}
                   src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
                   alt={categoryData.image.filename}
                   
