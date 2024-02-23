@@ -11,7 +11,6 @@ import useMedia from 'use-media'
 
 const CarouselBeforeAfter = dynamic(() => import('./CarouselBefore'))
 
-const Hero = dynamic(() => import('./Hero'))
 const BestCarousels = dynamic(() => import('./BestCarousels'))
 
 const Brands = dynamic(() => import('./Brands'))
@@ -120,7 +119,7 @@ const Collection = () => {
   return (
     <>
       <div className="hero">
-        <Hero />
+      
       </div>
       <div
         className="w-full overflow-hidden mx-auto text-center my-8"

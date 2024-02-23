@@ -126,7 +126,7 @@ const Hero = () => {
             variants={videoVariants}
             initial="initial"
             whileInView="animate"
-            poster="/designindianhomes-video-poster.png"
+            preload="metadata" 
           >
             <source
               src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).mp4?updatedAt=1708375803011"
