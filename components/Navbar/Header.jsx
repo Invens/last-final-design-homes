@@ -29,6 +29,7 @@ import './Omsai.css'
 import Link from 'next/link'
 import MegaMenuDesignIdeasContent from './MegaMenuDesignIdeasContent'
 import ColorSwitch from '../../components/ColorSwitch/page'
+import ColorSwitchD from '../../components/ColorSwitchD/page'
 
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState(null)
@@ -2062,7 +2063,7 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <ColorSwitch />
+                <ColorSwitchD />
               </nav>
             </div>
           </div>

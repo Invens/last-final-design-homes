@@ -16,6 +16,7 @@ const BestCarousels = dynamic(() => import('./BestCarousels'))
 
 const Brands = dynamic(() => import('./Brands'))
 const Connect = dynamic(() => import('./Connect'))
+const WaveDivider = dynamic(() => import('../../components/WaveDivider'))
 
 const containerStyle = {
   position: 'relative',
@@ -245,6 +246,7 @@ const Collection = () => {
               </Link>
 
               <section class="bordered bordersec"></section>
+              {/* <WaveDivider /> */}
 
               <div className="flex justify-center items-center sm:my-16 my-8">
                 <div style={containerStyle}>
