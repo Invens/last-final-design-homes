@@ -56,15 +56,7 @@ const SvgMap = ({ data, name }) => {
   const [roomPrice, setRoomPrice] = useState(0)
   // let roomPrice = 0
 
-  // to reset the selectedPolygon and roomPrice to back to inital state when package is changed
-  useEffect(() => {
-    // Reset selectedPolygon to an empty array
-    setSelectedPolygon([])
-
-    // Reset roomPrice to 0
-    setRoomPrice(0)
-  }, [selectedPackage])
-  console.log('roomPrice: ', roomPrice)
+ 
   const updateData = () => {
     setUpdatedData((prevData) =>
       prevData.map((item) =>
@@ -170,6 +162,16 @@ const SvgMap = ({ data, name }) => {
 
   const handleTabChange = (selectedTab) => {
     setSelectedPackage(selectedTab)
+
+    // Recalculate room price based on the newly selected package
+    let newRoomPrice = 0
+    selectedPolygon.forEach((polygon) => {
+      newRoomPrice += parseFloat(calculateSpacePrice(polygon, selectedTab))
+    })
+
+    setRoomPrice(newRoomPrice)
+
+    // Update the data
     updateData()
   }
   const renderTab = (tabName) => {

@@ -16,7 +16,7 @@ const page = () => {
       <Omsairam />
       <Header />
 
-      <div className="mt-24 lg:mt-32 mb-16 mx-auto sm:mx-16">
+      <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

@@ -58,13 +58,13 @@ const SvgMap = ({ data, name }) => {
   const [roomPrice, setRoomPrice] = useState(0)
 
   // to reset the selectedPolygon and roomPrice to back to inital state when package is changed
-  useEffect(() => {
-    // Reset selectedPolygon to an empty array
-    setSelectedPolygon([])
+  // useEffect(() => {
+  //   // Reset selectedPolygon to an empty array
+  //   setSelectedPolygon([])
 
-    // Reset roomPrice to 0
-    setRoomPrice(0)
-  }, [selectedPackage])
+  //   // Reset roomPrice to 0
+  //   setRoomPrice(0)
+  // }, [selectedPackage])
 
   console.log('roomPrice: ', roomPrice)
   const updateData = () => {
@@ -127,9 +127,11 @@ const SvgMap = ({ data, name }) => {
     if ('pricePerSqFt' in component) {
       const pricePerSqFt = component.pricePerSqFt || 0
       const squareFootage = editableSquareFootage[polygonId] || 0
+
       return (pricePerSqFt * squareFootage).toFixed(2)
     } else {
       // If not, return the fixed price directly
+
       return component.price.toFixed(2)
     }
   }
@@ -169,9 +171,18 @@ const SvgMap = ({ data, name }) => {
     }))
     updateData()
   }
-
   const handleTabChange = (selectedTab) => {
     setSelectedPackage(selectedTab)
+
+    // Recalculate room price based on the newly selected package
+    let newRoomPrice = 0
+    selectedPolygon.forEach((polygon) => {
+      newRoomPrice += parseFloat(calculateSpacePrice(polygon, selectedTab))
+    })
+
+    setRoomPrice(newRoomPrice)
+
+    // Update the data
     updateData()
   }
   const renderTab = (tabName) => {
@@ -242,12 +253,6 @@ const SvgMap = ({ data, name }) => {
 
   return (
     <>
-      {/* <div className="bg-white p-4 flex items-center w-full rounded-t-lg shadow-lg ">
-        <Link href="/calculator" className="inline-flex items-center mr-4">
-          <ArrowLeft className="w-6 h-6" />
-        </Link>
-        <h3 className="inline text-lg">{name}</h3>
-      </div> */}
       <div className="p-4 m-4 bg-blue-500 flex justify-between rounded-lg shadow-lg text-white">
         <div>
           <p className="text-xs">Room budget</p>
@@ -256,13 +261,6 @@ const SvgMap = ({ data, name }) => {
             *All prices are inclusive of material and labour charges
           </p>
         </div>
-        {/* <div className="text-right">
-          <p className="text-xs">Total budget</p>
-          <h3>₹44,765</h3>
-          <p className="text-xxs">
-            *All prices are inclusive of material and labour charges
-          </p>
-        </div> */}
       </div>
       <div className="m-4">
         <p>
@@ -289,8 +287,7 @@ const SvgMap = ({ data, name }) => {
           height="100%"
           viewBox="0 0 3069 2035"
           style={{
-            backgroundImage:
-              'url("/images/calculator/balcony.jpg")',
+            backgroundImage: 'url("/images/calculator/balcony.jpg")',
             backgroundSize: 'cover',
           }}
         >

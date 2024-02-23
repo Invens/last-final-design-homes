@@ -27,6 +27,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import './Omsai.css'
 import Link from 'next/link'
+import MegaMenuDesignIdeasContent from './MegaMenuDesignIdeasContent'
+import ColorSwitch from '../../components/ColorSwitch/page'
 
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState(null)
@@ -51,377 +53,435 @@ const Header = () => {
   const getImageForItem = (item) => {
     const imageMapping = {
       //interior
-     ' 1bhk':'/images/interiors/bebeautiful-designs-for-1bhk-flats-interiors-residences-in-delhi-gurgaon-noida-india (1).jpeg',
-     '2bhk':'/images/interiors/2bhk-2-bedroom-interior-designing-cost-price-makeover-redesigning-services-in-delhi-gurgaon-noida-india (1).jpg',
-      '3bhk':'/images/interiors/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpg',
-      '4bhk':'/images/interiors/amazing-4bhk-designs-4-bedrooms-for-interiors-designing-ideas-in-delhi-gurgaon-noida-india (7).jpg',
-      farmhouse: '/images/interiors/beautiful-farmhouses-designs-interiors-in-delhi-gurgaon-noida-faridabad-india (1).jpeg',
+      ' 1bhk':
+        '/images/interiors/bebeautiful-designs-for-1bhk-flats-interiors-residences-in-delhi-gurgaon-noida-india (1).jpeg',
+      '2bhk':
+        '/images/interiors/2bhk-2-bedroom-interior-designing-cost-price-makeover-redesigning-services-in-delhi-gurgaon-noida-india (1).jpg',
+      '3bhk':
+        '/images/interiors/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpg',
+      '4bhk':
+        '/images/interiors/amazing-4bhk-designs-4-bedrooms-for-interiors-designing-ideas-in-delhi-gurgaon-noida-india (7).jpg',
+      farmhouse:
+        '/images/interiors/beautiful-farmhouses-designs-interiors-in-delhi-gurgaon-noida-faridabad-india (1).jpeg',
       pent: '/images/interiors/beautiful-elegant-pent-house-designs-ideas-concepts-apartments-flats-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpeg',
-      office:'/images/interiors/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg',
-      studio:'/images/interiors/beautiful-interior-designs-renovations-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
-      bunglow:'/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
-      duplex:'/images/interiors/amazing-beautiful-designs-interiors-gallery-collection-pictures-for-duplex-flats-residences-apartments-in-delhi-gurgaon-noida-india (1).jpg',
-      cottage:'/images/interiors/beautiful - cottage - interior - design - in - delhi - gurgaon - noida - faridabad.jpg',
-      villa:'/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
+      office:
+        '/images/interiors/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg',
+      studio:
+        '/images/interiors/beautiful-interior-designs-renovations-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
+      bunglow:
+        '/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
+      duplex:
+        '/images/interiors/amazing-beautiful-designs-interiors-gallery-collection-pictures-for-duplex-flats-residences-apartments-in-delhi-gurgaon-noida-india (1).jpg',
+      cottage:
+        '/images/interiors/beautiful - cottage - interior - design - in - delhi - gurgaon - noida - faridabad.jpg',
+      villa:
+        '/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
 
       //renovation
-      structural:'/images/renovation/complete-building-structures-end-to-end-builders-developers-in-delhi-gurgaon-noida-india (6).jpg',
-      bathroom:'/images/renovation/bathroom-redesigning-services-in-delhi-gurgaon-noida-india (4).jpeg',
-      livingroom:'/images/renovation/beautiful-small-living-room-decor-designing-interiors-designs-in-delhi-gurgaon-noida-faridabad-india (2).jpg',
+      structural:
+        '/images/renovation/complete-building-structures-end-to-end-builders-developers-in-delhi-gurgaon-noida-india (6).jpg',
+      bathroom:
+        '/images/renovation/bathroom-redesigning-services-in-delhi-gurgaon-noida-india (4).jpeg',
+      livingroom:
+        '/images/renovation/beautiful-small-living-room-decor-designing-interiors-designs-in-delhi-gurgaon-noida-faridabad-india (2).jpg',
       gym: '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      interiorRenovation:'/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      terrace: '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
-      bedroom:'/images/renovation/top-bedroom-design-ideas-concepts-interior-designers-architects-delhi-gurgaon-noida-india (1).jpg',
-      mandir: '/images/renovation/top-mandir-manufacturers-in-delhi-gurgaon-noida-india (7).jpg',
-      farmhouseRenovation: '/images/renovation/end-to-end-farmhouse-renovations-services-turnkey-farmhouse-designing-building-in-delhi-gurgaon-noida-india (7).jpg',
-      wardrobeRenovation: '/images/renovation/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
-      villRenovation: '/images/renovation/beautiful-villa-designs-in-delhi-gurgaon-noida-india (1).jpg',
-      banquet:'/images/renovation/banquet-designers-developers-architects-builders-in-delhi-gurgaon-noida-india (2).jpeg',
-      hotel: '/images/renovation/best-hotel-interior-designs-renovations-redesigning-hotels-architects-interior-designers-delhi-gurgaon-noida-india (1).jpg',
-      modularKitchen:'/images/renovation/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
+      interiorRenovation:
+        '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
+      terrace:
+        '/images/renovation/gym-and-spa-redesigning-services-in-renovations-in-delhi-gurgaon-noida-india (2).jpg',
+      bedroom:
+        '/images/renovation/top-bedroom-design-ideas-concepts-interior-designers-architects-delhi-gurgaon-noida-india (1).jpg',
+      mandir:
+        '/images/renovation/top-mandir-manufacturers-in-delhi-gurgaon-noida-india (7).jpg',
+      farmhouseRenovation:
+        '/images/renovation/end-to-end-farmhouse-renovations-services-turnkey-farmhouse-designing-building-in-delhi-gurgaon-noida-india (7).jpg',
+      wardrobeRenovation:
+        '/images/renovation/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      villRenovation:
+        '/images/renovation/beautiful-villa-designs-in-delhi-gurgaon-noida-india (1).jpg',
+      banquet:
+        '/images/renovation/banquet-designers-developers-architects-builders-in-delhi-gurgaon-noida-india (2).jpeg',
+      hotel:
+        '/images/renovation/best-hotel-interior-designs-renovations-redesigning-hotels-architects-interior-designers-delhi-gurgaon-noida-india (1).jpg',
+      modularKitchen:
+        '/images/renovation/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
       loungRenovation: '/images/renovation/loung renovation.jpg',
 
       //Architectural large
-      luxury:'/images/consultancy/larg_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (9).jpg',
-      consultant: '/images/consultancy/larg_image/Architect - consultant - in - delhi - gurgaon - noida.jpg',
-      design:'/images/consultancy/larg_image/beautiful - design - project -planing - in - delhi - gurgaon - noida.jpg',
-      renovation:'/images/consultancy/larg_image/structural-designing-buildings-developers-architects-services-renovations-in-delhi-gurgaon-noida-india (1).jpg',
-      project:'/images/consultancy/larg_image/villa-renovation-services-in-delhi-gurgaon-india-noida (3).jpg',
+      luxury:
+        '/images/consultancy/larg_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (9).jpg',
+      consultant:
+        '/images/consultancy/larg_image/Architect - consultant - in - delhi - gurgaon - noida.jpg',
+      design:
+        '/images/consultancy/larg_image/beautiful - design - project -planing - in - delhi - gurgaon - noida.jpg',
+      renovation:
+        '/images/consultancy/larg_image/structural-designing-buildings-developers-architects-services-renovations-in-delhi-gurgaon-noida-india (1).jpg',
+      project:
+        '/images/consultancy/larg_image/villa-renovation-services-in-delhi-gurgaon-india-noida (3).jpg',
 
       //Architectural small
-      luxurysm:'/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg',
-      consultantsm: '/images/consultancy/Consultancy - in delhi - gurgaon - noida - faridabad.jpg',
-      designsm: '/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpg',
-      renovationsm:'/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg',
-      projectsm:'/images/consultany/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg',
+      luxurysm:
+        '/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg',
+      consultantsm:
+        '/images/consultancy/Consultancy - in delhi - gurgaon - noida - faridabad.jpg',
+      designsm:
+        '/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpg',
+      renovationsm:
+        '/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg',
+      projectsm:
+        '/images/consultany/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg',
 
       //Modular Kitchen large
       type: '/images/modular_kitchen/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (2).jpg',
-      modular:'/images/modular_kitchen/larg/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
-      luxury_modular: '/images/modular_kitchen/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (4).jpg',
-      kitchen_renovation: '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (7).jpg',
-      renovationss:'/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      modular:
+        '/images/modular_kitchen/larg/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (4).jpg',
+      luxury_modular:
+        '/images/modular_kitchen/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (4).jpg',
+      kitchen_renovation:
+        '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (7).jpg',
+      renovationss:
+        '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
 
       //WardRobes
 
-      types_wardrobe:'/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
-      luxury_wardrobe: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (4).jpg',
-      wardrobe_design: '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg',
-      glass_wardrobe:'/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
-      wardrobe_renovation: '/images/wardrobe/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (1).jpg',
+      types_wardrobe:
+        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
+      luxury_wardrobe:
+        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (4).jpg',
+      wardrobe_design:
+        '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg',
+      glass_wardrobe:
+        '/images/wardrobe/larg/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2).jpg',
+      wardrobe_renovation:
+        '/images/wardrobe/larg/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (1).jpg',
 
       //Living
 
-      tv_units:'/images/living/larg/best-design-for-tv-units-in-delhi-gurgaon-noida-faridabad.jpg',
-      crockery_unit: '/images/living/larg/best-design-for-crockery-units-in-delhi-noida-gurgaon.jpg',
-      bookshlaves:  '/images/living/larg/Beautiful-design-bookshelves-in-noida-gurgaon-faridabad.jpg',
-      glass_partition: '/images/living/larg/designer-glass-partitions-dealers-in-delhi-gurgaon-noida-india (5).jpg',
-      dressing: '/images/living/larg/beautiful-dressing-unit-in-delhi-gurgaon-noida.jpg',
-      home_office:'/images/living/larg/ideas-budget-interior-designs-for-residential-offices-in-delhi-gurgaon-noida-india (2).webp',
-      shoes_rack: '/images/living/larg/best-design-shoe-racks-in-delhi-gurgaon-noida.jpg',
-      living_renovation:'/images/living/larg/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (2).jpg',
+      tv_units:
+        '/images/living/larg/best-design-for-tv-units-in-delhi-gurgaon-noida-faridabad.jpg',
+      crockery_unit:
+        '/images/living/larg/best-design-for-crockery-units-in-delhi-noida-gurgaon.jpg',
+      bookshlaves:
+        '/images/living/larg/Beautiful-design-bookshelves-in-noida-gurgaon-faridabad.jpg',
+      glass_partition:
+        '/images/living/larg/designer-glass-partitions-dealers-in-delhi-gurgaon-noida-india (5).jpg',
+      dressing:
+        '/images/living/larg/beautiful-dressing-unit-in-delhi-gurgaon-noida.jpg',
+      home_office:
+        '/images/living/larg/ideas-budget-interior-designs-for-residential-offices-in-delhi-gurgaon-noida-india (2).webp',
+      shoes_rack:
+        '/images/living/larg/best-design-shoe-racks-in-delhi-gurgaon-noida.jpg',
+      living_renovation:
+        '/images/living/larg/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (2).jpg',
 
       //Modular Interior
 
-      mandir_interior:'/images/modular_interior/larg/designer-mandir-dealers-manufacturers-in-delhi-gurgaon-noida-india (3).jpg',
-      chest_drawer:'/images/modular_interior/larg/beautiful-design-shoe-racks-in-delhi-gurgaon-noida.jpeg',
-      bar_unit:'/images/modular_interior/larg/beautiful-design-bar-unit-in-delhi-gurgaon-noida.jpg',
-      side_table:'/images/modular_interior/larg/side-table-design-in delhi-gurgaon-noida-faridabad.jpg',
-      foldable_bed:'/images/modular_interior/larg/beautiful-foldable-bed-in-delhi-gurgaon-noida-faridabad.jpg',
-      foyer_cabinet: '/images/modular_interior/larg/foyer-area-wooden-cabinets-dealers-manufacturers-delhi-gurgaon-noida-india (1).jpg',
-      bathroom_vatities: '/images/modular_interior/larg/bathroom-designs-in-delhi-gurgaon-noida-india (1).jpeg',
+      mandir_interior:
+        '/images/modular_interior/larg/designer-mandir-dealers-manufacturers-in-delhi-gurgaon-noida-india (3).jpg',
+      chest_drawer:
+        '/images/modular_interior/larg/beautiful-design-shoe-racks-in-delhi-gurgaon-noida.jpeg',
+      bar_unit:
+        '/images/modular_interior/larg/beautiful-design-bar-unit-in-delhi-gurgaon-noida.jpg',
+      side_table:
+        '/images/modular_interior/larg/side-table-design-in delhi-gurgaon-noida-faridabad.jpg',
+      foldable_bed:
+        '/images/modular_interior/larg/beautiful-foldable-bed-in-delhi-gurgaon-noida-faridabad.jpg',
+      foyer_cabinet:
+        '/images/modular_interior/larg/foyer-area-wooden-cabinets-dealers-manufacturers-delhi-gurgaon-noida-india (1).jpg',
+      bathroom_vatities:
+        '/images/modular_interior/larg/bathroom-designs-in-delhi-gurgaon-noida-india (1).jpeg',
     }
     return imageMapping[item] || '/images/top4.jpeg'
   }
-  const MegaMenuDesignIdeasContent = () => (
-    <div className="">
-      <div
-        className="bg-white shadow-2xl rounded-sm flex gap-8 justify-center absolute w-full p-4  h-[65vh] text-black"
-        onMouseLeave={handleMouseLeave}
-        style={{ marginTop: '96px' }}
-      >
-        <div>
-          <ul className="text-sm">
-            <h3 className="text-base font-bold">Modular Interior Designs</h3>
+  // const MegaMenuDesignIdeasContent = () => (
+  //   <div className="">
+  //     <div
+  //       className="bg-white shadow-2xl rounded-sm flex gap-8 justify-center absolute w-full p-4  h-[65vh] text-black"
+  //       onMouseLeave={handleMouseLeave}
+  //       style={{ marginTop: '96px' }}
+  //     >
+  //       <div>
+  //         <ul className="text-sm">
+  //           <h3 className="text-base font-bold">Modular Interior Designs</h3>
 
-            <Link href="/modular-kitchen-designs">
-              <li>Modular Kitchens</li>
-            </Link>
-            <Link href="/wardrobe-designs">
-              <li>Wardrobes</li>
-            </Link>
-            <Link href="/vanity-designs">
-              {' '}
-              <li>Vanities </li>
-            </Link>
-            <Link href="/dressers-designs">
-              <li>Dressers</li>
-            </Link>
-            <Link href="/tv-unit-designs">
-              <li>TV Units</li>
-            </Link>
-            <Link href="/crockery-unit-designs">
-              {' '}
-              <li>Crockery Units</li>
-            </Link>
-            <Link href="/glass-partition-designs">
-              <li>Glass Partitions</li>
-            </Link>
-            <Link href="/mandir-designs">
-              <li>Mandir</li>
-            </Link>
-            <Link href="/bar-unit-designs">
-              <li>Bar</li>
-            </Link>
-            <Link href="/side-table-designs">
-              <li>Side Tables</li>
-            </Link>
-        
-            <Link href="/">
-              <li>Home Office</li>
-            </Link>
-            <Link href="/foyer-area-designs">
-              <li>Foyer Cabinets</li>
-            </Link>
-          </ul>
-        </div>
+  //           <Link href="/modular-kitchen-designs">
+  //             <li>Modular Kitchens</li>
+  //           </Link>
+  //           <Link href="/wardrobe-designs">
+  //             <li>Wardrobes</li>
+  //           </Link>
+  //           <Link href="/vanity-designs">
+  //             {' '}
+  //             <li>Vanities </li>
+  //           </Link>
+  //           <Link href="/dressers-designs">
+  //             <li>Dressers</li>
+  //           </Link>
+  //           <Link href="/tv-unit-designs">
+  //             <li>TV Units</li>
+  //           </Link>
+  //           <Link href="/crockery-unit-designs">
+  //             {' '}
+  //             <li>Crockery Units</li>
+  //           </Link>
+  //           <Link href="/glass-partition-designs">
+  //             <li>Glass Partitions</li>
+  //           </Link>
+  //           <Link href="/mandir-designs">
+  //             <li>Mandir</li>
+  //           </Link>
+  //           <Link href="/bar-unit-designs">
+  //             <li>Bar</li>
+  //           </Link>
+  //           <Link href="/side-table-designs">
+  //             <li>Side Tables</li>
+  //           </Link>
 
-        <div>
-          <ul className="text-sm">
-            <h3 className="text-base font-bold">Interior Design Solutions</h3>
-            <Link href="/1bhk-apartment-interior-designs">
-              <li>1BHK residence interior designs</li>
-            </Link>
-            <Link href="/2bhk-apartment-interior-designs">
-              {' '}
-              <li>2BHK Residence interior designs</li>
-            </Link>
-            <Link href="/3bhk-apartment-interior-designs">
-              {' '}
-              <li>3BHK Residence interior designs</li>
-            </Link>
-            <Link href="/4bhk-apartment-interior-designs">
-              <li>4BHK Residence interior designs</li>
-            </Link>
-            <Link href="/villa-interior-designs">
-              {' '}
-              <li>Villa interior designs</li>
-            </Link>
-            <Link href="/farmhouse-interior-designs">
-              <li>Farmhouse interior designs</li>
-            </Link>
-            <Link href="/penthouse-interior-designs">
-              <li>Penthouse interior designs</li>
-            </Link>
-            <Link href="/studio-apartment-interior-designs">
-              <li>studio apartment interior designs</li>
-            </Link>
-            <Link href="/bungalow-interior-designs">
-              {' '}
-              <li>Bunglow interior designs</li>
-            </Link>
-            <Link href="/duplex-interior-designs">
-              {' '}
-              <li>Duplex Residence interior designs</li>
-            </Link>
-            <Link href="/cottage-interior-designs">
-              <li>Cottage interior designs</li>
-            </Link>
-          </ul>
-        </div>
+  //           <Link href="/">
+  //             <li>Home Office</li>
+  //           </Link>
+  //           <Link href="/foyer-area-designs">
+  //             <li>Foyer Cabinets</li>
+  //           </Link>
+  //         </ul>
+  //       </div>
 
-        <div>
-          <ul className="text-sm">
-            <h3 className="text-base font-bold">
-              End to End Interior Solutions{' '}
-            </h3>
-            <Link href="/wooden-polishing">
-              <li>Wooden Polishing</li>
-            </Link>
-            <Link href="/wooden-flooring-designs">
-              {' '}
-              <li>Wooden Flooring</li>
-            </Link>
-            <Link href="/vertical-gardens-designs">
-              {' '}
-              <li>Vertical Gardens</li>
-            </Link>
-            <Link href="/upvc-windows-designs">
-              {' '}
-              <li>UPVC Windows</li>
-            </Link>
-            <Link href="/tiling-designs">
-              {' '}
-              <li>Tiling Designs</li>
-            </Link>
-            <Link href="/sofa-designs">
-              {' '}
-              <li>Sofa Designs</li>
-            </Link>
-            <Link href="/kitchen-lightening-designs">
-              {' '}
-              <li>Kitchen Lightening</li>
-            </Link>
-            <Link href="/plumbing-works-interiors">
-              {' '}
-              <li>Plumbings</li>
-            </Link>
-            <Link href="/glass-partition-designs">
-              {' '}
-              <li>Glass Partitions</li>
-            </Link>
-            <Link href="/ceiling-designs">
-              {' '}
-              <li>ceilings</li>
-            </Link>
-            <Link href="/wall-panelling">
-              {' '}
-              <li> Wall Panelling</li>
-            </Link>
-            <Link href="/exterior-cladding-designs">
-              {' '}
-              <li>Exterior Cladding</li>
-            </Link>
-            <Link href="/wood-door-designs">
-              {' '}
-              <li>Doors</li>
-            </Link>
-            <Link href="/electric-works-interiors">
-              {' '}
-              <li>Electric Works</li>
-            </Link>
-            <Link href="/beds-designs">
-              {' '}
-              <li>Beds</li>
-            </Link>
-            <Link href="/paint-works-interiors">
-              <li>Paints</li>
-            </Link>
-            <Link href="/complete-end-to-end-interior-works">
-              {' '}
-              <li>End to End Interiors</li>
-            </Link>
-            <Link href="/commercial-interior-works-interiors">
-              {' '}
-              <li>Commercial Interiors</li>
-            </Link>
-          </ul>
-        </div>
+  //       <div>
+  //         <ul className="text-sm">
+  //           <h3 className="text-base font-bold">Interior Design Solutions</h3>
+  //           <Link href="/1bhk-apartment-interior-designs">
+  //             <li>1BHK residence interior designs</li>
+  //           </Link>
+  //           <Link href="/2bhk-apartment-interior-designs">
+  //             {' '}
+  //             <li>2BHK Residence interior designs</li>
+  //           </Link>
+  //           <Link href="/3bhk-apartment-interior-designs">
+  //             {' '}
+  //             <li>3BHK Residence interior designs</li>
+  //           </Link>
+  //           <Link href="/4bhk-apartment-interior-designs">
+  //             <li>4BHK Residence interior designs</li>
+  //           </Link>
+  //           <Link href="/villa-interior-designs">
+  //             {' '}
+  //             <li>Villa interior designs</li>
+  //           </Link>
+  //           <Link href="/farmhouse-interior-designs">
+  //             <li>Farmhouse interior designs</li>
+  //           </Link>
+  //           <Link href="/penthouse-interior-designs">
+  //             <li>Penthouse interior designs</li>
+  //           </Link>
+  //           <Link href="/studio-apartment-interior-designs">
+  //             <li>studio apartment interior designs</li>
+  //           </Link>
+  //           <Link href="/bungalow-interior-designs">
+  //             {' '}
+  //             <li>Bunglow interior designs</li>
+  //           </Link>
+  //           <Link href="/duplex-interior-designs">
+  //             {' '}
+  //             <li>Duplex Residence interior designs</li>
+  //           </Link>
+  //           <Link href="/cottage-interior-designs">
+  //             <li>Cottage interior designs</li>
+  //           </Link>
+  //         </ul>
+  //       </div>
 
-        <div>
-          <ul className="text-sm">
-            <h3 className="text-base font-bold">Architectural Designs </h3>
-            <Link href="/architectural-consultancy">
-              <li>Architectural Consultancy</li>
-            </Link>
-            <Link href="/top-architects-in-india">
-              <li>End to End Architectural Services</li>
-            </Link>
-            <Link href="/architectural-brand-in-india">
-              <li>Architectural Designing and Planning</li>
-            </Link>
-            <Link href="/commercial-architectural-delhi-india">
-              <li>Commercial Architectural Services</li>
-            </Link>
-            <Link href=""></Link>
-          </ul>
-          <ul className="text-sm">
-            <h3 className="text-lg font-bold">Selected Homes</h3>
-            <Link href="/astounding-lobby-area-designs">
-              <li>Astounding Lobby Areas</li>
-            </Link>
-            <Link href="/artistic-bedroom-designs">
-              <li>Artistic Bedroom</li>
-            </Link>
-            <Link href="/comforting-balcony-area-designs">
-              <li>Comfort balcony Area</li>
-            </Link>
-            <Link href="/soulful-kids-room-designs">
-              <li>Soulful kids Room</li>
-            </Link>
-            <Link href="/relaxed-walk-in-wardrobe-designs">
-              <li>Relaxed Walk in Wardrobe</li>
-            </Link>
-            <Link href="/handsome-modular-wardrobe-designs">
-              <li>Handsome Modular Wardrobe</li>
-            </Link>
-            <Link href="/exquisite-bathroom-remodel-designs">
-              <li>Exquisite Bathroom</li>
-            </Link>
-            <Link href="/chilled-party-bar-unit-designs">
-              <li>Chilled Out Bar & Party Areas</li>
-            </Link>
-            <Link href="/blissful-parents-room-designs-ideas">
-              <li>Blissful Parents Rooms</li>
-            </Link>
-            <Link href="/spellbinding-living-room-designs">
-              <li>Spellbinding Living Rooms</li>
-            </Link>
-            <Link href="/delicious-modular-kitchen-designs">
-              <li>Delicious Kitchens</li>
-            </Link>
-            <Link href="/mesmerizing-modern-home-interiors">
-              <li>Mesmerising Modern Interiors</li>
-            </Link>
-            <Link href="/wholesome-modern-interiors-designs">
-              <li>Wholesome Modern Interiors</li>
-            </Link> 
-          </ul>
-        </div>
+  //       <div>
+  //         <ul className="text-sm">
+  //           <h3 className="text-base font-bold">
+  //             End to End Interior Solutions{' '}
+  //           </h3>
+  //           <Link href="/wooden-polishing">
+  //             <li>Wooden Polishing</li>
+  //           </Link>
+  //           <Link href="/wooden-flooring-designs">
+  //             {' '}
+  //             <li>Wooden Flooring</li>
+  //           </Link>
+  //           <Link href="/vertical-gardens-designs">
+  //             {' '}
+  //             <li>Vertical Gardens</li>
+  //           </Link>
+  //           <Link href="/upvc-windows-designs">
+  //             {' '}
+  //             <li>UPVC Windows</li>
+  //           </Link>
+  //           <Link href="/tiling-designs">
+  //             {' '}
+  //             <li>Tiling Designs</li>
+  //           </Link>
+  //           <Link href="/sofa-designs">
+  //             {' '}
+  //             <li>Sofa Designs</li>
+  //           </Link>
+  //           <Link href="/kitchen-lightening-designs">
+  //             {' '}
+  //             <li>Kitchen Lightening</li>
+  //           </Link>
+  //           <Link href="/plumbing-works-interiors">
+  //             {' '}
+  //             <li>Plumbings</li>
+  //           </Link>
+  //           <Link href="/glass-partition-designs">
+  //             {' '}
+  //             <li>Glass Partitions</li>
+  //           </Link>
+  //           <Link href="/ceiling-designs">
+  //             {' '}
+  //             <li>ceilings</li>
+  //           </Link>
+  //           <Link href="/wall-panelling">
+  //             {' '}
+  //             <li> Wall Panelling</li>
+  //           </Link>
+  //           <Link href="/exterior-cladding-designs">
+  //             {' '}
+  //             <li>Exterior Cladding</li>
+  //           </Link>
+  //           <Link href="/wood-door-designs">
+  //             {' '}
+  //             <li>Doors</li>
+  //           </Link>
+  //           <Link href="/electric-works-interiors">
+  //             {' '}
+  //             <li>Electric Works</li>
+  //           </Link>
+  //           <Link href="/beds-designs">
+  //             {' '}
+  //             <li>Beds</li>
+  //           </Link>
+  //           <Link href="/paint-works-interiors">
+  //             <li>Paints</li>
+  //           </Link>
+  //           <Link href="/complete-end-to-end-interior-works">
+  //             {' '}
+  //             <li>End to End Interiors</li>
+  //           </Link>
+  //           <Link href="/commercial-interior-works-interiors">
+  //             {' '}
+  //             <li>Commercial Interiors</li>
+  //           </Link>
+  //         </ul>
+  //       </div>
 
-        <div>
-          <ul className="text-sm">
-            <h3 className="text-base font-bold">Home Renovation Services</h3>
-            <Link href="/structural-renovation-services">
-              <li>Structural Renovation</li>
-            </Link>
-            <Link href="/interior-renovation-services">
-              <li>Interior Renovation</li>
-            </Link>
-            <Link href="/bedroom-renovation-services">
-              <li>Bedroom Renovation</li>
-            </Link>
-            <Link href="/lounge-renovation-services">
-              <li>Lounge Renovation</li>
-            </Link>
-            <Link href="/bathroom-renovation-services">
-              <li>Bathroom Renovation</li>
-            </Link>
-            <Link href="/terrace-renovation-services">
-              <li>Terrace Renovation</li>
-            </Link>
-            <Link href="/living-room-renovation-services">
-              <li>Living room Renovation</li>
-            </Link>
-            <Link href="/modular-kitchen-renovation-services">
-              <li>Modular kitchen Renovation</li>
-            </Link>
-            <Link href="/wardrobe-renovation-services">
-              <li>Wardrobe Renovation</li>
-            </Link>
-            <Link href="/mandir-renovation-services">
-              <li>Mandir Renovation</li>
-            </Link>
-            <Link href="/gym-spa-renovation-services">
-              <li>GYM & Spas Renovation</li>
-            </Link>
-            <Link href="/hotel-renovation-services">
-              <li>Hotel Renovation</li>
-            </Link>
-            <Link href="/farmhouse-renovation-services">
-              <li>Farmhouse Renovation</li>
-            </Link>
-            <Link href="/banquet-renovation-services">
-              <li>Banquet Renovation</li>
-            </Link>
-            <Link href="/villa-renovation-services">
-              <li>Villa Renovation</li>
-            </Link>
-          </ul>
-        </div>
-      </div>
-    </div>
-  )
+  //       <div>
+  //         <ul className="text-sm">
+  //           <h3 className="text-base font-bold">Architectural Designs </h3>
+  //           <Link href="/architectural-consultancy">
+  //             <li>Architectural Consultancy</li>
+  //           </Link>
+  //           <Link href="/top-architects-in-india">
+  //             <li>End to End Architectural Services</li>
+  //           </Link>
+  //           <Link href="/architectural-brand-in-india">
+  //             <li>Architectural Designing and Planning</li>
+  //           </Link>
+  //           <Link href="/commercial-architectural-delhi-india">
+  //             <li>Commercial Architectural Services</li>
+  //           </Link>
+  //           <Link href=""></Link>
+  //         </ul>
+  //         <ul className="text-sm">
+  //           <h3 className="text-lg font-bold">Selected Homes</h3>
+  //           <Link href="/astounding-lobby-area-designs">
+  //             <li>Astounding Lobby Areas</li>
+  //           </Link>
+  //           <Link href="/artistic-bedroom-designs">
+  //             <li>Artistic Bedroom</li>
+  //           </Link>
+  //           <Link href="/comforting-balcony-area-designs">
+  //             <li>Comfort balcony Area</li>
+  //           </Link>
+  //           <Link href="/soulful-kids-room-designs">
+  //             <li>Soulful kids Room</li>
+  //           </Link>
+  //           <Link href="/relaxed-walk-in-wardrobe-designs">
+  //             <li>Relaxed Walk in Wardrobe</li>
+  //           </Link>
+  //           <Link href="/handsome-modular-wardrobe-designs">
+  //             <li>Handsome Modular Wardrobe</li>
+  //           </Link>
+  //           <Link href="/exquisite-bathroom-remodel-designs">
+  //             <li>Exquisite Bathroom</li>
+  //           </Link>
+  //           <Link href="/chilled-party-bar-unit-designs">
+  //             <li>Chilled Out Bar & Party Areas</li>
+  //           </Link>
+  //           <Link href="/blissful-parents-room-designs-ideas">
+  //             <li>Blissful Parents Rooms</li>
+  //           </Link>
+  //           <Link href="/spellbinding-living-room-designs">
+  //             <li>Spellbinding Living Rooms</li>
+  //           </Link>
+  //           <Link href="/delicious-modular-kitchen-designs">
+  //             <li>Delicious Kitchens</li>
+  //           </Link>
+  //           <Link href="/mesmerizing-modern-home-interiors">
+  //             <li>Mesmerising Modern Interiors</li>
+  //           </Link>
+  //           <Link href="/wholesome-modern-interiors-designs">
+  //             <li>Wholesome Modern Interiors</li>
+  //           </Link>
+  //         </ul>
+  //       </div>
+
+  //       <div>
+  //         <ul className="text-sm">
+  //           <h3 className="text-base font-bold">Home Renovation Services</h3>
+  //           <Link href="/structural-renovation-services">
+  //             <li>Structural Renovation</li>
+  //           </Link>
+  //           <Link href="/interior-renovation-services">
+  //             <li>Interior Renovation</li>
+  //           </Link>
+  //           <Link href="/bedroom-renovation-services">
+  //             <li>Bedroom Renovation</li>
+  //           </Link>
+  //           <Link href="/lounge-renovation-services">
+  //             <li>Lounge Renovation</li>
+  //           </Link>
+  //           <Link href="/bathroom-renovation-services">
+  //             <li>Bathroom Renovation</li>
+  //           </Link>
+  //           <Link href="/terrace-renovation-services">
+  //             <li>Terrace Renovation</li>
+  //           </Link>
+  //           <Link href="/living-room-renovation-services">
+  //             <li>Living room Renovation</li>
+  //           </Link>
+  //           <Link href="/modular-kitchen-renovation-services">
+  //             <li>Modular kitchen Renovation</li>
+  //           </Link>
+  //           <Link href="/wardrobe-renovation-services">
+  //             <li>Wardrobe Renovation</li>
+  //           </Link>
+  //           <Link href="/mandir-renovation-services">
+  //             <li>Mandir Renovation</li>
+  //           </Link>
+  //           <Link href="/gym-spa-renovation-services">
+  //             <li>GYM & Spas Renovation</li>
+  //           </Link>
+  //           <Link href="/hotel-renovation-services">
+  //             <li>Hotel Renovation</li>
+  //           </Link>
+  //           <Link href="/farmhouse-renovation-services">
+  //             <li>Farmhouse Renovation</li>
+  //           </Link>
+  //           <Link href="/banquet-renovation-services">
+  //             <li>Banquet Renovation</li>
+  //           </Link>
+  //           <Link href="/villa-renovation-services">
+  //             <li>Villa Renovation</li>
+  //           </Link>
+  //         </ul>
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
   const MegaMenuInteriorsContent = () => (
     <div
       className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-2 h-[65vh] text-black"
@@ -645,10 +705,12 @@ const Header = () => {
       <div className="flex ">
         <div className="w-1/3 ml-4 mt-4">
           <div className="text-left">
-            <h1 className="text-4xl font-bold w-[400px]">Top Architectural Services</h1>
+            <h1 className="text-4xl font-bold w-[400px]">
+              Top Architectural Services
+            </h1>
             <p className="text-black w-[400px]">
-              Architecture Tips, Designs & Executions,<br /> Ideas and Advice from
-              Experts
+              Architecture Tips, Designs & Executions,
+              <br /> Ideas and Advice from Experts
             </p>
             <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
               <Link href="/architectural-designs">Explore Now</Link>
@@ -660,7 +722,6 @@ const Header = () => {
             <ul className="">
               {/* { Starting, this is the sub-category} */}
               <div className="flex gap-2">
-
                 <Image
                   src="/images/consultancy/short_image/Consultancy - in delhi - gurgaon - noida - faridabad.jpeg"
                   alt=""
@@ -685,7 +746,6 @@ const Header = () => {
               </div>
 
               <div className="flex gap-2 mt-3 ">
-
                 <Image
                   src="/images/consultancy/short_image/Beautiful - Design- project - in - delhi - gurgaon- noida.jpeg"
                   alt=""
@@ -711,7 +771,6 @@ const Header = () => {
               </div>
 
               <div className="flex gap-2 mt-3">
-
                 <Image
                   src="/images/consultancy/short_image/complete-turnkey-structures-builders-developers-end-to-end-building-works-in-delhi-gurgaon-noida-india (6).jpg"
                   alt=""
@@ -739,7 +798,6 @@ const Header = () => {
               {/* 
               ---- */}
               <div className="flex gap-2 mt-3">
-
                 <Image
                   src="/images/consultancy/short_image/affordable-luxury-residences-flats-apartments-interior-designs-in-delhi-gurgaon-noida-india (5).jpg"
                   alt=""
@@ -747,7 +805,6 @@ const Header = () => {
                   height={70}
                   className=" rounded-lg"
                 />
-
 
                 <div>
                   <Link href="/commercial-architectural-delhi-india">
@@ -766,7 +823,6 @@ const Header = () => {
               </div>
               {/* ---- */}
               <div className="flex gap-2 mt-3">
-
                 <Image
                   src="/images/consultancy/short_image/villa-renovation-services-in-delhi-gurgaon-india-noida (1).jpg"
                   alt=""
@@ -805,11 +861,10 @@ const Header = () => {
             layout="fixed"
           />
 
-          <div className='flex justify-center'>
-
-            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
-
-
+          <div className="flex justify-center">
+            <p className="text-lg font-bold mt-2">
+              Decorate Your Own Beautiful Home
+            </p>
           </div>
         </div>
       </div>
@@ -824,9 +879,7 @@ const Header = () => {
       <div className="flex">
         <div className="w-1/3 ml-4 mt-4">
           <div className="text-left">
-            <h1
-              className="text-4xl font-bold w-[400px]"
-            >
+            <h1 className="text-4xl font-bold w-[400px]">
               Modular Kitchen Largest Manufacturers
             </h1>
             <p className="text-black w-[400px]">
@@ -965,8 +1018,6 @@ const Header = () => {
               </div>
             </ul>
           </div>
-
-
         </div>
         <div className="w-1/3">
           <Image
@@ -981,11 +1032,10 @@ const Header = () => {
             layout="fixed"
           />
 
-          <div className='flex justify-center'>
-
-            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
-
-
+          <div className="flex justify-center">
+            <p className="text-lg font-bold mt-2">
+              Decorate Your Own Beautiful Home
+            </p>
           </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
@@ -1157,11 +1207,10 @@ const Header = () => {
             style={{ width: '750px', height: '350px' }}
             layout="fixed"
           />
-          <div className='flex justify-center'>
-
-            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
-
-
+          <div className="flex justify-center">
+            <p className="text-lg font-bold mt-2">
+              Decorate Your Own Beautiful Home
+            </p>
           </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
@@ -1595,11 +1644,10 @@ const Header = () => {
             style={{ width: '750px', height: '350px' }}
             layout="fixed"
           />
-          <div className='flex justify-center'>
-
-            <p className='text-lg font-bold mt-2'>Decorate Your Own Beautiful Home</p>
-
-
+          <div className="flex justify-center">
+            <p className="text-lg font-bold mt-2">
+              Decorate Your Own Beautiful Home
+            </p>
           </div>
           {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
         </div>
@@ -1613,7 +1661,7 @@ const Header = () => {
       style={{ marginTop: '96px' }}
     >
       <div className="flex ">
-        <div className='w-1/3'>
+        <div className="w-1/3">
           <ul className="text-sm 	font-bold pr-12">
             <h3 className="text-lg">
               <Link href="/home-renovation-services">Renovation</Link>
@@ -1651,10 +1699,7 @@ const Header = () => {
             </button>
           </Link>
         </div>
-        <div className='w-2/3'
-
-        >
-
+        <div className="w-2/3">
           <div
             className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
             style={{
@@ -1664,7 +1709,7 @@ const Header = () => {
               backgroundRepeat: 'no-repeat',
               objectFit: 'cover',
               width: '850px',
-              height: "400px"
+              height: '400px',
             }}
           >
             <div className="relative z-10 m-16">
@@ -1678,7 +1723,6 @@ const Header = () => {
                 LOVE ALL SERVER ALL
               </h1> */}
           </div>
-
         </div>
       </div>
     </div>
@@ -1794,8 +1838,9 @@ const Header = () => {
       <div className=" invisible xl:visible lg:flex">
         {/* Desktop Header */}
         <div
-          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
-            }`}
+          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${
+            scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
+          }`}
           style={{
             position: 'fixed',
             top: 30,
@@ -1805,7 +1850,9 @@ const Header = () => {
           {activeCategory && (
             <div ref={megaMenuRef} className="group-hover:flex">
               {activeCategory === 'DesignIdeas' && (
-                <MegaMenuDesignIdeasContent />
+                <MegaMenuDesignIdeasContent
+                  handleMouseLeave={handleMouseLeave}
+                />
               )}
               {activeCategory === 'Interiors' && <MegaMenuInteriorsContent />}
               {activeCategory === 'Architectural' && (
@@ -2015,6 +2062,7 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
+                <ColorSwitch />
               </nav>
             </div>
           </div>
@@ -2051,12 +2099,19 @@ const Header = () => {
             className={`bg-white bg-white text-black w-full h-16 flex items-center justify-around`}
           >
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faHome} size="2x" style={{height: "25px", width: "25px"}} />
+              <FontAwesomeIcon
+                icon={faHome}
+                size="2x"
+                style={{ height: '25px', width: '25px' }}
+              />
               <Link href="/"> Home</Link>
-             
             </button>
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faPalette} size="2x" style={{height: "25px", width: "25px"}} />
+              <FontAwesomeIcon
+                icon={faPalette}
+                size="2x"
+                style={{ height: '25px', width: '25px' }}
+              />
               Design
             </button>
             <button className="flex flex-col items-center text-sm font-bold relative">
@@ -2065,20 +2120,32 @@ const Header = () => {
                   className="bg-yellow-500 rounded-full p-2"
                   style={{ marginBottom: '50px' }}
                 >
-                  <FontAwesomeIcon icon={faPencil} size="3x" style={{height: "25px", width: "25px"}} />
+                  <FontAwesomeIcon
+                    icon={faPencil}
+                    size="3x"
+                    style={{ height: '25px', width: '25px' }}
+                  />
                 </div>
               </div>
               <span className="mt-7">Let&apos;s Design</span>
             </button>
             <button className="flex flex-col items-center text-sm font-bold">
-              <FontAwesomeIcon icon={faNewspaper} size="2x" style={{height: "25px", width: "25px"}} />
-             <Link href="/magazine"> Magazine</Link>
+              <FontAwesomeIcon
+                icon={faNewspaper}
+                size="2x"
+                style={{ height: '25px', width: '25px' }}
+              />
+              <Link href="/magazine"> Magazine</Link>
             </button>
             <button
               className="flex flex-col items-center text-sm font-bold"
               onClick={toggleMobileMenu}
             >
-              <FontAwesomeIcon icon={faEllipsisH} size="2x" style={{height: "25px", width: "25px"}} />
+              <FontAwesomeIcon
+                icon={faEllipsisH}
+                size="2x"
+                style={{ height: '25px', width: '25px' }}
+              />
               More
             </button>
           </div>
@@ -2093,21 +2160,20 @@ const Header = () => {
       >
         <div>
           <Link href="/">
-         
-          <Image
-            src="/images/Logo.gif"
-            alt="left logo"
-            width={0}
-            height={0}
-            style={{
-              width: '90px',
-              height: '80',
-              marginLeft: '10px',
-              marginTop: '20px',
-              marginBottom: '20px',
-            }}
-          />
-           </Link>
+            <Image
+              src="/images/Logo.gif"
+              alt="left logo"
+              width={0}
+              height={0}
+              style={{
+                width: '90px',
+                height: '80',
+                marginLeft: '10px',
+                marginTop: '20px',
+                marginBottom: '20px',
+              }}
+            />
+          </Link>
         </div>
         <div>
           <Link
@@ -2132,7 +2198,7 @@ const Header = () => {
               >
                 <div className="flex justify-end p-4">
                   <div className="flex" style={{ marginLeft: '-40px' }}>
-                    <span className="">dark mode</span>
+                    {/* <ColorSwitch /> */}
 
                     {/* <ThemeSwitcher /> */}
                   </div>
@@ -2349,47 +2415,47 @@ const Header = () => {
                             </div>
                           </ul>
                           <ul className="text-base text-black">
-            <h3 className="text-3xl">Selected Homes</h3>
-            <Link href="/astounding-lobby-area-designs">
-              <li>Astounding Lobby Areas</li>
-            </Link>
-            <Link href="/artistic-bedroom-designs">
-              <li>Artistic Bedroom</li>
-            </Link>
-            <Link href="/comforting-balcony-area-designs">
-              <li>Comfort balcony Area</li>
-            </Link>
-            <Link href="/soulful-kids-room-designs">
-              <li>Soulful kids Room</li>
-            </Link>
-            <Link href="/relaxed-walk-in-wardrobe-designs">
-              <li>Relaxed Walk in Wardrobe</li>
-            </Link>
-            <Link href="/handsome-modular-wardrobe-designs">
-              <li>Handsome Modular Wardrobe</li>
-            </Link>
-            <Link href="/exquisite-bathroom-remodel-designs">
-              <li>Exquisite Bathroom</li>
-            </Link>
-            <Link href="/chilled-party-bar-unit-designs">
-              <li>Chilled Out Bar & Party Areas</li>
-            </Link>
-            <Link href="/blissful-parents-room-designs-ideas">
-              <li>Blissful Parents Rooms</li>
-            </Link>
-            <Link href="/spellbinding-living-room-designs">
-              <li>Spellbinding Living Rooms</li>
-            </Link>
-            <Link href="/delicious-modular-kitchen-designs">
-              <li>Delicious Kitchens</li>
-            </Link>
-            <Link href="/mesmerizing-modern-home-interiors">
-              <li>Mesmerising Modern Interiors</li>
-            </Link>
-            <Link href="/wholesome-modern-interiors-designs">
-              <li>Wholesome Modern Interiors</li>
-            </Link> 
-          </ul>
+                            <h3 className="text-3xl">Selected Homes</h3>
+                            <Link href="/astounding-lobby-area-designs">
+                              <li>Astounding Lobby Areas</li>
+                            </Link>
+                            <Link href="/artistic-bedroom-designs">
+                              <li>Artistic Bedroom</li>
+                            </Link>
+                            <Link href="/comforting-balcony-area-designs">
+                              <li>Comfort balcony Area</li>
+                            </Link>
+                            <Link href="/soulful-kids-room-designs">
+                              <li>Soulful kids Room</li>
+                            </Link>
+                            <Link href="/relaxed-walk-in-wardrobe-designs">
+                              <li>Relaxed Walk in Wardrobe</li>
+                            </Link>
+                            <Link href="/handsome-modular-wardrobe-designs">
+                              <li>Handsome Modular Wardrobe</li>
+                            </Link>
+                            <Link href="/exquisite-bathroom-remodel-designs">
+                              <li>Exquisite Bathroom</li>
+                            </Link>
+                            <Link href="/chilled-party-bar-unit-designs">
+                              <li>Chilled Out Bar & Party Areas</li>
+                            </Link>
+                            <Link href="/blissful-parents-room-designs-ideas">
+                              <li>Blissful Parents Rooms</li>
+                            </Link>
+                            <Link href="/spellbinding-living-room-designs">
+                              <li>Spellbinding Living Rooms</li>
+                            </Link>
+                            <Link href="/delicious-modular-kitchen-designs">
+                              <li>Delicious Kitchens</li>
+                            </Link>
+                            <Link href="/mesmerizing-modern-home-interiors">
+                              <li>Mesmerising Modern Interiors</li>
+                            </Link>
+                            <Link href="/wholesome-modern-interiors-designs">
+                              <li>Wholesome Modern Interiors</li>
+                            </Link>
+                          </ul>
                         </div>
 
                         <div>
@@ -3887,6 +3953,7 @@ const Header = () => {
                       />
                     </div>
                   </AccordionSection>
+                 <div className='m-4'><ColorSwitch /> </div>
                   <div>
                     <video
                       autoPlay
@@ -4023,5 +4090,5 @@ const AccordionSection = ({ title, isActive, onClick, children }) => {
     </div>
   )
 }
-Header.ssr= false;
+Header.ssr = false
 export default Header

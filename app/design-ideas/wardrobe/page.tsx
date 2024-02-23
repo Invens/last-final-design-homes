@@ -7,42 +7,45 @@ import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
-import Slider from '../../slider/Page';
-import React, { useState, useEffect } from 'react';
+import Slider from '../../slider/Page'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const Page = ({}) => {
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const [showSlider, setShowSlider] = useState(false);
-  const [images, setImages] = useState<Array<{ id: number; filename: string }>>([]);
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [showSlider, setShowSlider] = useState(false)
+  const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
+    []
+  )
   useEffect(() => {
-    const categoryIds = [65]; // Add the category IDs you want to fetch
+    const categoryIds = [65] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
-        const timestamp = Date.now();
-        const response = await fetch(`https://api.designindianwardrobe.com/api/images/${categoryIds}?timestamp=${timestamp}`);
+        const timestamp = Date.now()
+        const response = await fetch(
+          `https://api.designindianwardrobe.com/api/images/${categoryIds}?timestamp=${timestamp}`
+        )
         if (response.ok) {
-          const data = await response.json();
-          setImages(data);
+          const data = await response.json()
+          setImages(data)
         } else {
-          console.error('Error fetching images:', response.statusText);
+          console.error('Error fetching images:', response.statusText)
         }
       } catch (error) {
-        console.error('Error during fetch:', error);
+        console.error('Error during fetch:', error)
       }
-    };
+    }
 
-    fetchImages();
-  }, []);
+    fetchImages()
+  }, [])
   const handleImageClick = (index: number) => {
-    setPhotoIndex(index);
-    setShowSlider(true);
-  };
-  
+    setPhotoIndex(index)
+    setShowSlider(true)
+  }
 
   const handleCloseSlider = () => {
-    setShowSlider(false);
-  };
+    setShowSlider(false)
+  }
 
   return (
     <>
@@ -50,7 +53,7 @@ const Page = ({}) => {
       <Omsairam />
       <Header />
 
-      <div className="mt-24 lg:mt-32 mb-16 mx-auto sm:mx-16">
+      <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
             Wardrobe Designs | Top Wardrobe Manufacturing Brand India

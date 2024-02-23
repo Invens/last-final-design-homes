@@ -10,7 +10,13 @@
   }
 }
 /* ----------------------------------- */
+:root {
+  --theme-color: #fff; /* Set the default theme color here */
+}
 
+html {
+  background-color: var(--theme-color);
+}
 /* this is for scrollbar just add sectiondemo class to the place */
 .sectiondemo::-webkit-scrollbar {
   width: 10px;

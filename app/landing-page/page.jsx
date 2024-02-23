@@ -43,7 +43,7 @@ const ContactSection = () => {
     window.open(mailtoLink, '_blank')
   }
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-16 lg:mt-32 xl:mt-24">
+    <section className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-16 lg:mt-36 xl:mt-24">
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
@@ -128,8 +128,8 @@ const ThreeColumnSection = () => {
         {/* Column 1 */}
         <div className="flex flex-col items-center">
           <Image
-          width={1000}
-          height={1000}
+            width={1000}
+            height={1000}
             src="/images/landing/personalised-design-60x60-1657526074-fzE3H.avif"
             alt="Image 1"
             className="w-12 h-12 object-cover  mb-4"
@@ -139,9 +139,9 @@ const ThreeColumnSection = () => {
 
         {/* Column 2 */}
         <div className="flex flex-col items-center">
-        <Image
-          width={1000}
-          height={1000}
+          <Image
+            width={1000}
+            height={1000}
             src="/images/landing/10-year-warranty-desktop-1646210954-fh1K8.avif"
             alt="Image 2"
             className="w-12 h-12 object-cover  mb-4"
@@ -151,9 +151,9 @@ const ThreeColumnSection = () => {
 
         {/* Column 3 */}
         <div className="flex flex-col items-center">
-        <Image
-          width={1000}
-          height={1000}
+          <Image
+            width={1000}
+            height={1000}
             src="/images/landing/transparent-pricing-desktop-1646210957-nGL2T.avif"
             alt="Image 3"
             className="w-12 h-12 object-cover mb-4"
@@ -257,8 +257,8 @@ const Card1 = ({ img, heading, desc }) => {
     <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg h-80">
       {/* Image */}
       <Image
-          width={1000}
-          height={1000}
+        width={1000}
+        height={1000}
         className="object-cover w-full h-32 md:h-48"
         src={img} // Replace with the actual path to your image
         alt="Card Image"
@@ -366,8 +366,8 @@ const YouTubeCard = ({ imgUrl, videoLink, title, desc, videoUrl }) => {
           onClick={openModal}
         >
           <Image
-          width={1000}
-          height={1000}
+            width={1000}
+            height={1000}
             src={imgUrl}
             alt="Thumbnail"
             className="object-cover sm:w-full sm:h-80"
@@ -443,7 +443,7 @@ const Card2 = ({ title, desc }) => {
   return (
     <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg ">
       <div className="flex items-center justify-between p-2 px-8">
-      <Image
+        <Image
           width={1000}
           height={1000}
           src="/images/landing/full-home-interior-1-1675788036-JKqzI.avif"
@@ -451,7 +451,7 @@ const Card2 = ({ title, desc }) => {
           className="w-16 h-16 object-cover"
         />
 
-<Image
+        <Image
           width={1000}
           height={1000}
           src="/images/landing/image-4490-1675788035-KbP8s.avif"
@@ -663,8 +663,8 @@ const DownloadSection = () => {
     <div className="flex flex-col sm:flex-row items-center m-8 rounded-lg bg-amber-50">
       {/* Image on the left */}
       <Image
-          width={1000}
-          height={1000}
+        width={1000}
+        height={1000}
         src="/images/landing/web-1638167823-6amoZ.avif" // Replace with the actual path to your image
         alt="Left Image"
         className="sm:w-1/2 w-full object-cover rounded-lg"
@@ -964,8 +964,8 @@ const NewsCard = ({ logoSrc, title, review }) => {
     <div className="sm:w-56 w-full sm:h-56 h-auto border border-gray-300 rounded overflow-hidden">
       {/* Logo Image */}
       <Image
-          width={1000}
-          height={1000}
+        width={1000}
+        height={1000}
         src={logoSrc}
         alt="Newspaper Logo"
         className="w-full h-16 object-fit"
@@ -1042,9 +1042,9 @@ const ImageSection = () => {
             className="flex flex-col justify-center text-center items-center"
           >
             <div className="sm:w-20 w-12 sm:h-20 h-12 bg-white border-[1px] border-gray-400 rounded-full flex items-center justify-center relative">
-            <Image
-          width={1000}
-          height={1000}
+              <Image
+                width={1000}
+                height={1000}
                 src={data.img} // Replace with actual image source
                 alt="image"
                 className="sm:w-12 w-8 sm:h-12 h-8 object-cover rounded-full z-10"

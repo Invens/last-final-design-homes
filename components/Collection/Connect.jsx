@@ -41,10 +41,6 @@ const Connect = () => {
       y: 0,
       x: 0,
       opacity: 1,
-      transition: {
-        duration: 0.1,
-        staggerChildren: 0.01,
-      },
     },
   }
 

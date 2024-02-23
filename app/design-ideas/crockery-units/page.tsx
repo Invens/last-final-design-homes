@@ -52,7 +52,7 @@ const Page = () => {
       <Omsairam />
       <Header />
 
-      <div className="mt-24 lg:mt-32 mb-16 mx-auto sm:mx-16">
+      <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
             Crockery Unit Designs | Crockery Unit Manufacturing Company India

@@ -93,18 +93,26 @@ const Page = ({ params }) => {
 
   return (
     <>
-      <MaxWidthWrapper>
-        <div className="border-2 border-blue-500 rounded-lg bg-slate-200 shadow-lg p-0 my-4">
-          <div className="bg-white p-4 flex items-center w-full rounded-t-lg shadow-lg">
-            <button
-              onClick={() => router.push('/calculator?step=2')}
-              className="inline-flex items-center mr-4"
-            >
-              <ArrowLeft className="w-6 h-6" />
-            </button>
-            <h3 className="inline text-lg">{spaceName}</h3>
-          </div>
-          {/* <div className="p-4 m-4 bg-blue-500 flex justify-between rounded-lg shadow-lg text-white">
+      <div
+        className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4"
+        style={{
+          backgroundImage: "url('/images/calculator/living_background.jpg')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <MaxWidthWrapper>
+          <div className="border-2 border-blue-500 rounded-lg bg-slate-200 shadow-lg p-0 my-4">
+            <div className="bg-white p-4 flex items-center w-full rounded-t-lg shadow-lg">
+              <button
+                onClick={() => router.push('/calculator?step=2')}
+                className="inline-flex items-center mr-4"
+              >
+                <ArrowLeft className="w-6 h-6" />
+              </button>
+              <h3 className="inline text-lg">{spaceName}</h3>
+            </div>
+            {/* <div className="p-4 m-4 bg-blue-500 flex justify-between rounded-lg shadow-lg text-white">
             <div>
               <p className="text-xs">Room budget</p>
               <h3>₹0</h3>
@@ -117,16 +125,16 @@ const Page = ({ params }) => {
               </p>
             </div>
           </div> */}
-          {/* <div className="m-4">
+            {/* <div className="m-4">
             <p>
               Tap the desired components and add to your project&apos;s scope
             </p>
           </div> */}
 
-          {/* the image map */}
-          {getImageComponent()}
+            {/* the image map */}
+            {getImageComponent()}
 
-          {/* <div className="m-4">
+            {/* <div className="m-4">
             <p className="text-blue-500 text-xs">Disclaimer:</p>
             <p className="text-xs">
               Indicative rates based on market averages. Actual costs vary based
@@ -139,8 +147,9 @@ const Page = ({ params }) => {
               Save
             </button>
           </div> */}
-        </div>
-      </MaxWidthWrapper>
+          </div>
+        </MaxWidthWrapper>
+      </div>
     </>
   )
 }

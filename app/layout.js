@@ -1,8 +1,9 @@
-"use client";
+'use client'
 import { BioRhyme } from 'next/font/google'
-import "./globals.css";
-import { Provider } from 'react-redux';
+import './globals.css'
+import { Provider } from 'react-redux'
 import { SpaceProvider } from './SpaceContext'
+import { ThemeProvider } from './themeContext'
 import store from '../components/redux/store'
 import Script from 'next/script'
 
@@ -12,12 +13,10 @@ const bioRhyme = BioRhyme({
   display: 'swap',
 })
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-       <Script strategy='lazyOnLoad' id="hotjar">
+      <Script strategy="lazyOnLoad" id="hotjar">
         {`
           (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -30,13 +29,12 @@ export default function RootLayout({ children }) {
         `}
       </Script>
       <body className={bioRhyme.className}>
-      
-      <Provider store={store}>
-          <SpaceProvider>
-            {children}
-          </SpaceProvider>
-        </Provider>
+        <ThemeProvider>
+          <Provider store={store}>
+            <SpaceProvider>{children}</SpaceProvider>
+          </Provider>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
