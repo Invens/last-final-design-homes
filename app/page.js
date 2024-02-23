@@ -1,39 +1,22 @@
-import Image from 'next/image'
-import dynamic from 'next/dynamic'
-//import Omsairam from '../components/Navbar/Omsairam'
-const Omsairam = dynamic(() => import('../components/Navbar/Omsairam'))
-//import Header from '../components/Navbar/Header'
-const Header = dynamic(() => import('../components/Navbar/Header'))
-// import { BioRhyme } from 'next/font/google'
-// import Hero from '../components/Hero/page'
-//import Collection from '../components/Collection/page'
+import dynamic from 'next/dynamic';
 
-const Collection = dynamic(() => import('../components/Collection/page'))
+const Omsairam = dynamic(() => import('../components/Navbar/Omsairam'));
+const Header = dynamic(() => import('../components/Navbar/Header'));
+const Collection = dynamic(() => import('../components/Collection/page'), { ssr: false });
+const ImageGrid = dynamic(() => import('../components/ImageGrid/page'), { ssr: false });
+const Display = dynamic(() => import('../components/Display/page'), { ssr: false });
+const Stepper = dynamic(() => import('../components/Stepper/page'), { ssr: false });
+const Brands = dynamic(() => import('../components/Brands/page'), { ssr: false });
+const TabsSection = dynamic(() => import('../components/TabsSection/page'), { ssr: false });
+const EndToEndImageGrid = dynamic(() => import('../components/EndToEndImageGrid/page'), { ssr: false });
+const FAQ = dynamic(() => import('../components/FAQ/page'), { ssr: false });
+const MyForm = dynamic(() => import('../components/MyForm'), { ssr: false });
+const PostFooter = dynamic(() => import('../components/PostFooter/page'), { ssr: false });
+const Footer = dynamic(() => import('../components/Footer/Footer'), { ssr: false });
+const ColorSwitch = dynamic(() => import('../components/ColorSwitch/page'), { ssr: false });
 
-// import ImageGrid from '../components/ImageGrid/page'
-// import Display from '../components/Display/page'
-// import Stepper from '../components/Stepper/page'
-// import Brands from '../components/Brands/page'
-// import TabsSection from '../components/TabsSection/page'
-// import EndToEndImageGrid from '../components/EndToEndImageGrid/page'
-// import FAQ from '../components/FAQ/page'
-// import MyForm from '../components/MyForm'
-// import PostFooter from '../components/PostFooter/page'
-// import Footer from '../components/Footer/Footer'
-const ImageGrid = dynamic(() => import('../components/ImageGrid/page'))
-const Display = dynamic(() => import('../components/Display/page'))
-const Stepper = dynamic(() => import('../components/Stepper/page'))
-const Brands = dynamic(() => import('../components/Brands/page'))
-const TabsSection = dynamic(() => import('../components/TabsSection/page'))
-const EndToEndImageGrid = dynamic(() =>
-  import('../components/EndToEndImageGrid/page')
-)
-const FAQ = dynamic(() => import('../components/FAQ/page'))
-const MyForm = dynamic(() => import('../components/MyForm'))
-const PostFooter = dynamic(() => import('../components/PostFooter/page'))
-const Footer = dynamic(() => import('../components/Footer/Footer'))
-const ColorSwitch = dynamic(() => import('../components/ColorSwitch/page'))
-import '../style/hero.css'
+import '../style/hero.css';
+const Hero = dynamic(() => import('../components/Collection/Hero'));
 
 // const bioRhyme = BioRhyme({
 //   weight: '400',
@@ -46,7 +29,7 @@ export default function Home() {
     <main>
       <Omsairam />
       <Header />
-      {/* <Hero/> */}
+      <Hero/>
       <Collection />
       {/* <ColorSwitch /> */}
       <ImageGrid />
