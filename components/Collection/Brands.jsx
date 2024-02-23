@@ -8,120 +8,120 @@ const Svg = dynamic(() => import('./Svg'))
 const brand = [
   {
     id: 1,
-    img: '/images/brands/b1.png',
+    img: '/images/brands-nobg/b1.png',
   },
   {
     id: 2,
-    img: '/images/brands/b2.png',
+    img: '/images/brands-nobg/b2.png',
   },
   {
     id: 3,
-    img: '/images/brands/b3.png',
+    img: '/images/brands-nobg/b3.png',
   },
   {
     id: 4,
-    img: '/images/brands/b4.png',
+    img: '/images/brands-nobg/b4.png',
   },
   {
     id: 5,
-    img: '/images/brands/b5.png',
+    img: '/images/brands-nobg/b5.png',
   },
   {
     id: 6,
-    img: '/images/brands/b6.png',
+    img: '/images/brands-nobg/b6.png',
   },
   {
     id: 7,
-    img: '/images/brands/b7.png',
+    img: '/images/brands-nobg/b7.png',
   },
   {
     id: 8,
-    img: '/images/brands/b8.png',
+    img: '/images/brands-nobg/b8.png',
   },
   {
     id: 9,
-    img: '/images/brands/b9.png',
+    img: '/images/brands-nobg/b9.png',
   },
   {
     id: 10,
-    img: '/images/brands/b10.png',
+    img: '/images/brands-nobg/b10.png',
   },
   {
     id: 11,
-    img: '/images/brands/b1.png',
+    img: '/images/brands-nobg/b1.png',
   },
   {
     id: 12,
-    img: '/images/brands/b2.png',
+    img: '/images/brands-nobg/b2.png',
   },
 
   {
     id: 13,
-    img: '/images/brands/b3.png',
+    img: '/images/brands-nobg/b3.png',
   },
   {
     id: 14,
-    img: '/images/brands/b4.png',
+    img: '/images/brands-nobg/b4.png',
   },
 ]
 
 const data = [
   {
     id: 1,
-    img: '/images/brands/c1.png',
+    img: '/images/brands-nobg/c1.png',
   },
   {
     id: 2,
-    img: '/images/brands/c2.png',
+    img: '/images/brands-nobg/c2.png',
   },
   {
     id: 3,
-    img: '/images/brands/c3.png',
+    img: '/images/brands-nobg/c3.png',
   },
   {
     id: 4,
-    img: '/images/brands/c4.png',
+    img: '/images/brands-nobg/c4.png',
   },
   {
     id: 5,
-    img: '/images/brands/c5.png',
+    img: '/images/brands-nobg/c5.png',
   },
   {
     id: 6,
-    img: '/images/brands/c6.png',
+    img: '/images/brands-nobg/c6.png',
   },
   {
     id: 7,
-    img: '/images/brands/c7.png',
+    img: '/images/brands-nobg/c7.png',
   },
   {
     id: 8,
-    img: '/images/brands/c8.png',
+    img: '/images/brands-nobg/c8.png',
   },
   {
     id: 9,
-    img: '/images/brands/c9.png',
+    img: '/images/brands-nobg/c9.png',
   },
   {
     id: 10,
-    img: '/images/brands/c10.png',
+    img: '/images/brands-nobg/c10.png',
   },
   {
     id: 11,
-    img: '/images/brands/c1.png',
+    img: '/images/brands-nobg/c1.png',
   },
   {
     id: 12,
-    img: '/images/brands/c2.png',
+    img: '/images/brands-nobg/c2.png',
   },
 
   {
     id: 13,
-    img: '/images/brands/c3.png',
+    img: '/images/brands-nobg/c3.png',
   },
   {
     id: 14,
-    img: '/images/brands/c4.png',
+    img: '/images/brands-nobg/c4.png',
   },
 ]
 

@@ -2018,7 +2018,7 @@ const Header = () => {
                   className="text-sm font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Wardrobes')}
                 >
-                  <i class="fi fi-tr-clothes-hanger"></i>
+                  <i className="fi fi-tr-clothes-hanger"></i>
                   <Link href="/wardrobe-designs">Wardrobes</Link>
                 </p>
 
@@ -2031,7 +2031,7 @@ const Header = () => {
                   className="text-sm font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Modular Interiors')}
                 >
-                  <i class="fi fi-ts-loveseat"></i>
+                  <i className="fi fi-ts-loveseat"></i>
                   <Link href="/modular-kitchen-designs">
                     {' '}
                     Modular Interiors

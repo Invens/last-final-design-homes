@@ -8,72 +8,72 @@ import { motion } from 'framer-motion'
 const EndToEndImageGrid = () => {
   const imageList = [
     {
-      src: '/images/end/banquet renovation.jpg',
+      src: '/images/end/banquet_renovation-removebg-preview.png',
       text: 'Banquets Renovation',
       slug: '/banquet-renovation-services',
     },
     {
-      src: '/images/end/bathroom renovation1.jpg',
+      src: '/images/end/bathroom_renovation1-removebg-preview.png',
       text: 'Bathroom Renovation',
       slug: '/bathroom-renovation-services',
     },
     {
-      src: '/images/end/Bedroom Renovation.jpg',
+      src: '/images/end/Bedroom_Renovation-removebg-preview.png',
       text: 'Bedroom Renovation',
       slug: '/bedroom-renovation-services',
     },
     {
-      src: '/images/end/Farmhouse Renovation.jpg',
+      src: '/images/end/Farmhouse_Renovation-removebg-preview.png',
       text: 'Farmhouse Renovation',
       slug: '/farmhouse-renovation-services',
     },
     {
-      src: '/images/end/GYM & SPA renovation.jpg',
+      src: '/images/end/GYM___SPA_renovation-removebg-preview.png',
       text: 'GYM & SPA Renovation',
       slug: '/gym-spa-renovation-services',
     },
     {
-      src: '/images/end/Hotel Renovation.jpg',
+      src: '/images/end/Hotel_Renovation-removebg-preview.png',
       text: 'Hotel Renovation',
       slug: '/hotel-renovation-services',
     },
     {
-      src: '/images/end/Interior Renovation.jpg',
+      src: '/images/end/Interior_Renovation-removebg-preview.png',
       text: 'Interior Renovation',
       slug: '/interior-renovation-services',
     },
     {
-      src: '/images/end/Living Room Renovation.jpg',
+      src: '/images/end/Living_Room_Renovation-removebg-preview.png',
       text: 'Living Room Renovation',
       slug: '/living-room-renovation-services',
     },
     {
-      src: '/images/end/Lounge Renovation.jpg',
+      src: '/images/end/Lounge_Renovation-removebg-preview.png',
       text: 'Lounge Renovation',
       slug: '/lounge-renovation-services',
     },
     {
-      src: '/images/end/mandir renovation.jpg',
+      src: '/images/end/mandir_renovation-removebg-preview.png',
       text: 'Mandir Room Renovation',
       slug: '/mandir-renovation-services',
     },
     {
-      src: '/images/end/SPA renovation.jpg',
+      src: '/images/end/SPA_renovation-removebg-preview.png',
       text: 'Kitchen & Wardrobe Renovation',
       slug: '/gym-spa-renovation-services',
     },
     {
-      src: '/images/end/Structural Renovation.jpg',
+      src: '/images/end/Structural_Renovation-removebg-preview.png',
       text: 'Structural Renovation',
       slug: '/structural-renovation-services',
     },
     {
-      src: '/images/end/terrace renovation.jpg',
+      src: '/images/end/terrace_renovation-removebg-preview.png',
       text: 'Terrace Renovation',
       slug: '/terrace-renovation-services',
     },
     {
-      src: '/images/end/Villa renovation.jpg',
+      src: '/images/end/Villa_renovation-removebg-preview.png',
       text: 'Villa Renovation',
       slug: '/villa-renovation-services',
     },
@@ -159,7 +159,9 @@ const EndToEndImageGrid = () => {
                   End To End Structural
                 </h1>
               </div>
-              <Image width={1000} height={1000}
+              <Image
+                width={1000}
+                height={1000}
                 src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
@@ -196,7 +198,9 @@ const EndToEndImageGrid = () => {
                   </div> */}
                 <Link href={item.slug}>
                   <div className="mb-4 sm:w-[200px] w-[150px]">
-                    <Image width={1000} height={1000}
+                    <Image
+                      width={1000}
+                      height={1000}
                       src={item.src}
                       alt={item.text}
                       className="w-full object-cover mr-4"

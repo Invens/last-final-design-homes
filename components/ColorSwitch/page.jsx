@@ -35,21 +35,21 @@ const Page = () => {
           ></button>
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
-              selectedColor === '#fff' ? 'border-green-500' : ''
+              selectedColor === '#ffe855' ? 'border-green-500' : ''
             }`}
             style={{ backgroundColor: '#ffe855' }}
             onClick={() => handleColorSelect('#ffe855')}
           ></button>
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
-              selectedColor === '#fff' ? 'border-green-500' : ''
+              selectedColor === '#f54e07' ? 'border-green-500' : ''
             }`}
             style={{ backgroundColor: '#f54e07' }}
             onClick={() => handleColorSelect('#f54e07')}
           ></button>
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
-              selectedColor === '#fff' ? 'border-green-500' : ''
+              selectedColor === '#707070' ? 'border-green-500' : ''
             }`}
             style={{ backgroundColor: '#707070' }}
             onClick={() => handleColorSelect('#707070')}
