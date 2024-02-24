@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Header from '../../../components/Navbar/Header'
 import Footer from '../../../components/Footer/Footer'
 import Head from 'next/head'
@@ -8,7 +8,7 @@ import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
-import HomesSlider from './HomesSlider'
+// import HomesSlider from './HomesSlider'
 import Modal from 'react-modal' // Import react-modal
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import './HomesSlider.css'
@@ -79,7 +79,10 @@ const Page = ({}) => {
   ]
   const [projectIndex, setProjectIndex] = useState(0)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
+  const [prevImage, setPrevImage] = useState('')
+  const [nextImage, setNextImage] = useState('')
+  const [prevProjectName, setPrevProjectName] = useState('')
+  const [nextProjectName, setNextProjectName] = useState('')
   const [showSlider, setShowSlider] = useState(false)
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
     []
@@ -164,6 +167,20 @@ const Page = ({}) => {
     console.log('currentProjectIndex', projectIndex)
     console.log('imagesArray', tempData[projectIndex].images)
   }
+
+  useEffect(() => {
+    // Update prev project image when project index changes
+    const prevIndex = (projectIndex - 1 + tempData.length) % tempData.length
+    const prevProjectImages = tempData[prevIndex].images
+    const prevProjectFirstImage = prevProjectImages[0]
+    setPrevImage(prevProjectFirstImage)
+    setPrevProjectName(tempData[prevIndex].heading)
+    const nextIndex = (projectIndex + 1) % tempData.length
+    const nextProjectImages = tempData[nextIndex].images
+    const nextProjectFirstImage = nextProjectImages[0]
+    setNextImage(nextProjectFirstImage)
+    setNextProjectName(tempData[nextIndex].heading)
+  }, [projectIndex, tempData])
 
   return (
     <>
@@ -504,19 +521,41 @@ const Page = ({}) => {
           </div>
 
           {/* section bottom with buttons */}
-          <div className="h-[10%] w-full flex flex-row justify-between rounded-b-lg  mt-4">
-            <button
-              onClick={prevProject}
-              className="px-4 py-2 flex items-center text-xs rounded-full border-2 border-blue-300 hover:bg-blue-500 hover:text-white"
-            >
-              <ChevronLeft className="w-6 h-6 mr-2" /> Previous project
-            </button>
-            <button
-              onClick={nextProject}
-              className="px-4 py-2 flex items-center text-xs rounded-full border-2 border-blue-300 hover:bg-blue-500 hover:text-white"
-            >
-              Next project <ChevronRight className="w-6 h-6 ml-2" />
-            </button>
+          <div className="h-[10%] w-full flex flex-row justify-between rounded-b-lg  mt-4 overflow-auto">
+            <div className="flex  mr-4 pl-0">
+              <button
+                onClick={prevProject}
+                className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
+              >
+                <ChevronLeft className="w-6 h-6 sm:mr-2" />
+
+                <img
+                  src={prevImage}
+                  alt="Description of the image"
+                  className="sm:ml-2 w-8 sm:w-10 h-8 sm:h-10 "
+                />
+                <span className="ml-2 truncate md:w-auto w-24 md:overflow-visible overflow-hidden ">
+                  {prevProjectName}
+                </span>
+              </button>
+            </div>
+            <div className="flex ml-4 pr-0">
+              <button
+                onClick={nextProject}
+                className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
+              >
+                <span className="mr-2 truncate md:w-auto w-24 md:overflow-visible overflow-hidden">
+                  {nextProjectName}
+                </span>
+                <img
+                  src={nextImage}
+                  alt="Description of the image"
+                  className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
+                />
+
+                <ChevronRight className="w-6 h-6 sm:ml-2" />
+              </button>
+            </div>
           </div>
         </div>
       </Modal>
@@ -527,3 +566,4 @@ const Page = ({}) => {
 }
 
 export default Page
+//rounded-full border-2 border-blue-300 hover:bg-blue-500 hover:text-white

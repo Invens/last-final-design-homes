@@ -118,9 +118,7 @@ const Collection = () => {
 
   return (
     <>
-      <div className="hero">
-      
-      </div>
+      <div className="hero"></div>
       <div
         className="w-full overflow-hidden mx-auto text-center my-8"
         ref={aniRef}
@@ -143,7 +141,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >
@@ -154,7 +152,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >
@@ -165,7 +163,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >
@@ -190,7 +188,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >
@@ -201,7 +199,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >
@@ -212,7 +210,7 @@ const Collection = () => {
           <span
             style={{
               fontWeight: 900,
-              WebkitTextStroke: '2px black',
+
               letterSpacing: '2px',
             }}
           >

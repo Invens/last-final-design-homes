@@ -1,5 +1,4 @@
 'use client'
-// context/ThemeContext.js
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const ThemeContext = createContext()
@@ -13,13 +12,13 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.style.setProperty('--theme-color', theme)
+
+    // Set text color based on theme
+    const textColor = theme === '#151617' ? '#f54e07' : '#000'
+    document.documentElement.style.setProperty('--text-color', textColor)
   }, [theme])
 
-  const toggleTheme = ({color}) => {
-    // Add your color options here
-    const colorOptions = ['#fff', '#ffe855', '#ffe855', '#707070']
-    const currentIndex = colorOptions.indexOf(theme)
-    const nextIndex = (currentIndex + 1) % colorOptions.length
+  const toggleTheme = ({ color }) => {
     setTheme(color)
   }
 

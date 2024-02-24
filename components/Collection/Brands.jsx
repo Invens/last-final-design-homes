@@ -22,10 +22,10 @@ const brand = [
     id: 4,
     img: '/images/brands-nobg/b4.png',
   },
-  {
-    id: 5,
-    img: '/images/brands-nobg/b5.png',
-  },
+  // {
+  //   id: 5,
+  //   img: '/images/brands-nobg/b5.png',
+  // },
   {
     id: 6,
     img: '/images/brands-nobg/b6.png',

@@ -6,6 +6,7 @@ import { SpaceProvider } from './SpaceContext'
 import { ThemeProvider } from './themeContext'
 import store from '../components/redux/store'
 import Script from 'next/script'
+import Head from 'next/head'
 
 const bioRhyme = BioRhyme({
   weight: '400',
@@ -16,6 +17,9 @@ const bioRhyme = BioRhyme({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <Script strategy="lazyOnLoad" id="hotjar">
         {`
           (function(h,o,t,j,a,r){

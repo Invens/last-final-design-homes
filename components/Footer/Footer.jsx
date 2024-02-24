@@ -11,7 +11,7 @@ import Clock from 'react-clock'
 import 'react-clock/dist/Clock.css'
 
 const ParagraphTab = ({ text }) => {
-  return <p className="text-lg">{text}</p>
+  return <p className="text-lg text-black">{text}</p>
 }
 const LocationsTabs = () => {
   const [value, setValue] = React.useState(0)
@@ -67,9 +67,9 @@ const LocationsTabs = () => {
           />
         </Tabs>
       </div>
-      <h2 className="mt-4 text-lg font-bold">LOCATIONS -</h2>
+      <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2>
       <Box width="100%" className="mt-2">
-        {value === 0 && <ParagraphTab text={paragraphs[0]} />}
+        {value === 0 && <ParagraphTab text={paragraphs[0]}/>}
         {value === 1 && <ParagraphTab text={paragraphs[1]} />}
         {value === 2 && <ParagraphTab text={paragraphs[2]} />}
       </Box>

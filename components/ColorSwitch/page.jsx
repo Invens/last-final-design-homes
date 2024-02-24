@@ -25,7 +25,7 @@ const Page = () => {
         onClick={toggleDropdown}
       ></button>
       {showDropdown && (
-        <div className="absolute flex flex-row gap-1 -top-3 justify-center items-center bg-white border-2 border-black p-2 rounded-full">
+        <div className="absolute z-50 flex flex-row gap-1 -top-3 justify-center items-center bg-white border-2 border-black p-2 rounded-full">
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
               selectedColor === '#fff' ? 'border-green-500' : ''
@@ -49,10 +49,10 @@ const Page = () => {
           ></button>
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
-              selectedColor === '#707070' ? 'border-green-500' : ''
+              selectedColor === '#151617' ? 'border-green-500' : ''
             }`}
-            style={{ backgroundColor: '#707070' }}
-            onClick={() => handleColorSelect('#707070')}
+            style={{ backgroundColor: '#151617' }}
+            onClick={() => handleColorSelect('#151617')}
           ></button>
         </div>
       )}

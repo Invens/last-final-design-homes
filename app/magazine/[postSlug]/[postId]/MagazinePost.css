@@ -22,15 +22,32 @@
 }
 
 .post-content img {
-  width: auto;
   height: 400px;
-  max-width: 100%;
+  width: 60%;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 80px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  float: right;
-  margin-left: 20px;
+  /* Float the image to the right */
+  margin-left: auto;
+  margin-right: auto; /* Add some margin to create space for the text */
+}
+.post-content figure {
+  height: 400px;
+  width: 60%;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.post-content figure img {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* Float the image to the right */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .post-content h2 {

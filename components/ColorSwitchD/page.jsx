@@ -32,7 +32,7 @@ const Page = () => {
       ></button>
       {showDropdown && (
         <div
-          className="absolute flex flex-col gap-1 -top-6 -left-2 justify-center items-center bg-white border-2 border-black p-2 rounded-full"
+          className="absolute z-50 flex flex-col gap-1 -top-6 -left-2 justify-center items-center bg-white border-2 border-black p-2 rounded-full"
           style={{
             opacity: 1,
             transform: 'translateY(0)',
@@ -62,10 +62,10 @@ const Page = () => {
           ></button>
           <button
             className={`w-4 h-4 border-2 border-black rounded-full bg-white ${
-              selectedColor === '#707070' ? 'border-green-500' : ''
+              selectedColor === '#151617' ? 'border-green-500' : ''
             }`}
-            style={{ backgroundColor: '#707070' }}
-            onClick={() => handleColorSelect('#707070')}
+            style={{ backgroundColor: '#151617' }}
+            onClick={() => handleColorSelect('#151617')}
           ></button>
         </div>
       )}
