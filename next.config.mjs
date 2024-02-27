@@ -15,6 +15,7 @@ const nextConfig = {
       'www.imagekit.io',
       'ik.imagekit.io',
       'homes.devotionalindia.com',
+      'cdn-icons-png.flaticon.com',
     ],
   },
   experimental: {
