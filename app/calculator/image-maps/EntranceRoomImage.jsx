@@ -82,7 +82,7 @@ const SvgMap = ({ data, name }) => {
       setSelectedPolygon((prevSelected) =>
         prevSelected.filter((id) => id !== polygonId)
       )
-
+      //how are you my dear friends, kaisa laga code 
       // Subtract the price of the deselected polygon from the room price
       const priceOfDeselectedPolygon = calculateSpacePrice(
         polygonId,
