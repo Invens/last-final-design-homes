@@ -187,9 +187,7 @@ const FourthStep = () => {
           {spaceData.map((room, index) => (
             <Accordion key={index} className="mb-4">
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Image
-                width={1000}
-                height={1000}
+                <img
                   src="/images/bed-square.svg"
                   alt={`Accordion ${index + 1}`}
                   className="h-6 mr-4 self-center"
