@@ -45,15 +45,15 @@ const SvgMap = ({ data, name }) => {
   }
 
   const initialSquareFootage = {
-    falseCeiling: 185,
-    Electrical: 13000,
-    Flooring: 498,
-    upvcWindow: 1100,
+    falseCeiling: 80,
+    Electrical: 1,
+    Flooring: 80,
+    upvcWindow: 45,
     walls: 65,
     Plumbing: 50,
     CounterTop: 80,
-    KitchenWalls: 10,
-    KitchenCabinets: 150,
+    KitchenWalls: 196,
+    KitchenCabinets: 50,
   }
   console.log('data: ', data)
   console.log('name: ', name)

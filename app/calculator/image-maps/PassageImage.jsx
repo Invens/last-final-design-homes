@@ -11,29 +11,29 @@ const SvgMap = ({ data, name }) => {
   const pricing = {
     premium: {
       Walls: { pricePerSqFt: 55 },
-      FalseCeiling: { pricePerSqFt: 185 },
-      Electrical: { price: 5000 },
-      Flooring: { pricePerSqFt: 497 },
+      FalseCeiling: { pricePerSqFt: 170 },
+      Electrical: { price: 1450 },
+      Flooring: { pricePerSqFt: 170 },
     },
     luxury: {
-      Walls: { pricePerSqFt: 65 },
-      FalseCeiling: { pricePerSqFt: 210 },
-      Electrical: { price: 13000 },
-      Flooring: { pricePerSqFt: 498 },
+      Walls: { pricePerSqFt: 60 },
+      FalseCeiling: { pricePerSqFt: 200 },
+      Electrical: { price: 12500 },
+      Flooring: { pricePerSqFt: 200 },
     },
     ultraLuxury: {
       Walls: { pricePerSqFt: 90 },
       FalseCeiling: { pricePerSqFt: 250 },
-      Electrical: { price: 18000 },
-      Flooring: { pricePerSqFt: 499 },
+      Electrical: { price: 17500 },
+      Flooring: { pricePerSqFt: 450},
     },
   }
 
   const initialSquareFootage = {
-    FalseCeiling: 185,
-    electrical: 10,
-    Flooring: 48,
-    Walls: 65,
+    FalseCeiling: 60,
+    electrical: 1,
+    Flooring: 60,
+    Walls: 147,
   }
   console.log('data: ', data)
   console.log('name: ', name)
