@@ -38,10 +38,31 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
     onPrevSlide() // Call the onPrevSlide callback
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted!')
-  }
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      mobile: document.getElementById('mobile').value,
+      address: document.getElementById('address').value,
+      interest: document.getElementById('Interest').value,
+    };
+
+    try {
+      // Send an API request to handle form submission
+      const response = await axios.post('https://api.designindianwardrobe.com/submitForm', formData);
+
+      // Assuming the server responds with a success message
+      console.log(response.data);
+
+      // Optionally, you can perform additional actions after form submission
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // Handle form submission error
+    }
+  };
 
   const handleWhatsapp = (e) => {
     e.preventDefault()
