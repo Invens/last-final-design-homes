@@ -177,8 +177,7 @@ const Page = ({}) => {
     setProjectName(projects[projectIndex - 1]?.name || '')
   }, [projectIndex, projects])
 
-  console.log('prevImage', prevImage)
-  console.log('nextImage', nextImage)
+ 
 
   return (
     <>
