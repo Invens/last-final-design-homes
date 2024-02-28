@@ -285,7 +285,7 @@ const Page = ({}) => {
                   <form
                     className="w-full max-w-md p-2 rounded-lg shadow-md overflow-y-auto"
                     method="post"
-                    onSubmit={handleSubmit}
+              
                   >
                     <h2 className="sm:text-lg text-md font-bold p-0 text-gray-900">
                       {projectName}
@@ -305,7 +305,7 @@ const Page = ({}) => {
                       <div className="social-share my-4 flex gap-4 items-center ">
                         <button
                           type="button"
-                          onClick={handleWhatsapp}
+                
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
@@ -318,7 +318,7 @@ const Page = ({}) => {
                         </button>
                         <button
                           type="button"
-                          onClick={handleInstagram}
+                  
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
@@ -331,7 +331,7 @@ const Page = ({}) => {
                         </button>
                         <button
                           type="button"
-                          onClick={handleFacebook}
+                    
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
