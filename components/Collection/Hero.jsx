@@ -164,5 +164,5 @@ const Hero = () => {
     </div>
   )
 }
-Hero.ssr = false
+// Hero.ssr = false
 export default Hero

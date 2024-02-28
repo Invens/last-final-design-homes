@@ -1,21 +1,21 @@
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import Header from '../../../components/Navbar/Header'
-import Footer from '../../../components/Footer/Footer'
-import Head from 'next/head'
-import Link from 'next/link'
-import ProgressBar from '../../../components/Progressbar'
-import Tabs from '../Tabs'
-import Nav from 'react-bootstrap/Nav'
-import Omsairam from '../../../components/Navbar/Omsairam'
-import Modal from 'react-modal'
-import { ChevronRight, ChevronLeft } from 'lucide-react'
-import './HomesSlider.css'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import Image from 'next/image'
-
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import Header from '../../../components/Navbar/Header';
+import Footer from '../../../components/Footer/Footer';
+import Head from 'next/head';
+import Link from 'next/link';
+import ProgressBar from '../../../components/Progressbar';
+import Tabs from '../Tabs';
+import Nav from 'react-bootstrap/Nav';
+import Omsairam from '../../../components/Navbar/Omsairam';
+import Modal from 'react-modal';
+import { ChevronRight, ChevronLeft } from 'lucide-react';
+import './HomesSlider.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
+import axios from 'axios';
 const Card = ({ project, handleImageClick }) => {
   if (!project.images || project.images.length === 0) {
     // Render a placeholder or loading state if images are not available
@@ -126,61 +126,42 @@ const Page = ({}) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const projectsResponse = await fetch(
-          'https://api.designindianwardrobe.com/api/projects'
-        )
-        if (projectsResponse.ok) {
-          const projectsData = await projectsResponse.json()
-
-          // Fetch images for each project
+        const projectsResponse = await axios.get('https://api.designindianwardrobe.com/api/projects');
+  
+        if (projectsResponse.status === 200) {
+          const projectsData = projectsResponse.data;
+  
+          // Fetch images for each project using Axios
           const projectsWithImages = await Promise.all(
             projectsData.map(async (project) => {
-              const imagesResponse = await fetch(
-                `https://api.designindianwardrobe.com/api/projects/images/${project.id}`
-              )
-              if (imagesResponse.ok) {
-                const imagesData = await imagesResponse.json()
-                return { ...project, images: imagesData }
-              } else {
-                console.error(
-                  `Error fetching images for project ${project.id}:`,
-                  imagesResponse.statusText
-                )
-                return project
+              try {
+                const imagesResponse = await axios.get(`https://api.designindianwardrobe.com/api/projects/images/${project.id}`);
+  
+                if (imagesResponse.status === 200) {
+                  const imagesData = imagesResponse.data;
+                  return { ...project, images: imagesData };
+                } else {
+                  console.error(`Error fetching images for project ${project.id}:`, imagesResponse.statusText);
+                  return project;
+                }
+              } catch (error) {
+                console.error(`Error during image fetch for project ${project.id}:`, error.message);
+                return project;
               }
             })
-          )
-
-          setProjects(projectsWithImages)
+          );
+  
+          setProjects(projectsWithImages);
         } else {
-          console.error('Error fetching projects:', projectsResponse.statusText)
+          console.error('Error fetching projects:', projectsResponse.statusText);
         }
       } catch (error) {
-        console.error('Error during fetch:', error)
+        console.error('Error during fetch:', error.message);
       }
-    }
-
-    fetchProjects()
-  }, [])
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Form submitted!')
-  }
-  const handleWhatsapp = (e) => {
-    e.preventDefault()
-    console.log('whatsapp')
-  }
-  const handleInstagram = (e) => {
-    e.preventDefault()
-    console.log('instagram')
-  }
-
-  const handleFacebook = (e) => {
-    e.preventDefault()
-    console.log('facebook')
-  }
-
+    };
+  
+    fetchProjects();
+  }, []);
   useEffect(() => {
     const prevIndex = (projectIndex - 1 + projects.length) % projects.length
     const prevProjectImages = projects[prevIndex]?.images || []

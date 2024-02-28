@@ -10,55 +10,55 @@ const SvgMap = ({ data, name }) => {
   const initialSquareFootage = {
     // ... existing bedroom spaces
     plumbing: 1, // assuming 1 quantity
-    wallTiles: 180,
-    Flooring: 180,
+    wallTiles: 98,
+    Flooring: 40,
     sanitaryAndCP: 1, // assuming 1 quantity
     ShowerEnclosure: 1, // assuming 1 quantity
-    upvcWindow: 800,
-    bathroomVanity: 100, // assuming 1 quantity
+    upvcWindow: 6,
+    bathroomVanity: 1, // assuming 1 quantity
     door: 1, // assuming 1 quantity
-    falseCeiling: 180,
+    falseCeiling: 40,
     // ... other existing spaces
   }
 
   const pricing = {
     premium: {
       // ... existing premium spaces
-      Plumbing: { price: 25000 },
-      wallTiles: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      Flooring: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      sanitaryAndCP: { price: 35000 },
-      ShowerEnclosure: { price: 7000 },
-      upvcWindow: { pricePerSqFt: 800 },
-      bathroomVanity: { price: 20000 },
-      door: { price: 20000 },
-      falseCeiling: { pricePerSqFt: 180 }, // adjust based on your actual pricing
+      Plumbing: { price: 24000 },
+      wallTiles: { pricePerSqFt: 170 }, // adjust based on your actual pricing
+      Flooring: { pricePerSqFt: 170 }, // adjust based on your actual pricing
+      sanitaryAndCP: { price: 34000 },
+      ShowerEnclosure: { price: 6000 },
+      upvcWindow: { pricePerSqFt: 750 },
+      bathroomVanity: { price: 19000 },
+      door: { price: 19000 },
+      falseCeiling: { pricePerSqFt: 170 }, // adjust based on your actual pricing
       // ... other existing premium spaces
     },
     luxury: {
       // ... existing luxury spaces
-      Plumbing: { price: 30000 },
-      wallTiles: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      Flooring: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      sanitaryAndCP: { price: 55000 },
-      ShowerEnclosure: { price: 21000 },
-      upvcWindow: { pricePerSqFt: 1100 },
-      bathroomVanity: { price: 25000 },
-      door: { price: 25000 },
-      falseCeiling: { pricePerSqFt: 220 }, // adjust based on your actual pricing
+      Plumbing: { price: 29000 },
+      wallTiles: { pricePerSqFt: 210 }, // adjust based on your actual pricing
+      Flooring: { pricePerSqFt: 210 }, // adjust based on your actual pricing
+      sanitaryAndCP: { price: 54000 },
+      ShowerEnclosure: { price: 20000 },
+      upvcWindow: { pricePerSqFt: 1050 },
+      bathroomVanity: { price: 24000 },
+      door: { price: 24000 },
+      falseCeiling: { pricePerSqFt: 210 }, // adjust based on your actual pricing
       // ... other existing luxury spaces
     },
     ultraLuxury: {
       // ... existing ultraLuxury spaces
-      Plumbing: { price: 35000 },
-      wallTiles: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      Flooring: { pricePerSqFt: 1 }, // adjust based on your actual pricing
-      sanitaryAndCP: { price: 85000 },
-      ShowerEnclosure: { price: 31500 },
-      upvcWindow: { pricePerSqFt: 1500 },
-      bathroomVanity: { price: 35000 },
-      door: { price: 36000 },
-      falseCeiling: { pricePerSqFt: 500 }, // adjust based on your actual pricing
+      Plumbing: { price: 34000 },
+      wallTiles: { pricePerSqFt: 450 }, // adjust based on your actual pricing
+      Flooring: { pricePerSqFt: 450 }, // adjust based on your actual pricing
+      sanitaryAndCP: { price: 84000 },
+      ShowerEnclosure: { price: 30500 },
+      upvcWindow: { pricePerSqFt: 1450 },
+      bathroomVanity: { price: 34000 },
+      door: { price: 35000 },
+      falseCeiling: { pricePerSqFt: 450 }, // adjust based on your actual pricing
       // ... other existing ultraLuxury spaces
     },
   }

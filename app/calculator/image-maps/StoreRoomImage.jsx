@@ -10,38 +10,38 @@ const SvgMap = ({ data, name }) => {
   const router = useRouter()
   const pricing = {
     premium: {
-      Walls: { pricePerSqFt: 55 },
-      Door: { price: 20000 },
-      upvcWindow: { pricePerSqFt: 800 },
-      FalseCeiling: { pricePerSqFt: 185 },
-      Electrical: { price: 5000 },
-      Flooring: { pricePerSqFt: 497 },
+      Walls: { pricePerSqFt: 50 },
+      Door: { price: 19000 },
+      upvcWindow: { pricePerSqFt: 750 },
+      FalseCeiling: { pricePerSqFt: 170 },
+      Electrical: { price: 4500 },
+      Flooring: { pricePerSqFt: 180 },
     },
     luxury: {
       Walls: { pricePerSqFt: 65 },
-      Door: { price: 25000 },
-      upvcWindow: { pricePerSqFt: 1100 },
-      FalseCeiling: { pricePerSqFt: 210 },
-      Electrical: { price: 13000 },
-      Flooring: { pricePerSqFt: 498 },
+      Door: { price: 24500 },
+      upvcWindow: { pricePerSqFt: 1050 },
+      FalseCeiling: { pricePerSqFt: 200 },
+      Electrical: { price: 12500 },
+      Flooring: { pricePerSqFt: 200 },
     },
     ultraLuxury: {
       Walls: { pricePerSqFt: 90 },
-      Door: { price: 36000 },
-      upvcWindow: { pricePerSqFt: 1500 },
-      FalseCeiling: { pricePerSqFt: 250 },
-      Electrical: { price: 18000 },
-      Flooring: { pricePerSqFt: 499 },
+      Door: { price: 35500 },
+      upvcWindow: { pricePerSqFt: 1450 },
+      FalseCeiling: { pricePerSqFt: 240 },
+      Electrical: { price: 17500 },
+      Flooring: { pricePerSqFt: 450 },
     },
   }
 
   const initialSquareFootage = {
-    FalseCeiling: 185,
-    electrical: 10,
-    Flooring: 48,
+    FalseCeiling: 64,
+    electrical: 1,
+    Flooring: 64,
     Door: 0,
-    upvcWindow: 10,
-    Walls: 65,
+    upvcWindow: 48,
+    Walls: 156,
   }
   console.log('data: ', data)
   console.log('name: ', name)

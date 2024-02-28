@@ -39,13 +39,13 @@ const SvgMap = ({ data, name }) => {
   }
 
   const initialSquareFootage = {
-    FalseCeiling: 185,
-    electrical: 10,
-    Flooring: 48,
-    StudyTables: 50,
+    FalseCeiling: 64,
+    electrical: 1,
+    Flooring: 64,
+    StudyTables: 1,
     Door: 0,
-    upvcWindow: 10,
-    Walls: 65,
+    upvcWindow: 48,
+    Walls: 156,
   }
   console.log('data: ', data)
   console.log('name: ', name)
