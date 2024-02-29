@@ -11,14 +11,14 @@ import Image from 'next/image'
 const YouTubeCard = ({ imgUrl, videoLink, openModal, title, desc }) => {
   return (
     <>
-      <div className="relative rounded-lg border-2 border-green-500 m-2 p-4">
+      <div className="relative rounded-lg border-2 border-green-500 m-2 p-4 h-96">
         <div
           className="relative overflow-hidden rounded-lg cursor-pointer"
           onClick={openModal}
         >
           <Image
-          width={1000}
-          height={1000}
+            width={1000}
+            height={1000}
             src={imgUrl}
             alt="Thumbnail"
             className="w-full h-40 object-cover"
@@ -94,35 +94,34 @@ function SamplePrevArrow(props) {
 const YouTubeSlider = () => {
   const cardData = [
     {
-      imgUrl: '/images/contemporary.webp',
-      videoUrl: 'https://www.youtube.com/embed/aErmAFhwES0?si=P1YkrXJ3zt3ndL0E',
-      videoLink: 'https://www.youtube.com/watch?v=aErmAFhwES0',
+      imgUrl: '/images/landing/firstThumbnail.jpg',
+      videoUrl: 'https://www.youtube.com/embed/gxuwzE7lnXo?si=xcODceg0jCZHB7GM',
+      videoLink: 'https://youtu.be/gxuwzE7lnXo?si=TlacOd21cA2AAQgc',
       title: 'Aman & Astha',
-      desc: '“We are a big family with every member having their own taste. HomeLane designed a home where each room tells a different story, yet the design is such that everything looks cohesive - We all LOVE IT!',
+      desc: '"Collaborating with Design Indian Homes was delightful. Their precision and commitment made our renovation effortless. From start to finish, they exceeded expectations."',
     },
     {
-      imgUrl: '/images/contemporary.webp',
+      imgUrl: '/images/landing/secondThumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/nv09oOzZiGY?si=Bf4xHq1oLPjxApx3',
       videoLink: 'https://www.youtube.com/watch?v=nv09oOzZiGY',
-      title: 'Name of Customers',
-      desc: '“We are a big family with every member having their own taste. HomeLane designed a home where each room tells a different story, yet the design is such that everything looks cohesive - We all LOVE IT!',
+      title: "Singh's Family",
+      desc: '"Design Indian Homes earns my highest recommendation! Professionalism and creativity define them. They understand preferences and deliver spaces."',
     },
     {
-      imgUrl: '/images/contemporary.webp',
+      imgUrl: '/images/landing/thirdThumbnail.jpg',
       videoUrl: 'https://www.youtube.com/embed/3tIEJtHrGtI?si=M_GBs3ADuEK0xBtx',
       videoLink: 'https://www.youtube.com/watch?v=3tIEJtHrGtI',
-      title: 'Name of Customers',
-      desc: '“We are a big family with every member having their own taste. HomeLane designed a home where each room tells a different story, yet the design is such that everything looks cohesive - We all LOVE IT!',
+      title: 'Ajeet & Disha',
+      desc: '"Selecting Design Indian Homes was our best decision. Their expertise and dedication shine through every project. We are thrilled and eager to work with them again."',
     },
     {
-      imgUrl: '/images/contemporary.webp',
-      videoUrl: 'https://www.youtube.com/embed/3tIEJtHrGtI?si=M_GBs3ADuEK0xBtx',
-      videoLink: 'https://www.youtube.com/watch?v=3tIEJtHrGtI',
-      title: 'Name of Customers',
-      desc: '“We are a big family with every member having their own taste. HomeLane designed a home where each room tells a different story, yet the design is such that everything looks cohesive - We all LOVE IT!',
+      imgUrl: '/images/landing/fourthThumbnail.jpg',
+      videoUrl: 'https://www.youtube.com/embed/QQ0pLNSwu7A?si=GSrM6GCUMIcvspze',
+      videoLink: 'https://youtu.be/QQ0pLNSwu7A?si=GSrM6GCUMIcvspze',
+      title: "Shah's House",
+      desc: '"Design Indian Homes transformed our kitchen remarkably. Innovative ideas and meticulous attention yielded a modern masterpiece. Their pride reflects in exceptional results."',
     },
   ]
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.

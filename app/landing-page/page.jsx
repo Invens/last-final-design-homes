@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import CountUp from 'react-countup'
+import React, { useEffect, useState, useRef } from 'react'
+// import CountUp from 'react-countup'
 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -15,6 +15,7 @@ import ClientReviewsSection from './ClientReviews'
 import Header from '../../components/Navbar/Header'
 import Footer from '../../components/Footer/Footer'
 import Omsairam from '../../components/Navbar/Omsairam'
+
 const ContactSection = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -47,7 +48,7 @@ const ContactSection = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: 'url("/images/landing-bg.avif")' }}
+        style={{ backgroundImage: 'url("/images/landing/landing-bg.jpg")' }}
       />
 
       {/* Content Container */}
@@ -56,7 +57,7 @@ const ContactSection = () => {
         <div className="max-w-md mx-4 text-left mb-8 md:mb-0 md:mr-4">
           <h1 className="text-4xl font-bold mb-4">
             Bring home beautiful interiors{' '}
-            <span className="text-green-500"> that fit your budget</span>
+            <span className="text-red-500"> that fit your budget</span>
           </h1>
           <p className="text-lg">
             Experience unmatched quality & timely delivery with DIH.
@@ -166,9 +167,6 @@ const ThreeColumnSection = () => {
 }
 
 const TextSection = () => {
-  const handleConsultation = () => {
-    console.log('Button clicked!')
-  }
   return (
     <section className="flex flex-col items-center justify-center mt-12 p-8 bg-gray-100">
       <div className="max-w-md text-center">
@@ -183,25 +181,54 @@ const TextSection = () => {
         </p>
 
         {/* Button */}
-        <button
+        <Link
           className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700"
-          onClick={handleConsultation}
+          href="/interior-designing-estimates-pricing"
         >
-          BOOK FREE CONSULTATION
-        </button>
+          GET QUOTE
+        </Link>
       </div>
     </section>
   )
 }
 
 const CountingSection = () => {
-  // Set a state variable to control when the counting animation starts
-  const [startCounting, setStartCounting] = React.useState(false)
-
-  // Use useEffect to trigger the counting animation when the component mounts
+  const countup1Ref = useRef(null)
+  const countup2Ref = useRef(null)
+  const countup3Ref = useRef(null)
+  let countUp1Anim
+  let countUp2Anim
+  let countUp3Anim
+  const options = {
+    prefix: '+',
+  
+  }
+  // useEffect with empty dependency array runs once when component is mounted
   useEffect(() => {
-    setStartCounting(true)
-  }, []) // Empty dependency array ensures it runs only once when the component mounts
+    initCountUp()
+  }, [])
+
+  async function initCountUp() {
+    const countUpModule = await import('countup.js')
+    countUp1Anim = new countUpModule.CountUp(countup1Ref.current, 550, options)
+    if (!countUp1Anim.error) {
+      countUp1Anim.start()
+    } else {
+      console.error(countUp1Anim.error)
+    }
+    countUp2Anim = new countUpModule.CountUp(countup2Ref.current, 35, options)
+    if (!countUp2Anim.error) {
+      countUp2Anim.start()
+    } else {
+      console.error(countUp2Anim.error)
+    }
+    countUp3Anim = new countUpModule.CountUp(countup3Ref.current, 4, options)
+    if (!countUp3Anim.error) {
+      countUp3Anim.start()
+    } else {
+      console.error(countUp3Anim.error)
+    }
+  }
 
   return (
     <section className="flex flex-col items-center bg-emerald-600 justify-center p-12">
@@ -211,48 +238,36 @@ const CountingSection = () => {
 
       {/* Use CountUp component with start and end values */}
       <div className="flex flex-row gap-16">
-        <CountUp start={0} end={7500} duration={2} startOnMount={startCounting}>
-          {({ countUpRef }) => (
-            <div>
-              <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
-                <span ref={countUpRef} />+
-              </div>
-              <div>
-                <p className="text-white text-center">#Homes</p>
-              </div>
-            </div>
-          )}
-        </CountUp>
-        <CountUp start={0} end={350} duration={2} startOnMount={startCounting}>
-          {({ countUpRef }) => (
-            <div>
-              <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
-                <span ref={countUpRef} />+
-              </div>
-              <div>
-                <p className="text-white text-center">Designers</p>
-              </div>
-            </div>
-          )}
-        </CountUp>
-        <CountUp start={0} end={4} duration={2} startOnMount={startCounting}>
-          {({ countUpRef }) => (
-            <div>
-              <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
-                <span ref={countUpRef} />+
-              </div>
-              <div>
-                <p className="text-white text-center">Cities</p>
-              </div>
-            </div>
-          )}
-        </CountUp>
+        <div>
+          <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
+            <span ref={countup1Ref}>0</span>
+          </div>
+          <div>
+            <p className="text-white text-center">Homes</p>
+          </div>
+        </div>
+        <div>
+          <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
+            <span ref={countup2Ref}>0</span>
+          </div>
+          <div>
+            <p className="text-white text-center">Designers</p>
+          </div>
+        </div>
+        <div>
+          <div className="sm:text-4xl text-2xl font-bold text-white mt-8">
+            <span ref={countup3Ref}>0</span>
+          </div>
+          <div>
+            <p className="text-white text-center">Cities</p>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
-const Card1 = ({ img, heading, desc }) => {
+const Card1 = ({ img, heading, desc, slug }) => {
   return (
     <div className="max-w-xs mx-auto overflow-hidden bg-white rounded-lg shadow-lg h-80">
       {/* Image */}
@@ -278,7 +293,7 @@ const Card1 = ({ img, heading, desc }) => {
 
           {/* Button */}
           <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 whitespace-nowrap text-sm">
-            GET FREE QUOTE
+            <Link href={`/offers/${slug}`}>GET FREE QUOTE</Link>
           </button>
         </div>
       </div>
@@ -313,33 +328,38 @@ const CardCarousel = () => {
         {/* Repeat this card structure for each card in your carousel */}
         <Card1
           key={1}
-          img={'/images/landing/card1.avif'}
-          heading={'Monochromatic Gray 2 BHK'}
-          desc={'Add the cloudy hues to your space.'}
+          img={'/images/brands/slides1.jpeg'}
+          heading={'AFFORDABLE, YET WHOLESOME'}
+          desc={'On Top Priority'}
+          slug={'#top-priority'}
         />
         <Card1
           key={2}
-          img={'/images/landing/card1.avif'}
-          heading={'Monochromatic Gray '}
-          desc={'Add the cloudy hues to your space.'}
+          img={'/images/brands/slides2.jpeg'}
+          heading={'POCKET FRIENDLY, YET WELCOMING'}
+          desc={'Handcrafted for You'}
+          slug={'#top-priority'}
         />
         <Card1
           key={3}
-          img={'/images/landing/card1.avif'}
-          heading={'Monochromatic Gray 2 BHK'}
-          desc={'Add the cloudy hues to your space.'}
+          img={'/images/brands/slides3.jpeg'}
+          heading={'MINIMAL, YET OVERALL COVERAGE'}
+          desc={'Be Carefree & Happy'}
+          slug={'#top-priority'}
         />
         <Card1
           key={4}
-          img={'/images/landing/card1.avif'}
-          heading={'Monochromatic Gray 2 BHK'}
-          desc={'Add the cloudy hues to your space.'}
+          img={'/images/brands/slides4.jpeg'}
+          heading={'LUXURY, YET AFFORDABLE'}
+          desc={'Over the Top'}
+          slug={'#top-priority'}
         />
         <Card1
           key={5}
-          img={'/images/landing/card1.avif'}
-          heading={'Monochromatic Gray 2 BHK'}
-          desc={'Add the cloudy hues to your space.'}
+          img={'/images/brands/slides5.jpeg'}
+          heading={'HIGH QUALITY WITH TOTAL COMMITMENT'}
+          desc={'Premier Plus '}
+          slug={'#top-priority'}
         />
       </Carousel>
     </div>
@@ -501,7 +521,7 @@ const Card2Section = () => {
 
 const Card3 = ({ title, imageSrc, listItems }) => {
   return (
-    <div className="w-80 mx-auto overflow-hidden bg-white rounded-lg shadow-lg h-72 p-2">
+    <div className="w-80 mx-auto overflow-hidden bg-white rounded-lg shadow-lg h-80 p-4">
       {/* Title Section */}
       <div className="py-4 flex items-center">
         {/* Image in the Title */}
@@ -518,11 +538,11 @@ const Card3 = ({ title, imageSrc, listItems }) => {
       </div>
 
       {/* Unordered List */}
-      <div className="p-4">
+      <div className="p-0">
         {/* Title */}
 
         {/* Unordered List */}
-        <ul className="list-disc pl-4">
+        <ul className="list-disc pl-4 text-sm">
           {listItems.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
@@ -556,29 +576,47 @@ const Card3Section = () => {
     {
       title: 'Our Services',
       imageSrc: '/images/landing/other-services-desktop-1646230232-6UfAT.avif',
-      listItems: ['List Item 1', 'List Item 2', 'List Item 3'],
+      listItems: [
+        'Interior and exterior remodeling solutions.',
+
+        'Design and construction of residential properties.',
+        'Bespoke kitchen layouts optimized for functionality.',
+        'Personalized design consultations to meet client requirements.',
+        'Customized wardrobe designs for efficient organization.',
+      ],
     },
     {
       title: 'Warranty',
       imageSrc: '/images/landing/warranty-desktop-1646230235-UWz82.avif',
-      listItems: ['List Item 1', 'List Item 2', 'List Item 3'],
+      listItems: [
+        'Comprehensive coverage for peace of mind.',
+        'Guaranteed quality and durability assurance.',
+        'Reliable protection against manufacturing defects.',
+        'Prompt resolution of warranty claims.',
+        'Extended support for long-term satisfaction.',
+      ],
     },
     {
       title: 'Technology & Science',
       imageSrc:
         '/images/landing/technology-science-desktop-1646230234-kSJ7b.avif',
-      listItems: ['List Item A', 'List Item B', 'List Item C'],
+      listItems: [
+        'Cutting-edge technology for innovative design solutions.',
+        'Scientific principles applied for sustainable architecture.',
+        'Advanced software for precise modeling and visualization.',
+        'Integration of smart technologies for modern living spaces.',
+        'Research-driven approaches to enhance functionality and efficiency.',
+      ],
     },
     {
       title: 'Price Benefits',
       imageSrc: '/images/landing/price-benefits-desktop-1646230233-9NKLO.avif',
       listItems: [
-        'List Item A',
-        'List Item B',
-        'List Item C',
-        'List Item A',
-        'List Item B',
-        'List Item C',
+        'Competitive pricing without compromising quality.',
+        'Transparent cost breakdown for informed decisions.',
+        'Cost-effective solutions tailored to budget constraints.',
+        'Value-added services at affordable rates.',
+        'Flexible payment options for client convenience.',
       ],
     },
     // Add more card data as needed
@@ -864,19 +902,23 @@ const ConnectSection = () => {
 
         {/* Button */}
         <div className="flex flex-col justify-center sm:flex-row gap-4">
-          <button
-            className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 flex items-center justify-center"
-            onClick={handleConsultation}
-          >
+          <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 flex items-center justify-center">
             <Phone className="mr-2" />
-            CALL NOW
+            <a
+              href="tel:+919899264978"
+              className="flex items-center justify-center"
+            >
+              CALL NOW
+            </a>
           </button>
-          <button
-            className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 flex items-center justify-center"
-            onClick={handleConsultation}
-          >
+          <button className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700 flex items-center justify-center">
             <MessageCircle className="mr-2" />
-            <span>WHATSAPP</span>
+            <a
+              href="whatsapp://send?phone=+919899264978"
+              className="flex items-center justify-center"
+            >
+              WHATSAPP
+            </a>
           </button>
         </div>
       </div>
@@ -885,16 +927,16 @@ const ConnectSection = () => {
 }
 
 const FIRST_IMAGE_MODERN = {
-  imageUrl: '/images/landing/photo-1539922980492-38f6673af8dd.jpeg',
+  imageUrl: '/images/beforeafter/after1.jpg',
 }
 const SECOND_IMAGE_MODERN = {
-  imageUrl: '/images/landing/photo-1697967464378-1498c293e1aa.jpeg',
+  imageUrl: '/images/beforeafter/before1.jpg',
 }
 const FIRST_IMAGE_CONT = {
-  imageUrl: '/images/landing/photo-1539922980492-38f6673af8dd.jpeg',
+  imageUrl: '/images/beforeafter/after2.jpg',
 }
 const SECOND_IMAGE_CONT = {
-  imageUrl: '/images/landing/photo-1697967464378-1498c293e1aa.jpeg',
+  imageUrl: '/images/beforeafter/before2.jpg',
 }
 
 const BeforeAfterTabsSection = () => {
@@ -968,7 +1010,7 @@ const NewsCard = ({ logoSrc, title, review }) => {
         height={1000}
         src={logoSrc}
         alt="Newspaper Logo"
-        className="w-full h-16 object-fit"
+        className="w-[162px] h-[20px] object-fit my-4 mx-auto"
       />
 
       {/* Content */}
@@ -985,20 +1027,20 @@ const NewsCardSection = () => {
       <h1 className="text-center text-3xl text-gray-700">In the news</h1>
       <div className="flex flex-wrap justify-center items-center my-8 gap-4">
         <NewsCard
-          logoSrc="/images/landing/the-economic-times-1644313177-wXd2p.avif"
-          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor."
+          logoSrc="/images/landing/A&I.jpg"
+          review='"Design Indian Homes Emerges as the Best Architectural Firm in Delhi-NCR, Blending Luxury with Affordability"'
         />
         <NewsCard
-          logoSrc="/images/landing/the-economic-times-1644313177-wXd2p.avif"
-          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor."
+          logoSrc="/images/landing/the-economic-times.jpg"
+          review='"Luxurious Living Made Affordable: Design Indian Homes Sets New Standard in Delhi-NCR"'
         />
         <NewsCard
-          logoSrc="/images/landing/the-economic-times-1644313177-wXd2p.avif"
-          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor."
+          logoSrc="/images/landing/mint.jpg"
+          review='"Design Indian Homes Sets Benchmark for Customer Support in Delhi-NCR, Making Home Design a Friendly Experience"'
         />
         <NewsCard
-          logoSrc="/images/landing/the-economic-times-1644313177-wXd2p.avif"
-          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo metus auctor."
+          logoSrc="/images/landing/A&I.jpg"
+          review='"Experience Luxury with a Friendly Touch: Design Indian Homes Redefines Architectural Excellence in Delhi-NCR"'
         />
       </div>
     </div>
@@ -1070,9 +1112,9 @@ const page = () => {
       <Omsairam />
       <Header />
       <ContactSection />
+      <CountingSection />
       <ThreeColumnSection />
       <TextSection />
-      <CountingSection />
       <CardCarousel />
       <YouTubeCard
         imgUrl={'/images/landing/thumbnail.avif'}
