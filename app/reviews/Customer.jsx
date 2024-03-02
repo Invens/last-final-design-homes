@@ -54,7 +54,7 @@ const CustomerReviewSection = () => {
   return (
     <section className="bg-gray-100 py-12 px-8">
       <div className="container mx-auto">
-        <h2 className="sm:text-4xl uppercase font-bold text-center mb-8">
+        <h2 className="sm:text-3xl uppercase font-bold text-center mb-8">
           CUSTOMERS RECOMMENDATIONS
         </h2>
 

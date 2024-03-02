@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-    
-    
-
 // next.config.js
 const nextConfig = {
   // ...other configurations
@@ -33,6 +30,10 @@ const nextConfig = {
   // },
   async rewrites() {
     return [
+      // {
+      //   source: '/locations/:location*',
+      //   destination: '/locations/[...location]',
+      // },
       {
         source: '/modular-interior-design-ideas',
         destination: '/design-ideas',
@@ -542,6 +543,5 @@ const nextConfig = {
     ]
   },
 }
-  
- export default nextConfig
-  
+
+export default nextConfig
