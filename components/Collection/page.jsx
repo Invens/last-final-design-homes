@@ -224,7 +224,7 @@ const Collection = () => {
           <div className="flex flex-wrap">
             <div className=" mb-4" id="news">
               <Link href="/luxe">
-                <motion.video
+                <video
                   loop
                   autoPlay
                   playsInline
@@ -265,7 +265,7 @@ const Collection = () => {
                 </div>
               </div>
 
-              <motion.video
+              <video
                 loop
                 autoPlay
                 muted
@@ -281,7 +281,7 @@ const Collection = () => {
               >
                 <source src="/video/dkivid.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
-              </motion.video>
+              </video>
             </div>
             <motion.div
               className="imagesContainer flex flex-wrap justify-center"

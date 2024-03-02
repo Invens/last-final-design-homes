@@ -115,7 +115,7 @@ const Hero = () => {
 
       <section className="outter hero-video">
         <div className="videoBox mt-3 rounded-xl">
-          <motion.video
+          <video
             loop
             autoPlay
             muted
@@ -133,7 +133,7 @@ const Hero = () => {
               type="video/mp4"
             />
             Your browser does not support the video tag.
-          </motion.video>
+          </video>
         </div>
         <div className="callout">
           <h3 className="bg-transparent text-sm md:text-4xl">
