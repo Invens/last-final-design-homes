@@ -256,8 +256,8 @@ const Projects = ({}) => {
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 my-16">
         {projects.map((project) => (
-          <Link href="/design-ideas/our-homes">
-            <ProjectCard key={project.id} project={project} />
+          <Link key={project.id} href="/design-ideas/our-homes">
+            <ProjectCard project={project} />
           </Link>
         ))}
       </div>
