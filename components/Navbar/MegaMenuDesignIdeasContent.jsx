@@ -52,6 +52,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/foyer-area-designs">
             <li>Foyer Cabinets</li>
           </Link>
+          <Link href="/homes-by-design-indian-homes">
+            <li>Homes by Design Indian Homes</li>
+          </Link>
         </ul>
       </div>
 

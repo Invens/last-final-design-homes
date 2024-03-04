@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -74,6 +75,7 @@
     "twilio": "^4.23.0",
     "twilio-client": "^1.15.1",
     "typed.js": "^2.1.0",
+    "typewriter-effect": "^2.21.0",
     "use-media": "^1.5.0",
     "use-resize-observer": "^9.1.0"
   },
