@@ -10,10 +10,10 @@ return(
 <h1 className='text-center font-bold md:text-6xl'>PRIVACY POLICY</h1>
 <div className='mt-6'>
 <p className='text-left'>
-<strong>Designindianhomes.com </strong>is a website owned by Design Indian Kitchen Company. Wherever the term "Design Indian Kitchen'' or "Design Indian Wardrobe” or "Design Indian Homes" are used it refers to The Brand Design Indian Kitchen only, and its subsidiaries, controlled entities, affiliates and related parties. Design Indian Homes provides the services through www.designindianhomes.com ('Website' or 'Site').
+<strong>Designindianhomes.com </strong>is a website owned by Design Indian Kitchen Company. Wherever the term &quot;Design Indian Kitchen&quot; or &quot;Design Indian Wardrobe&quot; or &quot;Design Indian Homes&quot; are used it refers to The Brand Design Indian Kitchen only, and its subsidiaries, controlled entities, affiliates and related parties. Design Indian Homes provides the services through www.designindianhomes.com (&apos;Website&apos; or &apos;Site&apos;).
 <br/>
 </p>
-<p className='mt-2'>Design Indian home is highly committed to the privacy of your data and information and in providing excellent service to all of our customers and visitors of the Website. We have prepared this Data Protection and Privacy Policy ("Policy") to inform you of the privacy principles that govern this Website.</p>
+<p className='mt-2'>Design Indian home is highly committed to the privacy of your data and information and in providing excellent service to all of our customers and visitors of the Website. We have prepared this Data Protection and Privacy Policy (&quot;Policy&quot;) to inform you of the privacy principles that govern this Website.</p>
 
 <p className='mt-2'>
 Unless restricted by applicable law, you agree that all your personal information collected by Design Indian Kitchen Company through the Website may be used and disclosed as set out in this Policy
@@ -59,7 +59,7 @@ We may collect additional information in connection with your participation in a
 <h1 className='text-xl font-bold uppercase mt-4'>Anonymous Information
 </h1>
 <p>
-In addition to the information that you explicitly provide during your interactions on our Official Website, we will automatically receive and collect certain anonymous information in standard usage logs through our Web server, including computer-identification information obtained from "cookies" sent to your browser from:
+In addition to the information that you explicitly provide during your interactions on our Official Website, we will automatically receive and collect certain anonymous information in standard usage logs through our Web server, including computer-identification information obtained from &quot;cookies&quot; sent to your browser from:
 <br/>
 web server cookie stored on your hard drive
 <br/>
