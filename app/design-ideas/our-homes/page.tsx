@@ -1,21 +1,21 @@
-'use client';
-import React, { useState, useRef, useEffect } from 'react';
-import Header from '../../../components/Navbar/Header';
-import Footer from '../../../components/Footer/Footer';
-import Head from 'next/head';
-import Link from 'next/link';
-import ProgressBar from '../../../components/Progressbar';
-import Tabs from '../Tabs';
-import Nav from 'react-bootstrap/Nav';
-import Omsairam from '../../../components/Navbar/Omsairam';
-import Modal from 'react-modal';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
-import './HomesSlider.css';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Image from 'next/image';
-import axios from 'axios';
+'use client'
+import React, { useState, useRef, useEffect } from 'react'
+import Header from '../../../components/Navbar/Header'
+import Footer from '../../../components/Footer/Footer'
+import Head from 'next/head'
+import Link from 'next/link'
+import ProgressBar from '../../../components/Progressbar'
+import Tabs from '../Tabs'
+import Nav from 'react-bootstrap/Nav'
+import Omsairam from '../../../components/Navbar/Omsairam'
+import Modal from 'react-modal'
+import { ChevronRight, ChevronLeft } from 'lucide-react'
+import './HomesSlider.css'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import Image from 'next/image'
+import axios from 'axios'
 const Card = ({ project, handleImageClick }) => {
   if (!project.images || project.images.length === 0) {
     // Render a placeholder or loading state if images are not available
@@ -66,8 +66,8 @@ const Page = ({}) => {
   const [nextProjectName, setNextProjectName] = useState('')
   const [showSlider, setShowSlider] = useState(false)
 
-  console.log('projects: ', projects)
-  console.log('projectIndex : ', projectIndex)
+  // console.log('projects: ', projects)
+  // console.log('projectIndex : ', projectIndex)
 
   const sliderRef = useRef(null)
 
@@ -99,7 +99,34 @@ const Page = ({}) => {
       sliderRef.current.slickNext()
     }
   }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
 
+   const formData = {
+     name: (document.getElementById('name') as HTMLInputElement).value,
+     email: (document.getElementById('email') as HTMLInputElement).value,
+     mobile: (document.getElementById('mobile') as HTMLInputElement).value,
+     address: (document.getElementById('address') as HTMLInputElement).value,
+     interest: (document.getElementById('Interest') as HTMLSelectElement).value,
+   }
+
+    try {
+      // Send an API request to handle form submission
+      const response = await axios.post(
+        'https://m.designindianhomes.com/submitForm',
+        formData
+      )
+
+      // Assuming the server responds with a success message
+      console.log(formData)
+      console.log(response.data)
+
+      // Optionally, you can perform additional actions after form submission
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Handle form submission error
+    }
+  }
   const handlePrev = () => {
     setCurrentImageIndex(
       (prevIndex) =>
@@ -126,42 +153,52 @@ const Page = ({}) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const projectsResponse = await axios.get('https://api.designindianwardrobe.com/api/projects');
-  
+        const projectsResponse = await axios.get(
+          'https://api.designindianwardrobe.com/api/projects'
+        )
+
         if (projectsResponse.status === 200) {
-          const projectsData = projectsResponse.data;
-  
+          const projectsData = projectsResponse.data
+
           // Fetch images for each project using Axios
           const projectsWithImages = await Promise.all(
             projectsData.map(async (project) => {
               try {
-                const imagesResponse = await axios.get(`https://api.designindianwardrobe.com/api/projects/images/${project.id}`);
-  
+                const imagesResponse = await axios.get(
+                  `https://api.designindianwardrobe.com/api/projects/images/${project.id}`
+                )
+
                 if (imagesResponse.status === 200) {
-                  const imagesData = imagesResponse.data;
-                  return { ...project, images: imagesData };
+                  const imagesData = imagesResponse.data
+                  return { ...project, images: imagesData }
                 } else {
-                  console.error(`Error fetching images for project ${project.id}:`, imagesResponse.statusText);
-                  return project;
+                  console.error(
+                    `Error fetching images for project ${project.id}:`,
+                    imagesResponse.statusText
+                  )
+                  return project
                 }
               } catch (error) {
-                console.error(`Error during image fetch for project ${project.id}:`, error.message);
-                return project;
+                console.error(
+                  `Error during image fetch for project ${project.id}:`,
+                  error.message
+                )
+                return project
               }
             })
-          );
-  
-          setProjects(projectsWithImages);
+          )
+
+          setProjects(projectsWithImages)
         } else {
-          console.error('Error fetching projects:', projectsResponse.statusText);
+          console.error('Error fetching projects:', projectsResponse.statusText)
         }
       } catch (error) {
-        console.error('Error during fetch:', error.message);
+        console.error('Error during fetch:', error.message)
       }
-    };
-  
-    fetchProjects();
-  }, []);
+    }
+
+    fetchProjects()
+  }, [])
   useEffect(() => {
     const prevIndex = (projectIndex - 1 + projects.length) % projects.length
     const prevProjectImages = projects[prevIndex]?.images || []
@@ -176,8 +213,6 @@ const Page = ({}) => {
     setNextProjectName(projects[nextIndex]?.name || '')
     setProjectName(projects[projectIndex - 1]?.name || '')
   }, [projectIndex, projects])
-
- 
 
   return (
     <>
@@ -242,7 +277,7 @@ const Page = ({}) => {
         {/* Your card component or other content */}
         <div className="h-full flex flex-col justify-between rounded-lg">
           {/* top section with slider and image */}
-          <div className="h-[85%] w-full flex flex-col md:flex-row items-center justify-center rounded-t-lg ">
+          <div className="sm:h-[85%] h-[80%] w-full flex flex-col md:flex-row items-center justify-center rounded-t-lg ">
             {/* Image slider content */}
             <div className="relative md:w-3/5 w-full h-full overflow-hidden">
               {/* Replace the following div with your image slider component */}
@@ -284,7 +319,7 @@ const Page = ({}) => {
                   <form
                     className="w-full max-w-md p-2 rounded-lg shadow-md overflow-y-auto"
                     method="post"
-              
+                    onSubmit={handleSubmit}
                   >
                     <h2 className="sm:text-lg text-md font-bold p-0 text-gray-900">
                       {projectName}
@@ -304,7 +339,6 @@ const Page = ({}) => {
                       <div className="social-share my-4 flex gap-4 items-center ">
                         <button
                           type="button"
-                
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
@@ -317,7 +351,6 @@ const Page = ({}) => {
                         </button>
                         <button
                           type="button"
-                  
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
@@ -330,7 +363,6 @@ const Page = ({}) => {
                         </button>
                         <button
                           type="button"
-                    
                           className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                         >
                           <Image
@@ -516,44 +548,53 @@ const Page = ({}) => {
           </div>
 
           {/* section bottom with buttons */}
-          <div className="h-[15%] w-full flex flex-row justify-between rounded-b-lg my-2 mb-4">
-            <div className="flex  mr-4 pl-0">
-              <button
-                onClick={prevProject}
-                className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
-              >
-                <ChevronLeft className="w-6 h-6 sm:mr-2" />
+          <div className="sm:h-[15%] h-[20%] w-full flex flex-col sm:flex-row justify-between gap-2 rounded-b-lg my-2 mb-4">
+            <div className="md:w-3/5 w-full flex flex-row justify-between">
+              <div className="flex  mr-4 pl-0">
+                <button
+                  onClick={prevProject}
+                  className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
+                >
+                  <ChevronLeft className="w-6 h-6 sm:mr-2" />
 
-                <Image
-                  width={1000}
-                  height={1000}
-                  src={`https://api.designindianwardrobe.com/uploads/project-upload/${prevImage}`}
-                  alt="Description of the image"
-                  className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
-                />
-                <span className="ml-2 truncate  w-24 md:w-60 overflow-hidden ">
-                  {prevProjectName}
-                </span>
-              </button>
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={`https://api.designindianwardrobe.com/uploads/project-upload/${prevImage}`}
+                    alt="Description of the image"
+                    className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
+                  />
+                  <span className="ml-2 truncate  w-24 md:w-60 overflow-hidden ">
+                    {prevProjectName}
+                  </span>
+                </button>
+              </div>
+              <div className="flex ml-4 pr-0">
+                <button
+                  onClick={nextProject}
+                  className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
+                >
+                  <span className="mr-2 truncate w-24 md:w-60 overflow-hidden">
+                    {nextProjectName}
+                  </span>
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={`https://api.designindianwardrobe.com/uploads/project-upload/${nextImage}`}
+                    alt="Description of the image"
+                    className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
+                  />
+
+                  <ChevronRight className="w-6 h-6 sm:ml-2" />
+                </button>
+              </div>
             </div>
-            <div className="flex ml-4 pr-0">
-              <button
-                onClick={nextProject}
-                className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
-              >
-                <span className="mr-2 truncate w-24 md:w-60 overflow-hidden">
-                  {nextProjectName}
-                </span>
-                <Image
-                  width={1000}
-                  height={1000}
-                  src={`https://api.designindianwardrobe.com/uploads/project-upload/${nextImage}`}
-                  alt="Description of the image"
-                  className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
-                />
-
-                <ChevronRight className="w-6 h-6 sm:ml-2" />
-              </button>
+            <div className="md:w-2/5 w-full h-full">
+              <Link href="/interior-designing-estimates-pricing">
+                <button className="w-full rounded-full bg-red-400 px-4 py-4 text-white hover:bg-red-500">
+                  Get Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>

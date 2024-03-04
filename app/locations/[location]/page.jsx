@@ -128,8 +128,8 @@ const SecondSection = ({ location }) => {
         / <span className="text-green-500 text-lg">Locations</span> /{' '}
         <span className="text-gray-600 text-xl capitalize">{location}</span>
       </div>
-      <div id="fry">
-        <div className="mt-12">
+      <div id="">
+        <div className="mt-2">
           <div>
             <h3 className="sm:text-2xl text-xl font-bold text-center uppercase">
               {location}’S NO.1 INTERIOR & ARCHITECTURAL BRAND
@@ -155,6 +155,19 @@ const SecondSection = ({ location }) => {
           speed={50}
           repeat={Infinity}
         />
+      </div>
+      <div className="desc text-center p-4 sm:p-8 ">
+        <p>
+          Beautiful Affordable Interior Designing and Architect Services are
+          delivered by Our team in {location} Locality, we are extensively
+          serving in {location} and other neighboring areas. We are the Top
+          Manufacturers for Modular Kitchen and Wardrobe across {location}. We
+          use some of the top Brands in our materials and deliver top notch
+          quality at most affordable prices. Get a Amazing Modular Kitchen
+          delivered for your residence in {location}. For More Details, Connect
+          with Our team today & Book a Site Visit. 100% Guaranteed Quotes across
+          {location}.
+        </p>
       </div>
     </>
   )
@@ -501,18 +514,21 @@ const slugToLocation = (slug) => {
 }
 
 const page = ({ params }) => {
-  const { location } = params
+   const { location } = params
+  const locationParts = location.split('-in-')
+  const extractedLocation = locationParts[1] // Extracting the location part
 
-  const locationOrignal = slugToLocation(location)
+  
+  const locationOriginal = slugToLocation(extractedLocation)
 
   return (
     <>
       <Omsairam />
       <Header />
-      <ContactSection location={locationOrignal} />
-      <SecondSection location={locationOrignal} />
+      <ContactSection location={locationOriginal} />
+      <SecondSection location={locationOriginal} />
       <Projects />
-      <ThreeColumnSection location={locationOrignal} />
+      <ThreeColumnSection location={locationOriginal} />
       <CardCarousel />
       <SocialReviews />
       <Customer />

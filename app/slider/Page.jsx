@@ -38,8 +38,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
     onPrevSlide() // Call the onPrevSlide callback
   }
 
-   const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault()
 
     const formData = {
       name: document.getElementById('name').value,
@@ -47,22 +47,24 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
       mobile: document.getElementById('mobile').value,
       address: document.getElementById('address').value,
       interest: document.getElementById('Interest').value,
-    };
+    }
 
     try {
       // Send an API request to handle form submission
-      const response = await axios.post('https://api.designindianwardrobe.com/submitForm', formData);
+      const response = await axios.post(
+        'https://m.designindianhomes.com/submitForm',
+        formData
+      )
 
       // Assuming the server responds with a success message
-      console.log(response.data);
+      console.log(response.data)
 
       // Optionally, you can perform additional actions after form submission
-
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error)
       // Handle form submission error
     }
-  };
+  }
 
   const handleWhatsapp = (e) => {
     e.preventDefault()
@@ -160,8 +162,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 className="h-[30vh] md:h-[80vh]  md:rounded-l-lg overflow-hidden"
               >
                 <Image
-              width={1000}
-              height={1000}
+                  width={1000}
+                  height={1000}
                   src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                   alt={image.filename}
                   className="w-full h-full object-cover"
@@ -202,8 +204,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               <span className="text-red-500">Interior Requirements</span> .
             </h2> */}
             <h2 className="sm:text-2xl text-xl font-bold pt-2 text-gray-700">
-              Our Designer will call you
-              to help with your Interior Requirements .
+              Our Designer will call you to help with your Interior Requirements
+              .
             </h2>
             <div className="flex items-center my-2">
               <h2 className="flex-1 text-xl py-2 text-center text-black uppercase">
@@ -219,9 +221,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                   onClick={handleWhatsapp}
                 >
-                <Image
-              width={1000}
-              height={1000}
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/images/gallery/whatsapp.png"
                     alt="Button 1"
                     className="w-full h-full object-cover"
@@ -232,9 +234,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   className="w-8 h-8 rounded-full overflow-hidden focus:outline-none mx-2 transition duration-300 ease-in-out transform hover:scale-110 active:scale-95"
                   onClick={handleInstagram}
                 >
-                 <Image
-              width={1000}
-              height={1000}
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/images/gallery/instagram.png"
                     alt="Button 2"
                     className="w-full h-full object-cover"
@@ -246,8 +248,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   onClick={handleFacebook}
                 >
                   <Image
-              width={1000}
-              height={1000}
+                    width={1000}
+                    height={1000}
                     src="/images/gallery/facebook.png"
                     alt="Button 3"
                     className="w-full h-full object-cover"
@@ -258,9 +260,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
 
             <div className="flex justify-evenly my-4 mt-6">
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-              <Image
-              width={1000}
-              height={1000}
+                <Image
+                  width={1000}
+                  height={1000}
                   src="/images/gallery/top.png"
                   alt=""
                   className="w-12 self-center"
@@ -272,9 +274,9 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               </div>
 
               <div className="flex justify-content-center flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
-              <Image
-              width={1000}
-              height={1000}
+                <Image
+                  width={1000}
+                  height={1000}
                   src="/images/gallery/guarantee.png"
                   alt=""
                   className="w-12 self-center"
@@ -285,8 +287,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               </div>
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
                 <Image
-                width={1000}
-                height={1000}
+                  width={1000}
+                  height={1000}
                   src="/images/gallery/save.png"
                   alt=""
                   className="w-12 self-center"
@@ -297,8 +299,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               </div>
               <div className="flex flex-col w-20 rounded-3xl border-[1px] p-2 border-gray-600">
                 <Image
-                width={1000}
-                height={1000}
+                  width={1000}
+                  height={1000}
                   src="/images/gallery/fast-delivery.png"
                   alt=""
                   className="w-12 self-center"
@@ -398,8 +400,8 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
               >
                 <Image
-                width={1000}
-                height={1000}
+                  width={1000}
+                  height={1000}
                   src="/images/gallery/calculator.png"
                   alt="Calc"
                   className="w-8 h-8 mr-2"

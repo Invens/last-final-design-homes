@@ -518,22 +518,32 @@ const noidaLocations = [
   'Ace Starlit',
 ]
 
-const LocationLink = ({ location, url }) => {
-  return <Link href={url}>{location}</Link>
+const LocationLink = ({ location, url, prefix }) => {
+  return (
+    <Link href={`${url}`}>
+      {prefix}
+      {location}
+    </Link>
+  )
 }
 
-const CityLocations = ({ locations, city }) => {
+const CityLocations = ({ locations, city, prefix }) => {
   const [isExpanded, setIsExpanded] = useState(false)
 
   const toggleExpansion = () => {
     setIsExpanded((prevState) => !prevState)
   }
+  const prefixLC = prefix.toLowerCase()
 
   const locationLinks = locations.map((location, index) => {
     const locationUrl = location.toLowerCase().replace(/\s+/g, '-')
     return (
       <span key={index}>
-        <LocationLink location={location} url={`/locations/${locationUrl}`} />
+        <LocationLink
+          location={location}
+          url={`/locations/${prefixLC}${locationUrl}`}
+          prefix={prefix}
+        />
         {index !== locations.length - 1 && ' | '}
       </span>
     )
@@ -541,11 +551,11 @@ const CityLocations = ({ locations, city }) => {
 
   return (
     <div>
-      <div className="flex relative items-center mt-4">
-        <span
-          className="text-lg text-black font-bold cursor-pointer"
-          onClick={toggleExpansion}
-        >
+      <div
+        className="flex relative items-center mt-4"
+        onClick={toggleExpansion}
+      >
+        <span className="text-lg text-black font-bold cursor-pointer">
           {city}
         </span>
         <ChevronDown
@@ -560,14 +570,18 @@ const CityLocations = ({ locations, city }) => {
   )
 }
 
-const ParagraphTab = () => {
+const ParagraphTab = ({ prefix }) => {
   return (
     <div>
-      <CityLocations locations={delhiLocations} city="Delhi" />
+      <CityLocations locations={delhiLocations} city="Delhi" prefix={prefix} />
       <hr className="my-6 border-t-2 border-gray-300" />
-      <CityLocations locations={gurgaonLocations} city="Gurgaon" />
+      <CityLocations
+        locations={gurgaonLocations}
+        city="Gurgaon"
+        prefix={prefix}
+      />
       <hr className="my-6 border-t-2 border-gray-300" />
-      <CityLocations locations={noidaLocations} city="Noida" />
+      <CityLocations locations={noidaLocations} city="Noida" prefix={prefix} />
       <hr className="my-6 border-t-2 border-gray-300" />
     </div>
   )
@@ -579,12 +593,6 @@ const LocationsTabs = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
-
-  const paragraphs = [
-    'Exclusive Lacquer Glass Wardrobe Designs Wardrobe – Wardrobe Dealers & Manufacturers in Ghitorni Wardrobe Designs – Wardrobe Dealers & Manufacturers in Golf Links Wardrobe Designs – Wardrobe Dealers & Manufacturers in Greater Kailash Wardrobe Designs – Wardrobe Dealers & Manufacturers in Greater Noida Wardrobe Designs – Wardrobe Dealers & Manufacturers in Green Park Wardrobe Designs – Wardrobe Dealers & Manufacturers in Gulmohar Park Wardrobe Designs – Wardrobe Dealers & Manufacturers in Gurgaon Wardrobe Designs – Wardrobe Dealers & Manufacturers in Hauz Khas Wardrobe Designs – Wardrobe Dealers & Manufacturers in Jaipur Wardrobe Designs – Wardrobe Dealers & Manufacturers in Janak Puri – Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in Kalkaji Wardrobe Designs – Wardrobe Dealers & Manufacturers in Karol Bagh Wardrobe Designs – Wardrobe Dealers & Manufacturers in Mayur Vihar Wardrobe Designs – Wardrobe Dealers & Manufacturers in Meena Bagh Wardrobe Designs – Wardrobe Dealers & Manufacturers in Mehrauli Wardrobe Designs – Wardrobe Dealers & Manufacturers in Neeti Bagh Wardrobe Designs – Wardrobe Dealers & Manufacturers in Noida Wardrobe Designs – Wardrobe Dealers & Manufacturers in Panchsheel Wardrobe Designs – Wardrobe Dealers & Manufacturers in Punjabi Bagh Wardrobe Designs – Wardrobe Dealers & Manufacturers in Rajinder Nagar Wardrobe Designs – Wardrobe Dealers & Manufacturers in Rajouri Garden Wardrobe Designs – Wardrobe Dealers & Manufacturers in Rishikesh Wardrobe Designs – Wardrobe Dealers & Manufacturers in Sainik Farms Wardrobe Designs – Wardrobe Dealers & Manufacturers in Sarita Vihar Wardrobe Designs – Wardrobe Dealers & Manufacturers in Shanti Niketan Wardrobe Designs – Wardrobe Dealers & Manufacturers in Vaishali Wardrobe Designs – Wardrobe Dealers & Manufacturers in Vasant Kunj Wardrobe Designs – Wardrobe Dealers & Manufacturers in Vasant Vihar wardrobe-dealers-delhi-gurgaon-india wardrobe-designs-gallery-delhi-gurgaon-noida Wardrobe Dealers & Manufacturers in Safdarjung Enclave, Delhi Wardrobe Designs – Dealers & Manufacturers in New Friends Colony Wardrobe Designs – Dealers & Manufacturers in Pamposh Enclave Wardrobe Designs – Wardrobe Dealers & Manufacturers in Alaknanda – Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in Anand Lok – Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in Anand Niketan – Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in Asiad Village – Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in Chanakyapuri Wardrobe Designs – Wardrobe Dealers & Manufacturers in Chirag Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in CR Park Wardrobe Designs – Wardrobe Dealers & Manufacturers in Defence Colony Wardrobe Designs – Wardrobe Dealers & Manufacturers in Delhi Wardrobe Designs – Wardrobe Dealers & Manufacturers in East of Kailash Wardrobe Designs – Wardrobe Dealers & Manufacturers in Faridabad',
-    'Mandir-manufacturers-delhi-gurgaon Modular Kitchen Dealers & Manufacturers in Alaknanda – New Delhi Modular Kitchen Dealers & Manufacturers in Anand Lok – New Delhi Modular Kitchen Dealers & Manufacturers in Anand Niketan – New Delhi Modular Kitchen Dealers & Manufacturers in Ashok Vihar – New Delhi Modular Kitchen Dealers & Manufacturers in Asiad Village – New Delhi Modular Kitchen Dealers & Manufacturers in Chanakyapuri – New Delhi Modular Kitchen Dealers & Manufacturers in Chirag Delhi – New Delhi Modular Kitchen Dealers & Manufacturers in Civil Lines Modular Kitchen Dealers & Manufacturers in CR Park – New Delhi Modular Kitchen Dealers & Manufacturers in Defence Colony Modular Kitchen Dealers & Manufacturers in Dehradun Modular Kitchen Dealers & Manufacturers in Dwarka – New Delhi Modular Kitchen Dealers & Manufacturers in East of Kailash – New Delhi Modular Kitchen Dealers & Manufacturers in Faridabad Modular Kitchen Dealers & Manufacturers in Greater Kailash – New Delhi Modular Kitchen Dealers & Manufacturers in Greater Noida Modular Kitchen Dealers & Manufacturers in Green Park – New Delhi Modular Kitchen Dealers & Manufacturers in Gulmohar Park – Delhi Modular Kitchen Dealers & Manufacturers in Gurgaon – Gurugram Modular Kitchen Dealers & Manufacturers in Haridwar Modular Kitchen Dealers & Manufacturers in Hauz Khas – New Delhi Modular Kitchen Dealers & Manufacturers in Jaipur Modular Kitchen Dealers & Manufacturers in Janak Puri – Delhi Modular Kitchen Dealers & Manufacturers in Kalindi Kunj – New Delhi Modular Kitchen Dealers & Manufacturers in Kalkaji – New Delhi Modular Kitchen Dealers & Manufacturers in Karol Bagh – Delhi Modular Kitchen Dealers & Manufacturers in Khan Market – New Delhi Modular Kitchen Dealers & Manufacturers in Mayur Vihar – New Delhi Modular Kitchen Dealers & Manufacturers in Meena Bagh Modular Kitchen Dealers & Manufacturers in Mehrauli – Delhi Modular Kitchen Dealers & Manufacturers in Model Town – New Delhi Modular Kitchen Dealers & Manufacturers in Neeti Bagh Modular Kitchen Dealers & Manufacturers in New Delhi Modular Kitchen Dealers & Manufacturers in New Friends Colony Modular Kitchen Dealers & Manufacturers in Noida Modular Kitchen Dealers & Manufacturers in Pamposh Enclave – Delhi Modular Kitchen Dealers & Manufacturers in Panchsheel – New Delhi Modular Kitchen Dealers & Manufacturers in Patel Nagar Modular Kitchen Dealers & Manufacturers in Pitam Pura – Delhi Modular Kitchen Dealers & Manufacturers in Preet Vihar – New Delhi Modular Kitchen Dealers & Manufacturers in Punjabi Bagh Modular Kitchen Dealers & Manufacturers in Rajinder Nagar Modular Kitchen Dealers & Manufacturers in Rajokri – New Delhi Modular Kitchen Dealers & Manufacturers in Rajouri Garden – New Delhi Modular Kitchen Dealers & Manufacturers in Rishikesh Modular Kitchen Dealers & Manufacturers in Safdarjung Enclave – New Delhi Modular Kitchen Dealers & Manufacturers in Sainik Farms – New Delhi Modular Kitchen Dealers & Manufacturers in Saket – New Delhi Modular Kitchen Dealers & Manufacturers in Sarita Vihar – New Delhi Modular Kitchen Dealers & Manufacturers in Shanti Niketan – New Delhi Modular Kitchen Dealers & Manufacturers in Vaishali – New Delhi Modular Kitchen Dealers & Manufacturers in Vasant Vihar – New Delhi',
-    'White Colour Modular Kitchen Designs Yellow Colour Modular Kitchen Designs in Delhi Gurgaon Noida India Silver Colour Modular Kitchen Designs Sky Blue Modular Kitchens Designs in Delhi Gurgaon Noida India Orange Modular Kitchen Designs in Delhi Gurgaon Noida India Pink Modular Kitchen Designs in Delhi Gurgaon Noida India Purple Modular Kitchen Design collection in Delhi and India Red Colour Modular Kitchen Designs Beige Colour Modular Kitchen designs in Delhi Gurgaon Noida India Black Modular Kitchen Designs in Delhi & India Blue Colour Modular Kitchens in Delhi Gurgaon Noida India Brown Colour Modular Kitchens in Delhi Gurgaon Noida India Cappuccino Cream colour modular kitchen designs in delhi india Charcoal Modular Kitchen Designs Colourful Modular Kitchen in Delhi gurgaon Noida India Green Colour Modular Kitchen Designs Grey Colour Modular Kitchen Designs in Delhi Maroon Modular Kitchen Designs in Delhi Gurgaon Noida India',
-  ]
 
   const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     ({ theme }) => ({
@@ -629,9 +637,15 @@ const LocationsTabs = () => {
       </div>
       <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2>
       <Box width="100%" className="mt-2">
-        {value === 0 && <ParagraphTab />}
-        {value === 1 && <ParagraphTab />}
-        {value === 2 && <ParagraphTab />}
+        {value === 0 && (
+          <ParagraphTab prefix="Wardrobe-Dealers-&-Manufacturers-in-" />
+        )}
+        {value === 1 && (
+          <ParagraphTab prefix="Modular-Kitchen-Dealers-&-Manufacturers-in-" />
+        )}
+        {value === 2 && (
+          <ParagraphTab prefix="Interior-Designing-and-Architect-Services-in-" />
+        )}
       </Box>
     </div>
   )
