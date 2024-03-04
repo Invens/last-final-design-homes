@@ -585,7 +585,9 @@ const Header = () => {
               </li>{' '}
             </Link>
           </ul>
-        </div>
+          <button className="transition ease-in-out delay-150 bg-green-600 hover:bg-orange-500 translate-y-1 hover:scale-110 text-white text-base py-2 px-4 rounded-full mt-4">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
+            </button>        </div>
 
         <div>
           <ul className="text-sm">
@@ -689,8 +691,8 @@ const Header = () => {
           />
 
           <div className="flex justify-center ml-40">
-            <button className="mt-4 bg-green-700 p-3 center rounded-full text-white font-bold text-sm">
-              Book an End To End Interior Consultancy{' '}
+            <button className="mt-4 bg-green-600 p-3 center rounded-full text-white font-bold text-sm">
+             <Link href="/homes-by-design-indian-homes"> Homes by design Indian Homes{' '}</Link>
             </button>
           </div>
         </div>
@@ -714,7 +716,7 @@ const Header = () => {
               <br /> Ideas and Advice from Experts
             </p>
             <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              <Link href="/architectural-designs">Explore Now</Link>
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
             </button>
           </div>
         </div>
@@ -887,9 +889,10 @@ const Header = () => {
               Exclusive Modular Kitchen Designs, Tips, Ideas and Advice from Our
               Experts
             </p>
-            <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              explore Now
-            </button>
+            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">  <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
+              Get Free Estimate
+            </button></Link>
+          
           </div>
         </div>
         <div className="flex w-1/3">
@@ -1059,9 +1062,10 @@ const Header = () => {
               Wardrobes Designs, Manufacturing. Tips, Tricks, Ideas and advice
               from top experts
             </p>
-            <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              explore Now
-            </button>
+            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india"><button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
+              Get Free Estimate
+            </button></Link>
+            
           </div>
         </div>
         <div className="flex w-1/3">
@@ -1442,7 +1446,7 @@ const Header = () => {
               and Advice from Industry&apos;s Top Experts
             </p>
             <button className="bg-green-600 text-2xl py-3 px-6 rounded-full text-white mt-6">
-              <Link href="/modular-kitchen-designs">explore Now</Link>
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
             </button>
           </div>
         </div>
@@ -2048,17 +2052,17 @@ const Header = () => {
                 </div>
                 <Link href="/interior-designing-estimates-pricing">
                   {' '}
-                  <button className="bg-yellow-400 hover:bg-yellow-500 hover:text-white text-sm py-2 px-2 rounded-full -mt-4 center mb-1">
+                  <button className="bg-yellow-400 hover:bg-yellow-500 hover:text-white text-sm py-2 px-2 rounded-full  center mb-1">
                     Get Quotes
                   </button>
                 </Link>
                 <button
-                  className="text-sm py-2 px-4 mb-1 transition duration-300 ease-in-out transform hover:bg-gray-700 hover:shadow-lg hover:text-white"
+                  className=" hover:bg-yellow-500 hover:text-white text-sm py-2 px-4 rounded-full  center mb-1"
                   style={{
-                    alignItems: 'center',
-                    borderRadius: '50px',
+                    // alignItems: 'center',
+                    // borderRadius: '50px',
                     border: '1px solid black',
-                    marginBottom: '7px',
+                    // marginBottom: '7px',
                   }}
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>

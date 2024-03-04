@@ -11,7 +11,7 @@ import {
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import React, { FormEvent, useState} from 'react'
+import React, { FormEvent, useState } from 'react'
 import Header from '../../components/Navbar/Header'
 import Footer from '../../components/Footer/Footer'
 import emailjs from 'emailjs-com';
@@ -25,6 +25,8 @@ const TopFormSection = () => {
     message: '',
   })
   const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -36,13 +38,14 @@ const TopFormSection = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log('Submitting form...');
-  
+    setFormSubmitted(true);
+
     const formDataToSend = new FormData();
     for (const key in formData) {
       formDataToSend.append(key, formData[key]);
     }
-    
-  
+
+
     try {
       console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
       console.log('Uploading data...');
@@ -50,11 +53,11 @@ const TopFormSection = () => {
         method: 'POST',
         body: formDataToSend,
       });
-  
+
       console.log('Response status:', response.status);
       console.log('Response headers:', response.headers);
       console.log('Response body:', await response.text());
-  
+
       if (response.ok) {
         console.log('Form data submitted successfully!');
         console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
@@ -67,42 +70,48 @@ const TopFormSection = () => {
       console.error('Error during form data submission:', error);
       setBtnText('Something Went Wrong');
     }
+
+
+    setFormSubmitted(true);
   };
-  
+  const handleClose = () => {
+    setFormSubmitted(false);
+    // Add any additional logic you want to perform when closing the thank-you page
+  };
 
   return (
-    
+
     <div className="flex flex-col md:flex-row my-12">
 
       <Head>
-      <title>Book a Visit | Top Interior Designing Brand in India</title>
-      	
-<meta name="description" content ="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve most affordable modular interiors." />
+        <title>Book a Visit | Top Interior Designing Brand in India</title>
+
+        <meta name="description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve most affordable modular interiors." />
 
 
-<meta name="Author" content="Design Indian Homes" />
-<meta name="Generator" content="www.designindianhomes.com" />
-<meta name="Language" content="en" />
-<meta name="robots" content="index, follow" />
-<meta name="Copyright" content="©www.designindianhomes.com" />
-<meta name="Designer" content="Design Indian Homes Unit" />
-<meta name="Publisher" content="www.designindianhomes.com" />
-<meta name="Distribution" content="Global" />
-<meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/book-a-interior-design-visit/" />
-<meta name="googlebot" content="index, follow" />
-<meta name="Yahoobot" content="index, follow" />
-<meta name="MSNbot" content="Index, Follow" />
-<meta name="allow-search" content="yes" />
-<meta name="country" content="India"/>
-<meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<meta name="dc.language" content="english"/>
-<meta name="geo.region" content="IN-DL" />
-<meta name="geo.placename" content="Delhi" />
-<meta property="og:url" content="https://designindianhomes.com/book-a-interior-design-visit/" />
-<meta property="og:title" content="Book a Visit | Top Interior Designing Brand in India" />
-<meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
+        <meta name="Author" content="Design Indian Homes" />
+        <meta name="Generator" content="www.designindianhomes.com" />
+        <meta name="Language" content="en" />
+        <meta name="robots" content="index, follow" />
+        <meta name="Copyright" content="©www.designindianhomes.com" />
+        <meta name="Designer" content="Design Indian Homes Unit" />
+        <meta name="Publisher" content="www.designindianhomes.com" />
+        <meta name="Distribution" content="Global" />
+        <meta name="Rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://designindianhomes.com/book-a-interior-design-visit/" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="Yahoobot" content="index, follow" />
+        <meta name="MSNbot" content="Index, Follow" />
+        <meta name="allow-search" content="yes" />
+        <meta name="country" content="India" />
+        <meta name="contactNumber" content="+91-98-99-26-49-78" />
+        <meta name="dc.language" content="english" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi" />
+        <meta property="og:url" content="https://designindianhomes.com/book-a-interior-design-visit/" />
+        <meta property="og:title" content="Book a Visit | Top Interior Designing Brand in India" />
+        <meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
       </Head>
       {/* Left side content */}
       <div className="md:w-1/2 p-4">
@@ -126,71 +135,90 @@ const TopFormSection = () => {
       {/* Right side form */}
       <div className="md:w-1/2 p-4 border-t-4 sm:border-0 sm:border-l-4 border-black">
         <h1 className="text-lg font-bold mb-4">
-          For All Enquiries Write to Us on saurabhbehal@gmail.com
+          For All Enquiries Write to Us on contact@designindianhomes.com
         </h1>
-        <form className="mb-4" method="post" onSubmit={handleSubmit}>
-          {/* Your form elements go here */}
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 ml-2 my-2"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-          />
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-          />
-          <label
-            htmlFor="number"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Contact Number
-          </label>
-          <input
-            type="tel"
-            id="number"
-            name="number"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-          />
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full text-sm"
-          ></textarea>
 
-          {/* Add other form fields similarly */}
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
 
-          <button
-            type="submit"
-            className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full w-full hover:bg-gray-700 hover:shadow"
-          >
-            {btnText}
-          </button>
-        </form>
+            />
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+          <form className="mb-4" method="post" onSubmit={handleSubmit}>
+            {/* Your form elements go here */}
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700 ml-2 my-2"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              onChange={handleChange}
+              className="mt-1 p-2 border-2 rounded-full w-full"
+            />
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={handleChange}
+              className="mt-1 p-2 border-2 rounded-full w-full"
+            />
+            <label
+              htmlFor="number"
+              className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+            >
+              Contact Number
+            </label>
+            <input
+              type="tel"
+              id="number"
+              name="number"
+              onChange={handleChange}
+              className="mt-1 p-2 border-2 rounded-full w-full"
+            />
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              onChange={handleChange}
+              className="mt-1 p-2 border-2 rounded-full w-full text-sm"
+            ></textarea>
+
+            {/* Add other form fields similarly */}
+
+            <button
+              type="submit"
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full w-full hover:bg-gray-700 hover:shadow"
+            >
+              {btnText}
+            </button>
+          </form>
+        )}
       </div>
     </div>
   )
@@ -210,13 +238,13 @@ const MiddleInfoSection = () => {
         <div className="w-full sm:w-1/3 p-4 mb-4 sm:mb-0">
           <h2 className="text-xl font-semibold mb-2 capitalize">WRITE TO US</h2>
           <p className="text-gray-700 my-4 text-sm">
-            For Order Related Enquiry saurabhbehal@gmail.com
+            For Order Related Enquiry order@designindianhomes.com
           </p>
           <p className="text-gray-700 my-4 text-sm">
-            For Franchise/Collaborate saurabhbehal@gmail.com
+            For Franchise/Collaborate Collaborate@designindianhomes.com
           </p>
           <p className="text-gray-700 my-4 text-sm">
-            For Grievances/Complains/Support saurabhbehal@gmail.com
+            For Grievances/Complains/Support support@designindianhomes.com
           </p>
           <div className="bg-yellow-400 rounded-full w-full my-8 h-24 flex items-center justify-center">
             <Link href="/">
@@ -244,7 +272,7 @@ const MiddleInfoSection = () => {
             </div>
             <div className="bg-gray-900 h-1/4 flex items-center justify-center">
               <h2 className="text-sm text-white">
-                saurabhbehal@gmail.com
+                Hello@designindianhomes.com
               </h2>
             </div>
           </div>
@@ -262,7 +290,7 @@ const MiddleInfoSection = () => {
             </div>
             <div className="bg-gray-900 h-1/4 flex items-center justify-center">
               <h2 className="text-sm text-white">
-                saurabhbehal@gmail.com
+                cpoffice@designindianhomes.com
               </h2>
             </div>
           </div>
@@ -280,7 +308,7 @@ const MiddleInfoSection = () => {
             </div>
             <div className="bg-gray-900 h-1/4 flex items-center justify-center">
               <h2 className="text-sm text-white">
-                saurabhbehal@gmail.com
+                office@designindianhomes.com
               </h2>
             </div>
           </div>
@@ -290,27 +318,35 @@ const MiddleInfoSection = () => {
         <div className="w-full sm:w-1/3 p-4">
           <h2 className="text-xl font-semibold mb-2">OTHER BUSINESS SITES</h2>
           <p className="text-gray-700 font-semibold mb-2">
-            Design Indian Kitchen
+            <a href="https://designindiankitchen.com" target='_blank'>Design Indian Kitchen</a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            Design Indian Wardrobe
+            <a href="https://designindianwardrobe.com" target='_blank'> Design Indian Wardrobe</a>
+
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            Modular Kitchen in Delhi
+
+            <a href='https://modularkitchenindelhi.com/' target='_blank'> Modular Kitchen in Delhi</a>
+
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            Modular Kitchen in Gurgaon
+            <a href='https://modular-kitchen-gurgaon.com'>Modular Kitchen in Gurgaon</a>
+          </p>
+          {/* <p className="text-gray-700 font-semibold mb-2">
+           <a href='https://'> Design Indian Homes</a>
+          </p> */}
+
+          <p className="text-gray-700 font-semibold mb-2">
+            <a href='https://modularkitcheninnoida.com/' target='_blank'>
+              Modular Kitchen in Noida</a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            Design Indian Homes
+            <a href='https://thedesignerlounge.com/' target='_blank'>The Designer Lounge</a>
           </p>
+
           <p className="text-gray-700 font-semibold mb-2">
-            Modular Kitchen in Noida
+            <a href='https://devotionalindia.com/' target='_blank'>Devotional India</a>
           </p>
-          <p className="text-gray-700 font-semibold mb-2">
-            The Designer Lounge
-          </p>
-          <p className="text-gray-700 font-semibold mb-2">Devotional India</p>
         </div>
       </div>
     </div>
@@ -330,7 +366,7 @@ const OfficeAddressSection = () => {
           25/42, A Block, Middle Circle <br />
           Connaught Place, <br />
           New Delhi - 110001 <br />
-          saurabhbehal@gmail.com
+          cpoffice@designindianhomes.com
         </p>
         {/*  className="mt-4 w-full h-64 lg:h-auto" */}
         <iframe
@@ -537,7 +573,7 @@ const CardComponentSection = () => {
   return (
     <div className="flex flex-wrap">
       {/* card1 */}
-      <Link href="/" className="w-full md:w-1/3 p-2">
+      <Link href="/book-with-top-interior-designers-architects" className="w-full md:w-1/3 p-2">
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">
@@ -550,10 +586,12 @@ const CardComponentSection = () => {
                   className=" mx-auto"
                 />
               </div>
-
+              <Link href="/book-with-top-interior-designers-architects">
               <h3 className="text-sm font-bold my-2">
                 BOOK A KITCHEN PLANNING MEETING
               </h3>
+              </Link>
+             
               <p className="text-gray-700 text-xs">
                 We are here to answer all of your questions
               </p>
@@ -562,7 +600,7 @@ const CardComponentSection = () => {
         </div>
       </Link>
       {/* card2 */}
-      <Link href="/" className="w-full md:w-1/3 p-2">
+      <Link href="/interior-designing-estimates-pricing" className="w-full md:w-1/3 p-2">
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">
@@ -587,7 +625,7 @@ const CardComponentSection = () => {
         </div>
       </Link>
       {/* card3 */}
-      <Link href="/" className="w-full md:w-1/3 p-2">
+      <Link href="/magazine" className="w-full md:w-1/3 p-2">
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">

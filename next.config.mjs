@@ -13,6 +13,8 @@ const nextConfig = {
       'ik.imagekit.io',
       'homes.devotionalindia.com',
       'cdn-icons-png.flaticon.com',
+      'www.freepik.com',
+      'img.freepik.com',
     ],
   },
   experimental: {
@@ -37,6 +39,10 @@ const nextConfig = {
       {
         source: '/modular-interior-design-ideas',
         destination: '/design-ideas',
+      },
+      {
+        source: '/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india',
+        destination: '/calculator',
       },
       {
         source: '/collaborate-with-architects-interior-designers',
@@ -74,6 +80,10 @@ const nextConfig = {
       {
         source: '/dressers-designs',
         destination: '/design-ideas/dressers',
+      },
+      {
+        source: '/homes-by-design-indian-homes',
+        destination: '/design-ideas/our-homes',
       },
       {
         source: '/tv-unit-designs',

@@ -3,56 +3,57 @@ import React from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import Marquee from 'react-fast-marquee'
-import { motion} from 'framer-motion'
+import { motion } from 'framer-motion'
+import Typewriter from 'typewriter-effect';
 
 import dynamic from 'next/dynamic'
 const TruncatedText = dynamic(() => import('./TruncatedText'))
 const Hero = () => {
-   
 
- 
 
-     const videoVariants = {
-       initial: {
-         y: 30,
-         x: 0,
-         opacity: 0,
-       },
-       animate: {
-         y: 0,
-         x: 0,
-         opacity: 1,
-         transition: {
-           duration: 1,
-           staggerChildren: 0.1,
-         },
-       },
-     }
 
- 
 
-     const containerStyle = {
-       position: 'relative',
-       height: 'fit-content', // Adjust as needed
-       width: 'fit-content', // Adjust as needed
-       display: 'inline-block', // Ensure the container only takes the size of its content
-     }
+  const videoVariants = {
+    initial: {
+      y: 30,
+      x: 0,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+  }
 
-     const textContainerStyle = {
-       zIndex: '1', // Ensure text is above the background image
-       textAlign: 'center', // Center the text
-       position: 'relative', // Position the text within the container
-     }
 
-     const backgroundImageStyle = {
-       position: 'absolute', // Position the image behind the text
-       top: '0',
-       left: '0',
-       width: '100%', // Set the width to 100%
-       height: '100%', // Set the height to 100%
-       objectFit: 'cover', // Ensure the image covers the container
-       opacity: '1', // Adjust the opacity as needed
-     }
+
+  const containerStyle = {
+    position: 'relative',
+    height: 'fit-content', // Adjust as needed
+    width: 'fit-content', // Adjust as needed
+    display: 'inline-block', // Ensure the container only takes the size of its content
+  }
+
+  const textContainerStyle = {
+    zIndex: '1', // Ensure text is above the background image
+    textAlign: 'center', // Center the text
+    position: 'relative', // Position the text within the container
+  }
+
+  const backgroundImageStyle = {
+    position: 'absolute', // Position the image behind the text
+    top: '0',
+    left: '0',
+    width: '100%', // Set the width to 100%
+    height: '100%', // Set the height to 100%
+    objectFit: 'cover', // Ensure the image covers the container
+    opacity: '1', // Adjust the opacity as needed
+  }
 
   return (
     <div>
@@ -91,6 +92,14 @@ const Hero = () => {
           speed={50}
           repeat={Infinity}
         />
+        {/* <Typewriter
+        className="text-4xl"
+          options={{
+            strings: ['TOP KITCHEN & CLOSET BRAND', 'LARGEST KITCHEN DEALERS', 'LARGEST ARCHITECTURAL BRAND', 'LARGEST ARCHITECTURAL BRAND', 'TOP AWARDED INTERIORS'],
+            autoStart: true,
+            loop: true,
+          }}
+        /> */}
       </div>
 
       <div className="main-hero mt-5">
@@ -126,7 +135,7 @@ const Hero = () => {
             variants={videoVariants}
             initial="initial"
             whileInView="animate"
-            preload="metadata" 
+            preload="metadata"
           >
             <source
               src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).mp4?updatedAt=1708375803011"

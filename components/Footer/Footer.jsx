@@ -967,7 +967,7 @@ export class Footer extends Component {
               }}
             >
               <div className="relative  m-16">
-                <Link href="/calculator">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
                   <h1 className="text-xl md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                     Get Your Estimates Free
                   </h1>
@@ -1293,31 +1293,31 @@ export class Footer extends Component {
                   <h1 className="font-bold text-2xl">OTHER BUSINESS SITES</h1>
                   <ul className="mt-8 text-sm">
                     <li className="mb-4 font-bold">
-                      <a>DESIGN INDIAN KITCHEN</a>
+                      <a href='https://designindiankitchen.com/' target='_blank'>DESIGN INDIAN KITCHEN</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>DESIGN INDIAN WARDROBE</a>
+                      <a href='https://designindianwardrobe.com/' target='_blank'>DESIGN INDIAN WARDROBE</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>MODULAR KITCHEN IN DELHI</a>
+                      <a href='https://modularkitchenindelhi.com/' target='_blank'>MODULAR KITCHEN IN DELHI</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>MODULAR KITCHEN IN GURGAON</a>
+                      <a href='https://modular-kitchen-gurgaon.com/' target='_blank'>MODULAR KITCHEN IN GURGAON</a>
                     </li>
-                    <li className="mb-4 font-bold">
+                    {/* <li className="mb-4 font-bold">
                       <a>DESIGN INDIAN HOMES</a>
+                    </li> */}
+                    <li className="mb-4 font-bold">
+                      <a href='https://modularkitcheninnoida.com/' target='_blank'>MODULAR KITCHEN IN NOIDA</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>MODULAR KITCHEN IN NOIDA</a>
+                      <a href='https://thedesignerlounge.com/' target='_blank'>THE DESIGNER LOUNGE</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>THE DESIGNER LOUNGE</a>
+                      <a href='https://devotionalindia.com/' target='_blank'>DEVOTIONAL INDIA</a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>DEVOTIONAL INDIA</a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a>TALLY SOLUTION</a>
+                      <a href='https://tallysolution.net/'>TALLY SOLUTION</a>
                     </li>
                   </ul>
                 </div>
@@ -1325,22 +1325,22 @@ export class Footer extends Component {
                   <h1 className="font-bold text-2xl">CHECK US OUT</h1>
                   <ul className="mt-8 text-sm">
                     <li className="mb-4 font-bold">
-                      <a>CUSTOMER REVIEWS</a>
+                      <Link href="/customer-reviews-interior-designs">CUSTOMER REVIEWS</Link>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>THE MODULAR PROCESS</a>
+                      {/* <a>THE MODULAR PROCESS</a> */}
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>REQUEST A BROCHURE</a>
+                      <Link href="/book-a-interior-design-visit">REQUEST A BROCHURE</Link>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>BOOK A VISIT TODAY</a>
+                      <Link href="/book-a-interior-design-visit">BOOK A VISIT TODAY</Link>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>CORPORATE PRESENCE OF OUR BRAND</a>
+                      {/* <a>CORPORATE PRESENCE OF OUR BRAND</a> */}
                     </li>
                     <li className="mb-4 font-bold">
-                      <a>GET QUOTES</a>
+                      <Link href="/interior-designing-estimates-pricing">GET QUOTES</Link>
                     </li>
                   </ul>
 
@@ -1351,7 +1351,7 @@ export class Footer extends Component {
                     <div>
                       <ul>
                         <li className="mb-2 font-bold">WORK</li>
-                        <li className="mb-2 font-bold">ABOUT</li>
+                        <li className="mb-2 font-bold"><Link href="/about-best-interior-designers-architects"> ABOUT </Link></li>
                         <li className="mb-2 font-bold">CAREERS</li>
                       </ul>
                     </div>
@@ -1378,10 +1378,11 @@ export class Footer extends Component {
                 rel="noopener noreferrer"
                 className="text-yellow-400 font-bold underline"
               >
+                
                 THE DESIGNER LOUNGE
               </a>{' '}
-              <br /> <span className="text-blue-500 underline">PRIVACY</span> |{' '}
-              <span className="text-blue-500 underline">LEGAL</span> |{' '}
+              <br /> <span className="text-blue-500 underline"><Link href='/privacy'>PRIVACY</Link></span> |{' '}
+              <span className="text-blue-500 underline"><Link href="/privacy#legal">LEGAL</Link></span> |{' '}
               <span className="text-blue-500 underline">SITEMAP</span>
             </p>
           </div>
