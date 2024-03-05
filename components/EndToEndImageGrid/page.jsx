@@ -105,8 +105,8 @@ const EndToEndImageGrid = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1,
-        staggerChildren: 0.5,
+        duration: 0.2,
+        staggerChildren: 0.1,
       },
     },
   }

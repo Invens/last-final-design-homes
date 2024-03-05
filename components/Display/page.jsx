@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-
+import Link from 'next/link'
 const Carousel = () => {
   const settings = {
     dots: true,
@@ -138,6 +138,7 @@ const Display = () => {
         >
           {/* 1 */}
           <motion.div variants={imagesVariant} className="single-imgi">
+            <Link href="/interior-design-ideas"> 
             <Image
               src="/images/bannernew.png"
               alt=""
@@ -145,9 +146,12 @@ const Display = () => {
               height={600}
               className="rounded shadow-md"
             />
+            </Link>
+
           </motion.div>
           {/* 2 */}
           <motion.div variants={imagesVariant} className="single-imgi">
+            <Link href="/modular-interior-design-ideas">
             <video
               loop
               autoPlay
@@ -160,9 +164,12 @@ const Display = () => {
               playsInline
               className="rounded shadow-md"
             />
+            </Link>
+          
           </motion.div>
           {/* 3 */}
           <motion.div variants={imagesVariant} className="single-imgi">
+            <Link href="/homes-by-design-indian-homes">
             <video
               loop
               autoPlay
@@ -175,10 +182,15 @@ const Display = () => {
               className="rounded shadow-md"
               muted
             />
+            </Link>
+          
           </motion.div>
           {/* 4 */}
           <motion.div variants={imagesVariant} className="single-imgi">
+            <Link href="/selected-homes">
             <Image src="/images/banner1.png" alt="" width={600} height={600} />
+            </Link>
+            
           </motion.div>
           {/* ----- */}
         </motion.div>
@@ -201,6 +213,11 @@ const Display = () => {
               Modular Interiors across Delhi, Gurgaon, Noida, Faridabad & across
               NCR.
             </p>
+            <Link href="/about-best-interior-designers-architects">
+              <button className='mt-4'>
+                Read More..
+              </button>
+            </Link>
           </div>
         </article>
         {/* sidezi */}

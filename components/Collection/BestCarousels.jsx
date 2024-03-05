@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-
+import Link from 'next/link'
 import 'react-before-after-slider-component/dist/build.css'
 import React from 'react'
 
@@ -192,9 +192,12 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
-            Check Out Our Collections
-          </button>
+          <Link href="/modular-interior-design-ideas">
+            <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+              Check Out Our Collections
+            </button>
+          </Link>
+
         </div>
       </div>
 
@@ -244,9 +247,12 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
-            Check Out Our Collections
-          </button>
+          <Link href="/modular-interior-design-ideas">
+            <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+              Check Out Our Collections
+            </button>
+          </Link>
+
         </div>
       </div>
 
@@ -297,9 +303,12 @@ const BestCarousels = () => {
         </Carousel>
 
         <div className="flex justify-center items-center ">
-          <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+          <Link href="/modular-interior-design-ideas"> 
+           <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
             Check Out Our Collections
           </button>
+          </Link>
+
         </div>
       </div>
 
@@ -350,9 +359,12 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+          <Link href="/modular-interior-design-ideas">  
+           <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
             Check Out Our Collections
           </button>
+          </Link>
+       
         </div>
       </div>
     </div>

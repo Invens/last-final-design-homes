@@ -424,10 +424,12 @@ const PostFooter = () => {
               <p className="w-full">
                 The Most Reliable, Most Recommended & Most Loved ❤️ Brand ✌
               </p>
-
+              <Link href="/about-best-interior-designers-architects">
               <button className="font-extralight max-[600px]:text-xl  text-3xl bg-amber-400 text-gray-dark p-3 rounded-lg max-[600px]:w-2/3 w-1/2 focus:outline-none focus:shadow-outline mt-8">
                 Who We Are
               </button>
+              </Link>
+              
             </div>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/4 px-2 mb-4">
@@ -449,7 +451,7 @@ const PostFooter = () => {
           </div>
         </div>
       </div>
-      <Link href="#">
+      <Link href="/collaborate-with-architects-interior-designers">
         <section class="handshake sm:py-64 py-32 sm:mb-24 mb-8">
           <svg
             version="1.1"
