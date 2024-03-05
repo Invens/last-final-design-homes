@@ -12,32 +12,33 @@ import 'react-multi-carousel/lib/styles.css'
 import Customer from '../../reviews/Customer'
 
 const ContactSection = ({ location }) => {
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    console.log('submit clicked')
+    const handleSubmit = async (event) => {
+      event.preventDefault()
 
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      property: document.getElementById('property-name').value,
-      updates: document.getElementById('whatsappUpdates').value,
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        property: document.getElementById('property-name').value,
+        updates: document.getElementById('whatsappUpdates').value,
+      }
+
+      try {
+        // Send an API request to handle form submission
+        const response = await axios.post(
+          'https://m.designindianhomes.com/submitForm',
+          formData
+        )
+
+        // Assuming the server responds with a success message
+        console.log(response.data)
+
+        // Optionally, you can perform additional actions after form submission
+      } catch (error) {
+        console.error('Error submitting form:', error)
+        // Handle form submission error
+      }
     }
-
-    const recipientEmail = 'saurabhbehal@gmail.com'
-    const emailData = `
-        Name: ${formData.name},
-        Email: ${formData.email},
-        Mobile: ${formData.phone},
-        Property-Name: ${formData.property},
-        Receive Updates: ${formData.updates}
-    `
-    const mailtoLink = `mailto:${recipientEmail}?subject=New Design Session Enquiry&body=${encodeURIComponent(
-      emailData ?? null
-    )}`
-    // window.location.href = mailtoLink
-    window.open(mailtoLink, '_blank')
-  }
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-16 lg:mt-36 xl:mt-24">
       {/* Background Image */}
@@ -278,7 +279,7 @@ const Projects = ({}) => {
         {' '}
         <Link
           href="/modular-interior-design-ideas"
-          className="bg-red-500 hover:bg-white hover:text-gray-900 hover:border-red-500 text-white font-bold py-2 px-4 rounded transition duration-300 mx-auto mb-16 border-transparent border-2"
+          className="w-1/2 text-center hover:bg-red-500 bg-white text-red-500 border-red-500 hover:text-white font-bold py-2 px-4 rounded transition duration-300 mx-auto mb-16 border-2"
         >
           View all
         </Link>

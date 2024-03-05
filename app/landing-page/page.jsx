@@ -19,7 +19,6 @@ import Omsairam from '../../components/Navbar/Omsairam'
 const ContactSection = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log('submit clicked')
 
     const formData = {
       name: document.getElementById('name').value,
@@ -29,19 +28,21 @@ const ContactSection = () => {
       updates: document.getElementById('whatsappUpdates').value,
     }
 
-    const recipientEmail = 'saurabhbehal@gmail.com'
-    const emailData = `
-        Name: ${formData.name},
-        Email: ${formData.email},
-        Mobile: ${formData.phone},
-        Property-Name: ${formData.property},
-        Receive Updates: ${formData.updates}
-    `
-    const mailtoLink = `mailto:${recipientEmail}?subject=New Design Session Enquiry&body=${encodeURIComponent(
-      emailData ?? null
-    )}`
-    // window.location.href = mailtoLink
-    window.open(mailtoLink, '_blank')
+    try {
+      // Send an API request to handle form submission
+      const response = await axios.post(
+        'https://m.designindianhomes.com/submitForm',
+        formData
+      )
+
+      // Assuming the server responds with a success message
+      console.log(response.data)
+
+      // Optionally, you can perform additional actions after form submission
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Handle form submission error
+    }
   }
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-16 lg:mt-36 xl:mt-24">
@@ -201,7 +202,6 @@ const CountingSection = () => {
   let countUp3Anim
   const options = {
     prefix: '+',
-  
   }
   // useEffect with empty dependency array runs once when component is mounted
   useEffect(() => {
