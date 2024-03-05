@@ -295,13 +295,19 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
-                <Image
+                <Link href="/modular-interior-design-ideas">
+               
+            
+               <Image
                   height={350}
                   width={700}
                   className="rounded shadow-md"
                   src="/images/qwer.png"
                   alt=""
                 />
+               </Link>
+               
+              
               </motion.div>
 
               {/* Image 2 */}
@@ -310,6 +316,7 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
+               <Link href="/luxe">
                 <Image
                   height={350}
                   width={700}
@@ -317,6 +324,7 @@ const Collection = () => {
                   src="/images/qwert.png"
                   alt=""
                 />
+                 </Link>
               </motion.div>
 
               {/* Image 3 */}
@@ -370,6 +378,7 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
+                <Link href="/foyer-area-designs">
                 <Image
                   height={350}
                   width={700}
@@ -377,6 +386,8 @@ const Collection = () => {
                   src="/images/talk.png"
                   alt=""
                 />
+                </Link>
+               
               </motion.div>
             </motion.div>
           </div>

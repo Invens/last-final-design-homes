@@ -1703,6 +1703,11 @@ const Header = () => {
               Refer for Rewards
             </button>
           </Link>
+          <Link href="/magazine">
+            <button className=" bg-green-600 text-2xl py-3 px-6 rounded-full text-white font-bold mt-6">
+              Magazine
+            </button>
+          </Link>
         </div>
         <div className="w-2/3">
           <div

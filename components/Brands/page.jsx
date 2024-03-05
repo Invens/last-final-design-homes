@@ -372,8 +372,8 @@ const Brands = () => {
           <div style={containerStyle}>
             <div style={textContainerStyle} className="flex justify-center ">
               <h1 className="sm:text-4xl text-xl font-bold text-center">
-                Why We Deliver Inspiring Interiors Why We Deliver Inspiring
-                Interiors
+                Why We Deliver Inspiring Interiors
+                
               </h1>
             </div>
             <Image
