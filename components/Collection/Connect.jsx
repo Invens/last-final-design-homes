@@ -96,7 +96,7 @@ const Connect = () => {
               <textPath
                 alignmentBaseline="top"
                 xlinkHref="#circle"
-                className="text"
+                className="text text-black-800"
               >
                 The Best Home Interior Brand of India -
               </textPath>

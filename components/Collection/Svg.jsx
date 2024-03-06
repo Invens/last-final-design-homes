@@ -23,7 +23,7 @@ const Svg = () => {
             <textPath
               alignmentBaseline="top"
               xlinkHref="#circle"
-              className="text"
+              className="text text-black"
             >
               No.1 Architectural Brand in India
             </textPath>
