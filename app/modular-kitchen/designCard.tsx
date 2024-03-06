@@ -1,38 +1,40 @@
-// components/Card.tsx
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 interface CardProps {
   data: {
-    id: number
+    designId: string
     heading: string
-    smallText: string
+    size: string
     image: string
-  }
+  };
 }
 
-const Card: React.FC<CardProps> = ({ data }) => {
+const DesignCard: React.FC<CardProps> = ({ data }) => {
+    console.log(data);
+    
   return (
 
-    // <Link href={`/design-ideas/${data.slug}`}>
-    <Link href="/design-ideas/kitchen-designs">
+    <Link href={`/modular-kitchen/${data.designId}`}>
+
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
         <Image
+          width={90}
           height={100}
-          width={100}
-
           src={data.image}
           alt={data.heading}
           className="w-full h-40 object-cover"
         />
         <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{data.heading}</div>
-          <p className="text-gray-700 text-sm">{data.smallText}</p>
+          <div className=" text-gray-700  text-sm mb-2">
+            {data.heading}
+          </div>
+          <p className="text-gray-500 text-xs">{data.size}</p>
         </div>
       </div>
     </Link>
   )
 }
 
-export default Card
+export default DesignCard

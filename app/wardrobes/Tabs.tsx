@@ -76,7 +76,7 @@ export default function BasicTabs({ id }: TabsProps) {
           {pagesData.map((page, index) => (
             <Link
               key={page.id}
-              href={`/design-ideas/${page.slug}`}
+              href={`/wardrobes/${page.slug}`}
               scroll={false}
             >
               <div style={{ whiteSpace: 'nowrap', width: 'max-content' }}>

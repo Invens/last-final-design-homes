@@ -586,8 +586,11 @@ const Header = () => {
             </Link>
           </ul>
           <button className="transition ease-in-out delay-150 bg-green-600 hover:bg-orange-500 translate-y-1 hover:scale-110 text-white text-base py-2 px-4 rounded-full mt-4">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
-            </button>        </div>
+            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              Get Free Estimate
+            </Link>
+          </button>{' '}
+        </div>
 
         <div>
           <ul className="text-sm">
@@ -692,7 +695,10 @@ const Header = () => {
 
           <div className="flex justify-center ml-40">
             <button className="mt-4 bg-green-600 p-3 center rounded-full text-white font-bold text-sm">
-             <Link href="/homes-by-design-indian-homes"> Homes by design Indian Homes{' '}</Link>
+              <Link href="/homes-by-design-indian-homes">
+                {' '}
+                Homes by design Indian Homes{' '}
+              </Link>
             </button>
           </div>
         </div>
@@ -716,7 +722,9 @@ const Header = () => {
               <br /> Ideas and Advice from Experts
             </p>
             <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                Get Free Estimate
+              </Link>
             </button>
           </div>
         </div>
@@ -889,10 +897,12 @@ const Header = () => {
               Exclusive Modular Kitchen Designs, Tips, Ideas and Advice from Our
               Experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">  <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              Get Free Estimate
-            </button></Link>
-          
+            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              {' '}
+              <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
+                Get Free Estimate
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex w-1/3">
@@ -908,7 +918,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen-types">
+                  <Link href="/modular-kitchen/types-of-modular-kitchens">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('type')}
@@ -932,7 +942,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen-designs">
+                  <Link href="/modular-kitchen/modular-kitchen-designs">
                     {' '}
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
@@ -957,7 +967,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/luxury-modular-kitchen-india">
+                  <Link href="/modular-kitchen/luxury-modular-kitchens">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('luxury_modular')}
@@ -981,7 +991,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/modular-kitchen-renovation-services">
+                  <Link href="/modular-kitchen/kitchen-renovations">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -1004,7 +1014,7 @@ const Header = () => {
                   width={100}
                   height={70}
                   priority={true}
-                  style={{width: '100px', height:'70px'}}
+                  style={{ width: '100px', height: '70px' }}
                 />
 
                 <div>
@@ -1063,10 +1073,11 @@ const Header = () => {
               Wardrobes Designs, Manufacturing. Tips, Tricks, Ideas and advice
               from top experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india"><button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              Get Free Estimate
-            </button></Link>
-            
+            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
+                Get Free Estimate
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex w-1/3">
@@ -1082,7 +1093,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/types-of-wardrobe-designs">
+                  <Link href="/wardrobes/types-of-wardrobes">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('types_wardrobe')}
@@ -1106,7 +1117,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/luxury-wardrobe-designs-india">
+                  <Link href="/wardrobes/luxury-wardrobes">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -1131,7 +1142,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/wardrobe-designs">
+                  <Link href="/wardrobes/wardrobe-designs">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -1157,7 +1168,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/lacquer-glass-wardrobe-designs">
+                  <Link href="/wardrobes/lacquer-glass-wardrobe-designs">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('glass_wardrobe')}
@@ -1182,7 +1193,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/wardrobe-renovation-services">
+                  <Link href="/wardrobes/wardrobe-renovations-services">
                     {' '}
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
@@ -1447,7 +1458,9 @@ const Header = () => {
               and Advice from Industry&apos;s Top Experts
             </p>
             <button className="bg-green-600 text-2xl py-3 px-6 rounded-full text-white mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">Get Free Estimate</Link>
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                Get Free Estimate
+              </Link>
             </button>
           </div>
         </div>
@@ -1901,7 +1914,7 @@ const Header = () => {
                   <p>Book a Visit</p>
                 </Link>
                 <p>
-                  <Link href="/book-a-interior-design-visit">
+                  <Link href="/refer-and-get-rewards-interior-designers">
                     | Refer a Rewards
                   </Link>
                 </p>
@@ -2000,7 +2013,7 @@ const Header = () => {
                   className="flex text-sm font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Modular Kitchen')}
                 >
-                  <Link href="/modular-kitchen-designs"> Modular Kitchen</Link>
+                  <Link href="/modular-kitchen">Modular Kitchen</Link>
                 </p>
                 <Link href="/">
                   <animated.img
@@ -2029,7 +2042,7 @@ const Header = () => {
                   onMouseOver={() => handleMouseOver('Wardrobes')}
                 >
                   <i className="fi fi-tr-clothes-hanger"></i>
-                  <Link href="/wardrobe-designs">Wardrobes</Link>
+                  <Link href="/wardrobes">Wardrobes</Link>
                 </p>
 
                 {/* <p className="text-sm font-bold" onMouseOver={() => handleMouseOver('Living')}>
@@ -2189,12 +2202,8 @@ const Header = () => {
             />
           </Link>
         </div>
-        <Link
-            href="/interior-designing-estimates-pricing"
-          >
-        <div className="bg-black text-white py-6 px-6 m-0" >
-            Get Estimate
-        </div>
+        <Link href="/interior-designing-estimates-pricing">
+          <div className="bg-black text-white py-6 px-6 m-0">Get Estimate</div>
         </Link>
       </div>
       {/* Mobile Header */}
@@ -3064,7 +3073,7 @@ const Header = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/modular-kitchen-types">
+                                  <Link href="/modular-kitchen/types-of-modular-kitchens">
                                     {' '}
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
@@ -3096,7 +3105,7 @@ const Header = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/modular-kitchen-designs">
+                                  <Link href="/modular-kitchen/modular-kitchen-designs">
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
                                       onMouseOver={() =>
@@ -3126,7 +3135,7 @@ const Header = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/luxury-modular-kitchen-india">
+                                  <Link href="/modular-kitchen/luxury-modular-kitchens">
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
                                       onMouseOver={() =>
@@ -3160,7 +3169,7 @@ const Header = () => {
                               />
 
                               <div>
-                                <Link href="/modular-kitchen-renovation-services">
+                                <Link href="/modular-kitchen/kitchen-renovations">
                                   <h3
                                     className="text-sm text-white bg-black absolute  p-1"
                                     onMouseOver={() =>
@@ -3966,7 +3975,9 @@ const Header = () => {
                       />
                     </div>
                   </AccordionSection>
-                 <div className='m-4'><ColorSwitch /> </div>
+                  <div className="m-4">
+                    <ColorSwitch />{' '}
+                  </div>
                   <div>
                     <video
                       autoPlay

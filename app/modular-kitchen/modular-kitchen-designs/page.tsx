@@ -18,7 +18,7 @@ const Page = ({}) => {
     []
   )
   useEffect(() => {
-    const categoryIds = [65] // Add the category IDs you want to fetch
+    const categoryIds = [90] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -56,7 +56,7 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
-            Wardrobe Designs | Top Wardrobe Manufacturing Brand India
+            Modular Kitchen Designs | Top Wardrobe Manufacturing Brand India
           </title>
 
           <meta
@@ -110,13 +110,14 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">Design ideas</Link>
+            <Link href="/modular-kitchen">Modular Kitchen</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Wardrobe</span>
+          /{' '}
+          <span className="text-gray-600 text-sm">Modular Kitchen Designs</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={5} />
+        <Tabs id={1} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div

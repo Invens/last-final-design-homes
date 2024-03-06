@@ -601,29 +601,4 @@ const page = ({ params }) => {
   )
 }
 
-// export async function getStaticPaths() {
-//   // Fetch all locations dynamically, e.g., from an API or a database
-//   const locations = ['alaknanda', 'anand-lok', 'ashok-vihar' /* ... */]
-
-//   const paths = locations.map((location) => ({
-//     params: { location: [location] },
-//   }))
-
-//   return { paths, fallback: false }
-// }
-
-// export async function getStaticProps({ params }) {
-//   // Fetch data for the specific location using params.location[0]
-//   // Example: const locationData = await fetch(/api/location/${params.location[0]}).then((response) => response.json());
-
-//   // Mock data for demonstration purposes
-//   const locationData = { someProperty: 'Some value' }
-
-//   return {
-//     props: {
-//       locationData,
-//     },
-//   }
-// }
-
 export default page

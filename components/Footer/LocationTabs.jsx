@@ -572,7 +572,7 @@ const CityLocations = ({ locations, city, prefix }) => {
 
 const ParagraphTab = ({ prefix }) => {
   return (
-    <div>
+    <div className="">
       {/* <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2> */}
       <CityLocations locations={delhiLocations} city="Delhi" prefix={prefix} />
       <hr className="my-6 border-t-2 border-gray-300" />
@@ -614,7 +614,7 @@ const LocationsTabs = () => {
 
   return (
     <div className="container mx-auto mt-8 p-0 ">
-      <div className='flex justify-center'>
+      <div className="flex justify-center">
         <Tabs
           value={value}
           onChange={handleChange}

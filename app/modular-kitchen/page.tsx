@@ -9,19 +9,16 @@ import ProgressBar from '../../components/Progressbar'
 // import Card from './Card'
 import MyForm from '../../components/MyForm'
 import Omsairam from '../../components/Navbar/Omsairam'
-
 import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
 
   const categoryFolderMapping: Record<number, string> = {
-    64: 'kitchen-designs',
-    65: 'wardrobe',
-    66: 'vanities',
-    67: 'dressers',
-    68: 'tv-unit-designs',
-    69: 'crockery-units',
-    70: 'glass-partition',
+    89: 'types-of-modular-kitchens',
+    90: 'modular-kitchen-designs',
+    91: 'luxury-modular-kitchens',
+    92: 'kitchen-renovations',
+
     // Add more mappings as needed
   }
 
@@ -29,7 +26,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [64, 65, 66, 67, 68, 69, 70] // Add the category IDs you want to fetch
+        const categoryIds = [89, 90, 91, 92] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -48,10 +45,10 @@ const Page = ({}) => {
           }
         })
 
-        const fetchedCategoryDataArray = await Promise.all(categoryPromises)
+        const categoryDataArray = await Promise.all(categoryPromises)
 
         // Fetch image data for each category
-        const imageDataPromises = fetchedCategoryDataArray.map(
+        const imageDataPromises = categoryDataArray.map(
           async (categoryData) => {
             const imageResponse = await fetch(
               `https://api.designindianwardrobe.com/api/images/${categoryData.id}?timestamp=${timestamp}`
@@ -74,7 +71,7 @@ const Page = ({}) => {
         const imageDataArray = await Promise.all(imageDataPromises)
 
         // Combine category data with corresponding image data
-        const mergedDataArray = fetchedCategoryDataArray.map(
+        const mergedDataArray = categoryDataArray.map(
           (categoryData, index) => ({
             ...categoryData,
             image: imageDataArray[index],
@@ -88,7 +85,7 @@ const Page = ({}) => {
     }
 
     fetchCategoryData()
-  }, []) // Empty dependency array to run the effect only once on mount
+  }, [])
 
   return (
     <>
@@ -98,7 +95,7 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
-            Modular Interiors | Modular Kitchens & Wardrobe Brand India
+            Modular Kitchens | Modular Kitchens & Wardrobe Brand India
           </title>
           <meta
             name="description"
@@ -149,27 +146,27 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Design ideas</span>
+          / <span className="text-gray-600 text-sm">Modular Kitchens</span>
         </div>
 
-        <div className="flex items-center  p-4">
+        <div className="flex items-center bg- p-4">
           <div className="w-1 h-8 rounded bg-green-500 mr-2"></div>
-          <h1 className="text-3xl font-bold">Home Interior Design</h1>
+          <h1 className="text-3xl font-bold">Modular Kitchens</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
-          We bring you carefully-curated interior design ideas, to give your
-          home a brand new look. Explore exclusive interior designs and trends
-          that are every bit inspirational as they are practical. Our team of
-          interior designers have put together ideas across kitchen, bedroom,
-          living room and more, to help you pick a design that will best suit
-          your home interior requirements.
+          We bring you carefully-curated Modular Kitchens design ideas, to give
+          your home a brand new look. Explore exclusive Modular Kitchen designs
+          and trends that are every bit inspirational as they are practical. Our
+          team of interior designers have put together ideas across kitchen,
+          bedroom, living room and more, to help you pick a design that will
+          best suit your Modular Kitchens requirements.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {categoryDataArray.map((categoryData) => (
             <Link
               key={categoryData.id}
-              href={`/design-ideas/${categoryFolderMapping[categoryData.id]}`}
+              href={`/modular-kitchen/${categoryFolderMapping[categoryData.id]}`}
             >
               <div className="bg-white rounded-md shadow-md p-6">
                 {categoryData.image && (

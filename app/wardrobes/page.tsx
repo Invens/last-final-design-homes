@@ -9,15 +9,26 @@ import ProgressBar from '../../components/Progressbar'
 // import Card from './Card'
 import MyForm from '../../components/MyForm'
 import Omsairam from '../../components/Navbar/Omsairam'
+
 import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
+
+  const categoryFolderMapping: Record<number, string> = {
+    94: 'types-of-wardrobes',
+    95: 'luxury-wardrobes',
+    96: 'wardrobe-designs',
+    97: 'lacquer-glass-wardrobe-designs',
+    98: 'wardrobe-renovations-services',
+
+    // Add more mappings as needed
+  }
 
   useEffect(() => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [64, 65, 66, 67, 68, 69, 70] // Add the category IDs you want to fetch
+        const categoryIds = [94, 95, 96, 97, 98,] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -36,10 +47,10 @@ const Page = ({}) => {
           }
         })
 
-        const categoryDataArray = await Promise.all(categoryPromises)
+        const fetchedCategoryDataArray = await Promise.all(categoryPromises)
 
         // Fetch image data for each category
-        const imageDataPromises = categoryDataArray.map(
+        const imageDataPromises = fetchedCategoryDataArray.map(
           async (categoryData) => {
             const imageResponse = await fetch(
               `https://api.designindianwardrobe.com/api/images/${categoryData.id}?timestamp=${timestamp}`
@@ -62,7 +73,7 @@ const Page = ({}) => {
         const imageDataArray = await Promise.all(imageDataPromises)
 
         // Combine category data with corresponding image data
-        const mergedDataArray = categoryDataArray.map(
+        const mergedDataArray = fetchedCategoryDataArray.map(
           (categoryData, index) => ({
             ...categoryData,
             image: imageDataArray[index],
@@ -76,7 +87,7 @@ const Page = ({}) => {
     }
 
     fetchCategoryData()
-  }, [])
+  }, []) // Empty dependency array to run the effect only once on mount
 
   return (
     <>
@@ -86,7 +97,7 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
-            Modular Interiors | Modular Kitchens & Wardrobe Brand India
+            Wardrobes | Modular Kitchens & Wardrobe Brand India
           </title>
           <meta
             name="description"
@@ -137,20 +148,20 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Design ideas</span>
+          / <span className="text-gray-600 text-sm">Wardrobes</span>
         </div>
 
-        <div className="flex items-center bg- p-4">
+        <div className="flex items-center  p-4">
           <div className="w-1 h-8 rounded bg-green-500 mr-2"></div>
-          <h1 className="text-3xl font-bold">Home Interior Design</h1>
+          <h1 className="text-3xl font-bold">Wardrobe Designs</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
-          We bring you carefully-curated interior design ideas, to give your
-          home a brand new look. Explore exclusive interior designs and trends
-          that are every bit inspirational as they are practical. Our team of
-          interior designers have put together ideas across kitchen, bedroom,
-          living room and more, to help you pick a design that will best suit
-          your home interior requirements.
+          We bring you carefully-curated wardrobe design ideas, to give your
+          wardrobe a brand new look. Explore exclusive wardrobe designs and
+          trends that are every bit inspirational as they are practical. Our
+          team of interior designers have put together ideas across wardrobes,
+          kitchen, bedroom, living room and more, to help you pick a design that
+          will best suit your home wardrobe requirements.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
@@ -160,17 +171,23 @@ const Page = ({}) => {
               className="bg-white rounded-md shadow-md p-6"
             >
               {categoryData.image && (
-                <Image
-                  width={1000}
-                  height={1000}
-                  src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
-                  alt={categoryData.image.filename}
-                  style={{
-                    width: '450px',
-                    height: '230px',
-                    borderRadius: '10px',
-                  }}
-                />
+                <Link
+                  href={`/wardrobes/${
+                    categoryFolderMapping[categoryData.id]
+                  }`}
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
+                    alt={categoryData.image.filename}
+                    style={{
+                      width: '450px',
+                      height: '230px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                </Link>
               )}
               <h2 className="text-xl font-semibold mb-4">
                 {categoryData.name}

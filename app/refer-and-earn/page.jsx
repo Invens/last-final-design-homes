@@ -3,7 +3,7 @@ import Header from '../../components/Navbar/Header'
 import Omsairam from '../../components/Navbar/Omsairam'
 import ContactForm from '../../components/ContactForm/page'
 import Footer from '../../components/Footer/Footer'
-
+import Form from './form'
 const FullWidthSection = () => {
   return (
     <section className="relative h-[200px] sm:h-[400px] bg-cover bg-center flex items-center justify-center mt-16 lg:mt-36 xl:mt-24">
@@ -79,6 +79,10 @@ const page = () => {
           and Earn can be once discussed, so feel free and Call us Today or
           Whats up for All details. Happy Collaborating.
         </p>
+        <h1 className="sm:text-3xl text-2xl font-bold text-center my-12">
+          REFER US
+        </h1>
+        <Form />
       </div>
       <ScheduleChatSection />
       <ContactForm />

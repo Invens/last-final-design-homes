@@ -537,7 +537,6 @@ import LocationsTabs from './LocationTabs'
 //     'Ace Starlit',
 //   ]
 
-
 //   const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 //     ({ theme }) => ({
 //       textTransform: 'none',
@@ -952,8 +951,8 @@ const LetsConnectForm = () => {
 export class Footer extends Component {
   render() {
     return (
-      <div className="flex justify-center w-full">
-        <div className="gradient">
+      <div className="flex justify-center w-full mx-0">
+        <div className="gradient w-full flex flex-col justify-center items-center">
           <div className="mt-22 container">
             {/* <WaveGradient /> */}
             <div
@@ -978,12 +977,12 @@ export class Footer extends Component {
               </h1> */}
             </div>
 
-            <div className=" row">
-              <div className="text-black col-lg-12 flex items-center justify-center">
-                <button className="display-center run rounded-full border-dotted border-2 border-black py-12 mt-4 md:py-48 hover:bg-black hover:text-white">
-                  <a href="tel:+919899264978" className="">
+            <div class="">
+              <div class="text-black w-full flex items-center justify-center">
+                <button class="w-full sm:mx-24 display-center run rounded-full border-dotted border-2 border-black py-12 mt-4 md:py-48 hover:bg-black hover:text-white">
+                  <a href="tel:+919899264978" class="">
                     Call Us Today! <br />
-                    <span className="button2 pb-4">
+                    <span class="button2 pb-4">
                       We can talk about how big this button is.
                     </span>
                   </a>
@@ -1293,31 +1292,60 @@ export class Footer extends Component {
                   <h1 className="font-bold text-2xl">OTHER BUSINESS SITES</h1>
                   <ul className="mt-8 text-sm">
                     <li className="mb-4 font-bold">
-                      <a href='https://designindiankitchen.com/' target='_blank'>DESIGN INDIAN KITCHEN</a>
+                      <a
+                        href="https://designindiankitchen.com/"
+                        target="_blank"
+                      >
+                        DESIGN INDIAN KITCHEN
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://designindianwardrobe.com/' target='_blank'>DESIGN INDIAN WARDROBE</a>
+                      <a
+                        href="https://designindianwardrobe.com/"
+                        target="_blank"
+                      >
+                        DESIGN INDIAN WARDROBE
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://modularkitchenindelhi.com/' target='_blank'>MODULAR KITCHEN IN DELHI</a>
+                      <a
+                        href="https://modularkitchenindelhi.com/"
+                        target="_blank"
+                      >
+                        MODULAR KITCHEN IN DELHI
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://modular-kitchen-gurgaon.com/' target='_blank'>MODULAR KITCHEN IN GURGAON</a>
+                      <a
+                        href="https://modular-kitchen-gurgaon.com/"
+                        target="_blank"
+                      >
+                        MODULAR KITCHEN IN GURGAON
+                      </a>
                     </li>
                     {/* <li className="mb-4 font-bold">
                       <a>DESIGN INDIAN HOMES</a>
                     </li> */}
                     <li className="mb-4 font-bold">
-                      <a href='https://modularkitcheninnoida.com/' target='_blank'>MODULAR KITCHEN IN NOIDA</a>
+                      <a
+                        href="https://modularkitcheninnoida.com/"
+                        target="_blank"
+                      >
+                        MODULAR KITCHEN IN NOIDA
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://thedesignerlounge.com/' target='_blank'>THE DESIGNER LOUNGE</a>
+                      <a href="https://thedesignerlounge.com/" target="_blank">
+                        THE DESIGNER LOUNGE
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://devotionalindia.com/' target='_blank'>DEVOTIONAL INDIA</a>
+                      <a href="https://devotionalindia.com/" target="_blank">
+                        DEVOTIONAL INDIA
+                      </a>
                     </li>
                     <li className="mb-4 font-bold">
-                      <a href='https://tallysolution.net/'>TALLY SOLUTION</a>
+                      <a href="https://tallysolution.net/">TALLY SOLUTION</a>
                     </li>
                   </ul>
                 </div>
@@ -1325,22 +1353,30 @@ export class Footer extends Component {
                   <h1 className="font-bold text-2xl">CHECK US OUT</h1>
                   <ul className="mt-8 text-sm">
                     <li className="mb-4 font-bold">
-                      <Link href="/customer-reviews-interior-designs">CUSTOMER REVIEWS</Link>
+                      <Link href="/customer-reviews-interior-designs">
+                        CUSTOMER REVIEWS
+                      </Link>
                     </li>
                     <li className="mb-4 font-bold">
                       {/* <a>THE MODULAR PROCESS</a> */}
                     </li>
                     <li className="mb-4 font-bold">
-                      <Link href="/book-a-interior-design-visit">REQUEST A BROCHURE</Link>
+                      <Link href="/book-a-interior-design-visit">
+                        REQUEST A BROCHURE
+                      </Link>
                     </li>
                     <li className="mb-4 font-bold">
-                      <Link href="/book-a-interior-design-visit">BOOK A VISIT TODAY</Link>
+                      <Link href="/book-a-interior-design-visit">
+                        BOOK A VISIT TODAY
+                      </Link>
                     </li>
                     <li className="mb-4 font-bold">
                       {/* <a>CORPORATE PRESENCE OF OUR BRAND</a> */}
                     </li>
                     <li className="mb-4 font-bold">
-                      <Link href="/interior-designing-estimates-pricing">GET QUOTES</Link>
+                      <Link href="/interior-designing-estimates-pricing">
+                        GET QUOTES
+                      </Link>
                     </li>
                   </ul>
 
@@ -1351,7 +1387,12 @@ export class Footer extends Component {
                     <div>
                       <ul>
                         <li className="mb-2 font-bold">WORK</li>
-                        <li className="mb-2 font-bold"><Link href="/about-best-interior-designers-architects"> ABOUT </Link></li>
+                        <li className="mb-2 font-bold">
+                          <Link href="/about-best-interior-designers-architects">
+                            {' '}
+                            ABOUT{' '}
+                          </Link>
+                        </li>
                         <li className="mb-2 font-bold">CAREERS</li>
                       </ul>
                     </div>
@@ -1368,7 +1409,7 @@ export class Footer extends Component {
             <LocationsTabs />
           </div>
 
-          <div className="text-center text-black text-sm  py-4 bg-white mb-16 sm:mb-0">
+          <div className="w-full text-center text-black text-sm  py-4 bg-white mb-16 sm:mb-0">
             <p>
               DESIGN INDIAN HOMES | ALL RIGHTS RESERVED 2024-25 CRAFTED WITH
               LOVE BY IN HOUSE BRAND -{' '}
@@ -1378,12 +1419,17 @@ export class Footer extends Component {
                 rel="noopener noreferrer"
                 className="text-yellow-400 font-bold underline"
               >
-                
                 THE DESIGNER LOUNGE
               </a>{' '}
-              <br /> <span className="text-blue-500 underline"><Link href='/privacy'>PRIVACY</Link></span> |{' '}
-              <span className="text-blue-500 underline"><Link href="/privacy#legal">LEGAL</Link></span> |{' '}
-              <span className="text-blue-500 underline">SITEMAP</span>
+              <br />{' '}
+              <span className="text-blue-500 underline">
+                <Link href="/privacy">PRIVACY</Link>
+              </span>{' '}
+              |{' '}
+              <span className="text-blue-500 underline">
+                <Link href="/privacy#legal">LEGAL</Link>
+              </span>{' '}
+              | <span className="text-blue-500 underline">SITEMAP</span>
             </p>
           </div>
         </div>
