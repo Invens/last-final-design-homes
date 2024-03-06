@@ -38,7 +38,7 @@ const ContactFormSection = () => {
       console.error('Error during form data and file upload:', error)
     }
   };
-  
+
 
   return (
     <section className="py-12 bg-gray-100 md:px-28">
@@ -46,8 +46,8 @@ const ContactFormSection = () => {
         {/* Left Image */}
         <div className="w-1/3 pr-8">
           <Image
-          width={1000}
-          height={1000}
+            width={1000}
+            height={1000}
             src="/images/contact-form.avif" // Replace with the path to your image
             alt="Contact Form"
             className="w-full h-auto rounded"
@@ -112,10 +112,42 @@ const ContactFormSection = () => {
                   id="requirement"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 >
-                  <option value="Planning">Kitchen Planning</option>
-                  <option value="Designing">Kitchen Designing</option>
-                  <option value="Renovation">Kitchen Renovation</option>
-                  <option value="NewKitchen">New Modular Kitchen</option>
+                  <option> Modular Kitchens
+                
+                 </option>
+                  <option> 
+                  Wardrobes
+                 </option>
+                  <option> 
+                  Vanities
+                  </option>
+                  <option> 
+                  Dressers
+                  </option>
+                  <option>
+                  TV Units
+                  </option>
+                  <option> 
+                  Crockery Units
+                 </option>
+                  <option> 
+                  Glass Partitions
+                  </option>
+                  <option> 
+                  Mandir
+                  </option>
+                  <option>
+                  Bar
+                 </option>
+                  <option> 
+                  Side Tables
+                  </option>
+                  <option>
+                    Home Office
+                 </option>
+                <option>
+                  Foyer Cabinets</option>
+                 
                 </select>
               </div>
               <div>

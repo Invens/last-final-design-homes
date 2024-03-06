@@ -1007,14 +1007,13 @@ const Header = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-2 ">
+              <div className="flex gap-2 mt-3">
                 <Image
                   src="/images/modular_kitchen/short/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (7).jpg"
                   alt="top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india"
                   width={100}
                   height={70}
-                  priority={true}
-                  style={{ width: '100px', height: '70px' }}
+                  className=" rounded-lg"
                 />
 
                 <div>
@@ -1717,11 +1716,6 @@ const Header = () => {
               Refer for Rewards
             </button>
           </Link>
-          <Link href="/magazine">
-            <button className=" bg-green-600 text-2xl py-3 px-6 rounded-full text-white font-bold mt-6">
-              Magazine
-            </button>
-          </Link>
         </div>
         <div className="w-2/3">
           <div
@@ -2176,10 +2170,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* {mobile logo} */}
+      {/* {mobiler logo} */}
 
       <div
-        className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-[25px] fixed top-0 w-full"
+        className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-6 fixed top-0 w-full"
         style={{ zIndex: '190' }}
       >
         <div>
@@ -2187,24 +2181,25 @@ const Header = () => {
             <Image
               src="/images/Logo.gif"
               alt="left logo"
-              width={1000}
-              height={1000}
+              width={0}
+              height={0}
               priority={true}
               style={{
-                width: '160px',
-                height: '75px',
+                width: '35vw',
+                height: 'auto',
                 marginLeft: '10px',
-                // marginTop: '20px',
-                // marginBottom: '20px',
-                paddingTop: '5px',
-                paddingBottom: '1.5px',
+                paddingBottom: '.2rem'
               }}
             />
           </Link>
         </div>
-        <Link href="/interior-designing-estimates-pricing">
-          <div className="bg-black text-white py-6 px-6 m-0">Get Estimate</div>
-        </Link>
+        <div>
+          <Link
+            href="/interior-designing-estimates-pricing">
+            <button className='bg-black text-white px-6 py-8 md:py-12'>Get Estimate</button>
+            
+          </Link>
+        </div>
       </div>
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-6 z-40 relative">
