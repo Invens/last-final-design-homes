@@ -573,6 +573,7 @@ const CityLocations = ({ locations, city, prefix }) => {
 const ParagraphTab = ({ prefix }) => {
   return (
     <div>
+      {/* <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2> */}
       <CityLocations locations={delhiLocations} city="Delhi" prefix={prefix} />
       <hr className="my-6 border-t-2 border-gray-300" />
       <CityLocations
@@ -588,65 +589,69 @@ const ParagraphTab = ({ prefix }) => {
 }
 
 const LocationsTabs = () => {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(-1) // Set initial value to -1
+  const [renderParagraphTab, setRenderParagraphTab] = React.useState(false)
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
+    setRenderParagraphTab(true) // Set to true when a tab is clicked
   }
 
   const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     ({ theme }) => ({
       textTransform: 'none',
-
       marginRight: theme.spacing(1),
-      color: '#99adc9',
+      color: '#fff',
       fontFamily: 'BioRhyme',
-
       '&.Mui-selected': {
-        color: '#ffffff',
+        color: '#000',
       },
       '&.Mui-focusVisible': {
-        backgroundColor: 'rgba(100, 95, 228, 0.32)',
+        backgroundColor: '#fff',
       },
     })
   )
 
   return (
     <div className="container mx-auto mt-8 p-0 ">
-      <div className="flex justify-center">
+      <div className='flex justify-center'>
         <Tabs
           value={value}
           onChange={handleChange}
           variant="scrollable"
           scrollButtons="auto"
-          className="text-center  w-fit" // Add this to center the text in tabs
+          className="text-center w-fit"
         >
           <StyledTab
-            label="WARDROBE DESIGNS"
+            label="WARDROBE DESIGN LOCATIONS"
+            className="sm:text-xl text-xs font-[500] my-2"
+          />
+
+          <StyledTab
+            label="KITCHEN DESIGNS LOCATIONS"
             className="sm:text-xl text-xs font-[500] my-2"
           />
           <StyledTab
-            label="KITCHEN DESIGNS"
-            className="sm:text-xl text-xs font-[500] my-2"
-          />
-          <StyledTab
-            label="INTERIOR DESIGNS"
+            label="INTERIOR DESIGNS LOCATIONS"
             className="sm:text-xl text-xs font-[500] my-2"
           />
         </Tabs>
       </div>
-      <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2>
-      <Box width="100%" className="mt-2">
-        {value === 0 && (
-          <ParagraphTab prefix="Wardrobe-Dealers-&-Manufacturers-in-" />
+
+      {renderParagraphTab &&
+        value !== -1 && ( // Render only if a tab is selected
+          <Box width="100%" className="mt-2">
+            {value === 0 && (
+              <ParagraphTab prefix="Wardrobe-Dealers-&-Manufacturers-in-" />
+            )}
+            {value === 1 && (
+              <ParagraphTab prefix="Modular-Kitchen-Dealers-&-Manufacturers-in-" />
+            )}
+            {value === 2 && (
+              <ParagraphTab prefix="Interior-Designing-and-Architect-Services-in-" />
+            )}
+          </Box>
         )}
-        {value === 1 && (
-          <ParagraphTab prefix="Modular-Kitchen-Dealers-&-Manufacturers-in-" />
-        )}
-        {value === 2 && (
-          <ParagraphTab prefix="Interior-Designing-and-Architect-Services-in-" />
-        )}
-      </Box>
     </div>
   )
 }

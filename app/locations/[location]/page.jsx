@@ -10,35 +10,36 @@ import axios from 'axios'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import Customer from '../../reviews/Customer'
+import Head from 'next/head'
 
-const ContactSection = ({ location }) => {
-    const handleSubmit = async (event) => {
-      event.preventDefault()
+const ContactSection = ({ location, text }) => {
+  const handleSubmit = async (event) => {
+    event.preventDefault()
 
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        property: document.getElementById('property-name').value,
-        updates: document.getElementById('whatsappUpdates').value,
-      }
-
-      try {
-        // Send an API request to handle form submission
-        const response = await axios.post(
-          'https://m.designindianhomes.com/submitForm',
-          formData
-        )
-
-        // Assuming the server responds with a success message
-        console.log(response.data)
-
-        // Optionally, you can perform additional actions after form submission
-      } catch (error) {
-        console.error('Error submitting form:', error)
-        // Handle form submission error
-      }
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      property: document.getElementById('property-name').value,
+      updates: document.getElementById('whatsappUpdates').value,
     }
+
+    try {
+      // Send an API request to handle form submission
+      const response = await axios.post(
+        'https://m.designindianhomes.com/submitForm',
+        formData
+      )
+
+      // Assuming the server responds with a success message
+      console.log(response.data)
+
+      // Optionally, you can perform additional actions after form submission
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      // Handle form submission error
+    }
+  }
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-center h-screen mt-16 lg:mt-36 xl:mt-24">
       {/* Background Image */}
@@ -52,7 +53,7 @@ const ContactSection = ({ location }) => {
         {/* Text on the Left Side (for medium screens and up) */}
         <div className="max-w-md mx-4 text-left mb-8 md:mb-0 md:mr-4">
           <h1 className="text-4xl font-extrabold mb-4">
-            Best Interior Home Brand In{' '}
+            Best {text} In{' '}
             <span className="text-red-500 capitalize">
               {location} that fit your budget
             </span>
@@ -119,7 +120,7 @@ const ContactSection = ({ location }) => {
     </section>
   )
 }
-const SecondSection = ({ location }) => {
+const SecondSection = ({ location, desc }) => {
   return (
     <>
       <div className="p-4 sm:p-8 ">
@@ -159,12 +160,12 @@ const SecondSection = ({ location }) => {
       </div>
       <div className="desc text-center p-4 sm:p-8 ">
         <p>
-          Beautiful Affordable Interior Designing and Architect Services are
+          Beautiful Affordable {desc} Designing and Architect Services are
           delivered by Our team in {location} Locality, we are extensively
           serving in {location} and other neighboring areas. We are the Top
-          Manufacturers for Modular Kitchen and Wardrobe across {location}. We
-          use some of the top Brands in our materials and deliver top notch
-          quality at most affordable prices. Get a Amazing Modular Kitchen
+          Manufacturers for {desc} across {location}. We use some of the top
+          Brands in our materials and deliver top notch quality at most
+          affordable prices. Get Amazing {desc}
           delivered for your residence in {location}. For More Details, Connect
           with Our team today & Book a Site Visit. 100% Guaranteed Quotes across
           {location}.
@@ -515,19 +516,81 @@ const slugToLocation = (slug) => {
 }
 
 const page = ({ params }) => {
-   const { location } = params
+  const { location } = params
   const locationParts = location.split('-in-')
-  const extractedLocation = locationParts[1] // Extracting the location part
-
-  
+  const extractedLocation = locationParts[1]
+  const type = locationParts[0]
+  const typeParts = type.split('-')
+  const firstWord = typeParts[0]
+  console.log(firstWord)
+  let text
+  let desc
+  if (firstWord === 'wardrobe') {
+    text = 'Wardrobe Brand'
+    desc = 'Wardrobes'
+  }
+  if (firstWord === 'modular') {
+    text = 'Modular Kitchen Brand'
+    desc = 'Modular Kitchens'
+  }
+  if (firstWord === 'interior') {
+    text = 'Home Interior Brand'
+    desc = 'Home Interiors'
+  }
   const locationOriginal = slugToLocation(extractedLocation)
 
   return (
     <>
+      <Head>
+        <title>
+          {text} | Top {desc} Company in India
+        </title>
+
+        <meta
+          name="description"
+          content={`Our brand is the largest manufacturer of ${desc}, we are top dealers and suppliers for ${desc} across Delhi, gurgaon, noida & India.`}
+        />
+
+        <meta name="Author" content="Design Indian Homes" />
+        <meta name="Generator" content="www.designindianhomes.com" />
+        <meta name="Language" content="en" />
+        <meta name="robots" content="index, follow" />
+        <meta name="Copyright" content="©www.designindianhomes.com" />
+        <meta name="Designer" content="Design Indian Homes Unit" />
+        <meta name="Publisher" content="www.designindianhomes.com" />
+        <meta name="Distribution" content="Global" />
+        <meta name="Rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="canonical"
+          href="https://designindianhomes.com/dressers-designs/"
+        />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="Yahoobot" content="index, follow" />
+        <meta name="MSNbot" content="Index, Follow" />
+        <meta name="allow-search" content="yes" />
+        <meta name="country" content="India" />
+        <meta name="contactNumber" content="+91-98-99-26-49-78" />
+        <meta name="dc.language" content="english" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi" />
+        <meta
+          property="og:url"
+          content="https://designindianhomes.com/dressers-designs/"
+        />
+        <meta
+          property="og:title"
+          content="Dresser Designs | Top Dresser Manufacturing Company India"
+        />
+        <meta
+          property="og:description"
+          content={`Our brand is the largest manufacturer of ${desc}, we are top dealers and suppliers for ${desc} across Delhi, gurgaon, noida & India.`}
+        />
+      </Head>
       <Omsairam />
       <Header />
-      <ContactSection location={locationOriginal} />
-      <SecondSection location={locationOriginal} />
+      <ContactSection location={locationOriginal} text={text} />
+      <SecondSection location={locationOriginal} desc={desc} />
       <Projects />
       <ThreeColumnSection location={locationOriginal} />
       <CardCarousel />
