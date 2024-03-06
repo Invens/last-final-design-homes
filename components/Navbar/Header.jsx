@@ -997,13 +997,14 @@ const Header = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex gap-2 mt-3">
+              <div className="flex gap-2 ">
                 <Image
                   src="/images/modular_kitchen/short/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india (7).jpg"
                   alt="top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india"
                   width={100}
                   height={70}
-                  className=" rounded-lg"
+                  priority={true}
+                  style={{width: '100px', height:'70px'}}
                 />
 
                 <div>
@@ -2162,10 +2163,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* {mobiler logo} */}
+      {/* {mobile logo} */}
 
       <div
-        className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-8 fixed top-0 w-full"
+        className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-[25px] fixed top-0 w-full"
         style={{ zIndex: '190' }}
       >
         <div>
@@ -2173,26 +2174,28 @@ const Header = () => {
             <Image
               src="/images/Logo.gif"
               alt="left logo"
-              width={0}
-              height={0}
+              width={1000}
+              height={1000}
+              priority={true}
               style={{
-                width: '90px',
-                height: '80',
+                width: '160px',
+                height: '75px',
                 marginLeft: '10px',
-                marginTop: '20px',
-                marginBottom: '20px',
+                // marginTop: '20px',
+                // marginBottom: '20px',
+                paddingTop: '5px',
+                paddingBottom: '1.5px',
               }}
             />
           </Link>
         </div>
-        <div>
-          <Link
+        <Link
             href="/interior-designing-estimates-pricing"
-            className="bg-black text-white py-6 px-6 m-0"
           >
+        <div className="bg-black text-white py-6 px-6 m-0" >
             Get Estimate
-          </Link>
         </div>
+        </Link>
       </div>
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-6 z-40 relative">
