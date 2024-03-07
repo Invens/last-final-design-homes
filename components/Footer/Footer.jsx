@@ -956,7 +956,7 @@ export class Footer extends Component {
           <div className="mt-22 container">
             {/* <WaveGradient /> */}
             <div
-              className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 md:h-[100vh] h-1/2"
+              className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
               style={{
                 backgroundImage:
                   "url('https://ik.imagekit.io/hlsvvxksxg/spacejoy-9M66C_w_ToM-unsplash.jpg?updatedAt=1707545903911')",
@@ -967,7 +967,7 @@ export class Footer extends Component {
             >
               <div className="relative  m-16">
                 <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-                  <h1 className="text-xl md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
+                  <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                     Get Your Estimates Free
                   </h1>
                 </Link>

@@ -30,9 +30,7 @@ const Omsairam = () => {
         >
           <div className="inline-block">
             {' '}
-            🙂 Largest Manufacturing Brand Across Noida - Delhi - NCR 🙂 Bring
-            Us any Quote & Take Flat 7% Off. 100% Guaranteed Quotes for all
-            Modular Kitchens & Wardrobes.
+            🙂 Largest Interior & Architectural Brand Across Noida - Delhi - NCR 🙂 Bring Us any Quote & Take Flat 7% Off. 100% Guaranteed Quotes for all Modular Interiors, End To End Interiors & Architectural Solutions.
           </div>
         </Marquee>
       </div>

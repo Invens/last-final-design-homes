@@ -43,7 +43,7 @@ const page = () => {
     <>
       <Omsairam />
       <Header />
-      <div className=" mt-16 lg:mt-36 mb-16">
+      <div className=" mt-[140px] lg:mt-36 mb-16">
         <h1 className="text-5xl font-extrabold text-center mb-8 mx-auto">
           JOIN TODAY WITH INDIA&apos;S TOP MODULAR BRAND
         </h1>

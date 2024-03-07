@@ -640,10 +640,10 @@ const CardComponentSection = () => {
               </div>
 
               <h3 className="text-sm font-bold my-2">
-                REQUEST A FREE BROCHURE
+              Visit Our Interior Digest
               </h3>
               <p className="text-gray-700 text-xs">
-                Get inspired with one of our brochures
+              Get Inspired with Beautiful Interiors
               </p>
             </div>
           </div>

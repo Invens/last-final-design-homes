@@ -2116,7 +2116,7 @@ const Header = () => {
           <div
             className={`bg-white bg-white text-black w-full h-16 flex items-center justify-around`}
           >
-            <button className="flex flex-col items-center text-sm font-bold">
+            <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
                 icon={faHome}
                 size="2x"
@@ -2124,7 +2124,7 @@ const Header = () => {
               />
               <Link href="/"> Home</Link>
             </button>
-            <button className="flex flex-col items-center text-sm font-bold">
+            <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
                 icon={faPalette}
                 size="2x"
@@ -2132,7 +2132,7 @@ const Header = () => {
               />
               Design
             </button>
-            <button className="flex flex-col items-center text-sm font-bold relative">
+            <button className="flex flex-col items-center text-xs font-bold relative">
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
                   className="bg-yellow-500 rounded-full p-2"
@@ -2145,18 +2145,18 @@ const Header = () => {
                   />
                 </div>
               </div>
-              <span className="mt-7">Let&apos;s Design</span>
+              <span className="mt-7">Book Now</span>
             </button>
-            <button className="flex flex-col items-center text-sm font-bold">
+            <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
                 icon={faNewspaper}
                 size="2x"
                 style={{ height: '25px', width: '25px' }}
               />
-              <Link href="/magazine"> Magazine</Link>
+              <Link href="/homes-by-design-indian-homes"> Our Homes</Link>
             </button>
             <button
-              className="flex flex-col items-center text-sm font-bold"
+              className="flex flex-col items-center text-xs font-bold"
               onClick={toggleMobileMenu}
             >
               <FontAwesomeIcon
@@ -2185,18 +2185,19 @@ const Header = () => {
               height={0}
               priority={true}
               style={{
-                width: '35vw',
+                width: '30vw',
                 height: 'auto',
                 marginLeft: '10px',
-                paddingBottom: '.2rem'
+                marginTop: '6px',
+              
               }}
             />
           </Link>
         </div>
         <div>
           <Link
-            href="/interior-designing-estimates-pricing">
-            <button className='bg-black text-white px-6 py-8 md:py-12'>Get Estimate</button>
+            href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <button className='bg-black text-white px-6 py-6 md:py-12'>Get Estimate</button>
             
           </Link>
         </div>
