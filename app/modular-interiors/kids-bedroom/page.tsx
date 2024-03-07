@@ -24,7 +24,7 @@ const page = () => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">Design ideas</Link>
+          <Link href="/modular-interiors">Modular Interiors</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">Kids bedroom</span>
         </div>

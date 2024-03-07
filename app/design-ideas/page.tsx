@@ -11,85 +11,30 @@ import MyForm from '../../components/MyForm'
 import Omsairam from '../../components/Navbar/Omsairam'
 
 import Image from 'next/image'
+
+const Card = ({ image, heading, description }) => (
+  <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <img className="w-full" src={image} alt="Card Image" />
+    <div className="px-6 py-4">
+      <div className="font-bold text-xl mb-2">{heading}</div>
+      <p className="text-gray-700 text-base">{description}</p>
+    </div>
+  </div>
+);
+const cardsData = [
+ 
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+
+];
 const Page = ({}) => {
-  const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
+ 
 
-  const categoryFolderMapping: Record<number, string> = {
-    64: 'kitchen-designs',
-    65: 'wardrobe',
-    66: 'vanities',
-    67: 'dressers',
-    68: 'tv-unit-designs',
-    69: 'crockery-units',
-    70: 'glass-partition',
-    // Add more mappings as needed
-  }
-
-  useEffect(() => {
-    const fetchCategoryData = async () => {
-      try {
-        const timestamp = Date.now()
-        const categoryIds = [64, 65, 66, 67, 68, 69, 70] // Add the category IDs you want to fetch
-
-        // Fetch category data
-        const categoryPromises = categoryIds.map(async (categoryId) => {
-          const response = await fetch(
-            `https://api.designindianwardrobe.com/api/categories/${categoryId}?timestamp=${timestamp}`
-          )
-          if (response.ok) {
-            const data = await response.json()
-            return data
-          } else {
-            console.error(
-              `Error fetching data for category ${categoryId}:`,
-              response.statusText
-            )
-            return {}
-          }
-        })
-
-        const fetchedCategoryDataArray = await Promise.all(categoryPromises)
-
-        // Fetch image data for each category
-        const imageDataPromises = fetchedCategoryDataArray.map(
-          async (categoryData) => {
-            const imageResponse = await fetch(
-              `https://api.designindianwardrobe.com/api/images/${categoryData.id}?timestamp=${timestamp}`
-            )
-            if (imageResponse.ok) {
-              const imageData = await imageResponse.json()
-              // Assuming you want only one image per category
-              const selectedImage = imageData[0]
-              return selectedImage
-            } else {
-              console.error(
-                `Error fetching image for category ${categoryData.id}:`,
-                imageResponse.statusText
-              )
-              return {}
-            }
-          }
-        )
-
-        const imageDataArray = await Promise.all(imageDataPromises)
-
-        // Combine category data with corresponding image data
-        const mergedDataArray = fetchedCategoryDataArray.map(
-          (categoryData, index) => ({
-            ...categoryData,
-            image: imageDataArray[index],
-          })
-        )
-
-        setCategoryDataArray(mergedDataArray)
-      } catch (error) {
-        console.error('Error during fetch:', error)
-      }
-    }
-
-    fetchCategoryData()
-  }, []) // Empty dependency array to run the effect only once on mount
-
+ 
   return (
     <>
       <ProgressBar />
@@ -165,33 +110,11 @@ const Page = ({}) => {
           your home interior requirements.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
-          {categoryDataArray.map((categoryData) => (
-            <Link
-              key={categoryData.id}
-              href={`/design-ideas/${categoryFolderMapping[categoryData.id]}`}
-            >
-              <div className="bg-white rounded-md shadow-md p-6">
-                {categoryData.image && (
-                  <Image
-                    width={1000}
-                    height={1000}
-                    src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
-                    alt={categoryData.image.filename}
-                    style={{
-                      width: '450px',
-                      height: '230px',
-                      borderRadius: '10px',
-                    }}
-                  />
-                )}
-                <h2 className="text-xl font-semibold mb-4">
-                  {categoryData.name}
-                </h2>
-                <p className="text-gray-700 mb-4">{categoryData.description}</p>
-              </div>
-            </Link>
-          ))}
+         <div className="flex flex-wrap justify-center">
+    {cardsData.map((card, index) => (
+      <Card key={index} {...card} />
+    ))}
+ 
         </div>
       </div>
 

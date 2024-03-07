@@ -18,7 +18,7 @@ const Page = ({}) => {
     []
   )
   useEffect(() => {
-    const categoryIds = [70] // Add the category IDs you want to fetch
+    const categoryIds = [68] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -56,12 +56,12 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
-            Glass Partitions Designs | Glass Partitions Dealers India
+            TV Unit Designs | Top TV Unit Manufacturing Company India
           </title>
 
           <meta
             name="description"
-            content="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of TV Units, we are top dealers and suppliers for wooden LED Units across Delhi, gurgaon, noida & India."
           />
 
           <meta name="Author" content="Design Indian Homes" />
@@ -79,7 +79,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/glass-partition-designs/"
+            href="https://designindianhomes.com/tv-unit-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -92,15 +92,15 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/glass-partition-designs/"
+            content="https://designindianhomes.com/tv-unit-designs/"
           />
           <meta
             property="og:title"
-            content="Glass Partitions Designs | Glass Partitions Dealers India"
+            content="TV Unit Designs | Top TV Unit Manufacturing Company India"
           />
           <meta
             property="og:description"
-            content="Our brand is the largest manufacturer of Glass Partitions, we are top dealers and suppliers for Glass Partitions across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of TV Units, we are top dealers and suppliers for wooden LED Units across Delhi, gurgaon, noida & India."
           />
         </Head>
         {/* breadcrumb */}
@@ -110,13 +110,14 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">Design ideas</Link>
+          <Link href="/modular-interiors">Modular Interiors</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Homes</span>
+          / <span className="text-gray-600 text-sm">TV unit designs</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={3} />
+        <Tabs id={13} />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div

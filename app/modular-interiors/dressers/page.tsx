@@ -1,15 +1,14 @@
 'use client'
-
 import Header from '../../../components/Navbar/Header'
 import Footer from '../../../components/Footer/Footer'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
-import Head from 'next/head'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
+import Head from 'next/head'
 import Image from 'next/image'
 
 const Page = ({}) => {
@@ -19,7 +18,7 @@ const Page = ({}) => {
     []
   )
   useEffect(() => {
-    const categoryIds = [66] // Add the category IDs you want to fetch
+    const categoryIds = [67] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -56,11 +55,13 @@ const Page = ({}) => {
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
-          <title>Vanity Designs | Top Vanity Manufacturing Company India</title>
+          <title>
+            Dresser Designs | Top Dresser Manufacturing Company India
+          </title>
 
           <meta
             name="description"
-            content="we are the largest manufacturers of bathroom vanities, we are top dealers and suppliers for bathroom vanities across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dressers vanities across Delhi, gurgaon, noida & India."
           />
 
           <meta name="Author" content="Design Indian Homes" />
@@ -78,7 +79,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/vanity-designs/"
+            href="https://designindianhomes.com/dressers-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -91,15 +92,15 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/vanity-designs/"
+            content="https://designindianhomes.com/dressers-designs/"
           />
           <meta
             property="og:title"
-            content="Vanity Designs | Top Vanity Manufacturing Company India"
+            content="Dresser Designs | Top Dresser Manufacturing Company India"
           />
           <meta
             property="og:description"
-            content="we are the largest manufacturers of bathroom vanities, we are top dealers and suppliers for bathroom vanities across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dresser vanities across Delhi, gurgaon, noida & India."
           />
         </Head>
         {/* breadcrumb */}
@@ -109,15 +110,13 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">Design ideas</Link>
+          <Link href="/modular-interiors">Modular Interiors</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Vanities</span>
+          / <span className="text-gray-600 text-sm">Kitchen</span>
         </div>
 
         {/* tabs */}
-
-        <Tabs id={1} />
-
+        <Tabs id={11} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div

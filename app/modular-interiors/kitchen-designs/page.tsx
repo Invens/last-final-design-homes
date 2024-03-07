@@ -3,12 +3,13 @@ import Header from '../../../components/Navbar/Header'
 import Footer from '../../../components/Footer/Footer'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
+
 import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
-import Head from 'next/head'
 import Image from 'next/image'
 
 const Page = ({}) => {
@@ -18,7 +19,7 @@ const Page = ({}) => {
     []
   )
   useEffect(() => {
-    const categoryIds = [67] // Add the category IDs you want to fetch
+    const categoryIds = [64] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -38,6 +39,7 @@ const Page = ({}) => {
 
     fetchImages()
   }, [])
+
   const handleImageClick = (index: number) => {
     setPhotoIndex(index)
     setShowSlider(true)
@@ -46,7 +48,6 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
-
   return (
     <>
       <ProgressBar />
@@ -56,12 +57,12 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <Head>
           <title>
-            Dresser Designs | Top Dresser Manufacturing Company India
+            Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand
           </title>
 
           <meta
             name="description"
-            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dressers vanities across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of modular kitchens, we are top dealers and suppliers for modular kitchens across Delhi, gurgaon, noida & India."
           />
 
           <meta name="Author" content="Design Indian Homes" />
@@ -79,7 +80,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/dressers-designs/"
+            href="https://designindianhomes.com/modular-kitchen-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -92,15 +93,15 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/dressers-designs/"
+            content="https://designindianhomes.com/modular-kitchen-designs/"
           />
           <meta
             property="og:title"
-            content="Dresser Designs | Top Dresser Manufacturing Company India"
+            content="Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand"
           />
           <meta
             property="og:description"
-            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dresser vanities across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of modular kitchens, we are top dealers and suppliers for modular kitchens across Delhi, gurgaon, noida & India."
           />
         </Head>
         {/* breadcrumb */}
@@ -110,13 +111,13 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">Design ideas</Link>
+          <Link href="/modular-interiors">Modular Interiors</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">Kitchen</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={4} />
+        <Tabs id={7} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div
