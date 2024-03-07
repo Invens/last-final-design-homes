@@ -67,35 +67,35 @@ const nextConfig = {
       },
       {
         source: '/modular-kitchen-designs',
-        destination: '/design-ideas/kitchen-designs',
+        destination: '/modular-interiors/kitchen-designs',
       },
       {
         source: '/wardrobe-designs',
-        destination: '/design-ideas/wardrobe',
+        destination: '/modular-interiors/wardrobe',
       },
       {
         source: '/vanity-designs',
-        destination: '/design-ideas/vanities',
+        destination: '/modular-interiors/vanities',
       },
       {
         source: '/dressers-designs',
-        destination: '/design-ideas/dressers',
+        destination: '/modular-interiors/dressers',
       },
       {
         source: '/homes-by-design-indian-homes',
-        destination: '/design-ideas/our-homes',
+        destination: '/modular-interiors/our-homes',
       },
       {
         source: '/tv-unit-designs',
-        destination: '/design-ideas/tv-unit-designs',
+        destination: '/modular-interiors/tv-unit-designs',
       },
       {
         source: '/crockery-unit-designs',
-        destination: '/design-ideas/crockery-units',
+        destination: '/modular-interiors/crockery-units',
       },
       {
         source: '/glass-partition-designs',
-        destination: '/design-ideas/glass-partiton',
+        destination: '/modular-interiors/glass-partiton',
       },
       {
         source: '/shoerack-designs',

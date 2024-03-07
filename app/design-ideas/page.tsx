@@ -12,23 +12,27 @@ import Omsairam from '../../components/Navbar/Omsairam'
 
 import Image from 'next/image'
 
-const Card = ({ image, heading, description }) => (
-  <div className="max-w-sm rounded overflow-hidden shadow-lg">
-    <img className="w-full" src={image} alt="Card Image" />
-    <div className="px-6 py-4">
-      <div className="font-bold text-xl mb-2">{heading}</div>
-      <p className="text-gray-700 text-base">{description}</p>
-    </div>
-  </div>
+const Card = ({ image, heading, description, link }) => (
+  <Link href={link}>
+   
+   <div className="max-w-sm rounded overflow-hidden shadow-lg h-full"> {/* Added 'h-full' to set a fixed height */}
+        <img className="w-full h-40 object-cover" src={image} alt="Card Image" /> {/* Set a fixed height for the image */}
+        <div className="px-6 py-4">
+          <div className="font-bold text-xl mb-2">{heading}</div>
+          <p className="text-gray-700 text-base">{description}</p>
+        </div>
+      </div>
+ 
+  </Link>
 );
 const cardsData = [
- 
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
-  { image: 'image-url-1.jpg', heading: 'Card 1', description: 'Description for Card 1' },
+  { image: 'https://api.designindianwardrobe.com/uploads/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india%20(7).jpg', heading: 'Modular Interior Designs', description: 'Best Modular Interior Designer in Delhi, Gurgaon, Noida India', link: '/modular-interiors' },
+  { image: 'https://api.designindianwardrobe.com/uploads/2-BEDR~1.JPE', heading: 'Interior Design Solutions', description: 'Best Interior Designer in Delhi, Gurgaon, Noida India', link: '/interior' },
+  { image: 'https://api.designindianwardrobe.com/uploads/sofa-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg', heading: 'End to End Interior', description: 'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India', link: '/interior-design-ideas' },
+  { image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE', heading: 'Architectural Designs', description: 'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India', link: '/architectural-designs' },
+  { image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE', heading: 'Selected Homes', description: 'Best home designer in Delhi, Gurgaon, Noida India', link: '/selected-homes' },
+  { image: 'https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg', heading: 'Home Renovation Services', description: 'Best Home Renovation Services in Delhi, Gurgaon, Noida India', link: '/home-renovation-service' },
+
 
 ];
 const Page = ({}) => {
@@ -110,7 +114,7 @@ const Page = ({}) => {
           your home interior requirements.
         </p>
 
-         <div className="flex flex-wrap justify-center">
+         <div className="mt-8 flex flex-wrap justify-center gap-8">
     {cardsData.map((card, index) => (
       <Card key={index} {...card} />
     ))}
