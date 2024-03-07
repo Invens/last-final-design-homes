@@ -32,6 +32,8 @@ const cardsData = [
   { image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE', heading: 'Architectural Designs', description: 'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India', link: '/architectural-designs' },
   { image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE', heading: 'Selected Homes', description: 'Best home designer in Delhi, Gurgaon, Noida India', link: '/selected-homes' },
   { image: 'https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg', heading: 'Home Renovation Services', description: 'Best Home Renovation Services in Delhi, Gurgaon, Noida India', link: '/home-renovation-service' },
+  { image: 'https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg', heading: 'Modular Kitchen', description: 'Best Modular Kitchen Services in Delhi, Gurgaon, Noida India', link: '/modular-kitchen' },
+  { image: 'https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg', heading: 'Wardrobes', description: 'Best Wardrobes Services in Delhi, Gurgaon, Noida India', link: '/wardrobes' },
 
 
 ];
