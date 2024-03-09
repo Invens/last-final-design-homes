@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-
+import Image from 'next/image'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 const FileUploadForm = () => {
   const [selectedFile, setSelectedFile] = useState(null)
@@ -12,6 +12,7 @@ const FileUploadForm = () => {
     qualification: '',
   })
   const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
  
   const handleFileChange = (event) => {
@@ -29,6 +30,7 @@ const FileUploadForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    setFormSubmitted(true);
 
     const formDataToSend = new FormData()
     for (const key in formData) {
@@ -59,12 +61,35 @@ const FileUploadForm = () => {
       setBtnText('Something Went Wrong')
       console.error('Error during form data and file upload:', error)
     }
-  }
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+  };
 
   return (
     <>
       <MaxWidthWrapper className="">
         <div className="mx-auto p-8 bg-amber-50 rounded-lg mb-8 sm:mb-16 sm:mx-16">
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
+
+            />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
               {/* Left Column */}
@@ -188,6 +213,7 @@ const FileUploadForm = () => {
               </button>
             </div>
           </form>
+            )}
         </div>
       </MaxWidthWrapper>
     </>

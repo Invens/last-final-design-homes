@@ -11,8 +11,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
     >
       <div>
         <ul className="text-sm">
-          <h3 className="text-base font-bold">Modular Interior Designs</h3>
-
+          <Link href="/modular-interiors">
+          <h3 className="text-base font-bold hover:text-green-700 hover:underline">Modular Interior Designs</h3>
+          </Link>
           <Link href="/modular-kitchen-designs">
             <li>Modular Kitchens</li>
           </Link>
@@ -60,7 +61,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <h3 className="text-base font-bold">Interior Design Solutions</h3>
+          <Link href="/interior">
+          <h3 className="text-base font-bold hover:text-green-500 hover:underline">Interior Design Solutions</h3>
+          </Link>
           <Link href="/1bhk-apartment-interior-designs">
             <li>1BHK residence interior designs</li>
           </Link>
@@ -104,9 +107,11 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <h3 className="text-base font-bold">
+          <Link href="/interior-design-ideas">
+          <h3 className="text-base font-bold hover:text-green-500 hover:underline">
             End to End Interior Solutions{' '}
           </h3>
+          </Link>
           <Link href="/wooden-polishing">
             <li>Wooden Polishing</li>
           </Link>
@@ -182,7 +187,8 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <h3 className="text-base font-bold">Architectural Designs </h3>
+          <Link href="/architectural-designs"> <h3 className="text-base font-bold hover:text-green-500 hover:underline">Architectural Designs </h3>
+</Link>
           <Link href="/architectural-consultancy">
             <li>Architectural Consultancy</li>
           </Link>
@@ -198,7 +204,10 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href=""></Link>
         </ul>
         <ul className="text-sm">
-          <h3 className="text-lg font-bold">Selected Homes</h3>
+          <Link href="/selected-homes">
+        
+          <h3 className="text-lg font-bold hover:text-green-500 hover:underline">Selected Homes</h3>
+</Link>
           <Link href="/astounding-lobby-area-designs">
             <li>Astounding Lobby Areas</li>
           </Link>
@@ -243,7 +252,8 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <h3 className="text-base font-bold">Home Renovation Services</h3>
+          <Link href="/home-renovation-service"> <h3 className="text-base font-bold hover:text-green-500 hover:underline">Home Renovation Services</h3>
+</Link>
           <Link href="/structural-renovation-services">
             <li>Structural Renovation</li>
           </Link>

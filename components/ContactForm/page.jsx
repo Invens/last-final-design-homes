@@ -12,6 +12,7 @@ const ContactFormSection = () => {
     requirement: '',
   })
   const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
     const handleChange = (event) => {
       const { name, value } = event.target
@@ -25,7 +26,8 @@ const ContactFormSection = () => {
     const handleSubmit = async (event) => {
       event.preventDefault();
       console.log('Submitting form...');
-    
+      setFormSubmitted(true);
+
       const formDataToSend = new FormData();
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
@@ -56,13 +58,19 @@ const ContactFormSection = () => {
         console.error('Error during form data submission:', error);
         setBtnText('Something Went Wrong');
       }
+      setFormSubmitted(true);
+    };
+    const handleClose = () => {
+      setFormSubmitted(false);
+      // Add any additional logic you want to perform when closing the thank-you page
     };
     
     
-    
   return (
-    <section className="py-12 bg-gray-100 md:px-28">
+    <section className="py-12 bg-gray-100 md:px-28 text-center">
+  <h2 className="text-3xl font-bold mb-6 uppercase">Connect With Us <span className='text-red-500'>Today</span></h2>
       <div className="container mx-auto flex sm:flex-row flex-col items-center w-2/3">
+        
         {/* Left Image */}
         <div className="sm:w-1/3 w-full sm:pr-8 p-2 ">
           <Image
@@ -70,17 +78,34 @@ const ContactFormSection = () => {
             src="/images/contact-form.avif" // Replace with the path to your image
             alt="Contact Form"
             className="w-full h-auto rounded"
+            style={{width: '800px'}}
           />
         </div>
 
         {/* Right Form */}
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
+            />
+            <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
         <form
           method="post"
           onSubmit={handleSubmit}
           className="sm:w-2/3 w-full  sm:pl-8 p-2"
         >
           <div className="">
-            <h2 className="text-3xl font-bold mb-6 uppercase">Contact Us</h2>
 
             {/* Form Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -133,10 +158,31 @@ const ContactFormSection = () => {
                   onChange={handleChange}
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 >
-                  <option value="Planning">Kitchen Planning</option>
-                  <option value="Designing">Kitchen Designing</option>
-                  <option value="Renovation">Kitchen Renovation</option>
-                  <option value="NewKitchen">New Modular Kitchen</option>
+              <option className="text-gray-400" value="" disabled selected>
+                  Interested in
+                </option>
+                <option value="Complete Modular Interiors">
+                  Complete Modular Interiors
+                </option>
+                <option value="End to End Interiors">
+                  End to End Interiors
+                </option>
+                <option value="Architectural Consultancy">
+                  Architectural Consultancy
+                </option>
+                <option value="Modular Kitchens">Modular Kitchens</option>
+                <option value="Wardrobes">Wardrobes</option>
+                <option value="Living or Bedroom Renovation">
+                  Living or Bedroom Renovation
+                </option>
+                <option value="Bathroom or Balcony Renovation">
+                  Bathroom or Balcony Renovation
+                </option>
+                <option value="Commercial Interiors">
+                  Commercial Interiors
+                </option>
+                <option value="Luxury Interiors">Luxury Interiors</option>
+
                 </select>
               </div>
             </div>
@@ -165,6 +211,7 @@ const ContactFormSection = () => {
             {/* Submit Button */}
           </div>
         </form>
+          )}
       </div>
     </section>
   )

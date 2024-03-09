@@ -846,6 +846,8 @@ const LetsConnectForm = () => {
     message: '',
   })
   const [btnText, setBtnText] = useState('Send Message')
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -857,6 +859,7 @@ const LetsConnectForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log('Submitting form...')
+    setFormSubmitted(true);
 
     const formDataToSend = new FormData()
     for (const key in formData) {
@@ -896,8 +899,16 @@ const LetsConnectForm = () => {
       console.error('Error during form data submission:', error)
       setBtnText('Something Went Wrong')
     }
-  }
+        setFormSubmitted(true);
+
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+    // Add any additional logic you want to perform when closing the thank-you page
+  };
   return (
+
+
     <form onSubmit={handleSubmit} className="mt-4">
       <input
         type="text"
@@ -945,6 +956,8 @@ const LetsConnectForm = () => {
         {btnText}
       </button>
     </form>
+
+    
   )
 }
 

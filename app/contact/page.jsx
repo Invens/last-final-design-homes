@@ -147,6 +147,8 @@ const TopFormSection = () => {
               height={300}
 
             />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
             <button
               onClick={handleClose}
               className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
