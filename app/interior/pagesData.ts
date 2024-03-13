@@ -98,6 +98,15 @@ export const pagesData = [
     desc: 'A Cottage should be Warm, cozy and lovable. That is how we design your cottage. Get Top interior design for your cottage to look vintage, rustic yet full of charm with our designs. With decorating it in natural tones and playing with pastels, we will ensure you hit the nail across your Guests and Homestay Guests. And also with the shaker style, traditional, classic kitchen design for your cottage, will give an antique aesthetic look. Choose a Cool & Mesmerizing design for your cottage interior today. Book with us for the most affordable solution.',
     items: [],
   },
+  {
+    id: 11,
+    name: 'Residential Office Designs',
+    slug: 'residential-Offices-designs',
+    noItems: '1012',
+    heading: 'Residential Office Designs',
+    desc: 'Elevate your home office experience with our exclusive residential office interior designs. At Design Indian Homes, we believe that your workspace should be an extension of your personality and work style. Our team of skilled designers is dedicated to creating a harmonious balance between functionality and aesthetics, ensuring that your home office is a reflection of your unique taste.',
+    items: [],
+  },
 
 
 ]

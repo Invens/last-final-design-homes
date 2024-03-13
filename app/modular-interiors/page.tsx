@@ -19,12 +19,22 @@ const Page = ({}) => {
     110: 'foldable-beds',
     111: 'foyer-cabinets',
     112: 'bathroom-vanities',
+    69:   'crockery-units',
+    70:  'glass-partiton',
+    67: 'dressers',
+    65: 'wardrobe',
+    68: 'tv-unit-designs',
+
+
+
+
+
   }
   useEffect(() => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [106, 107, 108, 109, 110, 111, 112] // Add the category IDs you want to fetch
+        const categoryIds = [106, 107, 108, 109, 110, 111, 112, 69, 70,67,65,68 ] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {

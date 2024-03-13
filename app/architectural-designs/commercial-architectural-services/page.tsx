@@ -11,6 +11,7 @@ import Head from 'next/head'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
 import Image from 'next/image'
+import ContactFormSection from '../../../components/ContactForm/page'
 
 const Page = ({}) => {
   const [photoIndex, setPhotoIndex] = useState(0)
@@ -159,7 +160,7 @@ const Page = ({}) => {
           }
         />
       )}
-
+ <ContactFormSection/>
       <Footer />
     </>
   )

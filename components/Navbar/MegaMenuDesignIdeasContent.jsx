@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-
+import './Designidea.css'
+import './Omsai.css'
 const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
   <div className="">
     <div
@@ -10,7 +11,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
       style={{ marginTop: '96px' }}
     >
       <div>
-        <ul className="text-sm">
+        <ul className="text-sm space-y-2 list">
           <Link href="/modular-interiors">
           <h3 className="text-base font-bold hover:text-green-700 uppercase border-b-4 border-green-500 ">Modular Interior </h3>
           </Link>
@@ -37,6 +38,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/glass-partition-designs">
             <li>Glass Partitions</li>
           </Link>
+          <Link href="/lacquer-glass-wardrobe-designs">
+            <li>Lacquer Glass Wardrobe Designs</li>
+          </Link>
           <Link href="/mandir-designs">
             <li>Mandir</li>
           </Link>
@@ -46,8 +50,8 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/side-table-designs">
             <li>Side Tables</li>
           </Link>
-
-          <Link href="/">
+         
+          <Link href="/interior/residential-Offices-designs">
             <li>Home Office</li>
           </Link>
           <Link href="/foyer-area-designs">
@@ -65,7 +69,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
       </div>
 
       <div>
-        <ul className="text-sm">
+        <ul className="text-sm list">
           <Link href="/interior">
           <h3 className="text-base font-bold border-b-4 border-green-500 ">Interior Design </h3>
           </Link>
@@ -116,7 +120,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
       </div>
 
       <div>
-        <ul className="text-sm">
+        <ul className="text-sm list">
           <Link href="/interior-design-ideas">
           <h3 className="text-base font-bold border-b-4 border-green-500 ">
             End to End Interior{' '}
@@ -196,7 +200,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
       </div>
 
       <div>
-        <ul className="text-sm">
+        <ul className="text-sm list">
           <Link href="/architectural-designs"> <h3 className="text-base font-bold border-b-4 border-green-500 ">Architectural Designs </h3>
 </Link>
           <Link href="/architectural-consultancy">
@@ -213,7 +217,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </Link>
           <Link href=""></Link>
         </ul>
-        <ul className="text-sm">
+        <ul className="text-sm list">
           <Link href="/selected-homes">
         
           <h3 className="text-lg font-bold border-b-4 border-green-500 ">Selected Homes</h3>
@@ -261,7 +265,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
       </div>
 
       <div>
-        <ul className="text-sm">
+        <ul className="text-sm list">
           <Link href="/home-renovation-service"> <h3 className="text-base font-bold border-b-4 border-green-500 ">Home Renovation Services</h3>
 </Link>
           <Link href="/structural-renovation-services">

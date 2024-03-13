@@ -871,7 +871,7 @@ const Header = () => {
               </div>
               <div className="flex gap-2 mt-3">
                 <Image
-                  src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
+                  src="/images/wardrobe/modular-kitchen-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india (2) (1).jpg"
                   alt=""
                   width={100}
                   height={70}
