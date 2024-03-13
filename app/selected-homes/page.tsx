@@ -13,19 +13,18 @@ import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
   const categoryFolderMapping: Record<number, string> = {
-    113: 'astounding-lobby-area-designs',
-    114: 'artistic-bedroom-designs',
-    115: 'comforting-balcony-area-designs',
-    116: 'soulful-kids-room-designs',
-    117: 'relaxed-walk-in-wardrobe-designs',
-    118: 'handsome-modular-wardrobe-designs',
-    119: 'exquisite-bathroom-remodel-designs',
-    120: 'chilled-party-bar-unit-designs',
-    121: 'blissful-parents-room-designs-ideas',
-    122: 'spellbinding-living-room-designs',
-    123: 'delicious-modular-kitchen-designs',
-    124: 'mesmerizing-modern-home-interiors',
-    125: 'wholesome-modern-interiors-designs',
+    118: 'astounding-lobby-area-designs',
+    115: 'artistic-bedroom-designs',
+    117: 'comforting-balcony-area-designs',
+    119: 'soulful-kids-room-designs',
+    120: 'relaxed-walk-in-wardrobe-designs',
+    121: 'handsome-modular-wardrobe-designs',
+    122: 'exquisite-bathroom-remodel-designs',
+    123: 'chilled-party-bar-unit-designs',
+    124: 'blissful-parents-room-designs-ideas',
+    113: 'spellbinding-living-room-designs',
+    114: 'delicious-modular-kitchen-designs',
+    116: 'mesmerizing-modern-home-interiors',
     // Add more mappings as needed
   }
   useEffect(() => {
@@ -33,7 +32,7 @@ const Page = ({}) => {
       try {
         const timestamp = Date.now()
         const categoryIds = [
-          113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125,
+          118, 115, 117, 119, 120, 121, 122, 123, 124, 133, 114, 116,
         ] // Add the category IDs you want to fetch
 
         // Fetch category data

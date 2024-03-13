@@ -5,14 +5,14 @@ import Link from 'next/link'
 const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
   <div className="">
     <div
-      className="bg-white shadow-2xl rounded-sm flex gap-8 justify-center absolute w-full p-4  h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-sm flex gap-[50px] justify-center absolute w-full pb-8  h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
       <div>
         <ul className="text-sm">
           <Link href="/modular-interiors">
-          <h3 className="text-base font-bold hover:text-green-700 hover:underline">Modular Interior Designs</h3>
+          <h3 className="text-base font-bold hover:text-green-700 uppercase border-b-4 border-green-500 ">Modular Interior </h3>
           </Link>
           <Link href="/modular-kitchen-designs">
             <li>Modular Kitchens</li>
@@ -56,13 +56,18 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/homes-by-design-indian-homes">
             <li>Homes by Design Indian Homes</li>
           </Link>
+          <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-6">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                Get Free Estimate
+              </Link>
+            </button>
         </ul>
       </div>
 
       <div>
         <ul className="text-sm">
           <Link href="/interior">
-          <h3 className="text-base font-bold hover:text-green-500 hover:underline">Interior Design Solutions</h3>
+          <h3 className="text-base font-bold border-b-4 border-green-500 ">Interior Design </h3>
           </Link>
           <Link href="/1bhk-apartment-interior-designs">
             <li>1BHK residence interior designs</li>
@@ -102,14 +107,19 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/cottage-interior-designs">
             <li>Cottage interior designs</li>
           </Link>
+          <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-6">
+              <Link href="/homes-by-design-indian-homes">
+                Our Beautiful Projects
+              </Link>
+            </button>
         </ul>
       </div>
 
       <div>
         <ul className="text-sm">
           <Link href="/interior-design-ideas">
-          <h3 className="text-base font-bold hover:text-green-500 hover:underline">
-            End to End Interior Solutions{' '}
+          <h3 className="text-base font-bold border-b-4 border-green-500 ">
+            End to End Interior{' '}
           </h3>
           </Link>
           <Link href="/wooden-polishing">
@@ -187,7 +197,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <Link href="/architectural-designs"> <h3 className="text-base font-bold hover:text-green-500 hover:underline">Architectural Designs </h3>
+          <Link href="/architectural-designs"> <h3 className="text-base font-bold border-b-4 border-green-500 ">Architectural Designs </h3>
 </Link>
           <Link href="/architectural-consultancy">
             <li>Architectural Consultancy</li>
@@ -206,7 +216,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
         <ul className="text-sm">
           <Link href="/selected-homes">
         
-          <h3 className="text-lg font-bold hover:text-green-500 hover:underline">Selected Homes</h3>
+          <h3 className="text-lg font-bold border-b-4 border-green-500 ">Selected Homes</h3>
 </Link>
           <Link href="/astounding-lobby-area-designs">
             <li>Astounding Lobby Areas</li>
@@ -252,7 +262,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
 
       <div>
         <ul className="text-sm">
-          <Link href="/home-renovation-service"> <h3 className="text-base font-bold hover:text-green-500 hover:underline">Home Renovation Services</h3>
+          <Link href="/home-renovation-service"> <h3 className="text-base font-bold border-b-4 border-green-500 ">Home Renovation Services</h3>
 </Link>
           <Link href="/structural-renovation-services">
             <li>Structural Renovation</li>

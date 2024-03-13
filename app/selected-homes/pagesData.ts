@@ -107,15 +107,7 @@ export const pagesData = [
     desc: 'When you have a Classy Interior in your residence, there are many factors which add on to the space. The first is that you will remain cheerful, the vibrant interiors definitely rejuvenates the mood and creates a harmonious atmosphere, second is you can socialize in the happy place, third is you add on to the value of the existing property. Get in touch with us and get a Mesmerising Modern Interior Today.',
     items: [],
   },
-  {
-    id: 12,
-    name: 'Wholesome Modern Interiors',
-    slug: 'wholesome-modern-interiors-designs',
-    noItems: '1012',
-    heading: 'Wholesome Modern Interiors',
-    desc: 'When you have a Classy Interior in your residence, there are many factors which add on to the space. The first is that you will remain cheerful, the vibrant interiors definitely rejuvenates the mood and creates a harmonious atmosphere, second is you can socialize in the happy place, third is you add on to the value of the existing property. Get in touch with us and get a Mesmerising Modern Interior Today.',
-    items: [],
-  },
+  
 
 
 ]

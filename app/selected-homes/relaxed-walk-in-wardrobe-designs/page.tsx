@@ -19,7 +19,7 @@ const Page = ({}) => {
     []
   )
   useEffect(() => {
-    const categoryIds = [78] // Add the category IDs you want to fetch
+    const categoryIds = [120] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
