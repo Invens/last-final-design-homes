@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Share2, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
   const [currentIndex, setCurrentIndex] = useState(initialSlide)
   const sliderRef = useRef(null)
@@ -37,35 +38,66 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
     }
     onPrevSlide() // Call the onPrevSlide callback
   }
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    address: '',
+    Intrested: '',
+  })
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const handleChange = (event) => {
+    const { name, value } = event.target
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log('Submitting form...');
+    setFormSubmitted(true);
 
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      mobile: document.getElementById('mobile').value,
-      address: document.getElementById('address').value,
-      interest: document.getElementById('Interest').value,
+    const formDataToSend = new FormData();
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key]);
     }
+
 
     try {
-      // Send an API request to handle form submission
-      const response = await axios.post(
-        'https://m.designindianhomes.com/submitForm',
-        formData
-      )
+      console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
+      console.log('Uploading data...');
+      const response = await fetch('https://m.designindianhomes.com/submitForm', {
+        method: 'POST',
+        body: formDataToSend,
+      });
 
-      // Assuming the server responds with a success message
-      console.log(response.data)
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+      console.log('Response body:', await response.text());
 
-      // Optionally, you can perform additional actions after form submission
+      if (response.ok) {
+        console.log('Form data submitted successfully!');
+        console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
+        setBtnText('Done');
+      } else {
+        console.error('Form data submission failed. Response:', response);
+        setBtnText('Something Went Wrong');
+      }
     } catch (error) {
-      console.error('Error submitting form:', error)
-      // Handle form submission error
+      console.error('Error during form data submission:', error);
+      setBtnText('Something Went Wrong');
     }
-  }
 
+
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+    // Add any additional logic you want to perform when closing the thank-you page
+  };
   const handleWhatsapp = (e) => {
     e.preventDefault()
     console.log('whatsapp')
@@ -193,6 +225,26 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
 
         {/* Form Section */}
         <div className="md:pl-8 px-[2px] mb-24 sm:mb-0 -py-4  flex flex-col  justify-center bg-white md:w-[400px] lg:w-[500px] md:rounded-r-lg max-h-[90%] overflow-y-auto">
+         
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
+
+            />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
           <form
             className="w-full max-w-md p-2 rounded-lg shadow-md overflow-y-auto"
             method="post"
@@ -319,6 +371,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                 placeholder="Enter your name"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="my-8">
@@ -329,6 +382,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                 placeholder="Enter your email"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="my-8">
@@ -336,6 +390,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 type="tel"
                 id="mobile"
                 name="mobile"
+                onChange={handleChange}
                 className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                 placeholder="Enter your mobile number"
                 required
@@ -346,6 +401,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 type="text"
                 id="address"
                 name="address"
+                onChange={handleChange}
                 className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                 placeholder="Enter your address"
                 required
@@ -355,6 +411,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
               <select
                 id="Interest"
                 name="Interest"
+                onChange={handleChange}
                 className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                 required
               >
@@ -395,6 +452,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
             </button>
             <hr />
             <div>
+              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
               <button
                 type="button"
                 className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
@@ -411,8 +469,10 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   <ChevronRight />
                 </span>
               </button>
+              </Link>
             </div>
           </form>
+           )}
         </div>
       </div>
     </div>
