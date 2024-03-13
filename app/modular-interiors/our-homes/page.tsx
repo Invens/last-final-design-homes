@@ -99,34 +99,68 @@ const Page = ({}) => {
       sliderRef.current.slickNext()
     }
   }
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    address: '',
+    Intrested: '',
+    message: '',
+  })
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-   const formData = {
-     name: (document.getElementById('name') as HTMLInputElement).value,
-     email: (document.getElementById('email') as HTMLInputElement).value,
-     mobile: (document.getElementById('mobile') as HTMLInputElement).value,
-     address: (document.getElementById('address') as HTMLInputElement).value,
-     interest: (document.getElementById('Interest') as HTMLSelectElement).value,
-   }
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log('Submitting form...');
+    setFormSubmitted(true);
+
+    const formDataToSend = new FormData();
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key]);
+    }
+
 
     try {
-      // Send an API request to handle form submission
-      const response = await axios.post(
-        'https://m.designindianhomes.com/submitForm',
-        formData
-      )
+      console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
+      console.log('Uploading data...');
+      const response = await fetch('https://m.designindianhomes.com/submitForm', {
+        method: 'POST',
+        body: formDataToSend,
+      });
 
-      // Assuming the server responds with a success message
-      console.log(formData)
-      console.log(response.data)
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+      console.log('Response body:', await response.text());
 
-      // Optionally, you can perform additional actions after form submission
+      if (response.ok) {
+        console.log('Form data submitted successfully!');
+        console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
+        setBtnText('Done');
+      } else {
+        console.error('Form data submission failed. Response:', response);
+        setBtnText('Something Went Wrong');
+      }
     } catch (error) {
-      console.error('Error submitting form:', error)
-      // Handle form submission error
+      console.error('Error during form data submission:', error);
+      setBtnText('Something Went Wrong');
     }
-  }
+
+
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+    // Add any additional logic you want to perform when closing the thank-you page
+  };
   const handlePrev = () => {
     setCurrentImageIndex(
       (prevIndex) =>
@@ -316,6 +350,26 @@ const Page = ({}) => {
               <div className="h-auto  md:mx-4">
                 {/* This div will enable scrolling if the content exceeds the modal height */}
                 <div className="h-auto overflow-y-auto">
+                {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
+
+            />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+                
                   <form
                     className="w-full max-w-md p-2 rounded-lg shadow-md overflow-y-auto"
                     method="post"
@@ -437,6 +491,7 @@ const Page = ({}) => {
                         className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                         placeholder="Enter your name"
                         required
+                        onChange={handleChange}
                       />
                     </div>
                     <div className="my-8">
@@ -447,6 +502,8 @@ const Page = ({}) => {
                         className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                         placeholder="Enter your email"
                         required
+                        onChange={handleChange}
+
                       />
                     </div>
                     <div className="my-8">
@@ -457,6 +514,8 @@ const Page = ({}) => {
                         className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                         placeholder="Enter your mobile number"
                         required
+                        onChange={handleChange}
+
                       />
                     </div>
                     <div className="my-8">
@@ -467,6 +526,8 @@ const Page = ({}) => {
                         className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                         placeholder="Enter your address"
                         required
+                        onChange={handleChange}
+
                       />
                     </div>
                     <div className="my-8">
@@ -475,6 +536,7 @@ const Page = ({}) => {
                         name="Interest"
                         className="mt-1 p-2 w-full border-b border-gray-300 text-sm focus:outline-none rounded-md"
                         required
+                        onChange={handleChange}
                       >
                         <option
                           className="text-gray-400"
@@ -522,6 +584,7 @@ const Page = ({}) => {
                     </button>
                     <hr />
                     <div>
+                      <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
                       <button
                         type="button"
                         className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
@@ -540,8 +603,10 @@ const Page = ({}) => {
                           <ChevronRight />
                         </span>
                       </button>
+                      </Link>
                     </div>
                   </form>
+                   )}
                 </div>
               </div>
             </div>
