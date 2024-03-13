@@ -373,7 +373,7 @@ const nextConfig = {
       },
       {
         source: '/lacquer-glass-wardrobe-designs',
-        destination: '/wardrobes/lacquer-glass-Wardrobes-Designs',
+        destination: '/wardrobes/lacquer-glass-wardrobe-designs',
       },
       {
         source: '/wardrobe-renovation-services',
