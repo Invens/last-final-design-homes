@@ -9,6 +9,7 @@ import Tabs from '../Tabs'
 import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Modal from 'react-modal'
+
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import './HomesSlider.css'
 import Slider from 'react-slick'
@@ -354,6 +355,7 @@ const Page = ({}) => {
           <div className='grid grid-cols-1 justify-items-center' >
             <p className='text-center text-lg'>Thank you for your submission!</p>
             <Image
+             alt='thank you'
               src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
               width={400}
               height={300}
