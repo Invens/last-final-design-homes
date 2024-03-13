@@ -1422,6 +1422,9 @@ const Header = () => {
             <Link href="/book-with-top-interior-designers-architects">
               <h3 className="text-lg">Book a Design Visit</h3>
             </Link>
+            <Link href="/magazine">
+              <h3 className="text-lg">Magazine</h3>
+            </Link>
           </ul>
           <Link href="/refer-and-get-rewards-interior-designers">
             <button className=" bg-green-600 text-2xl py-3 px-6 rounded-full text-white font-bold mt-6">
