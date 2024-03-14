@@ -804,7 +804,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/wardrobes/types-of-wardrobes">
+                  <Link href="/types-of-wardrobe">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('types_wardrobe')}

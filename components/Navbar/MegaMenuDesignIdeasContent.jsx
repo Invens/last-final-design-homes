@@ -22,6 +22,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/wardrobe-designs">
             <li>Wardrobes</li>
           </Link>
+          <Link href="/types-of-wardrobe">
+            <li>Types of Wardrobes</li>
+          </Link>
           <Link href="/vanity-designs">
             {' '}
             <li>Vanities </li>
