@@ -6,7 +6,7 @@ import './Omsai.css'
 const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
   <div className="">
     <div
-      className="bg-white shadow-2xl rounded-sm flex gap-[50px] justify-center absolute w-full pb-8  h-auto text-black"
+      className="bg-white shadow-2xl rounded-sm flex gap-[50px] justify-center absolute w-full p-8  overflow-scroll h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -60,6 +60,15 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </Link>
           <Link href="/foyer-area-designs">
             <li>Foyer Cabinets</li>
+          </Link>
+          <Link href="/before-after/before-after-wardrobe">
+            <li>Wardrobe Before After</li>
+          </Link>
+          <Link href="/before-after/before-after-interior">
+            <li>Interior Before After</li>
+          </Link>
+          <Link href="/before-after-/before-after-kitchen">
+            <li>Kitchen Before After</li>
           </Link>
           <Link href="/homes-by-design-indian-homes">
             <li>Homes by Design Indian Homes</li>
@@ -116,13 +125,30 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/cottage-interior-designs">
             <li>Cottage interior designs</li>
           </Link>
-          <button className="bg-green-600 text-white text-sm py-3 px-6 rounded-full mt-6">
-            <Link href="/homes-by-design-indian-homes">
-              Homes By Design Indian Homes
-            </Link>
-          </button>
+          
 
         </ul>
+        <ul className="text-sm list">
+          <Link href="/luxury-residence">
+            <h3 className="text-lg font-bold border-b-4 border-green-500 mt-2">Luxury Residence</h3>
+          </Link>
+          <div className='mt-2'>
+          <Link href="/luxury-residence/luxury-interior/">
+            <li>Luxury Interior</li>
+          </Link>
+
+          <Link href="/luxury-residence/luxury-kitchen">
+            <li>Luxury Kitchen</li>
+          </Link>
+
+          <Link href="/luxury-residence/luxury-wardrobe">
+            <li>Luxury Wardrobe</li>
+          </Link>
+          <Link href="/luxury-residence/luxury-structural">
+            <li>Luxury Structural design</li>
+          </Link>
+          </div>
+          </ul>
         <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-6">
           <Link href="/magazine">
             Interior Digest Magazine
@@ -144,6 +170,10 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/wooden-flooring-designs">
             {' '}
             <li>Wooden Flooring</li>
+          </Link>
+          <Link href="/wooden-ceiling">
+            {' '}
+            <li>Wooden Ceiling</li>
           </Link>
           <Link href="/vertical-gardens-designs">
             {' '}
@@ -336,6 +366,11 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/villa-renovation-services">
             <li>Villa Renovation</li>
           </Link>
+          <button className="bg-green-600 text-white text-sm py-3 px-6 rounded-full mt-6">
+            <Link href="/homes-by-design-indian-homes">
+              Homes By Design Indian Homes
+            </Link>
+          </button>
         </ul>
       </div>
     </div>

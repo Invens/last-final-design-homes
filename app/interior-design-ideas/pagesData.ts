@@ -163,4 +163,13 @@ export const pagesData = [
     desc: 'Some of the best commercial offices, showrooms, retailers have been designed by team design indian homes. We you’re your interiors in a very budget friendly and professional manner. Now get complete designs for your interiors in spaces like restaurants, lobbies, offices and retail shops with the beautiful custom renovation services for commercial interior design at affordable budget. Check out some of our Commercial Interior Designs Today.',
     items: [],
   },
+  {
+    id: 18,
+    name: 'Wooden Ceiling',
+    slug: '/wooden-ceiling',
+    noItems: '1012',
+    heading: 'Wooden Ceiling',
+    desc: 'Some of the best commercial offices, showrooms, retailers have been designed by team design indian homes. We you’re your interiors in a very budget friendly and professional manner. Now get complete designs for your interiors in spaces like restaurants, lobbies, offices and retail shops with the beautiful custom renovation services for commercial interior design at affordable budget. Check out some of our Commercial Interior Designs Today.',
+    items: [],
+  },
 ]

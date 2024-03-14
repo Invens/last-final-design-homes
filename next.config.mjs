@@ -182,6 +182,10 @@ const nextConfig = {
         destination: '/interior-design-ideas/vertical-garden',
       },
       {
+        source: '/wooden-ceiling',
+        destination: '/interior-design-ideas/wooden-ceiling',
+      },
+      {
         source: '/upvc-windows-designs',
         destination: '/interior-design-ideas/upvc-window',
       },

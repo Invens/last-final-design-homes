@@ -176,7 +176,6 @@ const Header = () => {
         '/images/living/larg/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (2).jpg',
 
       //Modular Interior
-
       mandir_interior:
         '/images/modular_interior/larg/designer-mandir-dealers-manufacturers-in-delhi-gurgaon-noida-india (3).jpg',
       chest_drawer:
@@ -1281,7 +1280,7 @@ const Header = () => {
               </div>
               <div className="flex gap-2 mt-3 ">
                 <Image
-                  src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
+                  src="/images/modular_interior/beautiful-foldable-beds-design-in-delhi-gurgaon-noida.jpeg"
                   alt=""
                   width={100}
                   height={70}
@@ -3524,7 +3523,7 @@ const Header = () => {
                           <div className="">
                             <div className="flex gap-2 ">
                               <Image
-                                src="/images/wardrobe/modular-kitchen-wardrobe-largest-manufacturers-dealers-in-delhi-gurgaon-noida-faridabad-india (2).jpg"
+                                src="/images/modular_interior/beautiful-foldable-beds-design-in-delhi-gurgaon-noida.jpeg"
                                 alt=""
                                 width={100}
                                 height={50}

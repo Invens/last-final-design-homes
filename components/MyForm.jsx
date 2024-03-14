@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { ChevronRight } from 'lucide-react'
 import Typed from 'typed.js'
-
+import Image from 'next/image'
 const MyForm = () => {
   const el = React.useRef(null)
   const [formData, setFormData] = useState({
@@ -13,6 +13,8 @@ const MyForm = () => {
     agree: '',
   })
   const [btnText, setBtnText] = useState('Book free site Visit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -24,6 +26,7 @@ const MyForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log('Submitting form...')
+    setFormSubmitted(true);
 
     const formDataToSend = new FormData()
     for (const key in formData) {
@@ -63,7 +66,13 @@ const MyForm = () => {
       console.error('Error during form data submission:', error)
       setBtnText('Something Went Wrong')
     }
-  }
+    
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+    // Add any additional logic you want to perform when closing the thank-you page
+  };
 
 React.useEffect(() => {
   const typed = new Typed(el.current, {
@@ -101,7 +110,28 @@ React.useEffect(() => {
 
       {/* Right side with the form */}
       <div className="sm:w-1/2 p-4">
-        <form
+       
+       
+      {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+            alt="thank you image"
+              src={'/thank-you.png'}
+              width={400}
+              height={300}
+
+            />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : ( <form
           method="post"
           onSubmit={handleSubmit}
           className="max-w-md mx-auto"
@@ -196,6 +226,7 @@ React.useEffect(() => {
             {btnText} <ChevronRight className="ml-2" />
           </button>
         </form>
+         )}
       </div>
     </div>
   )
