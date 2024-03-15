@@ -316,7 +316,7 @@ const Page = ({}) => {
             {/* Image slider content */}
             <div className="relative md:w-3/5 w-full h-full overflow-hidden">
               {/* Replace the following div with your image slider component */}
-              <div className=" ">
+              <div className="">
                 <Slider {...sliderSettings} ref={sliderRef}>
                   {projects[projectIndex]?.images.map((image, index) => (
                     <div key={index} className="overflow-hidden">
@@ -325,8 +325,7 @@ const Page = ({}) => {
                         alt={projects[projectIndex]?.name}
                         width={1000}
                         height={1000}
-                        objectFit="contain"
-                        className="w-full object-cover rounded-sm"
+                        className="h-auto lg:h-[506px] h-[306px] rounded-sm "
                       />
                     </div>
                   ))}

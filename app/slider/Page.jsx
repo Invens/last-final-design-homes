@@ -198,7 +198,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                   height={1000}
                   src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                   alt={image.filename}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fit"
                 />
               </div>
             ))}
