@@ -32,6 +32,7 @@ const SvgMap = ({ data, name }) => {
       upvcWindow: { pricePerSqFt: 750 },
       bathroomVanity: { price: 19000 },
       door: { price: 19000 },
+      Electrical: { price: 4500 },
       falseCeiling: { pricePerSqFt: 170 }, // adjust based on your actual pricing
       // ... other existing premium spaces
     },
@@ -44,6 +45,7 @@ const SvgMap = ({ data, name }) => {
       ShowerEnclosure: { price: 20000 },
       upvcWindow: { pricePerSqFt: 1050 },
       bathroomVanity: { price: 24000 },
+      Electrical: { price: 12500 },
       door: { price: 24000 },
       falseCeiling: { pricePerSqFt: 210 }, // adjust based on your actual pricing
       // ... other existing luxury spaces
@@ -56,6 +58,8 @@ const SvgMap = ({ data, name }) => {
       sanitaryAndCP: { price: 84000 },
       ShowerEnclosure: { price: 30500 },
       upvcWindow: { pricePerSqFt: 1450 },
+      sideTables: { price: 19000 },
+      Electrical: { price: 17500 },
       bathroomVanity: { price: 34000 },
       door: { price: 35000 },
       falseCeiling: { pricePerSqFt: 450 }, // adjust based on your actual pricing
@@ -663,45 +667,45 @@ const SvgMap = ({ data, name }) => {
           <polygon
             points="1217,1003,1326,1000,1326,1087,1336,1096,1330,1115,1323,1135,1315,1143,1295,1154,1300,1169,1306,1182,1310,1193,1313,1204,1300,1206,1285,1208,1261,1208,1237,1202,1230,1195,1235,1180,1243,1165,1246,1154,1239,1145,1224,1139,1215,1126,1213,1111,1207,1098,1217,1087"
             fill={
-              selectedPolygon.includes('Sanitary and CP')
+              selectedPolygon.includes('sanitaryAndCP')
                 ? 'green'
                 : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Sanitary and CP')}
+            onClick={() => handlePolygonClick('sanitaryAndCP')}
             style={{ cursor: 'pointer' }}
           />
           <polygon
             points="1527,968,1583,968,1583,955,1572,953,1594,951,1594,966,1601,966,1601,953,1603,935,1609,925,1620,925,1635,922,1646,927,1650,940,1646,946,1635,948,1631,940,1624,944,1620,955,1622,964,1631,966,1635,959,1644,953,1659,955,1655,957,1639,961,1637,968,1657,970,1674,968,1702,968,1717,970,1713,983,1704,996,1694,1007,1672,1016,1652,1020,1616,1022,1585,1024,1562,1013,1546,1003"
             fill={
-              selectedPolygon.includes('Sanitary and CP')
+              selectedPolygon.includes('sanitaryAndCP')
                 ? 'green'
                 : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Sanitary and CP')}
+            onClick={() => handlePolygonClick('sanitaryAndCP')}
             style={{ cursor: 'pointer' }}
           />
           <polygon
             points="780,628,795,621,808,621,821,626,832,632,834,637,832,619,819,611,828,602,839,600,856,608,865,611,867,634,867,656,867,676,867,710,873,845,834,845,841,849,845,851,860,851,858,868,826,868,811,870,798,879,795,896,800,896,811,894,813,881,834,879,852,877,847,888,849,907,860,907,860,886,871,879,888,879,886,866,862,866,867,851,888,849,878,836,873,600,834,587,813,608,793,611"
             fill={
-              selectedPolygon.includes('Sanitary and CP')
+              selectedPolygon.includes('sanitaryAndCP')
                 ? 'green'
                 : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Sanitary and CP')}
+            onClick={() => handlePolygonClick('sanitaryAndCP')}
             style={{ cursor: 'pointer' }}
           />
           <polygon
             points="1237,951,1291,944,1285,974,1233,972"
             fill={
-              selectedPolygon.includes('Sanitary and CP')
+              selectedPolygon.includes('sanitaryAndCP')
                 ? 'green'
                 : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Sanitary and CP')}
+            onClick={() => handlePolygonClick('sanitaryAndCP')}
             style={{ cursor: 'pointer' }}
           />
           <rect
@@ -722,9 +726,9 @@ const SvgMap = ({ data, name }) => {
             x="1326.1153846153845"
             y="1142.5"
             fontSize={40}
-            id="Sanitary and CP"
+            id="sanitaryAndCP"
             className="cursor-pointer"
-            onClick={() => handlePolygonClick('Sanitary and CP')}
+            onClick={() => handlePolygonClick('sanitaryAndCP')}
             style={{ color: 'black' }}
           >
             Sanitary and CP

@@ -8,9 +8,12 @@ import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
 import Head from 'next/head'
 import Nav from 'react-bootstrap/Nav'
+import Slider from '../../slider/Page'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Image from 'next/image'
 const Page = ({}) => {
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [showSlider, setShowSlider] = useState(false)
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
     []
   )
@@ -35,7 +38,14 @@ const Page = ({}) => {
 
     fetchImages()
   }, [])
+  const handleImageClick = (index: number) => {
+    setPhotoIndex(index)
+    setShowSlider(true)
+  }
 
+  const handleCloseSlider = () => {
+    setShowSlider(false)
+  }
   return (
     <>
       <ProgressBar />
@@ -109,18 +119,42 @@ const Page = ({}) => {
         <Tabs id={0} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
-          {images.map((image) => (
-            <Image
-              width={1000}
-              height={1000}
+          {images.map((image, index) => (
+            <div
               key={image.id}
-              src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
-              alt={image.filename}
-              style={{ width: '450px', height: '250px', borderRadius: '10px' }}
-            />
+              onClick={() => handleImageClick(index)}
+              style={{ cursor: 'pointer' }}
+            >
+              <Image
+                width={1000}
+                height={1000}
+                src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
+                alt={image.filename}
+                style={{
+                  width: '450px',
+                  height: '250px',
+                  borderRadius: '10px',
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>
+      {showSlider && (
+        <Slider
+          images={images}
+          initialSlide={photoIndex}
+          onClose={handleCloseSlider}
+          onNextSlide={() =>
+            setPhotoIndex((prevIndex) => (prevIndex + 1) % images.length)
+          }
+          onPrevSlide={() =>
+            setPhotoIndex(
+              (prevIndex) => (prevIndex - 1 + images.length) % images.length
+            )
+          }
+        />
+      )}
       <Footer />
     </>
   )

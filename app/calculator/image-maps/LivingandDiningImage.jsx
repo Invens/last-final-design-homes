@@ -15,6 +15,7 @@ const SvgMap = ({ data, name }) => {
       CenterTable: { price: 19000 },
       Sofa: { price: 10500 },
       Console: { price: 19000 },
+      sideTables: { price: 7000 },
       Mandir: { price: 29000 },
       walls: { pricePerSqFt: 50 },
       upvcWindow: { pricePerSqFt: 750 },
@@ -30,6 +31,7 @@ const SvgMap = ({ data, name }) => {
       CenterTable: { price: 34000 },
       Sofa: { price: 15000 },
       Console: { price: 29000 },
+      sideTables: { price: 11000 },
       Mandir: { price: 40000 },
       walls: { pricePerSqFt: 60 },
       upvcWindow: { pricePerSqFt: 1050 },
@@ -45,6 +47,7 @@ const SvgMap = ({ data, name }) => {
       CenterTable: { price: 55000 },
       Sofa: { price: 24500 },
       Console: { price: 50000 },
+      sideTables: { price: 19000 },
       Mandir: { price: 65000 },
       walls: { pricePerSqFt: 85},
       upvcWindow: { pricePerSqFt: 1450 },
@@ -735,10 +738,10 @@ const SvgMap = ({ data, name }) => {
           <polygon
             points="1629,1097,1806,1103,1811,1116,1762,1116,1828,1309,1811,1307,1749,1111,1713,1116,1705,1260,1686,1263,1702,1111,1675,1111,1580,1280,1564,1282,1664,1111,1629,1108"
             fill={
-              selectedPolygon.includes('side-tables') ? 'green' : 'transparent'
+              selectedPolygon.includes('sideTables') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('side-tables')}
+            onClick={() => handlePolygonClick('sideTables')}
             style={{ cursor: 'pointer' }}
           />
           <rect
@@ -759,9 +762,9 @@ const SvgMap = ({ data, name }) => {
             x="1762.125"
             y="1175.0625"
             fontSize={40}
-            id="side-tables"
+            id="sideTables"
             className="cursor-pointer"
-            onClick={() => handlePolygonClick('side-tables')}
+            onClick={() => handlePolygonClick('sideTables')}
             style={{ color: 'black' }}
           >
             Side Tables

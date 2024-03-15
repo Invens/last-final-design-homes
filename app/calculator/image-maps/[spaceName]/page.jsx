@@ -67,6 +67,8 @@ const Page = ({ params }) => {
         return <MandirRoomImage data={spaceData} name={spaceName} />
       case 'Store':
         return <StoreRoomImage data={spaceData} name={spaceName} />
+      case 'Servant':
+        return <StoreRoomImage data={spaceData} name={spaceName} />
       case 'Study':
         return <StudyRoomImage data={spaceData} name={spaceName} />
       case 'Living':
@@ -77,7 +79,7 @@ const Page = ({ params }) => {
         return <BalconyImage data={spaceData} name={spaceName} />
       case 'Passage':
         return <PassageImage data={spaceData} name={spaceName} />
-      case 'DiningRoom':
+      case 'Dining':
         return <DiningRoom data={spaceData} name={spaceName} />
       default:
         return null
