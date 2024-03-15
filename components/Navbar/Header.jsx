@@ -12,13 +12,16 @@ import {
   faEllipsisH,
 } from '@fortawesome/free-solid-svg-icons'
 //import ThemeSwitcher from '@/app/ThemeSwitcher'
-import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons'
 import {
   faPhone,
   faLightbulb,
   faHome,
   faBuilding,
   faUtensils,
+  faEnvelope,
+  faTimes,
+  faComment,
   faCouch,
   faWrench,
   faChevronDown,
@@ -34,7 +37,15 @@ import ColorSwitchD from '../../components/ColorSwitchD/page'
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState(null)
   const [megaMenuVisible, setMegaMenuVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  const [isRotated, setIsRotated] = useState(false);
+  const [isCloseIconVisible, setIsCloseIconVisible] = useState(false);
 
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+    setIsRotated(!isRotated);
+    setIsCloseIconVisible(!isCloseIconVisible);
+  };
   const megaMenuRef = useRef(null)
   const closeMegaMenu = () => {
     setMegaMenuVisible(false)
@@ -1570,9 +1581,8 @@ const Header = () => {
       <div className=" invisible xl:visible lg:flex">
         {/* Desktop Header */}
         <div
-          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${
-            scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
-          }`}
+          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
+            }`}
           style={{
             position: 'fixed',
             top: 30,
@@ -1806,24 +1816,56 @@ const Header = () => {
       <div className="relative xl:hidden">
         {/* Your existing content */}
 
-        <div
-          className="fixed bottom-16 right-4 flex flex-col items-center mb-4"
-          style={{ zIndex: '800' }}
-        >
-          <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-            <FontAwesomeIcon
-              icon={faWhatsapp}
-              size="2x"
-              className="text-white w-8 h-8"
-            />
+        <div className="fixed bottom-16 right-4 flex flex-col items-center mb-4" style={{ zIndex: '800' }}>
+          <div className='flex'>
+            <div>
+              <h1 className='text-center center bg-white mt-4 mr-1 p-[2px] rounded-full'>
+                Get interior Assistance?
+              </h1>
+            </div>
+            <div className={`relative bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center transform ${isRotated ? 'rotate-360' : ''}`}>
+              <FontAwesomeIcon
+                icon={faComment}
+                size="4x"
+                className="text-white w-8 h-8"
+                onClick={toggleVisibility}
+              />
+             
+            </div>
           </div>
-          <div className="bg-purple-600  w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-            <FontAwesomeIcon
-              icon={faInstagram}
-              size="2x"
-              className="text-white w-8 h-8"
-            />
-          </div>
+
+          {isVisible && (
+            <div className="absolute bottom-12 right-[-7px]  rounded-lg p-2">
+              <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+                <FontAwesomeIcon
+                  icon={faWhatsapp}
+                  size="2x"
+                  className="text-white w-8 h-8"
+                />
+              </div>
+              <div className="bg-purple-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  size="2x"
+                  className="text-white w-8 h-8"
+                />
+              </div>
+              <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  size="2x"
+                  className="text-white w-8 h-8"
+                />
+              </div>
+              <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="2x"
+                  className="text-white w-8 h-8"
+                />
+              </div>
+            </div>
+          )}
         </div>
         {/* Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 w-full" style={{ zIndex: '800' }}>
@@ -1849,8 +1891,8 @@ const Header = () => {
             <button className="flex flex-col items-center text-xs font-bold relative">
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
-                  className="bg-yellow-500 rounded-full p-2"
-                  style={{ marginBottom: '50px' }}
+                  className="animated-bg rounded-full p-4 "
+                  style={{ marginBottom: '70px' }}
                 >
                   <FontAwesomeIcon
                     icon={faPencil}
@@ -1903,7 +1945,7 @@ const Header = () => {
                 height: 'auto',
                 marginLeft: '10px',
                 marginTop: '6px',
-              
+
               }}
             />
           </Link>
@@ -1912,7 +1954,7 @@ const Header = () => {
           <Link
             href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
             <button className='bg-black text-white px-6 py-6 md:py-12'>Get Estimate</button>
-            
+
           </Link>
         </div>
       </div>
