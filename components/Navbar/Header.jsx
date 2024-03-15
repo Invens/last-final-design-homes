@@ -1891,12 +1891,12 @@ const Header = () => {
             <button className="flex flex-col items-center text-xs font-bold relative">
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
-                  className="animated-bg rounded-full p-4 "
+                  className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-4 "
                   style={{ marginBottom: '70px' }}
                 >
                   <FontAwesomeIcon
                     icon={faPencil}
-                    size="3x"
+                    size="2x"
                     style={{ height: '25px', width: '25px' }}
                   />
                 </div>

@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles'
 import Clock from 'react-clock'
 import 'react-clock/dist/Clock.css'
 import LocationsTabs from './LocationTabs'
-
+import Bloomflower from './Bloomberg_flower/page'
 // const ParagraphTab = ({ text }) => {
 //   return <p className="text-lg text-black">{text}</p>
 // }
@@ -1385,6 +1385,7 @@ export class Footer extends Component {
                     </li>
                   </ul>
                 </div>
+                <Bloomflower/>
                 <div>
                   <h1 className="font-bold text-2xl">CHECK US OUT</h1>
                   <ul className="mt-8 text-sm">
