@@ -16,6 +16,9 @@ import ThirdStep from './ThirdStep'
 import FourthStep from './FourthStep'
 import { useSpaceContext } from '../SpaceContext'
 import { Suspense } from 'react'
+import Omsairam from '../../components/Navbar/Omsairam'
+import Header from '../../components/Navbar/Header'
+import Footer from '../../components/Footer/Footer'
 const steps = ['Property Details', 'Select Spaces', 'Plan Spaces', 'Finalise']
 
 const YourStepperComponent = () => {
@@ -78,8 +81,10 @@ const YourStepperComponent = () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
+      <Omsairam/>
+      <Header/>
       <div
-        className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4"
+        className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4 mt-[100px]"
         style={{
           backgroundImage: "url('/images/calculator/living_background.jpg')",
           backgroundSize: 'cover',
@@ -155,6 +160,7 @@ const YourStepperComponent = () => {
           </div>
         </Container>
       </div>
+      <Footer/>
     </Suspense>
   )
 }

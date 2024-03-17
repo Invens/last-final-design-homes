@@ -1835,7 +1835,7 @@ const Header = () => {
           </div>
 
           {isVisible && (
-            <div className="absolute bottom-12 right-[-7px]  rounded-lg p-2">
+            <div className="absolute bottom-18 right-[-7px]  rounded-lg p-2">
               <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
                 <FontAwesomeIcon
                   icon={faWhatsapp}
@@ -1857,13 +1857,7 @@ const Header = () => {
                   className="text-white w-8 h-8"
                 />
               </div>
-              <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  size="2x"
-                  className="text-white w-8 h-8"
-                />
-              </div>
+             
             </div>
           )}
         </div>
