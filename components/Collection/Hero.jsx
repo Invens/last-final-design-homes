@@ -138,7 +138,7 @@ const Hero = () => {
             preload="metadata"
           >
             <source
-              src="https://ik.imagekit.io/hlsvvxksxg/video-interior-designer-company-in-delhi-gurgaon-noida-india%20(1).mp4?updatedAt=1708375803011"
+              src="/video/video-interior-designer-company-in-delhi-gurgaon-noida-india.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
