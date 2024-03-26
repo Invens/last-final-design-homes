@@ -1447,7 +1447,7 @@ const Header = () => {
             className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
             style={{
               backgroundImage:
-                "url('https://ik.imagekit.io/hlsvvxksxg/spacejoy-9M66C_w_ToM-unsplash.jpg?updatedAt=1707545903911')",
+                "url('/images/get-free-estimate.jpg'')",
               backgroundSize: 'fit',
               backgroundRepeat: 'no-repeat',
               objectFit: 'cover',

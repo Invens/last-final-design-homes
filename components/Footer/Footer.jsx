@@ -995,7 +995,7 @@ export class Footer extends Component {
               className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
               style={{
                 backgroundImage:
-                  "url('https://ik.imagekit.io/hlsvvxksxg/spacejoy-9M66C_w_ToM-unsplash.jpg?updatedAt=1707545903911')",
+                  "url('/images/get-free-estimate.jpg')",
                 backgroundSize: 'fit',
                 backgroundRepeat: 'no-repeat',
                 objectFit: 'cover',
