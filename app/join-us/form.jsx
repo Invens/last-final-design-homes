@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Head from 'next/head'
+import Image from 'next/image'
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 const FileUploadForm = () => {
   const [selectedFile, setSelectedFile] = useState(null)
@@ -9,19 +9,12 @@ const FileUploadForm = () => {
     address: '',
     email: '',
     number: '',
-    date: '',
-    FloorPlan: '',
-    purpose: '',
-    requirements: '',
+    qualification: '',
   })
   const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  //   const handleFileChange = (event) => {
-  //     setFormData({
-  //       ...formData,
-  //       file: event.target.files[0],
-  //     })
-  //   }
+ 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0])
   }
@@ -37,6 +30,7 @@ const FileUploadForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
+    setFormSubmitted(true);
 
     const formDataToSend = new FormData()
     for (const key in formData) {
@@ -67,43 +61,35 @@ const FileUploadForm = () => {
       setBtnText('Something Went Wrong')
       console.error('Error during form data and file upload:', error)
     }
-  }
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+  };
 
   return (
     <>
       <MaxWidthWrapper className="">
-      
         <div className="mx-auto p-8 bg-amber-50 rounded-lg mb-8 sm:mb-16 sm:mx-16">
-        <Head>
-          <title>Collaborate with Us | Architects & Interior Designers in India</title>
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
 
-          <meta name="description" content="collaborate with the largest interiors, modular interiors and architect brand in Delhi, gurgaon, noida & India." />
+            />
+   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
 
-
-          <meta name="Author" content="Design Indian Homes" />
-          <meta name="Generator" content="www.designindianhomes.com" />
-          <meta name="Language" content="en" />
-          <meta name="robots" content="index, follow" />
-          <meta name="Copyright" content="©www.designindianhomes.com" />
-          <meta name="Designer" content="Design Indian Homes Unit" />
-          <meta name="Publisher" content="www.designindianhomes.com" />
-          <meta name="Distribution" content="Global" />
-          <meta name="Rating" content="general" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="canonical" href="https://designindianhomes.com/collaborate-with-architects-interior-designers/" />
-          <meta name="googlebot" content="index, follow" />
-          <meta name="Yahoobot" content="index, follow" />
-          <meta name="MSNbot" content="Index, Follow" />
-          <meta name="allow-search" content="yes" />
-          <meta name="country" content="India" />
-          <meta name="contactNumber" content="+91-98-99-26-49-78" />
-          <meta name="dc.language" content="english" />
-          <meta name="geo.region" content="IN-DL" />
-          <meta name="geo.placename" content="Delhi" />
-          <meta property="og:url" content="https://designindianhomes.com/collaborate-with-architects-interior-designers/" />
-          <meta property="og:title" content="Collaborate with Us | Architects & Interior Designers in India" />
-          <meta property="og:description" content="collaborate with the largest interiors, modular interiors and architect brand in delhi, gurgaon, noida & India." />
-        </Head>
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
               {/* Left Column */}
@@ -113,32 +99,47 @@ const FileUploadForm = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-600 mb-1"
                   >
-                    Name
+                    Name:
                   </label>
                   <input
                     required
                     type="text"
                     id="name"
                     name="name"
-                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
                     onChange={handleChange}
+                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
                   />
                 </div>
-
                 <div className="mb-4">
                   <label
-                    htmlFor="number"
+                    htmlFor="address"
                     className="block text-sm font-medium text-gray-600 mb-1"
                   >
-                    Number
+                    Address:
                   </label>
                   <input
                     required
-                    type="tel"
-                    id="number"
-                    name="number"
-                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
+                    type="text"
+                    id="address"
+                    name="address"
                     onChange={handleChange}
+                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-600 mb-1"
+                  >
+                    Email:
+                  </label>
+                  <input
+                    required
+                    type="email"
+                    id="email"
+                    name="email"
+                    onChange={handleChange}
+                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
                   />
                 </div>
               </div>
@@ -147,26 +148,51 @@ const FileUploadForm = () => {
               <div className="mb-4">
                 <div className="mb-4">
                   <label
-                    htmlFor="email"
+                    htmlFor="number"
                     className="block text-sm font-medium text-gray-600 mb-1"
                   >
-                    Email
+                    Number:
                   </label>
                   <input
                     required
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
+                    type="tel"
+                    id="number"
+                    name="number"
                     onChange={handleChange}
+                    className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
                   />
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    htmlFor="requirements"
+                    className="block text-sm font-medium text-gray-600 mb-1"
+                  >
+                    Are you
+                  </label>
+                  <select
+                    required
+                    id="requirements"
+                    name="requirements"
+                    className="w-full form-input-select border border-gray-300 py-[6px] px-4 rounded-md leading-5 transition duration-150 ease-in-out focus:outline-none focus:shadow-outline focus:border-blue-500"
+                    onChange={handleChange}
+                    defaultValue="Architect"
+                  >
+                    <option value="Architect" selected>
+                      an Architect
+                    </option>
+                    <option value="Designer">an Interior Designer</option>
+                    <option value="Builder">a Builder</option>
+                    <option value="Company">a Company</option>
+                    <option value="Freelancer ">a Freelancer </option>
+                  </select>
                 </div>
                 <div className="mb-4">
                   <label
                     htmlFor="file"
                     className="block text-sm font-medium text-gray-600 mb-1"
                   >
-                    Attach Resume
+                    Attach Your Project
                   </label>
                   <input
                     type="file"
@@ -187,6 +213,7 @@ const FileUploadForm = () => {
               </button>
             </div>
           </form>
+            )}
         </div>
       </MaxWidthWrapper>
     </>

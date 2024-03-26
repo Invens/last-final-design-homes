@@ -1,43 +1,77 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 
 const ContactFormSection = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log('submit clicked')
+  const [selectedFile, setSelectedFile] = useState(null)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    date: '',
+    message: '',
+    requirement: '',
+  })
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-    const formData = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      date: document.getElementById('date').value,
-      message: document.getElementById('message').value,
-      requirement: document.getElementById('requirement').value,
-    }
-    const recipientEmail = 'saurabhbehal@gmail.com'
-    const emailData = `
-        Name: ${formData.name},
-        Email: ${formData.email},
-        Mobile: ${formData.phone},
-        Date: ${formData.date},
-        Message: ${formData.message},
-        Looking For: ${formData.requirement},
-    `
-    const mailtoLink = `mailto:${recipientEmail}?subject=New Design Session Enquiry&body=${encodeURIComponent(
-      emailData ?? null
-    )}`
-    // window.location.href = mailtoLink
-    window.open(mailtoLink, '_blank')
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0])
   }
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setFormSubmitted(true);
+
+    const formDataToSend = new FormData()
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key])
+    }
+
+    formDataToSend.append('file', selectedFile)
+
+    try {
+      setBtnText('Uploading...')
+      const response = await fetch('https://m.designindianhomes.com/submitForm', {
+        method: 'POST',
+        body: formDataToSend,
+      })
+
+      if (response.ok) {
+        setBtnText('Done')
+        console.log('Form data and file uploaded successfully!')
+        console.log(
+          'Form Data to Send:',
+          Object.fromEntries(formDataToSend.entries())
+        )
+      } else {
+        setBtnText('Something Went Wrong')
+        console.error('Form data and file upload failed.')
+      }
+    } catch (error) {
+      setBtnText('Something Went Wrong')
+      console.error('Error during form data and file upload:', error)
+    }
+    setFormSubmitted(true);
+  };
+  const handleClose = () => {
+    setFormSubmitted(false);
+  };
   return (
     <section className="py-12 bg-gray-100 md:px-28">
       <div className="container mx-auto flex sm:flex-row flex-col items-center justify-center">
         {/* Left Image */}
         <div className="sm:pr-8 pb-4 sm:pb-0">
           <Image
-          width={1000}
-          height={1000}
+            width={1000}
+            height={1000}
             src="/images/why-choose-us-form-removebg-preview.png" // Replace with the path to your image
             alt="Contact Form"
             className="w-full h-auto rounded"
@@ -45,7 +79,26 @@ const ContactFormSection = () => {
         </div>
 
         {/* Right Form */}
-        <form method="post" onSubmit={handleSubmit} className=" sm:pl-8">
+
+        {formSubmitted ? (
+          <div className='grid grid-cols-1 justify-items-center' >
+            <p className='text-center text-lg'>Thank you for your submission!</p>
+            <Image
+              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              width={400}
+              height={300}
+
+            />
+            <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (<form method="post" onSubmit={handleSubmit} className=" sm:pl-8">
           <div className="">
             <h2 className="text-3xl text-red-500 font-bold mb-6 uppercase">
               Contact Us
@@ -104,10 +157,31 @@ const ContactFormSection = () => {
                   id="requirement"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 >
-                  <option value="Planning">Kitchen Planning</option>
-                  <option value="Designing">Kitchen Designing</option>
-                  <option value="Renovation">Kitchen Renovation</option>
-                  <option value="NewKitchen">New Modular Kitchen</option>
+                      <option className="text-gray-400" value="" disabled selected>
+                  Interested in
+                </option>
+                <option value="Complete Modular Interiors">
+                  Complete Modular Interiors
+                </option>
+                <option value="End to End Interiors">
+                  End to End Interiors
+                </option>
+                <option value="Architectural Consultancy">
+                  Architectural Consultancy
+                </option>
+                <option value="Modular Kitchens">Modular Kitchens</option>
+                <option value="Wardrobes">Wardrobes</option>
+                <option value="Living or Bedroom Renovation">
+                  Living or Bedroom Renovation
+                </option>
+                <option value="Bathroom or Balcony Renovation">
+                  Bathroom or Balcony Renovation
+                </option>
+                <option value="Commercial Interiors">
+                  Commercial Interiors
+                </option>
+                <option value="Luxury Interiors">Luxury Interiors</option>
+
                 </select>
               </div>
               <div>
@@ -134,6 +208,7 @@ const ContactFormSection = () => {
             {/* Submit Button */}
           </div>
         </form>
+        )}
       </div>
     </section>
   )

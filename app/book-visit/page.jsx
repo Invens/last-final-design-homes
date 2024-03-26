@@ -77,6 +77,7 @@ const page = () => {
           - NCR - Pan India. Give us a chance to serve you TODAY. !
         </p>
       </div>
+      <Form/>
       <ScheduleChatSection />
       <ContactForm />
       <Footer />
