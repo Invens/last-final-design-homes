@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Architectural Consultancy India | Best Architects in Delhi - NCR
           </title>
@@ -102,7 +102,7 @@ const Page = ({}) => {
             property="og:description"
             content="We are the largest architectural consultancy brand, we renovate interiors, decors, design societies, plan townships design structures across Delhi, gurgaon, noida - India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

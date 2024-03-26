@@ -53,7 +53,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Wooden Polishing Designs | Wood Polish Works in Delhi - NCR
           </title>
@@ -101,7 +101,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is a top interior designing, architectural & Civil contractual brand, we execute affordable wooden polish works across Delhi, gurgaon, noida & India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

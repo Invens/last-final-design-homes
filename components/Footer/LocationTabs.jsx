@@ -518,11 +518,11 @@ const noidaLocations = [
   'Ace Starlit',
 ]
 
-const LocationLink = ({ location, url, prefix }) => {
+const LocationLink = ({ location, url, prefix, city }) => {
   return (
     <Link href={`${url}`}>
       {prefix}
-      {location}
+      {location}-{city}
     </Link>
   )
 }
@@ -541,8 +541,9 @@ const CityLocations = ({ locations, city, prefix }) => {
       <span key={index}>
         <LocationLink
           location={location}
-          url={`/locations/${prefixLC}${locationUrl}`}
+          url={`/locations/${prefixLC}${locationUrl}-${city}`}
           prefix={prefix}
+          city={city}
         />
         {index !== locations.length - 1 && ' | '}
       </span>
@@ -559,9 +560,12 @@ const CityLocations = ({ locations, city, prefix }) => {
           {city}
         </span>
         <ChevronDown
-          className={cn('ml-2 h-4 w-4 transition-all text-muted-foreground', {
-            '-rotate-180': isExpanded,
-          })}
+          className={cn(
+            'ml-2 h-4 w-4 transition-all text-muted-foreground cursor-pointer',
+            {
+              '-rotate-180': isExpanded,
+            }
+          )}
         />
       </div>
 
@@ -614,6 +618,9 @@ const LocationsTabs = () => {
 
   return (
     <div className="container mx-auto mt-8 p-0 ">
+      <div className="mb-8">
+        <h1 className="text-center text-3xl font-bold">Our Locations</h1>
+      </div>
       <div className="flex justify-center">
         <Tabs
           value={value}
@@ -624,16 +631,17 @@ const LocationsTabs = () => {
         >
           <StyledTab
             label="WARDROBE DESIGN LOCATIONS"
-            className="sm:text-xl text-xs font-[500] my-2"
+            // className="sm:text-xl text-xs font-[500] my-2"
+            style={{ fontSize: '24px' }}
           />
 
           <StyledTab
             label="KITCHEN DESIGNS LOCATIONS"
-            className="sm:text-xl text-xs font-[500] my-2"
+            style={{ fontSize: '24px' }}
           />
           <StyledTab
             label="INTERIOR DESIGNS LOCATIONS"
-            className="sm:text-xl text-xs font-[500] my-2"
+            style={{ fontSize: '24px' }}
           />
         </Tabs>
       </div>

@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Living Room Renovation | Living Room Interiors in Delhi India
           </title>
@@ -102,7 +102,7 @@ const Page = ({}) => {
             property="og:description"
             content="We are a top interior designing & architectural brand, we renovate complete renovation of living rooms as per interior designs across Delhi, gurgaon, noida, India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

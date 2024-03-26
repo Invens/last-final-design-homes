@@ -74,7 +74,7 @@ const FileUploadForm = () => {
       <MaxWidthWrapper className="">
       
         <div className="mx-auto p-8 bg-amber-50 rounded-lg mb-8 sm:mb-16 sm:mx-16">
-        <Head>
+        <head>
           <title>Collaborate with Us | Architects & Interior Designers in India</title>
 
           <meta name="description" content="collaborate with the largest interiors, modular interiors and architect brand in Delhi, gurgaon, noida & India." />
@@ -103,7 +103,7 @@ const FileUploadForm = () => {
           <meta property="og:url" content="https://designindianhomes.com/collaborate-with-architects-interior-designers/" />
           <meta property="og:title" content="Collaborate with Us | Architects & Interior Designers in India" />
           <meta property="og:description" content="collaborate with the largest interiors, modular interiors and architect brand in delhi, gurgaon, noida & India." />
-        </Head>
+        </head>
           <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-4">
               {/* Left Column */}

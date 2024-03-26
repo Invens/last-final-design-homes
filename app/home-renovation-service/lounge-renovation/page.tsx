@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>Lounge Renovation Services | Lounge Makeovers India</title>
 
           <meta
@@ -100,7 +100,7 @@ const Page = ({}) => {
             property="og:description"
             content="We renovate and design stunning lounge areas to unwind at most affordable prices across Delhi, gurgaon, noida, faridabad - India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

@@ -53,7 +53,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             End to End Interiors | Best Interior Designers & Architects India
           </title>
@@ -102,7 +102,7 @@ const Page = ({}) => {
             property="og:description"
             content="We are a team of interior designers & architects, we design & execute end to end interiors for homes, apartments, farmhouses, villas across Delhi NCR India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

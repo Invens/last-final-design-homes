@@ -100,7 +100,7 @@ const Page = ({}) => {
       <Header />
       <Omsairam />
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Interior Design Ideas | Top Interior Design Company in India
           </title>
@@ -149,7 +149,7 @@ const Page = ({}) => {
             property="og:description"
             content="We are a team of interior designers & architects, we are designing interiors for homes, residences, apartments, farmhouses, villas, societies across Delhi NCR India"
           />
-        </Head>
+        </head>
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>

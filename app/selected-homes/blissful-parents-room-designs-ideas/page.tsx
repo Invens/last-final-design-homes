@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             3 Bedroom Home Interior Designs | 3BKH Interiors Delhi - NCR
           </title>
@@ -102,7 +102,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is a top interior designing & architectural brand, we design, plan & execute artistic 3 bhk designs for apartments, homes across Delhi, gurgaon, noida"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

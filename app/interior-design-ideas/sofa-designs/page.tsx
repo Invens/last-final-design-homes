@@ -53,7 +53,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Sofa Designs | Sofa Dealers & Manufacturers in Delhi - India
           </title>
@@ -101,7 +101,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is largest manufacturer for sofas and custom furniture, we deal in affordable sofa works across Delhi - NCR & India."
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

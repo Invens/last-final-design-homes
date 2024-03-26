@@ -12,7 +12,7 @@ import 'react-multi-carousel/lib/styles.css'
 import Customer from '../../reviews/Customer'
 import Head from 'next/head'
 
-const ContactSection = ({ location, text }) => {
+const ContactSection = ({ location, text, city }) => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
@@ -55,7 +55,7 @@ const ContactSection = ({ location, text }) => {
           <h1 className="text-4xl font-extrabold mb-4">
             Best {text} In{' '}
             <span className="text-red-500 capitalize">
-              {location} that fit your budget
+              {location}-{city} that fit your budget
             </span>
           </h1>
           <p className="text-lg">
@@ -120,7 +120,7 @@ const ContactSection = ({ location, text }) => {
     </section>
   )
 }
-const SecondSection = ({ location, desc }) => {
+const SecondSection = ({ location, desc, city }) => {
   return (
     <>
       <div className="p-4 sm:p-8 ">
@@ -128,7 +128,9 @@ const SecondSection = ({ location, desc }) => {
           <Link href="/">Home</Link>
         </span>{' '}
         / <span className="text-green-500 text-lg">Locations</span> /{' '}
-        <span className="text-gray-600 text-xl capitalize">{location}</span>
+        <span className="text-gray-600 text-xl capitalize">
+          {location} - {city}
+        </span>
       </div>
       <div id="">
         <div className="mt-2">
@@ -269,6 +271,11 @@ const Projects = ({}) => {
 
   return (
     <>
+      <div className="my-24">
+        <h1 className="text-center font-extrabold text-3xl">
+          Homes by Design Indian Homes
+        </h1>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 my-16">
         {projects.map((project) => (
           <Link key={project.id} href="/design-ideas/our-homes">
@@ -538,13 +545,38 @@ const page = ({ params }) => {
     desc = 'Home Interiors'
   }
   const locationOriginal = slugToLocation(extractedLocation)
+  function extractCityAndArea(location) {
+    var words = location.split(' ')
+    var city = words[words.length - 1]
+    var area = words.slice(0, -1).join(' ')
+    return { area: area, city: city }
+  }
+  const { area, city } = extractCityAndArea(locationOriginal)
+  // console.log('area', area)
+  // console.log('city', city)
+  const [title, setTitle] = useState(
+    `${text} | Top ${desc} Company in India - Design Indian Homes`
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
-      <Head>
-        <title>
-          {text} | Top {desc} Company in India
-        </title>
+      <head>
+        <meta
+          data-n-head="ssr"
+          data-hid="og:title"
+          property="og:title"
+          content={`${text} | Top ${desc} Company in India - Design Indian Homes`}
+        ></meta>
+        <meta
+          data-n-head="ssr"
+          data-hid="twitter:title"
+          name="twitter:title"
+          content={`${text} | Top ${desc} Company in India - Design Indian Homes`}
+        ></meta>
 
         <meta
           name="description"
@@ -586,16 +618,24 @@ const page = ({ params }) => {
           property="og:description"
           content={`Our brand is the largest manufacturer of ${desc}, we are top dealers and suppliers for ${desc} across Delhi, gurgaon, noida & India.`}
         />
-      </Head>
+      </head>
       <Omsairam />
       <Header />
-      <ContactSection location={locationOriginal} text={text} />
-      <SecondSection location={locationOriginal} desc={desc} />
+      <ContactSection location={area} city={city} text={text} />
+      <SecondSection location={area} city={city} desc={desc} />
       <Projects />
-      <ThreeColumnSection location={locationOriginal} />
+      <ThreeColumnSection location={area} city={city} />
       <CardCarousel />
       <SocialReviews />
       <Customer />
+      <div className="pb-24 flex justify-center items-center bg-gray-100">
+        <Link
+          href="/customer-reviews-interior-designs"
+          className="w-1/2 text-center py-2 px-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded shadow"
+        >
+          View all Reviews
+        </Link>
+      </div>
       <Footer />
     </>
   )

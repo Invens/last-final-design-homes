@@ -55,7 +55,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>Vanity Designs | Top Vanity Manufacturing Company India</title>
 
           <meta
@@ -101,7 +101,7 @@ const Page = ({}) => {
             property="og:description"
             content="we are the largest manufacturers of bathroom vanities, we are top dealers and suppliers for bathroom vanities across Delhi, gurgaon, noida & India."
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

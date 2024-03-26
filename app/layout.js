@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from 'react'
 import { BioRhyme } from 'next/font/google'
 import './globals.css'
 import { Provider } from 'react-redux'
@@ -15,6 +16,14 @@ const bioRhyme = BioRhyme({
 })
 
 export default function RootLayout({ children }) {
+  const [title, setTitle] = useState(
+    `Best Interior Designers Company- Design Indian Homes`
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <html lang="en">
       <Head>

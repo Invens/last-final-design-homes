@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>Wardrobe Renovation Services | Modular Wardrobe Designs</title>
 
           <meta
@@ -101,7 +101,7 @@ const Page = ({}) => {
             content="We are a top modular interior designing & manufacturing brand, we renovate complete wardrobe designs across D
 elhi, gurgaon, noida, faridabad & India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

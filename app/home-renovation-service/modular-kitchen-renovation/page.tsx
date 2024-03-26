@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Modular Kitchen Renovation Services | Kitchen Designs India
           </title>
@@ -101,7 +101,7 @@ const Page = ({}) => {
             property="og:description"
             content="We are a top modular interior designing brand, we renovate complete modular kitchens as per latest trends across Delhi, gurgaon, noida, faridabad & india."
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

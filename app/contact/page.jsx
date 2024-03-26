@@ -83,7 +83,7 @@ const TopFormSection = () => {
 
     <div className="flex flex-col md:flex-row my-12">
 
-      <Head>
+      <head>
         <title>Book a Visit | Top Interior Designing Brand in India</title>
 
         <meta name="description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve most affordable modular interiors." />
@@ -112,7 +112,7 @@ const TopFormSection = () => {
         <meta property="og:url" content="https://designindianhomes.com/book-a-interior-design-visit/" />
         <meta property="og:title" content="Book a Visit | Top Interior Designing Brand in India" />
         <meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
-      </Head>
+      </head>
       {/* Left side content */}
       <div className="md:w-1/2 p-4">
         <h1 className="text-4xl font-bold mb-4">LET&apos;S START</h1>

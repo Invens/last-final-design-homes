@@ -54,7 +54,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>UPVC Window Designs | UPVC Door Works in Delhi - India</title>
 
           <meta
@@ -100,7 +100,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is top interior designing, architectural & Civil contractual brand, we execute affordable upvc window and door works across Delhi - NCR & India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

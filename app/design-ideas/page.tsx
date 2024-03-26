@@ -47,7 +47,7 @@ const Page = ({}) => {
       <Header />
       <Omsairam />
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>
             Modular Interiors | Modular Kitchens & Wardrobe Brand India
           </title>
@@ -95,7 +95,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is the largest manufacturers of modular interiors, we are top dealers for modular kitchens, wardrobes across Delhi, gurgaon, noida & India"
           />
-        </Head>
+        </head>
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>

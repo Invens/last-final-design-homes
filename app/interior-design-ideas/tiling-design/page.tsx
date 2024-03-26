@@ -53,7 +53,7 @@ const Page = ({}) => {
       <Header />
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
-        <Head>
+        <head>
           <title>Tiling Designs | Floor Tiling Works in Delhi - India</title>
 
           <meta
@@ -99,7 +99,7 @@ const Page = ({}) => {
             property="og:description"
             content="Our brand is largest interior designing, architectural & Civil contractual brand, we execute affordable tiling works across Delhi - NCR & India"
           />
-        </Head>
+        </head>
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
