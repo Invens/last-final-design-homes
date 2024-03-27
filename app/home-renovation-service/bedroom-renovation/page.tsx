@@ -46,6 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Bedroom Renovation Services | Bedroom Makeovers India'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

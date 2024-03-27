@@ -47,6 +47,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Bed Designs | Bed Dealers & Manufacturers in Delhi - India'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

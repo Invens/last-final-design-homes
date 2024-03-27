@@ -46,7 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Lacquer Glass Wardrobes | Top Wardrobe Manufacturing Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

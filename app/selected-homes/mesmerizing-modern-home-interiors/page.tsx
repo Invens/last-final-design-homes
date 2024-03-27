@@ -46,6 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Duplex Interior Designs | Duplex Interiors in Delhi - NCR'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

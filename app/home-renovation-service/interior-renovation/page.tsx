@@ -47,6 +47,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Interior Renovation Services | Top Interior Designing Brand'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

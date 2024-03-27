@@ -1,4 +1,3 @@
-
 'use client'
 import {
   BookImage,
@@ -14,7 +13,7 @@ import Link from 'next/link'
 import React, { FormEvent, useState } from 'react'
 import Header from '../../components/Navbar/Header'
 import Footer from '../../components/Footer/Footer'
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com'
 import Omsairam from '../../components/Navbar/Omsairam'
 
 const TopFormSection = () => {
@@ -25,7 +24,7 @@ const TopFormSection = () => {
     message: '',
   })
   const [btnText, setBtnText] = useState('Submit')
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -36,58 +35,72 @@ const TopFormSection = () => {
     }))
   }
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log('Submitting form...');
-    setFormSubmitted(true);
+    event.preventDefault()
+    console.log('Submitting form...')
+    setFormSubmitted(true)
 
-    const formDataToSend = new FormData();
+    const formDataToSend = new FormData()
     for (const key in formData) {
-      formDataToSend.append(key, formData[key]);
+      formDataToSend.append(key, formData[key])
     }
-
 
     try {
-      console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
-      console.log('Uploading data...');
-      const response = await fetch('https://m.designindianhomes.com/submitForm', {
-        method: 'POST',
-        body: formDataToSend,
-      });
+      console.log(
+        'Form Data to Send:',
+        Object.fromEntries(formDataToSend.entries())
+      )
+      console.log('Uploading data...')
+      const response = await fetch(
+        'https://m.designindianhomes.com/submitForm',
+        {
+          method: 'POST',
+          body: formDataToSend,
+        }
+      )
 
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-      console.log('Response body:', await response.text());
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      console.log('Response body:', await response.text())
 
       if (response.ok) {
-        console.log('Form data submitted successfully!');
-        console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
-        setBtnText('Done');
+        console.log('Form data submitted successfully!')
+        console.log(
+          'Form Data to Send:',
+          Object.fromEntries(formDataToSend.entries())
+        )
+        setBtnText('Done')
       } else {
-        console.error('Form data submission failed. Response:', response);
-        setBtnText('Something Went Wrong');
+        console.error('Form data submission failed. Response:', response)
+        setBtnText('Something Went Wrong')
       }
     } catch (error) {
-      console.error('Error during form data submission:', error);
-      setBtnText('Something Went Wrong');
+      console.error('Error during form data submission:', error)
+      setBtnText('Something Went Wrong')
     }
 
-
-    setFormSubmitted(true);
-  };
+    setFormSubmitted(true)
+  }
   const handleClose = () => {
-    setFormSubmitted(false);
+    setFormSubmitted(false)
     // Add any additional logic you want to perform when closing the thank-you page
-  };
+  }
+  const [title, setTitle] = useState(
+    'Book a Visit | Top Interior Designing Brand in India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
-
     <div className="flex flex-col md:flex-row my-12">
-
       <head>
         <title>Book a Visit | Top Interior Designing Brand in India</title>
 
-        <meta name="description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve most affordable modular interiors." />
-
+        <meta
+          name="description"
+          content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve most affordable modular interiors."
+        />
 
         <meta name="Author" content="Design Indian Homes" />
         <meta name="Generator" content="www.designindianhomes.com" />
@@ -99,7 +112,10 @@ const TopFormSection = () => {
         <meta name="Distribution" content="Global" />
         <meta name="Rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://designindianhomes.com/book-a-interior-design-visit/" />
+        <link
+          rel="canonical"
+          href="https://designindianhomes.com/book-a-interior-design-visit/"
+        />
         <meta name="googlebot" content="index, follow" />
         <meta name="Yahoobot" content="index, follow" />
         <meta name="MSNbot" content="Index, Follow" />
@@ -109,9 +125,18 @@ const TopFormSection = () => {
         <meta name="dc.language" content="english" />
         <meta name="geo.region" content="IN-DL" />
         <meta name="geo.placename" content="Delhi" />
-        <meta property="og:url" content="https://designindianhomes.com/book-a-interior-design-visit/" />
-        <meta property="og:title" content="Book a Visit | Top Interior Designing Brand in India" />
-        <meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
+        <meta
+          property="og:url"
+          content="https://designindianhomes.com/book-a-interior-design-visit/"
+        />
+        <meta
+          property="og:title"
+          content="Book a Visit | Top Interior Designing Brand in India"
+        />
+        <meta
+          property="og:description"
+          content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors."
+        />
       </head>
       {/* Left side content */}
       <div className="md:w-1/2 p-4">
@@ -125,11 +150,11 @@ const TopFormSection = () => {
         />
         <h1 className="text-4xl font-bold mb-2">SOMETHING TOGETHER</h1>
         <p className="text-gray-600 text-xs mt-8">
-          Connect with India&apos;s Largest  Wardrobe & Interior
-          Brand. We assure you 100% guaranteed quotes across Town. With Our 16
-          years of expertise & a dedicated team of professionals, We are the
-          Most Reliable Brand favoured by Architects, interior Designers &
-          Leading Township Developers.
+          Connect with India&apos;s Largest Wardrobe & Interior Brand. We assure
+          you 100% guaranteed quotes across Town. With Our 16 years of expertise
+          & a dedicated team of professionals, We are the Most Reliable Brand
+          favoured by Architects, interior Designers & Leading Township
+          Developers.
         </p>
       </div>
       {/* Right side form */}
@@ -139,15 +164,22 @@ const TopFormSection = () => {
         </h1>
 
         {formSubmitted ? (
-          <div className='grid grid-cols-1 justify-items-center' >
-            <p className='text-center text-lg'>Thank you for your submission!</p>
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
             <Image
-              src={'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'}
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
               width={400}
               height={300}
-
             />
-   <h1 className='text-center font-bold'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
 
             <button
               onClick={handleClose}
@@ -320,34 +352,46 @@ const MiddleInfoSection = () => {
         <div className="w-full sm:w-1/3 p-4">
           <h2 className="text-xl font-semibold mb-2">OTHER BUSINESS SITES</h2>
           <p className="text-gray-700 font-semibold mb-2">
-            <a href="https://designindiankitchen.com" target='_blank'>Design Indian Kitchen</a>
+            <a href="https://designindiankitchen.com" target="_blank">
+              Design Indian Kitchen
+            </a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            <a href="https://designindianwardrobe.com" target='_blank'> Design Indian Wardrobe</a>
-
+            <a href="https://designindianwardrobe.com" target="_blank">
+              {' '}
+              Design Indian Wardrobe
+            </a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-
-            <a href='https://modularkitchenindelhi.com/' target='_blank'> Modular Kitchen in Delhi</a>
-
+            <a href="https://modularkitchenindelhi.com/" target="_blank">
+              {' '}
+              Modular Kitchen in Delhi
+            </a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            <a href='https://modular-kitchen-gurgaon.com'>Modular Kitchen in Gurgaon</a>
+            <a href="https://modular-kitchen-gurgaon.com">
+              Modular Kitchen in Gurgaon
+            </a>
           </p>
           {/* <p className="text-gray-700 font-semibold mb-2">
            <a href='https://'> Design Indian Homes</a>
           </p> */}
 
           <p className="text-gray-700 font-semibold mb-2">
-            <a href='https://modularkitcheninnoida.com/' target='_blank'>
-              Modular Kitchen in Noida</a>
+            <a href="https://modularkitcheninnoida.com/" target="_blank">
+              Modular Kitchen in Noida
+            </a>
           </p>
           <p className="text-gray-700 font-semibold mb-2">
-            <a href='https://thedesignerlounge.com/' target='_blank'>The Designer Lounge</a>
+            <a href="https://thedesignerlounge.com/" target="_blank">
+              The Designer Lounge
+            </a>
           </p>
 
           <p className="text-gray-700 font-semibold mb-2">
-            <a href='https://devotionalindia.com/' target='_blank'>Devotional India</a>
+            <a href="https://devotionalindia.com/" target="_blank">
+              Devotional India
+            </a>
           </p>
         </div>
       </div>
@@ -575,7 +619,10 @@ const CardComponentSection = () => {
   return (
     <div className="flex flex-wrap">
       {/* card1 */}
-      <Link href="/book-with-top-interior-designers-architects" className="w-full md:w-1/3 p-2">
+      <Link
+        href="/book-with-top-interior-designers-architects"
+        className="w-full md:w-1/3 p-2"
+      >
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">
@@ -589,11 +636,11 @@ const CardComponentSection = () => {
                 />
               </div>
               <Link href="/book-with-top-interior-designers-architects">
-              <h3 className="text-sm font-bold my-2">
-                BOOK A KITCHEN PLANNING MEETING
-              </h3>
+                <h3 className="text-sm font-bold my-2">
+                  BOOK A KITCHEN PLANNING MEETING
+                </h3>
               </Link>
-             
+
               <p className="text-gray-700 text-xs">
                 We are here to answer all of your questions
               </p>
@@ -602,7 +649,10 @@ const CardComponentSection = () => {
         </div>
       </Link>
       {/* card2 */}
-      <Link href="/interior-designing-estimates-pricing" className="w-full md:w-1/3 p-2">
+      <Link
+        href="/interior-designing-estimates-pricing"
+        className="w-full md:w-1/3 p-2"
+      >
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">
@@ -642,10 +692,10 @@ const CardComponentSection = () => {
               </div>
 
               <h3 className="text-sm font-bold my-2">
-              Visit Our Interior Digest
+                Visit Our Interior Digest
               </h3>
               <p className="text-gray-700 text-xs">
-              Get Inspired with Beautiful Interiors
+                Get Inspired with Beautiful Interiors
               </p>
             </div>
           </div>

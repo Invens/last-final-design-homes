@@ -48,6 +48,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -111,7 +119,7 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-          <Link href="/modular-interiors">Modular Interiors</Link>
+            <Link href="/modular-interiors">Modular Interiors</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">Kitchen</span>
         </div>

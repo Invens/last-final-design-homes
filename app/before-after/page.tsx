@@ -26,7 +26,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [140, 143,144] // Add the category IDs you want to fetch
+        const categoryIds = [140, 143, 144] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -86,7 +86,14 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, []) // Empty dependency array to run the effect only once on mount
+  const [title, setTitle] = useState(
+    ' Before After Design | Modular Kitchens & Wardrobe Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />

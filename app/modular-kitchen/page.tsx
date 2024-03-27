@@ -86,7 +86,14 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, [])
+  const [title, setTitle] = useState(
+    'Modular Kitchens | Modular Kitchens & Wardrobe Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -166,7 +173,9 @@ const Page = ({}) => {
           {categoryDataArray.map((categoryData) => (
             <Link
               key={categoryData.id}
-              href={`/modular-kitchen/${categoryFolderMapping[categoryData.id]}`}
+              href={`/modular-kitchen/${
+                categoryFolderMapping[categoryData.id]
+              }`}
             >
               <div className="bg-white rounded-md shadow-md p-6">
                 {categoryData.image && (

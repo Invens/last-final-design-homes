@@ -46,7 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Dresser Designs | Top Dresser Manufacturing Company India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -110,7 +117,7 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-          <Link href="/types-of-wardrobe">Types of Wardrobe</Link>
+            <Link href="/types-of-wardrobe">Types of Wardrobe</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">Lacqured Wardrobe</span>
         </div>

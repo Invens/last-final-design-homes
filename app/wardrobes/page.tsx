@@ -28,7 +28,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [94, 95, 96, 97, 98,] // Add the category IDs you want to fetch
+        const categoryIds = [94, 95, 96, 97, 98] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -88,7 +88,14 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, []) // Empty dependency array to run the effect only once on mount
+  const [title, setTitle] = useState(
+    'Wardrobes | Modular Kitchens & Wardrobe Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -96,9 +103,7 @@ const Page = ({}) => {
       <Omsairam />
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
-          <title>
-            Wardrobes | Modular Kitchens & Wardrobe Brand India
-          </title>
+          <title>Wardrobes | Modular Kitchens & Wardrobe Brand India</title>
           <meta
             name="description"
             content="Our brand is the largest manufacturers of modular interiors, we are top dealers for modular kitchens, wardrobes across Delhi, gurgaon, noida & India."
@@ -172,9 +177,7 @@ const Page = ({}) => {
             >
               {categoryData.image && (
                 <Link
-                  href={`/wardrobes/${
-                    categoryFolderMapping[categoryData.id]
-                  }`}
+                  href={`/wardrobes/${categoryFolderMapping[categoryData.id]}`}
                 >
                   <Image
                     width={1000}

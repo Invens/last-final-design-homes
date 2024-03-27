@@ -46,7 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Types of Modular Kitchens | Top Wardrobe Manufacturing Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -112,7 +119,10 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/modular-kitchen">Modular Kitchens</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Types of Modular Kitchens</span>
+          /{' '}
+          <span className="text-gray-600 text-sm">
+            Types of Modular Kitchens
+          </span>
         </div>
 
         {/* tabs */}

@@ -14,33 +14,91 @@ import Image from 'next/image'
 
 const Card = ({ image, heading, description, link }) => (
   <Link href={link}>
-   
-   <div className="max-w-sm rounded overflow-hidden shadow-lg h-full"> {/* Added 'h-full' to set a fixed height */}
-        <img className="w-full h-40 object-cover" src={image} alt="Card Image" /> {/* Set a fixed height for the image */}
-        <div className="px-6 py-4">
-          <div className="font-bold text-xl mb-2">{heading}</div>
-          <p className="text-gray-700 text-base">{description}</p>
-        </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg h-full">
+      {' '}
+      {/* Added 'h-full' to set a fixed height */}
+      <img
+        className="w-full h-40 object-cover"
+        src={image}
+        alt="Card Image"
+      />{' '}
+      {/* Set a fixed height for the image */}
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">{heading}</div>
+        <p className="text-gray-700 text-base">{description}</p>
       </div>
- 
+    </div>
   </Link>
-);
+)
 const cardsData = [
-  { image: 'https://api.designindianwardrobe.com/uploads/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india%20(7).jpg', heading: 'Modular Interior Designs', description: 'Best Modular Interior Designer in Delhi, Gurgaon, Noida India', link: '/modular-interiors' },
-  { image: 'https://api.designindianwardrobe.com/uploads/2-BEDR~1.JPE', heading: 'Interior Design Solutions', description: 'Best Interior Designer in Delhi, Gurgaon, Noida India', link: '/interior' },
-  { image: 'https://api.designindianwardrobe.com/uploads/sofa-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg', heading: 'End to End Interior', description: 'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India', link: '/interior-design-ideas' },
-  { image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE', heading: 'Architectural Designs', description: 'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India', link: '/architectural-designs' },
-  { image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE', heading: 'Selected Homes', description: 'Best home designer in Delhi, Gurgaon, Noida India', link: '/selected-homes' },
-  { image: 'https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg', heading: 'Home Renovation Services', description: 'Best Home Renovation Services in Delhi, Gurgaon, Noida India', link: '/home-renovation-service' },
-  { image: 'https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg', heading: 'Modular Kitchen', description: 'Best Modular Kitchen Services in Delhi, Gurgaon, Noida India', link: '/modular-kitchen' },
-  { image: 'https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg', heading: 'Wardrobes', description: 'Best Wardrobes Services in Delhi, Gurgaon, Noida India', link: '/wardrobes' },
+  {
+    image:
+      'https://api.designindianwardrobe.com/uploads/top-modular-kitchen-and-wardrobe-brand-in-delhi-gurgaon-noida-india%20(7).jpg',
+    heading: 'Modular Interior Designs',
+    description:
+      'Best Modular Interior Designer in Delhi, Gurgaon, Noida India',
+    link: '/modular-interiors',
+  },
+  {
+    image: 'https://api.designindianwardrobe.com/uploads/2-BEDR~1.JPE',
+    heading: 'Interior Design Solutions',
+    description: 'Best Interior Designer in Delhi, Gurgaon, Noida India',
+    link: '/interior',
+  },
+  {
+    image:
+      'https://api.designindianwardrobe.com/uploads/sofa-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg',
+    heading: 'End to End Interior',
+    description:
+      'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India',
+    link: '/interior-design-ideas',
+  },
+  {
+    image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE',
+    heading: 'Architectural Designs',
+    description:
+      'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India',
+    link: '/architectural-designs',
+  },
+  {
+    image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE',
+    heading: 'Selected Homes',
+    description: 'Best home designer in Delhi, Gurgaon, Noida India',
+    link: '/selected-homes',
+  },
+  {
+    image:
+      'https://api.designindianwardrobe.com/uploads/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes%20(1).jpg',
+    heading: 'Home Renovation Services',
+    description: 'Best Home Renovation Services in Delhi, Gurgaon, Noida India',
+    link: '/home-renovation-service',
+  },
+  {
+    image:
+      'https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg',
+    heading: 'Modular Kitchen',
+    description: 'Best Modular Kitchen Services in Delhi, Gurgaon, Noida India',
+    link: '/modular-kitchen',
+  },
+  {
+    image:
+      'https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg',
+    heading: 'Wardrobes',
+    description: 'Best Wardrobes Services in Delhi, Gurgaon, Noida India',
+    link: '/wardrobes',
+  },
+]
 
-
-];
 const Page = ({}) => {
- 
+  const [title, setTitle] = useState(
+    'Modular Interiors | Modular Kitchens & Wardrobe Brand India'
+  )
 
- 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
+
   return (
     <>
       <ProgressBar />
@@ -116,11 +174,10 @@ const Page = ({}) => {
           your home interior requirements.
         </p>
 
-         <div className="mt-8 flex flex-wrap justify-center gap-8">
-    {cardsData.map((card, index) => (
-      <Card key={index} {...card} />
-    ))}
- 
+        <div className="mt-8 flex flex-wrap justify-center gap-8">
+          {cardsData.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
         </div>
       </div>
 

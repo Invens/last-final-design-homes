@@ -46,7 +46,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    'Luxury Interior | Top Wardrobe Manufacturing Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -56,7 +63,7 @@ const Page = ({}) => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
           <title>
-           Luxury Interior | Top Wardrobe Manufacturing Brand India
+            Luxury Interior | Top Wardrobe Manufacturing Brand India
           </title>
 
           <meta

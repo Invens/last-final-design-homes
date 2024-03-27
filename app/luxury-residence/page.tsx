@@ -27,7 +27,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [137, 95, 138, 139,] // Add the category IDs you want to fetch
+        const categoryIds = [137, 95, 138, 139] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -87,7 +87,14 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, []) // Empty dependency array to run the effect only once on mount
+  const [title, setTitle] = useState(
+    'Luxury Residence | Modular Kitchens & Wardrobe Brand India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -171,9 +178,7 @@ const Page = ({}) => {
             >
               {categoryData.image && (
                 <Link
-                  href={`/wardrobes/${
-                    categoryFolderMapping[categoryData.id]
-                  }`}
+                  href={`/wardrobes/${categoryFolderMapping[categoryData.id]}`}
                 >
                   <Image
                     width={1000}

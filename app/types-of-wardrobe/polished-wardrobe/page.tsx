@@ -48,6 +48,14 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
+  const [title, setTitle] = useState(
+    ' Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand'
+  )
+
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
@@ -111,7 +119,7 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-          <Link href="/types-of-wardrobe">Types of wardrobe</Link>
+            <Link href="/types-of-wardrobe">Types of wardrobe</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">Polished Wardrobe</span>
         </div>

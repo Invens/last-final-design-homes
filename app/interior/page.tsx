@@ -90,7 +90,14 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, [])
+  const [title, setTitle] = useState(
+    'Interior Design Ideas | Top Interior Design Company in India'
+  )
 
+  useEffect(() => {
+    // Update the document title on mount
+    document.title = title
+  }, [title])
   return (
     <>
       <ProgressBar />
