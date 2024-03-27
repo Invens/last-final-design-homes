@@ -522,7 +522,7 @@ const slugToLocation = (slug) => {
   return words.join(' ')
 }
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const { location } = params
   const locationParts = location.split('-in-')
   const extractedLocation = locationParts[1]
@@ -641,4 +641,4 @@ const page = ({ params }) => {
   )
 }
 
-export default page
+export default Page
