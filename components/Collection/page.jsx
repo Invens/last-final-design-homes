@@ -461,7 +461,7 @@ const Collection = () => {
             <Image
               width={100}
               height={100}
-              src="/images/icon/icons8-construction-building-96.png"
+              src="/images/icon/modular.png"
             />
             <p>In-House Modular Manufacturing</p>
           </div>
