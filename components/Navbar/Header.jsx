@@ -41,6 +41,25 @@ const Header = () => {
   const [isRotated, setIsRotated] = useState(false);
   const [isCloseIconVisible, setIsCloseIconVisible] = useState(false);
 
+
+  const [isShowing, setIsShowing] = useState(true);
+
+  useEffect(() => {
+    const hideTextTimeout = setTimeout(() => {
+      setIsShowing(false);
+    }, 5000);
+
+    const showTextTimeout = setTimeout(() => {
+      setIsShowing(true);
+    }, 10000);
+
+    // Clean up timeouts to avoid memory leaks
+    return () => {
+      clearTimeout(hideTextTimeout);
+      clearTimeout(showTextTimeout);
+    };
+  }, [isShowing]);
+
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
     setIsRotated(!isRotated);
@@ -1447,7 +1466,7 @@ const Header = () => {
             className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
             style={{
               backgroundImage:
-                "url('/images/get-free-estimate.jpg'')",
+                "url('/images/get-free-estimate.jpg')",
               backgroundSize: 'fit',
               backgroundRepeat: 'no-repeat',
               objectFit: 'cover',
@@ -1813,54 +1832,55 @@ const Header = () => {
 
       {/* {bottom menu} */}
 
+      <div className="fixed bottom-16 right-4 flex flex-col items-center mb-4" style={{ zIndex: '800' }}>
+  <div className='flex'>
+  <div>
+          {isShowing && ( // Render text only if isVisible is true
+            <h1 className='text-center center bg-white mt-4 mr-1 p-[2px] rounded-full'>
+              Get interior Assistance?
+            </h1>
+          )}
+        </div>
+    <div className={`relative bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center transform ${isRotated ? 'rotate-360' : ''}`}>
+      <FontAwesomeIcon
+        icon={faComment}
+        size="4x"
+        className="text-white w-8 h-8"
+        onClick={toggleVisibility}
+      />
+    </div>
+  </div>
+
+  {isVisible && (
+    <div className="absolute top-[-200px] right-[-8px] rounded-lg p-2"> {/* Adjusted positioning */}
+      <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+        <FontAwesomeIcon
+          icon={faWhatsapp}
+          size="2x"
+          className="text-white w-8 h-8"
+        />
+      </div>
+      <div className="bg-purple-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+        <FontAwesomeIcon
+          icon={faInstagram}
+          size="2x"
+          className="text-white w-8 h-8"
+        />
+      </div>
+      <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+        <FontAwesomeIcon
+          icon={faPhone}
+          size="2x"
+          className="text-white w-8 h-8"
+        />
+      </div>
+    </div>
+  )}
+</div>
       <div className="relative xl:hidden">
         {/* Your existing content */}
 
-        <div className="fixed bottom-16 right-4 flex flex-col items-center mb-4" style={{ zIndex: '800' }}>
-          <div className='flex'>
-            <div>
-              <h1 className='text-center center bg-white mt-4 mr-1 p-[2px] rounded-full'>
-                Get interior Assistance?
-              </h1>
-            </div>
-            <div className={`relative bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center transform ${isRotated ? 'rotate-360' : ''}`}>
-              <FontAwesomeIcon
-                icon={faComment}
-                size="4x"
-                className="text-white w-8 h-8"
-                onClick={toggleVisibility}
-              />
-             
-            </div>
-          </div>
 
-          {isVisible && (
-            <div className="absolute bottom-18 right-[-7px]  rounded-lg p-2">
-              <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-                <FontAwesomeIcon
-                  icon={faWhatsapp}
-                  size="2x"
-                  className="text-white w-8 h-8"
-                />
-              </div>
-              <div className="bg-purple-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  size="2x"
-                  className="text-white w-8 h-8"
-                />
-              </div>
-              <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  size="2x"
-                  className="text-white w-8 h-8"
-                />
-              </div>
-             
-            </div>
-          )}
-        </div>
         {/* Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 w-full" style={{ zIndex: '800' }}>
           <div
