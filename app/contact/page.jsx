@@ -10,7 +10,7 @@ import {
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import React, { FormEvent, useState } from 'react'
+import React, { FormEvent, useState,useEffect } from 'react'
 import Header from '../../components/Navbar/Header'
 import Footer from '../../components/Footer/Footer'
 import emailjs from 'emailjs-com'
@@ -677,7 +677,7 @@ const CardComponentSection = () => {
         </div>
       </Link>
       {/* card3 */}
-      <Link href="/magazine" className="w-full md:w-1/3 p-2">
+      <Link href="/interior-digest-magazine-india" className="w-full md:w-1/3 p-2">
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">

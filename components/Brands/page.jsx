@@ -187,28 +187,7 @@ const Brands = () => {
           <div className="box bi"></div>
         </div>
       </div> */}
-      <div className="my-16">
-        {/* <h1>Our Exclusive Packages</h1> */}
-        <div className="flex justify-center items-center sm:my-8">
-          <div style={containerStyle} className="mb-4">
-            <div style={textContainerStyle} className="flex justify-center ">
-              <h1 className="sm:text-4xl text-xl font-bold text-center ">
-                Our Exclusive Packages
-              </h1>
-            </div>
-            <Image
-              height={0}
-              width={0}
-              src="/images/simple-gold-brush-stroke-banner-5.png"
-              alt="Paint Brush"
-              style={backgroundImageStyle}
-            />
-          </div>
-        </div>
-        <h3 className="font-bold text-center">
-          The Best in Class &#34; Tailormade &#34; Interior Plans
-        </h3>
-      </div>
+     
       {/* section visible in the large view */}
       <div className="jiu">
         <motion.div

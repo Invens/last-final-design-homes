@@ -120,7 +120,7 @@ const Collection = () => {
     <>
       <div className="hero"></div>
       <div
-        className="w-full overflow-hidden mx-auto text-center my-8"
+        className="w-full overflow-hidden mx-auto text-center my-8 z-10"
         ref={aniRef}
       >
         <motion.h2
@@ -128,13 +128,13 @@ const Collection = () => {
           style={
             isLargeScreen
               ? {
-                  x: translateXleftWithSpringMob,
-                  fontFamily: 'Roboto, sans-serif',
-                }
+                x: translateXleftWithSpringMob,
+                fontFamily: 'Roboto, sans-serif',
+              }
               : {
-                  x: translateXleftWithSpring,
-                  fontFamily: 'Roboto, sans-serif',
-                }
+                x: translateXleftWithSpring,
+                fontFamily: 'Roboto, sans-serif',
+              }
           }
         >
           <span className="font-[50]"> welcome to </span>
@@ -175,13 +175,13 @@ const Collection = () => {
           style={
             isLargeScreen
               ? {
-                  x: translateXrightWithSpringMob,
-                  fontFamily: 'Roboto, sans-serif',
-                }
+                x: translateXrightWithSpringMob,
+                fontFamily: 'Roboto, sans-serif',
+              }
               : {
-                  x: translateXrightWithSpring,
-                  fontFamily: 'Roboto, sans-serif',
-                }
+                x: translateXrightWithSpring,
+                fontFamily: 'Roboto, sans-serif',
+              }
           }
         >
           <span className="font-[50]"> welcome to </span>
@@ -291,75 +291,80 @@ const Collection = () => {
             >
               {/* Image 1 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
                 <Link href="/modular-interior-design-ideas">
-               
-            
-               <Image
-                  height={350}
-                  width={700}
-                  className="rounded shadow-md"
-                  src="/images/qwer.png"
-                  alt=""
-                />
-               </Link>
-               
-              
+
+
+                  <Image
+                    height={350}
+                    width={700}
+                    className="rounded shadow-md"
+                    src="/images/qwer.png"
+                    alt=""
+                  />
+                </Link>
+
+
               </motion.div>
 
               {/* Image 2 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
-               <Link href="/luxe">
-                <Image
-                  height={350}
-                  width={700}
-                  className="rounded shadow-md"
-                  src="/images/qwert.png"
-                  alt=""
-                />
-                 </Link>
+                <Link href="/luxury-interior-designers-architect-services-in-delhi-gurgaon-noida-india">
+                  <Image
+                    height={350}
+                    width={700}
+                    className="rounded shadow-md"
+                    src="/images/qwert.png"
+                    alt=""
+                  />
+                </Link>
               </motion.div>
 
               {/* Image 3 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
-                <Image
-                  height={350}
-                  width={700}
-                  className="rounded shadow-md"
-                  src="/images/qwerty.png"
-                  alt=""
-                />
+                <Link href="/luxury-interior">
+                  <Image
+                    height={350}
+                    width={700}
+                    className="rounded shadow-md"
+                    src="/images/qwerty.png"
+                    alt=""
+                  />
+                </Link>
               </motion.div>
 
               {/* Image 4 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
-                <Image
-                  height={350}
-                  width={700}
-                  className="rounded shadow-md"
-                  src="/images/asd.png"
-                  alt=""
-                />
+                <Link href="/">
+
+                  <Image
+                    height={350}
+                    width={700}
+                    className="rounded shadow-md"
+                    src="/images/asd.png"
+                    alt=""
+                  />
+                </Link>
               </motion.div>
 
               {/* Image 5 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
@@ -374,20 +379,20 @@ const Collection = () => {
 
               {/* Image 6 */}
               <motion.div
-                className="md:w-1/2 lg:w-1/3 mb-4"
+                className="md:w-1/2 lg:w-1/3 mb-4 z-10"
                 variants={imagesVariants}
                 id="news"
               >
                 <Link href="/foyer-area-designs">
-                <Image
-                  height={350}
-                  width={700}
-                  className="rounded shadow-md"
-                  src="/images/talk.png"
-                  alt=""
-                />
+                  <Image
+                    height={350}
+                    width={700}
+                    className="rounded shadow-md"
+                    src="/images/talk.png"
+                    alt=""
+                  />
                 </Link>
-               
+
               </motion.div>
             </motion.div>
           </div>
@@ -398,11 +403,11 @@ const Collection = () => {
         {/* ------------ */}
       </div>
 
-      <div className="container mx-auto sm:my-16 my-8 bg-[#d8f1c7] p-8">
+      <div className="container mx-auto sm:my-16 my-8 bg-[#d8f1c7] p-8 z-10">
         <h1 className="text-3xl font-bold sm:mb-16 mb-8 text-center">
           Why Design Indian Homes?
         </h1>
-        <div id="" className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8">
+        <div id="" className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 z-10">
           <div className="flex flex-col items-center text-center">
             <Image
               width={100}

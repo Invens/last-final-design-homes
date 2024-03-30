@@ -7,6 +7,10 @@ import Footer from '../../components/Footer/Footer'
 import Omsairam from '../../components/Navbar/Omsairam'
 import TopPriority from './Top-priority'
 import Second from './Second'
+import Third from './third'
+import Fourth from './fourth'
+import Fifth from './fifth'
+import Sixth from './sixth'
 import BottomText from './BottomText'
 
 const ImageSection = () => {
@@ -30,7 +34,10 @@ const ImageSection = () => {
         {/* second offer */}
 
         <Second id="second" />
-
+        <Third/>
+        <Fourth/>
+        <Fifth/>
+        <Sixth/>
         {/* bottom text */}
         <BottomText />
       </MaxWidthWrapper>

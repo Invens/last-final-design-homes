@@ -1451,7 +1451,7 @@ const Header = () => {
             <Link href="/book-with-top-interior-designers-architects">
               <h3 className="text-lg">Book a Design Visit</h3>
             </Link>
-            <Link href="/magazine">
+            <Link href="/interior-digest-magazine-india">
               <h3 className="text-lg">Magazine</h3>
             </Link>
           </ul>
@@ -1854,25 +1854,33 @@ const Header = () => {
   {isVisible && (
     <div className="absolute top-[-200px] right-[-8px] rounded-lg p-2"> {/* Adjusted positioning */}
       <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+        <Link href="wa.me/+919899264978" target='_blank'>
         <FontAwesomeIcon
           icon={faWhatsapp}
           size="2x"
           className="text-white w-8 h-8"
         />
+        </Link>
       </div>
       <div className="bg-purple-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+        
+        <Link href="https://www.instagram.com/designindiankitchen/?hl=en" target='_blank'>
         <FontAwesomeIcon
           icon={faInstagram}
           size="2x"
           className="text-white w-8 h-8"
         />
+        </Link>
       </div>
+      
       <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
+      <Link href="tel:+919899264978" target='_blank'>
         <FontAwesomeIcon
           icon={faPhone}
           size="2x"
           className="text-white w-8 h-8"
         />
+        </Link>
       </div>
     </div>
   )}

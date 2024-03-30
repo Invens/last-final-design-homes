@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BioRhyme } from 'next/font/google'
 import './globals.css'
 import { Provider } from 'react-redux'
@@ -8,6 +8,7 @@ import { ThemeProvider } from './themeContext'
 import store from '../components/redux/store'
 import Script from 'next/script'
 import Head from 'next/head'
+import Animation from './animation/page'
 
 const bioRhyme = BioRhyme({
   weight: '400',
@@ -24,6 +25,20 @@ export default function RootLayout({ children }) {
     // Update the document title on mount
     document.title = title
   }, [title])
+
+  // Reference to the animation canvas
+  const animationCanvasRef = useRef(null)
+
+  // Function to handle mouse move event on the animation canvas
+  const handleMouseMove = (e) => {
+    animationCanvasRef.current.handleMouseMove(e.nativeEvent)
+  }
+
+  // Function to handle mouse out event on the animation canvas
+  const handleMouseOut = (e) => {
+    animationCanvasRef.current.handleMouseOut(e.nativeEvent)
+  }
+
   return (
     <html lang="en">
       <Head>
@@ -41,10 +56,25 @@ export default function RootLayout({ children }) {
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `}
       </Script>
-      <body className={bioRhyme.className}>
+      <body className={`${bioRhyme.className}`}>
         <ThemeProvider>
           <Provider store={store}>
-            <SpaceProvider>{children}</SpaceProvider>
+            <SpaceProvider>
+              {/* Overlay Animation */}
+              {/* <div
+                style={{
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  pointerEvents: 'none', // Allows mouse events to pass through
+                }}
+              >
+                <Animation ref={animationCanvasRef} />
+              </div> */}
+              {/* Content */}
+              <div>{children}</div>
+            </SpaceProvider>
           </Provider>
         </ThemeProvider>
       </body>

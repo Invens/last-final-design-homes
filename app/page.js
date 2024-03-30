@@ -26,10 +26,13 @@ const Hero = dynamic(() => import('../components/Collection/Hero'));
 
 export default function Home() {
   return (
-    <main>
+    <main style={{zIndex: '10'}}>
       <Omsairam />
       <Header />
+      <div>
+
       <Hero/>
+      </div>
       <Collection />
       {/* <ColorSwitch /> */}
       <ImageGrid />

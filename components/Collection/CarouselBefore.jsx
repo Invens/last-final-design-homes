@@ -115,8 +115,8 @@ const CarouselBefore = () => {
               />
             </div>
           </div>
-          <h3 className="font-bold text-center">Affordable Luxury</h3>
-          <p className="px-6 text-sm py-4 text-center">
+          <h3 className="font-bold text-center z-10">Affordable Luxury</h3>
+          <p className="px-6 text-sm py-4 text-center z-10">
             Transforming spaces into dreams waiting to unfold, our skilled team
             revives the ordinary into extraordinary.
           </p>
@@ -126,7 +126,7 @@ const CarouselBefore = () => {
       {/* Carousel */}
       {imagesLoaded && (
         <>
-          <div className="hidden sm:block mb-16 w-full max-h-[90%]">
+          <div className="hidden sm:block mb-16 w-full max-h-[90%] z-10">
             <div className="flex items-center justify-center">
               <button
                 className={`ml-auto border-2 border-blue-500 rounded-lg p-2 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white `}

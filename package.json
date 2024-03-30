@@ -78,7 +78,8 @@
     "typed.js": "^2.1.0",
     "typewriter-effect": "^2.21.0",
     "use-media": "^1.5.0",
-    "use-resize-observer": "^9.1.0"
+    "use-resize-observer": "^9.1.0",
+    "webgl-fluid": "^0.3.7"
   },
   "devDependencies": {
     "@types/node": "^20",

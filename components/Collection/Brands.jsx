@@ -176,7 +176,7 @@ const Brands = () => {
       </div>
 
       <div className="flex items-center justify-c">
-        <Svg />
+        
 
         <div className="w-full">
           <div className="flex justify-center items-center sm:my-8">

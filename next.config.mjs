@@ -15,6 +15,7 @@ const nextConfig = {
       'cdn-icons-png.flaticon.com',
       'www.freepik.com',
       'img.freepik.com',
+      'hlwebsite.s3.ap-south-1.amazonaws.com',
     ],
   },
   experimental: {
