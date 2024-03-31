@@ -5,35 +5,36 @@ const BootomText = () => {
     <>
       <div className="mx-auto sm:my-16 my-4">
         <h3 className="text-2xl text-center">
-          Buy Direct from Company &{' '}
-          <span className="font-semibold">Save 30%</span>
+          Buy Direct from The Brand &{' '}
+          <span className="font-semibold">Save Around 30% </span>
+          of the Middle Man Costs
         </h3>
-        <p className="text-sm mt-4">
-          DIH interior packages and offers are not limited to better factory
-          price. Our commitment is for the wholehearted efforts to design,
-          produce and implement suitable interior furnishing to match your
-          dream. The whole team is trained and qualified to execute the order.
-          We work on the selected home interior package, and customize it
-          further as per client requirements. Because, each customer has unique
-          needs, therefore, each of them requires custom designs for home
-          interior. For example, there are situations where you like the overall
-          home interior package, but do not want a particular item from the
-          package. In situations like this, customization provides an option to
-          remove the item from the package and select one that is more suitable
-          for your needs. Likewise, changes and additions are possible as per
-          measurement by paying extra charges. We will make it to fit your
-          budget. Let us discuss and proceed towards making it happen the best
-          possible way.
+        <p className="text-sm mt-4 text-center">
+
+          Design Indian Homes Interior Packages and offers are not sourced through a agency, nor we have middlemen working between us and the end user. We work on direct basis, We are the Largest Modular Interior ( Modular Kitchen, Wardrobes, Vanities, etc, Complete Modular Interiors ) Manufacturers, with more than 4 production facilities in New Delhi - NCR, so all prices would be directly from the factory unit. And not through a Middleman or multiple agencies. All Our Interiors and Architectural services are also direct from the Brand, Our Brand has a Dedicated platform for end to end execution, and that is the reason for our 100% Price Assurance and also that's how we beat any vendor's quote and provide assurance of Flat 7 % on an Vendor's Quote Offered. <br />
+
+          assurance of Flat 7 % on an Vendor's Quote Offered.
+          Our commitment is to provide you a wholesome Home Renovation Solution with dedicated effort to plan, design and implement suitable interior designs as per requirements to match your dream Residence.
+          <br />
+          Our Team members are thoroughly trained and qualified to execute any design related tasks, we work tirelessly 7 days a week to meet our deadlines and provide you timely deliveries.
+          Our Brand will work intently on the selected home interior package, and customise it further as per your choice. All Our Packages are custom made after much thoughtful overviews and suggestions of our Team Members, who are very well versed with the market scenario and the current requirements. But All our packages are Bespoke and can be tailor made as per requirements & Budget of the users.
+
+          On The Quotes, we take Pride in giving our Clients 100% written guarantee across North India, of our Prices offered at par with the materials offered. Any Price could be altered with the change in selection of the materials. Hence, Give us a Chance to Serve You.
+          Love All - Serve All
         </p>
 
         <div className="mt-12 sm:flex sm:justify-around items-center grid grid-cols-2 ml-8 gap-4 justify-center">
           <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
             <p className="text-sm font-semibold">100%</p>
-            <p className="text-xs ">Customized</p>
+            <p className="text-xs text-center ">Custom Works</p>
           </div>
           <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
-            <p className="text-sm font-semibold">Premium</p>
+            <p className="text-sm font-semibold">Top Notch</p>
             <p className="text-xs ">Quality</p>
+          </div>
+          <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
+            <p className="text-sm font-semibold">100%</p>
+            <p className="text-xs text-center">Price Guarantee</p>
           </div>
           <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
             <p className="text-sm font-semibold">On-Time</p>
@@ -42,6 +43,10 @@ const BootomText = () => {
           <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
             <p className="text-sm font-semibold">Life-Time</p>
             <p className="text-xs ">Service</p>
+          </div>
+          <div className="w-32 h-32 border-2 border-gray-300 hover:border-none flex flex-col justify-center items-center gap-1 hover:bg-green-400 hover:text-white rounded-full p-4">
+            <p className="text-sm font-semibold">Direct</p>
+            <p className="text-xs text-center">from the Source</p>
           </div>
         </div>
       </div>

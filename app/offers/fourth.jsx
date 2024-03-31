@@ -11,7 +11,7 @@ const ImageSection = () => {
   return (
     <>
       <section className="text-center bg-amber-50 rounded-lg mb-12 border-2 border-gray-300">
-        <div className="relative w-full mx-0 h-auto lg:h-[420px]">
+        <div className="relative w-full mx-0 h-[60vh] lg:h-[420px]">
           <Image
             width={1636}
             height={1093}

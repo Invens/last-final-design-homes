@@ -29,7 +29,7 @@ const ImageSection = () => {
             PACKAGE OFFERS FOR FURNISHING 3BHK IN INDIA
           </h2>
         </div>
-        <TopPriority id="top-priority" />
+        <TopPriority id="top-priority"/>
 
         {/* second offer */}
 

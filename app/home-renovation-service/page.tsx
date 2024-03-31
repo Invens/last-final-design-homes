@@ -117,12 +117,7 @@ const Page = ({}) => {
           <h1 className="text-3xl font-bold">Home Renovation Services</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
-          We bring you carefully-curated interior design ideas, to give your
-          home a brand new look. Explore exclusive interior designs and trends
-          that are every bit inspirational as they are practical. Our team of
-          interior designers have put together ideas across kitchen, bedroom,
-          living room and more, to help you pick a design that will best suit
-          your home interior requirements.
+        Design Indian Homes brings you extensive Renovation Services for your residence. We are providing end to end interior renovations and Modular Interiors across New Delhi - NCR - Pan India. Our Organisation has simplified the interior domain execution, and we provide most affordable custom interior solutions across The Town. With More than 950+ architects, interior designers and builders associated with us, we are go to Brand. Come Directly to our Team and save the Middleman Cost.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">

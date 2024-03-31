@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Header from '../../components/Navbar/Header'
 import Omsairam from '../../components/Navbar/Omsairam'
 import ContactForm from '../../components/ContactForm/page'
@@ -8,6 +9,9 @@ import CustomerVideos from './CustomerVideos'
 import ArchitectSpeak from './ArchitechSpeak'
 import Link from 'next/link'
 import Image from 'next/image';
+
+
+
 
 const ScheduleChatSection = () => {
   return (
@@ -44,6 +48,80 @@ const ScheduleChatSection = () => {
 }
 
 const SectionWithImage = () => {
+  const  [showPopup, setShowPopup] = useState(false);
+  const togglePopup = () =>{
+    setShowPopup(!showPopup);
+  }
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    number: '',
+    pincode: '',
+    agree: '',
+  })
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }))
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    console.log('Submitting form...')
+    setFormSubmitted(true)
+
+    const formDataToSend = new FormData()
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key])
+    }
+
+    try {
+      console.log(
+        'Form Data to Send:',
+        Object.fromEntries(formDataToSend.entries())
+      )
+      console.log('Uploading data...')
+      const response = await fetch(
+        'https://m.designindianhomes.com/submitForm',
+        {
+          method: 'POST',
+          body: formDataToSend,
+        }
+      )
+
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      console.log('Response body:', await response.text())
+
+      if (response.ok) {
+        console.log('Form data submitted successfully!')
+        console.log(
+          'Form Data to Send:',
+          Object.fromEntries(formDataToSend.entries())
+        )
+        setBtnText('Done')
+      } else {
+        console.error('Form data submission failed. Response:', response)
+        setBtnText('Something Went Wrong')
+      }
+    } catch (error) {
+      console.error('Error during form data submission:', error)
+      setBtnText('Something Went Wrong')
+    }
+
+    setFormSubmitted(true)
+  }
+
+  const handleClose = () => {
+    setFormSubmitted(false)
+  }
+
   return (
     <div className="p-4 sm:p-16 bg-gray-300">
       <section className="flex flex-col md:flex-row items-center">
@@ -53,13 +131,144 @@ const SectionWithImage = () => {
             PARTNER WITH US
           </h2>
           <p className="text-gray-700 mb-4 text-center sm:text-left mx-auto">
-            We’re thrilled to know our customers loved the Design indian kitchen
+            We’re thrilled to know our customers loved the Design indian Homes
             experience. This truly keeps us going!
           </p>
           <div className='mb-12 flex justify-center'>
-            <button className="bg-green-500 hover:bg-green-600 hover:text-white px-4 py-2 rounded-full shadow-lg">
+          
+            <button className="bg-green-500 hover:bg-green-600 hover:text-white px-4 py-2 rounded-full shadow-lg" onClick={togglePopup}>
               CONNECT TODAY
             </button>
+            {showPopup && (
+              <div className='bg-gray-800 bg-opacity-75 h-full'>
+        <div className="fixed top-[50px] left-0 w-full  mt-[70px] flex justify-center z-10">
+          <div className="relative bg-green-700 p-4 rounded shadow-lg">
+            <button onClick={togglePopup} className='absolute right-2 rounded-full bg-red-700 text-white p-2 align-right' >Close</button>
+            <div className='bg-white rounded-lg'>
+          {formSubmitted ? (
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
+            <Image
+            alt='thank you'
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
+              width={400}
+              height={300}
+            />
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : ( <form onSubmit={handleSubmit} className="max-w-md mx-auto w-[400px] bg-green-700  rounded-lg lg:mt-[10px]">
+              <h1 className='pb-4 text-left text-2xl font-bold text-white'>Book with <span className='text-red-600'> Us</span></h1>
+              <div className="mb-4">
+                <label
+                  htmlFor="fullName"
+                  className="block text-sm font-medium text-white"
+                >
+                  Full Name*
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-white"
+                >
+                  Email ID*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="number"
+                  className="block text-sm font-medium text-white"
+                >
+                  Mobile Number*
+                </label>
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label
+                  htmlFor="pincode"
+                  className="block text-sm font-medium text-white"
+                >
+                  Pincode*
+                </label>
+                <input
+                  type="text"
+                  id="pincode"
+                  onChange={handleChange}
+                  name="pincode"
+                  className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <label htmlFor="agree" className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    onChange={handleChange}
+                    name="agree"
+                    className="mr-2"
+                  />
+                  <span className="text-sm text-white">
+                    Yes, I would like to receive important updates and
+                    notifications on WhatsApp
+                  </span>
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-4 sm:mt-0"
+              >
+                Book Free Site Visit 
+              </button>
+            </form>
+             )}
+             </div>
+          </div>
+        </div>
+        </div>
+      )}
           </div>
         </div>
         <div className="lg:w-1/2">
@@ -156,11 +365,7 @@ const page = () => {
           Design Indian kitchen reviews
         </h1>
         <p className="uppercase text-md font-bold text-center mb-16">
-          Experience the comfort and aesthetics of a #Design Indian Kitchen
-          before you get yours! With looks for every room, furniture for each
-          corner, material samples on display, and a dedicated interior designer
-          to take you through it, your quest for the best home interiors ends
-          here. And it is ready and safe for your visit.
+        Welcome to Our Review Page, Our Brand is the Most Loved Brand Across New Delhi - NCR, we are the most referred brand across the Town, check out reviews of our Parent Brand Design Indian Kitchen and check the Love Our Clients Shower on Us. We are trying harder each day to become more better than we were Today, and thus serve you in the most professional manner. Keep the Trust and BIG LOVE ❤️
         </p>
       </div>
       <CustomerVideos />
