@@ -83,7 +83,7 @@ const page = () => {
         <p className="mb-4">
         We today stand as the <strong> Most Trusted Brand in the Modular Industry </strong>, producing and supplying over 2000 Kitchens/Wardrobes per year as well as the <strong> Most Loved Interior and Architectural Brand</strong> Across North India. We accept selected work and are the most referred company in Delhi- NCR and India. With Customers across India increasing & enquiries from Abroad, we have initiated exports to our neighboring countries of some of our Import Line Products.
         </p>
-        <p className='italic'>With dedicated and devoted Team members, Our Motive is to make your Residence as Comforting, Harmonious and a Place to Celebrate & Pray in Peace. Your Support and Love has made us India's Largest Interior/Architectural Agency since 2023.</p>
+        <p className='italic'>With dedicated and devoted Team members, Our Motive is to make your Residence as Comforting, Harmonious and a Place to Celebrate & Pray in Peace. Your Support and Love has made us India&apos;s Largest Interior/Architectural Agency since 2023.</p>
         <h2 className="sm:text-3xl text-2xl font-bold my-8">
           Elegance Redefined
         </h2>
@@ -102,10 +102,10 @@ const page = () => {
           Values and Vision
         </h2>
         <p className="mb-4">
-        We abide by the dictum of ' Love All - Serve All ' , whether you go ahead with our Brand or Choose others ; we shall suggest to you what we deem fit as per our expertise and advise you irrespective of the outcome of the deal. We do make profits nor intend to, at the cost of our Integrity, Principles and our Goodwill. What you pay, We make sure you get the best for it.
+        We abide by the dictum of &apos; Love All - Serve All &apos; , whether you go ahead with our Brand or Choose others ; we shall suggest to you what we deem fit as per our expertise and advise you irrespective of the outcome of the deal. We do make profits nor intend to, at the cost of our Integrity, Principles and our Goodwill. What you pay, We make sure you get the best for it.
         </p>
         <p>
-        We will justify every penny you spend on your Interior or Architectural Work. Our Vision is to make Interiors Affordable for the Middle Class segment, Not everyone can afford a 10 Lakh 2 Bhk Renovation, hence we want the people at the grassroots level to afford our Products/Works and get their homes renovated or re-designed. There can be no house without a Decent Modular Kitchen or Modular Interiors, hence it is necessary to have a decent makeover which is sturdy and durable for a good amount of time. Each day millions across our Country, spend a lot of their time and energy in Selecting the Right Brand for their Interiors, hence to have affordable interior makeovers where you get the 'feel good factor' is must and duly deserved by All Homemakers across Our Country.
+        We will justify every penny you spend on your Interior or Architectural Work. Our Vision is to make Interiors Affordable for the Middle Class segment, Not everyone can afford a 10 Lakh 2 Bhk Renovation, hence we want the people at the grassroots level to afford our Products/Works and get their homes renovated or re-designed. There can be no house without a Decent Modular Kitchen or Modular Interiors, hence it is necessary to have a decent makeover which is sturdy and durable for a good amount of time. Each day millions across our Country, spend a lot of their time and energy in Selecting the Right Brand for their Interiors, hence to have affordable interior makeovers where you get the &apos;feel good factor&apos; is must and duly deserved by All Homemakers across Our Country.
         </p>
         <h2 className="sm:text-3xl text-2xl font-bold my-8">
           Environment and Safety

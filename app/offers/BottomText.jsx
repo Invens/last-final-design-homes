@@ -11,9 +11,9 @@ const BootomText = () => {
         </h3>
         <p className="text-sm mt-4 text-center">
 
-          Design Indian Homes Interior Packages and offers are not sourced through a agency, nor we have middlemen working between us and the end user. We work on direct basis, We are the Largest Modular Interior ( Modular Kitchen, Wardrobes, Vanities, etc, Complete Modular Interiors ) Manufacturers, with more than 4 production facilities in New Delhi - NCR, so all prices would be directly from the factory unit. And not through a Middleman or multiple agencies. All Our Interiors and Architectural services are also direct from the Brand, Our Brand has a Dedicated platform for end to end execution, and that is the reason for our 100% Price Assurance and also that's how we beat any vendor's quote and provide assurance of Flat 7 % on an Vendor's Quote Offered. <br />
+          Design Indian Homes Interior Packages and offers are not sourced through a agency, nor we have middlemen working between us and the end user. We work on direct basis, We are the Largest Modular Interior ( Modular Kitchen, Wardrobes, Vanities, etc, Complete Modular Interiors ) Manufacturers, with more than 4 production facilities in New Delhi - NCR, so all prices would be directly from the factory unit. And not through a Middleman or multiple agencies. All Our Interiors and Architectural services are also direct from the Brand, Our Brand has a Dedicated platform for end to end execution, and that is the reason for our 100% Price Assurance and also that&apos;s how we beat any vendor&apos;s quote and provide assurance of Flat 7 % on an Vendor&apos;s Quote Offered. <br />
 
-          assurance of Flat 7 % on an Vendor's Quote Offered.
+          assurance of Flat 7 % on an Vendor&apos;s Quote Offered.
           Our commitment is to provide you a wholesome Home Renovation Solution with dedicated effort to plan, design and implement suitable interior designs as per requirements to match your dream Residence.
           <br />
           Our Team members are thoroughly trained and qualified to execute any design related tasks, we work tirelessly 7 days a week to meet our deadlines and provide you timely deliveries.
