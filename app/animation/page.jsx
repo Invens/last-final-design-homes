@@ -48,7 +48,7 @@ const FluidAnimation = () => {
   return (
     <canvas
       ref={canvasRef}
-      style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'auto', inset:'0', maxHeight: '100vh' }}
+      style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%',  inset:'0', maxHeight: '100vh',}}
     />
   );
 };

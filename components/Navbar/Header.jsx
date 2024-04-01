@@ -1451,6 +1451,9 @@ const Header = () => {
             <Link href="/book-with-top-interior-designers-architects">
               <h3 className="text-lg">Book a Design Visit</h3>
             </Link>
+            <Link href="/nri-interior-architectural-services-delhi-gurgaon-noida-india">
+              <h3 className="text-lg">NRI - Sr Citizens Friendly </h3>
+            </Link>
             <Link href="/interior-digest-magazine-india">
               <h3 className="text-lg">Magazine</h3>
             </Link>

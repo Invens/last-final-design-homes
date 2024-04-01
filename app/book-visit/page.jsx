@@ -10,7 +10,7 @@ const FullWidthSection = () => {
       {/* Replace 'your-image.jpg' with the actual path to your background image */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute z-10 text-white text-center">
-        <h1 className="sm:text-4xl text-2xl font-bold">SCHEDULE A VISIT</h1>
+        <h1 className="sm:text-4xl text-2xl font-bold">SCHEDULE A VISIT TODAY</h1>
         {/* You can add more content or customize styling here */}
       </div>
       <div
@@ -69,15 +69,12 @@ const page = () => {
           SCHEDULE A VISIT WITH US ANYTIME
         </h1>
         <p className=" text-center mb-16">
-          At Design Indian Homes, we have made it a habit to deliver high
-          quality modular kitchens, wardrobes, vanities, tv units, interiors,
-          etc in Delhi, gurgaon, noida, faridabad and PAN India at the most
-          affordable quotes. By Our organized structure of working, we are Thus
-          trusted and tested by architects & interior designers across New Delhi
-          - NCR - Pan India. Give us a chance to serve you TODAY. !
+          At Design Indian Homes, we have made it a habit to deliver high quality End to End Interiors, Architectural Solutions, Modular Interiors like Modular kitchens, Wardrobes, Vanities, Tv Units, Interiors, etc across New Delhi, Gurgaon, Noida, Faridabad across PAN India at the most affordable quotes.
+          By Our Organized structure of working, we are The Most Trusted and Tested Brand of  Architects, Interior Designers, Township Developers, Builders across New Delhi - NCR - Pan India.
+          Give us a chance to serve you TODAY. !
         </p>
       </div>
-      <Form/>
+      <Form />
       <ScheduleChatSection />
       <ContactForm />
       <Footer />

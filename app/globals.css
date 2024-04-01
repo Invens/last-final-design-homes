@@ -15,6 +15,9 @@
   --theme-color: #fff; /* Set the default theme color here */
   --text-color: #000; /* Set the default text color here */
 }
+/* *{
+  position: relative;
+} */
 
 html {
   background-color: var(--theme-color);
