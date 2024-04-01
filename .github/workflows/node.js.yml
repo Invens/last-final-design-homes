@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: AlmaLinux v8.9.0
+    runs-on: Ubuntu_latest
 
     strategy:
       matrix:
