@@ -3,6 +3,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import YouTube from 'react-youtube'
+import Link from 'next/link'
 
 const StyledYouTube = ({ videoId, opts }) => (
   <div className="rounded-lg overflow-hidden">
@@ -52,6 +53,11 @@ const YoutubeCarouselSection = () => {
             </div>
           ))}
         </Carousel>
+        <div className='flex justify-center'>
+    <Link href="https://www.youtube.com/@designindiankitchen/videos" target="_blank" >
+  <button className='mt-2 mb-2 bg-green-600 px-2 py-2 text-white rounded-lg '>Load More..</button>
+  </Link>
+  </div>
       </div>
     </section>
   )

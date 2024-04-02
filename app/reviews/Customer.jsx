@@ -97,8 +97,159 @@ const CustomerReviewSection = () => {
       comment:
         'I got my "Modular Wardrobes" done and LOVE IT. The size and length are perfect. The design is amazing and looks exactly what I wanted. Thankyou for such amazing work.',
     },
+    {
+      id: 13,
+      name: 'Pradeep Singh',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku34.jpg',
+      comment: "It’s amazing how you've come up with the unique ideas for my wardrobes and kitchen and It’s so obvious how you pay attention to each detail. My work has been incredibly beautiful above and beyond my expectations. My house looks like a beautifully designed villa now. I loved the way you designed and installed the exact output more professionally than I could imagine."
+    },
+    {
+      id: 14,
+      name: 'Sumit Gill',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku35.jpg',
+      comment: "Loved the quality of products, work quality, and timely installation of my kitchen and wardrobes. All the work has been performed within the perfect time frame as discussed. Also, I am glad that I could get so much of my interiors done within the budget. Highly recommendable. Thank you Design Indian Kitchen."
+    },
+    {
+      id: 15,
+      name: 'Gautam Oberio',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku36.jpg',
+      comment: "We are so happy to get our kitchen work done by Design Indian Kitchen, very fine work has been installed and the team has worked with all the dedication. The best part is that you keep the environment happy and clean until the last installation. Go on the team. I wish you success."
+    },
+    {
+      id: 16,
+      name: 'Kanvi Rawat',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku41.jpg',
+      comment: "I am so fortunate to have a young talented man working for my house to help in making it a big dream project and your well behaved team who is working with complete focus. I had no idea my kitchen could look this good!"
+    },
+    {
+      id: 17,
+      name: 'Rita Malhotra',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku61.jpg',
+      comment: "Thank you for pulling everyone/everything together on such short notice. I got my wardrobes manufactured and installed within such a short time-span. Also, it was so elegant and budget-friendly."
+    },
+    {
+      id: 18,
+      name: 'Shanker V Mittal',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku46.jpg',
+      comment: "Design Indian Kitchen made the modular Wardrobes and modular Kitchen for my new house. It's so great and budget-friendly. Well done—and ahead of the deadline too!"
+    },
+    {
+      id: 19,
+      name: 'Gargi Manchanda',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku71.jpg',
+      comment: "Beautiful fittings, lowest prices and accurate finishings. Every task has been handled with complete dedication and sincerity and been handed over within the specified time. Much appreciation to entire team of Design Indian Kitchen. Great job!"
+    },
+    {
+      id: 20,
+      name: 'Aarti Kanwar',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku70.jpg',
+      comment: "I wished something like this only which Mr Saurabh and your team could actually understood my requirements and installed exactly what I have been looking for in my Kitchen and rooms."
+    },
+    {
+      id: 21,
+      name: 'Shubhanker Prasher',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku68.jpg',
+      comment: "It's been a great experience to have interacted with Design Indian Kitchen for my Modular Kitchen and modular wardrobes."
+    },
+    {
+      id: 22,
+      name: 'Sahil Tiwari',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku66.jpg',
+      comment: "I just wanted to say thank you for all the energy and unique thoughts you have put into my house to make it this elegant. Design Indian Kitchen- You got brilliant ideas."
+    },
+    {
+      id: 23,
+      name: 'Uma Kashyap',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku69.jpg',
+      comment: "My husband tells me how great my Modular Kitchen now looks like. It looks really clean and fresh by the designs that have been suggested by you."
+    },
+    {
+      id: 24,
+      name: 'Chandana Bhattacharya',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku67.jpg',
+      comment: "Having you working for my house was so pleasant. You installed and manufactured the wardrobes. vanities and modular Kitchen in my house. You have been so helpful, your choices and designs are so different and pleasing."
+    },
+    {
+      id: 25,
+      name: 'Himanshu Rai',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku65.jpg',
+      comment: "I can't believe how beautiful my modular kitchen and my modular wardrobes in my rooms look after I got the renovations done by Design Indian Kitchen. You are the best."
+    },
+    {
+      id: 26,
+      name: 'Raghav Chaudhary',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku63.jpg',
+      comment: "I wanted to get some renovations done into my kitchen and wardrobes and thankfully I came across www.designindiankitchen.com. DIK team, you saved a lot of my time and money and took over my pressure and stress by giving your best effort."
+    },
+    {
+      id: 27,
+      name: 'Gaurav Dhaiya',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku60.jpg',
+      comment: "I absolutely loved how you handled all my stress and confusions relating to my modular Kitchen. I could really rely on your choices and suggestions and now my kitchen looks Oh! so wonderful and classy."
+    },
+    {
+      id: 28,
+      name: 'Kamlesh Aggarwal',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku62.jpg',
+      comment: "Outstanding work! This is exactly how I wanted my Kitchen to look. It's truly above and beyond."
+    },
+    {
+      id: 29,
+      name: 'Anjana Srivastva',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku59.jpg',
+      comment: "My washroom Vanity and my daughter's wardrobe has been installed by Design Indian Kitchen, it's so perfect and my daughter is in awe of her pretty walk-in wardrobe as it's been designed in a way that looks so neat. Good Going."
+    },
+    {
+      id: 30,
+      name: 'Varun Gupta',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku55.jpg',
+      comment: "Mr Saurabh - You are so creative—I loved getting your perspective on things to bring such extraordinary updates into my house. I wonder how you could just take over all my concerns regarding modular kitchen and wardrobes and made it easy for me."
+    },
+    {
+      id: 31,
+      name: 'Jay Sharma',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku54.jpg',
+      comment: "It's our pleasure to have you with us. My modular kitchen looks much clean and perfect. I am sending my heartfelt appreciation to you, without your support and guidance I would not have been able to see the actual and attractive changes in my home."
+    },
+    {
+      id: 32,
+      name: 'Rohit Jain',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku52.jpg',
+      comment: "I really enjoyed the excellent service and timely installation of modular kitchen, wardrobe and vanities at my place. My family loves it. My house looks delicious and attractive. I would always recommend Design Indian Kitchen to my knowns."
+    },
+    {
+      id: 33,
+      name: 'Rahul Bansal',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku50.jpg',
+      comment: "Perfect.. I loved the cool environment you create while on work and 'DIK' surely feels like none other than my family is working for me to make my home looks like a one I could ever image and that too within my budget."
+    },
+    {
+      id: 34,
+      name: 'Prem Mathur',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku49.jpg',
+      comment: "After getting my kitchen and wardrobes designed, created and installed by Design Indian Kitchen, I feel so much confident that Yes this is the quality service I have always wanted for my home. Excellent service."
+    },
+    {
+      id: 35,
+      name: 'Konica Sen',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku48.jpg',
+      comment: "It was the best choice to have Design Indian Kitchen completing my modular kitchen, wardrobes and vanities. I am blown away. Thanks for being so awesome. High fives!"
+    },
+    {
+      id: 36,
+      name: 'Konica Sen',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku38.jpg',
+      comment: "It was the best choice to have Design Indian Kitchen completing my modular kitchen, wardrobes and vanities. I am blown away. Thanks for being so awesome. High fives!"
+    },
+    {
+      id: 37,
+      name: 'Parveen Ahuja',
+      photo: 'https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/client/ku18.jpg',
+      comment: "It was the best choice to have Design Indian Kitchen completing my modular kitchen, wardrobes and vanities. I am blown away. Thanks for being so awesome. High fives!"
+    }
+  ];
     // Add more customer data as needed
-  ]
+  
 
   return (
     <section className="bg-gray-100 py-12 px-8">

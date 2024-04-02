@@ -34,10 +34,10 @@ const ImageSection = () => {
         {/* second offer */}
 
         <Second id="second" />
-        <Third/>
-        <Fourth/>
-        <Fifth/>
-        <Sixth/>
+        <Third id="third" />
+        <Fourth id="fourth" />
+        <Fifth id="fifth" />
+        <Sixth id="sixth" />
         {/* bottom text */}
         <BottomText />
       </MaxWidthWrapper>

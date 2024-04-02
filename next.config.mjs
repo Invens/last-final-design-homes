@@ -16,6 +16,7 @@ const nextConfig = {
       'www.freepik.com',
       'img.freepik.com',
       'hlwebsite.s3.ap-south-1.amazonaws.com',
+      'www.designindiankitchen.com',
     ],
   },
   experimental: {
@@ -47,7 +48,7 @@ const nextConfig = {
       },
       {
         source: '/collaborate-with-architects-interior-designers',
-        destination: '/join-us',
+        destination: '/collaborate-us',
       },
       {
         source: '/book-a-interior-design-visit',
@@ -57,10 +58,7 @@ const nextConfig = {
         source: '/refer-and-get-rewards-interior-designers',
         destination: '/refer-and-earn',
       },
-      {
-        source: '/collaborate-with-architects-interior-designers',
-        destination: '/join-us',
-      },
+
       //modular design ideas
       {
         source: '/modular-interior-design-ideas',
@@ -440,10 +438,7 @@ const nextConfig = {
         source: '/largest-interior-designing-brand',
         destination: '/',
       },
-      {
-        source: '/collaborate-with-architects-interior-designers',
-        destination: '/',
-      },
+    
       {
         source: '/interior-designing-estimates-pricing',
         destination: '/GetQuote',

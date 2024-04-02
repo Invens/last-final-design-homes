@@ -219,7 +219,7 @@ const Brands = () => {
             </motion.div>
           </Link>
           {/* 2 */}
-          <Link href="/offers/#top-priority">
+          <Link href="/offers/#second">
             <motion.div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
@@ -242,7 +242,7 @@ const Brands = () => {
           </Link>
           {/* 3 */}
 
-          <Link href="/offers/#top-priority">
+          <Link href="/offers/#third">
             <motion.div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
@@ -262,7 +262,7 @@ const Brands = () => {
             </motion.div>
           </Link>
           {/* 4 */}
-          <Link href="/offers/#top-priority">
+          <Link href="/offers/#fourth">
             <motion.div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
@@ -283,7 +283,7 @@ const Brands = () => {
             </motion.div>
           </Link>
           {/* 5 */}
-          <Link href="/offers/#top-priority">
+          <Link href="/offers/#fifth">
             <motion.div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
@@ -307,7 +307,7 @@ const Brands = () => {
             </motion.div>
           </Link>
           {/* 6 */}
-          <Link href="/offers/#top-priority">
+          <Link href="/offers/#sixth">
             <motion.div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}

@@ -179,10 +179,12 @@ const FileUploadForm = () => {
                     defaultValue="Architect"
                   >
                     <option value="Architect" selected>
-                    An NRI
+                      an Architect
                     </option>
-                    <option value="Designer">A Sr Citizen</option>
-                  
+                    <option value="Designer">an Interior Designer</option>
+                    <option value="Builder">a Builder</option>
+                    <option value="Company">a Company</option>
+                    <option value="Freelancer ">a Freelancer </option>
                   </select>
                 </div>
                 <div className="mb-4">

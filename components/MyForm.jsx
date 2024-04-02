@@ -11,9 +11,15 @@ const MyForm = () => {
     number: '',
     pincode: '',
     agree: '',
+    requirements: '',
+    file: '',
+
   })
-  const [btnText, setBtnText] = useState('Book free site Visit')
+  const [btnText, setBtnText] = useState('Book A Visit Today')
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0])
+  }
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -98,11 +104,20 @@ React.useEffect(() => {
     <div className="flex flex-col sm:flex-row lg:mx-16">
       {/* Left side with heading and paragraph */}
       <div className="sm:w-1/2 p-4">
-        <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-white">
-          Looking for expert guidance to design your <br />
-          <span ref={el} className="text-yellow-300" />
+        <h1 className="absolute text-2xl sm:text-3xl font-bold mb-4 text-white ml-2 mt-2 lg:w-[50vw] sm:w-[20vw]">
+          Looking for expert guidance to<br /> design your<br />  
+           <span ref={el} className="text-yellow-300" />
         </h1>
-        <p className="text-gray-900 text-sm">
+       
+       <Image
+       src="/images/footer-form.jpg"
+       alt='my-form'
+       width={1000}
+       height={1000}
+       className='w-full lg:h-[70vh] sm:h-[20vh] rounded'
+       />
+
+        <p className="text-white text-l mt-4">
           Leave your information and we will call you to book your preferred
           consultation slot
         </p>
@@ -203,7 +218,45 @@ React.useEffect(() => {
               required
             />
           </div>
-
+          <div className="mb-4">
+                  <label
+                    htmlFor="requirements"
+                    className="block text-sm font-medium text-gray-900"
+                  >
+                    Are you
+                  </label>
+                  <select
+                    required
+                    id="requirements"
+                    name="requirements"
+                    className="mt-1 p-2 w-full bg-red-500 border-b border-gray-500 focus:outline-none focus:border-blue-500 "
+                    onChange={handleChange}
+                    defaultValue="Architect"
+                  >
+                    <option value="Architect" selected>
+                      an Architect
+                    </option>
+                    <option value="Designer">an Interior Designer</option>
+                    <option value="Builder">a Builder</option>
+                    <option value="Company">a Company</option>
+                    <option value="Freelancer ">a Freelancer </option>
+                  </select>
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="file"
+                    className="block text-sm font-medium text-gray-900"
+                  >
+                    Attach Your Project
+                  </label>
+                  <input
+                    type="file"
+                    id="file"
+                    name="file"
+                    className="mt-1 p-2 w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-blue-500"
+                    onChange={handleFileChange}
+                  />
+                </div>
           <div className="mb-4">
             <label htmlFor="agree" className="flex items-center">
               <input

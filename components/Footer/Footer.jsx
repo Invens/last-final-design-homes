@@ -11,6 +11,8 @@ import Clock from 'react-clock'
 import 'react-clock/dist/Clock.css'
 import LocationsTabs from './LocationTabs'
 import Bloomflower from './Bloomberg_flower/page'
+import MyForm from '../MyForm'
+import PostFooter from '../PostFooter/page'
 
 
 const DesignDropdown = ({
@@ -412,6 +414,11 @@ const LetsConnectForm = () => {
 export class Footer extends Component {
   render() {
     return (
+      <>
+       <div className="bg-red-500 p-4 dark:text-white">
+        <MyForm />
+      </div>
+      <PostFooter/>
       <div className="flex justify-center w-full mx-0">
         <div className="gradient w-full flex flex-col justify-center items-center">
           <div className="mt-22 container">
@@ -896,6 +903,7 @@ export class Footer extends Component {
           </div>
         </div>
       </div>
+      </>
     )
   }
 }

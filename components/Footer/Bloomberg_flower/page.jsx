@@ -11,7 +11,8 @@ const Bloomflower = () => {
   }, []);
 
   return (
-    <div className={` ${styles.container}`} style={{ "--d": "1.2s", position: 'relative', right: '10%', top: "600px", zIndex: '-100'}}>
+    <div className='flex justify-center'>
+    <div className={` ${styles.container} bg-red-600 z-[-100]  sm:ml[150px] lg:mt-[600px]`} id='mainflower' style={{ "--d": "1.2s"}}>
       <div className="night"></div>
       <div className="flowers z-50">
         <div className="flower flower--1">
@@ -310,7 +311,7 @@ const Bloomflower = () => {
         </div>
       </div>
     </div>
-
+    </div>
   );
 }
 

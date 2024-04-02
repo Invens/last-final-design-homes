@@ -77,7 +77,7 @@ const ContactFormSection = () => {
           width={1000} height={1000}
             src="/images/contact-us.jpg" // Replace with the path to your image
             alt="Contact Form"
-            className="w-full h-auto rounded"
+            className="w-full h-[75vh] rounded"
             style={{width: '800px'}}
           />
         </div>

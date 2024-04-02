@@ -3,58 +3,32 @@ import Header from '../../components/Navbar/Header'
 import Omsairam from '../../components/Navbar/Omsairam'
 import ContactForm from '../../components/ContactForm/page'
 import Footer from '../../components/Footer/Footer'
+import ScheduleChatSection from '../../components/schedule-chat/page'
+
 const FullWidthSection = () => {
   return (
     <section className="relative h-[200px] sm:h-[400px] bg-cover bg-center flex items-center justify-center mt-16 lg:mt-36 xl:mt-24">
       {/* Replace 'your-image.jpg' with the actual path to your background image */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="absolute z-10 text-white text-center">
-        <h1 className="sm:text-4xl text-2xl font-bold">ABOUT US</h1>
+      <div className="absolute z-10 text-white text-center bg-black/40 px-8 py-6 rounded backdrop-blur-sm">
+        <h1 className="sm:text-4xl text-2xl font-bold ">ABOUT US</h1>
         {/* You can add more content or customize styling here */}
       </div>
+     
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center "
         style={{
           // Replace 'your-image.jpg' with the actual path to your background image
-          backgroundImage: 'url("/images/getQuote.jpg")',
+          backgroundImage: 'url("/images/about-us.jpg")',
         }}
-      ></div>
+      >
+        
+      </div>
     </section>
   )
 }
 
-const ScheduleChatSection = () => {
-  return (
-    <section
-      className="relative"
-      style={{
-        backgroundImage: 'url("images/footer_BG_01.jpg")',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        height: '400px',
-        backgroundSize: 'cover',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.51)',
-        backgroundBlendMode: 'darken',
-      }}
-    >
-      <div className="text-center mx-auto text-white">
-        <h1 className="text-4xl">
-        “ Get Custom Interiors / Modular Interiors/ Architectural <br/> Services at Most Affordable Prices with Our Team. “
-        </h1>
-        <br />
-        <a
-          href="https://api.whatsapp.com/send?phone=9899264978&amp;text=MODULAR KITCHEN DELHI - INDIA | MODULAR KITCHEN MANUFACTURERS"
-          className="schedule-btn font-bold bg-yellow-400 text-gray-900 py-2 px-4 rounded-full hover:bg-yellow-500"
-        >
-          SCHEDULE A CHAT
-        </a>
-      </div>
-    </section>
-  )
-}
+
 
 const page = () => {
   return (
@@ -64,10 +38,10 @@ const page = () => {
       <FullWidthSection />
       <div className="bg-amber-50 pt-8 sm:pt-16 pb-8 p-8s sm:p-16">
         <h1 className="sm:text-3xl text-2xl font-bold text-center mb-8">
-          India’s No.1 Home Interior Brand
+          India&apos;s No.1 Home Interior Brand
         </h1>
         <h1 className="sm:text-5xl text-3xl font-bold text-center mb-16 ">
-          THE DESIGN INDIAN HOMES WAY
+          THE <span className='bg-red-700 text-white px-2'>DESIGN INDIAN HOMES  </span> WAY
         </h1>
         <h2 className="sm:text-3xl text-2xl font-bold my-8">
         More than a Decade and a Half Old
@@ -102,7 +76,7 @@ const page = () => {
           Values and Vision
         </h2>
         <p className="mb-4">
-        We abide by the dictum of &apos; Love All - Serve All &apos; , whether you go ahead with our Brand or Choose others ; we shall suggest to you what we deem fit as per our expertise and advise you irrespective of the outcome of the deal. We do make profits nor intend to, at the cost of our Integrity, Principles and our Goodwill. What you pay, We make sure you get the best for it.
+        We abide by the dictum of &apos; <span className='text-red-700 font-bold'>Love All - Serve All</span> &apos; , whether you go ahead with our Brand or Choose others ; we shall suggest to you what we deem fit as per our expertise and advise you irrespective of the outcome of the deal. We do make profits nor intend to, at the cost of our Integrity, Principles and our Goodwill. What you pay, We make sure you get the best for it.
         </p>
         <p>
         We will justify every penny you spend on your Interior or Architectural Work. Our Vision is to make Interiors Affordable for the Middle Class segment, Not everyone can afford a 10 Lakh 2 Bhk Renovation, hence we want the people at the grassroots level to afford our Products/Works and get their homes renovated or re-designed. There can be no house without a Decent Modular Kitchen or Modular Interiors, hence it is necessary to have a decent makeover which is sturdy and durable for a good amount of time. Each day millions across our Country, spend a lot of their time and energy in Selecting the Right Brand for their Interiors, hence to have affordable interior makeovers where you get the &apos;feel good factor&apos; is must and duly deserved by All Homemakers across Our Country.
@@ -115,7 +89,7 @@ const page = () => {
         </p>
       </div>
       <ScheduleChatSection />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Footer />
     </>
   )

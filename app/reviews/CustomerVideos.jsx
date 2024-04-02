@@ -54,7 +54,7 @@ const YoutubeCarouselSection = () => {
         </Carousel>
   <div className='flex justify-center'>
     <Link href="https://www.youtube.com/@designindiankitchen/videos" target="_blank" >
-  <button className='mt-2 mb-2 bg-green-600 px-2 py-2 text-white rounded-lg '>Read More..</button>
+  <button className='mt-2 mb-2 bg-green-600 px-2 py-2 text-white rounded-lg '>Load More..</button>
   </Link>
   </div>
       </div>

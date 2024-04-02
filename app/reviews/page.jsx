@@ -9,42 +9,11 @@ import CustomerVideos from './CustomerVideos'
 import ArchitectSpeak from './ArchitechSpeak'
 import Link from 'next/link'
 import Image from 'next/image';
+import ScheduleChatSection from '../../components/schedule-chat/page'
 
 
 
 
-const ScheduleChatSection = () => {
-  return (
-    <section
-      className="relative"
-      style={{
-        backgroundImage: 'url("images/footer_BG_01.jpg")',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        height: '400px',
-        backgroundSize: 'cover',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.51)',
-        backgroundBlendMode: 'darken',
-      }}
-    >
-      <div className="text-center mx-auto text-white">
-        <h1 className="text-4xl">
-        “ Get Custom Interiors / Modular Interiors/ Architectural Services <br/> at Most Affordable Prices with Our Team. “
-        </h1>
-        <br />
-        <a
-          href="https://api.whatsapp.com/send?phone=9899264978&amp;text=MODULAR KITCHEN DELHI - INDIA | MODULAR KITCHEN MANUFACTURERS"
-          className="schedule-btn font-bold bg-yellow-400 text-gray-900 py-2 px-4 rounded-full hover:bg-yellow-500"
-        >
-          SCHEDULE A CHAT
-        </a>
-      </div>
-    </section>
-  )
-}
 
 const SectionWithImage = () => {
   const  [showPopup, setShowPopup] = useState(false);
@@ -130,7 +99,7 @@ const SectionWithImage = () => {
             PARTNER WITH US
           </h2>
           <p className="text-gray-700 mb-4 text-center sm:text-left mx-auto">
-            We’re thrilled to know our customers loved the Design indian Homes
+            We&apos;re thrilled to know our customers loved the Design indian Homes
             experience. This truly keeps us going!
           </p>
           <div className='mb-12 flex justify-center'>
@@ -363,7 +332,7 @@ const page = () => {
         <h1 className="text-5xl font-extrabold text-center mb-8 mx-auto uppercase">
           Design Indian kitchen reviews
         </h1>
-        <p className="uppercase text-md font-bold text-center mb-16">
+        <p className=" text-md font-bold text-center mb-16">
         Welcome to Our Review Page, Our Brand is the Most Loved Brand Across New Delhi - NCR, we are the most referred brand across the Town, check out reviews of our Parent Brand Design Indian Kitchen and check the Love Our Clients Shower on Us. We are trying harder each day to become more better than we were Today, and thus serve you in the most professional manner. Keep the Trust and BIG LOVE ❤️
         </p>
       </div>
@@ -373,7 +342,7 @@ const page = () => {
       <ArchitectSpeak />
       <Customer />
       <ScheduleChatSection />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Footer />
     </>
   )

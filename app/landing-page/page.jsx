@@ -338,28 +338,28 @@ const CardCarousel = () => {
           img={'/images/brands/slides2.jpeg'}
           heading={'POCKET FRIENDLY, YET WELCOMING'}
           desc={'Handcrafted for You'}
-          slug={'#top-priority'}
+          slug={'#second'}
         />
         <Card1
           key={3}
           img={'/images/brands/slides3.jpeg'}
           heading={'MINIMAL, YET OVERALL COVERAGE'}
           desc={'Be Carefree & Happy'}
-          slug={'#top-priority'}
+          slug={'#third'}
         />
         <Card1
           key={4}
           img={'/images/brands/slides4.jpeg'}
           heading={'LUXURY, YET AFFORDABLE'}
           desc={'Over the Top'}
-          slug={'#top-priority'}
+          slug={'#fourth'}
         />
         <Card1
           key={5}
           img={'/images/brands/slides5.jpeg'}
           heading={'HIGH QUALITY WITH TOTAL COMMITMENT'}
           desc={'Premier Plus '}
-          slug={'#top-priority'}
+          slug={'#fifth'}
         />
       </Carousel>
     </div>

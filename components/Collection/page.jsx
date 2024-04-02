@@ -223,7 +223,7 @@ const Collection = () => {
         <section className="newz">
           <div className="flex flex-wrap">
             <div className=" mb-4" id="news">
-              <Link href="/luxe">
+              <Link href="/luxury-interior-designers-architect-services-in-delhi-gurgaon-noida-india">
                 <video
                   loop
                   autoPlay

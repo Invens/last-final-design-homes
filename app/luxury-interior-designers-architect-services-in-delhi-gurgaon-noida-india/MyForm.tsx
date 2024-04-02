@@ -239,7 +239,7 @@ const MyForm: React.FC<MyFormProps> = () => {
                 type="submit"
                 className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-4 sm:mt-0"
               >
-                Book Free Site Visit <ChevronRight className="ml-2" />
+                Book A Visit Today <ChevronRight className="ml-2" />
               </button>
             </form>
              )}

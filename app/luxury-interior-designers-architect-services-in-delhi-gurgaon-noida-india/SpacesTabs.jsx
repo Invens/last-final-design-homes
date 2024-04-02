@@ -155,7 +155,7 @@ const TabPanel = ({ children, value, index, images, onLoadMore, showLoadMore }) 
           </div>
           {showLoadMore && (
             <div className="flex justify-center">
-              <Button className='bg-red-400' variant="contained" onClick={onLoadMore}>Load More</Button>
+              <button className='mb-[20px] text-white bg-green-500 hover:bg-yellow-500  px-6 py-2 font-bold text-xl rounded-xl '  onClick={onLoadMore}>Load More..</button>
             </div>
           )}
         </>

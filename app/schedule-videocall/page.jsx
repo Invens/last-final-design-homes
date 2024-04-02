@@ -4,13 +4,15 @@ import Omsairam from '../../components/Navbar/Omsairam'
 import ContactForm from '../../components/ContactForm/page'
 import Footer from '../../components/Footer/Footer'
 import Form from './form'
+import ScheduleChatSection from '../../components/schedule-chat/page'
+
 const FullWidthSection = () => {
   return (
     <section className="relative h-[200px] sm:h-[400px] bg-cover bg-center flex items-center justify-center mt-16 lg:mt-36 xl:mt-24">
       {/* Replace 'your-image.jpg' with the actual path to your background image */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute z-10 text-white text-center">
-        <h1 className="sm:text-4xl text-2xl font-bold">
+        <h1 className="sm:text-4xl text-2xl font-bold bg-black/40 backdrop-blur-lg p-4 rounded">
           SCHEDULE A VIDEO CALL
         </h1>
         {/* You can add more content or customize styling here */}
@@ -19,45 +21,14 @@ const FullWidthSection = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           // Replace 'your-image.jpg' with the actual path to your background image
-          backgroundImage: 'url("/images/getQuote.jpg")',
+          backgroundImage: 'url("/images/schedule-call.jpg")',
         }}
       ></div>
     </section>
   )
 }
 
-const ScheduleChatSection = () => {
-  return (
-    <section
-      className="relative"
-      style={{
-        backgroundImage: 'url("images/footer_BG_01.jpg")',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        height: '400px',
-        backgroundSize: 'cover',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.51)',
-        backgroundBlendMode: 'darken',
-      }}
-    >
-      <div className="text-center mx-auto text-white">
-        <h1 className="text-4xl">
-        “ Get Custom Interiors / Modular Interiors/ Architectural Services <br/> at Most Affordable Prices with Our Team. “
-        </h1>
-        <br />
-        <a
-          href="https://api.whatsapp.com/send?phone=9899264978&amp;text=MODULAR KITCHEN DELHI - INDIA | MODULAR KITCHEN MANUFACTURERS"
-          className="schedule-btn font-bold bg-yellow-400 text-gray-900 py-2 px-4 rounded-full hover:bg-yellow-500"
-        >
-          SCHEDULE A CHAT
-        </a>
-      </div>
-    </section>
-  )
-}
+
 
 const page = () => {
   return (
@@ -70,17 +41,13 @@ const page = () => {
           SCHEDULE A VIDEO CALL WITH US ANYTIME
         </h1>
         <p className=" text-center mb-16">
-          At design indian kitchen, we have made it a habit to deliver high
-          quality modular kitchens, wardrobes, vanities, tv units, interiors,
-          etc in Delhi, gurgaon, noida, faridabad and PAN India at the most
-          affordable quotes. By Our organized structure of working, we are Thus
-          trusted and tested by architects & interior designers across New Delhi
-          - NCR - Pan India. Give us a chance to serve you TODAY. !
+        Connect with us Today for a detailed free of cost video consultancy meeting, direct from our Connaught Place, New Delhi Boutique Office. Our Team Members will assist you in how to proceed with the designs, planning, execution, selections and timelines. You can check some of our designs and concepts and then Book a Visit for further assistance. 
+Looking forward to Serve YOU.
         </p>
         <Form />
       </div>
       <ScheduleChatSection />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <Footer />
     </>
   )
