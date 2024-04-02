@@ -13,8 +13,8 @@ const WordPressPosts = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [posts, setPosts] = useState([]);
   const [recentPosts, setRecentPosts] = useState([]);
-  const [initialPostsCount, setInitialPostsCount] = useState(30);
-  const [postsCountToLoad, setPostsCountToLoad] = useState(30);
+  const [initialPostsCount, setInitialPostsCount] = useState(15);
+  const [postsCountToLoad, setPostsCountToLoad] = useState(15);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -125,6 +125,11 @@ const WordPressPosts = () => {
                 </div>
               </Link>
             ))}
+            <div className='flex justify-center'>
+              <button className="bg-blue-500 hover:bg-green-500 text-white  font-bold py-2 px-8 rounded" onClick={loadMorePosts}>
+                Load More..
+              </button>
+            </div>
           </div>
           {/* Recent Posts Section */}
           <div className="recent-posts mr-4 p-8 rounded h-auto">
@@ -146,17 +151,57 @@ const WordPressPosts = () => {
                 <p className="text-gray-500 text-sm mb-0">{new Date(post.date).toLocaleDateString()}</p>
               </div>
             ))}
+            <div>
+              <h2 className="text-2xl font-bold mt-8 underline">Contact Info</h2>
+
+              <h3 className='text-sm font-bold mt-4'>Designing & Operations Office</h3>
+              <p className='mt-2'>25/42, A Block, Middle Circle, Connaught Place, New Delhi - 110001 ( Near Rajiv Chowk Metro Stn, Gate No.8 )</p>
+              <h2 className="text-2xl font-bold mt-8 underline ">Corporate Industrial Unit</h2>
+              <p className='mt-2'>G - 984, Narela DSIIDC Industrial Area, New delhi - 110040</p>
+
+              <h2 className="text-2xl font-bold mt-8 underline "> Upcoming Offices</h2>
+              <p className='mt-2'>* M3M Complex, Golf Estate,<br />
+                Sector 65, Golf Course Extn Road,<br />
+                Gurgaon<br />
+                * Near Sector 15 Metro Station,<br />
+                Sector 15, Noida<br />
+                * Shop No 61,
+                Golf Links Market,<br />
+                Golf Links,
+                New Delhi - 110003<br />
+                * 61, Panchkuian Marg
+                New Delhi - 110001</p>
+             <h2 className='text-2xl font-bold mt-8 underline'> Industrial Units</h2>
+             <p className='mt-2'>    A-195, Kirti Nagar<br />
+                * Sector 4, IMT Manesar<br />
+                * Sector 57, HSIDC Industrial, Kundli<br />
+                * Plt No16, Near NIT, Faridabad</p>
+            <h2 className='text-2xl font-bold mt-8 underline'>Hardware & Import Outlet</h2>
+                <p className='mt-2'>1/44, Shop No - 3,
+                WHS, Kirti Nagar<br />
+                New Delhi - 110015
+                Associate Appliances & Experience Center<br />
+                1/1, Tilak Nagar,
+                New Delhi - 110058</p>
+                
+                <h2 className='text-2xl font-bold mt-8 underline'>Associate Experience Centers</h2>
+                <p className='mt-2'>  1/1, Tilak Nagar,
+                New Delhi - 110058<br />
+                0-9899264978 / 0-9582827928/ <br />0-9899239097, Landline - 01144127897
+                enquiry@designindiankitchen.com<br />
+                Monday - Saturday:
+                10:30 AM - 7:30 PM
+                Sunday: 11:00 AM - 7:00 PM
+                Only For Site Visits</p>
+              
+            </div>
           </div>
-         
+
 
         </div>
-        {posts.length < initialPostsCount && (
-            <div className="recent-posts mr-4 p-8 rounded ">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={loadMorePosts}>
-                Load More
-              </button>
-            </div>
-          )}
+
+
+
       </div>
       <Footer />
     </>
