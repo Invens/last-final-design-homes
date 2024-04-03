@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import { SocialIcon } from 'react-social-icons'
 import Modal from 'react-modal'
 import Image from 'next/image'
-import Assistance from './Assistance'
+import Assistance from '../assistance/page'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPalette,
@@ -1827,7 +1827,8 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <ColorSwitchD />
+                <div className="ml-[100px] absolute right-[150px] mb-2"><ColorSwitchD /></div>
+                
               </nav>
             </div>
           </div>

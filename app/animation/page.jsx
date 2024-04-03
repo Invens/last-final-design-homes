@@ -13,29 +13,29 @@ const FluidAnimation = () => {
         const fluid = WebGLFluid(canvasRef.current, {
           IMMEDIATE: true, // Initially set to true
           TRIGGER: 'hover', // Set trigger to hover
-          SIM_RESOLUTION: 64,
-          DYE_RESOLUTION: 512,
+          SIM_RESOLUTION: 128,
+          DYE_RESOLUTION: 1024,
           CAPTURE_RESOLUTION: 512,
           DENSITY_DISSIPATION: 2,
           VELOCITY_DISSIPATION: 0.3,
           PRESSURE: 0.8,
-          PRESSURE_ITERATIONS: 20,
+          PRESSURE_ITERATIONS: 10,
           CURL: 30,
-          SPLAT_RADIUS: 0.35,
-          SPLAT_FORCE: 6000,
-          SPLAT_COUNT: Number.parseInt(Math.random() * 5) + 5,
+          SPLAT_RADIUS: 0.15,
+          SPLAT_FORCE: 4000,
+          SPLAT_COUNT: Number.parseInt(Math.random() * 1) + 7,
           SHADING: true,
           COLORFUL: true,
-          COLOR_UPDATE_SPEED: 20,
+          COLOR_UPDATE_SPEED: 50,
           PAUSED: false,
-          BACK_COLOR: { r: 4, g: 4, b: 2 },
+          BACK_COLOR: { r: 0, g: 0, b: 0 },
           TRANSPARENT: true,
           BLOOM: false,
-          BLOOM_ITERATIONS: 8,
+          BLOOM_ITERATIONS: 2,
           BLOOM_RESOLUTION: 256,
-          BLOOM_INTENSITY: 0.8,
+          BLOOM_INTENSITY: 0.5,
           BLOOM_THRESHOLD: 0.6,
-          BLOOM_SOFT_KNEE: 0.7,
+          BLOOM_SOFT_KNEE: 0.3,
           SUNRAYS: true,
           SUNRAYS_RESOLUTION: 196,
           SUNRAYS_WEIGHT: 1.0,
@@ -59,38 +59,38 @@ const FluidAnimation = () => {
 
   const handleScroll = () => {
     const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    if (scrollPercentage >= 5 && !triggered) {
+    if (scrollPercentage >= 0 && !triggered) {
       // Reinitialize fluid animation with IMMEDIATE set to true
       if (typeof window !== 'undefined') {
         import('webgl-fluid').then(({ default: WebGLFluid }) => {
           const newFluidAnimation = WebGLFluid(canvasRef.current, {
             IMMEDIATE: true, // Initially set to true
-            SIM_RESOLUTION: 64,
-            DYE_RESOLUTION: 512,
+            SIM_RESOLUTION: 256,
+            DYE_RESOLUTION: 1024,
             CAPTURE_RESOLUTION: 512,
             DENSITY_DISSIPATION: 2,
             VELOCITY_DISSIPATION: 0.3,
             PRESSURE: 0.8,
             PRESSURE_ITERATIONS: 10,
             CURL: 30,
-            SPLAT_RADIUS: 0.15,
-            SPLAT_FORCE: 4000,
-            SPLAT_COUNT: Number.parseInt(Math.random() * 1) + 2,
-            SHADING: true,
+            SPLAT_RADIUS: 0.34,
+            SPLAT_FORCE: 200,
+            SPLAT_COUNT: Number.parseInt(Math.random() * 1) + 5,
+            SHADING: false,
             COLORFUL: true,
-            COLOR_UPDATE_SPEED: 10,
+            COLOR_UPDATE_SPEED: 20,
             PAUSED: false,
-            BACK_COLOR: { r: 4, g: 4, b: 2 },
+            BACK_COLOR: { r: 0, g: 0, b: 0 },
             TRANSPARENT: true,
-            BLOOM: false,
+            BLOOM: true,
             BLOOM_ITERATIONS: 2,
             BLOOM_RESOLUTION: 256,
             BLOOM_INTENSITY: 0.5,
             BLOOM_THRESHOLD: 0.6,
             BLOOM_SOFT_KNEE: 0.3,
-            SUNRAYS: false,
-            SUNRAYS_RESOLUTION: 196,
-            SUNRAYS_WEIGHT: 1.0,
+            SUNRAYS: true,
+            SUNRAYS_RESOLUTION: 64,
+            SUNRAYS_WEIGHT: 1,
             // Include other options here if needed
           });
 

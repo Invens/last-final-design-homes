@@ -65,8 +65,8 @@ const Hero = () => {
             </h3>
           </div>
           <Image
-            width={0}
-            height={0}
+            width={1000}
+            height={1000}
             src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
             style={backgroundImageStyle}
