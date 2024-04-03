@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 import Stepper from '../../components/Stepper/page'
+import Step from '../../components/steps/page'
 const ThreeColumnSection = () => {
   // const [isAnimating, setIsAnimating] = useState(false);
   // const containerRef = useRef(null);
@@ -226,12 +227,11 @@ const ThreeColumnSection = () => {
         </div>
       </div>
 
-      <div className='flex align-middle flex-col sm:flex-row h-[70vh]'>
 
+   <Step/>
+       
 
-        <Stepper />
-
-      </div>
+      
     </>
   )
 }

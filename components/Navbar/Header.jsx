@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import { SocialIcon } from 'react-social-icons'
 import Modal from 'react-modal'
 import Image from 'next/image'
+import Assistance from './Assistance'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPalette,
@@ -1835,59 +1836,7 @@ const Header = () => {
 
       {/* {bottom menu} */}
 
-      <div className="fixed bottom-16 right-4 flex flex-col items-center mb-4" style={{ zIndex: '800' }}>
-  <div className='flex'>
-  <div>
-          {isShowing && ( // Render text only if isVisible is true
-            <h1 className='text-center center bg-white mt-4 mr-1 p-[2px] rounded-full'>
-              Get interior Assistance?
-            </h1>
-          )}
-        </div>
-    <div className={`relative bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center transform ${isRotated ? 'rotate-360' : ''}`}>
-      <FontAwesomeIcon
-        icon={faComment}
-        size="4x"
-        className="text-white w-8 h-8"
-        onClick={toggleVisibility}
-      />
-    </div>
-  </div>
-
-  {isVisible && (
-    <div className="absolute top-[-200px] right-[-8px] rounded-lg p-2"> {/* Adjusted positioning */}
-      <div className="bg-green-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-        <Link href="wa.me/+919899264978" target='_blank'>
-        <FontAwesomeIcon
-          icon={faWhatsapp}
-          size="2x"
-          className="text-white w-8 h-8"
-        />
-        </Link>
-      </div>
-      <div className="bg-purple-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-        
-        <Link href="https://www.instagram.com/designindiankitchen/?hl=en" target='_blank'>
-        <FontAwesomeIcon
-          icon={faInstagram}
-          size="2x"
-          className="text-white w-8 h-8"
-        />
-        </Link>
-      </div>
-      
-      <div className="bg-red-600 w-[52px] h-[52px] rounded-full mb-4 flex justify-center items-center">
-      <Link href="tel:+919899264978" target='_blank'>
-        <FontAwesomeIcon
-          icon={faPhone}
-          size="2x"
-          className="text-white w-8 h-8"
-        />
-        </Link>
-      </div>
-    </div>
-  )}
-</div>
+    <Assistance/>
       <div className="relative xl:hidden">
         {/* Your existing content */}
 
