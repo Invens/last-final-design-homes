@@ -13,8 +13,8 @@ const FluidAnimation = () => {
         const fluid = WebGLFluid(canvasRef.current, {
           IMMEDIATE: true, // Initially set to true
           TRIGGER: 'hover', // Set trigger to hover
-          SIM_RESOLUTION: 128,
-          DYE_RESOLUTION: 1024,
+          SIM_RESOLUTION: 64,
+          DYE_RESOLUTION: 512,
           CAPTURE_RESOLUTION: 512,
           DENSITY_DISSIPATION: 2,
           VELOCITY_DISSIPATION: 0.3,
@@ -63,10 +63,10 @@ const FluidAnimation = () => {
       // Reinitialize fluid animation with IMMEDIATE set to true
       if (typeof window !== 'undefined') {
         import('webgl-fluid').then(({ default: WebGLFluid }) => {
-          const fluid = WebGLFluid(canvasRef.current, {
+          const newFluidAnimation = WebGLFluid(canvasRef.current, {
             IMMEDIATE: true, // Initially set to true
-            SIM_RESOLUTION: 128,
-            DYE_RESOLUTION: 1024,
+            SIM_RESOLUTION: 64,
+            DYE_RESOLUTION: 512,
             CAPTURE_RESOLUTION: 512,
             DENSITY_DISSIPATION: 2,
             VELOCITY_DISSIPATION: 0.3,
@@ -91,50 +91,32 @@ const FluidAnimation = () => {
             SUNRAYS: false,
             SUNRAYS_RESOLUTION: 196,
             SUNRAYS_WEIGHT: 1.0,
+            // Include other options here if needed
           });
+
+          // Destroy the previous animation
+          fluidAnimation.destroy();
+          // Set the new fluid animation instance
+          setFluidAnimation(newFluidAnimation);
+          setTriggered(true);
         });
       }
-      fluidAnimation.destroy(); // Destroy the previous animation
-      setFluidAnimation(newFluidAnimation); // Set the new fluid animation instance
-      setTriggered(true);
     } else if (scrollPercentage >= 20 && triggered) {
       // Reinitialize fluid animation with IMMEDIATE set to false
       if (typeof window !== 'undefined') {
         import('webgl-fluid').then(({ default: WebGLFluid }) => {
-          const fluid = WebGLFluid(canvasRef.current, {
-            IMMEDIATE: flase, // Initially set to true
-            SIM_RESOLUTION: 128,
-            DYE_RESOLUTION: 1024,
-            CAPTURE_RESOLUTION: 512,
-            DENSITY_DISSIPATION: 2,
-            VELOCITY_DISSIPATION: 0.3,
-            PRESSURE: 0.8,
-            PRESSURE_ITERATIONS: 10,
-            CURL: 30,
-            SPLAT_RADIUS: 0.15,
-            SPLAT_FORCE: 4000,
-            SPLAT_COUNT: Number.parseInt(Math.random() * 1) + 2,
-            SHADING: true,
-            COLORFUL: true,
-            COLOR_UPDATE_SPEED: 10,
-            PAUSED: false,
-            BACK_COLOR: { r: 4, g: 4, b: 2 },
-            TRANSPARENT: true,
-            BLOOM: false,
-            BLOOM_ITERATIONS: 2,
-            BLOOM_RESOLUTION: 256,
-            BLOOM_INTENSITY: 0.5,
-            BLOOM_THRESHOLD: 0.6,
-            BLOOM_SOFT_KNEE: 0.3,
-            SUNRAYS: false,
-            SUNRAYS_RESOLUTION: 196,
-            SUNRAYS_WEIGHT: 1.0,
+          const newFluidAnimation = WebGLFluid(canvasRef.current, {
+            IMMEDIATE: false, // Initially set to false
+            // Include other options here if needed
           });
+
+          // Destroy the previous animation
+          fluidAnimation.destroy();
+          // Set the new fluid animation instance
+          setFluidAnimation(newFluidAnimation);
+          setTriggered(false);
         });
       }
-      fluidAnimation.destroy(); // Destroy the previous animation
-      setFluidAnimation(newFluidAnimation); // Set the new fluid animation instance
-      setTriggered(false);
     }
   };
 
