@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           <Provider store={store}>
             <SpaceProvider>
               {/* Overlay Animation */}
-              <div
+              {/* <div
                 style={{
                   top: 0,
                   left: 0,
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
                 }}
               >
                 <Animation ref={animationCanvasRef} />
-              </div>
+              </div> */}
               {/* Content */}
               <div style={{position: 'relative'}}>{children}</div>
             </SpaceProvider>
