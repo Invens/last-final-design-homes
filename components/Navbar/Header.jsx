@@ -1827,9 +1827,9 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <div className="ml-[100px] absolute right-[150px] mb-2"><ColorSwitchD /></div>
-                
+                <div className="absolute ml-[120px] right-[80px] mb-2"><ColorSwitchD /></div>
               </nav>
+             
             </div>
           </div>
         </div>

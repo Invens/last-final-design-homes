@@ -447,8 +447,8 @@ export class Footer extends Component {
 
             <div class="">
               <div class="text-black w-full flex items-center justify-center">
-                <button class="lg:px-[300px] lg:py-[100px] sm:px-[200px]  sm:py-[100px] display-center run rounded-full border-dotted border-2 border-black hover:bg-black hover:text-white">
-                  <a href="tel:+919899264978" class="lg:text-[100px] sm:text-[100px]">
+                <button class="lg:text-[100px] sm:text-[100px] lg:px-[300px] lg:py-[100px] sm:px-[200px]  sm:py-[100px] display-center run rounded-full border-dotted border-2 border-black hover:bg-black hover:text-white">
+                  <a href="tel:+919899264978" >
                     Call Us Today! <br />
                     <span class="button2 pb-4 lg:text-lg sm:text-[10px] font-bold">
                       We can talk about how big this button is.
