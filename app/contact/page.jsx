@@ -151,11 +151,7 @@ const TopFormSection = () => {
         />
         <h1 className="text-4xl font-bold mb-2">SOMETHING TOGETHER</h1>
         <p className="text-gray-600 text-xs mt-8">
-          Connect with India&apos;s Largest Wardrobe & Interior Brand. We assure
-          you 100% guaranteed quotes across Town. With Our 16 years of expertise
-          & a dedicated team of professionals, We are the Most Reliable Brand
-          favoured by Architects, interior Designers & Leading Township
-          Developers.
+        Connect with India&apos;s Largest Modular Interior & Architectural Brand. We assure you 100% Guaranteed Quotes across The Town. With Our 16 years Expertise & a dedicated Team of Professionals, We are the Most Reliable and Referred Brand favoured by Top Architects, Interior Designers, Leading Township Developers, Trading Brands, Retailers and Our Clients.
         </p>
       </div>
       {/* Right side form */}

@@ -6,6 +6,7 @@ import Form from './form'
 import ContactForm from '../../components/ContactForm/page'
 import Image from 'next/image'
 import ScheduleChatSection from '../../components/schedule-chat/page'
+import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 
 
 const page = () => {
@@ -34,10 +35,14 @@ const page = () => {
         }}
       ></div>
     </section>
-        <p className="text-md font-bold text-center mb-16 mt-8">
+    <MaxWidthWrapper>
+      <div className='flex justify-center'>
+        <p className="text-lg font-bold mb-16 mt-8 text-center">
         At The Design Indian Homes Brand, we make sure to provide a smooth, Hassle-free experience for our Clients residing abroad or those who are seniors. We make sure to give them daily based site reports, video calls and all approvals are taken beforehand for smooth transition of materials. All Our sites have dedicated supervisors, who are very proficient in their works and work with clients on a Hands-On Approach. 
         A Carefree and Reliable Work Experience .. ! Isn&apos;t.....
         </p>
+        </div>
+        </MaxWidthWrapper>
       </div>
       <div className="bg-amber-50">
         <Form />

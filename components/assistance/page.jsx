@@ -33,7 +33,7 @@ const Assistance = () => {
 
   return (
     <div
-      className="fixed bottom-0 right-4 flex flex-col items-center mb-4"
+      className="fixed bottom-0 right-4 flex flex-col items-center mb-[100px]"
       style={{ zIndex: '800' }}
     >
       <div className="flex flex-row justify-center items-start">
@@ -59,7 +59,7 @@ const Assistance = () => {
       </div>
 
       {isVisible && (
-        <div className="absolute bottom-12 right-[-8px] rounded-lg p-4">
+        <div className="absolute bottom-12 right-[-14px] rounded-lg p-4">
           <div className="border-2 bg-white cursor-pointer border-black w-12 h-12 rounded-full mb-4 flex justify-center items-center">
             <a href="https://wa.me/9899264978">
               <WhatsAppIcon sx={{ fontSize: 40 }} />

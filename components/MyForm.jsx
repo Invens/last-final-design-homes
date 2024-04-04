@@ -101,7 +101,11 @@ React.useEffect(() => {
 }, [])
 
   return (
-    <div className="flex flex-col sm:flex-row lg:mx-16">
+    <> 
+    <div className='flex justify-center'>
+      <h1 className='text-4xl font-bold uppercase text-center'>Connect with us <span className='text-black underline'>Today</span></h1>
+    </div>
+    <div className="flex flex-col sm:flex-row lg:mx-16 mt-8">
       {/* Left side with heading and paragraph */}
       <div className="sm:w-1/2 p-4">
         <h1 className="absolute text-2xl sm:text-3xl font-bold mb-4 text-white ml-2 mt-2 lg:w-[50vw] sm:w-[20vw]">
@@ -223,7 +227,7 @@ React.useEffect(() => {
                     htmlFor="requirements"
                     className="block text-sm font-medium text-gray-900"
                   >
-                    Are you
+                    Interested In ??
                   </label>
                   <select
                     required
@@ -233,13 +237,31 @@ React.useEffect(() => {
                     onChange={handleChange}
                     defaultValue="Architect"
                   >
-                    <option value="Architect" selected>
-                      an Architect
-                    </option>
-                    <option value="Designer">an Interior Designer</option>
-                    <option value="Builder">a Builder</option>
-                    <option value="Company">a Company</option>
-                    <option value="Freelancer ">a Freelancer </option>
+                   <option className="text-gray-400" value="" disabled selected>
+                  Interested in
+                </option>
+                <option value="Complete Modular Interiors">
+                  Complete Modular Interiors
+                </option>
+                <option value="End to End Interiors">
+                  End to End Interiors
+                </option>
+                <option value="Architectural Consultancy">
+                  Architectural Consultancy
+                </option>
+                <option value="Modular Kitchens">Modular Kitchens</option>
+                <option value="Wardrobes">Wardrobes</option>
+                <option value="Living or Bedroom Renovation">
+                  Living or Bedroom Renovation
+                </option>
+                <option value="Bathroom or Balcony Renovation">
+                  Bathroom or Balcony Renovation
+                </option>
+                <option value="Commercial Interiors">
+                  Commercial Interiors
+                </option>
+                <option value="Luxury Interiors">Luxury Interiors</option>
+
                   </select>
                 </div>
                 <div className="mb-4">
@@ -282,6 +304,7 @@ React.useEffect(() => {
          )}
       </div>
     </div>
+    </>
   )
 }
 

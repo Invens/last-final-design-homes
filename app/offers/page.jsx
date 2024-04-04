@@ -25,8 +25,8 @@ const ImageSection = () => {
       <Header />
       <MaxWidthWrapper className="mt-32 lg:mt-64">
         <div className="my-4 sm:my-16 mx-auto">
-          <h2 className="sm:text-2xl text-center">
-            PACKAGE OFFERS FOR FURNISHING 3BHK IN INDIA
+          <h2 className="sm:text-2xl font-bold text-center">
+          PACKAGE OFFERS FOR FURNISHING 3BHK IN INDIA - <br/> Choose From Our Exclusive Interior Packages - Tailor Made For YOU
           </h2>
         </div>
         <TopPriority id="top-priority"/>

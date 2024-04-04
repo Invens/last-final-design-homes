@@ -13,12 +13,7 @@
     }
   }
   
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    position: sticky;
-    top: 10%;
-  }
+
   
   #cards {
     position: sticky;

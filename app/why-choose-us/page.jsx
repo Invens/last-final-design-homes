@@ -41,10 +41,10 @@ const page = () => {
       <Header />
       <FullWidthSection />
       <div className="bg-amber-50 pt-8 sm:pt-16 pb-8 p-8s sm:p-16">
-        <p className="text-2xl text-center mb-16">
+        <p className="text-lg text-center mb-16">
         Compare Quotes With us & We assure you 100% Guaranteed prices than any vendor. With over 283+ architects, interior designers and builders partnered with us, we assure you better quotes with better materials than the rest. - OLD CHOOSE WISELY DATA - NEW 
        <br/>
-       <p className='mt-2'>  There&apos;s not 1 Reason but more than 16+ , the Most Imperative is that you will save on more than 30% of the cost by choosing us over any Trading Brand, since you will get the work directly through the source. 
+       <p className='mt-2 text-lg'>  There&apos;s not 1 Reason but more than 16+ , the Most Imperative is that you will save on more than 30% of the cost by choosing us over any Trading Brand, since you will get the work directly through the source. 
 We Are the Largest Manufactures for Modular Interiors, Top Brand For End to End Interior And Architectural Services, with more than 61+ Certified Architects and more than 100+ Interior Designers working on Projects. 
 Visit our Boutique Unit, See the quality and finishes for yourself, Check Our Designs, Our Portfolios on Instagram where we post our Delivered Sites, Our Workmanship, After All Seeing is Believing. Looking Forward to Serve You.</p>
      

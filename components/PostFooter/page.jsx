@@ -358,7 +358,7 @@ const PostFooter = () => {
   }, [])
   return (
     <>
-      <section className="view1 monuments relative">
+      <section className="relative">
         <div className=" mt-24 w-full h-full flex items-center justify-center">
           <p
             className="text-black font-bold md:text-6xl sm:text-4xl text-2xl text-shadow-lg"
@@ -368,13 +368,13 @@ const PostFooter = () => {
           </p>
         </div>
         <object
-          data="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/delhi-based.svg"
+          data="/images/flight.svg"
           title="Interactive SVG"
           type="image/svg+xml"
           className="w-full h-full"
         />
       </section>
-      <div className=" mt-24 pt-16 w-full h-full flex items-center justify-center bg-slate-100">
+      <div className="pt-[100px] mt-[-100px]  w-full h-full flex items-center justify-center bg-slate-100">
         <p
           className="text-black font-bold md:text-5xl sm:text-4xl text-2xl text-shadow-lg"
           style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)' }}
@@ -388,7 +388,7 @@ const PostFooter = () => {
         <ThirdForm />
       </div>
 
-      <div class="container m-auto p-8 text-grey-darkest">
+      <div class="container !relative m-auto p-8 text-grey-darkest">
         <div class="flex flex-wrap -mx-2 mb-8">
           <div class="w-full md:w-1/2 lg:w-1/4 px-2 mb-4 ">
             <div class="video-sec">
@@ -413,7 +413,7 @@ const PostFooter = () => {
             </div>
           </div>
 
-          <div class="w-full lg:w-1/2 px-2 py-20 max-[600px]:py-10">
+          <div class="w-full lg:w-1/2 px-2 py-20 max-[600px]:py-10 ">
             <div class=" h-12 text-lg text-grey-dark flex items-center text-center justify-center">
               <p>The Pioneers in the Modular Kitchen Industry</p>
             </div>

@@ -154,9 +154,7 @@ const Page = ({}) => {
         </div>
       </div>
 
-      <div className="bg-red-500 p-16 mb-16">
-        <MyForm />
-      </div>
+      
 
       <Footer />
     </>

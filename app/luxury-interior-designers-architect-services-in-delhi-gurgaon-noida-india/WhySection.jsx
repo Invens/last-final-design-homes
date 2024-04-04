@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import MaxWidthWrapper from '../../components/MaxWidthWrapper'
 import Stepper from '../../components/Stepper/page'
-import Step from '../../components/steps/page'
+import Step from '../../app/luxury-interior-designers-architect-services-in-delhi-gurgaon-noida-india/step/page'
 const ThreeColumnSection = () => {
   // const [isAnimating, setIsAnimating] = useState(false);
   // const containerRef = useRef(null);

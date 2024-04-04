@@ -1635,21 +1635,21 @@ const Header = () => {
             </div>
           )}
 
-          <div className="animated-bg text-black absolute sticky top-0 ">
-            <div className="flex justify-center gap-80 ">
+          <div className="animated-bg text-black  sticky top-0 ">
+            <div className="flex justify-center gap-80 mt-2">
               <div className="flex ml-0 gap-2 w-[100px]">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="text-xs text-black mt-2 w-[24px]"
+                  className="text-sm text-black mt-2 w-[24px]"
                 />{' '}
                 <a
-                  className="text-xs text-black font-bold mt-2"
+                  className="text-sm text-black font-bold mt-2"
                   href="tel:+919899264978"
                 >
                   Call Us
                 </a>{' '}
               </div>
-              <div className="flex gap-4 md:text-xs text-black mt-2">
+              <div className="flex gap-4 md:text-sm text-black mt-2">
                 <Link href="/book-a-interior-design-visit">
                   {' '}
                   <p>Book a Visit</p>

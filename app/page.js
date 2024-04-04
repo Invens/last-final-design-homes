@@ -42,10 +42,7 @@ export default function Home() {
       <TabsSection />
       <EndToEndImageGrid />
       <FAQ />
-      {/* <div className="bg-red-500 p-4 dark:text-white">
-        <MyForm />
-      </div> */}
-      {/* <PostFooter /> */}
+    
       <Footer />
     </main>
   )

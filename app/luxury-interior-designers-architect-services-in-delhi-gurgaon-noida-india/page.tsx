@@ -20,7 +20,7 @@ const page = () => {
     <>
       <Omsairam />
       <Header />
-      <MyForm />
+       <MyForm/>
       <WhySection />
 {/*       
       <CardFlip /> */}
