@@ -16,18 +16,7 @@ import {
 import { faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons'
 import {
   faPhone,
-  faLightbulb,
   faHome,
-  faBuilding,
-  faUtensils,
-  faEnvelope,
-  faTimes,
-  faComment,
-  faCouch,
-  faWrench,
-  faChevronDown,
-  faQuoteRight,
-  faCog,
 } from '@fortawesome/free-solid-svg-icons'
 import './Omsai.css'
 import Link from 'next/link'
@@ -1600,8 +1589,8 @@ const Header = () => {
     }
   }, [mobileMenuVisible])
   return (
-    <div className={`bg-white  ${scrollDirection === 'down'}`}>
-      <div className=" invisible xl:visible lg:flex">
+    <div className={` bg-white  ${scrollDirection === 'down'}`}>
+      <div className="z-[200] invisible xl:visible lg:flex">
         {/* Desktop Header */}
         <div
           className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
@@ -1609,6 +1598,7 @@ const Header = () => {
           style={{
             position: 'fixed',
             top: 30,
+            
             marginTop: 0,
           }}
         >
