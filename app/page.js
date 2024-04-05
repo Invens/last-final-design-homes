@@ -14,8 +14,9 @@ const MyForm = dynamic(() => import('../components/MyForm'));
 const PostFooter = dynamic(() => import('../components/PostFooter/page'));
 const Footer = dynamic(() => import('../components/Footer/Footer'));
 const ColorSwitch = dynamic(() => import('../components/ColorSwitch/page'));
-
+import Animation from '../app/animation/page'
 import '../style/hero.css';
+
 const Hero = dynamic(() => import('../components/Collection/Hero'));
 
 // const bioRhyme = BioRhyme({
@@ -26,7 +27,9 @@ const Hero = dynamic(() => import('../components/Collection/Hero'));
 
 export default function Home() {
   return (
-    <main style={{zIndex: '10'}}>
+    <>
+    {/* <Animation/> */}
+    <main>
       <Omsairam />
       <Header />
       <div>
@@ -45,5 +48,6 @@ export default function Home() {
     
       <Footer />
     </main>
+    </>
   )
 }
