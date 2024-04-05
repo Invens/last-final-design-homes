@@ -1626,7 +1626,7 @@ const Header = () => {
           )}
 
           <div className="animated-bg text-black  sticky top-0 ">
-            <div className="flex justify-center gap-80 mt-2">
+            <div className="flex justify-center gap-72 mt-2">
               <div className="flex ml-0 gap-2 w-[100px]">
                 <FontAwesomeIcon
                   icon={faPhone}
@@ -1817,7 +1817,7 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <div className="absolute ml-[120px] right-[80px] mb-2"><ColorSwitchD /></div>
+                <div className="absolute ml-[140px] right-[50px] mb-2"><ColorSwitchD /></div>
               </nav>
              
             </div>
