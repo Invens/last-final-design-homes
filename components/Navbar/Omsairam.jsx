@@ -28,7 +28,7 @@ const Omsairam = () => {
           //   backgroundColor: 'black',
           // }}
         >
-          <div className="inline-block text-lg ">
+          <div className="inline-block text-[15px] ">
             {' '}
             🙂 Largest Interior & Architectural Brand Across Noida - Delhi - NCR 🙂 Bring Us any Quote & Take Flat 7% Off. 100% Guaranteed Quotes for all Modular Interiors, End To End Interiors & Architectural Solutions.
           </div>
