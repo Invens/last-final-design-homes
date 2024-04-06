@@ -37,14 +37,47 @@ const SvgMap = ({ data, name }) => {
       Flooring: { pricePerSqFt: 450 },
     },
   }
+
+  const descriptions = {
+    premium: {
+      Walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      falseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      Console: 'Designer furniture element - Ready made Price range upto Rs.15,000/-',
+      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      ShoeRack: 'Standard HDHMR shoe rack including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      Electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+
+    },
+    luxury: {
+      Walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      falseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Console: 'Designer furniture element - Ready made Price range upto Rs.25,000/-',
+      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      Door: 'Flush door with hardware, both side veneer with polish, and Chaukhat repairing & polishing Door 35mm hardwood (upto Rs. 125/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.2,500/-)',
+      ShoeRack: 'Standard shoe rack including hardware, laminates on carcass and shutters',
+      Electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+
+    },
+    ultraLuxury: {
+      Walls: 'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
+      falseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Console: 'Designer furniture element - Ready made Price range upto Rs.40,000/-',
+      Flooring: 'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
+      Door: 'Flush door with hardware, both side veneer with polish / HDHMR with PU, and new marandi Chaukhat with mouldings Door 35mm Bhutan Tuff (upto Rs. 165/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.3,500/-)',
+      ShoeRack: 'Standard shoe rack including hardware, laminates on carcass and shutters',
+      Electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+
+
+    },
+    // Add descriptions for other packages...
+  };
   const initialSquareFootage = {
     falseCeiling: 40,
-    Electrical: 0,
     Flooring: 40,
     ShoeRack: 1,
     Walls: 98,
     Console: 1,
-    Door: 0,
   }
   console.log('data: ', data)
   console.log('name: ', name)
@@ -56,7 +89,7 @@ const SvgMap = ({ data, name }) => {
   const [roomPrice, setRoomPrice] = useState(0)
   // let roomPrice = 0
 
- 
+
   const updateData = () => {
     setUpdatedData((prevData) =>
       prevData.map((item) =>
@@ -146,8 +179,8 @@ const SvgMap = ({ data, name }) => {
         parseFloat(roomPrice) - parseFloat(priceOfSelectedPolygon) // subtract old price
       setRoomPrice(
         updatedRoomPrice +
-          parseFloat(newSquareFootage) *
-            parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
+        parseFloat(newSquareFootage) *
+        parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
       ) // add new price
       updateData() // Update the data after room price is updated
     }
@@ -181,13 +214,11 @@ const SvgMap = ({ data, name }) => {
       <button
         key={tabName}
         onClick={() => handleTabChange(tabName)}
-        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${
-          isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
-        } ${
-          isActive
+        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
+          } ${isActive
             ? 'hover:bg-green-600 hover:text-white'
             : 'hover:bg-gray-200 hover:text-black'
-        }`}
+          }`}
       >
         {tabName}
       </button>
@@ -563,13 +594,16 @@ const SvgMap = ({ data, name }) => {
             >
               <div className="float-left">
                 <span>{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                )}
                 {polygon === 'Flooring' ||
-                polygon === 'flooring' ||
-                polygon === 'walls' ||
-                polygon === 'Console' ||
-                polygon == 'ShoeRack' ||
-                polygon === 'falseCeiling' ||
-                polygon === 'Walls' ? (
+                  polygon === 'flooring' ||
+                  polygon === 'walls' ||
+                  polygon === 'Console' ||
+                  polygon == 'ShoeRack' ||
+                  polygon === 'falseCeiling' ||
+                  polygon === 'Walls' ? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
                     onClick={() => handleEditSquareFootage(polygon)}
@@ -577,6 +611,11 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
+                {selectedPackage && (
+                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                    {descriptions[selectedPackage]?.[polygon]}
+                  </div>
+                )}
               </div>
               <div></div>
               <div className="float-right">

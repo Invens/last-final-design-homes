@@ -9,26 +9,26 @@ const SvgMap = ({ data, name }) => {
   const router = useRouter()
   const pricing = {
     premium: {
-      falseCeiling: { pricePerSqFt: 175 },
-      walls: { pricePerSqFt: 50 },
-      bed: { price: 47000 },
-      wardrobe: { pricePerSqFt: 1250 },
-      sofa: { price: 30000 },
-      flooring: { pricePerSqFt: 170 },
+      falseCeiling: { pricePerSqFt: 180 },
+      walls: { pricePerSqFt: 53 },
+      bed: { price: 47500 },
+      wardrobe: { pricePerSqFt: 1380 },
+      sofa: { price: 32850 },
+      flooring: { pricePerSqFt: 175 },
       door: { price: 19500 },
-      upvcWindow: { pricePerSqFt: 700 },
-      tvpanel: { pricePerSqFt: 950 },
+      upvcWindow: { pricePerSqFt: 780 },
+      tvpanel: { pricePerSqFt: 980 },
       studyTable: { price: 15000 },
-      electrical: { price: 7000 },
-      sideTables: { price: 7000 },
-      armchair: { price: 14000 },
+      electrical: { price: 7500 },
+      sideTables: { price: 7800 },
+      armchair: { price: 14800 },
       // Add other elements as needed
     },
     luxury: {
       falseCeiling: { pricePerSqFt: 200 },
       walls: { pricePerSqFt: 60 },
-      bed: { price: 65000 },
-      wardrobe: { pricePerSqFt: 1550 },
+      bed: { price: 64500 },
+      wardrobe: { pricePerSqFt: 1650 },
       sofa: { price: 43000 },
       flooring: { pricePerSqFt: 210 },
       door: { price: 24500 },
@@ -36,7 +36,7 @@ const SvgMap = ({ data, name }) => {
       tvpanel: { pricePerSqFt: 1350 },
       studyTable: { price: 28000 },
       electrical: { price: 14000 },
-      sideTables: { price: 11000 },
+      sideTables: { price: 11500 },
       armchair: { price: 19000 },
       // Add other elements as needed
     },
@@ -46,7 +46,7 @@ const SvgMap = ({ data, name }) => {
       bed: { price: 94000 },
       wardrobe: { pricePerSqFt: 1850 },
       sofa: { price: 74000 },
-      flooring: { pricePerSqFt: 450 },
+      flooring: { pricePerSqFt: 490 },
       door: { price: 35500 },
       upvcWindow: { pricePerSqFt: 1450 },
       tvpanel: { pricePerSqFt: 1780 },
@@ -57,7 +57,55 @@ const SvgMap = ({ data, name }) => {
       // Add other elements as needed
     },
   }
-
+  const descriptions = {
+    premium: {
+      falseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      bed: 'Standard plywood bed with box storage, laminate finish and fabric bed backPlywood (upto Rs. 55/-) | Laminate 0.8mm (Skydecor or similar) | Fabric (upto Rs. 400/-)',
+      walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      tvpanel: 'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      wardrobe: 'Standard HDHMR wardrobe including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',  
+      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      sofa: '3 seat Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
+      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      armchair: "Teak and Marandi chair with upholstery and foam. Foam (Soft HR) | Fabric (Upto Rs. 450/- per mtr)",
+      sideTables: 'Side tables with laminate finish HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+      electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      studyTable: 'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 1mm Laminate (Merino or similar)',
+      // Add descriptions for other components...
+    },
+    luxury: {
+      falseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      bed: 'Standard plywood bed with box storage, veneer finish with polish and fabric bed back Plywood (upto Rs. 55/-) | Laminate 0.8mm (Merino or similar) | Fabric (upto Rs. 700/-)',
+      walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      tvpanel: 'Standard HDHMR TV panel including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',
+      wardrobe: 'Standard HDHMR wardrobe including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',  
+      upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar',
+      sofa: 'Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 650 per mtr)',
+      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-',
+      door: 'Flush door with hardware, both side veneer with polish, and Chaukhat repairing & polishing Door 35mm hardwood (upto Rs. 125/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.2,500/-)',
+      armchair: "Teak and Marandi chair with upholstery and foam. Foam (High Density) | Fabric (Upto Rs. 650/- per mtr)",
+      sideTables: 'Side tables with Veneer finish and melamine polish HDHMR (Crossbond or similar) | Hardware (Ozone or similar)',
+      electrical: 'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
+      studyTable: 'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Action Tesa or similar) | Hardware ( Hettich or similar) | 1mm Laminate (Merino or similar))',
+    },
+    ultraLuxury: {
+      bed: 'Standard plywood bed with hydraulic box storage, veneer finish with polish or HDHMR with PU and fabric bed back. Plywood (upto Rs. 65/-) | Laminate 0.8mm (Merino or similar) | Fabric (upto Rs. 1000/-)',
+      falseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element. POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      walls: 'Premium paint with POP finish and one rustic / textured wall. POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
+      tvpanel: 'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters. Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
+      wardrobe: 'Standard wardrobe including hardware, laminates on carcass, veneer / PU polish on shutters. Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
+      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile. UPVC (Fenesta or similar)',
+      sofa: 'Marandi wood and Fabric sofa. Foam (High Density - 40 GSM) | Faric (upto Rs. 750 per mtr)',
+      flooring: 'Italian store flooring with installation and Diamond polish. Italian stone (Price range upto Rs. 350/-)',
+      door: 'Flush door with hardware, both side veneer with polish / HDHMR with PU, and new marandi Chaukhat with mouldings. Door 35mm Bhutan Tuff (upto Rs. 165/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.3,500/-)',
+      armchair: 'Teak and Marandi chair with upholstery and foam. Foam (High Density, Soft) | Fabric (Upto Rs. 750/- per mtr)',
+      sideTables: 'Side tables with Veneer or HDHMR finish and PU polish. HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+      electrical: 'Electrical work with new points, relocation including switches & boards. Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+      studyTable: 'Study table with 2 floating sleek drawers and wall cabinets with glass shutters. Veneer with PU polish. HDHMR (Action Tesa or similar) | Hardware ( Hettich or similar)',
+    },
+    
+  };
   const initialSquareFootage = {
     wardrobe: 54,
     flooring: 143,
@@ -65,6 +113,7 @@ const SvgMap = ({ data, name }) => {
     tvpanel: 42,
     upvcWindow: 64,
     falseCeiling: 143,
+
 
     // Add other spaces as needed
   }
@@ -782,51 +831,60 @@ const SvgMap = ({ data, name }) => {
         </svg>
 
         <div className="mt-8">
-          {selectedPolygon.map((polygon) => (
-            <div
-              className="flow-root"
-              key={polygon}
-              style={{
-                border: '1px solid #000',
-                borderRadius: '5px',
-                padding: '20px',
-                marginBottom: '10px',
-                marginLeft: '20px',
-                marginRight: '20px',
-                backgroundColor: 'white',
-                marginTop: '10px',
-              }}
-            >
-              <div className="float-left">
-                <span>{polygon} </span>
-                {polygon === 'wardrobe' ||
-                polygon === 'flooring' ||
-                polygon === 'walls' ||
-                polygon === 'tvpanel' ||
-                polygon == 'upvcWindow' ||
-                polygon === 'falseCeiling' ? (
-                  <span
-                    style={{ cursor: 'pointer', fontSize: '12px' }}
-                    onClick={() => handleEditSquareFootage(polygon)}
-                  >
-                    ✏️ Edit
-                  </span>
-                ) : null}
-              </div>
-              <div></div>
-              <div className="float-right">
-                {pricing[selectedPackage]?.[polygon]?.pricePerSqFt ? (
-                  <span style={{ color: 'green', fontSize: '20px' }}>
-                    ₹{calculateSpacePrice(polygon, selectedPackage)}
-                  </span>
-                ) : (
-                  <span style={{ color: 'green', fontSize: '20px' }}>
-                    ₹{pricing[selectedPackage]?.[polygon]?.price.toFixed(2)}
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
+        {selectedPolygon.map((polygon) => (
+  <div
+    className="flow-root"
+    key={polygon}
+    style={{
+      border: '1px solid #000',
+      borderRadius: '5px',
+      padding: '20px',
+      marginBottom: '10px',
+      marginLeft: '20px',
+      marginRight: '20px',
+      backgroundColor: 'white',
+      marginTop: '10px',
+    }}
+  >
+    <div className="float-left">
+      <span className='font-bold text-lg capitalize'>{polygon} </span>
+      {editableSquareFootage[polygon] && (
+        <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+      )}
+      {polygon === 'wardrobe' ||
+      polygon === 'flooring' ||
+      polygon === 'walls' ||
+      polygon === 'tvpanel' ||
+      polygon === 'upvcWindow' ||
+      polygon === 'falseCeiling' ? (
+        <span
+          style={{ cursor: 'pointer', fontSize: '12px', marginLeft: '5px' }}
+          onClick={() => handleEditSquareFootage(polygon)}
+        >
+          ✏️ Edit
+        </span>
+      ) : null}
+      {selectedPackage && (
+        <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+          {descriptions[selectedPackage]?.[polygon]}
+        </div>
+      )}
+    </div>
+    <div></div>
+    <div className="float-right">
+      {pricing[selectedPackage]?.[polygon]?.pricePerSqFt ? (
+        <span style={{ color: 'green', fontSize: '20px' }}>
+          ₹{calculateSpacePrice(polygon, selectedPackage)}
+        </span>
+      ) : (
+        <span style={{ color: 'green', fontSize: '20px' }}>
+          ₹{pricing[selectedPackage]?.[polygon]?.price.toFixed(2)}
+        </span>
+      )}
+    </div>
+  </div>
+))}
+
         </div>
 
         <div></div>

@@ -240,15 +240,7 @@ const FourthStep = () => {
         </div>
         <h2 className="text-xl font-bold m-4">Documents</h2>
         <div>
-          {/* <div className="bg-white rounded-lg flex justify-between p-4 m-4">
-          <p>Project Budget</p>
-          <button className="flex items-center text-blue-500">
-            <span className="mr-2">
-              <Download className="h-4 w-4" />
-            </span>
-            Download
-          </button>
-        </div> */}
+        
           <div className="bg-white rounded-lg flex justify-between p-4 m-4">
             <p>Project Scope</p>
             <button
@@ -302,64 +294,7 @@ const FourthStep = () => {
 
         {/* Add your form inputs for editing the spaceName */}
         <FormWithOTPVerification handleDownloadPDF={handleDownloadPDF} />
-        {/* <form className="space-y-4" onSubmit={handleDownloadPDF}>
-          <div>
-            <input
-              type="text"
-              id="nameInput"
-              placeholder="Enter your name"
-              className="border-2 border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              id="addressInput"
-              placeholder="Enter your address"
-              className="border-2 border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <input
-              type="text"
-              id="numberInput"
-              placeholder="Enter your number"
-              className="border-2 border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <input
-              type="email"
-              id="emailInput"
-              placeholder="Enter your email"
-              className="border-2 border-gray-300 rounded-md p-2 w-full"
-            />
-          </div>
-          <div>
-            <label htmlFor="interestedInInput" className="text-gray-600 block">
-              Interested In:
-            </label>
-            <select
-              id="interestedInInput"
-              className="border-2 border-gray-300 rounded-md p-2 w-full"
-            >
-              <option value="">Select an option</option>
-              <option value="Renovation">Renovation</option>
-              <option value="Kitchen Work">Kitchen Work</option>
-              <option value="Wardrobe Work">Wardrobe Work</option>
-              <option value="House Work">House Work</option>
-            </select>
-          </div>
-
-          <div className="flex w-full justify-center">
-            <button
-              type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-700 w-full"
-            >
-              Download
-            </button>
-          </div>
-        </form> */}
+      
       </Modal>
     </div>
   )
