@@ -111,7 +111,7 @@ const FourthStep = () => {
   
     try {
       // Send form data to the server to handle email sending
-      const response = await axios.post('https://m.designindianhomes.com/submitForm',{
+      const response = await axios.post('https://m.designindianhomes.com/CalculatortForm',{
         formData: formDataJSON, // Send stringified formData
         pdfData: pdfDataJSON, // Send stringified pdfData
       });
