@@ -16,18 +16,7 @@ import {
 import { faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons'
 import {
   faPhone,
-  faLightbulb,
   faHome,
-  faBuilding,
-  faUtensils,
-  faEnvelope,
-  faTimes,
-  faComment,
-  faCouch,
-  faWrench,
-  faChevronDown,
-  faQuoteRight,
-  faCog,
 } from '@fortawesome/free-solid-svg-icons'
 import './Omsai.css'
 import Link from 'next/link'
@@ -1600,8 +1589,8 @@ const Header = () => {
     }
   }, [mobileMenuVisible])
   return (
-    <div className={`bg-white  ${scrollDirection === 'down'}`}>
-      <div className=" invisible xl:visible lg:flex">
+    <div className={` bg-white  ${scrollDirection === 'down'}`}>
+      <div className="z-[200] invisible xl:visible lg:flex">
         {/* Desktop Header */}
         <div
           className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
@@ -1609,6 +1598,7 @@ const Header = () => {
           style={{
             position: 'fixed',
             top: 30,
+            
             marginTop: 0,
           }}
         >
@@ -1636,7 +1626,7 @@ const Header = () => {
           )}
 
           <div className="animated-bg text-black  sticky top-0 ">
-            <div className="flex justify-center gap-80 mt-2">
+            <div className="flex justify-center gap-72 mt-2">
               <div className="flex ml-0 gap-2 w-[100px]">
                 <FontAwesomeIcon
                   icon={faPhone}
@@ -1827,7 +1817,7 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <div className="absolute ml-[120px] right-[80px] mb-2"><ColorSwitchD /></div>
+                <div className="absolute ml-[140px] right-[50px] mb-2"><ColorSwitchD /></div>
               </nav>
              
             </div>
@@ -1838,12 +1828,12 @@ const Header = () => {
       {/* {bottom menu} */}
 
     <Assistance/>
-      <div className="relative xl:hidden">
+      <div className="relative xl:hidden" style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
 
         {/* Bottom Navigation Bar */}
-        <div className="fixed bottom-0 left-0 w-full" style={{ zIndex: '800' }}>
+        <div className="fixed bottom-0 left-0 w-full" >
           <div
             className={`bg-white bg-white text-black w-full h-16 flex items-center justify-around`}
           >
@@ -3731,16 +3721,19 @@ const Header = () => {
                         justifyContent: 'center',
                       }}
                     >
+                      <Link href="https://www.instagram.com/designindiankitchen/?hl=en" target="_blank">
                       <SocialIcon
                         network="instagram"
-                        url="www.vimeo.com"
                         style={{ width: '10rem', height: '10rem' }}
                       />
+                      </Link>
+                      <Link href="https://www.facebook.com/designindiankitchen/" target="_blank">
                       <SocialIcon
                         network="facebook"
-                        url="www.vimeo.com"
                         style={{ width: '10rem', height: '10rem' }}
                       />
+                      
+                      </Link>
                     </div>
 
                     <div
@@ -3751,16 +3744,18 @@ const Header = () => {
                         justifyContent: 'center',
                       }}
                     >
+                      <Link href="https://twitter.com/indiankitchens" target="_blank">
                       <SocialIcon
                         network="twitter"
-                        url="www.vimeo.com"
                         style={{ width: '10rem', height: '10rem' }}
                       />
+                      </Link>
+                      <Link href="https://www.youtube.com/channel/UCqkIRwI6EL9QmaTZHYm6Hug" target="_blank">
                       <SocialIcon
                         network="youtube"
-                        url="www.vimeo.com"
                         style={{ width: '10rem', height: '10rem' }}
                       />
+                      </Link>
                     </div>
                   </div>
                   <div>
