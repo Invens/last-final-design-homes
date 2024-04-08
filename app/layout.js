@@ -61,11 +61,11 @@ export default function RootLayout({ children }) {
           <Provider store={store}>
             <SpaceProvider>
               {/* Overlay Animation */}
-              <div
+              {/* <div
               
               >
                 <Animation />
-              </div>
+              </div> */}
               {/* Content */}
               <div>{children}</div>
             </SpaceProvider>
