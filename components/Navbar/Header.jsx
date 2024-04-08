@@ -1828,12 +1828,12 @@ const Header = () => {
       {/* {bottom menu} */}
 
     <Assistance/>
-      <div className="relative xl:hidden">
+      <div className="relative xl:hidden" style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
 
         {/* Bottom Navigation Bar */}
-        <div className="fixed bottom-0 left-0 w-full" style={{ zIndex: '800' }}>
+        <div className="fixed bottom-0 left-0 w-full" >
           <div
             className={`bg-white bg-white text-black w-full h-16 flex items-center justify-around`}
           >
