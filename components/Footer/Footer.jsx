@@ -29,7 +29,7 @@ const DesignDropdown = ({
   }
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative text-left w-64">
       <button className="focus:outline-none" onClick={toggleDropdown}>
         <span className="cursor-pointer text-black hover:text-blue-700 font-bold">
           {heading}

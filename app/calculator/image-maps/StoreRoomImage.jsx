@@ -35,11 +35,39 @@ const SvgMap = ({ data, name }) => {
     },
   }
 
+
+  const descriptions = {
+    premium: {
+      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (AIS or Veka or similar)',
+      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      Walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      Electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      FalseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)'
+
+    },
+    luxury: {
+      upvcWindow: "Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)",
+      Flooring: "Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32\"X64\" (Price range Rs. 80-100/-)",
+      Walls: "Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)",
+      Door: "Flush door with hardware, both side veneer with polish, and Chaukhat repairing & polishing Door 35mm hardwood (upto Rs. 125/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.2,500/-)",
+      Electrical: "Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)",
+      FalseCeiling: "POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)"
+    },
+    ultraLuxury: {
+      upvcWindow: "Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)",
+      Flooring: "Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)",
+      Walls: "Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)",
+      Door: "Flush door with hardware, both side veneer with polish / HDHMR with PU, and new marandi Chaukhat with mouldings Door 35mm Bhutan Tuff (upto Rs. 165/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.3,500/-)",
+      Electrical: "Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)",
+      FalseCeiling: "POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)"
+    },
+    // Add descriptions for other packages...
+  };
+
   const initialSquareFootage = {
     FalseCeiling: 64,
-    electrical: 1,
     Flooring: 64,
-    Door: 0,
     upvcWindow: 48,
     Walls: 156,
   }
@@ -143,8 +171,8 @@ const SvgMap = ({ data, name }) => {
         parseFloat(roomPrice) - parseFloat(priceOfSelectedPolygon) // subtract old price
       setRoomPrice(
         updatedRoomPrice +
-          parseFloat(newSquareFootage) *
-            parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
+        parseFloat(newSquareFootage) *
+        parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
       ) // add new price
       updateData() // Update the data after room price is updated
     }
@@ -170,7 +198,7 @@ const SvgMap = ({ data, name }) => {
 
     // Update the data
     updateData()
-  } 
+  }
   const renderTab = (tabName) => {
     const isActive = selectedPackage === tabName
 
@@ -178,13 +206,11 @@ const SvgMap = ({ data, name }) => {
       <button
         key={tabName}
         onClick={() => handleTabChange(tabName)}
-        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${
-          isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
-        } ${
-          isActive
+        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
+          } ${isActive
             ? 'hover:bg-green-600 hover:text-white'
             : 'hover:bg-gray-200 hover:text-black'
-        }`}
+          }`}
       >
         {tabName}
       </button>
@@ -531,14 +557,17 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span>{polygon} </span>
+                <span className='font-bold text-lg capitalize'>{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                )}
                 {polygon === 'FalseCeiling' ||
-                polygon === 'Flooring' ||
-                polygon === 'Walls' ||
-                polygon === 'crockeryUnit' ||
-                polygon == 'upvcWindow' ||
-                polygon === 'falseCeiling' ||
-                polygon === 'diningTableSet' ? (
+                  polygon === 'Flooring' ||
+                  polygon === 'Walls' ||
+                  polygon === 'crockeryUnit' ||
+                  polygon == 'upvcWindow' ||
+                  polygon === 'falseCeiling' ||
+                  polygon === 'diningTableSet' ? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
                     onClick={() => handleEditSquareFootage(polygon)}
@@ -546,6 +575,12 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
+
+                {selectedPackage && (
+                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                    {descriptions[selectedPackage]?.[polygon]}
+                  </div>
+                )}
               </div>
               <div></div>
               <div className="float-right">

@@ -2,7 +2,8 @@
 import Marquee from 'react-fast-marquee'
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-
+import './styles.css'
+import Image from 'next/image'
 const FirstForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -453,7 +454,8 @@ const PostFooter = () => {
       </div>
       <Link href="/collaborate-with-architects-interior-designers">
         <section class="handshake sm:py-64 py-32 sm:mb-24 mb-8">
-          <svg
+         
+            <svg
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -783,37 +785,37 @@ const PostFooter = () => {
           <img
             className="cloud1"
             alt="kitchen-renovation-service-delhi"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/cloud1.png"
+            src="/images/cloud1.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="cloud2"
             alt="kitchen-renovation-service-noida"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/cloud2.png"
+            src="/images/cloud2.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="cloud3"
             alt="kitchen-renovation-service-gurgaon"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/cloud3.png"
+            src="/images/cloud3.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="cloudCloud"
             alt="kitchen-renovation-service-faridabad"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/cloudCloud.png"
+            src="/images/cloudCloud.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="squiggle1"
             alt="kitchen-renovation-service"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/squiggle1.png"
+            src="/images/squiggle1.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="squiggle2"
             alt="modular-kitchen-renovation-service-delhi"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/squiggle2.png"
+            src="/images/squiggle2.png"
             style={{ filter: 'invert(0)' }}
           />
         </div>
@@ -821,33 +823,33 @@ const PostFooter = () => {
           <img
             className="balloonCloud"
             alt="modular-kitchen-services-delhi"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/balloonCloud.png"
+            src="/images/balloonCloud.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="smallBalloon"
             alt="top-modular-kitchen-brand-delhi-gurgaon"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/balloonSmall.png"
+            src="/images/balloonSmall.png"
             style={{ filter: 'invert(0)' }}
           />
         </div>
         <img
           className="townImageImg"
           alt="hettich-modular-kitchens-in-delhi-gurgaon-faridabad-noida"
-          src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/townImage.png"
+          src="/images/townImage.png"
           style={{ filter: 'invert(0)' }}
         />
         <div className="vehicles">
           <img
             className="bus"
             alt="hafele-modular-kitchen-in-delhi-gurgaon-noida-faridabad-india"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/bus.png"
+            src="/images/bus.png"
             style={{ filter: 'invert(0)' }}
           />
           <img
             className="car"
             alt="best-modular-kitchen-company-in-delhi-gurgaon-noida"
-            src="https://www.designindiankitchen.com/wp-content/themes/dkiblogs/assets/images/car.png"
+            src="/images/car.png"
             style={{ filter: 'invert(0)' }}
           />
         </div>

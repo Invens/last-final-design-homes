@@ -13,6 +13,7 @@ import Modal from 'react-modal'
 import FormWithOTPVerification from './FormWithOTPVerification'
 import Image from 'next/image'
 import axios from 'axios';
+import axios from 'axios';
 const FourthStep = () => {
   const [spaceData, setSpaceData] = useState([])
   const [firstStepData, setFirstStepData] = useState([])
@@ -23,10 +24,12 @@ const FourthStep = () => {
   const customStyles = {
     content: {
       top: '60%',
+      top: '60%',
       left: '50%',
       right: 'auto',
       bottom: 'auto',
       marginRight: '-50%',
+      width: '400px',
       width: '400px',
       transform: 'translate(-50%, -50%)',
     },
@@ -139,9 +142,32 @@ const FourthStep = () => {
    doc.setTextColor(40, 40, 150) // Set color to dark blue
    doc.setFont('helvetica', 'bold')
    doc.text(companyName, 50, 30)
+   // Add company name
+   const companyName = 'Design Indian Homes'
+   doc.setFontSize(32)
+   doc.setTextColor(40, 40, 150) // Set color to dark blue
+   doc.setFont('helvetica', 'bold')
+   doc.text(companyName, 50, 30)
 
    doc.setDrawColor(0) // Reset draw color to black
+   doc.setDrawColor(0) // Reset draw color to black
 
+   // Add Your Details section
+   const yourDetailsData = Object.entries(firstStepData)
+     .filter(([key]) => key !== 'selectedOptionSet4')
+     .map(([key, value]) => ({
+       Label:
+         key === 'selectedOptionSet1'
+           ? 'House Type'
+           : key === 'selectedOptionSet2'
+           ? 'Number of Bedrooms'
+           : key === 'selectedOptionSet3'
+           ? 'New or Renovation'
+           : key === 'textInput'
+           ? 'City'
+           : key.replace(/([A-Z])/g, ' $1').trim(),
+       Value: value,
+     }))
    // Add Your Details section
    const yourDetailsData = Object.entries(firstStepData)
      .filter(([key]) => key !== 'selectedOptionSet4')
@@ -163,6 +189,10 @@ const FourthStep = () => {
      { header: 'Label', dataKey: 'Label' },
      { header: 'Value', dataKey: 'Value' },
    ]
+   const yourDetailsColumns = [
+     { header: 'Label', dataKey: 'Label' },
+     { header: 'Value', dataKey: 'Value' },
+   ]
 
    doc.setFontSize(16)
    doc.setTextColor(100) // Set text color to gray
@@ -179,7 +209,19 @@ const FourthStep = () => {
    doc.setFontSize(16)
    doc.setTextColor(100) // Set text color to gray
    doc.text('Your Requirements-', 10, yPosition)
+   // Add Your Requirements section
+   const yPosition = doc.autoTable.previous.finalY + 10
+   doc.setFontSize(16)
+   doc.setTextColor(100) // Set text color to gray
+   doc.text('Your Requirements-', 10, yPosition)
 
+   const requirementsColumns = [
+     { header: 'Rooms', dataKey: 'Rooms' },
+     { header: 'Area', dataKey: 'Area' },
+     { header: 'Package', dataKey: 'Package' },
+     { header: 'Room Price Estimation', dataKey: 'Room Price Estimation' },
+     { header: 'Selected Features', dataKey: 'Selected Features' },
+   ]
    const requirementsColumns = [
      { header: 'Rooms', dataKey: 'Rooms' },
      { header: 'Area', dataKey: 'Area' },
@@ -207,7 +249,30 @@ const FourthStep = () => {
      columns: requirementsColumns,
      theme: 'grid', // Use grid theme for a stylish look
    })
+   const spaceDataFormatted = spaceData.map((room, index) => ({
+     Rooms: room.name,
+     Area: room.area,
+     Package: room.selectedPackage || '-',
+     'Room Price Estimation': room.roomPrice ? `Rs. ${room.roomPrice}` : '-',
+     'Selected Features': room.selectedPolygon
+       ? room.selectedPolygon
+           .map(
+             (feature) => feature.charAt(0).toUpperCase() + feature.slice(1)
+           )
+           .join(', ')
+       : '-',
+   }))
+   doc.autoTable({
+     startY: yPosition + 10,
+     body: spaceDataFormatted,
+     columns: requirementsColumns,
+     theme: 'grid', // Use grid theme for a stylish look
+   })
 
+   // Add horizontal line
+   const hrPosition = doc.autoTable.previous.finalY + 10
+   doc.setDrawColor(150) // Set draw color to light gray
+   doc.line(10, hrPosition, 200, hrPosition)
    // Add horizontal line
    const hrPosition = doc.autoTable.previous.finalY + 10
    doc.setDrawColor(150) // Set draw color to light gray
@@ -220,7 +285,23 @@ const FourthStep = () => {
    doc.text('Total Price Estimate', 10, totalPricePosition)
    doc.setTextColor(0) // Reset text color to black
    doc.text(`Rs. ${totalRoomPrice}`, 100, totalPricePosition)
+   // Add Total Price Estimate
+   const totalPricePosition = hrPosition + 20
+   doc.setFont('helvetica', 'bold')
+   doc.setTextColor(40, 40, 150) // Set text color to dark blue
+   doc.text('Total Price Estimate', 10, totalPricePosition)
+   doc.setTextColor(0) // Reset text color to black
+   doc.text(`Rs. ${totalRoomPrice}`, 100, totalPricePosition)
 
+   // Save the PDF
+   doc.save('Project_Scope.pdf')
+
+   setFormSubmitted(true)
+  };
+  
+  const handleClose = () => {
+    setFormSubmitted(false)
+    // Add any additional logic you want to perform when closing the thank-you page
    // Save the PDF
    doc.save('Project_Scope.pdf')
 
@@ -340,6 +421,7 @@ const FourthStep = () => {
         contentLabel="Edit SpaceName Modal"
         style={customStyles}
 
+
       >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-bold">Contact</h2>
@@ -392,12 +474,41 @@ const FourthStep = () => {
           </div>
         ) : (
         <form className="space-y-4" onSubmit={handleDownloadPDF}>
+        {formSubmitted ? (
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
+            <Image
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
+              width={400}
+              height={300}
+            />
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+        <form className="space-y-4" onSubmit={handleDownloadPDF}>
           <div>
             <input
               type="text"
               id="nameInput"
               name='name'
+              name='name'
               placeholder="Enter your name"
+              onChange={handleChange}
               onChange={handleChange}
               className="border-2 border-gray-300 rounded-md p-2 w-full"
             />
@@ -417,7 +528,9 @@ const FourthStep = () => {
               type="text"
               id="numberInput"
               name='mobileNumber'
+              name='mobileNumber'
               placeholder="Enter your number"
+              onChange={handleChange}
               onChange={handleChange}
               className="border-2 border-gray-300 rounded-md p-2 w-full"
             />
@@ -427,7 +540,9 @@ const FourthStep = () => {
               type="email"
               id="emailInput"
               name='email'
+              name='email'
               placeholder="Enter your email"
+              onChange={handleChange}
               onChange={handleChange}
               className="border-2 border-gray-300 rounded-md p-2 w-full"
             />
@@ -438,6 +553,8 @@ const FourthStep = () => {
             </label>
             <select
               id="interestedInInput"
+              name='intrestedIn'
+              onChange={handleChange}
               name='intrestedIn'
               onChange={handleChange}
               className="border-2 border-gray-300 rounded-md p-2 w-full"
@@ -458,6 +575,8 @@ const FourthStep = () => {
               Download
             </button>
           </div>
+        </form>
+           )}
         </form>
            )}
       </Modal>

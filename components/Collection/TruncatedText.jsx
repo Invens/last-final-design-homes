@@ -115,7 +115,7 @@ const TruncatedText = () => {
           </div>
         ) : (
           <div className="mb-2 text-left sm:mx-12 mx-4 z-10">
-            <p className="text-left">
+            <p className="text-left z-10">
               <span className="text-4xl font-bold z-10">D</span>esign Indian Homes is
               India&apos;s top Interior, Architectural & Modular Interior Brand
               serving across Delhi, Gurgaon, Noida & NCR. It is the most sought
@@ -134,7 +134,7 @@ const TruncatedText = () => {
       {/* Read More / Read Less button */}
       <div className='z-10'> 
       <button
-        className={` border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-lg cursor-pointer transition duration-300 ${
+        className={`z-10 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded-lg cursor-pointer transition duration-300 ${
           showFullText ? 'text-blue-500 cursor-pointer' : ''
         }`}
         onClick={toggleFullText}

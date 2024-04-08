@@ -523,7 +523,8 @@ const slugToLocation = (slug) => {
 }
 
 const Page = ({ params }) => {
-  const { location } = params
+   let { location } = params
+   location = decodeURIComponent(location)
   const locationParts = location.split('-in-')
   const extractedLocation = locationParts[1]
   const type = locationParts[0]
@@ -531,7 +532,7 @@ const Page = ({ params }) => {
   const firstWord = typeParts[0]
   console.log(firstWord)
   let text
-  let desc
+  let descd
   if (firstWord === 'wardrobe') {
     text = 'Wardrobe Brand'
     desc = 'Wardrobes'
@@ -580,7 +581,7 @@ const Page = ({ params }) => {
 
         <meta
           name="description"
-          content={`Our brand is the largest manufacturer of ${desc}, we are top dealers and suppliers for ${desc} across Delhi, gurgaon, noida & India.`}
+          content={`Our brand is the best manufacturer of ${desc}, Connect with the best interior and architect brand in ${area} - ${city} & India. We serve most affordable modular interiors & architectural works.`}
         />
 
         <meta name="Author" content="Design Indian Homes" />
@@ -595,7 +596,7 @@ const Page = ({ params }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="canonical"
-          href="https://designindianhomes.com/dressers-designs/"
+          href={`https://designindianhomes.com/locations/${location}`}
         />
         <meta name="googlebot" content="index, follow" />
         <meta name="Yahoobot" content="index, follow" />
@@ -608,15 +609,15 @@ const Page = ({ params }) => {
         <meta name="geo.placename" content="Delhi" />
         <meta
           property="og:url"
-          content="https://designindianhomes.com/dressers-designs/"
+          href={`https://designindianhomes.com/locations/${location}`}
         />
         <meta
           property="og:title"
-          content="Dresser Designs | Top Dresser Manufacturing Company India"
+          content={`${text} | Top ${desc} Company in India - Design Indian Homes`}
         />
         <meta
           property="og:description"
-          content={`Our brand is the largest manufacturer of ${desc}, we are top dealers and suppliers for ${desc} across Delhi, gurgaon, noida & India.`}
+          content={`Our brand is the best manufacturer of ${desc}, Connect with the best interior and architect brand in ${area} - ${city} & India. We serve most affordable modular interiors & architectural works.`}
         />
       </head>
       <Omsairam />

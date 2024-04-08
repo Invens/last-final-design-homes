@@ -20,7 +20,9 @@ import axios from 'axios'
 const Card = ({ project, handleImageClick }) => {
   if (!project.images || project.images.length === 0) {
     // Render a placeholder or loading state if images are not available
-    return <div className="max-w-sm rounded overflow-hidden shadow-lg"></div>
+    return <div className="max-w-sm rounded overflow-hidden shadow-lg">
+      
+    </div>
   }
 
   return (

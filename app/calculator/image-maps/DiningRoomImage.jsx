@@ -39,7 +39,43 @@ const SvgMap = ({ data, name }) => {
       flooring: { pricePerSqFt: 450 },
     },
   }
+  const descriptions = {
+    premium: {
+      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      diningTableSet: '6 seater dining table with chairs Sheesham wood | Wooden counter top',
+      walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      crockeryUnit: 'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      barUnit: 'Bar unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      falseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)'
 
+    },
+    luxury: {
+      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      diningTableSet: '6 seater dining table with chairs Sheesham wood | Stone counter top',
+      walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      crockeryUnit: 'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      electrical: 'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
+      upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
+      barUnit: 'Bar unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      falseCeiling: 'Gypsum board ceiling with heavy duty channel'
+
+    },
+    ultraLuxury: {
+      flooring: 'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
+      diningTableSet: '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
+      walls: 'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
+      crockeryUnit: 'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
+      barUnit: 'Bar unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      falseCeiling: 'Gypsum board ceiling with heavy duty channel'
+
+
+    },
+    // Add descriptions for other packages...
+  };
   const initialSquareFootage = {
     falseCeiling: 120,
     electrical: 1,
@@ -149,8 +185,8 @@ const SvgMap = ({ data, name }) => {
         parseFloat(roomPrice) - parseFloat(priceOfSelectedPolygon) // subtract old price
       setRoomPrice(
         updatedRoomPrice +
-          parseFloat(newSquareFootage) *
-            parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
+        parseFloat(newSquareFootage) *
+        parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
       ) // add new price
       updateData() // Update the data after room price is updated
     }
@@ -184,13 +220,11 @@ const SvgMap = ({ data, name }) => {
       <button
         key={tabName}
         onClick={() => handleTabChange(tabName)}
-        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${
-          isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
-        } ${
-          isActive
+        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
+          } ${isActive
             ? 'hover:bg-green-600 hover:text-white'
             : 'hover:bg-gray-200 hover:text-black'
-        }`}
+          }`}
       >
         {tabName}
       </button>
@@ -612,14 +646,17 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span>{polygon} </span>
+                <span className='font-bold text-lg capitalize'>{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                )}
                 {polygon === 'barUnit' ||
-                polygon === 'flooring' ||
-                polygon === 'walls' ||
-                polygon === 'crockeryUnit' ||
-                polygon == 'upvcWindow' ||
-                polygon === 'falseCeiling' ||
-                polygon === 'diningTableSet' ? (
+                  polygon === 'flooring' ||
+                  polygon === 'walls' ||
+                  polygon === 'crockeryUnit' ||
+                  polygon == 'upvcWindow' ||
+                  polygon === 'falseCeiling' ||
+                  polygon === 'diningTableSet' ? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
                     onClick={() => handleEditSquareFootage(polygon)}
@@ -627,6 +664,11 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
+                {selectedPackage && (
+                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                    {descriptions[selectedPackage]?.[polygon]}
+                  </div>
+                )}
               </div>
               <div></div>
               <div className="float-right">

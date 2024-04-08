@@ -39,6 +39,34 @@ const SvgMap = ({ data, name }) => {
     },
   }
 
+
+  const descriptions = {
+    premium: {
+      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      FalseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      Electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      Walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)'
+    
+    },
+    luxury: {
+      upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
+      FalseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      Electrical: 'Electrical work including point relocation excluding switches',
+      Walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)'
+
+    },
+    ultraLuxury: {
+      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
+      FalseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Flooring: 'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
+      Electrical: 'Electrical work including point relocation excluding switches',
+      Walls: 'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)'
+    },
+    // Add descriptions for other packages...
+  };
+
   const initialSquareFootage = {
     FalseCeiling: 50,
     electrical: 10,
@@ -493,7 +521,10 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span>{polygon} </span>
+              <span className='font-bold text-lg capitalize'>{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                )}
                 {polygon === 'FalseCeiling' ||
                 polygon === 'Flooring' ||
                 polygon === 'Walls' ||
@@ -508,6 +539,11 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
+                 {selectedPackage && (
+                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                    {descriptions[selectedPackage]?.[polygon]}
+                  </div>
+                )}
               </div>
               <div></div>
               <div className="float-right">
