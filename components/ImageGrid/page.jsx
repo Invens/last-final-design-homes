@@ -19,7 +19,7 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/beds-removebg-preview.png',
       text: 'Beds',
-      slug: '//beds-designs',
+      slug: '/beds-designs',
     },
     {
       src: '/images/top-picks/door-removebg-preview.png',
