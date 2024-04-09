@@ -12,7 +12,7 @@ const StyledYouTube = ({ videoId, opts }) => (
 
 const YoutubeCarouselSection = () => {
   // Replace with your YouTube video IDs
-  const videoIds = ['aErmAFhwES0', 'aErmAFhwES0', 'aErmAFhwES0']
+  const videoIds = ['V-mHKpdUpHU?si=k5MFK22I6Lfa4ZvT', 'D9hVXkcNJzE?si=ajLy9HxvD9d0_Pje', 'HJXKZGDyLHc?si=c6x5G0K6eYIyHZXr']
 
   const responsive = {
     superLargeDesktop: {

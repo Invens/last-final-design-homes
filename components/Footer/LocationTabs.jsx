@@ -576,7 +576,7 @@ const CityLocations = ({ locations, city, prefix }) => {
 
 const ParagraphTab = ({ prefix }) => {
   return (
-    <div className="">
+    <div className='ml-[100px]'>
       {/* <h2 className="mt-4 text-lg text-black font-bold">LOCATIONS -</h2> */}
       <CityLocations locations={delhiLocations} city="Delhi" prefix={prefix} />
       <hr className="my-6 border-t-2 border-gray-300" />

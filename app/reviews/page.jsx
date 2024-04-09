@@ -63,9 +63,7 @@ const SectionWithImage = () => {
         }
       )
 
-      console.log('Response status:', response.status)
-      console.log('Response headers:', response.headers)
-      console.log('Response body:', await response.text())
+    
 
       if (response.ok) {
         console.log('Form data submitted successfully!')
