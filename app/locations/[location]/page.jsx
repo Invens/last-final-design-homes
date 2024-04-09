@@ -532,7 +532,7 @@ const Page = ({ params }) => {
   const firstWord = typeParts[0]
   console.log(firstWord)
   let text
-  let descd
+  let desc
   if (firstWord === 'wardrobe') {
     text = 'Wardrobe Brand'
     desc = 'Wardrobes'

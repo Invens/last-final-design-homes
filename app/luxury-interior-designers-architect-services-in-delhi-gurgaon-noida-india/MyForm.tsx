@@ -95,8 +95,8 @@ const MyForm: React.FC<MyFormProps> = () => {
   }, []);
   return (
     <>
-      <div className="mb-12 mt-8 sm:mt-48 p-8 text-center">
-        <h1 className="text-6xl font-semibold mb-4 text-gray-700">
+      <div className="mb-12 mt-8 sm:mt-[150px] p-8 text-center">
+        <h1 className="text-6xl font-semibold mb-4 text-gray-700 mt-[100px]">
           Exclusively You.
         </h1>
         <h3 className="text-xl text-gray-700">
