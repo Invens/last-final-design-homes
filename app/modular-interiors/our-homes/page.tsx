@@ -88,7 +88,7 @@ const Card = ({ project, handleImageClick }) => {
   
 
     // Render a placeholder or loading state if images are not available
-    return <div className="max-w-sm rounded overflow-hidden shadow-lg p-2 bg-red-500">
+    return <div className="max-w-sm rounded overflow-hidden shadow-lg bg-red-500">
       
      {formSubmitted ? (
                       <div className="grid grid-cols-1 justify-items-center">
@@ -519,7 +519,7 @@ const Page = ({}) => {
                         alt={projects[projectIndex]?.name}
                         width={1000}
                         height={1000}
-                        className=" lg:h-[506px] h-[306px] rounded-sm "
+                        className="h-auto lg:h-[506px] h-[306px] rounded-sm "
                       />
                     </div>
                   ))}
