@@ -43,7 +43,17 @@ const YourStepperComponent = () => {
   }
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1)
+    if (activeStep === 1) {
+      const confirmBack = window.confirm(
+        'Are you sure you want to go back to the first step? Any unsaved changes will be lost.'
+      )
+
+      if (confirmBack) {
+        setActiveStep((prevActiveStep) => prevActiveStep - 1)
+      }
+    } else {
+      setActiveStep((prevActiveStep) => prevActiveStep - 1)
+    }
   }
 
   const handleStepClick = (step) => {
@@ -81,8 +91,8 @@ const YourStepperComponent = () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Omsairam/>
-      <Header/>
+      <Omsairam />
+      <Header />
       <div
         className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4 mt-[100px]"
         style={{
@@ -160,7 +170,7 @@ const YourStepperComponent = () => {
           </div>
         </Container>
       </div>
-      <Footer/>
+      <Footer />
     </Suspense>
   )
 }

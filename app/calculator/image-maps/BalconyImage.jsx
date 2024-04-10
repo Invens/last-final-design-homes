@@ -24,7 +24,7 @@ const SvgMap = ({ data, name }) => {
       Door: { price: 25000 },
       StudyTables: { pricePerSqFt: 1100 },
       upvcWindow: { pricePerSqFt: 1050 },
-      FalseCeiling: { pricePerSqFt: 195},
+      FalseCeiling: { pricePerSqFt: 195 },
       Electrical: { price: 3000 },
       Flooring: { pricePerSqFt: 210 },
     },
@@ -39,33 +39,44 @@ const SvgMap = ({ data, name }) => {
     },
   }
 
-
   const descriptions = {
     premium: {
       upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
-      FalseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
-      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-      Electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
-      Walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)'
-    
+      FalseCeiling:
+        'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      Flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      Electrical:
+        'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      Walls:
+        'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
     },
     luxury: {
-      upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
-      FalseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
-      Electrical: 'Electrical work including point relocation excluding switches',
-      Walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)'
-
+      upvcWindow:
+        'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
+      FalseCeiling:
+        'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      Electrical:
+        'Electrical work including point relocation excluding switches',
+      Walls:
+        'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
     },
     ultraLuxury: {
-      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
-      FalseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-      Flooring: 'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
-      Electrical: 'Electrical work including point relocation excluding switches',
-      Walls: 'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)'
+      upvcWindow:
+        'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
+      FalseCeiling:
+        'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      Flooring:
+        'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
+      Electrical:
+        'Electrical work including point relocation excluding switches',
+      Walls:
+        'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
     },
     // Add descriptions for other packages...
-  };
+  }
 
   const initialSquareFootage = {
     FalseCeiling: 50,
@@ -82,31 +93,43 @@ const SvgMap = ({ data, name }) => {
   const [selectedPackage, setSelectedPackage] = useState('premium') // Default to premium
   const [spaceSquareFootage, setSpaceSquareFootage] = useState({}) // New state for square footage
 
-  const [updatedData, setUpdatedData] = useState(data)
+  const [updatedData, setUpdatedData] = useState([])
   const [roomPrice, setRoomPrice] = useState(0)
 
-  // to reset the selectedPolygon and roomPrice to back to inital state when package is changed
-  // useEffect(() => {
-  //   // Reset selectedPolygon to an empty array
-  //   setSelectedPolygon([])
+  // console.log('roomPrice: ', roomPrice)
 
-  //   // Reset roomPrice to 0
-  //   setRoomPrice(0)
-  // }, [selectedPackage])
+  useEffect(() => {
+    const localStorageSpaceData = localStorage.getItem('spaceData')
+    if (localStorageSpaceData) {
+      const parsedSpaceData = JSON.parse(localStorageSpaceData)
+      console.log('parsedSpaceData', parsedSpaceData)
+      setUpdatedData(parsedSpaceData)
+    }
+  }, [])
 
-  console.log('roomPrice: ', roomPrice)
   const updateData = () => {
-    setUpdatedData((prevData) =>
-      prevData.map((item) =>
+    console.log('updatedData', updatedData)
+    setUpdatedData((prevData) => {
+      // console.log('prevData', prevData)
+
+      return prevData.map((item) =>
         item.name === name
           ? { ...item, selectedPolygon, selectedPackage, roomPrice }
           : item
       )
-    )
+    })
   }
   useEffect(() => {
     updateData()
   }, [selectedPolygon, selectedPackage, roomPrice])
+  useEffect(() => {
+    console.log('updatedData', updatedData)
+    // localStorage.setItem('spaceData', JSON.stringify(updatedData))
+  }, [updatedData])
+
+// ----------------------------------------------------------------------------------
+
+
 
   const [editableSquareFootage, setEditableSquareFootage] =
     useState(initialSquareFootage)
@@ -233,15 +256,7 @@ const SvgMap = ({ data, name }) => {
     )
   }
 
-  console.log('updatedData: ', updatedData)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(updateSpaceData(updatedData))
-  }, [dispatch, updatedData])
-
-  const spaceData = useSelector((state) => state.secondStep.spaceData)
-  console.log('Space Data from redux:', spaceData)
+ 
 
   const handleSave = () => {
     // Retrieve existing spaceData from localStorage
@@ -265,7 +280,7 @@ const SvgMap = ({ data, name }) => {
         }
 
         // Update the localStorage with the updated spaceData
-        localStorage.setItem('spaceData', JSON.stringify(parsedSpaceData))
+        localStorage.setItem('newSpaceData', JSON.stringify(parsedSpaceData))
         alert('Space data updated successfully!')
       } else {
         // If no item with the same name exists, show an alert
@@ -273,7 +288,7 @@ const SvgMap = ({ data, name }) => {
       }
     } else {
       // If no spaceData exists in localStorage, set it with the current data
-      localStorage.setItem('spaceData', JSON.stringify(spaceData))
+      localStorage.setItem('newSpaceData', JSON.stringify(spaceData))
       alert('Space data saved successfully!')
     }
     router.push('/calculator?step=2')
@@ -521,9 +536,12 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-              <span className='font-bold text-lg capitalize'>{polygon} </span>
+                <span className="font-bold text-lg capitalize">{polygon} </span>
                 {editableSquareFootage[polygon] && (
-                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                  <span style={{ fontSize: '12px' }}>
+                    {' '}
+                    - {editableSquareFootage[polygon]} sqft
+                  </span>
                 )}
                 {polygon === 'FalseCeiling' ||
                 polygon === 'Flooring' ||
@@ -539,8 +557,14 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
-                 {selectedPackage && (
-                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                {selectedPackage && (
+                  <div
+                    style={{
+                      fontSize: '14px',
+                      marginTop: '5px',
+                      width: '650px',
+                    }}
+                  >
                     {descriptions[selectedPackage]?.[polygon]}
                   </div>
                 )}

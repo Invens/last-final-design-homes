@@ -58,18 +58,12 @@ export default function RootLayout({ children }) {
       </Script>
       <body className={`${bioRhyme.className}`}>
         <ThemeProvider>
-          <Provider store={store}>
-            <SpaceProvider>
-              {/* Overlay Animation */}
-              <div
-              
-              >
-                <Animation />
-              </div>
-              {/* Content */}
-              <div>{children}</div>
-            </SpaceProvider>
-          </Provider>
+          <SpaceProvider>
+            {/* Overlay Animation */}
+            <div>{/* <Animation /> */}</div>
+            {/* Content */}
+            <div>{children}</div>
+          </SpaceProvider>
         </ThemeProvider>
       </body>
     </html>

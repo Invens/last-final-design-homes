@@ -10,74 +10,69 @@ const SvgMap = ({ data, name }) => {
   const router = useRouter()
   const pricing = {
     premium: {
-      barUnit: { pricePerSqFt: 1250 },
-      TVPannel: { pricePerSqFt: 1000 },
-      SideTables: { price: 7500 },
-      CenterTable: { price: 19000 },
-      Sofa: { price: 10000 },
-      Console: { price: 19000 },
-      Mandir: { price: 29000 },
-      Walls: { pricePerSqFt: 50 },
-      upvcWindow: { pricePerSqFt: 750 },
-      falseCeiling: { pricePerSqFt: 170 },
-      Electrical: { price: 4500 },
-      crockeryUnit: { pricePerSqFt: 1300 },
-      diningTableSet: { price: 50000 },
-      Flooring: { pricePerSqFt: 170 },
+      KitchenCabinets: { pricePerSqFt: 1250 },
+      walls: { pricePerSqFt: 55 },
+      upvcWindow: { pricePerSqFt: 800 },
+      falseCeiling: { pricePerSqFt: 185 },
+      Electrical: { price: 5000 },
+      Plumbing: { pricePerSqFt: 1300 },
+      'Base Cabinets Panel 1': { price: 500 },
+      'Wall Cabinets Panel 1': { price: 600 },
+      'Loft Cabinets Panel 1': { price: 700 },
+      'Base Cabinets Panel 2': { price: 500 },
+      'Wall Cabinets Panel 2': { price: 600 },
+      'Loft Cabinets Panel 2': { price: 700 },
+      'Base Cabinets Panel 3': { price: 500 },
+      'Wall Cabinets Panel 3': { price: 600 },
+      'Loft Cabinets Panel 3': { price: 700 },
+      CounterTop: { price: 50000 },
+      KitchenWalls: { pricePerSqFt: 1500 },
+      Flooring: { pricePerSqFt: 497 },
     },
     luxury: {
-      barUnit: { pricePerSqFt: 1450 },
-      TVPannel: { pricePerSqFt: 1350 },
-      CenterTable: { price: 34500 },
-      Sofa: { price: 14500 },
-      SideTables: { price: 11500 },
-      Console: { price: 29500 },
-      Mandir: { price: 44500 },
-      Walls: { pricePerSqFt: 60 },
-      upvcWindow: { pricePerSqFt: 1050 },
-      falseCeiling: { pricePerSqFt: 200 },
-      Electrical: { price: 12500 },
-      crockeryUnit: { pricePerSqFt: 1600 },
-      diningTableSet: { price: 85000 },
-      Flooring: { pricePerSqFt: 200 },
+      KitchenCabinets: { pricePerSqFt: 1450 },
+      walls: { pricePerSqFt: 65 },
+      upvcWindow: { pricePerSqFt: 1100 },
+      falseCeiling: { pricePerSqFt: 210 },
+      Electrical: { price: 13000 },
+      Plumbing: { pricePerSqFt: 1600 },
+      'Base Cabinets Panel 1': { price: 900 },
+      'Wall Cabinets Panel 1': { price: 1000 },
+      'Loft Cabinets Panel 1': { price: 1200 },
+      'Base Cabinets Panel 2': { price: 900 },
+      'Wall Cabinets Panel 2': { price: 1000 },
+      'Loft Cabinets Panel 2': { price: 1200 },
+      'Base Cabinets Panel 3': { price: 900 },
+      'Wall Cabinets Panel 3': { price: 1000 },
+      'Loft Cabinets Panel 3': { price: 1200 },
+      CounterTop: { price: 85000 },
+      KitchenWalls: { pricePerSqFt: 2000 },
+      Flooring: { pricePerSqFt: 498 },
     },
     ultraLuxury: {
-      barUnit: { pricePerSqFt: 1750 },
-      TVPannel: { pricePerSqFt: 1750 },
-      CenterTable: { price: 55000 },
-      Sofa: { price: 24500 },
-      SideTables: { price: 19500 },
-      Console: { price: 45000 },
-      Mandir: { price: 65500 },
-      Walls: { pricePerSqFt: 240 },
-      upvcWindow: { pricePerSqFt: 1450 },
-      falseCeiling: { pricePerSqFt: 240 },
-      Electrical: { price: 17500 },
-      crockeryUnit: { pricePerSqFt: 2000 },
-      diningTableSet: { price: 150000 },
-      Flooring: { pricePerSqFt: 450 },
+      KitchenCabinets: { pricePerSqFt: 1800 },
+      walls: { pricePerSqFt: 90 },
+      upvcWindow: { pricePerSqFt: 1500 },
+      falseCeiling: { pricePerSqFt: 250 },
+      Electrical: { price: 18000 },
+      Plumbing: { pricePerSqFt: 2000 },
+      'Base Cabinets Panel 1': { price: 900 },
+      'Wall Cabinets Panel 1': { price: 1200 },
+      'Loft Cabinets Panel 1': { price: 1500 },
+      'Base Cabinets Panel 2': { price: 900 },
+      'Wall Cabinets Panel 2': { price: 1200 },
+      'Loft Cabinets Panel 2': { price: 1500 },
+      'Base Cabinets Panel 3': { price: 900 },
+      'Wall Cabinets Panel 3': { price: 1200 },
+      'Loft Cabinets Panel 3': { price: 1500 },
+      CounterTop: { price: 150000 },
+      KitchenWalls: { pricePerSqFt: 2500 },
+      Flooring: { pricePerSqFt: 499 },
     },
   }
-  const initialSquareFootage = {
-    falseCeiling: 165,
-    Electrical: 1,
-    Flooring: 165,
-    TVPannel: 64,
-    CenterTable: 100,
-    Sofa: 200,
-    Console: 500,
-    Mandir: 70,
-    SideTables: 1,
-    upvcWindow: 80,
-    Walls: 400,
-    crockeryUnit: 50,
-    diningTableSet: 80,
-    barUnit: 140,
-  }
-
   const descriptions = {
     premium: {
-      walls:
+      KitchenCabinets:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       falseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
@@ -152,7 +147,17 @@ const SvgMap = ({ data, name }) => {
     },
     // Add descriptions for other packages...
   }
-
+  const initialSquareFootage = {
+    falseCeiling: 80,
+    Electrical: 1,
+    Flooring: 80,
+    upvcWindow: 45,
+    walls: 65,
+    Plumbing: 50,
+    CounterTop: 80,
+    KitchenWalls: 196,
+    KitchenCabinets: 50,
+  }
   console.log('data: ', data)
   console.log('name: ', name)
   const [selectedPolygon, setSelectedPolygon] = useState([])
@@ -266,6 +271,7 @@ const SvgMap = ({ data, name }) => {
         polygonId,
         selectedPackage
       )
+
       const updatedRoomPrice =
         parseFloat(roomPrice) - parseFloat(priceOfSelectedPolygon) // subtract old price
       setRoomPrice(
@@ -402,27 +408,26 @@ const SvgMap = ({ data, name }) => {
         <svg
           width="100%"
           height="100%"
-          viewBox="0 0 2782 1790"
+          viewBox="0 0 3509 2388"
           style={{
-            backgroundImage: 'url("/images/calculator/living.jpg")',
+            backgroundImage: 'url("/images/calculator/UshapeKitchen.jpg")',
             backgroundSize: 'cover',
           }}
         >
-          {/* false ceiling*/}
+          {/* false celling */}
           <polygon
-            points="281,5,906,452,1594,472,2161,10"
+            points="618,-3,2757,-3,2140,496,1300,490"
             fill={
               selectedPolygon.includes('falseCeiling') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
             onClick={() => handlePolygonClick('falseCeiling')}
             style={{ cursor: 'pointer' }}
-          />
-
+          ></polygon>
           <rect
-            x="1225.5"
-            y="191.75"
-            width="339.62062072753906"
+            x="1693.75"
+            y="202"
+            width="339.2958068847656"
             height="60"
             fill="#282828"
             rx="30"
@@ -434,9 +439,9 @@ const SvgMap = ({ data, name }) => {
           <text
             fill="white"
             opacity="0.75"
-            fontWeight={400}
-            x="1290.5"
-            y="234.75"
+            font-weight="400"
+            x="1758.75"
+            y="245"
             fontSize={40}
             id="falseCeiling"
             onClick={() => handlePolygonClick('falseCeiling')}
@@ -445,23 +450,20 @@ const SvgMap = ({ data, name }) => {
           >
             False Ceiling
           </text>
-
-          {/* ------Electrical----------------- */}
-
+          {/* electrical */}
           <polygon
-            points="2501,861,2719,885,2717,1001,2498,971"
+            points="3142,1324,3433,1427,3436,1569,3135,1442"
             fill={
               selectedPolygon.includes('Electrical') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
             onClick={() => handlePolygonClick('Electrical')}
             style={{ cursor: 'pointer' }}
-          />
-
+          ></polygon>
           <rect
-            x="2598.75"
-            y="886.5"
-            width="272.35179138183594"
+            x="3276.5"
+            y="1397.5"
+            width="272.21714782714844"
             height="60"
             fill="#282828"
             rx="30"
@@ -469,12 +471,13 @@ const SvgMap = ({ data, name }) => {
             ry="30"
             class="dynamic-rectangle cursor-pointer"
           ></rect>
+
           <text
             fill="white"
             opacity="0.75"
-            fontWeight={400}
-            x="2663.75"
-            y="929.5"
+            font-weight="400"
+            x="3341.5"
+            y="1440.5"
             fontSize={40}
             className="cursor-pointer"
             id="Electrical"
@@ -483,20 +486,20 @@ const SvgMap = ({ data, name }) => {
           >
             Electrical
           </text>
-          {/* ---Flooring---------- */}
+          {/* flooring */}
           <polygon
-            points="1463,1074,1643,1072,1788,1168,1788,1193,2206,1500,2292,1512,2498,1532,2781,1709,2778,1788,1,1785,4,1751,109,1667,119,1689,210,1694,210,1667,269,1667,235,1748,254,1748,286,1667,397,1667,407,1701,417,1711,424,1672,537,1670,571,1751,596,1743,562,1672,675,1674,682,1699,736,1642,729,1608,1021,1124,1060,1114,1060,1082,1090,1079,812,1652,1874,1657"
+            points="590,2264,1071,1665,1247,1445,1266,1433,1564,1430,1926,1430,2075,1430,2239,1433,2295,1507,2463,1712,2642,1938,2918,2276,2921,2382,584,2385"
             fill={
               selectedPolygon.includes('Flooring') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
             onClick={() => handlePolygonClick('Flooring')}
             style={{ cursor: 'pointer' }}
-          />
+          ></polygon>
           <rect
-            x="924.7027027027027"
-            y="1512.3783783783783"
-            width="252.87924194335938"
+            x="1832.9285714285713"
+            y="1723.4285714285713"
+            width="252.67684936523438"
             height="60"
             fill="#282828"
             rx="30"
@@ -504,12 +507,13 @@ const SvgMap = ({ data, name }) => {
             ry="30"
             class="dynamic-rectangle cursor-pointer"
           ></rect>
+
           <text
             fill="white"
             opacity="0.75"
-            fontWeight={400}
-            x="989.7027027027027"
-            y="1555.3783783783783"
+            font-weight="400"
+            x="1897.9285714285713"
+            y="1766.4285714285713"
             fontSize={40}
             className="cursor-pointer"
             id="Flooring"
@@ -518,21 +522,22 @@ const SvgMap = ({ data, name }) => {
           >
             Flooring
           </text>
-
-          {/* -------------- UPVC Window ----------- */}
+          {/* base cab 1 */}
           <polygon
-            points="1051,578,1449,585,1454,873,1053,868"
+            points="70,1762,581,1758,587,1799,1251,1231,1248,1448,587,2270,73,2255"
             fill={
-              selectedPolygon.includes('upvcWindow') ? 'green' : 'transparent'
+              selectedPolygon.includes('Base Cabinets Panel 1')
+                ? 'green'
+                : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('upvcWindow')}
+            onClick={() => handlePolygonClick('Base Cabinets Panel 1')}
             style={{ cursor: 'pointer' }}
-          />
+          ></polygon>
           <rect
-            x="1241.75"
-            y="683"
-            width="372.4190979003906"
+            x="618.1428571428571"
+            y="1746"
+            width="516.470947265625"
             height="60"
             fill="#282828"
             rx="30"
@@ -540,12 +545,490 @@ const SvgMap = ({ data, name }) => {
             ry="30"
             class="dynamic-rectangle cursor-pointer"
           ></rect>
+
           <text
             fill="white"
             opacity="0.75"
-            fontWeight={400}
-            x="1306.75"
-            y="726"
+            font-weight="400"
+            x="683.1428571428571"
+            y="1789"
+            fontSize={40}
+            id="Base Cabinets Panel 1"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Base Cabinets Panel 1')}
+            style={{ color: 'black' }}
+          >
+            Base Cabinets Panel 1
+          </text>
+          {/* wall cab 1 */}
+          <polygon
+            points="628,654,786,657,1254,729,1251,965,795,1107,628,1116"
+            fill={
+              selectedPolygon.includes('Wall Cabinets Panel 1')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 1')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="880.3333333333334"
+            y="828.3333333333334"
+            width="501.1595153808594"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="945.3333333333334"
+            y="871.3333333333334"
+            fontSize={40}
+            id="Wall Cabinets Panel 1"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 1')}
+            style={{ color: 'black' }}
+          >
+            Wall Cabinets Panel 1
+          </text>
+          {/* loft cabs 1 */}
+          <polygon
+            points="618,288,777,285,1254,546,1251,726,780,654,625,648"
+            fill={
+              selectedPolygon.includes('Loft Cabinets Panel 1')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 1')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="874.1666666666666"
+            y="481.5"
+            width="499.11798095703125"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="939.1666666666666"
+            y="524.5"
+            fontSize={40}
+            id="Loft Cabinets Panel 1"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 1')}
+            style={{ color: 'black' }}
+          >
+            Loft Cabinets Panel 1
+          </text>
+          {/* base cabs 2 */}
+          <polygon
+            points="1254,1231,1558,1234,1561,1259,1917,1262,1923,1241,2233,1244,2240,1436,1254,1436"
+            fill={
+              selectedPolygon.includes('Base Cabinets Panel 2')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Base Cabinets Panel 2')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="1732.5"
+            y="1249.875"
+            width="522.1580505371094"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="1797.5"
+            y="1292.875"
+            fontSize={40}
+            id="Base Cabinets Panel 2"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Base Cabinets Panel 2')}
+            style={{ color: 'black' }}
+          >
+            Base Cabinets Panel 2
+          </text>
+          {/* walls cabs 2 */}
+          <polygon
+            points="1257,735,1558,732,1558,955,1251,958"
+            fill={
+              selectedPolygon.includes('Wall Cabinets Panel 2')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 2')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <polygon
+            points="1920,726,2264,723,2264,949,1920,955"
+            fill={
+              selectedPolygon.includes('Wall Cabinets Panel 2')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 2')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="1396"
+            y="802"
+            width="506.7008056640625"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="1461"
+            y="845"
+            fontSize={40}
+            id="Wall Cabinets Panel 2"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 2')}
+            style={{ color: 'black' }}
+          >
+            Wall Cabinets Panel 2
+          </text>
+          {/* loft cabs 2 */}
+          <polygon
+            points="1257,549,2261,540,2264,720,1251,729"
+            fill={
+              selectedPolygon.includes('Loft Cabinets Panel 2')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 2')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="1748.25"
+            y="591.5"
+            width="504.6592712402344"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="1813.25"
+            y="634.5"
+            fontSize={40}
+            id="Loft Cabinets Panel 2"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 2')}
+            style={{ color: 'black' }}
+          >
+            Loft Cabinets Panel 2
+          </text>
+          {/* base cabs 3 */}
+          <polygon
+            points="2237,1250,2891,1805,3436,1820,3433,2252,2894,2267,2237,1439"
+            fill={
+              selectedPolygon.includes('Base Cabinets Panel 3')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Base Cabinets Panel 3')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="2844.6666666666665"
+            y="1762.5"
+            width="523.3246459960938"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="2909.6666666666665"
+            y="1805.5"
+            fontSize={40}
+            id="Base Cabinets Panel 3"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Base Cabinets Panel 3')}
+            style={{ color: 'black' }}
+          >
+            Base Cabinets Panel 3
+          </text>
+          {/* wall cabs 3  */}
+          <polygon
+            points="2268,723,3139,589,3427,595,3436,1219,3139,1222,2264,952"
+            fill={
+              selectedPolygon.includes('Wall Cabinets Panel 3')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 3')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="2935.5"
+            y="840.3333333333334"
+            width="508.0132141113281"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="3000.5"
+            y="883.3333333333334"
+            fontSize={40}
+            id="Wall Cabinets Panel 3"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Wall Cabinets Panel 3')}
+            style={{ color: 'black' }}
+          >
+            Wall Cabinets Panel 3
+          </text>
+          {/* loft cabs 3 */}
+          <polygon
+            points="2264,537,3132,109,3418,105,3427,595,3139,586,2268,720"
+            fill={
+              selectedPolygon.includes('Loft Cabinets Panel 3')
+                ? 'green'
+                : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 3')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="2931.3333333333335"
+            y="399"
+            width="505.9716796875"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="2996.3333333333335"
+            y="442"
+            fontSize={40}
+            id="Loft Cabinets Panel 3"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Loft Cabinets Panel 3')}
+            style={{ color: 'black' }}
+          >
+            Loft Cabinets Panel 3
+          </text>
+          {/* counter top */}
+          <polygon
+            points="3439,1774,3436,1817,2887,1802,2230,1237,1920,1234,1917,1222,1880,1129,2308,1132,2466,1225,2571,1284,2639,1321,2720,1368,2763,1392,2838,1433,2878,1455,2925,1482"
+            fill={
+              selectedPolygon.includes('CounterTop') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('CounterTop')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <polygon
+            points="1586,1129,1176,1132,907,1281,1155,1290,953,1455,603,1451,64,1758,587,1755,587,1783,1254,1228,1555,1231"
+            fill={
+              selectedPolygon.includes('CounterTop') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('CounterTop')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="2603.5625"
+            y="1351.1875"
+            width="333.9003448486328"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="2668.5625"
+            y="1394.1875"
+            fontSize={40}
+            id="CounterTop"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('CounterTop')}
+            style={{ color: 'black' }}
+          >
+            Counter Top
+          </text>
+          {/* plumbing */}
+          <polygon
+            points="615,1448,956,1451,987,1423,1003,1411,1021,1396,1037,1383,1055,1368,1074,1358,1090,1343,1108,1327,1127,1312,1155,1287,1133,1287,1105,1287,1074,1287,1046,1287,1021,1287,990,1284,956,1287,897,1284,773,1352,770,1337,755,1337,755,1312,752,1284,755,1262,761,1244,767,1237,780,1234,792,1244,795,1262,798,1281,789,1293,792,1306,811,1309,826,1296,826,1281,817,1278,814,1259,804,1234,801,1219,783,1213,764,1216,749,1228,736,1244,730,1265,727,1293,730,1343,721,1368,727,1383"
+            fill={
+              selectedPolygon.includes('Plumbing') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('Plumbing')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="863"
+            y="1261.22"
+            width="274.8419647216797"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="928"
+            y="1304.22"
+            fontSize={40}
+            id="Plumbing"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('Plumbing')}
+            style={{ color: 'black' }}
+          >
+            Plumbing
+          </text>
+          {/* walls */}
+          <polygon
+            points="3135,1219,3132,1603,2308,1132,2311,968"
+            fill={
+              selectedPolygon.includes('KitchenWalls') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('KitchenWalls')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <polygon
+            points="2308,968,2264,955,2233,955,1251,961,1179,986,783,1113,634,1116,631,1321,73,1563,70,1746,721,1380,718,1361,730,1343,730,1318,730,1287,730,1262,739,1237,770,1216,792,1213,808,1225,811,1241,817,1262,820,1281,826,1296,811,1306,792,1306,783,1287,792,1281,792,1256,780,1237,767,1237,755,1256,755,1284,755,1303,758,1330,770,1340,773,1349,1179,1129,2308,1132"
+            fill={
+              selectedPolygon.includes('KitchenWalls') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('KitchenWalls')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="2711.5"
+            y="1187.5"
+            width="353.2948303222656"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="2776.5"
+            y="1230.5"
+            fontSize={40}
+            id="KitchenWalls"
+            className="cursor-pointer"
+            onClick={() => handlePolygonClick('KitchenWalls')}
+            style={{ color: 'black' }}
+          >
+            Kitchen Walls
+          </text>
+          {/* upvc window */}
+          <polygon
+            points="73,568,622,651,628,1315,73,1560"
+            fill={
+              selectedPolygon.includes('upvcWindow') ? 'green' : 'transparent'
+            }
+            fillOpacity="0.2"
+            onClick={() => handlePolygonClick('upvcWindow')}
+            style={{ cursor: 'pointer' }}
+          ></polygon>
+          <rect
+            x="339"
+            y="980.5"
+            width="372.10601806640625"
+            height="60"
+            fill="#282828"
+            rx="30"
+            opacity="0.3"
+            ry="30"
+            class="dynamic-rectangle cursor-pointer"
+          ></rect>
+
+          <text
+            fill="white"
+            opacity="0.75"
+            font-weight="400"
+            x="404"
+            y="1023.5"
             fontSize={40}
             id="upvcWindow"
             className="cursor-pointer"
@@ -554,266 +1037,6 @@ const SvgMap = ({ data, name }) => {
           >
             UPVC Window
           </text>
-          {/* -------------- Walls ----------- */}
-          <polygon
-            points="901,455,896,920,847,925,822,858,805,851,773,858,151,991,171,-2,267,-2"
-            fill={selectedPolygon.includes('Walls') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Walls')}
-            style={{ cursor: 'pointer' }}
-          />
-          <polygon
-            points="908,457,1594,472,1591,900,1459,875,1451,583,1048,578,1048,870,1461,875,1589,900,1346,900,1346,1072,1056,1074,1048,925,1036,922,1043,507,903,502"
-            fill={selectedPolygon.includes('Walls') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Walls')}
-            style={{ cursor: 'pointer' }}
-          />
-          <polygon
-            points="1594,467,2161,10,2302,10,2773,7,2778,895,2724,885,2501,856,2459,843,2456,595,2007,647,2004,932,2456,1030,2461,843,2503,856,2498,971,2717,1003,2722,885,2776,895,2773,1701,2510,1534,2515,1242,1935,1006,1945,979,1950,947,1940,922,1928,897,1918,870,1918,846,1901,834,1884,836,1876,846,1874,861,1867,878,1859,740,1881,735,1803,644,1736,639,1712,666,1695,686,1677,696,1640,725,1640,745,1643,772,1643,787,1643,821,1645,838,1648,870,1645,890,1667,900,1707,912,1734,920,1781,937,1803,944,1830,937,1830,959,1832,979,1840,998,1842,1008,1783,1015,1785,1094,1594,981"
-            fill={selectedPolygon.includes('Walls') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Walls')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="615.8888888888889"
-            y="607.4444444444445"
-            width="177.44766998291016"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="680.8888888888889"
-            y="650.4444444444445"
-            fontSize={40}
-            id="Walls"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('Walls')}
-            style={{ color: 'black' }}
-          >
-            Walls
-          </text>
-          {/* -------------- Sofa ----------- */}
-          <polygon
-            points="159,991,788,851,805,856,822,863,842,932,1043,927,1053,1119,1021,1116,726,1611,736,1645,684,1692,680,1667,559,1670,480,1465,532,1468,530,1456,399,1453,417,1429,417,1404,407,1392,397,1379,390,1357,402,1343,417,1333,434,1330,444,1306,424,1274,409,1281,385,1269,367,1274,340,1271,323,1279,318,1296,321,1308,323,1323,335,1335,350,1335,362,1343,367,1355,358,1382,348,1392,338,1421,338,1436,353,1451,328,1453,296,1451,276,1451,269,1465,284,1468,299,1470,313,1470,340,1470,267,1665,205,1665,200,1692,117,1697,112,1662,104,1252,151,1210"
-            fill={selectedPolygon.includes('Sofa') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Sofa')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="422.271186440678"
-            y="1323.457627118644"
-            width="185.75792694091797"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="487.271186440678"
-            y="1366.457627118644"
-            fontSize={40}
-            id="Sofa"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('Sofa')}
-            style={{ color: 'black' }}
-          >
-            Sofa
-          </text>
-          {/* -------------- Side Tables ----------- */}
-          <polygon
-            points="279,1458,530,1458,527,1472,483,1470,589,1748,574,1750,466,1472,409,1472,421,1703,407,1708,390,1470,358,1475,249,1743,235,1743,338,1473,276,1470"
-            fill={
-              selectedPolygon.includes('SideTables') ? 'green' : 'transparent'
-            }
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('SideTables')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="398.1875"
-            y="1524.8125"
-            width="318.18113708496094"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="463.1875"
-            y="1567.8125"
-            fontSize={40}
-            id="SideTables"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('SideTables')}
-            style={{ color: 'black' }}
-          >
-            Side Tables
-          </text>
-          {/* -------------- Mandir ----------- */}
-          <polygon
-            points="1739,644,1805,642,1879,740,1854,740,1862,888,1844,910,1832,937,1800,942,1645,893,1640,725"
-            fill={selectedPolygon.includes('Mandir') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Mandir')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="1780"
-            y="763.1"
-            width="230.75132751464844"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="1845"
-            y="806.1"
-            fontSize={40}
-            id="Mandir"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('Mandir')}
-            style={{ color: 'black' }}
-          >
-            Mandir
-          </text>
-          {/* -------------- Console ----------- */}
-          <polygon
-            points="1348,900,1591,897,1591,1074,1564,1070,1567,949,1365,954,1365,1074,1346,1074"
-            fill={selectedPolygon.includes('Console') ? 'green' : 'transparent'}
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('Console')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="1457.125"
-            y="956"
-            width="253.96104431152344"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="1522.125"
-            y="999"
-            fontSize={40}
-            id="Console"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('Console')}
-            style={{ color: 'black' }}
-          >
-            Console
-          </text>
-          {/* -------------- TV Panel ----------- */}
-          <polygon
-            points="1930,1013,2510,1244,2508,1532,2206,1500,1783,1193,1788,1015,1842,1011,1857,1023,1879,1030,1894,1033,1913,1030,1923,1023"
-            fill={
-              selectedPolygon.includes('TVPannel') ? 'green' : 'transparent'
-            }
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('TVPannel')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="1992.75"
-            y="1094.25"
-            width="268.12290954589844"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="2057.75"
-            y="1137.25"
-            fontSize={40}
-            id="TVPannel"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('TVPannel')}
-            style={{ color: 'black' }}
-          >
-            TV Panel
-          </text>
-          {/* -------------- Centre Table ----------- */}
-          <polygon
-            points="1122,1106,1395,1106,1510,1379,1510,1551,1024,1569,1033,1392"
-            fill={
-              selectedPolygon.includes('CenterTable') ? 'green' : 'transparent'
-            }
-            fillOpacity="0.2"
-            onClick={() => handlePolygonClick('CenterTable')}
-            style={{ cursor: 'pointer' }}
-          />
-
-          <rect
-            x="1255.6666666666667"
-            y="1307.5"
-            width="342.0301055908203"
-            height="60"
-            fill="#282828"
-            rx="30"
-            opacity="0.3"
-            ry="30"
-            class="dynamic-rectangle cursor-pointer"
-          ></rect>
-          <text
-            fill="white"
-            opacity="0.75"
-            fontWeight={400}
-            x="1320.6666666666667"
-            y="1350.5"
-            fontSize={40}
-            id="CenterTable"
-            className="cursor-pointer"
-            onClick={() => handlePolygonClick('CenterTable')}
-            style={{ color: 'black' }}
-          >
-            Centre Table
-          </text>
-
-          {/* -------------------------------------- */}
         </svg>
 
         <div className="mt-8">
@@ -834,22 +1057,13 @@ const SvgMap = ({ data, name }) => {
             >
               <div className="float-left">
                 <span>{polygon} </span>
-                {editableSquareFootage[polygon] && (
-                  <span style={{ fontSize: '12px' }}>
-                    {' '}
-                    - {editableSquareFootage[polygon]} sqft
-                  </span>
-                )}
-                {polygon === 'wardrobe' ||
-                polygon === 'flooring' ||
+                {polygon === 'CounterTop' ||
+                polygon === 'Flooring' ||
                 polygon === 'walls' ||
-                polygon === 'TvPannel' ||
-                polygon === 'upvcWindow' ||
-                polygon === 'sofa' ||
-                polygon === 'crockeryUnit' ||
-                polygon === 'CenterTable' ||
-                polygon === 'diningTableSet' ||
-                polygon === 'falseCeiling' ? (
+                polygon === 'KitchenWalls' ||
+                polygon == 'upvcWindow' ||
+                polygon === 'falseCeiling' ||
+                polygon === 'KitchenCabinets' ? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
                     onClick={() => handleEditSquareFootage(polygon)}
@@ -857,19 +1071,8 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
-                {selectedPackage && (
-                  <div
-                    style={{
-                      fontSize: '14px',
-                      marginTop: '5px',
-                      width: '650px',
-                    }}
-                  >
-                    {descriptions[selectedPackage]?.[polygon]}
-                  </div>
-                )}
               </div>
-              <div></div>
+
               <div className="float-right">
                 {pricing[selectedPackage]?.[polygon]?.pricePerSqFt ? (
                   <span style={{ color: 'green', fontSize: '20px' }}>

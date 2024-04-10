@@ -1,20 +1,12 @@
 // 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import IncrementalButton from './IncDecButton'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-  incrementSpace,
-  decrementSpace,
-  setSpaceCounts,
-  setSpaceAreas,
-} from '../../components/redux/actions/secondStepActions'
+
+
 import Image from 'next/image'
 
 const SecondStepSection = () => {
-  const dispatch = useDispatch()
 
-  // Assuming initialState is also in the secondStepReducer
-  const spaceCounts = useSelector((state) => state.space)
 
   const spaces = [
     {
@@ -90,19 +82,33 @@ const SecondStepSection = () => {
     },
   ]
 
+  const [spaceCounts, setSpaceCounts] = useState({
+    'Master Bedroom': 1,
+    Bedroom: 1,
+    Kitchen: 1,
+    Bathroom: 1,
+    'Living and Dining': 1,
+  })
+  useEffect(() => {
+    localStorage.setItem('spaceCounts', JSON.stringify(spaceCounts))
+    console.log(spaceCounts)
+  }, [spaceCounts])
   // Function to handle incrementing the count for a space
   const handleIncrement = (spaceName) => {
-    dispatch(incrementSpace(spaceName))
+    setSpaceCounts((prevCounts) => ({
+      ...prevCounts,
+      [spaceName]: (prevCounts[spaceName] || 0) + 1,
+    }))
   }
 
   // Function to handle decrementing the count for a space
   const handleDecrement = (spaceName) => {
-    dispatch(decrementSpace(spaceName))
+    setSpaceCounts((prevCounts) => ({
+      ...prevCounts,
+      [spaceName]: Math.max((prevCounts[spaceName] || 0) - 1, 0),
+    }))
   }
-  const updateSpaceCounts = (counts) => {
-    dispatch(setSpaceCounts(counts))
-  }
-  // Rendered Spaces
+
   const renderedSpaces = spaces.map((space) => {
     const defaultCount = spaceCounts[space.name] || 0
 
@@ -113,7 +119,13 @@ const SecondStepSection = () => {
           className="flex items-center justify-between h-20 mb-4 bg-white rounded-lg p-2 mx-4"
         >
           <div className="flex items-center">
-            <Image width={1000} height={1000} src={space.img} alt={space.name} className="h-12 w-16 mr-4" />
+            <Image
+              width={1000}
+              height={1000}
+              src={space.img}
+              alt={space.name}
+              className="h-12 w-16 mr-4"
+            />
             <div>
               <h3 className="text-sm font-bold">{space.name}</h3>
               <p className="text-xxs sm:text-xs text-gray-600">{space.desc}</p>
@@ -145,14 +157,6 @@ const SecondStepSection = () => {
     ))
 
   // Submit Function
-  const handleSubmit = () => {
-    // Perform any actions needed with the captured values
-    Object.entries(spaceCounts)
-      .filter(([spaceName, count]) => count > 0)
-      .forEach(([spaceName, count]) => {
-        console.log(`${spaceName} Count:`, count)
-      })
-  }
 
   return (
     <div>
@@ -162,16 +166,6 @@ const SecondStepSection = () => {
 
       <h2 className="text-xl font-bold mt-8 mx-4">Add more spaces</h2>
       {unrenderedSpaces}
-
-      {/* <div>
-      <button
-        type="button"
-        onClick={handleSubmit}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-4"
-      >
-        Submit
-      </button>
-    </div> */}
     </div>
   )
 }

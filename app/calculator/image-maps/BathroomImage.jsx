@@ -63,46 +63,62 @@ const SvgMap = ({ data, name }) => {
   }
   const descriptions = {
     premium: {
-      falseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
-      wallTiles: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X24" (Price range Rs. 55-65/- psf)',
-      Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-      bathroomVanity: 'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
-      sanitaryAndCP: 'Sanitary Brands: Cera /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
+      falseCeiling:
+        'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      wallTiles:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X24" (Price range Rs. 55-65/- psf)',
+      Flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      bathroomVanity:
+        'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
+      sanitaryAndCP:
+        'Sanitary Brands: Cera /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
       door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
       upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
-      ShowerEnclosure: '18 x 7 SqFt., 8mm toughened glass partition with installation',
-      Electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
-
+      ShowerEnclosure:
+        '18 x 7 SqFt., 8mm toughened glass partition with installation',
+      Electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
     },
     luxury: {
-      falseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-  wallTiles: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 70-80/- psf)',
-  Flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
-  bathroomVanity: 'BWR plywood bathroom vanity with drawer storage and mirror above vanity, including hardware, laminates on carcass, Acrylic or plain membrane on shutters BWR (upto Rs. 60/- psf) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar) | Granite / Quartz (upto Rs. 250/- psf)',
-  sanitaryAndCP: 'Sanitary Brands: Jaquar /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
-  door: 'Flush door with hardware, both side veneer with polish, and Chaukhat repairing & polishing Door 35mm hardwood (upto Rs. 125/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.2,500/-)',
-  upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
-  ShowerEnclosure: 'Shower enclosure with 8mm toughened glass partition',
-  Electrical: 'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
-
-
+      falseCeiling:
+        'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      wallTiles:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 70-80/- psf)',
+      Flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      bathroomVanity:
+        'BWR plywood bathroom vanity with drawer storage and mirror above vanity, including hardware, laminates on carcass, Acrylic or plain membrane on shutters BWR (upto Rs. 60/- psf) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar) | Granite / Quartz (upto Rs. 250/- psf)',
+      sanitaryAndCP:
+        'Sanitary Brands: Jaquar /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
+      door: 'Flush door with hardware, both side veneer with polish, and Chaukhat repairing & polishing Door 35mm hardwood (upto Rs. 125/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.2,500/-)',
+      upvcWindow:
+        'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
+      ShowerEnclosure: 'Shower enclosure with 8mm toughened glass partition',
+      Electrical:
+        'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
     },
     ultraLuxury: {
-      falseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-      wallTiles: 'Tiling work including demolition, material (MYK Laticrete), grouting, cleaning, finishing Tile size 24"X48" (Price range upto Rs. 125/- psf)',
-      Flooring: 'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
-      bathroomVanity: 'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters BWR (upto Rs. 60/- psf) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar) | Granite / Quartz (upto Rs. 500/- psf)',
-      sanitaryAndCP: 'Sanitary Brands: Kohler/Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
+      falseCeiling:
+        'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      wallTiles:
+        'Tiling work including demolition, material (MYK Laticrete), grouting, cleaning, finishing Tile size 24"X48" (Price range upto Rs. 125/- psf)',
+      Flooring:
+        'Italian store flooring with installation and Diamond polish Italian stone (Price range upto Rs. 350/-)',
+      bathroomVanity:
+        'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters BWR (upto Rs. 60/- psf) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar) | Granite / Quartz (upto Rs. 500/- psf)',
+      sanitaryAndCP:
+        'Sanitary Brands: Kohler/Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
       door: 'Flush door with hardware, both side veneer with polish / HDHMR with PU, and new marandi Chaukhat with mouldings Door 35mm Bhutan Tuff (upto Rs. 165/-) | Hardware (Hettich or Hafele or similar) | Locks (Upto Rs.3,500/-)',
-      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
-      ShowerEnclosure: 'Branded shower cubical including hardware and installation Cubical (Jaquar or similar, upto Rs. 35,000/-)',
-      Electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
-
-
-
+      upvcWindow:
+        'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
+      ShowerEnclosure:
+        'Branded shower cubical including hardware and installation Cubical (Jaquar or similar, upto Rs. 35,000/-)',
+      Electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
     },
     // Add descriptions for other packages...
-  };
+  }
 
   console.log('data: ', data)
   console.log('name: ', name)
@@ -115,20 +131,36 @@ const SvgMap = ({ data, name }) => {
   // let roomPrice = 0
 
   // to reset the selectedPolygon and roomPrice to back to inital state when package is changed
- 
-  console.log('roomPrice: ', roomPrice)
+
+  useEffect(() => {
+    const localStorageSpaceData = localStorage.getItem('spaceData')
+    if (localStorageSpaceData) {
+      const parsedSpaceData = JSON.parse(localStorageSpaceData)
+      console.log('parsedSpaceData', parsedSpaceData)
+      setUpdatedData(parsedSpaceData)
+    }
+  }, [])
+
   const updateData = () => {
-    setUpdatedData((prevData) =>
-      prevData.map((item) =>
+    console.log('updatedData', updatedData)
+    setUpdatedData((prevData) => {
+      // console.log('prevData', prevData)
+
+      return prevData.map((item) =>
         item.name === name
           ? { ...item, selectedPolygon, selectedPackage, roomPrice }
           : item
       )
-    )
+    })
   }
   useEffect(() => {
     updateData()
   }, [selectedPolygon, selectedPackage, roomPrice])
+  useEffect(() => {
+    console.log('updatedData', updatedData)
+    // localStorage.setItem('spaceData', JSON.stringify(updatedData))
+  }, [updatedData])
+  // -----------------------------------------------------------
 
   const [editableSquareFootage, setEditableSquareFootage] =
     useState(initialSquareFootage)
@@ -254,16 +286,6 @@ const SvgMap = ({ data, name }) => {
     )
   }
 
-  console.log('updatedData: ', updatedData)
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(updateSpaceData(updatedData))
-  }, [dispatch, updatedData])
-
-  const spaceData = useSelector((state) => state.secondStep.spaceData)
-  console.log('Space Data from redux:', spaceData)
-
   const handleSave = () => {
     // Retrieve existing spaceData from localStorage
     const localStorageSpaceData = localStorage.getItem('spaceData')
@@ -286,7 +308,7 @@ const SvgMap = ({ data, name }) => {
         }
 
         // Update the localStorage with the updated spaceData
-        localStorage.setItem('spaceData', JSON.stringify(parsedSpaceData))
+        localStorage.setItem('newSpaceData', JSON.stringify(parsedSpaceData))
         alert('Space data updated successfully!')
       } else {
         // If no item with the same name exists, show an alert
@@ -294,7 +316,7 @@ const SvgMap = ({ data, name }) => {
       }
     } else {
       // If no spaceData exists in localStorage, set it with the current data
-      localStorage.setItem('spaceData', JSON.stringify(spaceData))
+      localStorage.setItem('newSpaceData', JSON.stringify(spaceData))
       alert('Space data saved successfully!')
     }
     router.push('/calculator?step=2')
@@ -348,8 +370,7 @@ const SvgMap = ({ data, name }) => {
           height="100%"
           viewBox="0 0 2450 1702"
           style={{
-            backgroundImage:
-              'url("/images/calculator/bathroom.jpg")',
+            backgroundImage: 'url("/images/calculator/bathroom.jpg")',
             backgroundSize: 'cover',
           }}
         >
@@ -792,9 +813,12 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-              <span className='font-bold text-lg capitalize'>{polygon} </span>
+                <span className="font-bold text-lg capitalize">{polygon} </span>
                 {editableSquareFootage[polygon] && (
-                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                  <span style={{ fontSize: '12px' }}>
+                    {' '}
+                    - {editableSquareFootage[polygon]} sqft
+                  </span>
                 )}
                 {polygon === 'wallTiles' ||
                 polygon === 'Flooring' ||
@@ -809,8 +833,14 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
-                  {selectedPackage && (
-                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                {selectedPackage && (
+                  <div
+                    style={{
+                      fontSize: '14px',
+                      marginTop: '5px',
+                      width: '650px',
+                    }}
+                  >
                     {descriptions[selectedPackage]?.[polygon]}
                   </div>
                 )}

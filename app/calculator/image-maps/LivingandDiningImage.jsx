@@ -60,52 +60,81 @@ const SvgMap = ({ data, name }) => {
   }
   const descriptions = {
     premium: {
-      walls: 'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
-      falseCeiling: 'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
-      CenterTable: 'Designer furniture element - Ready made Price range upto Rs.15,000/-',
+      walls:
+        'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      falseCeiling:
+        'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
+      CenterTable:
+        'Designer furniture element - Ready made Price range upto Rs.15,000/-',
       Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
-      diningTableSet: '6 seater dining table with chairs Sheesham wood | Wooden counter top',
-      crockeryUnit: 'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
-      TvPannel: 'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      diningTableSet:
+        '6 seater dining table with chairs Sheesham wood | Wooden counter top',
+      crockeryUnit:
+        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      TvPannel:
+        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
-      electrical: 'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      electrical:
+        'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
       Mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
-      Console: 'Designer furniture element - Ready made Price range upto Rs.15,000/-',
-      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-
+      Console:
+        'Designer furniture element - Ready made Price range upto Rs.15,000/-',
+      flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
     },
     luxury: {
-      walls: 'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
-      falseCeiling: 'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-      CenterTable: 'Designer furniture element - Ready made Price range upto Rs.30,000/-',
+      walls:
+        'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      falseCeiling:
+        'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      CenterTable:
+        'Designer furniture element - Ready made Price range upto Rs.30,000/-',
       Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 650 per mtr)',
-      diningTableSet: '6 seater dining table with chairs Sheesham wood | Stone counter top',
-      crockeryUnit: 'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
-      TvPannel: 'Standard HDHMR TV panel including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',
-      upvcWindow: 'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
-      electrical: 'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
-      Mandir: '4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
-      Console: 'Designer furniture element - Ready made Price range upto Rs.25,000/-',
-      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)'
+      diningTableSet:
+        '6 seater dining table with chairs Sheesham wood | Stone counter top',
+      crockeryUnit:
+        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      TvPannel:
+        'Standard HDHMR TV panel including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',
+      upvcWindow:
+        'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
+      electrical:
+        'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
+      Mandir:
+        '4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
+      Console:
+        'Designer furniture element - Ready made Price range upto Rs.25,000/-',
+      flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
       // Add descriptions for luxury package components...
     },
     ultraLuxury: {
-      walls: 'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
-      falseCeiling: 'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
-      CenterTable: 'Designer furniture element - Ready made Price range upto Rs.50,000/-',
+      walls:
+        'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
+      falseCeiling:
+        'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
+      CenterTable:
+        'Designer furniture element - Ready made Price range upto Rs.50,000/-',
       Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 750 per mtr)',
-      diningTableSet: '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
-      crockeryUnit: 'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
-      TvPannel: 'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
-      upvcWindow: 'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
-      electrical: 'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+      diningTableSet:
+        '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
+      crockeryUnit:
+        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+      TvPannel:
+        'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
+      upvcWindow:
+        'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
+      electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
       Mandir: '4 x 5 SqFt. Corian stone Mandir',
-      Console: 'Designer furniture element - Ready made Price range upto Rs.40,000/-',
-      flooring: 'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)'
+      Console:
+        'Designer furniture element - Ready made Price range upto Rs.40,000/-',
+      flooring:
+        'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
       // Add descriptions for ultra luxury package components...
     },
     // Add descriptions for other packages...
-  };
+  }
   const initialSquareFootage = {
     falseCeiling: 165,
     electrical: 10,
@@ -121,7 +150,6 @@ const SvgMap = ({ data, name }) => {
     barUnit: 28,
   }
 
-
   console.log('data: ', data)
   console.log('name: ', name)
   const [selectedPolygon, setSelectedPolygon] = useState([])
@@ -132,19 +160,36 @@ const SvgMap = ({ data, name }) => {
   const [roomPrice, setRoomPrice] = useState(0)
   // let roomPrice = 0
 
+  useEffect(() => {
+    const localStorageSpaceData = localStorage.getItem('spaceData')
+    if (localStorageSpaceData) {
+      const parsedSpaceData = JSON.parse(localStorageSpaceData)
+      console.log('parsedSpaceData', parsedSpaceData)
+      setUpdatedData(parsedSpaceData)
+    }
+  }, [])
 
   const updateData = () => {
-    setUpdatedData((prevData) =>
-      prevData.map((item) =>
+    console.log('updatedData', updatedData)
+    setUpdatedData((prevData) => {
+      // console.log('prevData', prevData)
+
+      return prevData.map((item) =>
         item.name === name
           ? { ...item, selectedPolygon, selectedPackage, roomPrice }
           : item
       )
-    )
+    })
   }
   useEffect(() => {
     updateData()
   }, [selectedPolygon, selectedPackage, roomPrice])
+  useEffect(() => {
+    console.log('updatedData', updatedData)
+    // localStorage.setItem('spaceData', JSON.stringify(updatedData))
+  }, [updatedData])
+
+  // ----------------------------------------------------------------------------------
 
   const [editableSquareFootage, setEditableSquareFootage] =
     useState(initialSquareFootage)
@@ -222,8 +267,8 @@ const SvgMap = ({ data, name }) => {
         parseFloat(roomPrice) - parseFloat(priceOfSelectedPolygon) // subtract old price
       setRoomPrice(
         updatedRoomPrice +
-        parseFloat(newSquareFootage) *
-        parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
+          parseFloat(newSquareFootage) *
+            parseFloat(pricing[selectedPackage][polygonId].pricePerSqFt)
       ) // add new price
       updateData() // Update the data after room price is updated
     }
@@ -257,26 +302,20 @@ const SvgMap = ({ data, name }) => {
       <button
         key={tabName}
         onClick={() => handleTabChange(tabName)}
-        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
-          } ${isActive
+        className={`border px-4 py-3 text-base focus:outline-none rounded-lg ${
+          isActive ? 'bg-green-500 text-white' : 'bg-white text-black'
+        } ${
+          isActive
             ? 'hover:bg-green-600 hover:text-white'
             : 'hover:bg-gray-200 hover:text-black'
-          }`}
+        }`}
       >
         {tabName}
       </button>
     )
   }
 
-  console.log('updatedData: ', updatedData)
-  const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(updateSpaceData(updatedData))
-  }, [dispatch, updatedData])
-
-  const spaceData = useSelector((state) => state.secondStep.spaceData)
-  console.log('Space Data from redux:', spaceData)
 
   const handleSave = () => {
     // Retrieve existing spaceData from localStorage
@@ -300,7 +339,7 @@ const SvgMap = ({ data, name }) => {
         }
 
         // Update the localStorage with the updated spaceData
-        localStorage.setItem('spaceData', JSON.stringify(parsedSpaceData))
+        localStorage.setItem('newSpaceData', JSON.stringify(parsedSpaceData))
         alert('Space data updated successfully!')
       } else {
         // If no item with the same name exists, show an alert
@@ -308,7 +347,7 @@ const SvgMap = ({ data, name }) => {
       }
     } else {
       // If no spaceData exists in localStorage, set it with the current data
-      localStorage.setItem('spaceData', JSON.stringify(spaceData))
+      localStorage.setItem('newSpaceData', JSON.stringify(spaceData))
       alert('Space data saved successfully!')
     }
     router.push('/calculator?step=2')
@@ -868,29 +907,42 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span className='font-bold text-lg capitalize'>{polygon} </span>
+                <span className="font-bold text-lg capitalize">{polygon} </span>
                 {editableSquareFootage[polygon] && (
-                  <span style={{ fontSize: '12px' }}> - {editableSquareFootage[polygon]} sqft</span>
+                  <span style={{ fontSize: '12px' }}>
+                    {' '}
+                    - {editableSquareFootage[polygon]} sqft
+                  </span>
                 )}
                 {polygon === 'wardrobe' ||
-                  polygon === 'flooring' ||
-                  polygon === 'walls' ||
-                  polygon === 'TvPannel' ||
-                  polygon === 'upvcWindow' ||
-                  polygon === 'sofa' ||
-                  polygon === 'crockeryUnit' ||
-                  polygon === 'CenterTable' ||
-                  polygon === 'diningTableSet' ||
-                  polygon === 'falseCeiling' ? (
+                polygon === 'flooring' ||
+                polygon === 'walls' ||
+                polygon === 'TvPannel' ||
+                polygon === 'upvcWindow' ||
+                polygon === 'sofa' ||
+                polygon === 'crockeryUnit' ||
+                polygon === 'CenterTable' ||
+                polygon === 'diningTableSet' ||
+                polygon === 'falseCeiling' ? (
                   <span
-                    style={{ cursor: 'pointer', fontSize: '12px', marginLeft: '5px' }}
+                    style={{
+                      cursor: 'pointer',
+                      fontSize: '12px',
+                      marginLeft: '5px',
+                    }}
                     onClick={() => handleEditSquareFootage(polygon)}
                   >
                     ✏️ Edit
                   </span>
                 ) : null}
                 {selectedPackage && (
-                  <div style={{ fontSize: '14px', marginTop: '5px', width: '650px' }}>
+                  <div
+                    style={{
+                      fontSize: '14px',
+                      marginTop: '5px',
+                      width: '650px',
+                    }}
+                  >
                     {descriptions[selectedPackage]?.[polygon]}
                   </div>
                 )}

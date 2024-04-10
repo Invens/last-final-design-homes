@@ -34,13 +34,13 @@ const FourthStep = () => {
 
   // Fetch spaceData and firstStepData from localStorage on component mount
   useEffect(() => {
-    const localStorageSpaceData = localStorage.getItem('spaceData')
-    const localStorageFirstStepData = localStorage.getItem('firstStepData')
+    const localStorageSpaceData = localStorage.getItem('newSpaceData')
+    const localStorageFirstStepData = localStorage.getItem('userData')
 
     if (localStorageSpaceData && localStorageFirstStepData) {
       const parsedSpaceData = JSON.parse(localStorageSpaceData)
       const parsedFirstStepData = JSON.parse(localStorageFirstStepData)
-
+      // console.log('parsedSpaceData', parsedSpaceData)
       setSpaceData(parsedSpaceData)
       setFirstStepData(parsedFirstStepData)
 
@@ -51,6 +51,7 @@ const FourthStep = () => {
       setTotalRoomPrice(total)
     }
   }, [])
+
 
   // Function to generate and download PDF
 
@@ -240,7 +241,6 @@ const FourthStep = () => {
         </div>
         <h2 className="text-xl font-bold m-4">Documents</h2>
         <div>
-        
           <div className="bg-white rounded-lg flex justify-between p-4 m-4">
             <p>Project Scope</p>
             <button
@@ -294,7 +294,6 @@ const FourthStep = () => {
 
         {/* Add your form inputs for editing the spaceName */}
         <FormWithOTPVerification handleDownloadPDF={handleDownloadPDF} />
-      
       </Modal>
     </div>
   )
