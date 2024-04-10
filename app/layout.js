@@ -60,7 +60,10 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
           <SpaceProvider>
             {/* Overlay Animation */}
-            <div>{/* <Animation /> */}</div>
+            <div>
+
+            <Animation />
+            </div>
             {/* Content */}
             <div>{children}</div>
           </SpaceProvider>
