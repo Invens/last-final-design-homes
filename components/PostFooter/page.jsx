@@ -772,9 +772,9 @@ const PostFooter = () => {
         <h2 className="text-uppercase view-heading text-center mb-4">
           a nice day to{' '}
           <span className="text-yellow-400 border-b-2 border-yellow-400">
-            <a href="https://www.designindiankitchen.com/contact-modular-kitchen-dealers-delhi-gurgaon-india/">
+            <Link href="/book-a-interior-design-visit">
               book with us
-            </a>
+           </Link>
           </span>
         </h2>
         {/*  <img class='img-fluid' src={view} alt="top-modular-kitchen-company-in-india"/>  */}

@@ -56,9 +56,9 @@ const Hero = () => {
   }
 
   return (
-    <div>
+    <div className=' '>
       <div id="fry">
-        <div style={containerStyle} className="mt-8">
+        <div style={containerStyle} className="xl:mt-8 min-[720px]:mt-[1280px]">
           <div style={textContainerStyle}>
             <h3 className="sm:text-4xl text-xl font-bold">
               INDIA’S NO.1 INTERIOR & ARCHITECTURAL BRAND
