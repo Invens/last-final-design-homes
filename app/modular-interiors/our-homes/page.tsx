@@ -249,6 +249,7 @@ const Card = ({ project, handleImageClick }) => {
   )
 }
 
+
 const Page = ({}) => {
   const [projects, setProjects] = useState([])
   const [projectIndex, setProjectIndex] = useState(0)
@@ -370,7 +371,6 @@ const Page = ({}) => {
     setProjectIndex((prevIndex) => (prevIndex + 1) % projects.length)
     setCurrentImageIndex(0)
   }
-  
 
   const prevProject = () => {
     setProjectIndex(
