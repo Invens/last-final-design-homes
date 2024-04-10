@@ -149,7 +149,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </Link>
           </div>
           </ul>
-        <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-6">
+        <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-4">
           <Link href="/interior-digest-magazine-india">
             Interior Digest Magazine
           </Link>

@@ -140,7 +140,7 @@ const MobileHeader = () => {
 
   return (
     <>
-      <div className="relative xl:hidden" style={{ zIndex: '8000000' }}>
+      <div className="relative xl:invisible" style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
 
@@ -157,6 +157,7 @@ const MobileHeader = () => {
               />
               <Link href="/"> Home</Link>
             </button>
+            <Link href="/modular-interior-design-ideas">
             <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
                 icon={faPalette}
@@ -165,6 +166,7 @@ const MobileHeader = () => {
               />
               Design
             </button>
+            </Link>
             <button className="flex flex-col items-center text-xs font-bold relative" onClick={togglePopup}>
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
@@ -180,14 +182,16 @@ const MobileHeader = () => {
               </div>
               <span className="mt-7">Book Now</span>
             </button>
+            <Link href="/homes-by-design-indian-homes">
             <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
                 icon={faNewspaper}
                 size="2x"
                 style={{ height: '25px', width: '25px' }}
               />
-              <Link href="/homes-by-design-indian-homes"> Our Homes</Link>
+               Our Homes
             </button>
+            </Link>
             <button
               className="flex flex-col items-center text-xs font-bold"
               onClick={toggleMobileMenu}
@@ -200,136 +204,7 @@ const MobileHeader = () => {
               More
             </button>
           </div>
-          {showPopup && (
-            <div className='bg-gray-800 bg-opacity-75'>
-              <div className="fixed top-[80px] left-0  flex justify-center z-10 ">
-                <div className=" p-4 rounded shadow-lg">
-                  <button onClick={togglePopup} className='absolute right-6 mt-4 rounded-full bg-red-700 text-white p-2 align-right' >Close</button>
-                  <div className='bg-white rounded-lg'>
-                    {formSubmitted ? (
-                      <div className="grid grid-cols-1 justify-items-center">
-                        <p className="text-center text-lg">
-                          Thank you for your submission!
-                        </p>
-                        <Image
-                          alt='thank you'
-                          src={
-                            'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
-                          }
-                          width={400}
-                          height={300}
-                        />
-                        <h1 className="text-center font-bold">
-                          {' '}
-                          FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
-                          WHATSAPP US ON 9899264978, 9582827928
-                        </h1>
-
-                        <button
-                          onClick={handleClose}
-                          className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
-                        >
-                          Close
-                        </button>
-                      </div>
-                    ) : (<form onSubmit={handleSubmit} className=" h-[65vh] w-[350px] bg-green-700  rounded-lg mt-[10px] p-4">
-                      <h1 className=' text-left text-2xl font-bold text-white'>Book with Us</h1>
-                      <div >
-                        <label
-                          htmlFor="fullName"
-                          className="block text-sm font-medium text-white"
-                        >
-                          Full Name*
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          onChange={handleChange}
-                          className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="email"
-                          className="block text-sm font-medium text-white"
-                        >
-                          Email ID*
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          onChange={handleChange}
-                          className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="number"
-                          className="block text-sm font-medium text-white"
-                        >
-                          Mobile Number*
-                        </label>
-                        <input
-                          type="tel"
-                          id="number"
-                          name="number"
-                          onChange={handleChange}
-                          className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-4">
-                        <label
-                          htmlFor="pincode"
-                          className="block text-sm font-medium text-white"
-                        >
-                          Pincode*
-                        </label>
-                        <input
-                          type="text"
-                          id="pincode"
-                          onChange={handleChange}
-                          name="pincode"
-                          className="mt-1 p-2 w-full bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
-
-                      <div className="mb-4">
-                        <label htmlFor="agree" className="flex items-center">
-                          <input
-                            type="checkbox"
-                            id="agree"
-                            onChange={handleChange}
-                            name="agree"
-                            className="mr-2"
-                          />
-                          <span className="text-sm text-white">
-                            Yes, I would like to receive important updates and
-                            notifications on WhatsApp
-                          </span>
-                        </label>
-                      </div>
-                      <button
-                        type="submit"
-                        className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-4 sm:mt-0"
-                      >
-                        Book Free Site Visit
-                      </button>
-                    </form>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+         
         </div>
       </div>
 
@@ -2363,6 +2238,140 @@ const MobileHeader = () => {
           </div>
         )}
       </div>
+
+      {showPopup && (
+            <div className=' bg-gray-800 bg-opacity-75'>
+              <div className="fixed top-[80px] left-0  flex justify-center z-10 ">
+                <div className="rounded">
+                  <button onClick={togglePopup} className='absolute right-6 mt-8 rounded-full bg-red-700 text-white p-2 align-right' >Close</button>
+                  <div className=' rounded-lg'>
+                    {formSubmitted ? (
+                      <div className="grid grid-cols-1 justify-items-center">
+                        <p className="text-center text-lg">
+                          Thank you for your submission!
+                        </p>
+                        <Image
+                          alt='thank you'
+                          src={
+                            'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+                          }
+                          width={400}
+                          height={300}
+                        />
+                        <h1 className="text-center font-bold">
+                          {' '}
+                          FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+                          WHATSAPP US ON 9899264978, 9582827928
+                        </h1>
+
+                        <button
+                          onClick={handleClose}
+                          className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+                        >
+                          Close
+                        </button>
+                      </div>
+                    ) : (
+                  
+                    <form onSubmit={handleSubmit} className=" h-[55vh] bg-green-700  rounded-lg mt-[50px] m-[50px] p-4">
+                      <h1 className=' text-left text-xl font-bold text-white'>Book with Us</h1>
+                      <div >
+                        <label
+                          htmlFor="fullName"
+                          className="block text-xs font-medium text-white"
+                        >
+                          Full Name*
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          onChange={handleChange}
+                          className="mt-1 p-2 w-[60vw] h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                          required
+                        />
+                      </div>
+
+                      <div className="mt-2">
+                        <label
+                          htmlFor="email"
+                          className="block text-xs font-medium text-white"
+                        >
+                          Email ID*
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          onChange={handleChange}
+                          className="mt-1 p-2 w-[60vw] h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                          required
+                        />
+                      </div>
+
+                      <div className="mt-2">
+                        <label
+                          htmlFor="number"
+                          className="block text-xs font-medium text-white"
+                        >
+                          Mobile Number*
+                        </label>
+                        <input
+                          type="tel"
+                          id="number"
+                          name="number"
+                          onChange={handleChange}
+                          className="mt-1 p-2 w-[60vw] h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                          required
+                        />
+                      </div>
+
+                      <div className="mt-2">
+                        <label
+                          htmlFor="pincode"
+                          className="block text-xs font-medium text-white"
+                        >
+                          Pincode*
+                        </label>
+                        <input
+                          type="text"
+                          id="pincode"
+                          onChange={handleChange}
+                          name="pincode"
+                          className="mt-1 p-2 w-[60vw] h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                          required
+                        />
+                      </div>
+
+                      <div className="mt-2">
+                        <label htmlFor="agree" className="flex items-center">
+                          <input
+                            type="checkbox"
+                            id="agree"
+                            onChange={handleChange}
+                            name="agree"
+                            className="mr-2"
+                          />
+                          <span className="text-xs text-white w-[200px]">
+                            Yes, I would like to receive important updates and
+                            notifications on WhatsApp
+                          </span>
+                        </label>
+                      </div>
+                      <button
+                        type="submit"
+                        className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-4 sm:mt-0"
+                      >
+                        Book Free Site Visit
+                      </button>
+                    </form>
+                   
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
     </>
   )
 }
