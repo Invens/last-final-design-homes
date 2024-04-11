@@ -218,7 +218,7 @@ const Header = () => {
 
   const MegaMenuInteriorsContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-2 h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-2 h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -440,7 +440,7 @@ const Header = () => {
   )
   const MegaMenuArchitectureContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -616,7 +616,7 @@ const Header = () => {
   )
   const MegaMenuModularKitchenContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -791,7 +791,7 @@ const Header = () => {
   )
   const MegaMenuWardrobesContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -968,7 +968,7 @@ const Header = () => {
   )
   const MegaMenuLivingContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4  h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -1175,7 +1175,7 @@ const Header = () => {
   )
   const MegaMenuModularInteriorContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -1407,7 +1407,7 @@ const Header = () => {
   )
   const MegaMenuMore = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg flex absolute w-full p-4 justify-center h-[65vh] text-black"
+      className="bg-white shadow-2xl rounded-lg flex absolute w-full p-4 justify-center h-auto text-black"
       onMouseLeave={handleMouseLeave}
       style={{ marginTop: '96px' }}
     >
@@ -1592,7 +1592,7 @@ const Header = () => {
   }, [mobileMenuVisible])
   return (
     <div className={` bg-white  ${scrollDirection === 'down'}`}>
-      <div className="z-[200] invisible xl:visible lg:flex">
+      <div className="z-[200]   invisible xl:visible lg:visible  lg:flex">
         {/* Desktop Header */}
         <div
           className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
@@ -1628,7 +1628,7 @@ const Header = () => {
           )}
 
           <div className="animated-bg text-black  sticky top-0 ">
-            <div className="flex justify-center gap-72 mt-2">
+            <div className="flex justify-center xl:space-x-12 lg:space-x-8 mt-2">
               <div className="flex ml-0 gap-2 w-[100px]">
                 <FontAwesomeIcon
                   icon={faPhone}
@@ -1715,11 +1715,11 @@ const Header = () => {
             {/* Main Header Navigation scroll up header */}
             <div className="sm:px-0 md:px-0 xl:px-1 xl:px-0 ">
               <nav
-                className="flex flex-wrap xl:flex-nowrap justify-center items-center mt-4 text-black font-bold space-x-4 sm:space-x-5"
+                className="flex  w-full justify-center xl:text-sm xl:font-bold lg:text-[10px] items-center mt-4 text-black xl:space-x-8 lg:space-x-4"
                 style={{ justifyContent: 'center' }}
               >
                 <p
-                  className=" flex center text-sm font-bold text-black hover:text-green-400"
+                  className=" flex center  font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('DesignIdeas')}
                 >
                   <Link href="/modular-interior-design-ideas">
@@ -1729,21 +1729,21 @@ const Header = () => {
                 </p>
 
                 <p
-                  className="flex text-sm font-bold text-black hover:text-green-400"
+                  className="flex font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Interiors')}
                 >
                   <Link href="/interior-design-ideas"> Interiors</Link>
                 </p>
 
                 <p
-                  className="flex text-sm font-bold text-black hover:text-green-400"
+                  className="flex  font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Architectural')}
                 >
                   <Link href="/architectural-designs">Architectural</Link>
                 </p>
 
                 <p
-                  className="flex text-sm font-bold text-black hover:text-green-400"
+                  className="flex  font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Modular Kitchen')}
                 >
                   <Link href="/modular-kitchen">Modular Kitchen</Link>
@@ -1771,7 +1771,7 @@ const Header = () => {
                 </Link>
 
                 <p
-                  className="text-sm font-bold text-black hover:text-green-400"
+                  className=" font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Wardrobes')}
                 >
                   <i className="fi fi-tr-clothes-hanger"></i>
@@ -1784,7 +1784,7 @@ const Header = () => {
                 </p> */}
 
                 <p
-                  className="text-sm font-bold text-black hover:text-green-400"
+                  className=" font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Modular Interiors')}
                 >
                   <i className="fi fi-ts-loveseat"></i>
@@ -1796,7 +1796,7 @@ const Header = () => {
 
                 <div>
                   <p
-                    className="text-sm font-bold text-black hover:text-green-400"
+                    className=" font-bold text-black hover:text-green-400"
                     onMouseOver={() => handleMouseOver('More')}
                   >
                     <Link href="#"> More</Link>
@@ -1819,7 +1819,7 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <div className="absolute ml-[140px] right-[50px] mb-2"><ColorSwitchD /></div>
+                <div className=" mb-2"><ColorSwitchD /></div>
               </nav>
 
             </div>

@@ -56,11 +56,11 @@ const Hero = () => {
   }
 
   return (
-    <div className=' '>
+    <div className='lg:mt-16 md:mt-[85px] sm:mt-[100px] '>
       <div id="fry">
-        <div style={containerStyle} className="xl:mt-8 min-[720px]:mt-[1280px]">
+        <div style={containerStyle} className='mt-[50px]'>
           <div style={textContainerStyle}>
-            <h3 className="sm:text-4xl text-xl font-bold">
+            <h3 className="sm:text-4xl text-xl font-bold  ">
               INDIA’S NO.1 INTERIOR & ARCHITECTURAL BRAND
             </h3>
           </div>
