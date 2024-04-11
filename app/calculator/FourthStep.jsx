@@ -329,7 +329,9 @@ const FourthStep = () => {
     // Modify requirementsColumns to include dynamic column headings
     // ---------------------------------------------------------------------
 
-    const tableWidth = 180 // Set the width of each table
+    const tableWidth = 180
+    const columnWidth = 90
+    // Set the width of each table
 
     spaceData.forEach((space, i) => {
       if (space.selectedPolygon && space.selectedPolygon.length > 0) {
@@ -337,9 +339,14 @@ const FourthStep = () => {
           {
             dataKey: space.name,
             header: `${space.name} (${space.area} sqft) ${
-              space.selectedPackage || '-'
+              space.selectedPackage.toUpperCase() || '-'
             } Package`,
-            width: tableWidth, // Set the width of the table
+            width: columnWidth, // Set the width of the table
+          },
+          {
+            dataKey: 'description',
+            header: 'Description',
+            width: columnWidth, // Set the width of the description column
           },
         ]
         // const spaceDataFormatted = []
@@ -360,11 +367,18 @@ const FourthStep = () => {
         //   spaceDataFormatted.push(row)
         // })
 
+        // const spaceDataFormatted = space.selectedPolygon.map((polygon) => ({
+        //   [space.name]: `${polygon.toUpperCase()} - ${
+        //     descriptions[space.selectedPackage][polygon.toLowerCase()] ||
+        //     'Description not found'
+        //   }`,
+        // }))
+
         const spaceDataFormatted = space.selectedPolygon.map((polygon) => ({
-          [space.name]: `${polygon.toUpperCase()} - ${
+          [space.name]: polygon.toUpperCase(),
+          description:
             descriptions[space.selectedPackage][polygon.toLowerCase()] ||
-            'Description not found'
-          }`,
+            'Description not found',
         }))
 
         // Create the table
@@ -374,14 +388,13 @@ const FourthStep = () => {
           body: spaceDataFormatted,
           columns: spaceColumns,
           theme: 'grid',
-          styles: {
-            cellWidth: tableWidth,
-            // Define styles for the text
-          },
         })
       }
     })
-
+  // styles: {
+  //           cellWidth: columnWidth,
+  //           // Define styles for the text
+  //         },
     //  ------------------------------------------------------------------
 
     // Add horizontal line
