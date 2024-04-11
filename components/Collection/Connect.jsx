@@ -74,6 +74,7 @@ const Connect = () => {
             viewBox="0 0 200 200"
             width={200}
             height={200}
+            className="relative"
           >
             <defs>
               <path
@@ -89,6 +90,7 @@ const Connect = () => {
               href="/images/left.gif"
               width={50}
               height={50}
+              class="main1-img"
               x="75"
               y="75"
             />
@@ -98,11 +100,10 @@ const Connect = () => {
                 xlinkHref="#circle"
                 className="text text-black-800"
               >
-                The Best Home Interior Brand of India -
+                The BestHome Interior Brand of India -
               </textPath>
             </text>
           </svg>
-                  
         </div>
 
         {/* ------------------------------- */}

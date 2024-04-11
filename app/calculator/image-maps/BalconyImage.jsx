@@ -1,10 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ArrowLeft } from 'lucide-react'
-import { useDispatch, useSelector } from 'react-redux'
-import { updateSpaceData } from '../../../components/redux/actions/secondStepActions'
-import Link from 'next/link'
+
 
 import { useRouter } from 'next/navigation'
 const SvgMap = ({ data, name }) => {

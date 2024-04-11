@@ -11,7 +11,7 @@ const SvgMap = ({ data, name }) => {
   const pricing = {
     premium: {
       barUnit: { pricePerSqFt: 1250 },
-      TvPannel: { pricePerSqFt: 950 },
+      tvpanel: { pricePerSqFt: 950 },
       CenterTable: { price: 19000 },
       Sofa: { price: 10500 },
       Console: { price: 19000 },
@@ -27,7 +27,7 @@ const SvgMap = ({ data, name }) => {
     },
     luxury: {
       barUnit: { pricePerSqFt: 1350 },
-      TvPannel: { pricePerSqFt: 1350 },
+      tvpanel: { pricePerSqFt: 1350 },
       CenterTable: { price: 34000 },
       Sofa: { price: 15000 },
       Console: { price: 29000 },
@@ -43,7 +43,7 @@ const SvgMap = ({ data, name }) => {
     },
     ultraLuxury: {
       barUnit: { pricePerSqFt: 1700 },
-      TvPannel: { pricePerSqFt: 1750 },
+      tvpanel: { pricePerSqFt: 1750 },
       CenterTable: { price: 55000 },
       Sofa: { price: 24500 },
       Console: { price: 50000 },
@@ -71,7 +71,7 @@ const SvgMap = ({ data, name }) => {
         '6 seater dining table with chairs Sheesham wood | Wooden counter top',
       crockeryUnit:
         'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
-      TvPannel:
+      tvpanel:
         'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
       electrical:
@@ -94,7 +94,7 @@ const SvgMap = ({ data, name }) => {
         '6 seater dining table with chairs Sheesham wood | Stone counter top',
       crockeryUnit:
         'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
-      TvPannel:
+      tvpanel:
         'Standard HDHMR TV panel including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',
       upvcWindow:
         'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
@@ -120,7 +120,7 @@ const SvgMap = ({ data, name }) => {
         '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
       crockeryUnit:
         'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
-      TvPannel:
+      tvpanel:
         'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
       upvcWindow:
         'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
@@ -139,7 +139,7 @@ const SvgMap = ({ data, name }) => {
     falseCeiling: 165,
     electrical: 10,
     flooring: 48,
-    TvPannel: 64,
+    tvpanel: 64,
     CenterTable: 1,
     Console: 1,
     Mandir: 70,
@@ -314,8 +314,6 @@ const SvgMap = ({ data, name }) => {
       </button>
     )
   }
-
-
 
   const handleSave = () => {
     // Retrieve existing spaceData from localStorage
@@ -752,11 +750,9 @@ const SvgMap = ({ data, name }) => {
           {/* ---TV Panel------ */}
           <polygon
             points="388,1252,336,1228,216,1290,225,1457,821,1780,957,1699,989,1495,744,1391,744,1437,755,1446,548,1361,529,1397,505,1448,543,1467,540,1489,469,1465,431,1440,437,1424,475,1437,480,1383,513,1348,388,1296"
-            fill={
-              selectedPolygon.includes('TvPannel') ? 'green' : 'transparent'
-            }
+            fill={selectedPolygon.includes('tvpanel') ? 'green' : 'transparent'}
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('TvPannel')}
+            onClick={() => handlePolygonClick('tvpanel')}
             style={{ cursor: 'pointer' }}
           />
           <rect
@@ -777,9 +773,9 @@ const SvgMap = ({ data, name }) => {
             x="601.9545454545455"
             y="1428.6363636363637"
             fontSize={40}
-            id="TvPannel"
+            id="tvpanel"
             className="cursor-pointer"
-            onClick={() => handlePolygonClick('TvPannel')}
+            onClick={() => handlePolygonClick('tvpanel')}
             style={{ color: 'black' }}
           >
             TV Panel
@@ -917,7 +913,7 @@ const SvgMap = ({ data, name }) => {
                 {polygon === 'wardrobe' ||
                 polygon === 'flooring' ||
                 polygon === 'walls' ||
-                polygon === 'TvPannel' ||
+                polygon === 'tvpanel' ||
                 polygon === 'upvcWindow' ||
                 polygon === 'sofa' ||
                 polygon === 'crockeryUnit' ||

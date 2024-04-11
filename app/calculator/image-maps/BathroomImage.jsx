@@ -378,19 +378,19 @@ const SvgMap = ({ data, name }) => {
           <polygon
             points="34,167,704,518,921,518,921,385,722,372,300,2"
             fill={
-              selectedPolygon.includes('falseCeiling') ? 'green' : 'transparent'
+              selectedPolygon.includes('FalseCeiling') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('falseCeiling')}
+            onClick={() => handlePolygonClick('FalseCeiling')}
             style={{ cursor: 'pointer' }}
           />
           <polygon
             points="992,383,1081,524,1823,539,2449,184,2250,15,1789,401"
             fill={
-              selectedPolygon.includes('falseCeiling') ? 'green' : 'transparent'
+              selectedPolygon.includes('FalseCeiling') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('falseCeiling')}
+            onClick={() => handlePolygonClick('FalseCeiling')}
             style={{ cursor: 'pointer' }}
           />
           <rect
@@ -413,7 +413,7 @@ const SvgMap = ({ data, name }) => {
             y="327"
             fontSize={40}
             id="falseCeiling"
-            onClick={() => handlePolygonClick('falseCeiling')}
+            onClick={() => handlePolygonClick('FalseCeiling')}
             className="cursor-pointer"
             style={{ color: 'black' }}
           >
@@ -649,7 +649,7 @@ const SvgMap = ({ data, name }) => {
             fontSize={40}
             id="wallTiles"
             className="cursor-pointer"
-            onClick={() => handlePolygonClick('Walls-Tiles')}
+            onClick={() => handlePolygonClick('wallTiles')}
             style={{ color: 'black' }}
           >
             Walls Tiles

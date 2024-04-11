@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
             {/* Overlay Animation */}
             <div>
 
-            <Animation />
+            {/* <Animation /> */}
             </div>
             {/* Content */}
             <div>{children}</div>
