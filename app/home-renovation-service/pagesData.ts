@@ -32,7 +32,7 @@ export const pagesData = [
     slug: '/lounge-renovation',
     noItems: '6',
     heading: 'Lounge Renovation',
-    desc: 'get your lounge renovated from the outdated to trending designs. By Design Indian homes. Check out our latest trending design for your lounge areas as per your convenience.',
+    desc: 'Get your lounge renovated from the outdated to trending designs. By Design Indian homes. Check out our latest trending design for your lounge areas as per your convenience.',
     items: [],
   },
   {

@@ -121,7 +121,7 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-gray-600 text-sm">
-            Modular Kitchen enovation
+            Modular Kitchen Renovation
           </span>
         </div>
 

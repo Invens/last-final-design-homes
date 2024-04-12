@@ -103,7 +103,7 @@ React.useEffect(() => {
   return (
     <> 
     <div className='flex justify-center'>
-      <h1 className='text-4xl font-bold uppercase text-center'>Connect with us <span className='text-black underline'>Today</span></h1>
+      <h1 className='text-4xl font-bold uppercase text-center text-black'>Connect with us <span className='text-white underline'>Today</span></h1>
     </div>
     <div className="flex flex-col sm:flex-row lg:mx-16 mt-8">
       {/* Left side with heading and paragraph */}

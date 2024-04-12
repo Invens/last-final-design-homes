@@ -16,7 +16,7 @@ import Footer from '../../components/Footer/Footer'
 import emailjs from 'emailjs-com'
 import Omsairam from '../../components/Navbar/Omsairam'
 import ScheduleChatSection from '../../components/schedule-chat/page'
-
+import PopupForm from '../../components/popupform/page'
 const TopFormSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,6 +27,7 @@ const TopFormSection = () => {
   const [btnText, setBtnText] = useState('Submit')
   const [formSubmitted, setFormSubmitted] = useState(false)
 
+ 
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -256,6 +257,10 @@ const TopFormSection = () => {
 }
 
 const MiddleInfoSection = () => {
+  const [showPopup, setShowPopup] = useState(false);
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  }
   return (
     <div className="container mx-auto mt-8 p-2">
       {/* Big Heading */}
@@ -278,11 +283,11 @@ const MiddleInfoSection = () => {
             For Grievances/Complains/Support support@designindianhomes.com
           </p>
           <div className="bg-yellow-400 rounded-full w-full my-8 h-24 flex items-center justify-center">
-            <Link href="/">
-              <h1 className="text-left p-3 text-2xl font-bold">
-                Plan A Design Visit
-              </h1>
-            </Link>
+           <button onClick={togglePopup} className='text-2xl font-bold'>Plan a Visit Today</button>
+            <PopupForm
+           showPopup={showPopup}
+           togglePopup={togglePopup}
+           />
           </div>
         </div>
 
@@ -388,6 +393,21 @@ const MiddleInfoSection = () => {
           <p className="text-gray-700 font-semibold mb-2">
             <a href="https://devotionalindia.com/" target="_blank">
               Devotional India
+            </a>
+          </p>
+          <p className="text-gray-700 font-semibold mb-2">
+            <a href="https://indianlawcompany.com/" target="_blank">
+              Indian Law Company
+            </a>
+          </p>
+          <p className="text-gray-700 font-semibold mb-2">
+            <a href="https://modularkitchenmanufacturer.com/" target="_blank">
+              Modular Kitchen Manufacturer
+            </a>
+          </p>
+          <p className="text-gray-700 font-semibold mb-2">
+            <a href="https://tallysolution.net/" target="_blank">
+             Tally Sollution
             </a>
           </p>
         </div>
