@@ -86,7 +86,7 @@ const WordPressPosts = () => {
         </div>
         <h1 className='text-center text-4xl font-bold mt-8'>Timeless Collection of Our <span className='text-orange-600'>Interior</span> & <span className='text-green-500'>Architectural</span> Insights</h1>
         <p className='text-center text-lg px-8 pt-4'>
-Welcome to Our Magazine Digest Page, Now Check Exclusive collection of Interior Designs ideas, advices and inspirations by our seasoned experts. We work tirelessly to bring you some of the finest architectural ideas and advices, apart from that we bring you detailed collection of some of our exclusive trending projects, and the technical know how on the execution of the process. Check Us out and if you have any upcoming project, just connect with us and we'l make sure you get the best out of it.</p>
+Welcome to Our Magazine Digest Page, Now Check Exclusive collection of Interior Designs ideas, advices and inspirations by our seasoned experts. We work tirelessly to bring you some of the finest architectural ideas and advices, apart from that we bring you detailed collection of some of our exclusive trending projects, and the technical know how on the execution of the process. Check Us out and if you have any upcoming project, just connect with us and we&apos;l make sure you get the best out of it.</p>
         <div className="flex items-center mt-8 w-full overflow-x-auto px-4 ">
           <div className="flex items-center mx-auto gap-4 pb-4">
             {categories.map((category) => (
