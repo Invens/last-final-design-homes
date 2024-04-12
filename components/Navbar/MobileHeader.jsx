@@ -222,30 +222,27 @@ const MobileHeader = () => {
               width={0}
               height={0}
               priority={true}
-              style={{
-                width: '30vw',
-                height: 'auto',
-                marginLeft: '10px',
-                marginTop: '6px',
-
-              }}
+              className='absolute xs:relative md:relative w-[8rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] '
+             
             />
           </Link>
         </div>
-        <div className='flex'>
-          <Link href="/homes-by-design-indian-homes">
-        <button className="invisible md:visible bg-red-500 px-6 md:py-12 text-white font-bold ">
-            Our Homes
-          </button>
-          </Link>
-        <div>
-          
+       
+       
+         <div className='flex'>
+         <div className='mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold '>
+        <button>Our Homes</button>
+        <button>Design Ideas</button>
+        <button>Contact Us</button>
+        <button></button>
+
+        </div>
           <Link
             href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-            <button className='bg-black text-white px-6 py-6 md:py-12'>Get Estimate</button>
+            <button className='bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6'>Get Estimate</button>
 
           </Link>
-        </div>
+       
         </div>
        
       </div>

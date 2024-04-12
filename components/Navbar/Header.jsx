@@ -1713,9 +1713,9 @@ const Header = () => {
             </Link>
 
             {/* Main Header Navigation scroll up header */}
-            <div className="sm:px-0 md:px-0 xl:px-1 xl:px-0 ">
+            <div className="sm:px-0 md:px-0 xl:px-1  ">
               <nav
-                className="flex  w-full justify-center xl:text-sm xl:font-bold lg:text-[10px] items-center mt-4 text-black xl:space-x-8 lg:space-x-4"
+                className="flex  w-full justify-center xl:text-sm  lg:text-[9px] lg:font-bold items-center mt-4 text-black space-x-6"
                 style={{ justifyContent: 'center' }}
               >
                 <p

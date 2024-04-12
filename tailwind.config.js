@@ -16,6 +16,10 @@ module.exports = {
         wonderful: ['Wonderful', 'Lato', 'sans-serif'],
       },
       screens: {
+        'xxs': '320px',
+
+        'xs': '480px',
+
         'sm': '640px',
         // => @media (min-width: 640px) { ... } 
     
