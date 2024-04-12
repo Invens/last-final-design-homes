@@ -334,7 +334,7 @@ const FourthStep = () => {
     // Set the width of each table
 
     spaceData.forEach((space, i) => {
-      if (space.selectedPolygon && space.selectedPolygon.length > 0) {
+      if (space.selectedPolygonArea && space.selectedPolygonArea.length > 0) {
         const spaceColumns = [
           {
             dataKey: space.name,
@@ -346,6 +346,11 @@ const FourthStep = () => {
           {
             dataKey: 'description',
             header: 'Description',
+            width: columnWidth, // Set the width of the description column
+          },
+          {
+            dataKey: 'area',
+            header: 'Area',
             width: columnWidth, // Set the width of the description column
           },
         ]
@@ -374,11 +379,13 @@ const FourthStep = () => {
         //   }`,
         // }))
 
-        const spaceDataFormatted = space.selectedPolygon.map((polygon) => ({
-          [space.name]: polygon.toUpperCase(),
+        const spaceDataFormatted = space.selectedPolygonArea.map((polygon) => ({
+          [space.name]: Object.keys(polygon)[0].toUpperCase(),
           description:
-            descriptions[space.selectedPackage][polygon.toLowerCase()] ||
-            'Description not found',
+            descriptions[space.selectedPackage][
+              Object.keys(polygon)[0].toLowerCase()
+            ] || 'Description not found',
+          area: `${polygon[Object.keys(polygon)[0]]}-sqft`,
         }))
 
         // Create the table
@@ -391,10 +398,10 @@ const FourthStep = () => {
         })
       }
     })
-  // styles: {
-  //           cellWidth: columnWidth,
-  //           // Define styles for the text
-  //         },
+    // styles: {
+    //           cellWidth: columnWidth,
+    //           // Define styles for the text
+    //         },
     //  ------------------------------------------------------------------
 
     // Add horizontal line
@@ -451,7 +458,7 @@ const FourthStep = () => {
               </AccordionSummary>
               <AccordionDetails className="shadow-lg">
                 <div className="flex flex-col space-y-4 sm:mx-10">
-                  {room.selectedPolygon &&
+                  {room.selectedPolygonArea &&
                     room.selectedPackage &&
                     room.roomPrice && (
                       <>
@@ -476,9 +483,15 @@ const FourthStep = () => {
                             Selected Features
                           </h6>
                           <ul>
-                            {room.selectedPolygon.map((polygon, index) => (
+                            {room.selectedPolygonArea.map((polygon, index) => (
                               <li key={index}>
-                                <p className="capitalize">{polygon}</p>
+                                <p className="capitalize">
+                                  {Object.keys(polygon)[0]}
+                                  <span className="text-xs">
+                                    {'   '}
+                                    {polygon[Object.keys(polygon)[0]]}-sqft
+                                  </span>
+                                </p>
                               </li>
                             ))}
                           </ul>
