@@ -140,7 +140,7 @@ const MobileHeader = () => {
 
   return (
     <>
-      <div className="relative xl:invisible" style={{ zIndex: '8000000' }}>
+      <div className="relative lg:hidden " style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
 
@@ -211,7 +211,7 @@ const MobileHeader = () => {
       {/* {mobiler logo} */}
 
       <div
-        className="xl:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-6 fixed top-0 w-full"
+        className="lg:hidden flex justify-between items-center px-0 py-0 bg-white drop-shadow-lg mt-6 fixed top-0 w-full"
         style={{ zIndex: '190' }}
       >
         <div>
@@ -232,13 +232,22 @@ const MobileHeader = () => {
             />
           </Link>
         </div>
+        <div className='flex'>
+          <Link href="/homes-by-design-indian-homes">
+        <button className="invisible md:visible bg-red-500 px-6 md:py-12 text-white font-bold ">
+            Our Homes
+          </button>
+          </Link>
         <div>
+          
           <Link
             href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
             <button className='bg-black text-white px-6 py-6 md:py-12'>Get Estimate</button>
 
           </Link>
         </div>
+        </div>
+       
       </div>
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-6 z-40">
