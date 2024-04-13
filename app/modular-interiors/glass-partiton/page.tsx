@@ -86,7 +86,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/glass-partition-designs/"
+            href="https://designindianhomes.com/glass-partition-designs-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -99,7 +99,7 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/glass-partition-designs/"
+            content="https://designindianhomes.com/glass-partition-designs-designs/"
           />
           <meta
             property="og:title"

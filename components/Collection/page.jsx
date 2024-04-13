@@ -128,13 +128,13 @@ const Collection = () => {
           style={
             isLargeScreen
               ? {
-                x: translateXleftWithSpringMob,
-                fontFamily: 'Roboto, sans-serif',
-              }
+                  x: translateXleftWithSpringMob,
+                  fontFamily: 'Roboto, sans-serif',
+                }
               : {
-                x: translateXleftWithSpring,
-                fontFamily: 'Roboto, sans-serif',
-              }
+                  x: translateXleftWithSpring,
+                  fontFamily: 'Roboto, sans-serif',
+                }
           }
         >
           <span className="font-[50]"> welcome to </span>
@@ -175,13 +175,13 @@ const Collection = () => {
           style={
             isLargeScreen
               ? {
-                x: translateXrightWithSpringMob,
-                fontFamily: 'Roboto, sans-serif',
-              }
+                  x: translateXrightWithSpringMob,
+                  fontFamily: 'Roboto, sans-serif',
+                }
               : {
-                x: translateXrightWithSpring,
-                fontFamily: 'Roboto, sans-serif',
-              }
+                  x: translateXrightWithSpring,
+                  fontFamily: 'Roboto, sans-serif',
+                }
           }
         >
           <span className="font-[50]"> welcome to </span>
@@ -296,8 +296,6 @@ const Collection = () => {
                 id="news"
               >
                 <Link href="/modular-interior-design-ideas">
-
-
                   <Image
                     height={350}
                     width={700}
@@ -306,8 +304,6 @@ const Collection = () => {
                     alt=""
                   />
                 </Link>
-
-
               </motion.div>
 
               {/* Image 2 */}
@@ -351,7 +347,6 @@ const Collection = () => {
                 id="news"
               >
                 <Link href="/">
-
                   <Image
                     height={350}
                     width={700}
@@ -392,7 +387,6 @@ const Collection = () => {
                     alt=""
                   />
                 </Link>
-
               </motion.div>
             </motion.div>
           </div>
@@ -407,7 +401,10 @@ const Collection = () => {
         <h1 className="text-3xl font-bold sm:mb-16 mb-8 text-center">
           Why Design Indian Homes?
         </h1>
-        <div id="" className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 z-10">
+        <div
+          id=""
+          className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 z-10"
+        >
           <div className="flex flex-col items-center text-center">
             <Image
               width={100}
@@ -463,11 +460,7 @@ const Collection = () => {
           </div>
 
           <div className="flex flex-col items-center text-center">
-            <Image
-              width={100}
-              height={100}
-              src="/images/icon/modular.png"
-            />
+            <Image width={100} height={100} src="/images/icon/modular.png" />
             <p>In-House Modular Manufacturing</p>
           </div>
 

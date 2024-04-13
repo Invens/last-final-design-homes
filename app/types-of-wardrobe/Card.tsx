@@ -14,14 +14,12 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ data }) => {
   return (
-
     // <Link href={`/design-ideas/${data.slug}`}>
-    <Link href="/interior/1BHK residence interior designs">
+    <Link href="/home-interior-designs/1BHK residence interior designs">
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
         <Image
           height={100}
           width={100}
-
           src={data.image}
           alt={data.heading}
           className="w-full h-40 object-cover"

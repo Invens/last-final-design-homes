@@ -184,7 +184,7 @@ const TextSection = () => {
         {/* Button */}
         <Link
           className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-700"
-          href="/interior-designing-estimates-pricing"
+          href="/home-interior-designs-designing-estimates-pricing"
         >
           GET QUOTE
         </Link>

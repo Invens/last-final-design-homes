@@ -34,7 +34,13 @@ const Carousel = () => {
           key={index}
           className="outline-none focus:outline-none rounded-lg "
         >
-          <Image width={1000} height={1000} src={image} alt={`Slide ${index + 1}`} className="rounded-lg" />
+          <Image
+            width={1000}
+            height={1000}
+            src={image}
+            alt={`Slide ${index + 1}`}
+            className="rounded-lg"
+          />
         </div>
       ))}
     </Slider>
@@ -120,7 +126,9 @@ const Display = () => {
                 Exquisite Designs - Exquisite Makeovers
               </h1>
             </div>
-            <Image width={1000} height={1000}
+            <Image
+              width={1000}
+              height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
@@ -138,59 +146,60 @@ const Display = () => {
         >
           {/* 1 */}
           <motion.div variants={imagesVariant} className="single-imgi">
-            <Link href="/interior-design-ideas"> 
-            <Image
-              src="/images/bannernew.png"
-              alt=""
-              width={600}
-              height={600}
-              className="rounded shadow-md"
-            />
+            <Link href="/architectural-designs-services-india">
+              <Image
+                src="/images/bannernew.png"
+                alt=""
+                width={600}
+                height={600}
+                className="rounded shadow-md"
+              />
             </Link>
-
           </motion.div>
           {/* 2 */}
           <motion.div variants={imagesVariant} className="single-imgi">
             <Link href="/modular-interior-design-ideas">
-            <video
-              loop
-              autoPlay
-              muted
-              controls={isPlaying}
-              src="video/vid21.mp4"
-              alt=""
-              width={600}
-              height={600}
-              playsInline
-              className="rounded shadow-md"
-            />
+              <video
+                loop
+                autoPlay
+                muted
+                controls={isPlaying}
+                src="video/vid21.mp4"
+                alt=""
+                width={600}
+                height={600}
+                playsInline
+                className="rounded shadow-md"
+              />
             </Link>
-          
           </motion.div>
           {/* 3 */}
           <motion.div variants={imagesVariant} className="single-imgi">
             <Link href="/homes-by-design-indian-homes">
-            <video
-              loop
-              autoPlay
-              controls={isPlaying}
-              src="video/vid1.mp4"
-              alt=""
-              width={600}
-              height={600}
-              playsInline
-              className="rounded shadow-md"
-              muted
-            />
+              <video
+                loop
+                autoPlay
+                controls={isPlaying}
+                src="video/vid1.mp4"
+                alt=""
+                width={600}
+                height={600}
+                playsInline
+                className="rounded shadow-md"
+                muted
+              />
             </Link>
-          
           </motion.div>
           {/* 4 */}
           <motion.div variants={imagesVariant} className="single-imgi">
-            <Link href="/selected-homes">
-            <Image src="/images/banner1.png" alt="" width={600} height={600} />
+            <Link href="/selected-homes-exclusive-interior-designs-india">
+              <Image
+                src="/images/banner1.png"
+                alt=""
+                width={600}
+                height={600}
+              />
             </Link>
-            
           </motion.div>
           {/* ----- */}
         </motion.div>
@@ -214,9 +223,7 @@ const Display = () => {
               NCR.
             </p>
             <Link href="/about-best-interior-designers-architects">
-              <button className='mt-4'>
-                Read More..
-              </button>
+              <button className="mt-4">Read More..</button>
             </Link>
           </div>
         </article>

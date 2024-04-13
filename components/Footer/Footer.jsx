@@ -14,7 +14,6 @@ import Bloomflower from './Bloomberg_flower/page'
 import MyForm from '../MyForm'
 import PostFooter from '../PostFooter/page'
 
-
 const DesignDropdown = ({
   id,
   heading,
@@ -35,8 +34,9 @@ const DesignDropdown = ({
           {heading}
         </span>
         <svg
-          className={`ml-2 h-4 w-4 inline-block transform ${isOpen ? 'rotate-180' : ''
-            }`}
+          className={`ml-2 h-4 w-4 inline-block transform ${
+            isOpen ? 'rotate-180' : ''
+          }`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ const DesignIdeasDropdownContainer = () => {
         { label: 'Dressers', url: '/dressers-designs' },
         { label: 'TV Units', url: '/tv-unit-designs' },
         { label: 'Crockery Units', url: '/crockery-unit-designs' },
-        { label: 'Glass Partitions', url: '/glass-partition-designs' },
+        { label: 'Glass Partitions', url: '/glass-partition-designs-designs' },
         // Add other links as needed
       ],
     },
@@ -272,7 +272,7 @@ const LetsConnectForm = () => {
     message: '',
   })
   const [btnText, setBtnText] = useState('Send Message')
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -285,7 +285,7 @@ const LetsConnectForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log('Submitting form...')
-    setFormSubmitted(true);
+    setFormSubmitted(true)
 
     const formDataToSend = new FormData()
     for (const key in formData) {
@@ -325,26 +325,28 @@ const LetsConnectForm = () => {
       console.error('Error during form data submission:', error)
       setBtnText('Something Went Wrong')
     }
-    setFormSubmitted(true);
-
-  };
+    setFormSubmitted(true)
+  }
   const handleClose = () => {
-    setFormSubmitted(false);
+    setFormSubmitted(false)
     // Add any additional logic you want to perform when closing the thank-you page
-  };
+  }
   return (
     <>
       {formSubmitted ? (
-        <div className='grid grid-cols-1 justify-items-center' >
-          <p className='text-center text-lg'>Thank you for your submission!</p>
+        <div className="grid grid-cols-1 justify-items-center">
+          <p className="text-center text-lg">Thank you for your submission!</p>
           <Image
             alt="thank you image"
             src={'/thank-you.png'}
             width={400}
             height={300}
-
           />
-          <h1 className='text-center font-bold w-[200px]'> FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR WHATSAPP US ON 9899264978, 9582827928</h1>
+          <h1 className="text-center font-bold w-[200px]">
+            {' '}
+            FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+            WHATSAPP US ON 9899264978, 9582827928
+          </h1>
 
           <button
             onClick={handleClose}
@@ -407,7 +409,6 @@ const LetsConnectForm = () => {
         </form>
       )}
     </>
-
   )
 }
 
@@ -415,494 +416,497 @@ export class Footer extends Component {
   render() {
     return (
       <>
-       <div className="bg-red-500 p-4 dark:text-white">
-       <MyForm/>
-      </div>
-      <PostFooter/>
-      <div className="flex justify-center w-full mx-0">
-        <div className="gradient w-full flex flex-col justify-center items-center">
-          <div className="mt-22 container">
-            {/* <WaveGradient /> */}
-            <div
-              className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
-              style={{
-                backgroundImage:
-                  "url('/images/get-free-estimate.jpg')",
-                backgroundSize: 'fit',
-                backgroundRepeat: 'no-repeat',
-                objectFit: 'cover',
-              }}
-            >
-              <div className="relative  m-16">
-                <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-                  <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
-                    Get Your Estimates Free
-                  </h1>
-                </Link>
-              </div>
-              {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
+        <div className="bg-red-500 p-4 dark:text-white">
+          <MyForm />
+        </div>
+        <PostFooter />
+        <div className="flex justify-center w-full mx-0">
+          <div className="gradient w-full flex flex-col justify-center items-center">
+            <div className="mt-22 container">
+              {/* <WaveGradient /> */}
+              <div
+                className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
+                style={{
+                  backgroundImage: "url('/images/get-free-estimate.jpg')",
+                  backgroundSize: 'fit',
+                  backgroundRepeat: 'no-repeat',
+                  objectFit: 'cover',
+                }}
+              >
+                <div className="relative  m-16">
+                  <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                    <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
+                      Get Your Estimates Free
+                    </h1>
+                  </Link>
+                </div>
+                {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
                 LOVE ALL SERVER ALL
               </h1> */}
-            </div>
-
-            <div class="">
-              <div class="text-black w-full flex items-center justify-center">
-                <button class="lg:text-[100px] sm:text-[100px] lg:px-[300px] lg:py-[100px] sm:px-[200px]  sm:py-[100px] display-center run rounded-full border-dotted border-2 border-black hover:bg-black hover:text-white">
-                  <a href="tel:+919899264978" >
-                    Call Us Today! <br />
-                    <span class="button2 pb-4 lg:text-lg sm:text-[10px] font-bold">
-                      We can talk about how big this button is.
-                    </span>
-                  </a>
-                </button>
               </div>
-            </div>
 
-            <h1 className="text-4xl md:text font-semibold text-center text-black pt-16">
-              Know The Trinity Brands
-            </h1>
+              <div class="">
+                <div class="text-black w-full flex items-center justify-center">
+                  <button class="lg:text-[100px] sm:text-[100px] lg:px-[300px] lg:py-[100px] sm:px-[200px]  sm:py-[100px] display-center run rounded-full border-dotted border-2 border-black hover:bg-black hover:text-white">
+                    <a href="tel:+919899264978">
+                      Call Us Today! <br />
+                      <span class="button2 pb-4 lg:text-lg sm:text-[10px] font-bold">
+                        We can talk about how big this button is.
+                      </span>
+                    </a>
+                  </button>
+                </div>
+              </div>
 
-            <div className="flex flex-col items-center md:flex-row justify-center gap-6 md:gap-32 w-full mt-5">
-              {/* Brand 1 */}
-              <a
-                href="https://www.designindiankitchen.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <h1 className="text-4xl md:text font-semibold text-center text-black pt-16">
+                Know The Trinity Brands
+              </h1>
+
+              <div className="flex flex-col items-center md:flex-row justify-center gap-6 md:gap-32 w-full mt-5">
+                {/* Brand 1 */}
+                <a
+                  href="https://www.designindiankitchen.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Image src="/dkilogo.png" alt="" width={200} height={80} />
+                    <p className="text-green-500 text-2xl font-medium">
+                      Design Indian Kitchen
+                    </p>
+                  </div>
+                </a>
+
+                {/* Brand 2 */}
+                <a
+                  href="https://www.designindianhomes.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Image
+                      src="/desig indian homes.gif"
+                      alt=""
+                      width={200}
+                      height={80}
+                    />
+                    <p className="text-green-500 text-2xl font-medium">
+                      Design Indian Home
+                    </p>
+                  </div>
+                </a>
+
+                {/* Brand 3 */}
+                <a
+                  href="https://www.designindianwardrobes.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Image
+                      src="/footer-logo-multi.png"
+                      alt=""
+                      width={300}
+                      height={80}
+                    />
+                    <p className="text-green-500 text-2xl font-medium">
+                      Design Indian Wardrobe
+                    </p>
+                  </div>
+                </a>
+              </div>
+
+              {/* Features Section */}
+              <div
+                className="flex flex-col items-center md:flex-row justify-center    p-10 gap-6 mt-10 text-black"
+                style={{ alignItems: 'center' }}
               >
-                <div className="text-center flex flex-col items-center justify-center">
-                  <Image src="/dkilogo.png" alt="" width={200} height={80} />
-                  <p className="text-green-500 text-2xl font-medium">
-                    Design Indian Kitchen
+                {/* Feature 1 */}
+                <div className="text-center">
+                  <div className="flex justify-center">
+                    <Image src="/warranty.png" alt="" width={108} height={80} />
+                  </div>
+
+                  <h1 className="font-bold text-center text-sm">
+                    Flat 10 year warranty
+                  </h1>
+                  <p className="text-sm">
+                    Choose interiors designed with superior quality material,
+                    leaving no room for defects.
                   </p>
                 </div>
-              </a>
 
-              {/* Brand 2 */}
-              <a
-                href="https://www.designindianhomes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="text-center flex flex-col items-center justify-center">
+                {/* Feature 2 */}
+                <div className="text-center mt-4 md:mt-0">
+                  <div className="flex justify-center">
+                    <Image
+                      src="/fast-delivery.png"
+                      alt=""
+                      width={128}
+                      height={80}
+                    />
+                  </div>
+
+                  <h1 className="font-bold text-center text-sm">
+                    45-day delivery
+                  </h1>
+                  <p className="text-sm">
+                    Get beautiful interiors for your new home in just 45 days.
+                    That’s our delivery guarantee.
+                  </p>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="text-center mt-4 md:mt-0">
+                  <div className="flex justify-center">
+                    <Image
+                      src="/team-building.png"
+                      alt=""
+                      width={128}
+                      height={80}
+                    />
+                  </div>
+                  <h1 className="font-bold text-center text-sm">
+                    600+ design experts
+                  </h1>
+                  <p className="text-sm">
+                    Explore design ideas and co-create your dream home with our
+                    experienced designers
+                  </p>
+                </div>
+
+                {/* Feature 4 */}
+                <div className="text-center mt-4 md:mt-0">
+                  <div className="flex justify-center">
+                    <Image
+                      src="/customer-service.png"
+                      alt=""
+                      width={128}
+                      height={80}
+                    />
+                  </div>
+                  <h1 className="font-bold text-center text-sm">
+                    Post-installation service
+                  </h1>
+                  <p className="text-sm">
+                    Complete your design journey and get unwavering support from
+                    our dedicated care team.
+                  </p>
+                </div>
+              </div>
+
+              {/* Social Media and Copyright Section */}
+              {/* add hr */}
+              <hr className="mb-12 border-t-2 border-black" />
+              <div className="flex flex-col md:flex-row justify-center gap-8  text-black">
+                {/* Social Media Icons */}
+                <div className="text-left">
                   <Image
                     src="/desig indian homes.gif"
-                    alt=""
-                    width={200}
+                    alt="footer logo"
+                    width={128}
                     height={80}
                   />
-                  <p className="text-green-500 text-2xl font-medium">
-                    Design Indian Home
+                  <div className="flex gap-4 mt-4 hover">
+                    <SocialIcon
+                      network="twitter"
+                      url="www.vimeo.com"
+                      style={{ width: '2rem', height: '2rem' }}
+                    />
+                    <SocialIcon
+                      network="facebook"
+                      url="www.vimeo.com"
+                      style={{ width: '2rem', height: '2rem' }}
+                    />
+                    <SocialIcon
+                      network="instagram"
+                      url="www.vimeo.com"
+                      style={{ width: '2rem', height: '2rem' }}
+                    />
+                    <SocialIcon
+                      network="linkedin"
+                      url="www.vimeo.com"
+                      style={{ width: '2rem', height: '2rem' }}
+                    />
+                  </div>
+                  <p className="mt-8">
+                    © Copyright <strong>Design Indian Homes</strong> 2023.{' '}
+                    <br /> All Rights Reserved
                   </p>
                 </div>
-              </a>
 
-              {/* Brand 3 */}
-              <a
-                href="https://www.designindianwardrobes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="text-center flex flex-col items-center justify-center">
+                <div className="px-0 mx-0">
+                  <DesignIdeasDropdownContainer />
+                </div>
+
+                <div>
                   <Image
-                    src="/footer-logo-multi.png"
+                    src="/homes-gif-logo-optimize.gif"
                     alt=""
                     width={300}
-                    height={80}
-                  />
-                  <p className="text-green-500 text-2xl font-medium">
-                    Design Indian Wardrobe
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            {/* Features Section */}
-            <div
-              className="flex flex-col items-center md:flex-row justify-center    p-10 gap-6 mt-10 text-black"
-              style={{ alignItems: 'center' }}
-            >
-              {/* Feature 1 */}
-              <div className="text-center">
-                <div className="flex justify-center">
-                  <Image src="/warranty.png" alt="" width={108} height={80} />
-                </div>
-
-                <h1 className="font-bold text-center text-sm">
-                  Flat 10 year warranty
-                </h1>
-                <p className="text-sm">
-                  Choose interiors designed with superior quality material,
-                  leaving no room for defects.
-                </p>
-              </div>
-
-              {/* Feature 2 */}
-              <div className="text-center mt-4 md:mt-0">
-                <div className="flex justify-center">
-                  <Image
-                    src="/fast-delivery.png"
-                    alt=""
-                    width={128}
-                    height={80}
+                    height={100}
                   />
                 </div>
-
-                <h1 className="font-bold text-center text-sm">
-                  45-day delivery
-                </h1>
-                <p className="text-sm">
-                  Get beautiful interiors for your new home in just 45 days.
-                  That’s our delivery guarantee.
-                </p>
               </div>
-
-              {/* Feature 3 */}
-              <div className="text-center mt-4 md:mt-0">
-                <div className="flex justify-center">
-                  <Image
-                    src="/team-building.png"
-                    alt=""
-                    width={128}
-                    height={80}
-                  />
-                </div>
-                <h1 className="font-bold text-center text-sm">
-                  600+ design experts
-                </h1>
-                <p className="text-sm">
-                  Explore design ideas and co-create your dream home with our
-                  experienced designers
-                </p>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="text-center mt-4 md:mt-0">
-                <div className="flex justify-center">
-                  <Image
-                    src="/customer-service.png"
-                    alt=""
-                    width={128}
-                    height={80}
-                  />
-                </div>
-                <h1 className="font-bold text-center text-sm">
-                  Post-installation service
-                </h1>
-                <p className="text-sm">
-                  Complete your design journey and get unwavering support from
-                  our dedicated care team.
-                </p>
-              </div>
-            </div>
-
-            {/* Social Media and Copyright Section */}
-            {/* add hr */}
-            <hr className="mb-12 border-t-2 border-black" />
-            <div className="flex flex-col md:flex-row justify-center gap-8  text-black">
-              {/* Social Media Icons */}
-              <div className="text-left">
-                <Image
-                  src="/desig indian homes.gif"
-                  alt="footer logo"
-                  width={128}
-                  height={80}
-                />
-                <div className="flex gap-4 mt-4 hover">
-                  <SocialIcon
-                    network="twitter"
-                    url="www.vimeo.com"
-                    style={{ width: '2rem', height: '2rem' }}
-                  />
-                  <SocialIcon
-                    network="facebook"
-                    url="www.vimeo.com"
-                    style={{ width: '2rem', height: '2rem' }}
-                  />
-                  <SocialIcon
-                    network="instagram"
-                    url="www.vimeo.com"
-                    style={{ width: '2rem', height: '2rem' }}
-                  />
-                  <SocialIcon
-                    network="linkedin"
-                    url="www.vimeo.com"
-                    style={{ width: '2rem', height: '2rem' }}
-                  />
-                </div>
-                <p className="mt-8">
-                  © Copyright <strong>Design Indian Homes</strong> 2023. <br />{' '}
-                  All Rights Reserved
-                </p>
-              </div>
-
-              <div className="px-0 mx-0">
-                <DesignIdeasDropdownContainer />
-              </div>
-
               <div>
-                <Image
-                  src="/homes-gif-logo-optimize.gif"
-                  alt=""
-                  width={300}
-                  height={100}
-                />
-              </div>
-            </div>
-            <div>
-              {/* <h1 className="text-6xl md:text-lg font-extrabold text-center my-16">
+                {/* <h1 className="text-6xl md:text-lg font-extrabold text-center my-16">
               WE ARE DELHI BASED
             </h1> */}
-              <div className="flex flex-col md:flex-row justify-center gap-36 mt-16  text-black">
-                <div>
-                  <h1 className="text-4xl font-bold ">THE BRAND</h1>
-                  <ul className="text-lg font-bold mt-4">
-                    <li className="mb-2">
-                      <Link href="/home-renovation-services">Renovation</Link>
-                    </li>
-                    <Link href="/virtual-interior-designing-meeting">
-                      <li className="mb-2">Book a Virtual Meeting</li>
-                    </Link>
-                    <Link href="/about-best-interior-designers-architects">
-                      <li> About Us</li>
-                    </Link>
-                    {/* <Link href="/largest-interior-designing-brand">
+                <div className="flex flex-col md:flex-row justify-center gap-36 mt-16  text-black">
+                  <div>
+                    <h1 className="text-4xl font-bold ">THE BRAND</h1>
+                    <ul className="text-lg font-bold mt-4">
+                      <li className="mb-2">
+                        <Link href="/home-renovation-services">Renovation</Link>
+                      </li>
+                      <Link href="/virtual-interior-designing-meeting">
+                        <li className="mb-2">Book a Virtual Meeting</li>
+                      </Link>
+                      <Link href="/about-best-interior-designers-architects">
+                        <li> About Us</li>
+                      </Link>
+                      {/* <Link href="/largest-interior-designing-brand">
                       <li className="mb-2">The Team</li>
                     </Link> */}
-                    <Link href="/collaborate-with-architects-interior-designers">
-                      <li>Collaborate with Us</li>
-                    </Link>
-                    <Link href="/customer-reviews-interior-designs">
-                      {' '}
-                      <li className="mb-2">Reviews</li>
-                    </Link>
-                    <Link href="/interior-designing-plans-for-residences">
-                      <li className="mb-2"> Our Packages </li>
-                    </Link>
-                    <Link href="/why-choose-the-best-interior-designers">
-                      <li className="mb-2">Why Choose Us</li>
-                    </Link>
-                    <Link href="/join-the-largest-interior-designing-brand">
-                      <li className="mb-2">Join As a Designer</li>
-                    </Link>
-                    <Link href="/book-with-top-interior-designers-architects">
-                      <li className="mb-2">Book a Design Visit</li>
-                    </Link>
-                  </ul>
-                </div>
-                <div>
-                  <h1 className="text-4xl font-bold">COLLABORATE</h1>
-                  <ul className="text-lg font-bold mt-4">
-                    <Link href="/join-us">
-                      <li className="mb-2"> PARTNER WITH US</li>
-                    </Link>
-                    <Link href="/offer">
-                      <li className="mb-2">REFER FOR REWARDS</li>
-                    </Link>
-                    <Link href="/join-us">
-                      <li className="mb-2"> JOIN AS-A DESIGNER</li>
-                    </Link>
-                    <Link href="#">
-                      <li className="mb-2">
-                        FOR - ARCHITECTS & <br /> INTERIOR DESIGNERS
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-                <div>
-                  <h1 className="text-4xl font-bold">LETS CONNECT</h1>
-                  <LetsConnectForm />
-                </div>
-              </div>
-
-              <div
-                className="flex flex-col md:flex-row justify-center text-black"
-                style={{ gap: '110px', marginTop: '100px' }}
-              >
-                <div style={{ width: '300px' }}>
-                  <h1 className="font-bold text-2xl uppercase">Contact Us</h1>
-                  <div className="mt-8 text-sm">
-                    <p className="font-extrabold mb-2 underline">
-                      DESIGNING & OPERATIONS OFFICE -
-                    </p>
-                    <p className="mb-6">
-                      25/42, A BLOCK, MIDDLE CIRCLE, CONNAUGHT PLACE, NEW DELHI
-                      - 110001 NEAR RAJIV CHOWK METRO STN, GATE NO.8{' '}
-                    </p>
-                    <p className="font-extrabold mb-2 underline">
-                      {' '}
-                      CORPORATE INDUSTRIAL UNIT -
-                    </p>
-                    <p className="mb-6">
-                      G - 984, NARELA DSIIDC INDUSTRIAL AREA, NEW DELHI - 110040
-                    </p>
-                    <p className="font-extrabold mb-2 underline">
-                      MOBILE PHONE NUMBER -
-                    </p>
-                    <p className="mb-6">
-                      0-9899264978 / 0-9582827928/ 0-9899239097
-                    </p>
-                    <p className="font-extrabold mb-2 underline">
-                      LANDLINE NUMBER -
-                    </p>
-                    <p className="mb-6">01144127897</p>
-                    <p className="font-extrabold mb-2 underline">EMAIL -</p>
-                    <p className="mb-6">ENQUIRY@DESIGNINDIANKITCHEN.COM</p>
-                    <p className="font-extrabold mb-2 underline">TIMING -</p>
-                    <p className="mb-6">
-                      MONDAY - SATURDAY:
-                      <br /> 10:30 AM - 7:30 PM <br />
-                      SUNDAY:
-                      <br /> 11:00 AM - 7:00 PM ONLY FOR SITE VISITS
-                    </p>
+                      <Link href="/collaborate-with-architects-interior-designers">
+                        <li>Collaborate with Us</li>
+                      </Link>
+                      <Link href="/customer-reviews-interior-designs">
+                        {' '}
+                        <li className="mb-2">Reviews</li>
+                      </Link>
+                      <Link href="/home-interior-designs-designing-plans-for-residences">
+                        <li className="mb-2"> Our Packages </li>
+                      </Link>
+                      <Link href="/why-choose-the-best-interior-designers">
+                        <li className="mb-2">Why Choose Us</li>
+                      </Link>
+                      <Link href="/join-the-largest-interior-designing-brand">
+                        <li className="mb-2">Join As a Designer</li>
+                      </Link>
+                      <Link href="/book-with-top-interior-designers-architects">
+                        <li className="mb-2">Book a Design Visit</li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div>
+                    <h1 className="text-4xl font-bold">COLLABORATE</h1>
+                    <ul className="text-lg font-bold mt-4">
+                      <Link href="/join-us">
+                        <li className="mb-2"> PARTNER WITH US</li>
+                      </Link>
+                      <Link href="/offer">
+                        <li className="mb-2">REFER FOR REWARDS</li>
+                      </Link>
+                      <Link href="/join-us">
+                        <li className="mb-2"> JOIN AS-A DESIGNER</li>
+                      </Link>
+                      <Link href="#">
+                        <li className="mb-2">
+                          FOR - ARCHITECTS & <br /> INTERIOR DESIGNERS
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div>
+                    <h1 className="text-4xl font-bold">LETS CONNECT</h1>
+                    <LetsConnectForm />
                   </div>
                 </div>
-                <div>
-                  <h1 className="font-bold text-2xl">OTHER BUSINESS SITES</h1>
-                  <ul className="mt-8 text-sm">
-                    <li className="mb-4 font-bold">
-                      <a
-                        href="https://designindiankitchen.com/"
-                        target="_blank"
-                      >
-                        DESIGN INDIAN KITCHEN
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a
-                        href="https://designindianwardrobe.com/"
-                        target="_blank"
-                      >
-                        DESIGN INDIAN WARDROBE
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a
-                        href="https://modularkitchenindelhi.com/"
-                        target="_blank"
-                      >
-                        MODULAR KITCHEN IN DELHI
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a
-                        href="https://modular-kitchen-gurgaon.com/"
-                        target="_blank"
-                      >
-                        MODULAR KITCHEN IN GURGAON
-                      </a>
-                    </li>
-                    {/* <li className="mb-4 font-bold">
+
+                <div
+                  className="flex flex-col md:flex-row justify-center text-black"
+                  style={{ gap: '110px', marginTop: '100px' }}
+                >
+                  <div style={{ width: '300px' }}>
+                    <h1 className="font-bold text-2xl uppercase">Contact Us</h1>
+                    <div className="mt-8 text-sm">
+                      <p className="font-extrabold mb-2 underline">
+                        DESIGNING & OPERATIONS OFFICE -
+                      </p>
+                      <p className="mb-6">
+                        25/42, A BLOCK, MIDDLE CIRCLE, CONNAUGHT PLACE, NEW
+                        DELHI - 110001 NEAR RAJIV CHOWK METRO STN, GATE NO.8{' '}
+                      </p>
+                      <p className="font-extrabold mb-2 underline">
+                        {' '}
+                        CORPORATE INDUSTRIAL UNIT -
+                      </p>
+                      <p className="mb-6">
+                        G - 984, NARELA DSIIDC INDUSTRIAL AREA, NEW DELHI -
+                        110040
+                      </p>
+                      <p className="font-extrabold mb-2 underline">
+                        MOBILE PHONE NUMBER -
+                      </p>
+                      <p className="mb-6">
+                        0-9899264978 / 0-9582827928/ 0-9899239097
+                      </p>
+                      <p className="font-extrabold mb-2 underline">
+                        LANDLINE NUMBER -
+                      </p>
+                      <p className="mb-6">01144127897</p>
+                      <p className="font-extrabold mb-2 underline">EMAIL -</p>
+                      <p className="mb-6">ENQUIRY@DESIGNINDIANKITCHEN.COM</p>
+                      <p className="font-extrabold mb-2 underline">TIMING -</p>
+                      <p className="mb-6">
+                        MONDAY - SATURDAY:
+                        <br /> 10:30 AM - 7:30 PM <br />
+                        SUNDAY:
+                        <br /> 11:00 AM - 7:00 PM ONLY FOR SITE VISITS
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-bold text-2xl">OTHER BUSINESS SITES</h1>
+                    <ul className="mt-8 text-sm">
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://designindiankitchen.com/"
+                          target="_blank"
+                        >
+                          DESIGN INDIAN KITCHEN
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://designindianwardrobe.com/"
+                          target="_blank"
+                        >
+                          DESIGN INDIAN WARDROBE
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://modularkitchenindelhi.com/"
+                          target="_blank"
+                        >
+                          MODULAR KITCHEN IN DELHI
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://modular-kitchen-gurgaon.com/"
+                          target="_blank"
+                        >
+                          MODULAR KITCHEN IN GURGAON
+                        </a>
+                      </li>
+                      {/* <li className="mb-4 font-bold">
                       <a>DESIGN INDIAN HOMES</a>
                     </li> */}
-                    <li className="mb-4 font-bold">
-                      <a
-                        href="https://modularkitcheninnoida.com/"
-                        target="_blank"
-                      >
-                        MODULAR KITCHEN IN NOIDA
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a href="https://thedesignerlounge.com/" target="_blank">
-                        THE DESIGNER LOUNGE
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a href="https://devotionalindia.com/" target="_blank">
-                        DEVOTIONAL INDIA
-                      </a>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <a href="https://tallysolution.net/">TALLY SOLUTION</a>
-                    </li>
-                  </ul>
-                </div>
-                <Bloomflower/>
-                <div>
-                  <h1 className="font-bold text-2xl">CHECK US OUT</h1>
-                  <ul className="mt-8 text-sm">
-                    <li className="mb-4 font-bold">
-                      <Link href="/customer-reviews-interior-designs">
-                        CUSTOMER REVIEWS
-                      </Link>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      {/* <a>THE MODULAR PROCESS</a> */}
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <Link href="/book-a-interior-design-visit">
-                        REQUEST A BROCHURE
-                      </Link>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <Link href="/book-a-interior-design-visit">
-                        BOOK A VISIT TODAY
-                      </Link>
-                    </li>
-                    <li className="mb-4 font-bold">
-                      {/* <a>CORPORATE PRESENCE OF OUR BRAND</a> */}
-                    </li>
-                    <li className="mb-4 font-bold">
-                      <Link href="/interior-designing-estimates-pricing">
-                        GET QUOTES
-                      </Link>
-                    </li>
-                  </ul>
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://modularkitcheninnoida.com/"
+                          target="_blank"
+                        >
+                          MODULAR KITCHEN IN NOIDA
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a
+                          href="https://thedesignerlounge.com/"
+                          target="_blank"
+                        >
+                          THE DESIGNER LOUNGE
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a href="https://devotionalindia.com/" target="_blank">
+                          DEVOTIONAL INDIA
+                        </a>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <a href="https://tallysolution.net/">TALLY SOLUTION</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <Bloomflower />
+                  <div>
+                    <h1 className="font-bold text-2xl">CHECK US OUT</h1>
+                    <ul className="mt-8 text-sm">
+                      <li className="mb-4 font-bold">
+                        <Link href="/customer-reviews-interior-designs">
+                          CUSTOMER REVIEWS
+                        </Link>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        {/* <a>THE MODULAR PROCESS</a> */}
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <Link href="/book-a-interior-design-visit">
+                          REQUEST A BROCHURE
+                        </Link>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <Link href="/book-a-interior-design-visit">
+                          BOOK A VISIT TODAY
+                        </Link>
+                      </li>
+                      <li className="mb-4 font-bold">
+                        {/* <a>CORPORATE PRESENCE OF OUR BRAND</a> */}
+                      </li>
+                      <li className="mb-4 font-bold">
+                        <Link href="/home-interior-designs-designing-estimates-pricing">
+                          GET QUOTES
+                        </Link>
+                      </li>
+                    </ul>
 
-                  <div className="flex">
-                    <div>
-                      <Time />
-                    </div>
-                    <div>
-                      <ul>
-                        <li className="mb-2 font-bold">WORK</li>
-                        <li className="mb-2 font-bold">
-                          <Link href="/about-best-interior-designers-architects">
-                            {' '}
-                            ABOUT{' '}
-                          </Link>
-                        </li>
-                        <li className="mb-2 font-bold">CAREERS</li>
-                      </ul>
+                    <div className="flex">
+                      <div>
+                        <Time />
+                      </div>
+                      <div>
+                        <ul>
+                          <li className="mb-2 font-bold">WORK</li>
+                          <li className="mb-2 font-bold">
+                            <Link href="/about-best-interior-designers-architects">
+                              {' '}
+                              ABOUT{' '}
+                            </Link>
+                          </li>
+                          <li className="mb-2 font-bold">CAREERS</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className=" pt-1 md:p-4 text-black">
+                <hr className="flex justify-center h-2 w-11/12 border-1 border-black ml-4 md:ml-14" />
+              </div>
             </div>
-            <div className=" pt-1 md:p-4 text-black">
-              <hr className="flex justify-center h-2 w-11/12 border-1 border-black ml-4 md:ml-14" />
+
+            <div className="location mx-4 sm:mx-12 my-16">
+              <LocationsTabs />
             </div>
-          </div>
 
-          <div className="location mx-4 sm:mx-12 my-16">
-            <LocationsTabs />
-          </div>
-
-          <div className="w-full text-center text-black text-sm  py-4 bg-white mb-16 sm:mb-0">
-            <p>
-              DESIGN INDIAN HOMES | ALL RIGHTS RESERVED 2024-25 CRAFTED WITH
-              LOVE BY IN HOUSE BRAND -{' '}
-              <a
-                href="https://www.designerlounge.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-yellow-400 font-bold underline"
-              >
-                THE DESIGNER LOUNGE
-              </a>{' '}
-              <br />{' '}
-              <span className="text-blue-500 underline">
-                <Link href="/privacy">PRIVACY</Link>
-              </span>{' '}
-              |{' '}
-              <span className="text-blue-500 underline">
-                <Link href="/privacy#legal">LEGAL</Link>
-              </span>{' '}
-              | <span className="text-blue-500 underline">SITEMAP</span>
-            </p>
+            <div className="w-full text-center text-black text-sm  py-4 bg-white mb-16 sm:mb-0">
+              <p>
+                DESIGN INDIAN HOMES | ALL RIGHTS RESERVED 2024-25 CRAFTED WITH
+                LOVE BY IN HOUSE BRAND -{' '}
+                <a
+                  href="https://www.designerlounge.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-400 font-bold underline"
+                >
+                  THE DESIGNER LOUNGE
+                </a>{' '}
+                <br />{' '}
+                <span className="text-blue-500 underline">
+                  <Link href="/privacy">PRIVACY</Link>
+                </span>{' '}
+                |{' '}
+                <span className="text-blue-500 underline">
+                  <Link href="/privacy#legal">LEGAL</Link>
+                </span>{' '}
+                | <span className="text-blue-500 underline">SITEMAP</span>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </>
     )
   }

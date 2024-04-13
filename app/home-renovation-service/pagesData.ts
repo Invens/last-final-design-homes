@@ -11,7 +11,7 @@ export const pagesData = [
   {
     id: 1,
     name: 'Interior Renovation',
-    slug: '/interior-renovation',
+    slug: '/home-interior-designs-renovation',
     noItems: '4',
     heading: 'Interior Renovation',
     desc: ' Some of the Most Affordable Interior renovations from the scrap to a beautiful outcome with end to end designs & executions. We have the top design team and end to end executing teams for the top notch interior design for your residence. Browse our latest collection for your interior designs, get ideas, & Be Inspired.',
@@ -134,5 +134,4 @@ export const pagesData = [
     desc: 'Get your Villa Renovated by our Team with proper planning and designing, we have a dedicated PMC team to manage your area. Also we have a dedicated team of different project managers for your end to end villa renovation solution in Delhi – Gurgaon – Noida – Faridabad - India. For both interior and exteriors along with structures. Check out our latest design for your villas & Get back to us for a Site Visit followed by estimates.',
     items: [],
   },
-  
 ]

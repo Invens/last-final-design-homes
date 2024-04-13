@@ -52,7 +52,6 @@ const StructureImageUrl = [
   },
 ]
 
-
 const KitchenImageUrl = [
   //First image url
   {
@@ -197,7 +196,6 @@ const BestCarousels = () => {
               Check Out Our Collections
             </button>
           </Link>
-
         </div>
       </div>
 
@@ -252,7 +250,6 @@ const BestCarousels = () => {
               Check Out Our Collections
             </button>
           </Link>
-
         </div>
       </div>
 
@@ -303,12 +300,11 @@ const BestCarousels = () => {
         </Carousel>
 
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas"> 
-           <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
-            Check Out Our Collections
-          </button>
+          <Link href="/modular-interior-design-ideas">
+            <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+              Check Out Our Collections
+            </button>
           </Link>
-
         </div>
       </div>
 
@@ -359,12 +355,11 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas">  
-           <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
-            Check Out Our Collections
-          </button>
+          <Link href="/modular-interior-design-ideas">
+            <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
+              Check Out Our Collections
+            </button>
           </Link>
-       
         </div>
       </div>
     </div>

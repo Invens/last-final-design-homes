@@ -43,7 +43,8 @@ const nextConfig = {
         destination: '/design-ideas',
       },
       {
-        source: '/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india',
+        source:
+          '/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india',
         destination: '/calculator',
       },
       {
@@ -93,7 +94,7 @@ const nextConfig = {
         destination: '/modular-interiors/crockery-units',
       },
       {
-        source: '/glass-partition-designs',
+        source: '/glass-partition-designs-designs',
         destination: '/modular-interiors/glass-partiton',
       },
       {
@@ -125,138 +126,159 @@ const nextConfig = {
         destination: '/modular-interiors/foldable-beds',
       },
       { source: '/home-office-designs', destination: '/' },
-      { source: '/interior-design-ideas', destination: '/interior' },
+      {
+        source: '/architectural-designs-services-india',
+        destination: '/home-interior-designs',
+      },
       {
         source: '/1bhk-apartment-interior-designs',
-        destination: '/interior/1bhk-residence-interior-designs',
+        destination: '/home-interior-designs/1bhk-residence-interior-designs',
       },
       {
         source: '/2bhk-apartment-interior-designs',
-        destination: '/interior/2bhk-residence-interior-designs',
+        destination: '/home-interior-designs/2bhk-residence-interior-designs',
       },
       {
         source: '/3bhk-apartment-interior-designs',
-        destination: '/interior/3bhk-residence-interior-designs',
+        destination: '/home-interior-designs/3bhk-residence-interior-designs',
       },
       {
         source: '/4bhk-apartment-interior-designs',
-        destination: '/interior/4bhk-residence-interior-designs',
+        destination: '/home-interior-designs/4bhk-residence-interior-designs',
       },
-      { source: '/villa-interior-designs', destination: '/interior/villa' },
+      {
+        source: '/villa-interior-designs',
+        destination: '/home-interior-designs/villa',
+      },
       {
         source: '/farmhouse-interior-designs',
-        destination: '/interior/farmhouse-interior-designs',
+        destination: '/home-interior-designs/farmhouse-interior-designs',
       },
       {
         source: '/penthouse-interior-designs',
-        destination: '/interior/penthouse-interior-designs',
+        destination: '/home-interior-designs/penthouse-interior-designs',
       },
       {
         source: '/studio-apartment-interior-designs',
-        destination: '/interior/studio-apartment-interior-designs',
+        destination: '/home-interior-designs/studio-apartment-interior-designs',
       },
       {
         source: '/bungalow-interior-designs',
-        destination: '/interior/bunglow-interior-designs',
+        destination: '/home-interior-designs/bunglow-interior-designs',
       },
       {
         source: '/duplex-interior-designs',
-        destination: '/interior/duplex-residence-interior-designs',
+        destination: '/home-interior-designs/duplex-residence-interior-designs',
       },
       {
         source: '/cottage-interior-designs',
-        destination: '/interior/cottage-interior-designs',
+        destination: '/home-interior-designs/cottage-interior-designs',
       },
       { source: '/complete-end-to-end-interiors', destination: '/' },
       {
-        source: '/wooden-polishing',
-        destination: '/interior-design-ideas/wooden-polishing',
+        source: '/wooden-polishing-designs',
+        destination: '/home-interior-services-india/wooden-polishing-designs',
       },
       {
-        source: '/wooden-flooring-designs',
-        destination: '/interior-design-ideas/wooden-flooring',
+        source: '/wooden-flooring-designs-designs',
+        destination: '/home-interior-services-india/wooden-flooring-designs',
       },
       {
-        source: '/vertical-gardens-designs',
-        destination: '/interior-design-ideas/vertical-garden',
+        source: '/vertical-garden-designss-designs',
+        destination: '/home-interior-services-india/vertical-garden-designs',
       },
       {
-        source: '/wooden-ceiling',
-        destination: '/interior-design-ideas/wooden-ceiling',
+        source: '/wooden-ceiling-designs-ideas-inspiration',
+        destination:
+          '/home-interior-services-india/wooden-ceiling-designs-ideas-inspiration',
       },
       {
-        source: '/upvc-windows-designs',
-        destination: '/interior-design-ideas/upvc-window',
+        source: '/upvc-window-designss-designs',
+        destination: '/home-interior-services-india/upvc-window-designs',
       },
       {
-        source: '/tiling-designs',
-        destination: '/interior-design-ideas/tiling-design',
+        source: '/tiling-design-ideass',
+        destination: '/home-interior-services-india/tiling-design-ideas',
       },
       {
-        source: '/sofa-designs',
-        destination: '/interior-design-ideas/sofa-designs',
+        source: '/sofa-designs-ideas',
+        destination: '/home-interior-services-india/sofa-designs-ideas',
       },
       {
-        source: '/kitchen-lightening-designs',
-        destination: '/interior-design-ideas/kitchen-lightening',
+        source: '/kitchen-lightening-inspiration-ideas-india-designs',
+        destination: '/home-interior-services-india/lightening',
       },
       {
         source: '/plumbing-works-interiors',
-        destination: '/interior-design-ideas/plumbings',
+        destination:
+          '/home-interior-services-india/home-plumbing-services-india',
       },
       {
-        source: '/glass-partition-designs',
-        destination: '/interior-design-ideas/glass-partition',
+        source: '/glass-partition-designs-designs',
+        destination: '/home-interior-services-india/glass-partition-designs',
       },
       {
         source: '/ceiling-designs',
-        destination: '/interior-design-ideas/ceilings',
+        destination:
+          '/home-interior-services-india/ceiling-design-ideas-inspiration-india',
       },
       {
-        source: '/wall-panelling',
-        destination: '/interior-design-ideas/wall-panelling',
+        source: '/wall-panelling-designs',
+        destination: '/home-interior-services-india/wall-panelling-designs',
       },
       {
-        source: '/exterior-cladding-designs',
-        destination: '/interior-design-ideas/exterior-cladding',
+        source: '/exterior-cladding-design-ideas-designs',
+        destination: '/home-interior-services-india/cladding',
       },
       {
         source: '/wood-door-designs',
-        destination: '/interior-design-ideas/doors',
+        destination:
+          '/home-interior-services-india/door-design-dealers-manufacturers-indias',
       },
       {
-        source: '/electric-works-interiors',
-        destination: '/interior-design-ideas/electric-works',
+        source: '/home-electric-works-services-interiors',
+        destination:
+          '/home-interior-services-india/home-electric-works-services',
       },
-      { source: '/beds-designs', destination: '/interior-design-ideas/beds' },
+      {
+        source: '/bed-designs-dealers-manufacturers-india-designs',
+        destination:
+          '/home-interior-services-india/bed-designs-dealers-manufacturers-india',
+      },
       {
         source: '/paint-works-interiors',
-        destination: '/interior-design-ideas/paints',
+        destination:
+          '/home-interior-services-india/home-painting-services-delhi-ncr',
       },
       {
         source: '/complete-end-to-end-interior-works',
-        destination: '/interior-design-ideas/end-to-end-interiors',
+        destination:
+          '/home-interior-services-india/end-to-end-interior-services-delhi-ncr-india',
       },
       {
         source: '/commercial-interior-works-interiors',
-        destination: '/interior-design-ideas/commercial-interiors',
+        destination:
+          '/home-interior-services-india/commercial-interiors-services-delhi-ncr-india',
       },
       {
         source: '/architectural-consultancy',
-        destination: '/architectural-designs/architectural-consultancy',
+        destination:
+          '/architectural-designs-services-india/architectural-consultancy',
       },
       {
         source: '/top-architects-in-india',
-        destination: '/architectural-designs/end-to-end-architectural-services',
+        destination:
+          '/architectural-designs-services-india/end-to-end-architectural-services',
       },
       {
         source: '/architectural-brand-in-india',
         destination:
-          '/architectural-designs/architectural-designing-and-planning',
+          '/architectural-designs-services-india/architectural-designing-and-planning',
       },
       {
         source: '/commercial-architectural-delhi-india',
-        destination: '/architectural-designs/commercial-architectural-services',
+        destination:
+          '/architectural-designs-services-india/commercial-architectural-services',
       },
       {
         source: '/home-renovation-services',
@@ -267,7 +289,7 @@ const nextConfig = {
         destination: '/home-renovation-service/structural-renovation',
       },
       {
-        source: '/interior-renovation-services',
+        source: '/home-interior-designs-renovation-services',
         destination: '/home-renovation-service/interior-renovation',
       },
       {
@@ -364,23 +386,25 @@ const nextConfig = {
       },
       {
         source: '/wardrobe-designs',
-        destination: '/wardrobes',
+        destination: '/wardrobe-design-gallery-india',
       },
       {
         source: '/types-of-wardrobe-designs',
-        destination: '/wardrobes/types-of-wardrobes',
+        destination: '/wardrobe-design-gallery-india/types-of-wardrobes',
       },
       {
         source: '/luxury-wardrobe-designs-india',
-        destination: '/wardrobes/luxury-wardrobes',
+        destination: '/wardrobe-design-gallery-india/luxury-wardrobes-designs',
       },
       {
         source: '/lacquer-glass-wardrobe-designs',
-        destination: '/wardrobes/lacquer-glass-wardrobe-designs',
+        destination:
+          '/wardrobe-design-gallery-india/lacquer-glass-wardrobe-designs',
       },
       {
         source: '/wardrobe-renovation-services',
-        destination: '/wardrobes/wardrobe-renovation-services',
+        destination:
+          '/wardrobe-design-gallery-india/wardrobe-renovation-services',
       },
       {
         source: '/living-room-designs',
@@ -438,9 +462,9 @@ const nextConfig = {
         source: '/largest-interior-designing-brand',
         destination: '/',
       },
-    
+
       {
-        source: '/interior-designing-estimates-pricing',
+        source: '/home-interior-designs-designing-estimates-pricing',
         destination: '/GetQuote',
       },
       {
@@ -448,7 +472,7 @@ const nextConfig = {
         destination: '/reviews',
       },
       {
-        source: '/interior-designing-plans-for-residences',
+        source: '/home-interior-designs-designing-plans-for-residences',
         destination: '/offers',
       },
       {
@@ -468,7 +492,7 @@ const nextConfig = {
         destination: '/refer-and-earn',
       },
       {
-        source: '/interior-designing-estimates-pricing',
+        source: '/home-interior-designs-designing-estimates-pricing',
         destination: '/GetQuote',
       },
       {
@@ -485,68 +509,80 @@ const nextConfig = {
       },
       { source: '/home-renovation-services', destination: '/' },
       { source: '/dressers-designs', destination: '/' },
-      { source: '/glass-partition-designs', destination: '/' },
+      { source: '/glass-partition-designs-designs', destination: '/' },
       { source: '/modular-kitchen-price-estimator', destination: '/' },
       { source: '/dressers-designs', destination: '/' },
 
       {
         source: '/astounding-lobby-area-designs',
-        destination: '/selected-homes/astounding-lobby-area-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/astounding-lobby-area-designs',
       },
 
       {
         source: '/artistic-bedroom-designs',
-        destination: '/selected-homes/artistic-bedroom-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/artistic-bedroom-designs',
       },
 
       {
         source: '/comforting-balcony-area-designs',
-        destination: '/selected-homes/comforting-balcony-area-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/comforting-balcony-area-designs',
       },
 
       {
         source: '/soulful-kids-room-designs',
-        destination: '/selected-homes/soulful-kids-room-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/soulful-kids-room-designs',
       },
 
       {
         source: '/handsome-modular-wardrobe-designs',
-        destination: '/selected-homes/handsome-modular-wardrobe-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/handsome-modular-wardrobe-designs',
       },
 
       {
         source: '/exquisite-bathroom-remodel-designs',
-        destination: '/selected-homes/exquisite-bathroom-remodel-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/exquisite-bathroom-remodel-designs',
       },
 
       {
         source: '/chilled-party-bar-unit-designs',
-        destination: '/selected-homes/chilled-party-bar-unit-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/chilled-party-bar-unit-designs',
       },
 
       {
         source: '/blissful-parents-room-designs-ideas',
-        destination: '/selected-homes/blissful-parents-room-designs-ideas',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/blissful-parents-room-designs-ideas',
       },
 
       {
         source: '/spellbinding-living-room-designs',
-        destination: '/selected-homes/spellbinding-living-room-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/spellbinding-living-room-designs',
       },
 
       {
         source: '/delicious-modular-kitchen-designs',
-        destination: '/selected-homes/delicious-modular-kitchen-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/delicious-modular-kitchen-designs',
       },
 
       {
         source: '/mesmerizing-modern-home-interiors',
-        destination: '/selected-homes/mesmerizing-modern-home-interiors',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/mesmerizing-modern-home-interiors',
       },
 
       {
         source: '/wholesome-modern-interiors-designs',
-        destination: '/selected-homes/wholesome-modern-interiors-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/wholesome-modern-interiors-designs',
       },
 
       // Add more custom rewrites as needed

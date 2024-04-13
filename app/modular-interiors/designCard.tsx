@@ -8,16 +8,14 @@ interface CardProps {
     heading: string
     size: string
     image: string
-  };
+  }
 }
 
 const DesignCard: React.FC<CardProps> = ({ data }) => {
-    console.log(data);
-    
+  console.log(data)
+
   return (
-
     <Link href={`/interior/${data.designId}`}>
-
       <div className="max-w-sm rounded overflow-hidden shadow-lg">
         <Image
           width={90}
@@ -27,9 +25,7 @@ const DesignCard: React.FC<CardProps> = ({ data }) => {
           className="w-full h-40 object-cover"
         />
         <div className="px-6 py-4">
-          <div className=" text-gray-700  text-sm mb-2">
-            {data.heading}
-          </div>
+          <div className=" text-gray-700  text-sm mb-2">{data.heading}</div>
           <p className="text-gray-500 text-xs">{data.size}</p>
         </div>
       </div>

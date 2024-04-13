@@ -10,7 +10,7 @@ import {
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import React, { FormEvent, useState,useEffect } from 'react'
+import React, { FormEvent, useState, useEffect } from 'react'
 import Header from '../../components/Navbar/Header'
 import Footer from '../../components/Footer/Footer'
 import emailjs from 'emailjs-com'
@@ -27,7 +27,6 @@ const TopFormSection = () => {
   const [btnText, setBtnText] = useState('Submit')
   const [formSubmitted, setFormSubmitted] = useState(false)
 
- 
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -152,7 +151,12 @@ const TopFormSection = () => {
         />
         <h1 className="text-4xl font-bold mb-2">SOMETHING TOGETHER</h1>
         <p className="text-gray-600 text-xs mt-8">
-        Connect with India&apos;s Largest Modular Interior & Architectural Brand. We assure you 100% Guaranteed Quotes across The Town. With Our 16 years Expertise & a dedicated Team of Professionals, We are the Most Reliable and Referred Brand favoured by Top Architects, Interior Designers, Leading Township Developers, Trading Brands, Retailers and Our Clients.
+          Connect with India&apos;s Largest Modular Interior & Architectural
+          Brand. We assure you 100% Guaranteed Quotes across The Town. With Our
+          16 years Expertise & a dedicated Team of Professionals, We are the
+          Most Reliable and Referred Brand favoured by Top Architects, Interior
+          Designers, Leading Township Developers, Trading Brands, Retailers and
+          Our Clients.
         </p>
       </div>
       {/* Right side form */}
@@ -257,9 +261,9 @@ const TopFormSection = () => {
 }
 
 const MiddleInfoSection = () => {
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false)
   const togglePopup = () => {
-    setShowPopup(!showPopup);
+    setShowPopup(!showPopup)
   }
   return (
     <div className="container mx-auto mt-8 p-2">
@@ -283,11 +287,10 @@ const MiddleInfoSection = () => {
             For Grievances/Complains/Support support@designindianhomes.com
           </p>
           <div className="bg-yellow-400 rounded-full w-full my-8 h-24 flex items-center justify-center">
-           <button onClick={togglePopup} className='text-2xl font-bold'>Plan a Visit Today</button>
-            <PopupForm
-           showPopup={showPopup}
-           togglePopup={togglePopup}
-           />
+            <button onClick={togglePopup} className="text-2xl font-bold">
+              Plan a Visit Today
+            </button>
+            <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
           </div>
         </div>
 
@@ -407,7 +410,7 @@ const MiddleInfoSection = () => {
           </p>
           <p className="text-gray-700 font-semibold mb-2">
             <a href="https://tallysolution.net/" target="_blank">
-             Tally Sollution
+              Tally Sollution
             </a>
           </p>
         </div>
@@ -597,8 +600,6 @@ const FullScreenImage = () => {
   )
 }
 
-
-
 const CardComponentSection = () => {
   return (
     <div className="flex flex-wrap">
@@ -634,7 +635,7 @@ const CardComponentSection = () => {
       </Link>
       {/* card2 */}
       <Link
-        href="/interior-designing-estimates-pricing"
+        href="/home-interior-designs-designing-estimates-pricing"
         className="w-full md:w-1/3 p-2"
       >
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
@@ -661,7 +662,10 @@ const CardComponentSection = () => {
         </div>
       </Link>
       {/* card3 */}
-      <Link href="/interior-digest-magazine-india" className="w-full md:w-1/3 p-2">
+      <Link
+        href="/interior-digest-magazine-india"
+        className="w-full md:w-1/3 p-2"
+      >
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 ease-in-out">
           <div className="py-6 px-2">
             <div className="text-center">

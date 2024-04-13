@@ -17,34 +17,34 @@ const ImageGrid = () => {
       slug: '/bedroom-renovation-services',
     },
     {
-      src: '/images/top-picks/beds-removebg-preview.png',
+      src: '/images/top-picks/bed-designs-dealers-manufacturers-india-removebg-preview.png',
       text: 'Beds',
-      slug: '/beds-designs',
+      slug: '/bed-designs-dealers-manufacturers-india-designs',
     },
     {
-      src: '/images/top-picks/door-removebg-preview.png',
+      src: '/images/top-picks/door-design-dealers-manufacturers-india-removebg-preview.png',
       text: 'Doors',
       slug: '/wood-door-designs',
     },
     {
       src: '/images/top-picks/electric-removebg-preview.png',
       text: 'Electric',
-      slug: '/electric-works-interiors',
+      slug: '/home-electric-works-services-interiors',
     },
     {
       src: '/images/top-picks/exterior_cladding-removebg-preview.png',
       text: 'Exterior Cladding',
-      slug: '/exterior-cladding-designs',
+      slug: '/exterior-cladding-design-ideas-designs',
     },
     {
       src: '/images/top-picks/glass_partition-removebg-preview.png',
       text: 'Glass Partitions',
-      slug: '/glass-partition-designs',
+      slug: '/glass-partition-designs-designs',
     },
     {
-      src: '/images/top-picks/Interior_Lightening-removebg-preview.png',
+      src: '/images/top-picks/interior_Lightening-removebg-preview.png',
       text: 'Interior Lightening',
-      slug: '/kitchen-lightening-designs',
+      slug: '/kitchen-lightening-inspiration-ideas-india-designs',
     },
     {
       src: '/images/top-picks/kitchen_renovation-removebg-preview.png',
@@ -64,27 +64,27 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/sofa-removebg-preview.png',
       text: 'Sofa',
-      slug: '/sofa-designs',
+      slug: '/sofa-designs-ideas',
     },
     {
       src: '/images/top-picks/tiling-removebg-preview.png',
       text: 'Tiling',
-      slug: '/tiling-designs',
+      slug: '/tiling-design-ideass',
     },
     {
       src: '/images/top-picks/upvc_window-removebg-preview.png',
       text: 'UPVC Windows',
-      slug: '/upvc-windows-designs',
+      slug: '/upvc-window-designss-designs',
     },
     {
       src: '/images/top-picks/Vertical_Garden-removebg-preview.png',
       text: 'Vertical Gardens',
-      slug: '/vertical-gardens-designs',
+      slug: '/vertical-garden-designss-designs',
     },
     {
       src: '/images/top-picks/wall_pannaling-removebg-preview.png',
       text: 'Wall Panneling',
-      slug: '/wall-panelling',
+      slug: '/wall-panelling-designs',
     },
     {
       src: '/images/top-picks/wooden_flooring-removebg-preview.png',
@@ -94,7 +94,7 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/wooden_polishing-removebg-preview.png',
       text: 'Wooden Polishing',
-      slug: '/wooden-flooring-designs',
+      slug: '/wooden-flooring-designs-designs',
     },
 
     // Add more images as needed
@@ -180,7 +180,9 @@ const ImageGrid = () => {
                   Top Picks For You
                 </h1>
               </div>
-              <Image width={1000} height={1000}
+              <Image
+                width={1000}
+                height={1000}
                 src="/images/simple-gold-brush-stroke-banner-5.png"
                 alt="Paint Brush"
                 style={backgroundImageStyle}
@@ -217,7 +219,9 @@ const ImageGrid = () => {
                   </div> */}
                 <Link href={item.slug}>
                   <div className="mb-4 sm:w-[200px] w-[150px]">
-                    <Image width={1000} height={1000}
+                    <Image
+                      width={1000}
+                      height={1000}
                       src={item.src}
                       alt={item.text}
                       className="w-full object-cover mr-4"

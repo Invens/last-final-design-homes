@@ -43,7 +43,7 @@ const cardsData = [
     image: 'https://api.designindianwardrobe.com/uploads/2-BEDR~1.JPE',
     heading: 'Interior Design Solutions',
     description: 'Best Interior Designer in Delhi, Gurgaon, Noida India',
-    link: '/interior',
+    link: '/home-interior-designs',
   },
   {
     image:
@@ -51,20 +51,20 @@ const cardsData = [
     heading: 'End to End Interior',
     description:
       'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India',
-    link: '/interior-design-ideas',
+    link: '/architectural-designs-services-india',
   },
   {
     image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE',
     heading: 'Architectural Designs',
     description:
       'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India',
-    link: '/architectural-designs',
+    link: '/architectural-designs-services-india',
   },
   {
     image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE',
     heading: 'Selected Homes',
     description: 'Best home designer in Delhi, Gurgaon, Noida India',
-    link: '/selected-homes',
+    link: '/selected-homes-exclusive-interior-designs-india',
   },
   {
     image:
@@ -85,7 +85,7 @@ const cardsData = [
       'https://api.designindianwardrobe.com/uploads/2-door-sliding-wardrobe-designs-in-delhi-gurgaon-noida-india%20(2).jpg',
     heading: 'Wardrobes',
     description: 'Best Wardrobes Services in Delhi, Gurgaon, Noida India',
-    link: '/wardrobes',
+    link: '/wardrobe-design-gallery-india',
   },
 ]
 
@@ -180,8 +180,6 @@ const Page = ({}) => {
           ))}
         </div>
       </div>
-
-      
 
       <Footer />
     </>

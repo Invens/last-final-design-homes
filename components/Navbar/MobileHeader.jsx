@@ -4,10 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import ColorSwitch from '../../components/ColorSwitch/page'
 import { SocialIcon } from 'react-social-icons'
 import PopupForm from '../popupform/page'
-import {
-  faPhone,
-  faHome,
-} from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons'
 import {
   faPalette,
   faPencil,
@@ -16,9 +13,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
-
-
-
 
 const MobileHeader = () => {
   const [hoveredItem, setHoveredItem] = useState(null)
@@ -67,20 +61,18 @@ const MobileHeader = () => {
     setMegaMenuVisible(false)
   }
 
-  const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false)
   const togglePopup = () => {
-    setShowPopup(!showPopup);
+    setShowPopup(!showPopup)
   }
-
 
   return (
     <>
       <div className="relative lg:hidden " style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
-
         {/* Bottom Navigation Bar */}
-        <div className="fixed bottom-0 left-0 w-full" >
+        <div className="fixed bottom-0 left-0 w-full">
           <div
             className={`bg-white  text-black w-full h-16 flex items-center justify-around`}
           >
@@ -93,16 +85,19 @@ const MobileHeader = () => {
               <Link href="/"> Home</Link>
             </button>
             <Link href="/modular-interior-design-ideas">
-            <button className="flex flex-col items-center text-xs font-bold">
-              <FontAwesomeIcon
-                icon={faPalette}
-                size="2x"
-                style={{ height: '25px', width: '25px' }}
-              />
-              Design
-            </button>
+              <button className="flex flex-col items-center text-xs font-bold">
+                <FontAwesomeIcon
+                  icon={faPalette}
+                  size="2x"
+                  style={{ height: '25px', width: '25px' }}
+                />
+                Design
+              </button>
             </Link>
-            <button className="flex flex-col items-center text-xs font-bold relative" onClick={togglePopup}>
+            <button
+              className="flex flex-col items-center text-xs font-bold relative"
+              onClick={togglePopup}
+            >
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
                   className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-4 "
@@ -118,14 +113,14 @@ const MobileHeader = () => {
               <span className="mt-7">Book Now</span>
             </button>
             <Link href="/homes-by-design-indian-homes">
-            <button className="flex flex-col items-center text-xs font-bold">
-              <FontAwesomeIcon
-                icon={faNewspaper}
-                size="2x"
-                style={{ height: '25px', width: '25px' }}
-              />
-               Our Homes
-            </button>
+              <button className="flex flex-col items-center text-xs font-bold">
+                <FontAwesomeIcon
+                  icon={faNewspaper}
+                  size="2x"
+                  style={{ height: '25px', width: '25px' }}
+                />
+                Our Homes
+              </button>
             </Link>
             <button
               className="flex flex-col items-center text-xs font-bold"
@@ -139,7 +134,6 @@ const MobileHeader = () => {
               More
             </button>
           </div>
-         
         </div>
       </div>
 
@@ -157,29 +151,24 @@ const MobileHeader = () => {
               width={0}
               height={0}
               priority={true}
-              className='absolute xs:relative md:relative w-[8rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] '
-             
+              className="absolute xs:relative md:relative w-[8rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] "
             />
           </Link>
         </div>
-       
-       
-         <div className='flex'>
-         <div className='mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold '>
-        <button>Our Homes</button>
-        <button>Design Ideas</button>
-        <button>Contact Us</button>
-        <button></button>
 
-        </div>
-          <Link
-            href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-            <button className='bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6'>Get Estimate</button>
-
+        <div className="flex">
+          <div className="mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold ">
+            <button>Our Homes</button>
+            <button>Design Ideas</button>
+            <button>Contact Us</button>
+            <button></button>
+          </div>
+          <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <button className="bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6">
+              Get Estimate
+            </button>
           </Link>
-       
         </div>
-       
       </div>
       {/* Mobile Header */}
       <div className="lg:hidden sticky top-6 z-40">
@@ -227,7 +216,7 @@ const MobileHeader = () => {
                     isActive={activeSection === 'designIdeas'}
                     onClick={() => toggleSection('designIdeas')}
                   >
-                    <div >
+                    <div>
                       <div
                         className="bg-white shadow-2xl rounded-lg p-4 justify-center  w-full  h-fit text-black"
                         onMouseLeave={handleMouseLeave}
@@ -238,7 +227,7 @@ const MobileHeader = () => {
                               Modular Interior Designs
                             </h3>
                             <div className="text-base">
-                              <Link href="/modular-kitchen-designs">
+                              <Link href="/modular-kitchen-top-brand-india-designs">
                                 <li>Modular Kitchens</li>
                               </Link>
                               <Link href="/wardrobe-designs">
@@ -261,7 +250,7 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Crockery Units</li>
                               </Link>
-                              <Link href="/glass-partition-designs">
+                              <Link href="/glass-partition-designs-designs">
                                 <li>Glass Partitions</li>
                               </Link>
                               <Link href="/lacquer-glass-wardrobe-designs">
@@ -277,7 +266,7 @@ const MobileHeader = () => {
                                 <li>Side Tables</li>
                               </Link>
 
-                              <Link href="/interior/residential-Offices-designs">
+                              <Link href="/home-interior-designs/residential-Offices-designs">
                                 <li>Home Office</li>
                               </Link>
                               <Link href="/foyer-area-designs">
@@ -344,25 +333,23 @@ const MobileHeader = () => {
                               <Link href="/cottage-interior-designs">
                                 <li>Cottage interior designs</li>
                               </Link>
-
-
                             </div>
                             <div>
-                              <Link href="/luxury-residence">
+                              <Link href="/luxury-residence-designs-delhi-india">
                                 <h3 className="text-3xl">Luxury Residence</h3>
                               </Link>
-                              <Link href="/luxury-residence/luxury-interior/">
+                              <Link href="/luxury-residence-designs-delhi-india/luxury-interior/">
                                 <li>Luxury Interior</li>
                               </Link>
 
-                              <Link href="/luxury-residence/luxury-kitchen">
+                              <Link href="/luxury-residence-designs-delhi-india/luxury-kitchen">
                                 <li>Luxury Kitchen</li>
                               </Link>
 
-                              <Link href="/luxury-residence/luxury-wardrobe">
+                              <Link href="/luxury-residence-designs-delhi-india/luxury-wardrobe">
                                 <li>Luxury Wardrobe</li>
                               </Link>
-                              <Link href="/luxury-residence/luxury-structural">
+                              <Link href="/luxury-residence-designs-delhi-india/luxury-structural">
                                 <li>Luxury Structural design</li>
                               </Link>
                             </div>
@@ -374,30 +361,30 @@ const MobileHeader = () => {
                             <h3 className="text-3xl">Interior Design Ideas</h3>
 
                             <div className="text-base text-black">
-                              <Link href="/wooden-polishing">
+                              <Link href="/wooden-polishing-designs">
                                 <li>Wooden Polishing</li>
                               </Link>
-                              <Link href="/wooden-flooring-designs">
+                              <Link href="/wooden-flooring-designs-designs">
                                 {' '}
                                 <li>Wooden Flooring</li>
                               </Link>
-                              <Link href="/vertical-gardens-designs">
+                              <Link href="/vertical-garden-designss-designs">
                                 {' '}
                                 <li>Vertical Gardens</li>
                               </Link>
-                              <Link href="/upvc-windows-designs">
+                              <Link href="/upvc-window-designss-designs">
                                 {' '}
                                 <li>UPVC Windows</li>
                               </Link>
-                              <Link href="/tiling-designs">
+                              <Link href="/tiling-design-ideass">
                                 {' '}
                                 <li>Tiling Designs</li>
                               </Link>
-                              <Link href="/sofa-designs">
+                              <Link href="/sofa-designs-ideas">
                                 {' '}
                                 <li>Sofa Designs</li>
                               </Link>
-                              <Link href="/kitchen-lightening-designs">
+                              <Link href="/kitchen-lightening-inspiration-ideas-india-designs">
                                 {' '}
                                 <li>Kitchen Lightening</li>
                               </Link>
@@ -405,7 +392,7 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Plumbings</li>
                               </Link>
-                              <Link href="/glass-partition-designs">
+                              <Link href="/glass-partition-designs-designs">
                                 {' '}
                                 <li>Glass Partitions</li>
                               </Link>
@@ -413,11 +400,11 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>ceilings</li>
                               </Link>
-                              <Link href="/wall-panelling">
+                              <Link href="/wall-panelling-designs">
                                 {' '}
                                 <li> Wall Panelling</li>
                               </Link>
-                              <Link href="/exterior-cladding-designs">
+                              <Link href="/exterior-cladding-design-ideas-designs">
                                 {' '}
                                 <li>Exterior Cladding</li>
                               </Link>
@@ -425,11 +412,11 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Doors</li>
                               </Link>
-                              <Link href="/electric-works-interiors">
+                              <Link href="/home-electric-works-services-interiors">
                                 {' '}
                                 <li>Electric Works</li>
                               </Link>
-                              <Link href="/beds-designs">
+                              <Link href="/bed-designs-dealers-manufacturers-india-designs">
                                 {' '}
                                 <li>Beds</li>
                               </Link>
@@ -465,8 +452,8 @@ const MobileHeader = () => {
                                 <li>Commercial Architectural Services</li>
                               </Link>
                             </div>
-                            <div className='text-base text-black'>
-                              <Link href="/selected-homes">
+                            <div className="text-base text-black">
+                              <Link href="/selected-homes-exclusive-interior-designs-india">
                                 <h3 className="text-3xl">Selected Homes</h3>
                               </Link>
 
@@ -571,7 +558,7 @@ const MobileHeader = () => {
                               <Link href="/structural-renovation-services">
                                 <li>Structural Renovation</li>
                               </Link>
-                              <Link href="/interior-renovation-services">
+                              <Link href="/home-interior-designs-renovation-services">
                                 <li>Interior Renovation</li>
                               </Link>
                               <Link href="/bedroom-renovation-services">
@@ -589,7 +576,7 @@ const MobileHeader = () => {
                               <Link href="/living-room-renovation-services">
                                 <li>Living room Renovation</li>
                               </Link>
-                              <Link href="/modular-kitchen-renovation-services">
+                              <Link href="/modular-kitchen-top-brand-india-renovation-services">
                                 <li>Modular kitchen Renovation</li>
                               </Link>
                               <Link href="/wardrobe-renovation-services">
@@ -766,7 +753,7 @@ const MobileHeader = () => {
                                   Structural Renovation
                                 </li>{' '}
                               </Link>
-                              <Link href="/interior-renovation-services">
+                              <Link href="/home-interior-designs-renovation-services">
                                 <li
                                   onMouseOver={() =>
                                     handleMouseOverImage('interiorRenovation')
@@ -820,7 +807,7 @@ const MobileHeader = () => {
                                   Living room Renovation
                                 </li>{' '}
                               </Link>
-                              <Link href="/modular-kitchen-renovation-services">
+                              <Link href="/modular-kitchen-top-brand-india-renovation-services">
                                 <li
                                   onMouseOver={() =>
                                     handleMouseOverImage('modularKitchen')
@@ -1155,7 +1142,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/modular-kitchen/types-of-modular-kitchens">
+                                  <Link href="/modular-kitchen-top-brand-india/types-of-modular-kitchens">
                                     {' '}
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
@@ -1187,7 +1174,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/modular-kitchen/modular-kitchen-designs">
+                                  <Link href="/modular-kitchen-top-brand-india/modular-kitchen-designs">
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
                                       onMouseOver={() =>
@@ -1217,7 +1204,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
-                                  <Link href="/modular-kitchen/luxury-modular-kitchens">
+                                  <Link href="/modular-kitchen-top-brand-india/luxury-modular-kitchens">
                                     <h3
                                       className="text-sm text-white bg-black absolute  p-1"
                                       onMouseOver={() =>
@@ -1251,7 +1238,7 @@ const MobileHeader = () => {
                               />
 
                               <div>
-                                <Link href="/modular-kitchen/kitchen-renovations">
+                                <Link href="/modular-kitchen-top-brand-india/kitchen-renovations">
                                   <h3
                                     className="text-sm text-white bg-black absolute  p-1"
                                     onMouseOver={() =>
@@ -1282,7 +1269,7 @@ const MobileHeader = () => {
                               />
 
                               <div>
-                                <Link href="/modular-kitchen-price-estimator">
+                                <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
                                   <h3
                                     className="text-sm text-white bg-black absolute  p-1"
                                     onMouseOver={() =>
@@ -2041,7 +2028,7 @@ const MobileHeader = () => {
                                 Reviews
                               </h3>
                             </Link>
-                            <Link href="/interior-designing-plans-for-residences">
+                            <Link href="/home-interior-designs-designing-plans-for-residences">
                               <h3 className="text-base font-bold bg-black text-white mt-2 text-center">
                                 Our Package
                               </h3>
@@ -2115,18 +2102,23 @@ const MobileHeader = () => {
                         justifyContent: 'center',
                       }}
                     >
-                      <Link href="https://www.instagram.com/designindiankitchen/?hl=en" target="_blank">
+                      <Link
+                        href="https://www.instagram.com/designindiankitchen/?hl=en"
+                        target="_blank"
+                      >
                         <SocialIcon
                           network="instagram"
                           style={{ width: '10rem', height: '10rem' }}
                         />
                       </Link>
-                      <Link href="https://www.facebook.com/designindiankitchen/" target="_blank">
+                      <Link
+                        href="https://www.facebook.com/designindiankitchen/"
+                        target="_blank"
+                      >
                         <SocialIcon
                           network="facebook"
                           style={{ width: '10rem', height: '10rem' }}
                         />
-
                       </Link>
                     </div>
 
@@ -2138,13 +2130,19 @@ const MobileHeader = () => {
                         justifyContent: 'center',
                       }}
                     >
-                      <Link href="https://twitter.com/indiankitchens" target="_blank">
+                      <Link
+                        href="https://twitter.com/indiankitchens"
+                        target="_blank"
+                      >
                         <SocialIcon
                           network="twitter"
                           style={{ width: '10rem', height: '10rem' }}
                         />
                       </Link>
-                      <Link href="https://www.youtube.com/channel/UCqkIRwI6EL9QmaTZHYm6Hug" target="_blank">
+                      <Link
+                        href="https://www.youtube.com/channel/UCqkIRwI6EL9QmaTZHYm6Hug"
+                        target="_blank"
+                      >
                         <SocialIcon
                           network="youtube"
                           style={{ width: '10rem', height: '10rem' }}
@@ -2180,10 +2178,7 @@ const MobileHeader = () => {
         )}
       </div>
 
-      <PopupForm
-           showPopup={showPopup}
-           togglePopup={togglePopup}
-           />
+      <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
     </>
   )
 }

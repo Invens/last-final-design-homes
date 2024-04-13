@@ -14,11 +14,8 @@ import {
   faEllipsisH,
 } from '@fortawesome/free-solid-svg-icons'
 //import ThemeSwitcher from '@/app/ThemeSwitcher'
-import { faWhatsapp, faInstagram, } from '@fortawesome/free-brands-svg-icons'
-import {
-  faPhone,
-  faHome,
-} from '@fortawesome/free-solid-svg-icons'
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faPhone, faHome } from '@fortawesome/free-solid-svg-icons'
 import './Omsai.css'
 import Link from 'next/link'
 import MegaMenuDesignIdeasContent from './MegaMenuDesignIdeasContent'
@@ -29,34 +26,33 @@ import MobileHeader from './MobileHeader'
 const Header = () => {
   const [activeCategory, setActiveCategory] = useState(null)
   const [megaMenuVisible, setMegaMenuVisible] = useState(false)
-  const [isVisible, setIsVisible] = useState(false);
-  const [isRotated, setIsRotated] = useState(false);
-  const [isCloseIconVisible, setIsCloseIconVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
+  const [isRotated, setIsRotated] = useState(false)
+  const [isCloseIconVisible, setIsCloseIconVisible] = useState(false)
 
-
-  const [isShowing, setIsShowing] = useState(true);
+  const [isShowing, setIsShowing] = useState(true)
 
   useEffect(() => {
     const hideTextTimeout = setTimeout(() => {
-      setIsShowing(false);
-    }, 5000);
+      setIsShowing(false)
+    }, 5000)
 
     const showTextTimeout = setTimeout(() => {
-      setIsShowing(true);
-    }, 10000);
+      setIsShowing(true)
+    }, 10000)
 
     // Clean up timeouts to avoid memory leaks
     return () => {
-      clearTimeout(hideTextTimeout);
-      clearTimeout(showTextTimeout);
-    };
-  }, [isShowing]);
+      clearTimeout(hideTextTimeout)
+      clearTimeout(showTextTimeout)
+    }
+  }, [isShowing])
 
   const toggleVisibility = () => {
-    setIsVisible(!isVisible);
-    setIsRotated(!isRotated);
-    setIsCloseIconVisible(!isCloseIconVisible);
-  };
+    setIsVisible(!isVisible)
+    setIsRotated(!isRotated)
+    setIsCloseIconVisible(!isCloseIconVisible)
+  }
   const megaMenuRef = useRef(null)
   const closeMegaMenu = () => {
     setMegaMenuVisible(false)
@@ -165,7 +161,7 @@ const Header = () => {
       renovationss:
         '/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg',
 
-      //WardRobes
+      //wardrobe-design-gallery-india
 
       types_wardrobe:
         '/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (3).jpg',
@@ -218,9 +214,9 @@ const Header = () => {
 
   const MegaMenuInteriorsContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-2 h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-4 pt-6 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex gap-8">
         <div>
@@ -318,97 +314,122 @@ const Header = () => {
               </li>{' '}
             </Link>
           </ul>
-          <button className="transition ease-in-out delay-150 bg-green-600 hover:bg-orange-500 translate-y-1 hover:scale-110 text-white text-base py-2 px-4 rounded-full mt-4">
+          <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
             <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
               Get Free Estimate
             </Link>
-          </button>{' '}
+          </button>
         </div>
 
-        <div>
-          <ul className="text-sm">
+        <div className="">
+          <ul className="text-xs">
             <h3 className="text-lg font-bold text-black">
-              Renovation Services
+              End to End Interior
             </h3>
-            <Link href="/structural-renovation-services">
-              <li onMouseOver={() => handleMouseOverImage('')}>
-                Structural Renovation
+            <Link href="/home-interior-services-india/bed-designs-dealers-manufacturers-india">
+              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+                Bed Designs
               </li>{' '}
             </Link>
-            <Link href="/interior-renovation-services">
+            <Link href="/home-interior-services-india/ceiling-design-ideas-inspiration-india">
               <li
                 onMouseOver={() => handleMouseOverImage('interiorRenovation')}
               >
-                Interior Renovation
+                Ceiling Designs
               </li>{' '}
             </Link>
-            <Link href="/bedroom-renovation-services">
+            <Link href="/home-interior-services-india/commercial-interiors-services-delhi-ncr-india">
               <li onMouseOver={() => handleMouseOverImage('bedroom')}>
-                Bedroom Renovation
+                Commercial Services
               </li>{' '}
             </Link>
-            <Link href="/lounge-renovation-services">
+            <Link href="/home-interior-services-india/wooden-ceiling-designs-ideas-inspiration">
               <li onMouseOver={() => handleMouseOverImage('loungRenovation')}>
-                Lounge Renovation
+                Wooden Ceilings
               </li>{' '}
             </Link>
-            <Link href="/bathroom-renovation-services">
+            <Link href="/home-interior-services-india/wooden-flooring-designs">
               <li onMouseOver={() => handleMouseOverImage('bathroom')}>
-                Bathroom Renovation
+                Wooden Floorings
               </li>{' '}
             </Link>
-            <Link href="/terrace-renovation-services">
+            <Link href="/home-interior-services-india/wooden-polishing-designs">
               <li onMouseOver={() => handleMouseOverImage('terrace')}>
-                Terrace Renovation
+                Wooden Polishing
               </li>{' '}
             </Link>
-            <Link href="/living-room-renovation-services">
+            <Link href="/home-interior-services-india/door-design-dealers-manufacturers-india">
               <li onMouseOver={() => handleMouseOverImage('livingroom')}>
-                Living room Renovation
+                Door Designs
               </li>{' '}
             </Link>
-            <Link href="/modular-kitchen-renovation-services">
+            <Link href="/home-interior-services-india/end-to-end-interior-services-delhi-ncr-india">
               <li onMouseOver={() => handleMouseOverImage('modularKitchen')}>
-                Modular kitchen Renovation
+                End to End Services
               </li>{' '}
             </Link>
-            <Link href="/wardrobe-renovation-services">
+            <Link href="/home-interior-services-india/exterior-cladding-design-ideas">
               <li
                 onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
               >
-                Wardrobe Renovation
+                Exterior Cladding
               </li>{' '}
             </Link>
-            <Link href="/mandir-renovation-services">
+            <Link href="/home-interior-services-india/glass-partition-designs">
               <li onMouseOver={() => handleMouseOverImage('mandir')}>
-                Mandir Renovation
+                Glass Partitions
               </li>{' '}
             </Link>
-            <Link href="/gym-spa-renovation-services">
+            <Link href="/home-interior-services-india/home-painting-services-delhi-ncr">
               <li onMouseOver={() => handleMouseOverImage('gym')}>
-                GYM & Spas Renovation
+                Painting Services
               </li>{' '}
             </Link>
-            <Link href="/hotel-renovation-services">
+            <Link href="/home-interior-services-india/home-plumbing-services-india">
               <li onMouseOver={() => handleMouseOverImage('hotel')}>
-                Hotel Renovation
+                Plumbing Services
               </li>{' '}
             </Link>
-            <Link href="/farmhouse-renovation-services">
+            <Link href="/home-interior-services-india/home-electric-works-services">
               <li
                 onMouseOver={() => handleMouseOverImage('farmhouseRenovation')}
               >
-                Farmhouse Renovation
+                Electrical Services
               </li>{' '}
             </Link>
-            <Link href="/banquet-renovation-services">
+            <Link href="/home-interior-services-india/kitchen-lightening-inspiration-ideas-india">
               <li onMouseOver={() => handleMouseOverImage('banquet')}>
-                Banquet Renovation
+                Kitchen Lightening
               </li>{' '}
             </Link>
-            <Link href="/villa-renovation-services">
+            <Link href="/home-interior-services-india/sofa-designs-ideas">
               <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
-                Villa Renovation
+                Sofa Designs
+              </li>{' '}
+            </Link>
+            <Link href="/home-interior-services-india/tiling-design-ideas">
+              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+                Tiling Designs
+              </li>{' '}
+            </Link>
+            <Link href="/home-interior-services-india/tv-unit-designs">
+              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+                TV Unit Designs
+              </li>{' '}
+            </Link>
+            <Link href="/home-interior-services-india/upvc-window-designs">
+              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+                UPVC Windows
+              </li>{' '}
+            </Link>
+            <Link href="/home-interior-services-india/vertical-garden-designs">
+              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+                Vertical Gardens
+              </li>{' '}
+            </Link>
+            <Link href="/home-interior-services-india/wall-panelling-designs">
+              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+                Wall Painting Designs
               </li>{' '}
             </Link>
           </ul>
@@ -427,11 +448,8 @@ const Header = () => {
           />
 
           <div className="flex justify-center ml-40">
-            <button className="mt-4 bg-green-600 p-3 center rounded-full text-white font-bold text-sm">
-              <Link href="/homes-by-design-indian-homes">
-                {' '}
-                Homes by design Indian Homes{' '}
-              </Link>
+            <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+              <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
             </button>
           </div>
         </div>
@@ -440,25 +458,36 @@ const Header = () => {
   )
   const MegaMenuArchitectureContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4 pt-6 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex ">
         <div className="w-1/3 ml-4 mt-4">
           <div className="text-left">
-            <h1 className="text-4xl font-bold w-[400px]">
+            <h1 className="text-3xl font-bold w-[400px]">
               Top Architectural Services
             </h1>
             <p className="text-black w-[400px]">
               Architecture Tips, Designs & Executions,
               <br /> Ideas and Advice from Experts
             </p>
-            <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-                Get Free Estimate
-              </Link>
-            </button>
+            <div className="flex flex-col gap-2 pt-4 pr-4">
+              {' '}
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/refer-and-get-rewards-interior-designers">
+                  Refer for Rewards
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/selected-homes-exclusive-interior-designs-india">
+                  Selected Homes
+                </Link>
+              </button>{' '}
+            </div>
           </div>
         </div>
         <div className="flex w-1/3">
@@ -616,26 +645,36 @@ const Header = () => {
   )
   const MegaMenuModularKitchenContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4 pt-6 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex">
         <div className="w-1/3 ml-4 mt-4">
           <div className="text-left">
-            <h1 className="text-4xl font-bold w-[400px]">
+            <h1 className="text-3xl font-bold w-[400px]">
               Modular Kitchen Largest Manufacturers
             </h1>
             <p className="text-black w-[400px]">
               Exclusive Modular Kitchen Designs, Tips, Ideas and Advice from Our
               Experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <div className="flex flex-col gap-2 pt-4 pr-4">
               {' '}
-              <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-                Get Free Estimate
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/refer-and-get-rewards-interior-designers">
+                  Refer for Rewards
+                </Link>
               </button>
-            </Link>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/selected-homes-exclusive-interior-designs-india">
+                  Selected Homes
+                </Link>
+              </button>{' '}
+            </div>
           </div>
         </div>
         <div className="flex w-1/3">
@@ -651,7 +690,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen/types-of-modular-kitchens">
+                  <Link href="/modular-kitchen-top-brand-india/types-of-modular-kitchens">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('type')}
@@ -675,7 +714,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen/modular-kitchen-designs">
+                  <Link href="/modular-kitchen-top-brand-india/modular-kitchen-designs">
                     {' '}
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
@@ -700,7 +739,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen/luxury-modular-kitchens">
+                  <Link href="/modular-kitchen-top-brand-india/luxury-modular-kitchens">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('luxury_modular')}
@@ -724,7 +763,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/modular-kitchen/kitchen-renovations">
+                  <Link href="/modular-kitchen-top-brand-india/kitchen-renovations">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -750,7 +789,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/modular-kitchen-price-estimator">
+                  <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('renovations')}
@@ -791,25 +830,36 @@ const Header = () => {
   )
   const MegaMenuWardrobesContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg pt-6 flex absolute w-full p-4 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex gap-4">
         <div className="w-1/3 ml-4 mt-4">
           <div className="text-left">
-            <h1 className="text-4xl font-bold w-[400px]">
+            <h1 className="text-3xl font-bold w-[400px]">
               Wardrobe Dealers & Manufacturers
             </h1>
             <p className="text-black w-[400px]">
               Wardrobes Designs, Manufacturing. Tips, Tricks, Ideas and advice
               from top experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-              <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-                Get Free Estimate
+            <div className="flex flex-col gap-2 pt-4 pr-4">
+              {' '}
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/refer-and-get-rewards-interior-designers">
+                  Refer for Rewards
+                </Link>
               </button>
-            </Link>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/selected-homes-exclusive-interior-designs-india">
+                  Selected Homes
+                </Link>
+              </button>{' '}
+            </div>
           </div>
         </div>
         <div className="flex w-1/3">
@@ -849,7 +899,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/wardrobes/luxury-wardrobes">
+                  <Link href="/wardrobe-design-gallery-india/luxury-wardrobes-designs">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -874,7 +924,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/wardrobes/wardrobe-designs">
+                  <Link href="/wardrobe-design-gallery-india/wardrobe-designs">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() =>
@@ -900,7 +950,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/wardrobes/lacquer-glass-wardrobe-designs">
+                  <Link href="/wardrobe-design-gallery-india/lacquer-glass-wardrobe-designs">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('glass_wardrobe')}
@@ -925,7 +975,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/wardrobes/wardrobe-renovations-services">
+                  <Link href="/wardrobe-design-gallery-india/wardrobe-renovations-services">
                     {' '}
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
@@ -968,9 +1018,9 @@ const Header = () => {
   )
   const MegaMenuLivingContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4  h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 pt-6 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex ">
         <div className="">
@@ -1175,28 +1225,39 @@ const Header = () => {
   )
   const MegaMenuModularInteriorContent = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 pt-6 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex ">
         <div className="w-1/3 ml-4 mt-4">
           <div className="">
-            <h1 className="text-4xl font-bold" style={{ width: '350px' }}>
-              End to End Modular Interior Solutions
+            <h1 className="text-3xl font-bold" style={{ width: '350px' }}>
+              End to End Interior Solutions
             </h1>
             <p className="text-black" style={{ width: '450px' }}>
               Modular Interior Execution, Designs, Manufacturing, Tips, Ideas
               and Advice from Industry&apos;s Top Experts
             </p>
-            <button className="bg-green-600 text-2xl py-3 px-6 rounded-full text-white mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-                Get Free Estimate
-              </Link>
-            </button>
+            <div className="flex flex-col gap-2 pt-4 pr-4">
+              {' '}
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/refer-and-get-rewards-interior-designers">
+                  Refer for Rewards
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/selected-homes-exclusive-interior-designs-india">
+                  Selected Homes
+                </Link>
+              </button>{' '}
+            </div>
           </div>
         </div>
-        <div className="flex w-1/3">
+        <div className="flex w-1/3 mr-2">
           <div className="">
             <ul className="">
               {/* { Starting, this is the sub-category} */}
@@ -1204,14 +1265,14 @@ const Header = () => {
                 <Image
                   src="/images/living/beautiful-design-tv-unit-in-delhi-gurgaon-noida.jpg"
                   alt=""
-                  width={100}
-                  height={70}
+                  width={80}
+                  height={60}
                   className=" rounded-lg"
                 />
                 <div>
                   <Link href="/mandir-designs">
                     <h3
-                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
                         handleMouseOverImage('mandir_interior')
                       }
@@ -1254,8 +1315,8 @@ const Header = () => {
                 <Image
                   src="/images/living/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg"
                   alt=""
-                  width={100}
-                  height={70}
+                  width={80}
+                  height={60}
                   className=" rounded-lg"
                 />
                 <div>
@@ -1264,7 +1325,7 @@ const Header = () => {
 "
                   >
                     <h3
-                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('bar_unit')}
                     >
                       Bar Units
@@ -1281,14 +1342,14 @@ const Header = () => {
                 <Image
                   src="/images/modular_interior/side-table-in- delhi-gurgaon-noida-faridabad.jpg"
                   alt=""
-                  width={100}
-                  height={70}
+                  width={80}
+                  height={60}
                   className=" rounded-lg"
                 />
                 <div>
                   <Link href="/side-table-designs">
                     <h3
-                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('side_table')}
                     >
                       Side Tables
@@ -1304,15 +1365,15 @@ const Header = () => {
                 <Image
                   src="/images/modular_interior/beautiful-foldable-beds-design-in-delhi-gurgaon-noida.jpeg"
                   alt=""
-                  width={100}
-                  height={70}
+                  width={80}
+                  height={60}
                   className=" rounded-lg"
                 />
 
                 <div>
                   <Link href="/foldable-area-designs">
                     <h3
-                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('foldable_bed')}
                     >
                       Foldable Beds
@@ -1328,20 +1389,46 @@ const Header = () => {
                 <Image
                   src="/images/living/best-interior-designing-company-in-delhi-gurgaon-noida-india-Design-Indian-Homes (6).jpg"
                   alt=""
-                  width={100}
-                  height={70}
+                  width={80}
+                  height={60}
                   className=" rounded-lg"
                 />
                 <div>
                   <Link href="/vanity-designs">
                     {' '}
                     <h3
-                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
                         handleMouseOverImage('bathroom_vatities')
                       }
                     >
                       Bathroom Vanities
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/foyer-cab.jpg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/foyer-area-designs">
+                    {' '}
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() =>
+                        handleMouseOverImage('bathroom_vatities')
+                      }
+                    >
+                      Foyer Cabinets
                     </h3>
                   </Link>
 
@@ -1382,8 +1469,191 @@ const Header = () => {
             </div> 
             
           </div> */}
+        </div>{' '}
+        <div className="flex w-1/3">
+          <div className="">
+            <ul className="">
+              {/* { Starting, this is the sub-category} */}
+              <div className="flex gap-2">
+                <Image
+                  src="/images/living/mod-kitc.jpg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/modular-kitchen-top-brand-india-designs">
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() =>
+                        handleMouseOverImage('mandir_interior')
+                      }
+                    >
+                      Modular Kitchen
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+
+              {/* <div className="flex gap-2 mt-2">
+                <Image
+                  src="/images/living/best-designing-services-crockery-unit-in-gurgaon-delhi-noida-faridabad.jpeg"
+                  alt=""
+                  width={100}
+                  height={70}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/chest-of-drawer-designs">
+                    <h3
+                      className="text-base font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() => handleMouseOverImage('chest_drawer')}
+                    >
+                      Chest of Drawers
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div> */}
+
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/wardrobe.jpeg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link
+                    href="/wardrobe-designs
+"
+                  >
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() => handleMouseOverImage('bar_unit')}
+                    >
+                      Wardrobes
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/dressers.jpeg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/dressers-designs">
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() => handleMouseOverImage('side_table')}
+                    >
+                      Dressers
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3 ">
+                <Image
+                  src="/images/living/tv unit.jpeg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+
+                <div>
+                  <Link href="/tv-unit-designs">
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() => handleMouseOverImage('foldable_bed')}
+                    >
+                      TV Unit
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/crockery-unit.png"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/crockery-unit-designs">
+                    {' '}
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() =>
+                        handleMouseOverImage('bathroom_vatities')
+                      }
+                    >
+                      Crockery Units
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-2 mt-3">
+                <Image
+                  src="/images/living/homesdih.jpg"
+                  alt=""
+                  width={80}
+                  height={60}
+                  className=" rounded-lg"
+                />
+                <div>
+                  <Link href="/homes-by-design-indian-homes">
+                    {' '}
+                    <h3
+                      className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
+                      onMouseOver={() =>
+                        handleMouseOverImage('bathroom_vatities')
+                      }
+                    >
+                      Homes by DIH
+                    </h3>
+                  </Link>
+
+                  <p className="text-xs mt-8">
+                    Connect with the top end to end interior Brand
+                  </p>
+                </div>
+              </div>
+            </ul>
+          </div>
         </div>
-        <div className="w-1/3">
+        {/* <div className="w-1/3">
           <Image
             src={
               hoveredItem ? getImageForItem(hoveredItem) : '/images/top4.jpeg'
@@ -1400,68 +1670,78 @@ const Header = () => {
               Decorate Your Own Beautiful Home
             </p>
           </div>
-          {/* <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button> */}
-        </div>
+          <button className='mt-4 bg-green-400 p-3 ml-8 rounded-full text-white font-bold'>Book an Architectural Consultancy </button>
+        </div> */}
       </div>
     </div>
   )
   const MegaMenuMore = () => (
     <div
-      className="bg-white shadow-2xl rounded-lg flex absolute w-full p-4 justify-center h-auto text-black"
+      className="bg-white shadow-2xl rounded-lg flex absolute w-full p-4 pt-6 justify-center h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '110px' }}
     >
       <div className="flex ">
-        <div className="w-1/3">
-          <ul className="text-sm 	font-bold pr-12">
-            <h3 className="text-lg">
+        <div className="w-1/2 flex mr-4">
+          <ul className="text-sm font-bold p-4">
+            <h3 className="">
               <Link href="/home-renovation-services">Renovation</Link>
             </h3>
             <Link href="/virtual-interior-designing-meeting">
-              <h3 className="text-lg">Book a Virtual Meeting</h3>
+              <h3 className="">Book a Virtual Meeting</h3>
             </Link>
             <Link href="/about-best-interior-designers-architects">
-              <h3 className="text-lg"> About Us</h3>
+              <h3 className=""> About Us</h3>
             </Link>
 
             <Link href="/collaborate-with-architects-interior-designers">
-              <h3 className="text-lg">Collaborate with Us</h3>
+              <h3 className="">Collaborate with Us</h3>
             </Link>
             <Link href="/customer-reviews-interior-designs">
               {' '}
-              <h3 className="text-lg">Reviews</h3>
+              <h3 className="">Reviews</h3>
             </Link>
-            <Link href="/interior-designing-plans-for-residences">
-              <h3 className="text-lg"> Our Packages </h3>
+            <Link href="/home-interior-designs-designing-plans-for-residences">
+              <h3 className=""> Our Packages </h3>
             </Link>
             <Link href="/why-choose-the-best-interior-designers">
-              <h3 className="text-lg">Why Choose Us</h3>
+              <h3 className="">Why Choose Us</h3>
             </Link>
             <Link href="/join-the-largest-interior-designing-brand">
-              <h3 className="text-lg">Join As a Designer</h3>
+              <h3 className="">Join As a Designer</h3>
             </Link>
             <Link href="/book-with-top-interior-designers-architects">
-              <h3 className="text-lg">Book a Design Visit</h3>
+              <h3 className="">Book a Design Visit</h3>
             </Link>
             <Link href="/nri-interior-architectural-services-delhi-gurgaon-noida-india">
-              <h3 className="text-lg">NRI - Sr Citizens Friendly </h3>
+              <h3 className="">NRI - Sr Citizens Friendly </h3>
             </Link>
             <Link href="/interior-digest-magazine-india">
-              <h3 className="text-lg">Magazine</h3>
+              <h3 className="">Magazine</h3>
             </Link>
           </ul>
-          <Link href="/refer-and-get-rewards-interior-designers">
-            <button className=" bg-green-600 text-2xl py-3 px-6 rounded-full text-white font-bold mt-6">
-              Refer for Rewards
+          <div className="flex flex-col gap-2 py-4">
+            {' '}
+            <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full ">
+              <Link href="/refer-and-get-rewards-interior-designers">
+                Refer for Rewards
+              </Link>
             </button>
-          </Link>
+            <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full ">
+              <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
+            </button>
+            <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full ">
+              <Link href="/selected-homes-exclusive-interior-designs-india">
+                Selected Homes
+              </Link>
+            </button>{' '}
+          </div>
         </div>
         <div className="w-2/3">
           <div
             className="w-full flex flex-col items-center justify-center bg-cover rounded-lg  "
             style={{
-              backgroundImage:
-                "url('/images/get-free-estimate.jpg')",
+              backgroundImage: "url('/images/get-free-estimate.jpg')",
               backgroundSize: 'fit',
               backgroundRepeat: 'no-repeat',
               objectFit: 'cover',
@@ -1592,11 +1872,12 @@ const Header = () => {
   }, [mobileMenuVisible])
   return (
     <div className={` bg-white  ${scrollDirection === 'down'}`}>
-      <div className="z-[200]   invisible xl:visible lg:visible  lg:flex">
+      <div className="z-[200] invisible lg:visible  lg:flex">
         {/* Desktop Header */}
         <div
-          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
-            }`}
+          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${
+            scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
+          }`}
           style={{
             position: 'fixed',
             top: 30,
@@ -1732,21 +2013,28 @@ const Header = () => {
                   className="flex font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Interiors')}
                 >
-                  <Link href="/interior-design-ideas"> Interiors</Link>
+                  <Link href="/home-interior-services-india">
+                    {' '}
+                    Interiors
+                  </Link>
                 </p>
 
                 <p
                   className="flex  font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Architectural')}
                 >
-                  <Link href="/architectural-designs">Architectural</Link>
+                  <Link href="/architectural-designs-services-india">
+                    Architectural
+                  </Link>
                 </p>
 
                 <p
                   className="flex  font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Modular Kitchen')}
                 >
-                  <Link href="/modular-kitchen">Modular Kitchen</Link>
+                  <Link href="/modular-kitchen-top-brand-india">
+                    Modular Kitchen
+                  </Link>
                 </p>
                 <Link href="/">
                   <animated.img
@@ -1775,7 +2063,7 @@ const Header = () => {
                   onMouseOver={() => handleMouseOver('Wardrobes')}
                 >
                   <i className="fi fi-tr-clothes-hanger"></i>
-                  <Link href="/wardrobes">Wardrobes</Link>
+                  <Link href="/wardrobe-design-gallery-india">Wardrobes</Link>
                 </p>
 
                 {/* <p className="text-sm font-bold" onMouseOver={() => handleMouseOver('Living')}>
@@ -1788,10 +2076,7 @@ const Header = () => {
                   onMouseOver={() => handleMouseOver('Modular Interiors')}
                 >
                   <i className="fi fi-ts-loveseat"></i>
-                  <Link href="/modular-kitchen-designs">
-                    {' '}
-                    Modular Interiors
-                  </Link>
+                  <Link href="/modular-interiors"> Modular Interiors</Link>
                 </p>
 
                 <div>
@@ -1802,7 +2087,7 @@ const Header = () => {
                     <Link href="#"> More</Link>
                   </p>
                 </div>
-                <Link href="/interior-designing-estimates-pricing">
+                <Link href="/home-interior-designs-designing-estimates-pricing">
                   {' '}
                   <button className="bg-yellow-400 hover:bg-yellow-500 hover:text-white text-sm py-2 px-2 rounded-full  center mb-1">
                     Get Quotes
@@ -1819,9 +2104,10 @@ const Header = () => {
                 >
                   <Link href="/book-a-interior-design-visit">Contact</Link>
                 </button>
-                <div className=" mb-2"><ColorSwitchD /></div>
+                <div className=" mb-2">
+                  <ColorSwitchD />
+                </div>
               </nav>
-
             </div>
           </div>
         </div>
@@ -1830,11 +2116,10 @@ const Header = () => {
       {/* {bottom menu} */}
 
       <Assistance />
-     <MobileHeader/>
+      <MobileHeader />
     </div>
   )
 }
-
 
 Header.ssr = false
 export default Header
