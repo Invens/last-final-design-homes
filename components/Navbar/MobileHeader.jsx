@@ -173,7 +173,7 @@ const MobileHeader = () => {
 
         </div>
           <Link
-            href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
             <button className='bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6'>Get Estimate</button>
 
           </Link>

@@ -93,12 +93,16 @@ const YourStepperComponent = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <Omsairam />
       <Header />
+     
+     <h1 className='text-center'>Get Free Estimate</h1>
+
       <div
-        className="w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4 mt-[100px]"
+        className="bg-fixed w-full min-h-[100vh] flex justify-center items-center sm:py-12 py-4 mt-[100px]"
         style={{
           backgroundImage: "url('/images/calculator/living_background.jpg')",
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
+
         }}
       >
         <Container

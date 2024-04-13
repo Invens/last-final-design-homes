@@ -434,7 +434,7 @@ export class Footer extends Component {
               }}
             >
               <div className="relative  m-16">
-                <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                   <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                     Get Your Estimates Free
                   </h1>

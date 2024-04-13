@@ -43,7 +43,7 @@ const nextConfig = {
         destination: '/design-ideas',
       },
       {
-        source: '/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india',
+        source: '/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india',
         destination: '/calculator',
       },
       {

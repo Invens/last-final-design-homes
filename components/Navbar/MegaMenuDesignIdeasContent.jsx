@@ -8,7 +8,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
     <div
       className="bg-white shadow-2xl rounded-sm flex gap-[50px] justify-center absolute w-full p-8  overflow-scroll h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div>
         <Link href="/modular-interiors">
@@ -74,7 +74,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <li>Homes by Design Indian Homes</li>
           </Link>
           <button className="bg-green-600 text-white text-m py-3 px-6 rounded-full mt-6">
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               Get Free Estimate
             </Link>
           </button>

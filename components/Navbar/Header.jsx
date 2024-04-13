@@ -220,7 +220,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg flex justify-center absolute w-full p-2 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex gap-8">
         <div>
@@ -318,8 +318,8 @@ const Header = () => {
               </li>{' '}
             </Link>
           </ul>
-          <button className="transition ease-in-out delay-150 bg-green-600 hover:bg-orange-500 translate-y-1 hover:scale-110 text-white text-base py-2 px-4 rounded-full mt-4">
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+          <button className="transition ease-in-out delay-150 bg-green-600 hover:bg-orange-500 translate-y-1 hover:scale-110 text-white text-xl font-bold py-2 px-4 rounded-full mt-4">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               Get Free Estimate
             </Link>
           </button>{' '}
@@ -427,7 +427,7 @@ const Header = () => {
           />
 
           <div className="flex justify-center ml-40">
-            <button className="mt-4 bg-green-600 p-3 center rounded-full text-white font-bold text-sm">
+            <button className="mt-4 bg-green-600 p-3 center rounded-full text-white text-xl font-bold">
               <Link href="/homes-by-design-indian-homes">
                 {' '}
                 Homes by design Indian Homes{' '}
@@ -442,7 +442,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex ">
         <div className="w-1/3 ml-4 mt-4">
@@ -455,7 +455,7 @@ const Header = () => {
               <br /> Ideas and Advice from Experts
             </p>
             <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                 Get Free Estimate
               </Link>
             </button>
@@ -618,7 +618,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg  flex absolute justify-center w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex">
         <div className="w-1/3 ml-4 mt-4">
@@ -630,7 +630,7 @@ const Header = () => {
               Exclusive Modular Kitchen Designs, Tips, Ideas and Advice from Our
               Experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               {' '}
               <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
                 Get Free Estimate
@@ -793,7 +793,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex gap-4">
         <div className="w-1/3 ml-4 mt-4">
@@ -805,7 +805,7 @@ const Header = () => {
               Wardrobes Designs, Manufacturing. Tips, Tricks, Ideas and advice
               from top experts
             </p>
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               <button className="bg-green-600 text-white text-2xl py-3 px-6 rounded-full mt-6">
                 Get Free Estimate
               </button>
@@ -970,7 +970,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4  h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex ">
         <div className="">
@@ -1177,7 +1177,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg  flex absolute w-full p-4 h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex ">
         <div className="w-1/3 ml-4 mt-4">
@@ -1190,7 +1190,7 @@ const Header = () => {
               and Advice from Industry&apos;s Top Experts
             </p>
             <button className="bg-green-600 text-2xl py-3 px-6 rounded-full text-white mt-6">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                 Get Free Estimate
               </Link>
             </button>
@@ -1409,7 +1409,7 @@ const Header = () => {
     <div
       className="bg-white shadow-2xl rounded-lg flex absolute w-full p-4 justify-center h-auto text-black"
       onMouseLeave={handleMouseLeave}
-      style={{ marginTop: '96px' }}
+      style={{ marginTop: '105px' }}
     >
       <div className="flex ">
         <div className="w-1/3">
@@ -1470,7 +1470,7 @@ const Header = () => {
             }}
           >
             <div className="relative z-10 m-16">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                 <h1 className="text-xl md:text-4xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                   Get Your Estimates Free
                 </h1>

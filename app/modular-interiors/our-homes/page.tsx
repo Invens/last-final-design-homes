@@ -779,7 +779,7 @@ const Page = ({}) => {
                     </button>
                     <hr />
                     <div>
-                      <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                      <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                       <button
                         type="button"
                         className="border-[1px] border-black bg-white hover:bg-gray-200 hover:shadow-lg py-6  px-2 rounded-md  w-full text-gray-700 my-8 flex justify-between items-center"
