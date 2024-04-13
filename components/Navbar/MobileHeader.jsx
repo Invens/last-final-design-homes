@@ -105,14 +105,11 @@ const MobileHeader = () => {
             <button className="flex flex-col items-center text-xs font-bold relative" onClick={togglePopup}>
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
-                  className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-4 "
+                  className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-1 "
                   style={{ marginBottom: '70px' }}
                 >
-                  <FontAwesomeIcon
-                    icon={faPencil}
-                    size="2x"
-                    style={{ height: '25px', width: '25px' }}
-                  />
+                  <Image src="/designImages/booknowanimation.gif" width={1000} height={1000} className=''/>
+                 
                 </div>
               </div>
               <span className="mt-7">Book Now</span>
