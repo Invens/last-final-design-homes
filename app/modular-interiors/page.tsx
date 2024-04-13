@@ -24,6 +24,8 @@ const Page = ({}) => {
     67: 'dressers',
     65: 'wardrobe',
     68: 'tv-unit-designs',
+    64: 'kitchen-designs',
+    66: 'vanities'
 
 
 
@@ -34,7 +36,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [106, 107, 108, 109, 110, 111, 112, 69, 70,67,65,68 ] // Add the category IDs you want to fetch
+        const categoryIds = [64, 106, 107, 66, 108, 109, 110, 111, 112, 69, 70,67,65,68 ] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {

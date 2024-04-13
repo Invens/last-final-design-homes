@@ -56,7 +56,7 @@ const Hero = () => {
   }
 
   return (
-    <div className='lg:mt-16 md:mt-[85px] sm:mt-[100px] '>
+    <div className='lg:mt-4 md:mt-[85px] sm:mt-[100px] '>
       <div id="fry">
         <div style={containerStyle} className='mt-[50px]'>
           <div style={textContainerStyle}>

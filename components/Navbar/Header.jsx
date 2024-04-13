@@ -1750,7 +1750,7 @@ const Header = () => {
             }}
           >
             <div className="relative z-10 m-16">
-              <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+              <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                 <h1 className="text-xl md:text-4xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
                   Get Your Estimates Free
                 </h1>

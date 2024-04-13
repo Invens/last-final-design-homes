@@ -416,31 +416,32 @@ export class Footer extends Component {
   render() {
     return (
       <>
-        <div className="bg-red-500 p-4 dark:text-white">
-          <MyForm />
-        </div>
-        <PostFooter />
-        <div className="flex justify-center w-full mx-0">
-          <div className="gradient w-full flex flex-col justify-center items-center">
-            <div className="mt-22 container">
-              {/* <WaveGradient /> */}
-              <div
-                className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
-                style={{
-                  backgroundImage: "url('/images/get-free-estimate.jpg')",
-                  backgroundSize: 'fit',
-                  backgroundRepeat: 'no-repeat',
-                  objectFit: 'cover',
-                }}
-              >
-                <div className="relative  m-16">
-                  <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-                    <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
-                      Get Your Estimates Free
-                    </h1>
-                  </Link>
-                </div>
-                {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
+       <div className="bg-red-500 p-4 dark:text-white">
+       <MyForm/>
+      </div>
+      <PostFooter/>
+      <div className="flex justify-center w-full mx-0">
+        <div className="gradient w-full flex flex-col justify-center items-center">
+          <div className="mt-22 container">
+            {/* <WaveGradient /> */}
+            <div
+              className="flex flex-col items-center justify-center bg-cover rounded-lg mb-12 h-[40vh] sm:h-[10vh] md:h-[100vh] h-1/2"
+              style={{
+                backgroundImage:
+                  "url('/images/get-free-estimate.jpg')",
+                backgroundSize: 'fit',
+                backgroundRepeat: 'no-repeat',
+                objectFit: 'cover',
+              }}
+            >
+              <div className="relative  m-16">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  <h1 className="text-sm md:text-8xl font-bold text-center bg-white bg-opacity-50 p-4 rounded-full">
+                    Get Your Estimates Free
+                  </h1>
+                </Link>
+              </div>
+              {/* <h1 className="text-md md:text-xl sm:my-4 text-center sm:p-4 bg-white rounded-md">
                 LOVE ALL SERVER ALL
               </h1> */}
               </div>

@@ -100,14 +100,11 @@ const MobileHeader = () => {
             >
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div
-                  className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-4 "
+                  className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-1 "
                   style={{ marginBottom: '70px' }}
                 >
-                  <FontAwesomeIcon
-                    icon={faPencil}
-                    size="2x"
-                    style={{ height: '25px', width: '25px' }}
-                  />
+                  <Image src="/designImages/booknowanimation.gif" width={1000} height={1000} className=''/>
+                 
                 </div>
               </div>
               <span className="mt-7">Book Now</span>
@@ -155,18 +152,20 @@ const MobileHeader = () => {
             />
           </Link>
         </div>
+       
+       
+         <div className='flex'>
+         <div className='mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold '>
+        <button>Our Homes</button>
+        <button>Design Ideas</button>
+        <button>Contact Us</button>
+        <button></button>
 
-        <div className="flex">
-          <div className="mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold ">
-            <button>Our Homes</button>
-            <button>Design Ideas</button>
-            <button>Contact Us</button>
-            <button></button>
-          </div>
-          <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
-            <button className="bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6">
-              Get Estimate
-            </button>
+        </div>
+          <Link
+            href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+            <button className='bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6'>Get Estimate</button>
+
           </Link>
         </div>
       </div>
