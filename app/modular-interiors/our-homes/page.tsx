@@ -18,17 +18,16 @@ import 'slick-carousel/slick/slick-theme.css'
 import Image from 'next/image'
 import axios from 'axios'
 const Card = ({ project, handleImageClick }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    number: '',
+    pincode: '',
+    agree: '',
+  })
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false)
   if (!project.images || project.images.length === 0) {
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      number: '',
-      pincode: '',
-      agree: '',
-    })
-    const [btnText, setBtnText] = useState('Submit')
-    const [formSubmitted, setFormSubmitted] = useState(false)
-
     const handleChange = (event) => {
       const { name, value } = event.target
 
@@ -88,128 +87,132 @@ const Card = ({ project, handleImageClick }) => {
     return (
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-red-500">
         {formSubmitted ? (
-                      <div className="grid grid-cols-1 justify-items-center">
-                        <p className="text-center text-lg">
-                          Thank you for your submission!
-                        </p>
-                        <Image
-                          alt='thank you'
-                          src={
-                            'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
-                          }
-                          width={400}
-                          height={300}
-                        />
-                        <h1 className="text-center font-bold">
-                          {' '}
-                          FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
-                          WHATSAPP US ON 9899264978, 9582827928
-                        </h1>
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
+            <Image
+              alt="thank you"
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
+              width={400}
+              height={300}
+            />
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
 
-                        <button
-                          onClick={handleClose}
-                          className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
-                        >
-                          Close
-                        </button>
-                      </div>
-                    ) : (
-                  
-                      <div className='flex justify-center'>
-                    <form onSubmit={handleSubmit} className=" h-auto   rounded-lg text-black">
-                      <h1 className=' text-center text-xl font-bold text-white'>Book with Us</h1>
-                      <div >
-                        <label
-                          htmlFor="fullName"
-                          className="block text-xs font-medium text-white"
-                        >
-                          Full Name*
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          onChange={handleChange}
-                          className="mt-1 p-2 h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <form
+              onSubmit={handleSubmit}
+              className=" h-auto   rounded-lg text-black"
+            >
+              <h1 className=" text-center text-xl font-bold text-white">
+                Book with Us
+              </h1>
+              <div>
+                <label
+                  htmlFor="fullName"
+                  className="block text-xs font-medium text-white"
+                >
+                  Full Name*
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={handleChange}
+                  className="mt-1 p-2 h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
 
-                      <div className="mt-2">
-                        <label
-                          htmlFor="email"
-                          className="block text-xs font-medium text-white"
-                        >
-                          Email ID*
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          onChange={handleChange}
-                          className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
+              <div className="mt-2">
+                <label
+                  htmlFor="email"
+                  className="block text-xs font-medium text-white"
+                >
+                  Email ID*
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={handleChange}
+                  className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
 
-                      <div className="mt-2">
-                        <label
-                          htmlFor="number"
-                          className="block text-xs font-medium text-white"
-                        >
-                          Mobile Number*
-                        </label>
-                        <input
-                          type="tel"
-                          id="number"
-                          name="number"
-                          onChange={handleChange}
-                          className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
+              <div className="mt-2">
+                <label
+                  htmlFor="number"
+                  className="block text-xs font-medium text-white"
+                >
+                  Mobile Number*
+                </label>
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  onChange={handleChange}
+                  className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
 
-                      <div className="mt-2">
-                        <label
-                          htmlFor="pincode"
-                          className="block text-xs font-medium text-white"
-                        >
-                          Pincode*
-                        </label>
-                        <input
-                          type="text"
-                          id="pincode"
-                          onChange={handleChange}
-                          name="pincode"
-                          className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
-                          required
-                        />
-                      </div>
+              <div className="mt-2">
+                <label
+                  htmlFor="pincode"
+                  className="block text-xs font-medium text-white"
+                >
+                  Pincode*
+                </label>
+                <input
+                  type="text"
+                  id="pincode"
+                  onChange={handleChange}
+                  name="pincode"
+                  className="mt-1 p-2  h-7 bg-amber-50 border-b border-gray-500 focus:outline-none focus:border-blue-500 rounded-full"
+                  required
+                />
+              </div>
 
-                      <div className="mt-2">
-                        <label htmlFor="agree" className="flex items-center">
-                          <input
-                            type="checkbox"
-                            id="agree"
-                            onChange={handleChange}
-                            name="agree"
-                            className="mr-2"
-                          />
-                          <span className="text-xs text-white w-[230px]">
-                            Yes, I would like to receive  updates and
-                            notifications on WhatsApp
-                          </span>
-                        </label>
-                      </div>
-                      <button
-                        type="submit"
-                        className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-8 sm:mt-0"
-                      >
-                        Book Free Site Visit
-                      </button>
-                    </form>
-                   </div>
-                    )}   
+              <div className="mt-2">
+                <label htmlFor="agree" className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="agree"
+                    onChange={handleChange}
+                    name="agree"
+                    className="mr-2"
+                  />
+                  <span className="text-xs text-white w-[230px]">
+                    Yes, I would like to receive updates and notifications on
+                    WhatsApp
+                  </span>
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-4 py-2 rounded-3xl flex items-center justify-center hover:bg-blue-600 mt-8 sm:mt-0"
+              >
+                Book Free Site Visit
+              </button>
+            </form>
+          </div>
+        )}
       </div>
     )
   }
@@ -282,7 +285,6 @@ const Page = ({}) => {
   const handleCloseSlider = () => {
     setShowSlider(false)
   }
-
 
   const [formData, setFormData] = useState({
     name: '',
@@ -362,7 +364,7 @@ const Page = ({}) => {
     if (sliderRef.current) {
       sliderRef.current.slickPrev()
     }
-  }  
+  }
   const handleNext = () => {
     setCurrentImageIndex(
       (prevIndex) => (prevIndex + 1) % projects[projectIndex]?.images?.length
@@ -371,7 +373,6 @@ const Page = ({}) => {
       sliderRef.current.slickNext()
     }
   }
-
 
   const nextProject = () => {
     setProjectIndex((prevIndex) => (prevIndex + 1) % projects.length)
