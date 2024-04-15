@@ -283,14 +283,7 @@ const Page = ({}) => {
     setShowSlider(false)
   }
 
-  const handleNext = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex + 1) % projects[projectIndex]?.images?.length
-    )
-    if (sliderRef.current) {
-      sliderRef.current.slickNext()
-    }
-  }
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -369,7 +362,16 @@ const Page = ({}) => {
     if (sliderRef.current) {
       sliderRef.current.slickPrev()
     }
+  }  
+  const handleNext = () => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % projects[projectIndex]?.images?.length
+    )
+    if (sliderRef.current) {
+      sliderRef.current.slickNext()
+    }
   }
+
 
   const nextProject = () => {
     setProjectIndex((prevIndex) => (prevIndex + 1) % projects.length)
@@ -831,7 +833,7 @@ const Page = ({}) => {
                     alt="Description of the image"
                     className="sm:mr-2 w-8 sm:w-10 h-8 sm:h-10"
                   />
-                  <span className="ml-2 truncate  w-24 md:w-60 overflow-hidden ">
+                  <span className="ml-2 truncate  w-24 md:w-32 overflow-hidden ">
                     {prevProjectName}
                   </span>
                 </button>
@@ -841,7 +843,7 @@ const Page = ({}) => {
                   onClick={nextProject}
                   className="sm:px-4 py-2 flex items-center text-xs sm:text-sm "
                 >
-                  <span className="mr-2 truncate w-24 md:w-60 overflow-hidden">
+                  <span className="mr-2 truncate w-24 md:w-32 overflow-hidden">
                     {nextProjectName}
                   </span>
                   <Image
@@ -858,7 +860,7 @@ const Page = ({}) => {
             </div>
             <div className="md:w-2/5 w-full h-full">
               <Link href="/home-interior-designs-designing-estimates-pricing">
-                <button className="w-full rounded-full bg-red-400 px-4 py-4 text-white hover:bg-red-500">
+                <button className="w-full rounded-full bg-red-400 px-4 lg:py-4 py-2 text-white hover:bg-red-500">
                   Get Quote
                 </button>
               </Link>
