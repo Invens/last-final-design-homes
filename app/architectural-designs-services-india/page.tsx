@@ -114,14 +114,12 @@ const Page = ({}) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {categoryDataArray.map((categoryData) => (
             <Link
+              key={categoryData.id}
               href={`/architectural-designs-services-india/${
                 categoryFolderMapping[categoryData.id]
               }`}
             >
-              <div
-                key={categoryData.id}
-                className="bg-white rounded-md shadow-md p-6"
-              >
+              <div className="bg-white rounded-md shadow-md p-6">
                 {categoryData.image && (
                   <Image
                     width={450}
