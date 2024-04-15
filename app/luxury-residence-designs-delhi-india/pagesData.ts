@@ -7,7 +7,7 @@ export const pagesData = [
     slug: 'luxury-interior',
     noItems: '2047',
     heading: 'Luxury Interior',
-    desc: ' Get a Top Quality, functional, Affordable & Well Lit Modular Kitchen, using the Top Notch fittings. We Design from a basic simple modular kitchen to an exclusive luxury modular kitchen which perfects for convenience and aesthetics. All Our Modular Kitchens are budget friendly, and we assure you 100% guaranteed quotes across Delhi NCR, we have claimed for the past 9 years, that you bring us any Quote and we offer you Flat 7% off. We design your Modular Kitchen exactly as per bespoke requirements, in all shapes like L shape, G, U shape, Island kitchen, Open kitchen etc with distinctive types of finishes in acrylic, membrane, designer laminates, lacquer glass and veneer shutter. Check out some of the coolest kitchen designs we have with us.',
+    desc: 'When it comes to decor and renovations, we understand the value of non-compromising design and quality. Everyone expects that the interiors in their residences should be unique and pristine. Well, our team will help you out in that, with our exclusive projects in Luxury Interiors we have it covered in most budgets. The Workmanship in Our Luxury Interiors segment is unparalleled, we provide unmatched quality and also the special projects are handled by Dedicated Architects who are experts in their domain. Just visit our Boutique office and get in touch with our Team Member today or Just Book with US.',
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ export const pagesData = [
     slug: 'luxury-wardrobe',
     noItems: '2874',
     heading: 'Luxury Wardrobes',
-    desc: 'We at Design Indian Homes design & manufacture beautiful affordable vanities which have dedicated functions like custom drawers, internal storages and with elegant handles. All Our Bathroom Vanities are economical and delivered on a very timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off.',
+    desc: 'Now there are wardrobes which are used by the masses, then there are elite segment wardrobes which are called bespoke wardrobe, these are custom made, custom designed, floor to ceiling, inline wardrobes, Leathered, caned, piped, fluted and many other types of wardrobes which we manufacture in-house and are specifically made for our exclusive clientage. We have delivered works in some of the finest places across Delhi - NCR. We believe in delivering affordable Luxury, hence we have most of our models which are quite affordable and can be procured in any type of Budget. Just check the quality of the materials beforehand and see the difference.',
     items: [],
   },
   {
@@ -24,7 +24,7 @@ export const pagesData = [
     slug: 'luxury-kitchen',
     noItems: '1816',
     heading: 'Luxury Kitchen',
-    desc: 'Now get a Bespoke Crockery Unit with our team, we have a myriad range of Crockery Unit designs with glass, acrylics and premium Fenix materials. All Our Crockery Units are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Crockery Units.',
+    desc: 'We happen to deliver you the most affordable kitchens with the top notch fittings and fixtures. But there are some of our prime clients who are looking for some PREMIUM european materials, we have multiple options for selecting high end luxury. We have products which we are importing from Austria, Spain, Italy and denmark. Some of the fluted materials are imported from Germany, henceforth if you are looking for some exclusive luxury options, we have it for you. Just visit our Boutique office and get in touch with our Team Member today or Just Book with US.',
     items: [],
   },
   {

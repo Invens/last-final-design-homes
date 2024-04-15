@@ -92,22 +92,7 @@ const Page = ({}) => {
           ))}
         </div>
       </div>
-      {showSlider && (
-        <Slider
-          images={images}
-          initialSlide={photoIndex}
-          onClose={handleCloseSlider}
-          onNextSlide={() =>
-            setPhotoIndex((prevIndex) => (prevIndex + 1) % images.length)
-          }
-          onPrevSlide={() =>
-            setPhotoIndex(
-              (prevIndex) => (prevIndex - 1 + images.length) % images.length
-            )
-          }
-        />
-      )}
-      <ContactFormSection />
+  
       <Footer />
     </>
   )

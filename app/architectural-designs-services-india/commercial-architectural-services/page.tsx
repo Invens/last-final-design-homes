@@ -134,25 +134,7 @@ const Page = ({}) => {
         <Tabs id={3} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
-          {images.map((image, index) => (
-            <div
-              key={image.id}
-              onClick={() => handleImageClick(index)}
-              style={{ cursor: 'pointer' }}
-            >
-              <Image
-                width={1000}
-                height={1000}
-                src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
-                alt={image.filename}
-                style={{
-                  width: '450px',
-                  height: '250px',
-                  borderRadius: '10px',
-                }}
-              />
-            </div>
-          ))}
+        
         </div>
       </div>
       {showSlider && (
@@ -170,7 +152,6 @@ const Page = ({}) => {
           }
         />
       )}
-      <ContactFormSection />
       <Footer />
     </>
   )

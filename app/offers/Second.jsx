@@ -15,7 +15,7 @@ const ImageSection = () => {
           <Image
             width={1636}
             height={1093}
-            src="/images/offer1.jpg"
+            src="/package/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india%20(1).webp"
             alt="Your Image"
             className="w-full h-auto lg:h-[420px]"
           />

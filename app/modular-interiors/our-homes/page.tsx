@@ -19,75 +19,75 @@ import Image from 'next/image'
 import axios from 'axios'
 const Card = ({ project, handleImageClick }) => {
   if (!project.images || project.images.length === 0) {
-    // const [formData, setFormData] = useState({
-    //   name: '',
-    //   email: '',
-    //   number: '',
-    //   pincode: '',
-    //   agree: '',
-    // })
-    // const [btnText, setBtnText] = useState('Submit')
-    // const [formSubmitted, setFormSubmitted] = useState(false)
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      number: '',
+      pincode: '',
+      agree: '',
+    })
+    const [btnText, setBtnText] = useState('Submit')
+    const [formSubmitted, setFormSubmitted] = useState(false)
 
-    // const handleChange = (event) => {
-    //   const { name, value } = event.target
+    const handleChange = (event) => {
+      const { name, value } = event.target
 
-    //   setFormData((prevData) => ({
-    //     ...prevData,
-    //     [name]: value,
-    //   }))
-    // }
-    // const handleSubmit = async (event) => {
-    //   event.preventDefault()
-    //   console.log('Submitting form...')
-    //   setFormSubmitted(true)
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }))
+    }
+    const handleSubmit = async (event) => {
+      event.preventDefault()
+      console.log('Submitting form...')
+      setFormSubmitted(true)
 
-    //   const formDataToSend = new FormData()
-    //   for (const key in formData) {
-    //     formDataToSend.append(key, formData[key])
-    //   }
+      const formDataToSend = new FormData()
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key])
+      }
 
-    //   try {
-    //     console.log(
-    //       'Form Data to Send:',
-    //       Object.fromEntries(formDataToSend.entries())
-    //     )
-    //     console.log('Uploading data...')
-    //     const response = await fetch(
-    //       'https://m.designindianhomes.com/submitForm',
-    //       {
-    //         method: 'POST',
-    //         body: formDataToSend,
-    //       }
-    //     )
+      try {
+        console.log(
+          'Form Data to Send:',
+          Object.fromEntries(formDataToSend.entries())
+        )
+        console.log('Uploading data...')
+        const response = await fetch(
+          'https://m.designindianhomes.com/submitForm',
+          {
+            method: 'POST',
+            body: formDataToSend,
+          }
+        )
 
-    //     if (response.ok) {
-    //       console.log('Form data submitted successfully!')
-    //       console.log(
-    //         'Form Data to Send:',
-    //         Object.fromEntries(formDataToSend.entries())
-    //       )
-    //       setBtnText('Done')
-    //     } else {
-    //       console.error('Form data submission failed. Response:', response)
-    //       setBtnText('Something Went Wrong')
-    //     }
-    //   } catch (error) {
-    //     console.error('Error during form data submission:', error)
-    //     setBtnText('Something Went Wrong')
-    //   }
+        if (response.ok) {
+          console.log('Form data submitted successfully!')
+          console.log(
+            'Form Data to Send:',
+            Object.fromEntries(formDataToSend.entries())
+          )
+          setBtnText('Done')
+        } else {
+          console.error('Form data submission failed. Response:', response)
+          setBtnText('Something Went Wrong')
+        }
+      } catch (error) {
+        console.error('Error during form data submission:', error)
+        setBtnText('Something Went Wrong')
+      }
 
-    //   setFormSubmitted(true)
-    // }
+      setFormSubmitted(true)
+    }
 
-    // const handleClose = () => {
-    //   setFormSubmitted(false)
-    // }
+    const handleClose = () => {
+      setFormSubmitted(false)
+    }
 
     // Render a placeholder or loading state if images are not available
     return (
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-red-500">
-        {/* {formSubmitted ? (
+        {formSubmitted ? (
                       <div className="grid grid-cols-1 justify-items-center">
                         <p className="text-center text-lg">
                           Thank you for your submission!
@@ -209,7 +209,7 @@ const Card = ({ project, handleImageClick }) => {
                       </button>
                     </form>
                    </div>
-                    )}    */}
+                    )}   
       </div>
     )
   }
@@ -525,7 +525,7 @@ const Page = ({}) => {
                         alt={projects[projectIndex]?.name}
                         width={1000}
                         height={1000}
-                        className="h-auto lg:h-[506px] h-[306px] rounded-sm "
+                        className="h-auto lg:h-[506px] rounded-sm "
                       />
                     </div>
                   ))}

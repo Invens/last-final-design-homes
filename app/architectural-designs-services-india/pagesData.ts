@@ -5,7 +5,7 @@ export const pagesData = [
     slug: '/architectural-consultancy',
     noItems: '2047',
     heading: 'Architectural Consultancy',
-    desc: 'At Design Indian Homes, we craft simple modular kitchen designs that are the perfect blend of functionality and style. Our curated, modular kitchen designs in India range from simple kitchens with minimal interiors to more elaborately designed kitchen interior designs. All our modern kitchen designs can be customised to fit your budget and existing space. We also have kitchen interior designs that work for all shapes: Be it a L-shaped kitchen, U-shaped kitchen or open kitchen design - crafting a kitchen interior design that works best for your home is our goal! Browse through our top kitchen designs of 2023 to transform your space today.',
+    desc: 'We provide you some of the top expert advice for architectural works across New Delhi - NCR. We provide you detailed structural consultancy along with layouts and draftings. Our Team of proficient and certified architects are always at helm to support you in giving you a safe structural design. We have in-house planners, interior specialists, Civil Engineers and Certified Architects working to give you a Sound and Well Planned solution for your property. Connect with the Top Architectural Brand, serving across New Delhi - NCR Today.',
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const pagesData = [
     slug: '/end-to-end-architectural-services',
     noItems: '2874',
     heading: 'End to End Architectural Services',
-    desc: 'At Design Indian Homes, we’ve got a wide range of affordable and stylish bedroom designs that you’ll love. Our carefully-curated master bedroom designs come in a variety of styles, colour schemes and decor ideas - all of which can be customised to your taste. Whether you’re looking for a contemporary style or a room with rustic sensibilities, we’ve got all the bedroom interior design inspiration you’ll need to create a space that reflects your personality and taste. Take your pick from these trending designs and start your bedroom renovation journey today with Design Indian Homes.',
+    desc: 'Our Architectural Brand is the most sought out brand by any builder, township planner, clients and also interior designers who need civil engineering support. We do complete end to end architectural services, namely from structural elevations to MEP, from Designing Elevations to Executing Buildings, our team is there for any support in architectural works. We provide extensive consultancy to our clients, whether they are Delhi based or based anywhere out. We are the most Trusted Architectural Brand in the Town. Connect with the Top Architectural Brand, serving across New Delhi - NCR Today.',
     items: [],
   },
   {
@@ -22,7 +22,7 @@ export const pagesData = [
     slug: '/architectural-designing-and-planning',
     noItems: '1816',
     heading: 'Architectural Designing and Planning',
-    desc: 'Discover a wide range of handpicked, living room interior designs and décor ideas at Design Indian Homes. We bring you living room designs that are customizable, practical and trendy. From modular TV units to wall paintings and living room wall designs, you’ll find all the inspiration you’ll need to get started. Browse now to zero in on your favourite design and create a living room space that reflects your style.',
+    desc: 'With our 90+ Certified Architects working on projects, Our Brand provides you extensive architectural solutions. We can provide you with myriad types of architectural solutions, be it dedicated designing for your residences or plots or entire society. We have highly experienced and certified Architects, we have done MEP&apos;s for leading airports in India and also multiple embassy&apos;s along with exclusive commercial projects and multiple residential projects. Connect with the Top Architectural Brand, serving across New Delhi - NCR Today.',
     items: [],
   },
   {
@@ -31,16 +31,8 @@ export const pagesData = [
     slug: '/commercial-architectural-services',
     noItems: '162',
     heading: 'Commercial Architectural Services',
-    desc: 'With over 75,000 happy homes delivered, Design Indian Homes helps you build your dream home in your design and style. Browse through the homes we have delivered for some inspiration. Customised, budget-friendly home designs delivered across cities. Be it renovation or a full home design, apartment or villa home, we have got you covered.',
+    desc: 'With over 160+ commercial sites handed over we have the largest team of certified architects, Our Brand makes sure to provide you with a wholesome solution for your commercial property. Our Team is proficient enough to give you expert advice, detailed draftings and complete layouts with execution for your project. We have expertise in planning commercial spaces in Malls, Showrooms, Restaurants, Spa&apos;s, Banquets, Shops, Chemists, Hotels and Bars etc. Connect with the Top Architectural Brand, serving across New Delhi - NCR Today.',
     items: [],
   },
-  {
-    id: 4,
-    name: 'Luxury',
-    slug: '/luxury',
-    noItems: '809',
-    heading: 'Luxury',
-    desc: 'Design Indian Homes brings you bathroom interior designs that are functional and also stylish. Whether you’re looking for small bathroom ideas or spacious ones, we’ve created some elegant bathroom designs for you to consider for your next home renovation project.',
-    items: [],
-  },
+ 
 ]

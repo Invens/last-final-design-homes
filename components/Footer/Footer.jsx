@@ -81,7 +81,7 @@ const DesignIdeasDropdownContainer = () => {
         { label: 'Dressers', url: '/dressers-designs' },
         { label: 'TV Units', url: '/tv-unit-designs' },
         { label: 'Crockery Units', url: '/crockery-unit-designs' },
-        { label: 'Glass Partitions', url: '/glass-partition-designs-designs' },
+        { label: 'Glass Partitions', url: '/glass-partition-designs' },
         // Add other links as needed
       ],
     },
