@@ -12,7 +12,14 @@ import Omsairam from '../../components/Navbar/Omsairam'
 import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
+  const categoryFolderMapping: Record<number, string> = {
+    41: 'architectural-consultancy',
+    42: 'end-to-end-architectural-services',
+    43: 'architectural-designing-and-planning',
+    44: 'commercial-architectural-services',
 
+    // Add more mappings as needed
+  }
   useEffect(() => {
     const fetchCategoryData = async () => {
       try {
@@ -106,28 +113,34 @@ const Page = ({}) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {categoryDataArray.map((categoryData) => (
-            <div
-              key={categoryData.id}
-              className="bg-white rounded-md shadow-md p-6"
+            <Link
+              href={`/architectural-designs-services-india/${
+                categoryFolderMapping[categoryData.id]
+              }`}
             >
-              {categoryData.image && (
-                <Image
-                  width={450}
-                  height={200}
-                  src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
-                  alt={categoryData.image.filename}
-                  style={{
-                    width: '450px',
-                    height: '200px',
-                    borderRadius: '10px',
-                  }}
-                />
-              )}
-              <h2 className="text-base font-semibold mt-4">
-                {categoryData.name}
-              </h2>
-              <p className="text-gray-700 mb-4">{categoryData.description}</p>
-            </div>
+              <div
+                key={categoryData.id}
+                className="bg-white rounded-md shadow-md p-6"
+              >
+                {categoryData.image && (
+                  <Image
+                    width={450}
+                    height={200}
+                    src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
+                    alt={categoryData.image.filename}
+                    style={{
+                      width: '450px',
+                      height: '200px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                )}
+                <h2 className="text-base font-semibold mt-4">
+                  {categoryData.name}
+                </h2>
+                <p className="text-gray-700 mb-4">{categoryData.description}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

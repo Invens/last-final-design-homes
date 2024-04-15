@@ -6,7 +6,6 @@ export const pagesData = [
     noItems: '2047',
     heading: 'Architectural Consultancy',
     desc: 'At Design Indian Homes, we craft simple modular kitchen designs that are the perfect blend of functionality and style. Our curated, modular kitchen designs in India range from simple kitchens with minimal interiors to more elaborately designed kitchen interior designs. All our modern kitchen designs can be customised to fit your budget and existing space. We also have kitchen interior designs that work for all shapes: Be it a L-shaped kitchen, U-shaped kitchen or open kitchen design - crafting a kitchen interior design that works best for your home is our goal! Browse through our top kitchen designs of 2023 to transform your space today.',
-   
   },
   {
     id: 1,
@@ -44,6 +43,4 @@ export const pagesData = [
     desc: 'Design Indian Homes brings you bathroom interior designs that are functional and also stylish. Whether you’re looking for small bathroom ideas or spacious ones, we’ve created some elegant bathroom designs for you to consider for your next home renovation project.',
     items: [],
   },
- 
-  
 ]
