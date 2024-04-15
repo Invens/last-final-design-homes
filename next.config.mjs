@@ -94,8 +94,8 @@ const nextConfig = {
         destination: '/modular-interiors/crockery-units',
       },
       {
-        source: '/glass-partition-designs-designs',
-        destination: '/modular-interiors/glass-partition',
+        source: '/glass-partition-designs',
+        destination: '/home-interior-services-india/glass-partition-designs',
       },
       {
         source: '/shoerack-designs',
@@ -214,7 +214,7 @@ const nextConfig = {
           '/home-interior-services-india/home-plumbing-services-india',
       },
       {
-        source: '/glass-partition-designs-designs',
+        source: '/glass-partition-designs',
         destination: '/home-interior-services-india/glass-partition-designs',
       },
       {
@@ -509,7 +509,6 @@ const nextConfig = {
       },
       { source: '/home-renovation-services', destination: '/' },
       { source: '/dressers-designs', destination: '/' },
-      { source: '/glass-partition-designs-designs', destination: '/' },
       { source: '/modular-kitchen-price-estimator', destination: '/' },
       { source: '/dressers-designs', destination: '/' },
 

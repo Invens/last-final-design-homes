@@ -103,12 +103,7 @@ const Page = ({}) => {
           <h1 className="text-3xl font-bold">Architectural Designs</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
-          We bring you carefully-curated interior design ideas, to give your
-          home a brand new look. Explore exclusive interior designs and trends
-          that are every bit inspirational as they are practical. Our team of
-          interior designers have put together ideas across kitchen, bedroom,
-          living room and more, to help you pick a design that will best suit
-          your home interior requirements.
+        At the Design Indian Homes, we provide you dedicated Certified Architects working on all your projects. Whether it is just design and planning, or planning your MEP, or designing an elevation or any commercial designing services, Our Team is there to provide you thorough support on any type of architectural service. We provide mostly all types of Architectural Services, some of our exclusive architectural services include Civil Estimation, Design and Planning, Surveying, Estimating Services, Civil Structural Consultancy and Changes in Existing Structures. Connect with the Top Architectural Brand, serving across New Delhi - NCR Today.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">

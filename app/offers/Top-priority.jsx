@@ -15,7 +15,7 @@ const ImageSection = () => {
           <Image
             width={1636}
             height={1093}
-            src="/images/offer1.jpg"
+            src="/package/2bhk-interior-designs-flat-residence-in-delhi-gurgaon-noida-india-faridabad%20(2).webp"
             alt="Your Image"
             className="w-full h-auto lg:h-[420px]"
           />

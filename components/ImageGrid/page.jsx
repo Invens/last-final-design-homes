@@ -39,7 +39,7 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/glass_partition-removebg-preview.png',
       text: 'Glass Partitions',
-      slug: '/glass-partition-designs-designs',
+      slug: '/glass-partition-designs',
     },
     {
       src: '/images/top-picks/interior_Lightening-removebg-preview.png',

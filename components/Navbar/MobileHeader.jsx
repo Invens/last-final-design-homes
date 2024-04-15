@@ -251,7 +251,7 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Crockery Units</li>
                               </Link>
-                              <Link href="/glass-partition-designs-designs">
+                              <Link href="/glass-partition-designs">
                                 <li>Glass Partitions</li>
                               </Link>
                               <Link href="/lacquer-glass-wardrobe-designs">
@@ -393,7 +393,7 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Plumbings</li>
                               </Link>
-                              <Link href="/glass-partition-designs-designs">
+                              <Link href="/glass-partition-designs">
                                 {' '}
                                 <li>Glass Partitions</li>
                               </Link>

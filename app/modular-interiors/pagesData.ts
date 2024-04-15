@@ -129,8 +129,8 @@ export const pagesData = [
     name: 'Our Homes',
     slug: 'our-homes',
     noItems: '1012',
-    heading: '2,3 & 4BHK Home Interior Designs',
-    desc: 'With over 75,000 happy homes delivered, DIH helps you build your dream home in your design and style. Browse through the homes we have delivered for some inspiration. Customised, budget-friendly home designs delivered across cities. Be it renovation or a full home design, apartment or villa home, we have got you covered.',
+    heading: 'Exclusive Homes - Delivered By Design Indian Homes',
+    desc: 'With over 316+ residences delivered by Team Design Indian Homes, we stand tall when it comes to delivering premium residences at the most affordable quotes. We have dedicated teams for providing you a one stop Solution for your Complete Modular Interiors, End to End Interior and complete Architectural Services. Connect with the Largest Interior and Architectural Brand, serving since 2007 in New Delhi - NCR. We are the most Loved, Trusted, Awarded and Referred brand for any type of residential works across New Delhi - NCR. Connect with us Today.',
     items: [],
   },
 

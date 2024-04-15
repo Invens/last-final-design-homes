@@ -162,15 +162,7 @@ const Page = ({}) => {
           <h1 className="text-3xl font-bold">Luxury Residences</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
-          Step into the realm of unparalleled luxury with our meticulously
-          curated design concepts tailored specifically for your lavish
-          residence. Explore exclusive trends and inspirations meticulously
-          handpicked to elevate every aspect of your opulent abode. Our team of
-          elite interior designers has meticulously crafted ideas spanning
-          across kitchens, bedrooms, living rooms, and beyond, ensuring that
-          each space exudes sophistication and grandeur. Discover the perfect
-          design to complement the lavishness of your luxury home and indulge in
-          a lifestyle of unparalleled refinement and elegance.
+        We believe in serving Affordable Luxury to our clients, at our brand we keep things sober. Our Mainstream work culture is about understanding the design requirements, meticulously managing the designs by our dedicated design team and providing a wholesome luxury solution in the budget framework. All Our High End Projects are completely bespoke. We assure you none of the works are pre-done, although they would be theme based, but most of them would be custom designs as per the layout requirements and the plan understanding.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
