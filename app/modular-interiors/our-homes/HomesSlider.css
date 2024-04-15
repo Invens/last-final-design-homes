@@ -21,14 +21,7 @@
   right: 0;
   bottom: 0;
 }
-/* @media (max-width: 1024px) {
-  .Modal {
-    top: 150px;
-    left: 1%;
-    right: 1%;
-    bottom: 500px; 
-  }
-} */
+
 @media (max-width: 1346px) {
   .Modal {
     top: 170px;
