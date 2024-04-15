@@ -21,7 +21,7 @@ export const pagesData = [
     name: 'Vertical Garden',
     slug: '/vertical-garden-designs',
     noItems: '1816',
-    heading: 'vertical Garden',
+    heading: 'Vertical Garden',
     desc: 'Ever seen a handing garden, or a ceiling garden ? Astounded. Now get custom gardens as per imagination with our team. We facilitate and deal in mostly all types of vertical gardens and landscaping. Get a beautiful outdoor or indoor design of a vertical garden by design Indian homes team to find a space for greenery, wherever you want in your residence. Vertical Gardens can be designed on your walls, terrace, fences, rooms, tv units and doors also, you can display by hanging plant baskets on the walls. Check out our top notch vertical garden designs at the most affordable prices.',
     items: [],
   },

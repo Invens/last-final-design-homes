@@ -184,7 +184,7 @@ const nextConfig = {
         destination: '/home-interior-services-india/wooden-flooring-designs',
       },
       {
-        source: '/vertical-garden-designss-designs',
+        source: '/vertical-garden-designs',
         destination: '/home-interior-services-india/vertical-garden-designs',
       },
       {
@@ -193,11 +193,11 @@ const nextConfig = {
           '/home-interior-services-india/wooden-ceiling-designs-ideas-inspiration',
       },
       {
-        source: '/upvc-window-designss-designs',
+        source: '/upvc-window-designs',
         destination: '/home-interior-services-india/upvc-window-designs',
       },
       {
-        source: '/tiling-design-ideass',
+        source: '/tiling-design-ideas',
         destination: '/home-interior-services-india/tiling-design-ideas',
       },
       {
