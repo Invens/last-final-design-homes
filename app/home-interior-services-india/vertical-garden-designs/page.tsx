@@ -86,7 +86,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/vertical-garden-designss-designs/"
+            href="https://designindianhomes.com/vertical-garden-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -99,7 +99,7 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/vertical-garden-designss-designs"
+            content="https://designindianhomes.com/vertical-garden-designs"
           />
           <meta
             property="og:title"

@@ -43,7 +43,8 @@ const nextConfig = {
         destination: '/design-ideas',
       },
       {
-        source: '/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india',
+        source:
+          '/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india',
         destination: '/calculator',
       },
       {
@@ -94,7 +95,7 @@ const nextConfig = {
       },
       {
         source: '/glass-partition-designs-designs',
-        destination: '/modular-interiors/glass-partiton',
+        destination: '/modular-interiors/glass-partition',
       },
       {
         source: '/shoerack-designs',
@@ -232,7 +233,7 @@ const nextConfig = {
       {
         source: '/wood-door-designs',
         destination:
-          '/home-interior-services-india/door-design-dealers-manufacturers-indias',
+          '/home-interior-services-india/door-design-dealers-manufacturers-india',
       },
       {
         source: '/home-electric-works-services-interiors',

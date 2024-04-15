@@ -103,8 +103,12 @@ const MobileHeader = () => {
                   className="animated-bg backdrop-blur-sm bg-white/30 rounded-full p-1 "
                   style={{ marginBottom: '70px' }}
                 >
-                  <Image src="/designImages/booknowanimation.gif" width={1000} height={1000} className=''/>
-                 
+                  <Image
+                    src="/designImages/booknowanimation.gif"
+                    width={1000}
+                    height={1000}
+                    className=""
+                  />
                 </div>
               </div>
               <span className="mt-7">Book Now</span>
@@ -152,20 +156,18 @@ const MobileHeader = () => {
             />
           </Link>
         </div>
-       
-       
-         <div className='flex'>
-         <div className='mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold '>
-        <button>Our Homes</button>
-        <button>Design Ideas</button>
-        <button>Contact Us</button>
-        <button></button>
 
-        </div>
-          <Link
-            href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
-            <button className='bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6'>Get Estimate</button>
-
+        <div className="flex">
+          <div className="mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold ">
+            <button>Our Homes</button>
+            <button>Design Ideas</button>
+            <button>Contact Us</button>
+            <button></button>
+          </div>
+          <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+            <button className="bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6">
+              Get Estimate
+            </button>
           </Link>
         </div>
       </div>
@@ -226,7 +228,7 @@ const MobileHeader = () => {
                               Modular Interior Designs
                             </h3>
                             <div className="text-base">
-                              <Link href="/modular-kitchen-top-brand-india-designs">
+                              <Link href="/modular-kitchen-top-brand-india">
                                 <li>Modular Kitchens</li>
                               </Link>
                               <Link href="/wardrobe-designs">
@@ -367,15 +369,15 @@ const MobileHeader = () => {
                                 {' '}
                                 <li>Wooden Flooring</li>
                               </Link>
-                              <Link href="/vertical-garden-designss-designs">
+                              <Link href="/vertical-garden-designs">
                                 {' '}
                                 <li>Vertical Gardens</li>
                               </Link>
-                              <Link href="/upvc-window-designss-designs">
+                              <Link href="/upvc-window-designs">
                                 {' '}
                                 <li>UPVC Windows</li>
                               </Link>
-                              <Link href="/tiling-design-ideass">
+                              <Link href="/tiling-design-ideas">
                                 {' '}
                                 <li>Tiling Designs</li>
                               </Link>
@@ -1268,7 +1270,7 @@ const MobileHeader = () => {
                               />
 
                               <div>
-                                <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                                   <h3
                                     className="text-sm text-white bg-black absolute  p-1"
                                     onMouseOver={() =>

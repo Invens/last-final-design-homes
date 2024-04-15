@@ -17,7 +17,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </h3>
         </Link>
         <ul className="text-xs space-y-2 mt-2">
-          <Link href="/modular-kitchen-top-brand-india-designs">
+          <Link href="/modular-kitchen-top-brand-india">
             <li>Modular Kitchens</li>
           </Link>
           <Link href="/wardrobe-designs">
@@ -75,7 +75,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <li>Homes by Design Indian Homes</li>
           </Link>
           <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               Get Free Estimate
             </Link>
           </button>
@@ -176,15 +176,15 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             {' '}
             <li>Wooden Ceiling</li>
           </Link>
-          <Link href="/vertical-garden-designss-designs">
+          <Link href="/vertical-garden-designs">
             {' '}
             <li>Vertical Gardens</li>
           </Link>
-          <Link href="/upvc-window-designss-designs">
+          <Link href="/upvc-window-designs">
             {' '}
             <li>UPVC Windows</li>
           </Link>
-          <Link href="/tiling-design-ideass">
+          <Link href="/tiling-design-ideas">
             {' '}
             <li>Tiling Designs</li>
           </Link>

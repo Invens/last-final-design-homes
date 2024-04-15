@@ -18,7 +18,7 @@ export const pagesData = [
   },
   {
     id: 2,
-    name: 'vertical Garden',
+    name: 'Vertical Garden',
     slug: '/vertical-garden-designs',
     noItems: '1816',
     heading: 'vertical Garden',
@@ -81,10 +81,10 @@ export const pagesData = [
   },
   {
     id: 9,
-    name: 'ceilings',
+    name: 'Ceilings',
     slug: '/ceiling-design-ideas-inspiration-india',
     noItems: '1012',
-    heading: 'ceilings',
+    heading: 'Ceiling Designs',
     desc: 'They say one may beautify the entire room, but miss out on the right ceiling design. We must understand the ceiling are an integral part of the custom interiors we do, by choosing the right design for the ceiling, we may ruin the entire space. Therefore, at Design Indian Homes, we bring you hundreds of design options for choosing the best fit for your ceiling. Right from Gypsum, POP, Wooden, Teak, Bamboo, Glass, we have mostly all types of ceiling works. Check out some of our Ceiling designs and Book a Visit Today.',
     items: [],
   },
@@ -110,9 +110,9 @@ export const pagesData = [
   {
     id: 12,
     name: 'Door',
-    slug: '/door-design-dealers-manufacturers-indias',
+    slug: '/door-design-dealers-manufacturers-india',
     noItems: '1012',
-    heading: 'Door',
+    heading: 'Door Designs',
     desc: 'We are experts when it comes to custom doors, we have mostly all types of doors for your residence. We are manufacturing veneer doors, laminated doors, teak doors and just any custom type of sliding doors, UPVC, Steel, aluminium or pocket doors can be designed and planned by our team. Check out some of our door designs and book a visit today.',
     items: [],
   },

@@ -11,7 +11,7 @@ export const pagesData = [
   {
     id: 1,
     name: 'Interior Renovation',
-    slug: '/home-interior-designs-renovation',
+    slug: '/interior-renovation',
     noItems: '4',
     heading: 'Interior Renovation',
     desc: ' Some of the Most Affordable Interior renovations from the scrap to a beautiful outcome with end to end designs & executions. We have the top design team and end to end executing teams for the top notch interior design for your residence. Browse our latest collection for your interior designs, get ideas, & Be Inspired.',

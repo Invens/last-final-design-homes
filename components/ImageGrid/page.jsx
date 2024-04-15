@@ -69,17 +69,17 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/tiling-removebg-preview.png',
       text: 'Tiling',
-      slug: '/tiling-design-ideass',
+      slug: '/tiling-design-ideas',
     },
     {
       src: '/images/top-picks/upvc_window-removebg-preview.png',
       text: 'UPVC Windows',
-      slug: '/upvc-window-designss-designs',
+      slug: '/upvc-window-designs',
     },
     {
       src: '/images/top-picks/Vertical_Garden-removebg-preview.png',
       text: 'Vertical Gardens',
-      slug: '/vertical-garden-designss-designs',
+      slug: '/vertical-garden-designs',
     },
     {
       src: '/images/top-picks/wall_pannaling-removebg-preview.png',

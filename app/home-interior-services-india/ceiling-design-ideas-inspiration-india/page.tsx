@@ -118,7 +118,7 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/home-interior-services-india">Interior</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">ceilings</span>
+          / <span className="text-gray-600 text-sm">Ceilings</span>
         </div>
 
         {/* tabs */}

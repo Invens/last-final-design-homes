@@ -315,7 +315,7 @@ const Header = () => {
             </Link>
           </ul>
           <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
-            <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+            <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
               Get Free Estimate
             </Link>
           </button>
@@ -434,6 +434,95 @@ const Header = () => {
             </Link>
           </ul>
         </div>
+        <div className="">
+          <ul className="text-xs">
+            <h3 className="text-lg font-bold text-black">Modular Interiors</h3>
+            <Link href="/modular-interiors/mandir">
+              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+                Mandir
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/bar-unit">
+              <li
+                onMouseOver={() => handleMouseOverImage('interiorRenovation')}
+              >
+                Bar Units
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/side-tables">
+              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+                Side Tables
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/foldable-beds">
+              <li onMouseOver={() => handleMouseOverImage('loungRenovation')}>
+                Foldable Beds
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/bathroom-vanities">
+              <li onMouseOver={() => handleMouseOverImage('bathroom')}>
+                Bathroom Vanities
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/foyer-cabinets">
+              <li onMouseOver={() => handleMouseOverImage('terrace')}>
+                Foyer Cabinets
+              </li>{' '}
+            </Link>
+            <Link href="/modular-kitchen-top-brand-india">
+              <li onMouseOver={() => handleMouseOverImage('livingroom')}>
+                Modular Kitchen
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/wardrobe">
+              <li onMouseOver={() => handleMouseOverImage('modularKitchen')}>
+                Wardrobes
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/dressers">
+              <li
+                onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
+              >
+                Dressers
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/tv-unit-designs">
+              <li onMouseOver={() => handleMouseOverImage('mandir')}>
+                TV Unit
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/crockery-units">
+              <li onMouseOver={() => handleMouseOverImage('gym')}>
+                Crockery Units
+              </li>{' '}
+            </Link>
+            <Link href=" /modular-interiors/chest-of-drawers">
+              <li onMouseOver={() => handleMouseOverImage('hotel')}>
+                Chest Of Drawers
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/glass-partition">
+              <li
+                onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
+              >
+                Glass Partitions
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/kids-bedroom">
+              <li onMouseOver={() => handleMouseOverImage('mandir')}>
+                Kids Bedroom
+              </li>{' '}
+            </Link>
+            <Link href="/modular-interiors/vanities">
+              <li onMouseOver={() => handleMouseOverImage('gym')}>Vanities</li>{' '}
+            </Link>
+            <Link href="/homes-by-design-indian-homes">
+              <li onMouseOver={() => handleMouseOverImage('hotel')}>
+                Homes by DIH
+              </li>{' '}
+            </Link>
+          </ul>
+        </div>
         <div className="center">
           <Image
             src={
@@ -443,7 +532,7 @@ const Header = () => {
             className="shadow-sm rounded-xl border-2 object-cover "
             width={550}
             height={350}
-            style={{ width: '550px', height: '350px', marginLeft: '190px' }}
+            style={{ width: '550px', height: '350px', marginLeft: '120px' }}
             layout="fixed"
           />
 
@@ -789,7 +878,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/get-free-estimate-by-top-interior-brand-in-dehli-gurgaon-noida-india">
+                  <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('renovations')}
@@ -1270,7 +1359,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/mandir-designs">
+                  <Link href="/modular-interiors/mandir">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
@@ -1321,7 +1410,7 @@ const Header = () => {
                 />
                 <div>
                   <Link
-                    href="/Bar-unit-designs
+                    href="/modular-interiors/bar-unit
 "
                   >
                     <h3
@@ -1347,7 +1436,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/side-table-designs">
+                  <Link href="/modular-interiors/side-tables">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('side_table')}
@@ -1371,7 +1460,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/foldable-area-designs">
+                  <Link href="/modular-interiors/foldable-beds">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('foldable_bed')}
@@ -1394,7 +1483,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/vanity-designs">
+                  <Link href="/modular-interiors/bathroom-vanities">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1420,7 +1509,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/foyer-area-designs">
+                  <Link href="/modular-interiors/foyer-cabinets">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1483,7 +1572,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen-top-brand-india-designs">
+                  <Link href="/modular-kitchen-top-brand-india">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
@@ -1534,7 +1623,7 @@ const Header = () => {
                 />
                 <div>
                   <Link
-                    href="/wardrobe-designs
+                    href="/modular-interiors/wardrobe
 "
                   >
                     <h3
@@ -1560,7 +1649,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/dressers-designs">
+                  <Link href="/modular-interiors/dressers">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('side_table')}
@@ -1584,7 +1673,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/tv-unit-designs">
+                  <Link href="/modular-interiors/tv-unit-designs">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('foldable_bed')}
@@ -1607,7 +1696,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/crockery-unit-designs">
+                  <Link href="/modular-interiors/crockery-units">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -2013,10 +2102,7 @@ const Header = () => {
                   className="flex font-bold text-black hover:text-green-400"
                   onMouseOver={() => handleMouseOver('Interiors')}
                 >
-                  <Link href="/home-interior-services-india">
-                    {' '}
-                    Interiors
-                  </Link>
+                  <Link href="/home-interior-services-india"> Interiors</Link>
                 </p>
 
                 <p

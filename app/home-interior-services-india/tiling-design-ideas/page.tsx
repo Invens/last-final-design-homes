@@ -84,7 +84,7 @@ const Page = ({}) => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/tiling-design-ideass/"
+            href="https://designindianhomes.com/tiling-design-ideas/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -97,7 +97,7 @@ const Page = ({}) => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/tiling-design-ideass/"
+            content="https://designindianhomes.com/tiling-design-ideas/"
           />
           <meta
             property="og:title"
