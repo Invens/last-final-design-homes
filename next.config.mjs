@@ -206,7 +206,8 @@ const nextConfig = {
       },
       {
         source: '/kitchen-lightening-inspiration-ideas-india-designs',
-        destination: '/home-interior-services-india/lightening',
+        destination:
+          '/home-interior-services-india/kitchen-lightening-inspiration-ideas-india',
       },
       {
         source: '/plumbing-works-interiors',
@@ -228,7 +229,8 @@ const nextConfig = {
       },
       {
         source: '/exterior-cladding-design-ideas-designs',
-        destination: '/home-interior-services-india/cladding',
+        destination:
+          '/home-interior-services-india/exterior-cladding-design-ideas',
       },
       {
         source: '/wood-door-designs',
@@ -313,7 +315,7 @@ const nextConfig = {
         destination: '/home-renovation-service/living-room-renovation',
       },
       {
-        source: '/modular-kitchen-renovation-services',
+        source: '/modular-kitchen-top-brand-india-renovation-services',
         destination: '/home-renovation-service/modular-kitchen-renovation',
       },
       {
@@ -535,6 +537,11 @@ const nextConfig = {
         destination:
           '/selected-homes-exclusive-interior-designs-india/soulful-kids-room-designs',
       },
+      {
+        source: '/relaxed-walk-in-wardrobe-designs',
+        destination:
+          '/selected-homes-exclusive-interior-designs-india/relaxed-walk-in-wardrobe-designs',
+      },
 
       {
         source: '/handsome-modular-wardrobe-designs',
@@ -581,7 +588,7 @@ const nextConfig = {
       {
         source: '/wholesome-modern-interiors-designs',
         destination:
-          '/selected-homes-exclusive-interior-designs-india/wholesome-modern-interiors-designs',
+          '/selected-homes-exclusive-interior-designs-india/mesmerizing-modern-home-interiors',
       },
 
       // Add more custom rewrites as needed

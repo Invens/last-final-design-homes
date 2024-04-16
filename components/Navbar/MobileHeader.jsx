@@ -502,9 +502,7 @@ const MobileHeader = () => {
                               <Link href="/mesmerizing-modern-home-interiors">
                                 <li>Mesmerising Modern Interiors</li>
                               </Link>
-                              <Link href="/wholesome-modern-interiors-designs">
-                                <li>Wholesome Modern Interiors</li>
-                              </Link>
+                             
                             </div>
                           </ul>
                           <ul className="text-base text-black">
@@ -545,9 +543,7 @@ const MobileHeader = () => {
                             <Link href="/mesmerizing-modern-home-interiors">
                               <li>Mesmerising Modern Interiors</li>
                             </Link>
-                            <Link href="/wholesome-modern-interiors-designs">
-                              <li>Wholesome Modern Interiors</li>
-                            </Link>
+                        
                           </ul>
                         </div>
 

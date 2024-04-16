@@ -114,7 +114,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <li>Penthouse Designs</li>
           </Link>
           <Link href="/studio-apartment-interior-designs">
-            <li>Studio Spartment Designs</li>
+            <li>Studio Apartment Designs</li>
           </Link>
           <Link href="/bungalow-interior-designs">
             {' '}
@@ -314,9 +314,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <Link href="/mesmerizing-modern-home-interiors">
               <li>Mesmerising Modern Interiors</li>
             </Link>
-            <Link href="/wholesome-modern-interiors-designs">
-              <li>Wholesome Modern Interiors</li>
-            </Link>
+           
           </div>
         </ul>
       </div>

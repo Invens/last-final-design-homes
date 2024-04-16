@@ -508,11 +508,7 @@ const Header = () => {
                 Glass Partitions
               </li>{' '}
             </Link>
-            <Link href="/modular-interiors/kids-bedroom">
-              <li onMouseOver={() => handleMouseOverImage('mandir')}>
-                Kids Bedroom
-              </li>{' '}
-            </Link>
+           
             <Link href="/modular-interiors/vanities">
               <li onMouseOver={() => handleMouseOverImage('gym')}>Vanities</li>{' '}
             </Link>

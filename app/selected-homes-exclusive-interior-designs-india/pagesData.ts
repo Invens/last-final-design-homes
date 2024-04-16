@@ -31,7 +31,7 @@ export const pagesData = [
     name: 'Soulful kids Room',
     slug: 'soulful-kids-room-designs',
     noItems: '162',
-    heading: 'Soulful kids Room',
+    heading: 'Soulful Kids Room',
     desc: 'We all want to make the kids room vibrant, flamboyant, playful and also a Happy place, where kids can enjoy different themes. Keeping in mind the colour creativity and the modular furniture required, we design your kids room to perfection. We create out of the box designs which are loved by parents as well as Kids. Connect with us Today to get a Playful Solution. ',
     items: [],
   },
