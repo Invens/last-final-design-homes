@@ -42,7 +42,7 @@ const ImageGrid = () => {
       slug: '/glass-partition-designs',
     },
     {
-      src: '/images/top-picks/interior_Lightening-removebg-preview.png',
+      src: '/images/top-picks/Interior_Lightening-removebg-preview.png',
       text: 'Interior Lightening',
       slug: '/kitchen-lightening-inspiration-ideas-india-designs',
     },

@@ -38,7 +38,7 @@ const EndToEndImageGrid = () => {
       slug: '/hotel-renovation-services',
     },
     {
-      src: '/images/end/interior_Renovation-removebg-preview.png',
+      src: '/images/end/Interior_Renovation-removebg-preview.png',
       text: 'Interior Renovation',
       slug: '/home-interior-designs-renovation-services',
     },
