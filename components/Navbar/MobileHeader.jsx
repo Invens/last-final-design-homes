@@ -149,24 +149,25 @@ const MobileHeader = () => {
             <Image
               src="/images/Logo.gif"
               alt="left logo"
-              width={0}
-              height={0}
+              width={1000}
+              height={1000}
               priority={true}
-              className="absolute xs:relative md:relative w-[8rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] "
+              className="absolute xs:relative md:relative w-[6rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] "
+          
             />
           </Link>
         </div>
 
-        <div className="flex">
-          <div className="mt-4 invisible md:visible flex justify-end gap-2  md:space-x-2 font-bold ">
+        <div className="flex flex-row justify-center items-center">
+          <div className="mt-4 hidden md:flex justify-end gap-2  md:space-x-2 font-bold ">
             <button>Our Homes</button>
             <button>Design Ideas</button>
             <button>Contact Us</button>
             <button></button>
           </div>
           <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
-            <button className="bg-black text-white    md:px-4 py-8 px-4 xs:py-4 xs:px-8 xs:mt-4 text-nowrap xs:text-[14px] md:py-6">
-              Get Estimate
+            <button className="bg-black text-white text-[12px] whitespace-nowrap px-4 py-4 mt-2">
+              Get Estimates
             </button>
           </Link>
         </div>

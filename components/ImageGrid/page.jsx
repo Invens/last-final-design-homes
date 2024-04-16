@@ -17,12 +17,12 @@ const ImageGrid = () => {
       slug: '/bedroom-renovation-services',
     },
     {
-      src: '/images/top-picks/bed-designs-dealers-manufacturers-india-removebg-preview.png',
+      src: '/images/top-picks/beds-removebg-preview.png',
       text: 'Beds',
       slug: '/bed-designs-dealers-manufacturers-india-designs',
     },
     {
-      src: '/images/top-picks/door-design-dealers-manufacturers-india-removebg-preview.png',
+      src: '/images/top-picks/door-removebg-preview.png',
       text: 'Doors',
       slug: '/wood-door-designs',
     },

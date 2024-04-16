@@ -70,8 +70,8 @@ const PopupForm =({showPopup, togglePopup })=>{
     return(
         <>
          {showPopup && (
-              <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-gray-800 bg-opacity-75">
-                <div className="bg-white rounded-lg max-w-md w-full mx-4 overflow-hidden">
+              <div className="fixed top-4 left-0 w-full h-full flex items-center justify-center z-50 bg-gray-800 bg-opacity-75">
+                <div className="bg-white rounded-lg max-w-md w-full mx-4 overflow-y-auto h-[400px]">
                   {formSubmitted ? (
                     <div className="p-4 text-center">
                       <p className="text-lg">Thank you for your submission!</p>
@@ -92,7 +92,7 @@ const PopupForm =({showPopup, togglePopup })=>{
                   ) : (
                     <form onSubmit={handleSubmit} className="p-4 relative">
                       <h1 className="text-xl font-bold mb-4">Book with Us
-                        <button onClick={togglePopup} className="absolute top-0 right-0 mt-2 mr-2 bg-red-700 text-white rounded-full p-2">
+                        <button onClick={togglePopup} className="absolute top-0 right-0 mt-2 mr-2 bg-red-700 text-white rounded-full p-2 text-sm">
                           Close
                         </button>
                       </h1>
