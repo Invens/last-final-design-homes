@@ -133,5 +133,14 @@ export const pagesData = [
     desc: 'With over 316+ residences delivered by Team Design Indian Homes, we stand tall when it comes to delivering premium residences at the most affordable quotes. We have dedicated teams for providing you a one stop Solution for your Complete Modular Interiors, End to End Interior and complete Architectural Services. Connect with the Largest Interior and Architectural Brand, serving since 2007 in New Delhi - NCR. We are the most Loved, Trusted, Awarded and Referred brand for any type of residential works across New Delhi - NCR. Connect with us Today.',
     items: [],
   },
+  {
+    id: 15,
+    name: 'Shoes Rack',
+    slug: 'shoes-rack',
+    noItems: '1012',
+    heading: 'Shoes Rack',
+    desc: ' Design a Shoe Rack storage to keep your shoes organized. We design shoe racks units as free standing units or else it can be fitted to your wardrobe base area which is fully functional modular fittings. To protect your expensive footwear from wear & tear and to look elegant and stylish in your home, we have some of the most contemporary solutions for shoe racks. Delight yourself in our products, All Shoeracks are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Shoe Racks.',
+    items: [],
+  },
 
 ]

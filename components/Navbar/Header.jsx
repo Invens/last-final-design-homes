@@ -72,30 +72,44 @@ const Header = () => {
   const getImageForItem = (item) => {
     const imageMapping = {
       //interior
-      ' 1bhk':
-        '/images/interiors/bebeautiful-designs-for-1bhk-flats-interiors-residences-in-delhi-gurgaon-noida-india (1).jpeg',
-      '2bhk':
-        '/images/interiors/2bhk-2-bedroom-interior-designing-cost-price-makeover-redesigning-services-in-delhi-gurgaon-noida-india (1).jpg',
-      '3bhk':
-        '/images/interiors/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpg',
-      '4bhk':
-        '/images/interiors/amazing-4bhk-designs-4-bedrooms-for-interiors-designing-ideas-in-delhi-gurgaon-noida-india (7).jpg',
-      farmhouse:
-        '/images/interiors/beautiful-farmhouses-designs-interiors-in-delhi-gurgaon-noida-faridabad-india (1).jpeg',
+      ' 1bhk':'/images/interiors/bebeautiful-designs-for-1bhk-flats-interiors-residences-in-delhi-gurgaon-noida-india (1).jpeg',
+      '2bhk': '/images/interiors/2bhk-2-bedroom-interior-designing-cost-price-makeover-redesigning-services-in-delhi-gurgaon-noida-india (1).jpg',
+      '3bhk':  '/images/interiors/3-bhk-best-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpg',
+      '4bhk': '/images/interiors/amazing-4bhk-designs-4-bedrooms-for-interiors-designing-ideas-in-delhi-gurgaon-noida-india (7).jpg',
+      farmhouse: '/images/interiors/beautiful-farmhouses-designs-interiors-in-delhi-gurgaon-noida-faridabad-india (1).jpeg',
       pent: '/images/interiors/beautiful-elegant-pent-house-designs-ideas-concepts-apartments-flats-interior-design-ideas-in-delhi-gurgaon-noida-india (1).jpeg',
-      office:
-        '/images/interiors/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg',
-      studio:
-        '/images/interiors/beautiful-interior-designs-renovations-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
-      bunglow:
-        '/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
-      duplex:
-        '/images/interiors/amazing-beautiful-designs-interiors-gallery-collection-pictures-for-duplex-flats-residences-apartments-in-delhi-gurgaon-noida-india (1).jpg',
-      cottage:
-        '/images/interiors/beautiful - cottage - interior - design - in - delhi - gurgaon - noida - faridabad.jpg',
-      villa:
-        '/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
+      office:  '/images/interiors/best-residential-office-designs-in-budget-interiors-in-delhi-gurgaon-noida-india (1).jpg',
+      studio: '/images/interiors/beautiful-interior-designs-renovations-for-studio-apartments-in-delhi-gurgaon-noida-india (1).jpeg',
+      bunglow:  '/images/interiors/amazing-bunglow-designing-ideas-concepts-architectural-services-in-delhi-gurgaon-noida-india (1).jpeg',
+      duplex: '/images/interiors/amazing-beautiful-designs-interiors-gallery-collection-pictures-for-duplex-flats-residences-apartments-in-delhi-gurgaon-noida-india (1).jpg',
+      cottage:'/images/interiors/cottage-interiors-top-interior-architectural-brand-in-delhi-gurgaon-noida-india (4).jpg',
+      villa: '/images/interiors/best - interior - design - ideas - for  - villa - in - delhi - gurgaon - noida - faridabad.jpg',
 
+
+      //end to end interior
+      bathroom: '/images/end-to-end-interior/bathroom-designs-in-delhi-gurgaon-noida-india (5).jpg',
+      verticalGarden: '/images/end-to-end-interior/beautiful-verticle-gardens-designs-collection-dealers-in-delhi-gurgaon-noida-india (1).jpg',
+      wallPanneling: '/images/end-to-end-interior/beautiful-wall-panelling-designs-gallery-in-delhi-gurgaon-noida-india (5).jpg',
+      woodenFlooring: '/images/end-to-end-interior/best-designs-of-wooden-floorings-in-delhi-gurgaon-noida-india (1).jpg',
+      door: '/images/end-to-end-interior/best-doors-manufacturers-dealers-suppliers-in-delhi-gurgaon-noida-india (8).jpg',
+      foyer: '/images/end-to-end-interior/best-foyer-area-renovation-decoration-in-delhi-gurgaon-noida-india (6).jpg',
+      plumbing: '/images/end-to-end-interior/best-plumbing-works-contractors-in-delhi-gurgaon-noida-india (7).jpg',
+      woodenCeiling: '/images/end-to-end-interior/best-wooden-false-ceiling-designs-in-2024-delhi-gurgaon-noida-india (2).jpg',
+      woodenPolishing: '/images/end-to-end-interior/best-wooden-polishing-works-services-in-delhi-gurgaon-noida-india (1).jpg',
+      bedDesigning: '/images/end-to-end-interior/collection-of-beds-designs-delhi-gurgaon-noida-india (1).jpeg',
+      commercialServices: '/images/end-to-end-interior/commercial-architects-designs-delhi-gurgaon-noida-india (1).jpg',
+      kitchenLighting: '/images/end-to-end-interior/contemporary-kitchen-living-space-herts-sue-murphy-interiors-img~4711f67a055b320a_14-4529-1-5e01505.jpg',
+      glassPartion:'/images/end-to-end-interior/designer-glass-partitions-dealers-in-delhi-gurgaon-noida-india (6).jpg',
+      exteriorCladding: '/images/end-to-end-interior/exterior-cladding-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      painting: '/images/end-to-end-interior/exterior-interior-painting-services-in-delhi-gurgaon-noida-india (3).jpg',
+      floorTilling: '/images/end-to-end-interior/floor-tiles-dealers-installers-in-delhi-gurgaon-noida-india (3).jpg',
+      endtoend: '/images/end-to-end-interior/largest-luxury-interior-designs-ideas-gallery-pictures-in-delhi-gurgaon-noida-india.webp',
+      upvc: '/images/end-to-end-interior/largest-UPVC-doors-windows-dealers-manufacturers-delhi-gurgaon-noida-india (1).jpg',
+      sofa: '/images/end-to-end-interior/lowest-price-sofa-designs-in-delhi-gurgaon-noida-india (6).jpg',
+      tvunits: "/images/end-to-end-interior/tv-units-dealers-and-manufacturers-in-delhi-gurgaon-noida-india (1).jpg",
+      electricalServices: '/images/end-to-end-interior/best-redoing-electric-works-company-in-delhi-gurgaon-noida-india (3).jpg',
+      shoesRack: '/images/end-to-end-interior/top-shoeracks-dealers-manufacturers-in-delhi-gurgaon-noida-india (4).jpg',
+      vanities: '/images/end-to-end-interior/bathroom-vanities-dealers-and-manufacturers-in-delhi-gurgaon-noida-india (5).jpg',
       //renovation
       structural:
         '/images/renovation/complete-building-structures-end-to-end-builders-developers-in-delhi-gurgaon-noida-india (6).jpg',
@@ -327,103 +341,103 @@ const Header = () => {
               End to End Interior
             </h3>
             <Link href="/home-interior-services-india/bed-designs-dealers-manufacturers-india">
-              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+              <li onMouseOver={() => handleMouseOverImage('bedDesigning')}>
                 Bed Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/ceiling-design-ideas-inspiration-india">
               <li
-                onMouseOver={() => handleMouseOverImage('interiorRenovation')}
+                onMouseOver={() => handleMouseOverImage('woodenCeiling')}
               >
                 Ceiling Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/commercial-interiors-services-delhi-ncr-india">
-              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+              <li onMouseOver={() => handleMouseOverImage('commercialServices')}>
                 Commercial Services
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/wooden-ceiling-designs-ideas-inspiration">
-              <li onMouseOver={() => handleMouseOverImage('loungRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('woodenCeiling')}>
                 Wooden Ceilings
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/wooden-flooring-designs">
-              <li onMouseOver={() => handleMouseOverImage('bathroom')}>
+              <li onMouseOver={() => handleMouseOverImage('woodenFlooring')}>
                 Wooden Floorings
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/wooden-polishing-designs">
-              <li onMouseOver={() => handleMouseOverImage('terrace')}>
+              <li onMouseOver={() => handleMouseOverImage('woodenPolishing')}>
                 Wooden Polishing
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/door-design-dealers-manufacturers-india">
-              <li onMouseOver={() => handleMouseOverImage('livingroom')}>
+              <li onMouseOver={() => handleMouseOverImage('door')}>
                 Door Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/end-to-end-interior-services-delhi-ncr-india">
-              <li onMouseOver={() => handleMouseOverImage('modularKitchen')}>
+              <li onMouseOver={() => handleMouseOverImage('endtoend')}>
                 End to End Services
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/exterior-cladding-design-ideas">
               <li
-                onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
+                onMouseOver={() => handleMouseOverImage('exteriorCladding')}
               >
                 Exterior Cladding
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/glass-partition-designs">
-              <li onMouseOver={() => handleMouseOverImage('mandir')}>
+              <li onMouseOver={() => handleMouseOverImage('glassPartion')}>
                 Glass Partitions
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/home-painting-services-delhi-ncr">
-              <li onMouseOver={() => handleMouseOverImage('gym')}>
+              <li onMouseOver={() => handleMouseOverImage('painting')}>
                 Painting Services
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/home-plumbing-services-india">
-              <li onMouseOver={() => handleMouseOverImage('hotel')}>
+              <li onMouseOver={() => handleMouseOverImage('plumbing')}>
                 Plumbing Services
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/home-electric-works-services">
               <li
-                onMouseOver={() => handleMouseOverImage('farmhouseRenovation')}
+                onMouseOver={() => handleMouseOverImage('electricalServices')}
               >
                 Electrical Services
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/kitchen-lightening-inspiration-ideas-india">
-              <li onMouseOver={() => handleMouseOverImage('banquet')}>
+              <li onMouseOver={() => handleMouseOverImage('kitchenLighting')}>
                 Kitchen Lightening
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/sofa-designs-ideas">
-              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('sofa')}>
                 Sofa Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/tiling-design-ideas">
-              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('floorTilling')}>
                 Tiling Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/tv-unit-designs">
-              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('tvunits')}>
                 TV Unit Designs
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/upvc-window-designs">
-              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('upvc')}>
                 UPVC Windows
               </li>{' '}
             </Link>
             <Link href="/home-interior-services-india/vertical-garden-designs">
-              <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('verticalGarden')}>
                 Vertical Gardens
               </li>{' '}
             </Link>
@@ -438,79 +452,82 @@ const Header = () => {
           <ul className="text-xs">
             <h3 className="text-lg font-bold text-black">Modular Interiors</h3>
             <Link href="/modular-interiors/mandir">
-              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+              <li onMouseOver={() => handleMouseOverImage('mandir')}>
                 Mandir
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/bar-unit">
               <li
-                onMouseOver={() => handleMouseOverImage('interiorRenovation')}
+                onMouseOver={() => handleMouseOverImage('bar_unit')}
               >
                 Bar Units
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/side-tables">
-              <li onMouseOver={() => handleMouseOverImage('bedroom')}>
+              <li onMouseOver={() => handleMouseOverImage('side_table')}>
                 Side Tables
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/foldable-beds">
-              <li onMouseOver={() => handleMouseOverImage('loungRenovation')}>
+              <li onMouseOver={() => handleMouseOverImage('foldable_bed')}>
                 Foldable Beds
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/bathroom-vanities">
-              <li onMouseOver={() => handleMouseOverImage('bathroom')}>
+              <li onMouseOver={() => handleMouseOverImage('bathroom_vatities')}>
                 Bathroom Vanities
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/foyer-cabinets">
-              <li onMouseOver={() => handleMouseOverImage('terrace')}>
+              <li onMouseOver={() => handleMouseOverImage('foyer_cabinet')}>
                 Foyer Cabinets
               </li>{' '}
             </Link>
             <Link href="/modular-kitchen-top-brand-india">
-              <li onMouseOver={() => handleMouseOverImage('livingroom')}>
+              <li onMouseOver={() => handleMouseOverImage('modularKitchen')}>
                 Modular Kitchen
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/wardrobe">
-              <li onMouseOver={() => handleMouseOverImage('modularKitchen')}>
+              <li onMouseOver={() => handleMouseOverImage('wardrobe_renovation')}>
                 Wardrobes
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/dressers">
               <li
-                onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
+                onMouseOver={() => handleMouseOverImage('dressing')}
               >
                 Dressers
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/tv-unit-designs">
-              <li onMouseOver={() => handleMouseOverImage('mandir')}>
+              <li onMouseOver={() => handleMouseOverImage('tv_units')}>
                 TV Unit
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/crockery-units">
-              <li onMouseOver={() => handleMouseOverImage('gym')}>
+              <li onMouseOver={() => handleMouseOverImage('crockery_unit')}>
                 Crockery Units
               </li>{' '}
             </Link>
             <Link href=" /modular-interiors/chest-of-drawers">
-              <li onMouseOver={() => handleMouseOverImage('hotel')}>
+              <li onMouseOver={() => handleMouseOverImage('chest_drawer')}>
                 Chest Of Drawers
               </li>{' '}
             </Link>
             <Link href="/modular-interiors/glass-partition">
               <li
-                onMouseOver={() => handleMouseOverImage('wardrobeRenovation')}
+                onMouseOver={() => handleMouseOverImage('glass_partition')}
               >
                 Glass Partitions
               </li>{' '}
             </Link>
-           
+
             <Link href="/modular-interiors/vanities">
-              <li onMouseOver={() => handleMouseOverImage('gym')}>Vanities</li>{' '}
+              <li onMouseOver={() => handleMouseOverImage('vanities')}>Vanities</li>{' '}
+            </Link>
+            <Link href="/modular-interiors/shoes-rack">
+              <li onMouseOver={() => handleMouseOverImage('shoesRack')}>Shoes Rack</li>{' '}
             </Link>
             <Link href="/homes-by-design-indian-homes">
               <li onMouseOver={() => handleMouseOverImage('hotel')}>
@@ -1215,7 +1232,7 @@ const Header = () => {
                     className="text-sm text-white bg-black absolute"
                     onMouseOver={() => handleMouseOverImage('shoes_rack')}
                   >
-                    Shoes Rocks
+                    Shoes Racks
                   </h3>
                   <p className="text-xs mt-4">
                     Connect with the top end to end interior Brand
@@ -1960,9 +1977,8 @@ const Header = () => {
       <div className="z-[200] invisible lg:visible  lg:flex">
         {/* Desktop Header */}
         <div
-          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${
-            scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
-          }`}
+          className={`bg-white py-0 drop-shadow-lg  mb-px w-full z-50 transition-transform ease-in-out duration-300 ${scrollDirection === 'down' ? '-translate-y-10' : 'translate-y-0'
+            }`}
           style={{
             position: 'fixed',
             top: 30,

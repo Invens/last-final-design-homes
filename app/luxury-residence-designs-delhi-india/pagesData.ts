@@ -33,7 +33,7 @@ export const pagesData = [
     slug: 'luxury-structural',
     noItems: '162',
     heading: 'Luxury Structural',
-    desc: 'When you really deserve a perfect partition, you must get one. Now get Beautiful Glass Partitions for your interiors to deck up your spaces. Delight yourself in our products, All Our Glass Partitions are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like slim profiled, zed profiled, cube profile and lacquered. Check out our designs for some of the top ideas for your Glass Partitions.',
+    desc: 'We all aspire to have a Luxury Residence, the main motive of this is to first plan the elevations. The Entire structure has to be designed in an aesthetic & practical manner so that execution is done to perfection. The major challenge is not the design approvals, but the way of execution. Hence all our Architects, design and plan your residences with dedicated uniqueness and intrinsic details. Just visit our Boutique office and get in touch with our Team Member today or Just Book with US. Connect with us Today and we will assure you have a Beautiful, well planned structure.',
     items: [],
   },
 ]
