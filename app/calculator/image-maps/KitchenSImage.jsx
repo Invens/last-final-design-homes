@@ -16,12 +16,12 @@ const SvgMap = ({ data, name }) => {
       falseCeiling: { pricePerSqFt: 185 },
       Electrical: { price: 5000 },
       Plumbing: { pricePerSqFt: 1300 },
-      'Base Cabinets Panel 1': { price: 500 },
-      'Wall Cabinets Panel 1': { price: 600 },
-      'Loft Cabinets Panel 1': { price: 700 },
-      'Base Cabinets Panel 2': { price: 500 },
-      'Wall Cabinets Panel 2': { price: 600 },
-      'Loft Cabinets Panel 2': { price: 700 },
+      'Base Cabinets Panel 1': { pricePerSqFt: 1500 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 1500 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 1500 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 1500 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 1500 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 1500 },
       CounterTop: { price: 50000 },
       KitchenWalls: { pricePerSqFt: 1500 },
       Flooring: { pricePerSqFt: 497 },
@@ -33,12 +33,12 @@ const SvgMap = ({ data, name }) => {
       falseCeiling: { pricePerSqFt: 210 },
       Electrical: { price: 13000 },
       Plumbing: { pricePerSqFt: 1600 },
-      'Base Cabinets Panel 1': { price: 900 },
-      'Wall Cabinets Panel 1': { price: 1000 },
-      'Loft Cabinets Panel 1': { price: 1200 },
-      'Base Cabinets Panel 2': { price: 900 },
-      'Wall Cabinets Panel 2': { price: 1000 },
-      'Loft Cabinets Panel 2': { price: 1200 },
+      'Base Cabinets Panel 1': { pricePerSqFt: 1800 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 1800 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 1800 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 1800 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 1800 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 1800 },
       CounterTop: { price: 85000 },
       KitchenWalls: { pricePerSqFt: 2000 },
       Flooring: { pricePerSqFt: 498 },
@@ -50,12 +50,12 @@ const SvgMap = ({ data, name }) => {
       falseCeiling: { pricePerSqFt: 250 },
       Electrical: { price: 18000 },
       Plumbing: { pricePerSqFt: 2000 },
-      'Base Cabinets Panel 1': { price: 900 },
-      'Wall Cabinets Panel 1': { price: 1200 },
-      'Loft Cabinets Panel 1': { price: 1500 },
-      'Base Cabinets Panel 2': { price: 900 },
-      'Wall Cabinets Panel 2': { price: 1200 },
-      'Loft Cabinets Panel 2': { price: 1500 },
+      'Base Cabinets Panel 1': { pricePerSqFt: 2500 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 2500 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 2500 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 2500 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 2500 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 2500 },
       CounterTop: { price: 150000 },
       KitchenWalls: { pricePerSqFt: 2500 },
       Flooring: { pricePerSqFt: 499 },
@@ -63,6 +63,14 @@ const SvgMap = ({ data, name }) => {
   }
   const descriptions = {
     premium: {
+      Electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+      CounterTop:
+        'Counter top in composite or quartz with 40mm thickness moulding Composite or Quartz (upto Rs. 500/- psf)',
+      Plumbing:
+        'Plumbing work with point shifting, excluding drain point shifting CP fitting (Kohler or Grohe or similar)',
+      KitchenWalls:
+        'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       KitchenCabinets:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       falseCeiling:
@@ -82,12 +90,31 @@ const SvgMap = ({ data, name }) => {
       Mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
       Console:
         'Designer furniture element - Ready made Price range upto Rs.15,000/-',
-      flooring:
+      Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+      'Base Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Base Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
     },
     luxury: {
-      walls:
-        'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
+      Electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+
+      CounterTop:
+        'Counter top in composite or quartz with 40mm thickness moulding Composite or Quartz (upto Rs. 500/- psf)',
+      Plumbing:
+        'Plumbing work with point shifting, excluding drain point shifting CP fitting (Kohler or Grohe or similar)',
+      KitchenWalls:
+        'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       falseCeiling:
         'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
       CenterTable:
@@ -107,13 +134,32 @@ const SvgMap = ({ data, name }) => {
         '4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
       Console:
         'Designer furniture element - Ready made Price range upto Rs.25,000/-',
-      flooring:
+      Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      'Base Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Base Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+
       // Add descriptions for luxury package components...
     },
     ultraLuxury: {
-      walls:
-        'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
+      Electrical:
+        'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+      CounterTop:
+        'Counter top in composite or quartz with 40mm thickness moulding Composite or Quartz (upto Rs. 500/- psf)',
+      Plumbing:
+        'Plumbing work with point shifting, excluding drain point shifting CP fitting (Kohler or Grohe or similar)',
+      KitchenWalls:
+        'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       falseCeiling:
         'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
       CenterTable:
@@ -132,8 +178,21 @@ const SvgMap = ({ data, name }) => {
       Mandir: '4 x 5 SqFt. Corian stone Mandir',
       Console:
         'Designer furniture element - Ready made Price range upto Rs.40,000/-',
-      flooring:
+      Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+      'Base Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 1':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Base Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+      'Wall Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+      'Loft Cabinets Panel 2':
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in Veneer / PU polish (2 glass shutters), including hardware Hardware (Hettich/Hafele or similar) | 0.8 mm Laminate (Skydecor or similar)',
+
       // Add descriptions for ultra luxury package components...
     },
     // Add descriptions for other packages...
@@ -148,6 +207,12 @@ const SvgMap = ({ data, name }) => {
     CounterTop: 80,
     KitchenWalls: 196,
     KitchenCabinets: 50,
+    'Base Cabinets Panel 1': 26,
+    'Wall Cabinets Panel 1': 26,
+    'Loft Cabinets Panel 1': 26,
+    'Base Cabinets Panel 2': 26,
+    'Wall Cabinets Panel 2': 26,
+    'Loft Cabinets Panel 2': 26,
   }
   console.log('data: ', data)
   console.log('name: ', name)
@@ -822,6 +887,9 @@ const SvgMap = ({ data, name }) => {
                 polygon === 'KitchenWalls' ||
                 polygon == 'upvcWindow' ||
                 polygon === 'falseCeiling' ||
+                polygon === 'Base Cabinets Panel 1' ||
+                polygon === 'Wall Cabinets Panel 1' ||
+                polygon === 'Loft Cabinets Panel 1' ||
                 polygon === 'KitchenCabinets' ? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
@@ -830,6 +898,17 @@ const SvgMap = ({ data, name }) => {
                     ✏️ Edit
                   </span>
                 ) : null}
+                {selectedPackage && (
+                  <div
+                    style={{
+                      fontSize: '14px',
+                      marginTop: '5px',
+                      width: '650px',
+                    }}
+                  >
+                    {descriptions[selectedPackage]?.[polygon]}
+                  </div>
+                )}
               </div>
 
               <div className="float-right">

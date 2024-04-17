@@ -225,8 +225,8 @@ const ThirdStep = (props) => {
         const hasSelectedPolygon = spaceDataFromLs.some(
           (item) =>
             item.name === space.name &&
-            item.selectedPolygon &&
-            item.selectedPolygon.length > 0
+            item.selectedPolygonArea &&
+            item.selectedPolygonArea.length > 0
         )
         const roomPrice = spaceDataFromLs.find(
           (item) => item.name === space.name && item.roomPrice
