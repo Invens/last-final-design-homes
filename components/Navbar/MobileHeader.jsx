@@ -152,7 +152,7 @@ const MobileHeader = () => {
               width={1000}
               height={1000}
               priority={true}
-              className="absolute xs:relative md:relative w-[6rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-15px] "
+              className="absolute xs:relative md:relative w-[6rem] xs:max-w-[14vw] md:max-w-[10vw] h-30vh ml-3 xs:mt-2 sm:mt-2 mt-[-15px] "
           
             />
           </Link>
