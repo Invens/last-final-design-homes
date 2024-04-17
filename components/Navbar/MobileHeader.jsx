@@ -152,7 +152,7 @@ const MobileHeader = () => {
               width={1000}
               height={1000}
               priority={true}
-              className="absolute xs:relative md:relative w-[6rem] xs:w-[14vw] md:w-[10vw] h-auto ml-3 xs:mt-2 sm:mt-2 mt-[-20px] "
+              className="absolute xs:relative md:relative w-[6rem] xs:max-w-[14vw] md:max-w-[10vw] h-[5vh] ml-3 xs:mt-2 sm:mt-2 mt-[-15px] "
           
             />
           </Link>
@@ -160,13 +160,18 @@ const MobileHeader = () => {
 
         <div className="flex flex-row justify-center items-center">
           <div className="mt-4 hidden md:flex justify-end gap-2  md:space-x-2 font-bold ">
+            <Link href="/homes-by-design-indian-homes">
             <button>Our Homes</button>
+            </Link>
+            <Link href="/modular-interior-design-ideas">
             <button>Design Ideas</button>
+            </Link>
+            <Link href="/book-a-interior-design-visit">
             <button>Contact Us</button>
-            <button></button>
+            </Link>
           </div>
           <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
-            <button className="bg-black text-white text-[12px] whitespace-nowrap px-4 py-4 mt-2">
+            <button className="bg-black text-white text-[12px] whitespace-nowrap px-4 py-6 mt-2">
               Get Estimates
             </button>
           </Link>

@@ -162,26 +162,7 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
     }
   }
 
-  //  style={{
-  //   zIndex: '10',
-  //   position: 'fixed',
-  //   top: '70px',
-  //   background: 'white',
-  //   width: '100%',
-  //   height: '100%',
-  // }}
-  //  style={{
-  //         position: 'relative',
-  //         width: '900px',
-  //         height: '500px',
-  //         overflow: 'hidden',
-  //         marginLeft: '30px',
-  //       }}
-  //  style={{
-  //                 borderRadius: '10px',
-  //                 width: '900px',
-  //                 height: '500px',
-  //               }}
+
   return (
     <div className="fixed inset-0 items-center justify-center z-50 flex  bg-black bg-opacity-75 ">
       <div className=" relative flex items-center justify-center flex-col md:h-[80vh] h-screen max-w-screen-xl  bg-white rounded-lg shadow-lg md:flex-row my-32 sm:my-0 overflow-hidden">

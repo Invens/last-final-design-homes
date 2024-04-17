@@ -168,7 +168,7 @@ export const pagesData = [
     slug: '/wooden-ceiling-designs-ideas-inspiration',
     noItems: '1012',
     heading: 'Wooden Ceiling',
-    desc: 'Some of the best commercial offices, showrooms, retailers have been designed by team design indian homes. We you’re your interiors in a very budget friendly and professional manner. Now get complete designs for your interiors in spaces like restaurants, lobbies, offices and retail shops with the beautiful custom renovation services for commercial interior design at affordable budget. Check out some of our Commercial Interior Designs Today.',
+    desc: 'With Over 80+ designs to choose from, our team has top custom designs for wooden ceilings. We have some of the coolest and trendiest designs for wooden ceilings. Whether you need it for your commercial space or for your studios or for residential works, we have some of the finest custom designs to suit your requirements. Connect with us Today & Get most affordable solution for your residence.',
     items: [],
   },
 ]
