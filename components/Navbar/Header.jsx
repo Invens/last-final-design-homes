@@ -94,7 +94,7 @@ const Header = () => {
       door: '/images/end-to-end-interior/best-doors-manufacturers-dealers-suppliers-in-delhi-gurgaon-noida-india (8).jpg',
       foyer: '/images/end-to-end-interior/best-foyer-area-renovation-decoration-in-delhi-gurgaon-noida-india (6).jpg',
       plumbing: '/images/end-to-end-interior/best-plumbing-works-contractors-in-delhi-gurgaon-noida-india (7).jpg',
-      woodenCeiling: '/images/end-to-end-interior/best-wooden-false-ceiling-designs-in-2024-delhi-gurgaon-noida-india (2).jpg',
+      woodenCeiling: '/images/end-to-end-interior/best-wooden-false-ceiling-designs-in-2024-delhi-gurgaon-noida-india (1).jpeg',
       woodenPolishing: '/images/end-to-end-interior/best-wooden-polishing-works-services-in-delhi-gurgaon-noida-india (1).jpg',
       bedDesigning: '/images/end-to-end-interior/collection-of-beds-designs-delhi-gurgaon-noida-india (1).jpeg',
       commercialServices: '/images/end-to-end-interior/commercial-architects-designs-delhi-gurgaon-noida-india (1).jpg',
@@ -588,7 +588,18 @@ const Header = () => {
                 <Link href="/selected-homes-exclusive-interior-designs-india">
                   Selected Homes
                 </Link>
-              </button>{' '}
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  Get Free Estimate
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/luxury-residence-designs-delhi-india">
+                 Luxury Interiors
+                </Link>
+              </button>
+              {' '}
             </div>
           </div>
         </div>
@@ -775,7 +786,18 @@ const Header = () => {
                 <Link href="/selected-homes-exclusive-interior-designs-india">
                   Selected Homes
                 </Link>
-              </button>{' '}
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  Get Free Estimate
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/luxury-residence-designs-delhi-india">
+                 Luxury Interiors
+                </Link>
+              </button>
+              {' '}
             </div>
           </div>
         </div>
@@ -960,7 +982,18 @@ const Header = () => {
                 <Link href="/selected-homes-exclusive-interior-designs-india">
                   Selected Homes
                 </Link>
-              </button>{' '}
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  Get Free Estimate
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/luxury-residence-designs-delhi-india">
+                 Luxury Interiors
+                </Link>
+              </button>
+              {' '}
             </div>
           </div>
         </div>
@@ -1355,7 +1388,18 @@ const Header = () => {
                 <Link href="/selected-homes-exclusive-interior-designs-india">
                   Selected Homes
                 </Link>
-              </button>{' '}
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  Get Free Estimate
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/luxury-residence-designs-delhi-india">
+                 Luxury Interiors
+                </Link>
+              </button>
+              {' '}
             </div>
           </div>
         </div>
@@ -1836,7 +1880,18 @@ const Header = () => {
               <Link href="/selected-homes-exclusive-interior-designs-india">
                 Selected Homes
               </Link>
-            </button>{' '}
+            </button>
+            <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  Get Free Estimate
+                </Link>
+              </button>
+              <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
+                <Link href="/luxury-residence-designs-delhi-india">
+                 Luxury Interiors
+                </Link>
+              </button>
+            {' '}
           </div>
         </div>
         <div className="w-2/3">

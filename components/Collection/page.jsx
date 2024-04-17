@@ -346,7 +346,7 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
-                <Link href="/">
+                <Link href="/homes-by-design-indian-homes">
                   <Image
                     height={350}
                     width={700}
@@ -363,6 +363,7 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
+                <Link href="/selected-homes-exclusive-interior-designs-india">
                 <Image
                   height={350}
                   width={700}
@@ -370,6 +371,7 @@ const Collection = () => {
                   src="/images/asdf.png"
                   alt=""
                 />
+                </Link>
               </motion.div>
 
               {/* Image 6 */}

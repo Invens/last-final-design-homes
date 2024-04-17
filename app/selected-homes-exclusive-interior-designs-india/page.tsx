@@ -32,7 +32,7 @@ const Page = ({}) => {
       try {
         const timestamp = Date.now()
         const categoryIds = [
-          118, 115, 117, 119, 120, 121, 122, 123, 124, 133, 114, 116,
+          118, 115, 117, 119, 120, 121, 122, 123, 124, 113, 114, 116,
         ] // Add the category IDs you want to fetch
 
         // Fetch category data
@@ -165,7 +165,7 @@ const Page = ({}) => {
         </div>
 
         <div className="flex items-center b p-4">
-          <div className="w-1 h-8 rounded bg-green-500 mr-2"></div>
+          <div className="w-1 rounded bg-green-500 mr-2"></div>
           <h1 className="text-3xl font-bold">Selected Homes</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">

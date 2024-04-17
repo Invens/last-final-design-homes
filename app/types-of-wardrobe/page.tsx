@@ -23,6 +23,9 @@ const Page = ({}) => {
     134:  'teak-wardrobe',
     135: 'veener-wardrobe',
     136: 'walk-in-wardrobe',
+    145: 'cane-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india',
+    146: 'cnc-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india',
+    147: 'leatherite-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india'
 
 
 
@@ -33,7 +36,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [126, 127,128,129,130,131,132,133,134,135,136 ] // Add the category IDs you want to fetch
+        const categoryIds = [126, 127,128,129,130,131,132,133,134,135,136,145,146,147 ] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
