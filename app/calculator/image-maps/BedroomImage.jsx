@@ -65,22 +65,22 @@ const SvgMap = ({ data, name }) => {
       walls:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       tvpanel:
-        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       wardrobe:
-        'Standard HDHMR wardrobe including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+        'Standard HDHMR wardrobe including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       sofa: '3 seat Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
       flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (Soft HR) | Fabric (Upto Rs. 450/- per mtr)',
       sideTables:
-        'Side tables with laminate finish HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+        'Side tables with laminate finish HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8mm Laminate (Skydecor or similar)',
       electrical:
         'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
       studyTable:
-        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 1mm Laminate (Merino or similar)',
+        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 1mm Laminate (Merino or similar)',
       // Add descriptions for other components...
     },
     luxury: {
@@ -102,7 +102,7 @@ const SvgMap = ({ data, name }) => {
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (High Density) | Fabric (Upto Rs. 650/- per mtr)',
       sideTables:
-        'Side tables with Veneer finish and melamine polish HDHMR (Crossbond or similar) | Hardware (Ozone or similar)',
+        'Side tables with Veneer finish and melamine polish HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent)',
       electrical:
         'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
       studyTable:
@@ -127,7 +127,7 @@ const SvgMap = ({ data, name }) => {
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (High Density, Soft) | Fabric (Upto Rs. 750/- per mtr)',
       sideTables:
-        'Side tables with Veneer or HDHMR finish and PU polish. HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+        'Side tables with Veneer or HDHMR finish and PU polish. HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8mm Laminate (Skydecor or similar)',
       electrical:
         'Electrical work with new points, relocation including switches & boards. Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
       studyTable:

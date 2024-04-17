@@ -10,27 +10,27 @@ const SvgMap = ({ data, name }) => {
   const router = useRouter()
   const pricing = {
     premium: {
-      Walls: { pricePerSqFt: 50 },
+      Walls: { pricePerSqFt: 20 },
       Door: { price: 19000 },
-      upvcWindow: { pricePerSqFt: 750 },
+      upvcWindow: { pricePerSqFt: 780 },
       FalseCeiling: { pricePerSqFt: 170 },
-      Electrical: { price: 4500 },
+      Electrical: { price: 2000 },
       Flooring: { pricePerSqFt: 180 },
     },
     luxury: {
-      Walls: { pricePerSqFt: 65 },
+      Walls: { pricePerSqFt: 30 },
       Door: { price: 24500 },
-      upvcWindow: { pricePerSqFt: 1050 },
+      upvcWindow: { pricePerSqFt: 1080 },
       FalseCeiling: { pricePerSqFt: 200 },
-      Electrical: { price: 12500 },
+      Electrical: { price: 3500 },
       Flooring: { pricePerSqFt: 200 },
     },
     ultraLuxury: {
-      Walls: { pricePerSqFt: 90 },
+      Walls: { pricePerSqFt: 50 },
       Door: { price: 35500 },
-      upvcWindow: { pricePerSqFt: 1450 },
+      upvcWindow: { pricePerSqFt: 1480 },
       FalseCeiling: { pricePerSqFt: 240 },
-      Electrical: { price: 17500 },
+      Electrical: { price: 5000 },
       Flooring: { pricePerSqFt: 450 },
     },
   }
@@ -38,12 +38,12 @@ const SvgMap = ({ data, name }) => {
   const descriptions = {
     premium: {
       upvcWindow:
-        'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (AIS or Veka or similar)',
+        'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Deceuninck or Veka or similar)',
       Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
       Walls:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
-      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
       Electrical:
         'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
       FalseCeiling:

@@ -10,7 +10,7 @@ const SvgMap = ({ data, name }) => {
       Walls: { pricePerSqFt: 55 },
       Door: { price: 20000 },
       StudyTables: { pricePerSqFt: 800 },
-      upvcWindow: { pricePerSqFt: 750 },
+      upvcWindow: { pricePerSqFt: 780 },
       FalseCeiling: { pricePerSqFt: 170 },
       Electrical: { price: 1300 },
       Flooring: { pricePerSqFt: 170 },
@@ -19,7 +19,7 @@ const SvgMap = ({ data, name }) => {
       Walls: { pricePerSqFt: 65 },
       Door: { price: 25000 },
       StudyTables: { pricePerSqFt: 1100 },
-      upvcWindow: { pricePerSqFt: 1050 },
+      upvcWindow: { pricePerSqFt: 1080 },
       FalseCeiling: { pricePerSqFt: 195 },
       Electrical: { price: 3000 },
       Flooring: { pricePerSqFt: 210 },
@@ -28,7 +28,7 @@ const SvgMap = ({ data, name }) => {
       Walls: { pricePerSqFt: 90 },
       Door: { price: 36000 },
       StudyTables: { pricePerSqFt: 1500 },
-      upvcWindow: { pricePerSqFt: 1450 },
+      upvcWindow: { pricePerSqFt: 1480 },
       FalseCeiling: { pricePerSqFt: 235 },
       Electrical: { price: 4000 },
       Flooring: { pricePerSqFt: 450 },
@@ -37,7 +37,7 @@ const SvgMap = ({ data, name }) => {
 
   const descriptions = {
     premium: {
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       FalseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
       Flooring:

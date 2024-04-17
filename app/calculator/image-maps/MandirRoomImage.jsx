@@ -11,18 +11,18 @@ const SvgMap = ({ data, name }) => {
   const pricing = {
     premium: {
       Mandir: { price: 29500 },
-      Walls: { pricePerSqFt: 20 },
+      Walls: { pricePerSqFt: 22 },
       upvcWindow: { pricePerSqFt: 750 },
       FalseCeiling: { pricePerSqFt: 170 },
-      Electrical: { price: 4500 },
+      Electrical: { price: 2000 },
       Flooring: { pricePerSqFt: 170 },
     },
     luxury: {
       Mandir: { price: 44500 },
       Walls: { pricePerSqFt: 30 },
-      upvcWindow: { pricePerSqFt: 1050 },
+      upvcWindow: { pricePerSqFt: 1080 },
       FalseCeiling: { pricePerSqFt: 200 },
-      Electrical: { price: 12500 },
+      Electrical: { price: 3500 },
       Flooring: { pricePerSqFt: 200 },
     },
     ultraLuxury: {
@@ -30,8 +30,8 @@ const SvgMap = ({ data, name }) => {
       Walls: { pricePerSqFt: 50 },
       upvcWindow: { pricePerSqFt: 1450 },
       FalseCeiling: { pricePerSqFt: 240 },
-      Electrical: { price: 17500 },
-      Flooring: { pricePerSqFt: 450 },
+      Electrical: { price: 5000 },
+      Flooring: { pricePerSqFt: 470 },
     },
   }
   const descriptions = {
@@ -39,7 +39,7 @@ const SvgMap = ({ data, name }) => {
       Mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
       Walls:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       FalseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
       Flooring:
@@ -81,8 +81,8 @@ const SvgMap = ({ data, name }) => {
     FalseCeiling: 36,
     electrical: 10,
     Flooring: 48,
-    upvcWindow: 10,
-    Walls: 65,
+    upvcWindow: 36,
+    Walls: 88,
   }
   console.log('data: ', data)
   console.log('name: ', name)
