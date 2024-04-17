@@ -278,8 +278,9 @@ const Page = ({}) => {
   }
 
   const handleImageClick = (index) => {
-    setProjectIndex(index)
+    setProjectIndex(index - 1)
     setShowSlider(true)
+    // console.log('project id', projectIndex)
   }
 
   const handleCloseSlider = () => {
@@ -395,7 +396,7 @@ const Page = ({}) => {
 
         if (projectsResponse.status === 200) {
           const projectsData = projectsResponse.data
-
+          // console.log('projectsData', projectsData)
           // Fetch images for each project using Axios
           const projectsWithImages = await Promise.all(
             projectsData.map(async (project) => {
@@ -435,6 +436,11 @@ const Page = ({}) => {
 
     fetchProjects()
   }, [])
+
+  // useEffect(() => {
+  //   console.log('projects', projects)
+  // }, [projects])
+
   useEffect(() => {
     const prevIndex = (projectIndex - 1 + projects.length) % projects.length
     const prevProjectImages = projects[prevIndex]?.images || []
@@ -519,31 +525,45 @@ const Page = ({}) => {
               {/* Replace the following div with your image slider component */}
               <div className="">
                 <Slider {...sliderSettings} ref={sliderRef}>
-                  {projects[projectIndex]?.images.map((image, index) => (
-                    <div key={index} className="overflow-hidden">
-                      <Image
-                        src={`https://api.designindianwardrobe.com/uploads/project-upload/${image.filename}`}
-                        alt={projects[projectIndex]?.name}
-                        width={1000}
-                        height={1000}
-                        className="h-auto lg:h-[506px] rounded-sm "
-                      />
+                  {projects[projectIndex]?.images.length > 0 ? (
+                    projects[projectIndex]?.images.map((image, index) => (
+                      <div key={index} className="overflow-hidden">
+                        <Image
+                          src={`https://api.designindianwardrobe.com/uploads/project-upload/${image.filename}`}
+                          alt={projects[projectIndex]?.name}
+                          width={1000}
+                          height={1000}
+                          className="h-auto lg:h-[506px] rounded-sm "
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="overflow-hidden w-full p-16 flex justify-center">
+                      <p className="text-center font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl w-fit mx-auto">
+                        SORRY... <br/> NO IMAGES FOUND
+                      </p>
                     </div>
-                  ))}
+                  )}
                 </Slider>
               </div>
-              <button
-                onClick={handlePrev}
-                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black font-black text-2xl px-4 text-white p-2 rounded-full hover:bg-transparent hover:text-black hover:border-solid hover:border-2 hover:border-black"
-              >
-                &lt;
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black font-black text-2xl px-4 text-white p-2 rounded-full hover:bg-transparent hover:text-black hover:border-solid hover:border-2 hover:border-black"
-              >
-                &gt;
-              </button>
+              {projects[projectIndex]?.images.length > 0 && (
+                <>
+                  <button
+                    onClick={handlePrev}
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black font-black text-2xl px-4 text-white p-2 rounded-full hover:bg-transparent hover:text-black hover:border-solid hover:border-2 hover:border-black"
+                    disabled={projectIndex === 0} // Disable if it's the first project
+                  >
+                    &lt;
+                  </button>
+                  <button
+                    onClick={handleNext}
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black font-black text-2xl px-4 text-white p-2 rounded-full hover:bg-transparent hover:text-black hover:border-solid hover:border-2 hover:border-black"
+                    disabled={projectIndex === projects.length - 1} // Disable if it's the last project
+                  >
+                    &gt;
+                  </button>
+                </>
+              )}
             </div>
 
             {/* Form content */}

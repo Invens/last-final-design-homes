@@ -119,31 +119,61 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/wardrobe-design-gallery-india">Wardrobes</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Wardrobe</span>
+          / <span className="text-gray-600 text-sm">Laquer Glass Wardrobe</span>
         </div>
 
         {/* tabs */}
         <Tabs id={3} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
-          {images.map((image, index) => (
-            <div
-              key={image.id}
-              onClick={() => handleImageClick(index)}
-              style={{ cursor: 'pointer' }}
-            >
-              <Image
-                width={1000}
-                height={1000}
-                src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
-                alt={image.filename}
-                style={{
-                  width: '450px',
-                  height: '250px',
-                  borderRadius: '10px',
-                }}
-              />
-            </div>
-          ))}
+          {images.map((image, index) => {
+            if (
+              image.filename.endsWith('.jpg') ||
+              image.filename.endsWith('.png') ||
+              image.filename.endsWith('.jpeg')
+            ) {
+              return (
+                <div
+                  key={image.id}
+                  onClick={() => handleImageClick(index)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
+                    alt={image.filename}
+                    loading="lazy"
+                    style={{
+                      width: '450px',
+                      height: '250px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                </div>
+              )
+            } else if (
+              image.filename.endsWith('.mp4') ||
+              image.filename.endsWith('.mov') ||
+              image.filename.endsWith('.avi')
+            ) {
+              return (
+                <video
+                  key={image.id}
+                  src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
+                  style={{
+                    width: '450px',
+                    height: '250px',
+                    borderRadius: '10px',
+                    objectFit: 'cover',
+                  }}
+                  playsInline
+                  autoPlay
+                  loop
+                  muted
+                />
+              )
+            }
+          })}
         </div>
       </div>
       {showSlider && (
