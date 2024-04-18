@@ -67,7 +67,11 @@ const Page = ({ params }) => {
       case 'Master':
         return <BedroomImage data={spaceData} name={spaceName} />
       case 'Living':
-        return <LivingandDiningImage data={spaceData} name={spaceName} />
+        if (spaceName.includes('Living and Dining')) {
+          return <LivingandDiningImage data={spaceData} name={spaceName} />
+        } else {
+          return <LivingRoomImage data={spaceData} name={spaceName} />
+        }
       // case 'Kitchen':
       //   return <KitchenImage data={spaceData} name={spaceName} />
       case 'Bathroom':
@@ -80,8 +84,8 @@ const Page = ({ params }) => {
         return <StoreRoomImage data={spaceData} name={spaceName} />
       case 'Study':
         return <StudyRoomImage data={spaceData} name={spaceName} />
-      case 'Living':
-        return <LivingRoomImage data={spaceData} name={spaceName} />
+      // case 'Living':
+      //   return <LivingRoomImage data={spaceData} name={spaceName} />
       case 'Entrance':
         return <EntranceRoomImage data={spaceData} name={spaceName} />
       case 'Balcony':
@@ -93,7 +97,7 @@ const Page = ({ params }) => {
       case 'Straight':
         return <KitchenSImage data={spaceData} name={spaceName} />
       case 'L Shaped':
-        return <KitchenLImage data={spaceData} name={spaceName } />
+        return <KitchenLImage data={spaceData} name={spaceName} />
       case 'U Shaped':
         return <KitchenUImage data={spaceData} name={spaceName} />
       case 'Parallel':
