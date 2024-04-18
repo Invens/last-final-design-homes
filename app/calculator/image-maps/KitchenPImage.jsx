@@ -205,6 +205,7 @@ const SvgMap = ({ data, name }) => {
     'Wall Cabinets Panel 2': 25,
     'Loft Cabinets Panel 2': 25,
   }
+  //hello world
   console.log('data: ', data)
   console.log('name: ', name)
   const [selectedPolygon, setSelectedPolygon] = useState([])
