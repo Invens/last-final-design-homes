@@ -152,14 +152,14 @@ const MobileHeader = () => {
               width={1000}
               height={1000}
               priority={true}
-              className="absolute xs:relative md:relative w-[6rem] xs:max-w-[14vw] md:max-w-[10vw] md:h-[10vh] ml-3 xs:mt-2 sm:mt-2 mt-[-15px] "
+              className=" absolute xs:relative md:relative w-[6rem] xs:max-w-[14vw] md:max-w-[10vw] h-10 xs:h-7 md:h-[10vh] ml-3 xs:mt-2 sm:mt-2 mt-[-15px] "
           
             />
           </Link>
         </div>
 
         <div className="flex flex-row justify-center items-center">
-          <div className="mt-4 hidden md:flex justify-end gap-2  md:space-x-2 font-bold ">
+          <div className="mt-4 hidden md:flex justify-end gap-2 md:space-x-2 font-bold mx-2">
             <Link href="/homes-by-design-indian-homes">
             <button>Our Homes</button>
             </Link>
