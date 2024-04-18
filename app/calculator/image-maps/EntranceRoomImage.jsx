@@ -11,7 +11,7 @@ const SvgMap = ({ data, name }) => {
   const pricing = {
     premium: {
       ShoeRack: { price: 4500 },
-      Walls: { pricePerSqFt: 50 },
+      Walls: { pricePerSqFt: 20 },
       Door: { price: 19000 },
       falseCeiling: { pricePerSqFt: 175 },
       Electrical: { price: 1900 },
@@ -48,9 +48,9 @@ const SvgMap = ({ data, name }) => {
         'Designer furniture element - Ready made Price range upto Rs.15,000/-',
       Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
       ShoeRack:
-        'Standard HDHMR shoe rack including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Standard HDHMR shoe rack including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       Electrical:
         'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
     },

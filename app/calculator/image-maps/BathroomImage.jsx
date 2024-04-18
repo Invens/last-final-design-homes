@@ -23,12 +23,12 @@ const SvgMap = ({ data, name }) => {
       wallTiles: { pricePerSqFt: 170 }, // adjust based on your actual pricing
       Flooring: { pricePerSqFt: 170 }, // adjust based on your actual pricing
       sanitaryAndCP: { price: 34000 },
-      ShowerEnclosure: { price: 6000 },
+      ShowerEnclosure: { price: 7000 },
       upvcWindow: { pricePerSqFt: 750 },
       bathroomVanity: { price: 19000 },
       door: { price: 19000 },
       Electrical: { price: 4500 },
-      falseCeiling: { pricePerSqFt: 170 }, // adjust based on your actual pricing
+      falseCeiling: { pricePerSqFt: 180 }, // adjust based on your actual pricing
       // ... other existing premium spaces
     },
     luxury: {
@@ -40,7 +40,7 @@ const SvgMap = ({ data, name }) => {
       ShowerEnclosure: { price: 20000 },
       upvcWindow: { pricePerSqFt: 1050 },
       bathroomVanity: { price: 24000 },
-      Electrical: { price: 12500 },
+      Electrical: { price: 7500 },
       door: { price: 24000 },
       falseCeiling: { pricePerSqFt: 210 }, // adjust based on your actual pricing
       // ... other existing luxury spaces
@@ -48,16 +48,16 @@ const SvgMap = ({ data, name }) => {
     ultraLuxury: {
       // ... existing ultraLuxury spaces
       Plumbing: { price: 34000 },
-      wallTiles: { pricePerSqFt: 450 }, // adjust based on your actual pricing
+      wallTiles: { pricePerSqFt: 490 }, // adjust based on your actual pricing
       Flooring: { pricePerSqFt: 450 }, // adjust based on your actual pricing
       sanitaryAndCP: { price: 84000 },
       ShowerEnclosure: { price: 30500 },
       upvcWindow: { pricePerSqFt: 1450 },
       sideTables: { price: 19000 },
-      Electrical: { price: 17500 },
+      Electrical: { price: 11500 },
       bathroomVanity: { price: 34000 },
       door: { price: 35000 },
-      falseCeiling: { pricePerSqFt: 450 }, // adjust based on your actual pricing
+      falseCeiling: { pricePerSqFt: 250 }, // adjust based on your actual pricing
       // ... other existing ultraLuxury spaces
     },
   }
@@ -70,15 +70,16 @@ const SvgMap = ({ data, name }) => {
       Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
       bathroomVanity:
-        'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
+        'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
       sanitaryAndCP:
         'Sanitary Brands: Cera /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
-      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
+      upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       ShowerEnclosure:
         '18 x 7 SqFt., 8mm toughened glass partition with installation',
       Electrical:
         'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+        Plumbing: '1 NOS: Plumbing work including pipes and all sanitary installation CPVC (Price or similar) | PVC (Prakash or similar) | Water Proofing'
     },
     luxury: {
       falseCeiling:
@@ -97,6 +98,7 @@ const SvgMap = ({ data, name }) => {
       ShowerEnclosure: 'Shower enclosure with 8mm toughened glass partition',
       Electrical:
         'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
+      Plumbing: '1 NOS: Plumbing work including pipes and all sanitary installation CPVC (Vectus or similar) | PVC (Vectus or similar) | Water Proofing'
     },
     ultraLuxury: {
       falseCeiling:
@@ -116,6 +118,7 @@ const SvgMap = ({ data, name }) => {
         'Branded shower cubical including hardware and installation Cubical (Jaquar or similar, upto Rs. 35,000/-)',
       Electrical:
         'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
+        Plumbing: '1NOS: Plumbing work including pipes and all sanitary CPVC (Astral or similar) | PVC (Supreme or similar) | Water Proofing'
     },
     // Add descriptions for other packages...
   }
@@ -398,19 +401,19 @@ const SvgMap = ({ data, name }) => {
           <polygon
             points="34,167,704,518,921,518,921,385,722,372,300,2"
             fill={
-              selectedPolygon.includes('FalseCeiling') ? 'green' : 'transparent'
+              selectedPolygon.includes('falseCeiling') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('FalseCeiling')}
+            onClick={() => handlePolygonClick('falseCeiling')}
             style={{ cursor: 'pointer' }}
           />
           <polygon
             points="992,383,1081,524,1823,539,2449,184,2250,15,1789,401"
             fill={
-              selectedPolygon.includes('FalseCeiling') ? 'green' : 'transparent'
+              selectedPolygon.includes('falseCeiling') ? 'green' : 'transparent'
             }
             fillOpacity="0.2"
-            onClick={() => handlePolygonClick('FalseCeiling')}
+            onClick={() => handlePolygonClick('falseCeiling')}
             style={{ cursor: 'pointer' }}
           />
           <rect
@@ -433,7 +436,7 @@ const SvgMap = ({ data, name }) => {
             y="327"
             fontSize={40}
             id="falseCeiling"
-            onClick={() => handlePolygonClick('FalseCeiling')}
+            onClick={() => handlePolygonClick('falseCeiling')}
             className="cursor-pointer"
             style={{ color: 'black' }}
           >
@@ -588,7 +591,7 @@ const SvgMap = ({ data, name }) => {
             Bathroom Vanity
           </text>
           {/* ------ Plumbing--------- */}
-          {/* <polygon
+         <polygon
           points="55,925,430,886,427,1091,53,1223"
           fill={selectedPolygon.includes('Plumbing') ? 'green' : 'transparent'}
           fillOpacity="0.2"
@@ -620,7 +623,7 @@ const SvgMap = ({ data, name }) => {
           style={{ color: 'black' }}
         >
           Plumbing
-        </text> */}
+        </text>
           {/* ----Walls Tiles------ */}
           <polygon
             points="42,169,696,515,923,520,923,630,873,628,871,604,837,589,828,591,819,600,813,611,795,613,776,621,778,628,791,621,804,624,811,624,826,628,832,634,834,637,837,630,828,619,821,613,832,602,843,600,860,608,867,619,867,639,871,725,873,823,873,845,841,842,845,851,858,851,856,868,804,873,798,881,795,896,811,896,813,881,852,879,845,903,860,905,865,886,873,877,888,881,888,864,869,868,867,851,888,849,886,840,880,840,878,801,873,667,871,628,923,630,917,1174,696,1171,687,1174,62,1550,57,1221,430,1091,430,888,412,890,393,890,367,892,345,894,324,896,302,896,282,899,265,901,252,903,235,905,222,907,200,907,183,909,168,912,150,914,131,914,114,918,92,918,77,918,64,922,51,925,53,907,51,888,51,864,51,845,51,823,51,808,49,788,49,769,49,751,49,732,49,710,49,691,47,671,44,647,44,630,47,611,44,591,42,567,42,550,44,531,44,509,42,489,42,463,42,444,44,424,44,405,42,379,44,355,44,331,42,312,42,290,44,253"

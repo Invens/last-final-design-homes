@@ -32,7 +32,7 @@ const FourthStep = () => {
       kitchencabinets:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
 
-      upvcwindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      upvcwindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       falseceiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
       flooring:
@@ -44,55 +44,55 @@ const FourthStep = () => {
       walltiles:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X24" (Price range Rs. 55-65/- psf)',
       bathroomvanity:
-        'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
+        'HDHMR bathroom vanity with shutter storage and mirror above vanity, including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Skydecor or similar) | Stone counter (upto Rs. 150/- psf)',
       sanitaryandcp:
         'Sanitary Brands: Cera /Similar Inclusions: Sanitary Fittings (Faucets), Divertor Fittings, Bottle Trap etc.',
-      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
+      door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
       showerenclosure:
         '18 x 7 SqFt., 8mm toughened glass partition with installation',
       bed: 'Standard plywood bed with box storage, laminate finish and fabric bed backPlywood (upto Rs. 55/-) | Laminate 0.8mm (Skydecor or similar) | Fabric (upto Rs. 400/-)',
       tvpanel:
-        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       wardrobe:
-        'Standard HDHMR wardrobe including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Standard HDHMR wardrobe including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       sofa: '3 seat Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (Soft HR) | Fabric (Upto Rs. 450/- per mtr)',
       sidetables:
-        'Side tables with laminate finish HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+        'Side tables with laminate finish HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8mm Laminate (Skydecor or similar)',
       studytable:
-        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 1mm Laminate (Merino or similar)',
+        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 1mm Laminate (Merino or similar)',
       diningtableset:
         '6 seater dining table with chairs Sheesham wood | Wooden counter top',
       crockeryunit:
-        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       barunit:
-        'Bar unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Bar unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       console:
         'Designer furniture element - Ready made Price range upto Rs.15,000/-',
       shoerack:
-        'Standard HDHMR shoe rack including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Standard HDHMR shoe rack including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       centertable:
         'Designer furniture element - Ready made Price range upto Rs.15,000/-',
       mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
       'base cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'base cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'base cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
     },
     luxury: {
       countertop:
@@ -132,15 +132,15 @@ const FourthStep = () => {
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (High Density) | Fabric (Upto Rs. 650/- per mtr)',
       sidetables:
-        'Side tables with Veneer finish and melamine polish HDHMR (Crossbond or similar) | Hardware (Ozone or similar)',
+        'Side tables with Veneer finish and melamine polish HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent)',
       studytable:
         'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Action Tesa or similar) | Hardware ( Hettich or similar) | 1mm Laminate (Merino or similar))',
       diningtableset:
         '6 seater dining table with chairs Sheesham wood | Stone counter top',
       crockeryunit:
-        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       barunit:
-        'Bar unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Bar unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       console:
         'Designer furniture element - Ready made Price range upto Rs.25,000/-',
       shoerack:
@@ -150,23 +150,23 @@ const FourthStep = () => {
       mandir:
         '4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
       'base cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'base cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'base cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
     },
     ultraLuxury: {
       countertop:
@@ -204,15 +204,15 @@ const FourthStep = () => {
       armchair:
         'Teak and Marandi chair with upholstery and foam. Foam (High Density, Soft) | Fabric (Upto Rs. 750/- per mtr)',
       sidetables:
-        'Side tables with Veneer or HDHMR finish and PU polish. HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8mm Laminate (Skydecor or similar)',
+        'Side tables with Veneer or HDHMR finish and PU polish. HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8mm Laminate (Skydecor or similar)',
       studytable:
         'Study table with 2 floating sleek drawers and wall cabinets with glass shutters. Veneer with PU polish. HDHMR (Action Tesa or similar) | Hardware ( Hettich or similar)',
       diningtableset:
         '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
       crockeryunit:
-        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       barunit:
-        'Bar unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Bar unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       console:
         'Designer furniture element - Ready made Price range upto Rs.40,000/-',
       shoerack:
@@ -221,21 +221,21 @@ const FourthStep = () => {
         'Designer furniture element - Ready made Price range upto Rs.50,000/-',
       mandir: '4 x 5 SqFt. Corian stone Mandir',
       'base cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 1':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'base cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 2':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 2':
         'Cabinets in HDHMR including carcass finish in laminate and shutters in Veneer / PU polish (2 glass shutters), including hardware Hardware (Hettich/Hafele or similar) | 0.8 mm Laminate (Skydecor or similar)',
       'base cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent) | Drawers (Inox or similar) | 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each)',
       'wall cabinets panel 3':
-        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Ozone or similar)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
+        'Cabinets in HDHMR including carcass finish in laminate and shutters in laminate, including Hardware Hardware (Stylus or equivalent)| 0.8 mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar) | Handles (upto Rs. 300/- each) Note; 2 shutters Profile with glass included',
       'loft cabinets panel 3':
         'Cabinets in HDHMR including carcass finish in laminate and shutters in Veneer / PU polish (2 glass shutters), including hardware Hardware (Hettich/Hafele or similar) | 0.8 mm Laminate (Skydecor or similar)',
     },

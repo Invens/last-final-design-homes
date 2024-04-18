@@ -9,34 +9,34 @@ const SvgMap = ({ data, name }) => {
   const router = useRouter()
   const pricing = {
     premium: {
-      barUnit: { pricePerSqFt: 1150 },
+      barUnit: { pricePerSqFt: 1240 },
       walls: { pricePerSqFt: 50 },
       upvcWindow: { pricePerSqFt: 750 },
       falseCeiling: { pricePerSqFt: 170 },
-      electrical: { price: 4000 },
-      crockeryUnit: { pricePerSqFt: 1200 },
-      diningTableSet: { price: 45000 },
+      electrical: { price: 4800 },
+      crockeryUnit: { pricePerSqFt: 1280 },
+      diningTableSet: { price: 49500 },
       flooring: { pricePerSqFt: 170 },
     },
     luxury: {
-      barUnit: { pricePerSqFt: 1350 },
-      walls: { pricePerSqFt: 60 },
+      barUnit: { pricePerSqFt: 1420 },
+      walls: { pricePerSqFt: 64 },
       upvcWindow: { pricePerSqFt: 1050 },
-      falseCeiling: { pricePerSqFt: 200 },
+      falseCeiling: { pricePerSqFt: 210 },
       electrical: { price: 12000 },
-      crockeryUnit: { pricePerSqFt: 1500 },
-      diningTableSet: { price: 80000 },
-      flooring: { pricePerSqFt: 200 },
+      crockeryUnit: { pricePerSqFt: 1540 },
+      diningTableSet: { price: 84000 },
+      flooring: { pricePerSqFt: 220 },
     },
     ultraLuxury: {
-      barUnit: { pricePerSqFt: 1700 },
-      walls: { pricePerSqFt: 85 },
-      upvcWindow: { pricePerSqFt: 1450 },
+      barUnit: { pricePerSqFt: 1750 },
+      walls: { pricePerSqFt: 90 },
+      upvcWindow: { pricePerSqFt: 1480 },
       falseCeiling: { pricePerSqFt: 240 },
-      electrical: { price: 17000 },
-      crockeryUnit: { pricePerSqFt: 1900 },
-      diningTableSet: { price: 145000 },
-      flooring: { pricePerSqFt: 450 },
+      electrical: { price: 17500 },
+      crockeryUnit: { pricePerSqFt: 1980 },
+      diningTableSet: { price: 148000 },
+      flooring: { pricePerSqFt: 490 },
     },
   }
   const descriptions = {
@@ -44,16 +44,16 @@ const SvgMap = ({ data, name }) => {
       flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
       diningTableSet:
-        '6 seater dining table with chairs Sheesham wood | Wooden counter top',
+        '1 NOS: 6 seater dining table with chairs Sheesham wood | Wooden counter top',
       walls:
         'Premium Emulsion with basic putty repairing and one highlight wall Paint (Asian Paints or similar)',
       crockeryUnit:
-        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Japaness MDH-MR or similar) | Hardware (Stylush or equivalent) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       electrical:
         'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      upvcWindow: 'Premium UPVC windows UPVC (DECEUNINCK or Veka or similar)',
       barUnit:
-        'Bar unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Bar unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Japaness MDH-MR or similar) | Hardware (Stylush or equivalent) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       falseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
     },
@@ -65,13 +65,13 @@ const SvgMap = ({ data, name }) => {
       walls:
         'Premium Emulsion with 2 primer coats, putty repairing and one highlight wall Paint (Asian Paints or similar)',
       crockeryUnit:
-        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Japaness MDH-MR or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       electrical:
         'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
       upvcWindow:
         'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
       barUnit:
-        'Bar unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Bar unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       falseCeiling: 'Gypsum board ceiling with heavy duty channel',
     },
     ultraLuxury: {
@@ -82,13 +82,13 @@ const SvgMap = ({ data, name }) => {
       walls:
         'Premium paint with POP finish and one rustic / textured wall POP 3-5 mm (Sakarni) | Paint (Asian Paint Royale or similar)',
       crockeryUnit:
-        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       electrical:
         'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
       upvcWindow:
         'Premium UPVC windows with 90mm shutter frame and 12.5mm toughened glass, key locking and single wool pile UPVC (Fenesta or similar)',
       barUnit:
-        'Bar unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Bar unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       falseCeiling: 'Gypsum board ceiling with heavy duty channel',
     },
     // Add descriptions for other packages...
@@ -100,7 +100,6 @@ const SvgMap = ({ data, name }) => {
     upvcWindow: 24,
     walls: 294,
     crockeryUnit: 42,
-    diningTableSet: 1,
     barUnit: 28,
   }
   console.log('data: ', data)
@@ -714,8 +713,7 @@ const SvgMap = ({ data, name }) => {
                 polygon === 'walls' ||
                 polygon === 'crockeryUnit' ||
                 polygon == 'upvcWindow' ||
-                polygon === 'falseCeiling' ||
-                polygon === 'diningTableSet' ? (
+                polygon === 'falseCeiling'? (
                   <span
                     style={{ cursor: 'pointer', fontSize: '12px' }}
                     onClick={() => handleEditSquareFootage(polygon)}

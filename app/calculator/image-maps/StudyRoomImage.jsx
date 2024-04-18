@@ -15,8 +15,8 @@ const SvgMap = ({ data, name }) => {
       StudyTables: { pricePerSqFt: 800 },
       upvcWindow: { pricePerSqFt: 800 },
       FalseCeiling: { pricePerSqFt: 185 },
-      Electrical: { price: 5000 },
-      Flooring: { pricePerSqFt: 497 },
+      Electrical: { price: 2000 },
+      Flooring: { pricePerSqFt: 177 },
     },
     luxury: {
       Walls: { pricePerSqFt: 65 },
@@ -24,8 +24,8 @@ const SvgMap = ({ data, name }) => {
       StudyTables: { pricePerSqFt: 1100 },
       upvcWindow: { pricePerSqFt: 1100 },
       FalseCeiling: { pricePerSqFt: 210 },
-      Electrical: { price: 13000 },
-      Flooring: { pricePerSqFt: 498 },
+      Electrical: { price: 3400 },
+      Flooring: { pricePerSqFt: 210 },
     },
     ultraLuxury: {
       Walls: { pricePerSqFt: 90 },
@@ -33,7 +33,7 @@ const SvgMap = ({ data, name }) => {
       StudyTables: { pricePerSqFt: 1500 },
       upvcWindow: { pricePerSqFt: 1500 },
       FalseCeiling: { pricePerSqFt: 250 },
-      Electrical: { price: 18000 },
+      Electrical: { price: 5000 },
       Flooring: { pricePerSqFt: 499 },
     },
   }
@@ -43,11 +43,11 @@ const SvgMap = ({ data, name }) => {
       FalseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
       StudyTables:
-        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 1mm Laminate (Merino or similar)',
+        'Study table with 2 floating sleek drawers and wall cabinets HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 1mm Laminate (Merino or similar)',
       Flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
-      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Ozone or similar) | Locks (Upto Rs.1,800/-)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+      Door: 'Flush door with hardware, both side laminate finish and Chaukhat repairing & polishing Door 35mm hardwood (price range Rs.80 to Rs. 125/-) | Hardware (Stylus or equivalent) | Locks (Upto Rs.1,800/-)',
+      upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
       Electrical:
         'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
       Walls:
@@ -87,10 +87,12 @@ const SvgMap = ({ data, name }) => {
   }
 
   const initialSquareFootage = {
-    FalseCeiling: 64,
-    Flooring: 64,
+    FalseCeiling: 80,
+    Flooring: 80,
     upvcWindow: 48,
-    Walls: 156,
+    Walls: 196,
+    StudyTables: 36,
+
   }
   console.log('data: ', data)
   console.log('name: ', name)

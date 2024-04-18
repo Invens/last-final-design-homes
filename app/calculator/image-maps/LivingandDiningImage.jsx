@@ -12,32 +12,32 @@ const SvgMap = ({ data, name }) => {
     premium: {
       barUnit: { pricePerSqFt: 1250 },
       tvpanel: { pricePerSqFt: 950 },
-      CenterTable: { price: 19000 },
-      Sofa: { price: 10500 },
-      Console: { price: 19000 },
-      sideTables: { price: 7000 },
-      Mandir: { price: 29000 },
+      CenterTable: { price: 19800 },
+      Sofa: { price: 32000 },
+      Console: { price: 19800 },
+      sideTables: { price: 7500 },
+      Mandir: { price: 29800 },
       walls: { pricePerSqFt: 50 },
       upvcWindow: { pricePerSqFt: 750 },
       falseCeiling: { pricePerSqFt: 180 },
-      electrical: { price: 4500 },
-      crockeryUnit: { pricePerSqFt: 1200 },
-      diningTableSet: { price: 45000 },
-      flooring: { pricePerSqFt: 170 },
+      electrical: { price: 11800 },
+      crockeryUnit: { pricePerSqFt: 1250 },
+      diningTableSet: { price: 49000 },
+      flooring: { pricePerSqFt: 175 },
     },
     luxury: {
       barUnit: { pricePerSqFt: 1350 },
       tvpanel: { pricePerSqFt: 1350 },
-      CenterTable: { price: 34000 },
-      Sofa: { price: 15000 },
+      CenterTable: { price: 34500 },
+      Sofa: { price: 45000 },
       Console: { price: 29000 },
       sideTables: { price: 11000 },
-      Mandir: { price: 40000 },
+      Mandir: { price: 44500 },
       walls: { pricePerSqFt: 60 },
       upvcWindow: { pricePerSqFt: 1050 },
       falseCeiling: { pricePerSqFt: 200 },
-      electrical: { price: 12500 },
-      crockeryUnit: { pricePerSqFt: 1500 },
+      electrical: { price: 17500 },
+      crockeryUnit: { pricePerSqFt: 1550 },
       diningTableSet: { price: 84000 },
       flooring: { pricePerSqFt: 200 },
     },
@@ -45,7 +45,7 @@ const SvgMap = ({ data, name }) => {
       barUnit: { pricePerSqFt: 1700 },
       tvpanel: { pricePerSqFt: 1750 },
       CenterTable: { price: 55000 },
-      Sofa: { price: 24500 },
+      Sofa: { price: 74500 },
       Console: { price: 50000 },
       sideTables: { price: 19000 },
       Mandir: { price: 65000 },
@@ -65,22 +65,23 @@ const SvgMap = ({ data, name }) => {
       falseCeiling:
         'Gypsum board ceiling with heavy duty channel Boards (USG Boral) | Wires (KEI or similar) | Lights (Orient or similar)',
       CenterTable:
-        'Designer furniture element - Ready made Price range upto Rs.15,000/-',
-      Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
+        '1 NOS: Designer furniture element - Ready made Price range upto Rs.15,000/-',
+      Sofa: '3 Seats: Marandi wood and Fabric sofa Foam (High Density - 35GSM) | Faric (upto Rs. 450 per mtr)',
       diningTableSet:
-        '6 seater dining table with chairs Sheesham wood | Wooden counter top',
+        '1 NOS: 6 seater dining table with chairs Sheesham wood | Wooden counter top',
       crockeryUnit:
-        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Crossbond or similar) | Hardware (Ozone or similar) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+        'Crockery unit with laminate finish on carcass & Shutters and frosted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Stylus or equivalent) | 0.8 Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       tvpanel:
-        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Ozone or similar) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
-      upvcWindow: 'Premium UPVC windows UPVC (AIS or Veka or similar)',
+        'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
+      upvcWindow: 'Premium UPVC windows UPVC (DECEUNINCK or Veka or similar)',
       electrical:
-        'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
-      Mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
+        '1NOS: Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
+      Mandir: '1 NOS: 3 x 4 SqFt. Mandir MDF finished with Laminate',
       Console:
-        'Designer furniture element - Ready made Price range upto Rs.15,000/-',
+        '1 NOS: Designer furniture element - Ready made Price range upto Rs.15,000/-',
       flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 24"X48" (Price range Rs. 55-65/-)',
+        sideTables: '1 NOS: Designer Furniture element - Ready made Price range upto RS. 5,000/-'
     },
     luxury: {
       walls:
@@ -88,24 +89,26 @@ const SvgMap = ({ data, name }) => {
       falseCeiling:
         'POP ceiling with heavy duty channel POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
       CenterTable:
-        'Designer furniture element - Ready made Price range upto Rs.30,000/-',
+        '1 NOS: Designer furniture element - Ready made Price range upto Rs.30,000/-',
       Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 650 per mtr)',
       diningTableSet:
         '6 seater dining table with chairs Sheesham wood | Stone counter top',
       crockeryUnit:
-        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit with laminate finish on carcass & Acrylic / plain membrane finish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       tvpanel:
         'Standard HDHMR TV panel including hardware, laminates on carcass, Acrylic or plain membrane on shutters Carcass (Action Tess or similar) | Hardware (Hettich or similar) | 0.8mm Laminate (Skydecor or similar)',
       upvcWindow:
         'Premium UPVC windows with 74mm shutter frame and 8mm toughened glass, and single wool pile UPVC (Fenesta or similar)',
       electrical:
-        'Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
+        '1 NOS: Electrical work with point relocation including switches & boards Wires (Havells or Polycab) | Switches (Anchor Penta or similar) | Lights (Orient or Similar)',
       Mandir:
-        '4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
+        '1 NOS: 4 x 4 SqFt. Mandir finished With HDHMR/Veneer with PU Polish & Jali cutting on sides',
       Console:
-        'Designer furniture element - Ready made Price range upto Rs.25,000/-',
+        '1NOS: Designer furniture element - Ready made Price range upto Rs.25,000/-',
       flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+        sideTables: '1 NOS: Designer furniture element - Ready made Price range upto Rs. 10,000/-',
+
       // Add descriptions for luxury package components...
     },
     ultraLuxury: {
@@ -115,11 +118,11 @@ const SvgMap = ({ data, name }) => {
         'POP Ceiling with cove, heavy duty channel & wooden design element POP (Sakarni) | Wires (Havells or Polycab) | Lights (Philips or similar)',
       CenterTable:
         'Designer furniture element - Ready made Price range upto Rs.50,000/-',
-      Sofa: 'Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 750 per mtr)',
+      Sofa: '3 Seat: Marandi wood and Fabric sofa Foam (High Density - 40 GSM) | Faric (upto Rs. 750 per mtr)',
       diningTableSet:
         '6 seater luxury dining table with chairs Sheesham wood | Italian counter top',
       crockeryUnit:
-        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Crossbond or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
+        'Crockery unit (HDHMR or plywood) with laminate finish on carcass & Veneer / PU polish on shutters and tinted glass HDHMR (Japaness MDH-MR  or similar) | Hardware (Hettich or similar) | 0.8 Laminate (Skydecor or similar)',
       tvpanel:
         'Standard TV Panel including hardware, laminates on carcass, veneer / PU polish on shutters Carcass (Action Tesa or Local plywood) | Hardware (Hettich or Hafele) | 0.8 mm Laminate (Skydecor or similar)',
       upvcWindow:
@@ -128,26 +131,21 @@ const SvgMap = ({ data, name }) => {
         'Electrical work with new points, relocation including switches & boards Wires (Havells or Polycab) | Switches (Legrand or Crabtree or similar) | Lights (Orient or Similar)',
       Mandir: '4 x 5 SqFt. Corian stone Mandir',
       Console:
-        'Designer furniture element - Ready made Price range upto Rs.40,000/-',
+        '1 NOS: Designer furniture element - Ready made Price range upto Rs.40,000/-',
       flooring:
         'Tiling work including demolition, material, grouting, cleaning, finishing Tile size 32"X64" (Price range Rs. 80-100/-)',
+        sideTables: '1 NOS: Designer furniture element - Ready made Price range upto Rs. 20,000/-',
       // Add descriptions for ultra luxury package components...
     },
     // Add descriptions for other packages...
   }
   const initialSquareFootage = {
-    falseCeiling: 165,
-    electrical: 10,
-    flooring: 48,
-    tvpanel: 64,
-    CenterTable: 1,
-    Console: 1,
-    Mandir: 70,
-    upvcWindow: 10,
-    walls: 400,
-    crockeryUnit: 50,
-    diningTableSet: 80,
-    barUnit: 28,
+    falseCeiling: 140,
+    flooring: 140,
+    tvpanel: 49,
+    upvcWindow: 72,
+    walls: 343,
+    crockeryUnit: 35,
   }
 
   console.log('data: ', data)
@@ -943,9 +941,7 @@ const SvgMap = ({ data, name }) => {
                 polygon === 'walls' ||
                 polygon === 'tvpanel' ||
                 polygon === 'upvcWindow' ||
-                polygon === 'sofa' ||
                 polygon === 'crockeryUnit' ||
-                polygon === 'CenterTable' ||
                 polygon === 'diningTableSet' ||
                 polygon === 'falseCeiling' ? (
                   <span
