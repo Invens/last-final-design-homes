@@ -12,52 +12,52 @@ const SvgMap = ({ data, name }) => {
     premium: {
       KitchenCabinets: { pricePerSqFt: 1250 },
       walls: { pricePerSqFt: 55 },
-      upvcWindow: { pricePerSqFt: 800 },
-      falseCeiling: { pricePerSqFt: 185 },
+      upvcWindow: { pricePerSqFt: 780 },
+      falseCeiling: { pricePerSqFt: 180 },
       Electrical: { price: 5000 },
-      Plumbing: { pricePerSqFt: 1300 },
-      'Base Cabinets Panel 1': { pricePerSqFt: 1500 },
-      'Wall Cabinets Panel 1': { pricePerSqFt: 1500 },
-      'Loft Cabinets Panel 1': { pricePerSqFt: 1500 },
-      'Base Cabinets Panel 2': { pricePerSqFt: 1500 },
-      'Wall Cabinets Panel 2': { pricePerSqFt: 1500 },
-      'Loft Cabinets Panel 2': { pricePerSqFt: 1500 },
-      CounterTop: { price: 50000 },
-      KitchenWalls: { pricePerSqFt: 1500 },
-      Flooring: { pricePerSqFt: 180 },
+      Plumbing: { price: 18000 },
+      'Base Cabinets Panel 1': { pricePerSqFt: 1380 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 1480 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 1180 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 1380 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 1480 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 1180 },
+      CounterTop: { pricePerSqFt: 345 },
+      KitchenWalls: { pricePerSqFt: 175 },
+      Flooring: { pricePerSqFt: 178 },
     },
     luxury: {
       KitchenCabinets: { pricePerSqFt: 1450 },
       walls: { pricePerSqFt: 65 },
-      upvcWindow: { pricePerSqFt: 1100 },
-      falseCeiling: { pricePerSqFt: 210 },
-      Electrical: { price: 13000 },
-      Plumbing: { pricePerSqFt: 1600 },
-      'Base Cabinets Panel 1': { pricePerSqFt: 1800 },
-      'Wall Cabinets Panel 1': { pricePerSqFt: 1800 },
-      'Loft Cabinets Panel 1': { pricePerSqFt: 1800 },
-      'Base Cabinets Panel 2': { pricePerSqFt: 1800 },
-      'Wall Cabinets Panel 2': { pricePerSqFt: 1800 },
-      'Loft Cabinets Panel 2': { pricePerSqFt: 1800 },
-      CounterTop: { price: 85000 },
-      KitchenWalls: { pricePerSqFt: 2000 },
-      Flooring: { pricePerSqFt: 498 },
+      upvcWindow: { pricePerSqFt: 1080 },
+      falseCeiling: { pricePerSqFt: 205 },
+      Electrical: { price: 18000 },
+      Plumbing: { price: 22000},
+      'Base Cabinets Panel 1': { pricePerSqFt: 1980 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 1980 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 1680 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 1980 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 1980 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 1680 },
+      CounterTop: { pricePerSqFt: 490 },
+      KitchenWalls: { pricePerSqFt: 215 },
+      Flooring: { pricePerSqFt: 215 },
     },
     ultraLuxury: {
       KitchenCabinets: { pricePerSqFt: 1800 },
       walls: { pricePerSqFt: 90 },
-      upvcWindow: { pricePerSqFt: 1500 },
-      falseCeiling: { pricePerSqFt: 250 },
-      Electrical: { price: 18000 },
-      Plumbing: { pricePerSqFt: 2000 },
-      'Base Cabinets Panel 1': { pricePerSqFt: 2500 },
-      'Wall Cabinets Panel 1': { pricePerSqFt: 2500 },
-      'Loft Cabinets Panel 1': { pricePerSqFt: 2500 },
-      'Base Cabinets Panel 2': { pricePerSqFt: 2500 },
-      'Wall Cabinets Panel 2': { pricePerSqFt: 2500 },
-      'Loft Cabinets Panel 2': { pricePerSqFt: 2500 },
-      CounterTop: { price: 150000 },
-      KitchenWalls: { pricePerSqFt: 2500 },
+      upvcWindow: { pricePerSqFt: 1480 },
+      falseCeiling: { pricePerSqFt: 245 },
+      Electrical: { price: 25000 },
+      Plumbing: { price: 28000 },
+      'Base Cabinets Panel 1': { pricePerSqFt: 2480 },
+      'Wall Cabinets Panel 1': { pricePerSqFt: 2480 },
+      'Loft Cabinets Panel 1': { pricePerSqFt: 2180 },
+      'Base Cabinets Panel 2': { pricePerSqFt: 2480 },
+      'Wall Cabinets Panel 2': { pricePerSqFt: 2480 },
+      'Loft Cabinets Panel 2': { pricePerSqFt: 2180 },
+      CounterTop: { pricePerSqFt: 790 },
+      KitchenWalls: { pricePerSqFt: 490 },
       Flooring: { pricePerSqFt: 499 },
     },
   }
@@ -199,20 +199,19 @@ const SvgMap = ({ data, name }) => {
   }
   const initialSquareFootage = {
     falseCeiling: 80,
-    Electrical: 1,
     Flooring: 80,
-    upvcWindow: 45,
-    walls: 65,
+    upvcWindow: 20,
+    walls: 196,
     Plumbing: 50,
-    CounterTop: 80,
+    CounterTop: 96,
     KitchenWalls: 196,
     KitchenCabinets: 50,
-    'Base Cabinets Panel 1': 26,
-    'Wall Cabinets Panel 1': 26,
+    'Base Cabinets Panel 1': 25,
+    'Wall Cabinets Panel 1': 25,
     'Loft Cabinets Panel 1': 26,
-    'Base Cabinets Panel 2': 26,
-    'Wall Cabinets Panel 2': 26,
-    'Loft Cabinets Panel 2': 26,
+    'Base Cabinets Panel 2': 20,
+    'Wall Cabinets Panel 2': 20,
+    'Loft Cabinets Panel 2': 20,
   }
   console.log('data: ', data)
   console.log('name: ', name)
@@ -991,7 +990,14 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span>{polygon} </span>
+              <span className="font-bold text-lg capitalize">{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}>
+                    {' '}
+                    - {editableSquareFootage[polygon]} sqft
+                  </span>
+                )}
+
                 {polygon === 'CounterTop' ||
                 polygon === 'Flooring' ||
                 polygon === 'walls' ||
