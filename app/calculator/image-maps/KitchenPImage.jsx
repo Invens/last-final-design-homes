@@ -1012,7 +1012,13 @@ const SvgMap = ({ data, name }) => {
               }}
             >
               <div className="float-left">
-                <span>{polygon} </span>
+              <span className="font-bold text-lg capitalize">{polygon} </span>
+                {editableSquareFootage[polygon] && (
+                  <span style={{ fontSize: '12px' }}>
+                    {' '}
+                    - {editableSquareFootage[polygon]} sqft
+                  </span>
+                )}
                 {polygon === 'CounterTop' ||
                 polygon === 'Flooring' ||
                 polygon === 'walls' ||
