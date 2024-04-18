@@ -93,7 +93,7 @@ const SvgMap = ({ data, name }) => {
       tvpanel:
         'Standard HDHMR TV panel including hardware, laminates on carcass and shutters Carcass (Cross Bond or similar) | Hardware (Stylus or equivalent) | 0.7mm Laminate (Skydecor or similar) | 1mm Laminate (Merino or similar)',
       upvcWindow: 'Premium UPVC windows UPVC (Deceuninck or Veka or similar)',
-      electrical:
+      Electrical:
         'Electrical work including point relocation excluding switches Wires (Havells or Polycab)',
       Mandir: '3 x 4 SqFt. Mandir MDF finished with Laminate',
       Console:
