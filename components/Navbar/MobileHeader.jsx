@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSpring, animated } from 'react-spring'
+
 import ColorSwitch from '../../components/ColorSwitch/page'
 import { SocialIcon } from 'react-social-icons'
 import PopupForm from '../popupform/page'
@@ -13,6 +14,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
+import MaxWidthWrapper from '../MaxWidthWrapper'
 
 const MobileHeader = () => {
   const [hoveredItem, setHoveredItem] = useState(null)
@@ -68,6 +70,7 @@ const MobileHeader = () => {
 
   return (
     <>
+    <MaxWidthWrapper>
       <div className="relative lg:hidden " style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
@@ -510,46 +513,7 @@ const MobileHeader = () => {
                              
                             </div>
                           </ul>
-                          <ul className="text-base text-black">
-                            <h3 className="text-3xl">Selected Homes</h3>
-                            <Link href="/astounding-lobby-area-designs">
-                              <li>Astounding Lobby Areas</li>
-                            </Link>
-                            <Link href="/artistic-bedroom-designs">
-                              <li>Artistic Bedroom</li>
-                            </Link>
-                            <Link href="/comforting-balcony-area-designs">
-                              <li>Comfort balcony Area</li>
-                            </Link>
-                            <Link href="/soulful-kids-room-designs">
-                              <li>Soulful kids Room</li>
-                            </Link>
-                            <Link href="/relaxed-walk-in-wardrobe-designs">
-                              <li>Relaxed Walk in Wardrobe</li>
-                            </Link>
-                            <Link href="/handsome-modular-wardrobe-designs">
-                              <li>Handsome Modular Wardrobe</li>
-                            </Link>
-                            <Link href="/exquisite-bathroom-remodel-designs">
-                              <li>Exquisite Bathroom</li>
-                            </Link>
-                            <Link href="/chilled-party-bar-unit-designs">
-                              <li>Chilled Out Bar & Party Areas</li>
-                            </Link>
-                            <Link href="/blissful-parents-room-designs-ideas">
-                              <li>Blissful Parents Rooms</li>
-                            </Link>
-                            <Link href="/spellbinding-living-room-designs">
-                              <li>Spellbinding Living Rooms</li>
-                            </Link>
-                            <Link href="/delicious-modular-kitchen-designs">
-                              <li>Delicious Kitchens</li>
-                            </Link>
-                            <Link href="/mesmerizing-modern-home-interiors">
-                              <li>Mesmerising Modern Interiors</li>
-                            </Link>
-                        
-                          </ul>
+                       
                         </div>
 
                         <div>
@@ -2182,6 +2146,7 @@ const MobileHeader = () => {
       </div>
 
       <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
+      </MaxWidthWrapper>
     </>
   )
 }

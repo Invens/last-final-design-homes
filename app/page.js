@@ -10,8 +10,6 @@ const Brands = dynamic(() => import('../components/Brands/page'));
 const TabsSection = dynamic(() => import('../components/TabsSection/page'));
 const EndToEndImageGrid = dynamic(() => import('../components/EndToEndImageGrid/page'));
 const FAQ = dynamic(() => import('../components/FAQ/page'));
-const MyForm = dynamic(() => import('../components/MyForm'));
-const PostFooter = dynamic(() => import('../components/PostFooter/page'));
 const Footer = dynamic(() => import('../components/Footer/Footer'));
 const ColorSwitch = dynamic(() => import('../components/ColorSwitch/page'));
 import Animation from '../app/animation/page'
