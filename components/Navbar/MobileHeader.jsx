@@ -70,7 +70,7 @@ const MobileHeader = () => {
 
   return (
     <>
-    <MaxWidthWrapper>
+   
       <div className="relative lg:hidden " style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
 
@@ -88,7 +88,7 @@ const MobileHeader = () => {
               <Link href="/"> Home</Link>
             </button>
             <Link href="/modular-interior-design-ideas">
-              <button className="flex flex-col items-center text-xs font-bold">
+              <button className="flex flex-col items-center text-xs font-bold ml-2">
                 <FontAwesomeIcon
                   icon={faPalette}
                   size="2x"
@@ -98,7 +98,7 @@ const MobileHeader = () => {
               </button>
             </Link>
             <button
-              className="flex flex-col items-center text-xs font-bold relative"
+              className="flex flex-col items-center text-xs font-bold relative ml-[20px]"
               onClick={togglePopup}
             >
               <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
@@ -110,7 +110,7 @@ const MobileHeader = () => {
                     src="/designImages/booknowanimation.gif"
                     width={1000}
                     height={1000}
-                    className=""
+                 
                   />
                 </div>
               </div>
@@ -181,6 +181,7 @@ const MobileHeader = () => {
         </div>
       </div>
       {/* Mobile Header */}
+      <MaxWidthWrapper>
       <div className="lg:hidden sticky top-6 z-40">
         {mobileMenuVisible && (
           <div className="" style={{ zIndex: '5600' }}>
@@ -2144,9 +2145,9 @@ const MobileHeader = () => {
           </div>
         )}
       </div>
-
-      <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
       </MaxWidthWrapper>
+      <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
+     
     </>
   )
 }
