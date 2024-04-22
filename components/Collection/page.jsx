@@ -368,7 +368,7 @@ const Collection = () => {
                   height={350}
                   width={700}
                   className="rounded shadow-md"
-                  src="/images/asdf.png"
+                  src="/images/Selected.png"
                   alt=""
                 />
                 </Link>

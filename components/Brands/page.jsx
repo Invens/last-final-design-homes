@@ -25,6 +25,12 @@ const MobileCard = ({ image, title, description, slug }) => {
     </div>
   )
 }
+const containerStyle = {
+  position: 'relative',
+  height: 'fit-content', // Adjust as needed
+  width: 'fit-content', // Adjust as needed
+  display: 'inline-block', // Ensure the container only takes the size of its content
+}
 
 const MobileCarousel = () => {
   const responsive = {
@@ -189,7 +195,26 @@ const Brands = () => {
       </div> */}
      
       {/* section visible in the large view */}
+      <div className='flex justify-center mt-4'>
+      <div style={containerStyle} className="mb-2">
+              <div style={textContainerStyle} className="flex justify-center ">
+                <h1 className="sm:text-4xl text-xl font-bold text-center">
+                Our Exclusive Interior Packages
+                </h1>
+
+              </div>
+              <Image
+                width={1000}
+                height={1000}
+                src="/images/simple-gold-brush-stroke-banner-5.png"
+                alt="Paint Brush"
+                style={backgroundImageStyle}
+              />
+            </div>
+      </div>
+      
       <div className="jiu">
+     
         <motion.div
           variants={imagesVariant}
           initial="initial"

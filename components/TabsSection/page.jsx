@@ -1,14 +1,24 @@
 'use client'
 import React, { useState } from 'react'
-import { Tabs, Tab, Box, Container, Typography } from '@mui/material'
+import { Tabs, Tab, Box, Container, Typography, Button } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Image from 'next/image'
-// Sample data for images
+
+// Sample data for images and links
 const tabData = [
   // Data for Tab 1
-  [' /images/a.png', ' /images/b.png', ' /images/c.png', ' /images/d.png'],
-  [' /images/e.png', ' /images/f.png', ' /images/g.png', ' /images/h.png'],
-  [' /images/i.png', ' /images/j.png', ' /images/k.png', ' /images/l.png'],
+  {
+    images: ['/images/a.png', '/images/b.png', '/images/c.png', '/images/d.png'],
+    links: ['/modular-interiors', '/modular-interiors', '/modular-interiors', '/modular-interiors']
+  },
+  {
+    images: ['/images/e.png', '/images/f.png', '/images/g.png', '/images/h.png'],
+    links: ['/home-interior-services-india', '/home-interior-services-india', '/home-interior-services-india', '/home-interior-services-india']
+  },
+  {
+    images: ['/images/i.png', '/images/j.png', '/images/k.png', '/images/l.png'],
+    links: ['/structural-renovation-services', '/structural-renovation-services', '/structural-renovation-services', '/structural-renovation-services']
+  },
   // Data for Tab 2 (and so on...)
   // ...
 ]
@@ -36,13 +46,11 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     textTransform: 'none',
     fontWeight: 400,
     fontSize: 24,
-
     marginRight: theme.spacing(1),
-    color: '#4B5563',
-    fontFamily: 'BioRhyme',
-    fontSize: '20px',
+    color: '#4B5563', // Change this to the desired font color
+    fontFamily: 'BioRhyme', // Use BioRhyme font family
     '&.Mui-selected': {
-      color: '#68D391',
+      color: '#68D391', // Change this to the desired font color when tab is selected
     },
     '&.Mui-focusVisible': {
       backgroundColor: 'rgba(100, 95, 228, 0.32)',
@@ -52,9 +60,11 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
 
 const ResponsiveTabs = () => {
   const [value, setValue] = useState(0)
+  const [currentLink, setCurrentLink] = useState(tabData[0].links[0])
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
+    setCurrentLink(tabData[newValue].links[0])
   }
 
   const containerStyle = {
@@ -83,15 +93,8 @@ const ResponsiveTabs = () => {
   return (
     <>
       <div className="div">
-        <section class="bordered bordersec"></section>
-        {/* <div className="main-hero">
-          <div className="cover">
-            <div className="box ai"></div>
-            <div className="box bi"></div>
-          </div>
-        </div> */}
+        <section className="bordered bordersec"></section>
         <div className="mt-16">
-          {/* <h1>End-to-End Interior Solutions</h1> */}
           <div className="flex justify-center items-center sm:my-8">
             <div style={containerStyle}>
               <div style={textContainerStyle} className="flex justify-center ">
@@ -118,17 +121,17 @@ const ResponsiveTabs = () => {
               aria-label="styled tabs example"
               className="flex justify-center"
             >
-              <StyledTab label="Exterior " />
-              <StyledTab label="Interior " />
-              <StyledTab label="Complete " />
+              <StyledTab label="Exterior" />
+              <StyledTab label="Interior" />
+              <StyledTab label="Structural" />
             </StyledTabs>
           </Box>
 
           {/* Display the images based on the selected tab */}
-          {tabData.map((tabImages, index) => (
+          {tabData.map((tab, index) => (
             <TabPanel key={index} value={value} index={index}>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-8 justify-center">
-                {tabImages.map((image, imgIndex) => (
+                {tab.images.map((image, imgIndex) => (
                   <img
                     key={imgIndex}
                     src={image}
@@ -139,6 +142,11 @@ const ResponsiveTabs = () => {
               </div>
             </TabPanel>
           ))}
+          <div className="flex justify-center">
+            <Button variant="outlined" color="primary" href={currentLink}  rel="noopener noreferrer">
+              View More
+            </Button>
+          </div>
         </Container>
       </div>{' '}
     </>

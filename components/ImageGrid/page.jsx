@@ -172,13 +172,14 @@ const ImageGrid = () => {
 
           <motion.div
             variants={textVariant}
-            className="flex justify-center items-center sm:my-24 my-8"
+            className="flex justify-center items-center sm:my-8"
           >
-            <div style={containerStyle} className="mb-2">
+            <div style={containerStyle} className="">
               <div style={textContainerStyle} className="flex justify-center ">
                 <h1 className="sm:text-4xl text-xl font-bold text-center">
-                  Top Picks For You
+                Check Us Out for Interiors & Architectural Works
                 </h1>
+
               </div>
               <Image
                 width={1000}
@@ -190,7 +191,7 @@ const ImageGrid = () => {
             </div>
           </motion.div>
           <motion.p variants={textVariant} className="text-gray-600">
-            Impressive Collection For Your Home
+          Some of the Most Affordable Interiors and Architectural works are here....
           </motion.p>
         </motion.div>
 

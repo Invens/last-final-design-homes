@@ -69,7 +69,7 @@ const MobileHeader = () => {
   }
 
   return (
-    <div className='max-w-full'>
+    <div className=''>
 
       <div className="relative lg:hidden w-auto " style={{ zIndex: '8000000' }}>
         {/* Your existing content */}
@@ -77,7 +77,7 @@ const MobileHeader = () => {
         {/* Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 w-full">
           <div
-            className={`bg-white  text-black w-full h-16 flex items-center justify-around`}
+            className={`bg-white  text-black w-full h-16 pb-2 flex items-center justify-around`}
           >
             <button className="flex flex-col items-center text-xs font-bold">
               <FontAwesomeIcon
@@ -181,13 +181,13 @@ const MobileHeader = () => {
         </div>
       </div>
       {/* Mobile Header */}
-      <MaxWidthWrapper>
+    
         <div className="lg:hidden sticky top-6 z-40">
           {mobileMenuVisible && (
             <div className="" style={{ zIndex: '5600' }}>
               <div style={{ zIndex: '1200' }}>
                 <animated.div
-                  className="bg-white bg-gradient-to-t from-green-400 text-black fixed top-16 left-0 w-full h-full overflow-y-scroll ${mobileMenuVisible ? 'block' : "
+                  className="bg-white bg-gradient-to-t from-green-400 text-black fixed top-16 left-0  h-full overflow-y-scroll ${mobileMenuVisible ? 'block' : "
                   style={{
                     transition: 'opacity 0.3s ease-in-out',
                     marginTop: '35px',
@@ -1799,13 +1799,21 @@ const MobileHeader = () => {
                         & Get Flat 7% off by any vendor across Delhi - NCR.
                       </p>
                     </div>
+                    <div className='flex justify-center'>
+                      <Image
+                      src="/images/monkey.gif"
+                      width={1000}
+                      height={1000}
+                      />
+                    </div>
                     <div
                       className="font-bold "
                       style={{
-                        marginTop: '30px',
-                        paddingBottom: '150px',
+                        marginTop: '-50px',
+                        paddingBottom: '220px',
                         textAlign: 'center',
                         fontSize: '60px',
+                        
                       }}
                     >
                       <h1>DESIGN INDIAN HOMES</h1>
@@ -1816,7 +1824,6 @@ const MobileHeader = () => {
             </div>
           )}
         </div>
-      </MaxWidthWrapper>
       <PopupForm showPopup={showPopup} togglePopup={togglePopup} />
 
     </div>
@@ -1824,11 +1831,16 @@ const MobileHeader = () => {
 }
 
 const AccordionSection = ({ title, isActive, onClick, children }) => {
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevents the default action (e.g., page scroll)
+    onClick(); // Call the provided onClick function
+  };
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-between items-center py-2 px-4 cursor-pointer border-b-1 border-black">
         <p className="text-xl font-semibold text-left">{title}</p>
-        <button onClick={onClick} className="text-red-400 focus:outline-none">
+        <button onClick={handleClick} className="text-red-400 focus:outline-none">
           {isActive ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1864,11 +1876,11 @@ const AccordionSection = ({ title, isActive, onClick, children }) => {
       </div>
       {isActive && (
         <div className="px-4 py-2 border-t border-gray-300">
-          {children /* Render the content passed as children */}
+          {children}
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default MobileHeader

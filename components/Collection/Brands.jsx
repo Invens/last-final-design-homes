@@ -126,6 +126,8 @@ const data = [
 ]
 
 const containerStyle = {
+  marginTop: '40px',
+  marginBottom: '40px',
   position: 'relative',
   height: 'fit-content', // Adjust as needed
   width: 'fit-content', // Adjust as needed
@@ -178,11 +180,11 @@ const Brands = () => {
       <div className="flex items-center justify-c">
         
 
-        <div className="w-full">
-          <div className="flex justify-center items-center sm:my-8">
+        <div className="w-full ">
+          <div className="flex justify-center items-center">
             <div style={containerStyle} className="mr-[15%]">
               <div style={textContainerStyle} className="flex justify-center ">
-                <h1 className="sm:text-4xl text-xl font-bold text-center   mx-auto">
+                <h1 className="sm:text-4xl text-xl font-bold text-center  mx-auto">
                   Our Corporate Presence
                 </h1>
               </div>

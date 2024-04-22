@@ -156,7 +156,7 @@ const EndToEndImageGrid = () => {
             <div style={containerStyle} className="mb-4">
               <div style={textContainerStyle} className="flex justify-center ">
                 <h1 className="sm:text-4xl text-xl font-bold text-center">
-                  End To End Structural
+                With us, Feel Relaxed for any Renovation Works
                 </h1>
               </div>
               <Image
