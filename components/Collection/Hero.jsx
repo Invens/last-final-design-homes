@@ -56,11 +56,11 @@ const Hero = () => {
   }
 
   return (
-    <div className='lg:mt-4 md:mt-[35px] sm:mt-[5px] xs:mt-1'>
+    <div className=''>
       <div id="fry">
-        <div style={containerStyle} className='mt-[50px]'>
+        <div style={containerStyle} className='mt-4 '>
           <div style={textContainerStyle}>
-            <h3 className="sm:text-4xl text-xl font-bold  ">
+            <h3 className="sm:text-4xl text-lg font-bold  ">
               INDIA’S NO.1 INTERIOR & ARCHITECTURAL BRAND
             </h3>
           </div>
