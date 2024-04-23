@@ -40,7 +40,7 @@ const cardsData = [
     link: '/modular-interiors',
   },
   {
-    image: 'https://api.designindianwardrobe.com/uploads/2-BEDR~1.JPE',
+    image: 'https://api.designindianwardrobe.com/uploads/3-bhk-flat-interior-apartment-design-in-delhi-gurgaon-noida-india%20(5).jpg',
     heading: 'Interior Design Solutions',
     description: 'Best Interior Designer in Delhi, Gurgaon, Noida India',
     link: '/home-interior-designs',
@@ -51,17 +51,17 @@ const cardsData = [
     heading: 'End to End Interior',
     description:
       'Best End to End Interior Solutions in Delhi, Gurgaon, Noida India',
-    link: '/architectural-designs-services-india',
+    link: '/home-interior-services-india',
   },
   {
-    image: 'https://api.designindianwardrobe.com/uploads%2FBEAUTI~2.JPE',
+    image: 'https://api.designindianwardrobe.com/uploads/top-architects-in-delhi-noida-gurgaon%20(3).jpg',
     heading: 'Architectural Designs',
     description:
       'Best Architectural Designers Designer in Delhi, Gurgaon, Noida India',
     link: '/architectural-designs-services-india',
   },
   {
-    image: 'https://api.designindianwardrobe.com/uploads/BEAUTI~1.JPE',
+    image: 'https://api.designindianwardrobe.com/uploads/beautiful-lobby-area-design-ideas-in-delhi-gurgaon-noida-india%20(3).jpg',
     heading: 'Selected Homes',
     description: 'Best home designer in Delhi, Gurgaon, Noida India',
     link: '/selected-homes-exclusive-interior-designs-india',

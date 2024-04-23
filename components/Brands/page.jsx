@@ -6,101 +6,6 @@ import Link from 'next/link'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
-const MobileCard = ({ image, title, description, slug }) => {
-  return (
-    <div className="w-[340px] h-[400px] mx-auto bg-white rounded-md overflow-hidden shadow-lg m-4">
-      <Link href={`/offers/${slug}`}>
-        <Image
-          height={1000}
-          width={1000}
-          src={image}
-          alt="Card Image"
-          className="w-full h-48 object-cover"
-        />
-        <div className="p-4 flex-col justify-between h-1/2">
-          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-600">{description}</p>
-        </div>
-      </Link>
-    </div>
-  )
-}
-const containerStyle = {
-  position: 'relative',
-  height: 'fit-content', // Adjust as needed
-  width: 'fit-content', // Adjust as needed
-  display: 'inline-block', // Ensure the container only takes the size of its content
-}
-
-const MobileCarousel = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  }
-
-  const slides = [
-    {
-      image: '/images/brands/slides1.jpeg',
-      title: 'AFFORDABLE, YET WHOLESOME',
-      description: 'On Top Priority',
-      slug: '#top-priority',
-    },
-    {
-      image: '/images/brands/slides2.jpeg ',
-      title: 'POCKET FRIENDLY, YET WELCOMING',
-      description: 'Handcrafted for You',
-      slug: '#top-priority',
-    },
-    {
-      image: '/images/brands/slides3.jpeg',
-      title: 'MINIMAL, YET OVERALL COVERAGE',
-      description: 'Be Carefree & Happy',
-      slug: '#top-priority',
-    },
-    {
-      image: '/images/brands/slides4.jpeg',
-      title: 'LUXURY, YET AFFORDABLE',
-      description: 'Over the Top',
-      slug: '#top-priority',
-    },
-    {
-      image: '/images/brands/slides5.jpeg',
-      title: 'HIGH QUALITY WITH COMPLETE COMMITMENT',
-      description: 'Premier Plus ',
-      slug: '#top-priority',
-    },
-  ]
-  return (
-    <Carousel responsive={responsive} infinite={true}>
-      {slides.map((card) => (
-        <div key={card.title} className="m-4">
-          <MobileCard
-            image={card.image}
-            title={card.title}
-            description={card.description}
-            slug={card.slug}
-          />
-        </div>
-      ))}
-    </Carousel>
-  )
-}
-
 const Brands = () => {
   // const slides = [
   //   {
@@ -430,4 +335,100 @@ const Brands = () => {
     </>
   )
 }
+const MobileCard = ({ image, title, description, slug }) => {
+  return (
+    <div className="w-[340px] h-[400px] mx-auto bg-white rounded-md overflow-hidden shadow-lg m-4">
+      <Link href={`/offers/${slug}`}>
+        <Image
+          height={1000}
+          width={1000}
+          src={image}
+          alt="Card Image"
+          className="w-full h-48 object-cover"
+        />
+        <div className="p-4 flex-col justify-between h-1/2">
+          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+          <p className="text-gray-600">{description}</p>
+        </div>
+      </Link>
+    </div>
+  )
+}
+const containerStyle = {
+  position: 'relative',
+  height: 'fit-content', // Adjust as needed
+  width: 'fit-content', // Adjust as needed
+  display: 'inline-block', // Ensure the container only takes the size of its content
+}
+
+const MobileCarousel = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  }
+
+  const slides = [
+    {
+      image: '/images/brands/slides1.jpeg',
+      title: 'AFFORDABLE, YET WHOLESOME',
+      description: 'On Top Priority',
+      slug: '#top-priority',
+    },
+    {
+      image: '/images/brands/slides2.jpeg ',
+      title: 'POCKET FRIENDLY, YET WELCOMING',
+      description: 'Handcrafted for You',
+      slug: '#top-priority',
+    },
+    {
+      image: '/images/brands/slides3.jpeg',
+      title: 'MINIMAL, YET OVERALL COVERAGE',
+      description: 'Be Carefree & Happy',
+      slug: '#top-priority',
+    },
+    {
+      image: '/images/brands/slides4.jpeg',
+      title: 'LUXURY, YET AFFORDABLE',
+      description: 'Over the Top',
+      slug: '#top-priority',
+    },
+    {
+      image: '/images/brands/slides5.jpeg',
+      title: 'HIGH QUALITY WITH COMPLETE COMMITMENT',
+      description: 'Premier Plus ',
+      slug: '#top-priority',
+    },
+  ]
+  return (
+    <Carousel responsive={responsive} infinite={true}>
+      {slides.map((card) => (
+        <div key={card.title} className="m-4">
+          <MobileCard
+            image={card.image}
+            title={card.title}
+            description={card.description}
+            slug={card.slug}
+          />
+        </div>
+      ))}
+    </Carousel>
+  )
+}
+
+
 export default Brands

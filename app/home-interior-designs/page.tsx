@@ -182,7 +182,7 @@ const Page = ({}) => {
             >
               {categoryData.image && (
                 <Link
-                  href={`/interior/${categoryFolderMapping[categoryData.id]}`}
+                  href={`/home-interior-designs/${categoryFolderMapping[categoryData.id]}`}
                 >
                   <Image
                     width={1000}

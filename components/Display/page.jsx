@@ -229,7 +229,9 @@ const Display = () => {
         </article>
         {/* sidezi */}
         <section className="w-full ">
+          <Link href="/book-a-interior-design-visit">
           <Carousel />
+          </Link>
         </section>
       </div>
       <section class="bordered bordersec"></section>

@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import ColorSwitch from '../../components/ColorSwitch/page'
 import { SocialIcon } from 'react-social-icons'
 import PopupForm from '../popupform/page'
-import { faPhone, faHome, faHomeUser } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faHome, faHomeUser, faDiagramProject, faProjectDiagram, faBuilding } from '@fortawesome/free-solid-svg-icons'
 import {
   faPalette,
   faPencil,
@@ -114,16 +114,16 @@ const MobileHeader = () => {
                   />
                 </div>
               </div>
-              <span className="mt-5">Book Now</span>
+              <span className="mt-5">Connect</span>
             </button>
             <Link href="/homes-by-design-indian-homes">
               <button className="flex flex-col items-center text-xs font-bold">
                 <FontAwesomeIcon
-                  icon={faHomeUser}
+                  icon={faBuilding}
                   size="2x"
                   style={{ height: '20px', width: '20px' }}
                 />
-                Our Homes
+                Projects
               </button>
             </Link>
             <button
@@ -193,11 +193,18 @@ const MobileHeader = () => {
                   marginTop: '35px',
                 }}
               >
+                <div className="absolute mt-[-40px]">
+                <Image
+                  src="/images/eye.gif"
+                  width={1000}
+                  height={1000}
+                  className='h-[100px] w-[200px] '
+                  />
+                </div>
+                
                 <div className="flex justify-end p-4">
                   <div className="flex" style={{ marginLeft: '-40px' }}>
-                    {/* <ColorSwitch /> */}
-
-                    {/* <ThemeSwitcher /> */}
+                  
                   </div>
 
                   <button
@@ -613,7 +620,7 @@ const MobileHeader = () => {
                     onClick={() => toggleSection('Interiors')}
                   >
                     <div
-                      className="bg-white shadow-2xl rounded-lg  w-full  h-fit text-black"
+                      className="bg-white shadow-2xl rounded-lg    h-fit text-black"
                       onMouseLeave={handleMouseLeave}
                     >
                       <div>
@@ -739,7 +746,7 @@ const MobileHeader = () => {
                           </ul>
                         </div>
 
-                        <div>
+                        <div className='p-2'>
                           <ul className="text-sm">
                             <h3 className="text-lg font-bold  border-b-4 border-red-500">
                               Renovation Services

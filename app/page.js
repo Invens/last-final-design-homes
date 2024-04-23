@@ -34,14 +34,18 @@ export default function Home() {
 
       <Hero/>
       </div>
-      <Collection />
-      {/* <ColorSwitch /> */}
       <ImageGrid />
       <Brands />
+      <EndToEndImageGrid />
+      <Collection />
+
+      {/* <ColorSwitch /> */}
+      
+     
       <Display />
       <Stepper />
       <TabsSection />
-      <EndToEndImageGrid />
+      
       <FAQ />
     
       <Footer />
