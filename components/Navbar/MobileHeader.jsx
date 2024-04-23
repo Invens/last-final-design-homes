@@ -229,6 +229,7 @@ const MobileHeader = () => {
                 </div>
                 <div className="flex flex-col gap-4 z-40">
                   <div className="flex gap-3"></div>
+                  <Link href="/modular-interior-design-ideas">
                   <AccordionSection
                     title="Design Ideas"
                     isActive={activeSection === 'designIdeas'}
@@ -241,9 +242,11 @@ const MobileHeader = () => {
                       >
                         <div>
                           <ul className="text-xs">
+                            <Link href="/modular-interior-design-ideas">
                             <h3 className="text-lg font-bold  border-b-4 border-red-500">
                               Modular Interior Designs
                             </h3>
+                            </Link>
                             <div className="text-sm">
                               <Link href="/modular-kitchen-top-brand-india">
                                 <li>Modular Kitchens</li>
@@ -613,7 +616,9 @@ const MobileHeader = () => {
                       </div>
                     </div>
                   </AccordionSection>
+                  </Link>
 
+                  <Link href="/home-interior-services-india">
                   <AccordionSection
                     title="Interiors"
                     isActive={activeSection === 'Interiors'}
@@ -626,9 +631,11 @@ const MobileHeader = () => {
                       <div>
                         <div className="p-2">
                           <ul className="text-sm">
+                            <Link href="/home-interior-services-india">
                             <h3 className="text-lg font-bold  border-b-4 border-red-500 ">
                               Types of Interior Design
                             </h3>
+                            </Link>
 
                             <div className="text-sm text-black mt-2">
                               <Link href="/1bhk-apartment-interior-designs">
@@ -935,7 +942,9 @@ const MobileHeader = () => {
                       />
                     </div>
                   </AccordionSection>
+                  </Link>
 
+                    <Link href="/architectural-designs-services-india">
                   <AccordionSection
                     title="Architectural"
                     isActive={activeSection === 'Architectural'}
@@ -947,9 +956,12 @@ const MobileHeader = () => {
                     >
                       <div className="">
                         <div className="">
+                          <Link href="/architectural-designs-services-india">
                           <h1 className="font-bold">
                             Architectural Décor Advice
                           </h1>
+                          </Link>
+
                           <p className="text-black text-sm">
                             Architectural tips, tricks, ideas and advice from
                             experts
@@ -1129,7 +1141,10 @@ const MobileHeader = () => {
                       </div>
                     </div>
                   </AccordionSection>
+                  </Link>
 
+
+                  <Link href="/modular-kitchen-top-brand-india">
                   <AccordionSection
                     title="Modular Kitchen"
                     isActive={activeSection === 'Modular Kitchen'}
@@ -1142,9 +1157,11 @@ const MobileHeader = () => {
                       <div className=" ">
                         <div className="">
                           <div className="">
+                            <Link href="/modular-kitchen-top-brand-india">
                             <h1 className="font-bold">
                               Modular Kitchen Décor Advice
                             </h1>
+                            </Link>
                             <p className="text-black text-xs">
                               Home décor tips, tricks, ideas and advice from
                               experts
@@ -1382,7 +1399,9 @@ const MobileHeader = () => {
                       </div>
                     </div>
                   </AccordionSection>
+                  </Link>
 
+                  <Link href="/wardrobe-design-gallery-india">
                   <AccordionSection
                     title="Wardrobes"
                     isActive={activeSection === 'Wardrobes'}
@@ -1395,9 +1414,10 @@ const MobileHeader = () => {
                       <div className="">
                         <div className="">
                           <div className="">
+                            <Link href="/wardrobe-design-gallery-india">
                             <h1 className="font-bold">
                               Wardrobes Décor Advice
-                            </h1>
+                            </h1></Link>
                             <p className="text-black text-left">
                               Home décor tips, tricks, ideas and advice from
                               experts
@@ -1597,7 +1617,7 @@ const MobileHeader = () => {
                       </div>
                     </div>
                   </AccordionSection>
-
+                  </Link>
 
                   <AccordionSection
                     title="More.."
