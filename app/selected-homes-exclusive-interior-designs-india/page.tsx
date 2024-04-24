@@ -168,9 +168,9 @@ const Page = ({}) => {
           / <span className="text-gray-600 text-sm">selected-homes</span>
         </div>
 
-        <div className="flex items-center b p-4">
+        <div className="flex items-center p-4">
           <div className="w-1 rounded bg-green-500 mr-2"></div>
-          <h1 className="text-3xl font-bold">Selected Homes</h1>
+          <h1 className="text-3xl font-bold border-l-4 border-green-500 pl-2">Selected Homes</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
           We bring you carefully-curated Artistic design ideas, to give your
@@ -181,7 +181,7 @@ const Page = ({}) => {
           your home interior requirements.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 ">
           {categoryDataArray.map((categoryData) => (
             <div
               key={categoryData.id}

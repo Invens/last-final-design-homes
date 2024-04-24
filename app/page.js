@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 const Omsairam = dynamic(() => import('../components/Navbar/Omsairam'));
-const Header = dynamic(() => import('../components/Navbar/Header'));
+import Header from '../components/Navbar/Header';
 const Collection = dynamic(() => import('../components/Collection/page'));
 const ImageGrid = dynamic(() => import('../components/ImageGrid/page'));
 const Display = dynamic(() => import('../components/Display/page'));

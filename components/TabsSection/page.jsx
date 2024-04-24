@@ -48,7 +48,7 @@ const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
     fontSize: 24,
     marginRight: theme.spacing(1),
     color: '#4B5563', // Change this to the desired font color
-    fontFamily: 'BioRhyme', // Use BioRhyme font family
+    fontFamily: 'inherit', // Use BioRhyme font family
     '&.Mui-selected': {
       color: '#68D391', // Change this to the desired font color when tab is selected
     },

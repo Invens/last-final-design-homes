@@ -606,7 +606,7 @@ const LocationsTabs = () => {
       textTransform: 'none',
       marginRight: theme.spacing(1),
       color: '#fff',
-      fontFamily: 'BioRhyme',
+      fontFamily: 'inherit',
       '&.Mui-selected': {
         color: '#000',
       },
