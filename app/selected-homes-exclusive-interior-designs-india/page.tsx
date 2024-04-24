@@ -93,6 +93,10 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, [])
+  const handleImageLoad = () => {
+    // After the image is loaded, scroll back to the top of the page
+    window.scrollTo(0, 0);
+  };
   const [title, setTitle] = useState(
     'Interior Design Ideas | Top Interior Design Company in India'
   )
@@ -192,6 +196,7 @@ const Page = ({}) => {
                   <Image
                     width={1000}
                     height={1000}
+                    onLoad={handleImageLoad}
                     src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
                     alt={categoryData.image.filename}
                     style={{

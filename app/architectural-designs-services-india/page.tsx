@@ -85,6 +85,10 @@ const Page = ({}) => {
     fetchCategoryData()
   }, [])
 
+  const handleImageLoad = () => {
+    // After the image is loaded, scroll back to the top of the page
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <ProgressBar />
@@ -119,6 +123,7 @@ const Page = ({}) => {
                   <Image
                     width={450}
                     height={200}
+                    onLoad={handleImageLoad}
                     src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
                     alt={categoryData.image.filename}
                     style={{

@@ -87,6 +87,10 @@ const Page = ({}) => {
 
     fetchCategoryData()
   }, []) // Empty dependency array to run the effect only once on mount
+  const handleImageLoad = () => {
+    // After the image is loaded, scroll back to the top of the page
+    window.scrollTo(0, 0);
+  };
   const [title, setTitle] = useState(
     'Luxury Residence | Modular Kitchens & Wardrobe Brand India'
   )
@@ -180,6 +184,7 @@ const Page = ({}) => {
                   <Image
                     width={1000}
                     height={1000}
+                    onLoad={handleImageLoad}
                     src={`https://api.designindianwardrobe.com/uploads/${categoryData.image.filename}`}
                     alt={categoryData.image.filename}
                     style={{
