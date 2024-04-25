@@ -165,7 +165,7 @@ const Page = ({}) => {
           / <span className="text-gray-600 text-sm">Interior</span>
         </div>
 
-        <div className="flex items-center b p-4">
+        <div className="flex items-center  p-4">
           <div className="w-1 h-8 rounded bg-green-500 mr-2"></div>
           <h1 className="text-3xl font-bold">Home Interior</h1>
         </div>

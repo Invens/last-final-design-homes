@@ -11,7 +11,7 @@ import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
 import Head from 'next/head'
 import Image from 'next/image'
-const Page = ({}) => {
+const Page = ({ }) => {
   const [photoIndex, setPhotoIndex] = useState(0)
   const [showSlider, setShowSlider] = useState(false)
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
@@ -62,14 +62,10 @@ const Page = ({}) => {
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
-          <title>
-            Duplex Interior Designs | Duplex Interiors in Delhi - NCR
-          </title>
+          <title>Best Designed Bathrooms - Bathroom Design Ideas in Delhi - NCR</title>
 
-          <meta
-            name="description"
-            content="Our brand is a top interior designing & architectural brand, we design & plan beautiful Duplex residences across Delhi, gurgaon, noida & India"
-          />
+          <meta name="description" content="check out some of our best designed bathrooms, we are the top largest interior designing & architectural brand across new delhi, india." />
+
 
           <meta name="Author" content="Design Indian Homes" />
           <meta name="Generator" content="www.designindianhomes.com" />
@@ -80,14 +76,8 @@ const Page = ({}) => {
           <meta name="Publisher" content="www.designindianhomes.com" />
           <meta name="Distribution" content="Global" />
           <meta name="Rating" content="general" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <link
-            rel="canonical"
-            href="https://designindianhomes.com/duplex-interior-designs/"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="canonical" href="https://designindianhomes.com/exquisite-bathroom-remodel-designs/" />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
           <meta name="MSNbot" content="Index, Follow" />
@@ -97,18 +87,10 @@ const Page = ({}) => {
           <meta name="dc.language" content="english" />
           <meta name="geo.region" content="IN-DL" />
           <meta name="geo.placename" content="Delhi" />
-          <meta
-            property="og:url"
-            content="https://designindianhomes.com/duplex-interior-designs/"
-          />
-          <meta
-            property="og:title"
-            content="Duplex Interior Designs | Duplex Interiors in Delhi - NCR"
-          />
-          <meta
-            property="og:description"
-            content="Our brand is a top interior designing & architectural brand, we design & plan beautiful Duplex residences across Delhi, gurgaon, noida & India"
-          />
+          <meta property="og:url" content="https://designindianhomes.com/" />
+          <meta property="og:title" content="Best Designed Bathrooms - Bathroom Design Ideas in Delhi - NCR" />
+          <meta property="og:description" content="check out some of our best designed bathrooms, we are the top largest interior designing & architectural brand across new delhi, india." />
+
         </head>
         {/* breadcrumb */}
         <div className="p-4  ">

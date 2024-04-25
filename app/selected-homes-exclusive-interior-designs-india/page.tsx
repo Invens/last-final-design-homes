@@ -112,54 +112,35 @@ const Page = ({}) => {
       <Omsairam />
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
-          <title>
-            Interior Design Ideas | Top Interior Design Company in India
-          </title>
+        <title>Best Designed Homes - Interior Designs in Delhi - India</title>
 
-          <meta
-            name="description"
-            content="We are a team of interior designers & architects, we are designing interiors for homes, residences, apartments, farmhouses, villas, societies across Delhi NCR India"
-          />
+<meta name="description" content ="check out some of our most premium designed residences, we are the top interior designing brand across new delhi, india. Connect with us today." />
 
-          <meta name="Author" content="Design Indian Homes" />
-          <meta name="Generator" content="www.designindianhomes.com" />
-          <meta name="Language" content="en" />
-          <meta name="robots" content="index, follow" />
-          <meta name="Copyright" content="©www.designindianhomes.com" />
-          <meta name="Designer" content="Design Indian Homes Unit" />
-          <meta name="Publisher" content="www.designindianhomes.com" />
-          <meta name="Distribution" content="Global" />
-          <meta name="Rating" content="general" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <link
-            rel="canonical"
-            href="https://designindianhomes.com/architectural-designs-services-india/
-"
-          />
-          <meta name="googlebot" content="index, follow" />
-          <meta name="Yahoobot" content="index, follow" />
-          <meta name="MSNbot" content="Index, Follow" />
-          <meta name="allow-search" content="yes" />
-          <meta name="country" content="India" />
-          <meta name="contactNumber" content="+91-98-99-26-49-78" />
-          <meta name="dc.language" content="english" />
-          <meta name="geo.region" content="IN-DL" />
-          <meta name="geo.placename" content="Delhi" />
-          <meta
-            property="og:url"
-            content="https://designindianhomes.com/architectural-designs-services-india/"
-          />
-          <meta
-            property="og:title"
-            content="Interior Design Ideas | Top Interior Design Company in India"
-          />
-          <meta
-            property="og:description"
-            content="We are a team of interior designers & architects, we are designing interiors for homes, residences, apartments, farmhouses, villas, societies across Delhi NCR India"
-          />
+
+<meta name="Author" content="Design Indian Homes" />
+<meta name="Generator" content="www.designindianhomes.com" />
+<meta name="Language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="Copyright" content="©www.designindianhomes.com" />
+<meta name="Designer" content="Design Indian Homes Unit" />
+<meta name="Publisher" content="www.designindianhomes.com" />
+<meta name="Distribution" content="Global" />
+<meta name="Rating" content="general" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="canonical" href="https://designindianhomes.com/selected-homes-exclusive-interior-designs-india/" />
+<meta name="googlebot" content="index, follow" />
+<meta name="Yahoobot" content="index, follow" />
+<meta name="MSNbot" content="Index, Follow" />
+<meta name="allow-search" content="yes" />
+<meta name="country" content="India"/>
+<meta name="contactNumber" content="+91-98-99-26-49-78"/>
+<meta name="dc.language" content="english"/>
+<meta name="geo.region" content="IN-DL" />
+<meta name="geo.placename" content="Delhi" />
+<meta property="og:url" content="https://designindianhomes.com/" />
+<meta property="og:title" content="Best Designed Homes - Interior Designs in Delhi - India" />
+<meta property="og:description" content="check out some of our most premium designed residences, we are the top interior designing brand across new delhi, india. Connect with us today.." />
+
         </head>
         <div className="p-4  ">
           <span className="text-green-500 text-sm">

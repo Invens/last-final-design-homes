@@ -31,6 +31,36 @@ const FullWidthSection = () => {
 const page = () => {
   return (
     <>
+    <head>
+    <title>Refer for Rewards | Best Interior Designing & Architect Brand</title>
+
+<meta name="description" content ="refer the top interior designing and architect brand in Delhi, gurgaon, noida & India & get rewards worth 45000. Refer & Earn for interiors." />
+
+
+<meta name="Author" content="Design Indian Homes" />
+<meta name="Generator" content="www.designindianhomes.com" />
+<meta name="Language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="Copyright" content="©www.designindianhomes.com" />
+<meta name="Designer" content="Design Indian Homes Unit" />
+<meta name="Publisher" content="www.designindianhomes.com" />
+<meta name="Distribution" content="Global" />
+<meta name="Rating" content="general" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="canonical" href="https://designindianhomes.com/refer-and-get-rewards-interior-designers/" />
+<meta name="googlebot" content="index, follow" />
+<Meta name="Yahoobot" content="index, follow" />
+<meta name="MSNbot" content="Index, Follow" />
+<meta name="allow-search" content="yes" />
+<Meta name="country" content="India"/>
+<Meta name="contactNumber" content="+91-98-99-26-49-78"/>
+<Meta name="dc.language" content="english"/>
+<Meta name="geo.region" content="IN-DL" />
+<Meta name="geo.placename" content="Delhi" />
+<meta property="og:url" content="https://designindianhomes.com/refer-and-get-rewards-interior-designers/" />
+<meta property="og:title" content="Refer for Rewards | Best Interior Designing & Architect Brand" />
+<meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
+</head>
       <Omsairam />
       <Header />
       <FullWidthSection />

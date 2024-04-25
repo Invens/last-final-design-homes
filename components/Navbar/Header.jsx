@@ -2079,7 +2079,7 @@ const Header = () => {
                 </a>{' '}
               </div>
               <div className="flex gap-4 md:text-sm text-black mt-2">
-                <Link href="/book-a-interior-design-visit">
+                <Link href="/book-with-top-interior-designers-architects">
                   {' '}
                   <p>Book a Visit</p>
                 </Link>

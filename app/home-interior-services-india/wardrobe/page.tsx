@@ -48,6 +48,36 @@ const Page = ({}) => {
   }
   return (
     <>
+    <head>
+    <title>Wardrobe Designs | Top Wardrobe Manufacturing Brand India</title>
+
+<meta name="description" content ="Our brand is the largest manufacturer of wardrobes, we are top dealers and suppliers for modular wardrobe across Delhi, gurgaon, noida & India." />
+
+
+<meta name="Author" content="Design Indian Homes" />
+<meta name="Generator" content="www.designindianhomes.com" />
+<meta name="Language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="Copyright" content="©www.designindianhomes.com" />
+<meta name="Designer" content="Design Indian Homes Unit" />
+<meta name="Publisher" content="www.designindianhomes.com" />
+<meta name="Distribution" content="Global" />
+<meta name="Rating" content="general" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="canonical" href="https://designindianhomes.com/wardrobe-designs/" />
+<meta name="googlebot" content="index, follow" />
+<meta name="Yahoobot" content="index, follow" />
+<meta name="MSNbot" content="Index, Follow" />
+<meta name="allow-search" content="yes" />
+<meta name="country" content="India"/>
+<meta name="contactNumber" content="+91-98-99-26-49-78"/>
+<meta name="dc.language" content="english"/>
+<meta name="geo.region" content="IN-DL" />
+<meta name="geo.placename" content="Delhi" />
+<meta property="og:url" content="https://designindianhomes.com/wardrobe-designs/" />
+<meta property="og:title" content="Wardrobe Designs | Top Wardrobe Manufacturing Brand India" />
+<meta property="og:description" content="Our brand is the largest manufacturer of wardrobes, we are top dealers and suppliers for modular wardrobe across Delhi, gurgaon, noida & India." />
+      </head>
       <ProgressBar />
       <Omsairam />
       <Header />

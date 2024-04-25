@@ -62,53 +62,35 @@ const Page = ({}) => {
 
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
-          <title>
-            Cottage Interior Designs | Cottage Interiors in Delhi - NCR
-          </title>
+        <title>Top Designed Modular Kitchens - Modular Kitchen Design Ideas in Delhi - NCR</title>
 
-          <meta
-            name="description"
-            content="Our brand is a top interior designing & architectural brand, we design, plan & execute beautiful Cottages across Delhi, gurgaon, noida & India"
-          />
+<meta name="description" content ="check out some of our top designs for modular kitchens. Lets make our kitchens beautiful and tasty. We are the top largest interior designing & architectural brand across new delhi, india." />
 
-          <meta name="Author" content="Design Indian Homes" />
-          <meta name="Generator" content="www.designindianhomes.com" />
-          <meta name="Language" content="en" />
-          <meta name="robots" content="index, follow" />
-          <meta name="Copyright" content="©www.designindianhomes.com" />
-          <meta name="Designer" content="Design Indian Homes Unit" />
-          <meta name="Publisher" content="www.designindianhomes.com" />
-          <meta name="Distribution" content="Global" />
-          <meta name="Rating" content="general" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <link
-            rel="canonical"
-            href="https://designindianhomes.com/cottage-interior-designs/"
-          />
-          <meta name="googlebot" content="index, follow" />
-          <meta name="Yahoobot" content="index, follow" />
-          <meta name="MSNbot" content="Index, Follow" />
-          <meta name="allow-search" content="yes" />
-          <meta name="country" content="India" />
-          <meta name="contactNumber" content="+91-98-99-26-49-78" />
-          <meta name="dc.language" content="english" />
-          <meta name="geo.region" content="IN-DL" />
-          <meta name="geo.placename" content="Delhi" />
-          <meta
-            property="og:url"
-            content="https://designindianhomes.com/cottage-interior-designs/"
-          />
-          <meta
-            property="og:title"
-            content="Cottage Interior Designs | Cottage Interiors in Delhi - NCR"
-          />
-          <meta
-            property="og:description"
-            content="Our brand is a top interior designing & architectural brand, we design, plan & execute beautiful Cottages across Delhi, gurgaon, noida & India"
-          />
+
+<meta name="Author" content="Design Indian Homes" />
+<meta name="Generator" content="www.designindianhomes.com" />
+<meta name="Language" content="en" />
+<meta name="robots" content="index, follow" />
+<meta name="Copyright" content="©www.designindianhomes.com" />
+<meta name="Designer" content="Design Indian Homes Unit" />
+<meta name="Publisher" content="www.designindianhomes.com" />
+<meta name="Distribution" content="Global" />
+<meta name="Rating" content="general" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="canonical" href="https://designindianhomes.com/delicious-modular-kitchen-designs/" />
+<meta name="googlebot" content="index, follow" />
+<meta name="Yahoobot" content="index, follow" />
+<meta name="MSNbot" content="Index, Follow" />
+<meta name="allow-search" content="yes" />
+<meta name="country" content="India"/>
+<meta name="contactNumber" content="+91-98-99-26-49-78"/>
+<meta name="dc.language" content="english"/>
+<meta name="geo.region" content="IN-DL" />
+<meta name="geo.placename" content="Delhi" />
+<meta property="og:url" content="https://designindianhomes.com/" />
+<meta property="og:title" content="Top Designed Modular Kitchens - Modular Kitchen Design Ideas in Delhi - NCR" />
+<meta property="og:description" content="check out some of our top designs for modular kitchens. Lets make our kitchens beautiful and tasty. We are the top largest interior designing & architectural brand across new delhi, india." />
+
         </head>
         {/* breadcrumb */}
         <div className="p-4  ">
