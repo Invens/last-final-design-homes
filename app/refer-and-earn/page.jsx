@@ -49,14 +49,14 @@ const page = () => {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="canonical" href="https://designindianhomes.com/refer-and-get-rewards-interior-designers/" />
 <meta name="googlebot" content="index, follow" />
-<Meta name="Yahoobot" content="index, follow" />
+<meta name="Yahoobot" content="index, follow" />
 <meta name="MSNbot" content="Index, Follow" />
 <meta name="allow-search" content="yes" />
-<Meta name="country" content="India"/>
-<Meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<Meta name="dc.language" content="english"/>
-<Meta name="geo.region" content="IN-DL" />
-<Meta name="geo.placename" content="Delhi" />
+<meta name="country" content="India"/>
+<meta name="contactNumber" content="+91-98-99-26-49-78"/>
+<meta name="dc.language" content="english"/>
+<meta name="geo.region" content="IN-DL" />
+<meta name="geo.placename" content="Delhi" />
 <meta property="og:url" content="https://designindianhomes.com/refer-and-get-rewards-interior-designers/" />
 <meta property="og:title" content="Refer for Rewards | Best Interior Designing & Architect Brand" />
 <meta property="og:description" content="book a meeting with the largest interior designing and architect brand in Delhi, gurgaon, noida & India. we serve the most affordable modular interiors." />
