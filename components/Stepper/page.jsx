@@ -91,32 +91,37 @@ const StepperComponent = () => {
                 Our Design Process
               </h1>
             </div>
-            <Image width={1000} height={1000}
+            <Image
+              width={1000}
+              height={1000}
               src="/images/simple-gold-brush-stroke-banner-5.png"
               alt="Paint Brush"
               style={backgroundImageStyle}
             />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row m-8">
+        <div
+          className="flex flex-col md:flex-row m-8"
+          style={{
+            backgroundImage: `url('/images/pinkbg-blob.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: '0.8',
+          }}
+        >
           {/* Image Section (50% width) */}
           <div className="w-full md:w-1/2">
             <Image
-              src="/images/stepper-img.webp"
+              src="/images/steps1.avif"
               width={600}
               height={100}
               alt="Demo Image"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
             />
           </div>
 
           {/* Stepper Section (50% width) */}
-          <div className="w-full md:w-1/2 mt-4 my-auto sm:mt-28">
-            {/* <div className="mb-4">
-              <h2 className="text-2xl font-bold">
-                The Process of Booking With Us
-              </h2>
-            </div> */}
+          <div className="w-full md:w-1/2 mt-4 my-auto flex flex-col justify-between ">
             <Stepper activeStep={activeStep} alternativeLabel>
               {steps.map((step, index) => (
                 <Step key={index} onClick={() => handleStepChange(index)}>
@@ -125,8 +130,8 @@ const StepperComponent = () => {
               ))}
             </Stepper>
 
-            <div className="md:mx-8 my-8">
-              <h2 className="text-xl font-semibold text-green-500 mb-4">
+            <div className="md:mx-8 my-8 md:mt-16">
+              <h2 className="text-xl font-semibold text-red-500 mb-4">
                 {steps[activeStep].heading}
               </h2>
               <p className="text-sm">{steps[activeStep].content}</p>
