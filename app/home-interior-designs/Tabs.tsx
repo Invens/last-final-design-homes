@@ -75,7 +75,7 @@ export default function BasicTabs({ id }: TabsProps) {
           aria-label="basic tabs example"
         >
           {pagesData.map((page, index) => (
-            <Link key={page.id} href={`/interior/${page.slug}`} scroll={false}>
+            <Link key={page.id} href={`/home-interior-designs/${page.slug}`} scroll={false}>
               <div style={{ whiteSpace: 'nowrap', width: 'max-content' }}>
                 <Tab label={page.name} {...a11yProps(index)} />
               </div>

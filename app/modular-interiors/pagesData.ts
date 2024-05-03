@@ -90,8 +90,8 @@ export const pagesData = [
   },
   {
     id: 10,
-    name: 'Glass Partiton',
-    slug: 'glass-partiton',
+    name: 'Glass Partition',
+    slug: 'glass-partition',
     noItems: '162',
     heading: 'Glass Partition',
     desc: 'When you really deserve a perfect partition, you must get one. Now get Beautiful Glass Partitions for your interiors to deck up your spaces. Delight yourself in our products, All Our Glass Partitions are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like slim profiled, zed profiled, cube profile and lacquered. Check out our designs for some of the top ideas for your Glass Partitions.',

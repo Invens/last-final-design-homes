@@ -235,9 +235,11 @@ const Header = () => {
       <div className="flex gap-8">
         <div>
           <ul className="text-sm">
+            <Link href="/home-interior-designs">
             <h3 className="text-lg font-bold text-black">
               Types of Interior Design Ideas
             </h3>
+            </Link>
             <Link href="/1bhk-apartment-interior-designs">
               {' '}
               <li
@@ -338,7 +340,9 @@ const Header = () => {
         <div className="">
           <ul className="text-xs">
             <h3 className="text-lg font-bold text-black">
+             <Link href="/home-interior-services-india">
               End to End Interior
+              </Link>
             </h3>
             <Link href="/home-interior-services-india/bed-designs-dealers-manufacturers-india">
               <li onMouseOver={() => handleMouseOverImage('bedDesigning')}>
@@ -450,7 +454,9 @@ const Header = () => {
         </div>
         <div className="">
           <ul className="text-xs">
+            <Link href="/modular-interiors">
             <h3 className="text-lg font-bold text-black">Modular Interiors</h3>
+            </Link>
             <Link href="/modular-interiors/mandir">
               <li onMouseOver={() => handleMouseOverImage('mandir')}>
                 Mandir

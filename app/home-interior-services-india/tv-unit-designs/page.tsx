@@ -92,7 +92,7 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/design-ideas">interior</Link>
+            <Link href="/home-interior-services-india">Home Interior Services India</Link>
           </span>{' '}
           / <span className="text-gray-600 text-sm">TV unit designs</span>
         </div>

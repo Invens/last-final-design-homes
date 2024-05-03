@@ -162,12 +162,12 @@ const Page = ({}) => {
           <span className="text-green-500 text-sm">
             <Link href="/">Home</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Interior</span>
+          / <span className="text-gray-600 text-sm">Home Interior Designs</span>
         </div>
 
         <div className="flex items-center  p-4">
           <div className="w-1 h-8 rounded bg-green-500 mr-2"></div>
-          <h1 className="text-3xl font-bold">Home Interior</h1>
+          <h1 className="text-3xl font-bold">Home Interior Designs</h1>
         </div>
         <p className="text-gray-700 text-sm px-7">
           We bring you carefully-curated interior design ideas, to give your
