@@ -123,6 +123,7 @@ const Page = ({}) => {
             >
               <Image
                 width={1000}
+                height={1000}
                 src={`https://api.designindianwardrobe.com/uploads/${image.filename}`}
                 alt={image.filename}
                 style={{

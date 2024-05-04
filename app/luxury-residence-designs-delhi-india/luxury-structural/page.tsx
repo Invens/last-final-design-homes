@@ -117,9 +117,11 @@ const Page = ({}) => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/luxury-structural">Luxury Structural</Link>
+          <Link href="/luxury-residence-designs-delhi-india">
+            Luxury Residence Designs Delhi India
+            </Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Wardrobe</span>
+          / <span className="text-gray-600 text-sm">Luxury Structural</span>
         </div>
 
         {/* tabs */}

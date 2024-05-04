@@ -96,16 +96,16 @@ const Page = ({}) => {
         {/* breadcrumb */}
         <div className="p-4  ">
           <span className="text-green-500 text-sm">
-            <Link href="/selected-homes-exclusive-interior-designs-india">
+          <Link href="/">Home</Link>
+          </span>{' '}
+          /{' '}
+          <span className="text-green-500 text-sm">
+          <Link href="/selected-homes-exclusive-interior-designs-india">
               Selected Homes
             </Link>
           </span>{' '}
           /{' '}
-          <span className="text-green-500 text-sm">
-            <Link href="/artistic">Artistic</Link>
-          </span>{' '}
-          /{' '}
-          <span className="text-gray-600 text-sm">CHilled Party Bar Units</span>
+          <span className="text-gray-600 text-sm">Chilled Party Bar Units</span>
         </div>
 
         {/* tabs */}

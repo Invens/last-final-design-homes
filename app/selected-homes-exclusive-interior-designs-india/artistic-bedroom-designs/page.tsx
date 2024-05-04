@@ -103,7 +103,7 @@ const Page = ({}) => {
               Selected Homes
             </Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Artistic Bedroom</span>
+          / <span className="text-gray-600 text-sm">Artistic Bedroom Designs</span>
         </div>
 
         {/* tabs */}

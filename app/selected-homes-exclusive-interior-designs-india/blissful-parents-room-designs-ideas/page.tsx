@@ -102,7 +102,7 @@ const Page = ({}) => {
               Selected Homes
             </Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">Blissful Paren Room</span>
+          / <span className="text-gray-600 text-sm">Blissful Parents Room Designs Ideas</span>
         </div>
 
         {/* tabs */}

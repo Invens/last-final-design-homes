@@ -1473,8 +1473,7 @@ const Header = () => {
                 />
                 <div>
                   <Link
-                    href="/modular-interiors/bar-unit
-"
+                    href="/modular-interiors/bar-units"
                   >
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"

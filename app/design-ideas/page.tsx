@@ -78,7 +78,7 @@ const cardsData = [
       'https://api.designindianwardrobe.com/uploads/bespoke-custom-modular-kitchen-designs-in-delhi-gurgaon-noida-india%20(3).jpg',
     heading: 'Modular Kitchen',
     description: 'Best Modular Kitchen Services in Delhi, Gurgaon, Noida India',
-    link: '/modular-kitchen',
+    link: '/modular-kitchen-top-brand-india',
   },
   {
     image:
