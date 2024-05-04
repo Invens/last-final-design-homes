@@ -62,6 +62,9 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/foyer-area-designs">
             <li>Foyer Cabinets</li>
           </Link>
+          <Link href="/modular-interiors/shoes-rack">
+            <li>Shoes Rack</li>
+          </Link>
           <Link href="/before-after/before-after-wardrobe">
             <li>Wardrobe Before After</li>
           </Link>
