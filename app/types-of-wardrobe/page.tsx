@@ -12,17 +12,17 @@ import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
   const categoryFolderMapping: Record<number, string> = {
-    126: '2-door-sliding',
-    127: '3-door-sliding',
-    128: 'acrylic-wardrobe',
-    129: 'hinged-wardrobe',
-    130: 'lacqured-wardrobe',
-    131: 'laminated-wardrobe',
-    132: 'membrane-wardrobe',
-    133: 'polished-wardrobe',
-    134:  'teak-wardrobe',
-    135: 'veener-wardrobe',
-    136: 'walk-in-wardrobe',
+    126: '2-door-sliding-wardrobe-designs',
+    127: '3-door-sliding-wardrobe-designs',
+    128: 'acrylic-wardrobe-designs',
+    129: 'hinged-wardrobe-designs',
+    130: 'lacquer-glass-wardrobe-designs',
+    131: 'laminated-wardrobe-designs',
+    132: 'membrane-wardrobe-designs',
+    133: 'polished-wardrobe-designs',
+    134:  'teak-wardrobe-designs',
+    135: 'veener-wardrobe-designs',
+    136: 'walk-in-wardrobe-designs',
     145: 'cane-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india',
     146: 'cnc-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india',
     147: 'leatherite-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india'
