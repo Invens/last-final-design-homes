@@ -19,7 +19,7 @@ const ScheduleChatSection = () => {
         <div className="text-center mx-auto text-white">
           <h1 className="text-4xl">
           “ Get Custom Interiors / Modular Interiors/ Architectural Services <br/>
-  at Most Affordable Prices with Our Team. “
+  at Most Affordable Prices with Our Team. ”
           </h1>
           <br />
           <a
