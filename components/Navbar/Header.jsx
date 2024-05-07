@@ -820,7 +820,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen-top-brand-india/types-of-modular-kitchens">
+                  <Link href="/types-of-modular-kitchens">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('type')}
@@ -919,12 +919,12 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/get-free-estimate-by-top-interior-brand-in-delhi-gurgaon-noida-india">
+                  <Link href="/shutter-finish">
                     <h3
                       className="w-fit font-extrabold bg-black text-white center p-2 text-xs"
                       onMouseOver={() => handleMouseOverImage('renovations')}
                     >
-                      Get Estimate
+                    Shutter Finish
                     </h3>
                   </Link>
                   <p className="text-xs text-black">
