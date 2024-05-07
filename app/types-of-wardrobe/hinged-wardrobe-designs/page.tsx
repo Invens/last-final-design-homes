@@ -17,7 +17,7 @@ const Page = () => {
   const [showSlider, setShowSlider] = useState(false)
 
   useEffect(() => {
-    const categoryIds = [146]
+    const categoryIds = [129]
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -55,37 +55,33 @@ const Page = () => {
   }, [title])
   return (
     <>
-    <head>
-    <title>CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India</title>
-
-<meta name="description" content ="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India, we are the largest manufacturers for CNC wardrobes across Delhi - India." />
-
-
-<meta name="Author" content="Design Indian Homes" />
-<meta name="Generator" content="www.designindianhomes.com" />
-<meta name="Language" content="en" />
-<meta name="robots" content="index, follow" />
-<meta name="Copyright" content="©www.designindianhomes.com" />
-<meta name="Designer" content="Design Indian Homes Unit" />
-<meta name="Publisher" content="www.designindianhomes.com" />
-<meta name="Distribution" content="Global" />
-<meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/cnc-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india/" />
-<meta name="googlebot" content="index, follow" />
-<meta name="Yahoobot" content="index, follow" />
-<meta name="MSNbot" content="Index, Follow" />
-<meta name="allow-search" content="yes" />
-<meta name="country" content="India"/>
-<meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<meta name="dc.language" content="english"/>
-<meta name="geo.region" content="IN-DL" />
-<meta name="geo.placename" content="Delhi" />
-<meta property="og:url" content="https://designindianhomes.com/" />
-<meta property="og:title" content="CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India" />
-
-<meta property="og:description" content="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India. We are the largest manufacturers for CNC wardrobes across Delhi - India." />
-    </head>
+      <head>
+        <title>Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India</title>
+        <meta name="description" content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India." />
+        <meta name="Author" content="Design Indian Homes" />
+        <meta name="Generator" content="www.designindianhomes.com" />
+        <meta name="Language" content="en" />
+        <meta name="robots" content="index, follow" />
+        <meta name="Copyright" content="©www.designindianhomes.com" />
+        <meta name="Designer" content="Design Indian Homes Unit" />
+        <meta name="Publisher" content="www.designindianhomes.com" />
+        <meta name="Distribution" content="Global" />
+        <meta name="Rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/hinged-wardrobe-designs/" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="Yahoobot" content="index, follow" />
+        <meta name="MSNbot" content="Index, Follow" />
+        <meta name="allow-search" content="yes" />
+        <meta name="country" content="India" />
+        <meta name="contactNumber" content="+91-98-99-26-49-78" />
+        <meta name="dc.language" content="english" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi" />
+        <meta property="og:url" content="https://designindianhomes.com/" />
+        <meta property="og:title" content="Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India" />
+        <meta property="og:description" content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India." />
+      </head>
       <ProgressBar />
       <Omsairam />
       <Header />
@@ -149,11 +145,11 @@ const Page = () => {
           <span className="text-green-500 text-sm">
             <Link href="/types-of-wardrobe">Types of Wardrobe</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">CNC Wardrobe Designs</span>
+          / <span className="text-gray-600 text-sm">Hinged Wardrobe</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={12} />
+        <Tabs id={3} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (

@@ -1,23 +1,24 @@
 'use client'
-import React, { useState, useEffect } from 'react'
 import Header from '../../../components/Navbar/Header'
 import Footer from '../../../components/Footer/Footer'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
+import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
 import Head from 'next/head'
 import Image from 'next/image'
-const Page = () => {
+
+const Page = ({}) => {
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [showSlider, setShowSlider] = useState(false)
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
     []
   )
-  const [photoIndex, setPhotoIndex] = useState(0)
-  const [showSlider, setShowSlider] = useState(false)
-
   useEffect(() => {
-    const categoryIds = [146]
+    const categoryIds = [130] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -46,7 +47,7 @@ const Page = () => {
     setShowSlider(false)
   }
   const [title, setTitle] = useState(
-    'Crockery Unit Designs | Crockery Unit Manufacturing Company India'
+    'Dresser Designs | Top Dresser Manufacturing Company India'
   )
 
   useEffect(() => {
@@ -56,9 +57,9 @@ const Page = () => {
   return (
     <>
     <head>
-    <title>CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India</title>
+    <title>Lacquer Glass Wardrobe Designs | Lacquer Wardrobes in Delhi - India</title>
 
-<meta name="description" content ="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India, we are the largest manufacturers for CNC wardrobes across Delhi - India." />
+<meta name="description" content ="We have some of the top notch lacquer glass wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for lacquer glass wardrobes across Delhi - India." />
 
 
 <meta name="Author" content="Design Indian Homes" />
@@ -71,7 +72,7 @@ const Page = () => {
 <meta name="Distribution" content="Global" />
 <meta name="Rating" content="general" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/cnc-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india/" />
+<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/lacquer-glass-wardrobe-designs/" />
 <meta name="googlebot" content="index, follow" />
 <meta name="Yahoobot" content="index, follow" />
 <meta name="MSNbot" content="Index, Follow" />
@@ -82,9 +83,8 @@ const Page = () => {
 <meta name="geo.region" content="IN-DL" />
 <meta name="geo.placename" content="Delhi" />
 <meta property="og:url" content="https://designindianhomes.com/" />
-<meta property="og:title" content="CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India" />
-
-<meta property="og:description" content="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India. We are the largest manufacturers for CNC wardrobes across Delhi - India." />
+<meta property="og:title" content="Lacquer Glass Wardrobe Designs | Lacquer Wardrobes in Delhi - India" />
+<meta property="og:description" content="We have some of the top notch lacquer glass wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for lacquer glass wardrobes across Delhi - India." />
     </head>
       <ProgressBar />
       <Omsairam />
@@ -93,12 +93,12 @@ const Page = () => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
           <title>
-            Crockery Unit Designs | Crockery Unit Manufacturing Company India
+            Dresser Designs | Top Dresser Manufacturing Company India
           </title>
 
           <meta
             name="description"
-            content="Our brand is the largest manufacturer of Crockery Units, we are top dealers and suppliers for Crockery Units across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dressers vanities across Delhi, gurgaon, noida & India."
           />
 
           <meta name="Author" content="Design Indian Homes" />
@@ -116,7 +116,7 @@ const Page = () => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/crockery-unit-designs/"
+            href="https://designindianhomes.com/dressers-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -129,15 +129,15 @@ const Page = () => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/crockery-unit-designs/"
+            content="https://designindianhomes.com/dressers-designs/"
           />
           <meta
             property="og:title"
-            content="Crockery Unit Designs | Crockery Unit Manufacturing Company India"
+            content="Dresser Designs | Top Dresser Manufacturing Company India"
           />
           <meta
             property="og:description"
-            content="Our brand is the largest manufacturer of Crockery Units, we are top dealers and suppliers for Crockery Units across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of dressers, we are top dealers and suppliers for dresser vanities across Delhi, gurgaon, noida & India."
           />
         </head>
         {/* breadcrumb */}
@@ -149,12 +149,11 @@ const Page = () => {
           <span className="text-green-500 text-sm">
             <Link href="/types-of-wardrobe">Types of Wardrobe</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">CNC Wardrobe Designs</span>
+          / <span className="text-gray-600 text-sm">Lacqured Wardrobe</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={12} />
-
+        <Tabs id={4} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div
@@ -192,7 +191,6 @@ const Page = () => {
           }
         />
       )}
-
       <Footer />
     </>
   )

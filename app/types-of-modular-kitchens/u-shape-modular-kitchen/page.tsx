@@ -1,23 +1,25 @@
 'use client'
-import React, { useState, useEffect } from 'react'
 import Header from '../../../components/Navbar/Header'
 import Footer from '../../../components/Footer/Footer'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
+
 import ProgressBar from '../../../components/Progressbar'
 import Tabs from '../Tabs'
+import Nav from 'react-bootstrap/Nav'
 import Omsairam from '../../../components/Navbar/Omsairam'
 import Slider from '../../slider/Page'
-import Head from 'next/head'
 import Image from 'next/image'
-const Page = () => {
+
+const Page = ({}) => {
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [showSlider, setShowSlider] = useState(false)
   const [images, setImages] = useState<Array<{ id: number; filename: string }>>(
     []
   )
-  const [photoIndex, setPhotoIndex] = useState(0)
-  const [showSlider, setShowSlider] = useState(false)
-
   useEffect(() => {
-    const categoryIds = [146]
+    const categoryIds = [159] // Add the category IDs you want to fetch
     const fetchImages = async () => {
       try {
         const timestamp = Date.now()
@@ -37,6 +39,7 @@ const Page = () => {
 
     fetchImages()
   }, [])
+
   const handleImageClick = (index: number) => {
     setPhotoIndex(index)
     setShowSlider(true)
@@ -46,7 +49,7 @@ const Page = () => {
     setShowSlider(false)
   }
   const [title, setTitle] = useState(
-    'Crockery Unit Designs | Crockery Unit Manufacturing Company India'
+    ' Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand'
   )
 
   useEffect(() => {
@@ -55,37 +58,6 @@ const Page = () => {
   }, [title])
   return (
     <>
-    <head>
-    <title>CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India</title>
-
-<meta name="description" content ="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India, we are the largest manufacturers for CNC wardrobes across Delhi - India." />
-
-
-<meta name="Author" content="Design Indian Homes" />
-<meta name="Generator" content="www.designindianhomes.com" />
-<meta name="Language" content="en" />
-<meta name="robots" content="index, follow" />
-<meta name="Copyright" content="©www.designindianhomes.com" />
-<meta name="Designer" content="Design Indian Homes Unit" />
-<meta name="Publisher" content="www.designindianhomes.com" />
-<meta name="Distribution" content="Global" />
-<meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/cnc-designer-wardrobe-designs-dealers-manufacturers-in-delhi-gurgaon-noida-india/" />
-<meta name="googlebot" content="index, follow" />
-<meta name="Yahoobot" content="index, follow" />
-<meta name="MSNbot" content="Index, Follow" />
-<meta name="allow-search" content="yes" />
-<meta name="country" content="India"/>
-<meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<meta name="dc.language" content="english"/>
-<meta name="geo.region" content="IN-DL" />
-<meta name="geo.placename" content="Delhi" />
-<meta property="og:url" content="https://designindianhomes.com/" />
-<meta property="og:title" content="CNC Wardrobe Designs | CNC Designed Wardrobes in Delhi - India" />
-
-<meta property="og:description" content="We have some of the top CNC designed cut wardrobe designs across Delhi, gurgaon, noida and India. We are the largest manufacturers for CNC wardrobes across Delhi - India." />
-    </head>
       <ProgressBar />
       <Omsairam />
       <Header />
@@ -93,12 +65,12 @@ const Page = () => {
       <div className="mt-24 lg:mt-36 mb-16 mx-auto sm:mx-16">
         <head>
           <title>
-            Crockery Unit Designs | Crockery Unit Manufacturing Company India
+            Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand
           </title>
 
           <meta
             name="description"
-            content="Our brand is the largest manufacturer of Crockery Units, we are top dealers and suppliers for Crockery Units across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of modular kitchens, we are top dealers and suppliers for modular kitchens across Delhi, gurgaon, noida & India."
           />
 
           <meta name="Author" content="Design Indian Homes" />
@@ -116,7 +88,7 @@ const Page = () => {
           />
           <link
             rel="canonical"
-            href="https://designindianhomes.com/crockery-unit-designs/"
+            href="https://designindianhomes.com/modular-kitchen-designs/"
           />
           <meta name="googlebot" content="index, follow" />
           <meta name="Yahoobot" content="index, follow" />
@@ -129,15 +101,15 @@ const Page = () => {
           <meta name="geo.placename" content="Delhi" />
           <meta
             property="og:url"
-            content="https://designindianhomes.com/crockery-unit-designs/"
+            content="https://designindianhomes.com/modular-kitchen-designs/"
           />
           <meta
             property="og:title"
-            content="Crockery Unit Designs | Crockery Unit Manufacturing Company India"
+            content="Modular Kitchen Designs | Top Modular Kitchen Manufacturing Brand"
           />
           <meta
             property="og:description"
-            content="Our brand is the largest manufacturer of Crockery Units, we are top dealers and suppliers for Crockery Units across Delhi, gurgaon, noida & India."
+            content="Our brand is the largest manufacturer of modular kitchens, we are top dealers and suppliers for modular kitchens across Delhi, gurgaon, noida & India."
           />
         </head>
         {/* breadcrumb */}
@@ -147,14 +119,13 @@ const Page = () => {
           </span>{' '}
           /{' '}
           <span className="text-green-500 text-sm">
-            <Link href="/types-of-wardrobe">Types of Wardrobe</Link>
+          <Link href="/types-of-modular-kitchens">Types of Modular Kitchen</Link>
           </span>{' '}
-          / <span className="text-gray-600 text-sm">CNC Wardrobe Designs</span>
+          / <span className="text-gray-600 text-sm"> U Shape Modular Kitchen</span>
         </div>
 
         {/* tabs */}
-        <Tabs id={12} />
-
+        <Tabs id={11} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div
@@ -192,7 +163,6 @@ const Page = () => {
           }
         />
       )}
-
       <Footer />
     </>
   )
