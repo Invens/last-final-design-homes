@@ -59,8 +59,8 @@ const EndToEndImageGrid = () => {
     },
     {
       src: '/images/end/SPA_renovation-removebg-preview.png',
-      text: 'Kitchen & Wardrobe Renovation',
-      slug: '/gym-spa-renovation-services',
+      text: 'Kitchen Renovation',
+      slug: '/modular-kitchen-top-brand-india/kitchen-renovations',
     },
     {
       src: '/images/end/Structural_Renovation-removebg-preview.png',

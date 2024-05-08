@@ -58,8 +58,8 @@ const ImageGrid = () => {
     },
     {
       src: '/images/top-picks/pop-removebg-preview.png',
-      text: 'Pop',
-      slug: '/bathroom-renovation-services',
+      text: 'Ceiling Designs',
+      slug: '/ceiling-designs',
     },
     {
       src: '/images/top-picks/sofa-removebg-preview.png',
@@ -89,7 +89,7 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/wooden_flooring-removebg-preview.png',
       text: 'Wooden Flooring',
-      slug: '/bathroom-renovation-services',
+      slug: '/wooden-flooring-designs-designs',
     },
     {
       src: '/images/top-picks/wooden_polishing-removebg-preview.png',

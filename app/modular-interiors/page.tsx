@@ -20,7 +20,7 @@ const Page = ({}) => {
     111: 'foyer-cabinets',
     112: 'bathroom-vanities',
     69:   'crockery-units',
-    70:  'glass-partiton',
+    70:  'glass-partition',
     67: 'dressers',
     65: 'wardrobe',
     68: 'tv-unit-designs',
