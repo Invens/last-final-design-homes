@@ -43,7 +43,7 @@ const ImageGrid = () => {
     },
     {
       src: '/images/top-picks/Interior_Lightening-removebg-preview.png',
-      text: 'Interior Lightening',
+      text: 'Kitchen Lightening',
       slug: '/kitchen-lightening-inspiration-ideas-india-designs',
     },
     {
