@@ -191,7 +191,7 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas">
+          <Link href="/types-of-modular-kitchens">
             <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
               Check Out Our Collections
             </button>
@@ -245,7 +245,7 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas">
+          <Link href="/modular-kitchen-top-brand-india/modular-kitchen-designs">
             <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
               Check Out Our Collections
             </button>
@@ -300,7 +300,7 @@ const BestCarousels = () => {
         </Carousel>
 
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas">
+          <Link href="/luxury-residence-designs-delhi-india/luxury-interior">
             <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
               Check Out Our Collections
             </button>
@@ -355,7 +355,7 @@ const BestCarousels = () => {
           })}
         </Carousel>
         <div className="flex justify-center items-center ">
-          <Link href="/modular-interior-design-ideas">
+          <Link href="/luxury-residence-designs-delhi-india/luxury-structural">
             <button className=" bg-green-400 hover:bg-green-600 text-lg py-3 px-6 mb-12 rounded-full hover:text-white  font-bold ">
               Check Out Our Collections
             </button>

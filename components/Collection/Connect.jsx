@@ -107,12 +107,12 @@ const Connect = () => {
         </div>
 
         {/* ------------------------------- */}
-        <motion.section
+        <section
           variants={imagesVariants}
           initial="initial"
           whileInView="animate"
         >
-          <motion.div className="card" variants={imagesVariants}>
+          <div className="card" variants={imagesVariants}>
             <a
               href="https://wa.me/9899264978"
               target="_blank"
@@ -128,9 +128,9 @@ const Connect = () => {
                 </section>
               </div>
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div className="card" variants={imagesVariants}>
+          <div className="card" variants={imagesVariants}>
             <Link href="/book-visit">
               <div className="grin">
                 <article className="mainz ">
@@ -142,9 +142,9 @@ const Connect = () => {
                 </section>
               </div>
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div className="card" variants={imagesVariants}>
+          <div className="card" variants={imagesVariants}>
             <Link href="/schedule-videocall">
               <div className="grin">
                 <article className="mainz ">
@@ -156,8 +156,8 @@ const Connect = () => {
                 </section>
               </div>
             </Link>
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
       </div>
     </div>
   )

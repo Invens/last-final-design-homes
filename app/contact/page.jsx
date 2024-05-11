@@ -410,7 +410,7 @@ const MiddleInfoSection = () => {
           </p>
           <p className="text-gray-700 font-semibold mb-2">
             <a href="https://tallysolution.net/" target="_blank">
-              Tally Sollution
+              Tally Solution
             </a>
           </p>
         </div>

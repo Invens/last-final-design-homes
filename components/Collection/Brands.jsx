@@ -184,7 +184,7 @@ const Brands = () => {
           <div className="flex justify-center items-center">
             <div style={containerStyle} className="mr-[15%]">
               <div style={textContainerStyle} className="flex justify-center ">
-                <h1 className="sm:text-4xl text-xl font-bold text-center  mx-auto">
+                <h1 className="sm:text-4xl text-xl font-bold text-center  mx-auto my-[40px]">
                   Our Corporate Presence
                 </h1>
               </div>

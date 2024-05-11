@@ -11,7 +11,9 @@ const FirstForm = () => {
     number: '',
     message: '',
   })
-  const [btnText, setBtnText] = useState('Send Message')
+  const [btnText, setBtnText] = useState('Submit')
+  const [formSubmitted, setFormSubmitted] = useState(false)
+
   const handleChange = (event) => {
     const { name, value } = event.target
 
@@ -21,40 +23,55 @@ const FirstForm = () => {
     }))
   }
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log('Submitting form...');
-  
-    const formDataToSend = new FormData();
+    event.preventDefault()
+    console.log('Submitting form...')
+    setFormSubmitted(true)
+
+    const formDataToSend = new FormData()
     for (const key in formData) {
-      formDataToSend.append(key, formData[key]);
+      formDataToSend.append(key, formData[key])
     }
-    
-  
+
     try {
-      console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
-      console.log('Uploading data...');
-      const response = await fetch('https://m.designindianhomes.com/submitForm', {
-        method: 'POST',
-        body: formDataToSend,
-      });
-  
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-      console.log('Response body:', await response.text());
-  
+      console.log(
+        'Form Data to Send:',
+        Object.fromEntries(formDataToSend.entries())
+      )
+      console.log('Uploading data...')
+      const response = await fetch(
+        'https://m.designindianhomes.com/submitForm',
+        {
+          method: 'POST',
+          body: formDataToSend,
+        }
+      )
+
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      console.log('Response body:', await response.text())
+
       if (response.ok) {
-        console.log('Form data submitted successfully!');
-        console.log('Form Data to Send:', Object.fromEntries(formDataToSend.entries()));
-        setBtnText('Done');
+        console.log('Form data submitted successfully!')
+        console.log(
+          'Form Data to Send:',
+          Object.fromEntries(formDataToSend.entries())
+        )
+        setBtnText('Done')
       } else {
-        console.error('Form data submission failed. Response:', response);
-        setBtnText('Something Went Wrong');
+        console.error('Form data submission failed. Response:', response)
+        setBtnText('Something Went Wrong')
       }
     } catch (error) {
-      console.error('Error during form data submission:', error);
-      setBtnText('Something Went Wrong');
+      console.error('Error during form data submission:', error)
+      setBtnText('Something Went Wrong')
     }
-  };
+
+    setFormSubmitted(true)
+  }
+  const handleClose = () => {
+    setFormSubmitted(false)
+    // Add any additional logic you want to perform when closing the thank-you page
+  }
   
 
   return (
@@ -62,7 +79,7 @@ const FirstForm = () => {
       <div className="font-bold text-gray-800 px-8 ">
         <Marquee style={{ color: 'Red' }}>
           <div className="marquee">
-            <h3 className="sm:text-4xl">BOOK A DESIGN VISIT TODAY</h3>
+            <h3 className="sm:text-4xl"> BOOK A DESIGN VISIT TODAY </h3>
           </div>
         </Marquee>
         <h2 className="sm:text-3xl sm:my-12">
@@ -70,6 +87,33 @@ const FirstForm = () => {
           & GET GUARANTEED <br />
           AFFORDABE QUOTES BY US
         </h2>
+
+        {formSubmitted ? (
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
+            <Image
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
+              width={400}
+              height={300}
+            />
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (   
         <form onSubmit={handleSubmit}>
           <div className="mt-8">
             <div>
@@ -134,6 +178,7 @@ const FirstForm = () => {
             </div>
           </div>
         </form>
+           )}
       </div>
     </div>
   )
@@ -148,10 +193,7 @@ const SecondForm = () => {
     message: '',
   })
   const [btnText, setBtnText] = useState('Submit')
-
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0])
-  }
+  const [formSubmitted, setFormSubmitted] = useState(false)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -163,16 +205,20 @@ const SecondForm = () => {
   }
   const handleSubmit = async (event) => {
     event.preventDefault()
+    console.log('Submitting form...')
+    setFormSubmitted(true)
 
     const formDataToSend = new FormData()
     for (const key in formData) {
       formDataToSend.append(key, formData[key])
     }
 
-    formDataToSend.append('file', selectedFile)
-
     try {
-      setBtnText('Uploading...')
+      console.log(
+        'Form Data to Send:',
+        Object.fromEntries(formDataToSend.entries())
+      )
+      console.log('Uploading data...')
       const response = await fetch(
         'https://m.designindianhomes.com/submitForm',
         {
@@ -181,29 +227,65 @@ const SecondForm = () => {
         }
       )
 
+      console.log('Response status:', response.status)
+      console.log('Response headers:', response.headers)
+      console.log('Response body:', await response.text())
+
       if (response.ok) {
-        setBtnText('Done')
-        console.log('Form data and file uploaded successfully!')
+        console.log('Form data submitted successfully!')
         console.log(
           'Form Data to Send:',
           Object.fromEntries(formDataToSend.entries())
         )
+        setBtnText('Done')
       } else {
+        console.error('Form data submission failed. Response:', response)
         setBtnText('Something Went Wrong')
-        console.error('Form data and file upload failed.')
       }
     } catch (error) {
+      console.error('Error during form data submission:', error)
       setBtnText('Something Went Wrong')
-      console.error('Error during form data and file upload:', error)
     }
-  }
 
+    setFormSubmitted(true)
+  }
+  const handleClose = () => {
+    setFormSubmitted(false)
+    // Add any additional logic you want to perform when closing the thank-you page
+  }
   return (
     <div className="sm:p-4 bg-white rounded-lg shadow-lg sm:w-1/3">
       <div className="bold text-gray-800 px-8 ">
         ARE YOU AN ARCHITECT,INTERIOR <br />
         DESIGNER OR DEVELOPER <br />
         Do Connect With Us
+        
+        {formSubmitted ? (
+          <div className="grid grid-cols-1 justify-items-center">
+            <p className="text-center text-lg">
+              Thank you for your submission!
+            </p>
+            <Image
+              src={
+                'https://img.freepik.com/free-vector/thank-you-placard-concept-illustration_114360-13436.jpg'
+              }
+              width={400}
+              height={300}
+            />
+            <h1 className="text-center font-bold">
+              {' '}
+              FOR ANY PRIORITY BOOKING OF DESIGN/PLANNING MEETING, DO CALL US OR
+              WHATSAPP US ON 9899264978, 9582827928
+            </h1>
+
+            <button
+              onClick={handleClose}
+              className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full hover:bg-gray-700 hover:shadow"
+            >
+              Close
+            </button>
+          </div>
+        ) : (      
         <form onSubmit={handleSubmit}>
           <div className="mt-8">
             <div>
@@ -271,7 +353,7 @@ const SecondForm = () => {
                 id="file"
                 name="file"
                 className="form-input bg-white text-slate-950 border border-slate-950 py-2 px-4 rounded-md shadow-sm tracking-wide block w-full appearance-none leading-5 transition duration-150 ease-in-out"
-                onChange={handleFileChange}
+                onChange={handleChange}
               />
             </div>
             <div className="mt-8 flex items-center gap-4">
@@ -288,6 +370,7 @@ const SecondForm = () => {
             </div>
           </div>
         </form>
+         )}
       </div>
     </div>
   )
@@ -332,14 +415,14 @@ const ThirdForm = () => {
             Youtube
           </button>
         </Link>
-        <Link href="https://twitter.com/indiankitchens">
+        <Link href="https://www.houzz.in/pro/webuser-436395657">
           {' '}
           <button
             className="w-full p-20 text-xl text-center uppercase focus:outline-none focus:shadow-outlineborder-b-2 border-b-gray-950 "
             style={{ backgroundColor: '#ffe216' }}
           >
             {' '}
-            Twitter
+            HOUZZ
           </button>
         </Link>
       </div>
@@ -452,7 +535,7 @@ const PostFooter = () => {
           </div>
         </div>
       </div>
-      <Link href="/collaborate-with-architects-interior-designers">
+      <Link href="/refer-and-get-rewards-interior-designers">
         <section class="handshake sm:py-64 py-32 sm:mb-24 mb-8">
          
             <svg

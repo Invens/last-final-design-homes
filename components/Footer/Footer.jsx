@@ -639,7 +639,7 @@ export class Footer extends Component {
                     />
                   </div>
                   <p className="mt-8">
-                    © Copyright <strong>Design Indian Homes</strong> 2023.{' '}
+                    © Copyright <strong>Design Indian Homes</strong> 2024-25.{' '}
                     <br /> All Rights Reserved
                   </p>
                 </div>

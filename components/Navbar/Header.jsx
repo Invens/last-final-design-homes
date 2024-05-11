@@ -2100,7 +2100,7 @@ const Header = () => {
                 </Link>
                 <p>
                   <Link href="/refer-and-get-rewards-interior-designers">
-                    | Refer a Rewards
+                    | Refer For Rewards
                   </Link>
                 </p>
 

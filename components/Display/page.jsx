@@ -194,10 +194,11 @@ const Display = () => {
           <motion.div variants={imagesVariant} className="single-imgi">
             <Link href="/selected-homes-exclusive-interior-designs-india">
               <Image
-                src="/images/banner1.png"
+                src="/images/banner2.png"
                 alt=""
                 width={600}
                 height={600}
+                className='rounded shadow-md'
               />
             </Link>
           </motion.div>

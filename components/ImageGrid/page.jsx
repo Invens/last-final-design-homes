@@ -157,12 +157,8 @@ const ImageGrid = () => {
     <>
       <div className="py-2 mb-12 sm:mt-28 mt-16 flex flex-col items-center justify-center text-center">
         <hr className="border-t-[1px] border-red-500 w-full mb-8 my-16" />
-        <motion.div
-          variants={textVariant}
-          initial="initial"
-          whileInView="animate"
-          className="container mx-auto text-center"
-        >
+      
+     
           {/* <motion.h2
               variants={textVariant}
               className="text-4xl font-bold mb-4"
@@ -170,10 +166,8 @@ const ImageGrid = () => {
               End To End Structural
             </motion.h2> */}
 
-          <motion.div
-            variants={textVariant}
-            className="flex justify-center items-center sm:my-8"
-          >
+        
+          
             <div style={containerStyle} className="">
               <div style={textContainerStyle} className="flex justify-center ">
                 <h1 className="sm:text-4xl text-xl font-bold text-center">
@@ -189,21 +183,21 @@ const ImageGrid = () => {
                 style={backgroundImageStyle}
               />
             </div>
-          </motion.div>
-          <motion.p variants={textVariant} className="text-gray-600">
+         
+          <p variants={textVariant} className="text-gray-600">
           Some of the Most Affordable Interiors and Architectural works are here....
-          </motion.p>
-        </motion.div>
+          </p>
+        
 
         <div className="container mx-auto mt-8">
-          <motion.div
+          <div
             variants={imagesVariant}
             initial="initial"
             whileInView="animate"
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-4 gap-4"
           >
             {imageList.map((item, index) => (
-              <motion.div
+              <div
                 variants={imagesVariant}
                 key={index}
                 className="text-center md:w-full sm:w-4/5 flex flex-col justify-center items-center"
@@ -230,9 +224,9 @@ const ImageGrid = () => {
                     <p className="text-sm mt-2">{item.text}</p>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

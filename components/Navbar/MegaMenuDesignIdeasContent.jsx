@@ -71,7 +71,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           <Link href="/before-after/before-after-interior">
             <li>Interior Before After</li>
           </Link>
-          <Link href="/before-after-/before-after-kitchen">
+          <Link href="/before-after/before-after-kitchen">
             <li>Kitchen Before After</li>
           </Link>
           <Link href="/homes-by-design-indian-homes">

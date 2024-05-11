@@ -185,6 +185,7 @@ const FileUploadForm = () => {
                     <option value="Builder">a Builder</option>
                     <option value="Company">a Company</option>
                     <option value="Freelancer ">a Freelancer </option>
+                    <option value="Freelancer ">End User </option>
                   </select>
                 </div>
                 <div className="mb-4">

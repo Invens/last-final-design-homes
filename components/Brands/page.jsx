@@ -120,7 +120,7 @@ const Brands = () => {
       
       <div className="jiu">
      
-        <motion.div
+        <div
           variants={imagesVariant}
           initial="initial"
           whileInView="animate"
@@ -128,7 +128,7 @@ const Brands = () => {
         >
           {/* 1 */}
           <Link href="/offers/#top-priority">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -146,11 +146,11 @@ const Brands = () => {
                 <h3 className="post-mini"> On Top Priority</h3>
                 <h2 className="post-title">AFFORDABLE, YET WHOLESOME</h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* 2 */}
           <Link href="/offers/#second">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -168,12 +168,12 @@ const Brands = () => {
                 <h3 className="post-mini">Handcrafted for You</h3>
                 <h2 className="post-title"> POCKET FRIENDLY, YET WELCOMING</h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* 3 */}
 
           <Link href="/offers/#third">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -189,11 +189,11 @@ const Brands = () => {
                 <h3 className="post-mini"> Be Carefree & Happy </h3>
                 <h2 className="post-title">MINIMAL, YET OVERALL COVERAGE</h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* 4 */}
           <Link href="/offers/#fourth">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -210,11 +210,11 @@ const Brands = () => {
                 <h3 className="post-mini">Over the Top</h3>
                 <h2 className="post-title">LUXURY, YET AFFORDABLE</h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* 5 */}
           <Link href="/offers/#fifth">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -234,11 +234,11 @@ const Brands = () => {
                   HIGH QUALITY WITH COMPLETE COMMITMENT
                 </h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* 6 */}
           <Link href="/offers/#sixth">
-            <motion.div variants={imagesVariant} className="blog-post m-4">
+            <div variants={imagesVariant} className="blog-post m-4">
               <Image
                 width={1000}
                 height={1000}
@@ -258,10 +258,10 @@ const Brands = () => {
                   TOP NOTCH LUXURY, WITH TOP NOTCH PRICING
                 </h2>
               </div>
-            </motion.div>
+            </div>
           </Link>
           {/* ------------ */}
-        </motion.div>
+        </div>
       </div>
       {/* section of carousel not visible in laptop in mobile */}
       <div className="lg:hidden">

@@ -8,7 +8,7 @@ import Image from 'next/image'
 const tabData = [
   // Data for Tab 1
   {
-    images: ['/images/a.png', '/images/b.png', '/images/c.png', '/images/d.png'],
+    images: ['/exterior/beautiful-luxury-structure-designs-architectural-gallery-in-delhi-gurgaon-noida-india (1).jpg', '/exterior/beautiful-luxury-structure-designs-architectural-gallery-in-delhi-gurgaon-noida-india (11).jpg', '/exterior/beautiful-luxury-structure-designs-architectural-gallery-in-delhi-gurgaon-noida-india (12).jpg', '/exterior/beautiful-luxury-structure-designs-architectural-gallery-in-delhi-gurgaon-noida-india (13).jpg'],
     links: ['/modular-interiors', '/modular-interiors', '/modular-interiors', '/modular-interiors']
   },
   {
@@ -16,7 +16,7 @@ const tabData = [
     links: ['/home-interior-services-india', '/home-interior-services-india', '/home-interior-services-india', '/home-interior-services-india']
   },
   {
-    images: ['/images/i.png', '/images/j.png', '/images/k.png', '/images/l.png'],
+    images: ['/exterior/beautiful-luxury-structure-designs-architectural-gallery-in-delhi-gurgaon-noida-india (15).jpg', '/exterior/largest-designs-for-luxury-residences-structures-interior-exterior-designs-ideas-inspiration-in-delhi-gurgaon-noida-india (2).jpg', '/exterior/largest-designs-for-luxury-residences-structures-interior-exterior-designs-ideas-inspiration-in-delhi-gurgaon-noida-india (4).jpg', '/exterior/largest-designs-for-luxury-residences-structures-interior-exterior-designs-ideas-inspiration-in-delhi-gurgaon-noida-india (11).jpg'],
     links: ['/structural-renovation-services', '/structural-renovation-services', '/structural-renovation-services', '/structural-renovation-services']
   },
   // Data for Tab 2 (and so on...)

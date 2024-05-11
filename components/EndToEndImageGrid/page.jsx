@@ -137,7 +137,7 @@ const EndToEndImageGrid = () => {
   return (
     <>
       <div className="py-2 mb-12 sm:mt-28 mt-16 flex flex-col items-center justify-center text-center">
-        <motion.div
+        <div
           variants={textVariant}
           initial="initial"
           whileInView="animate"
@@ -149,7 +149,7 @@ const EndToEndImageGrid = () => {
             >
               End To End Structural
             </motion.h2> */}
-          <motion.div
+          <div
             variants={textVariant}
             className="flex justify-center items-center sm:my-8"
           >
@@ -167,21 +167,21 @@ const EndToEndImageGrid = () => {
                 style={backgroundImageStyle}
               />
             </div>
-          </motion.div>
-          <motion.p variants={textVariant} className="text-gray-600">
+          </div>
+          <p variants={textVariant} className="text-gray-600">
             End To End We Undertake Including Complete Renovations
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         <div className="container mx-auto mt-8">
-          <motion.div
+          <div
             variants={imagesVariant}
             initial="initial"
             whileInView="animate"
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-4 gap-4"
           >
             {imageList.map((item, index) => (
-              <motion.div
+              <div
                 variants={imagesVariant}
                 key={index}
                 className="text-center md:w-full sm:w-4/5  flex flex-col justify-center items-center"
@@ -208,9 +208,9 @@ const EndToEndImageGrid = () => {
                     <p className="text-sm mt-2">{item.text}</p>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

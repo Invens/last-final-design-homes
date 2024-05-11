@@ -1,20 +1,23 @@
-import React, { useState } from 'react'
-
+import React, { useState,  useRef } from 'react'
 const TruncatedText = () => {
-  const [showFullText, setShowFullText] = useState(false)
+  const [showFullText, setShowFullText] = useState(false);
+  const textRef = useRef(null);
 
   const toggleFullText = () => {
-    setShowFullText(!showFullText)
-  }
-
+    setShowFullText(!showFullText);
+    // Scroll to the top of the text content when toggling
+    if (textRef.current) {
+      textRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
   return (
-    <div className=" text-center z-[1000]">
-      <div className={` ${showFullText ? 'my-8' : 'my-2'}`}>
+    <div   className=" text-center z-[1000]">
+      <div  className={` ${showFullText ? 'my-8' : 'my-2'}`}>
         {showFullText ? (
-          <div className="mb-6 text-left sm:mx-12 mx-4 z-10">
+          <div  className="mb-6 text-left sm:mx-12 mx-4 z-10" ref={textRef}>
             <div className="mb-2 text-left z-10">
-              <p>
-                <span className="text-4xl font-bold">D</span>esign Indian Homes
+              <p >
+                <span  className="text-4xl font-bold">D</span>esign Indian Homes
                 is India&apos;s top Interior, Architectural & Modular Interior
                 Brand serving across Delhi, Gurgaon, Noida & NCR. It is the most
                 sought out by Homemakers, Architects, Interior Designers,
@@ -114,9 +117,9 @@ const TruncatedText = () => {
             Wood Societies since 2016. <br />
           </div>
         ) : (
-          <div className="mb-2 text-left sm:mx-12 mx-4 z-10">
+          <div  className="mb-2 text-left sm:mx-12 mx-4 z-10" ref={textRef}>
             <p className="text-left z-10">
-              <span className="text-4xl font-bold z-10">D</span>esign Indian Homes is
+              <span   className="text-4xl font-bold z-10">D</span>esign Indian Homes is
               India&apos;s top Interior, Architectural & Modular Interior Brand
               serving across Delhi, Gurgaon, Noida & NCR. It is the most sought
               out by Homemakers, Architects, Interior Designers, Developers &
