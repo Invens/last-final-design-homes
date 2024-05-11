@@ -451,6 +451,38 @@ const Page = ({ images, initialSlide, onClose, onNextSlide, onPrevSlide }) => {
                 </span>
               </button>
               </Link>
+              <div className='flex gap-2'>
+                <div>
+                <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
+            <Link href="/luxury-residence-designs-delhi-india">
+              Luxury Interiors
+            </Link>
+          </button>
+                </div>
+                <div>
+                <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
+            <Link href="/homes-by-design-indian-homes">
+              Homes By DIH
+            </Link>
+          </button>
+                </div>
+              </div>
+              <div className='flex gap-2'>
+                <div>
+                <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
+            <Link href="/selected-homes-exclusive-interior-designs-india">
+              Selected Homes
+            </Link>
+          </button>
+                </div>
+                <div>
+                <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-6">
+            <Link href="/refer-and-get-rewards-interior-designers">
+             Refer For Rewards
+            </Link>
+          </button>
+                </div>
+              </div>
             </div>
           </form>
            )}

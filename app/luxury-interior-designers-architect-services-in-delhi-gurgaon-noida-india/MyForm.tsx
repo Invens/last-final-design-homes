@@ -97,11 +97,11 @@ const MyForm: React.FC<MyFormProps> = () => {
     <>
       <div className="mb-12 mt-8 sm:mt-[150px] p-8 text-center">
         <h1 className="text-6xl font-semibold mb-4 text-gray-700 mt-[100px]">
-          Exclusively You.
+        The Finest Luxury 
         </h1>
         <h3 className="text-xl text-gray-700">
-          From timeless classics to modern masterpieces, at HomeLane Luxe,{' '}
-          <br /> we curate homes that are “Exclusively You”
+        Now Get some of the most affordable luxurious interiors,
+        curated exclusively for YOU. Connect with us TODAY.
         </h3>
       </div>
       <div className="relative w-full lg:h-screen sm:h-[60vh] overflow-hidden">
