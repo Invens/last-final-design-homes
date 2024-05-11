@@ -368,21 +368,24 @@ const FourthStep = () => {
     doc.setDrawColor(0) // Reset draw color to black
 
     // Add Your Details section
-    const yourDetailsData = Object.entries(firstStepData)
-      .filter(([key]) => key !== 'selectedOptionSet4')
-      .map(([key, value]) => ({
-        Label:
-          key === 'propertyType'
-            ? 'House Type'
-            : key === 'numberOfRooms'
-            ? 'Number of Bedrooms'
-            : key === 'interiorType'
-            ? 'New or Renovation'
-            : key === 'city'
-            ? 'City'
-            : key.replace(/([A-Z])/g, ' $1').trim(),
-        Value: value,
-      }))
+    const yourDetailsData = [
+      ...Object.entries(firstStepData)
+        .filter(([key]) => key !== 'selectedOptionSet4')
+        .map(([key, value]) => ({
+          Label:
+            key === 'propertyType'
+              ? 'House Type'
+              : key === 'numberOfRooms'
+              ? 'Number of Bedrooms'
+              : key === 'interiorType'
+              ? 'New or Renovation'
+              : key === 'city'
+              ? 'City'
+              : key.replace(/([A-Z])/g, ' $1').trim(),
+          Value: value,
+        })),
+      { Label: 'Total Price', Value: `Rs. ${totalRoomPrice}` }, // Add total price row
+    ]
 
     const yourDetailsColumns = [
       { header: 'Label', dataKey: 'Label' },
@@ -419,14 +422,14 @@ const FourthStep = () => {
         const spaceColumns = [
           {
             dataKey: space.name,
-            header: `${space.name} (${space.area} sqft) ${
-              space.selectedPackage.toUpperCase() || '-'
-            } Package`,
+            header: `${space.name} (${space.area} sqft)`,
             width: columnWidth, // Set the width of the table
           },
           {
             dataKey: 'description',
-            header: 'Description',
+            header: `Description - ${
+              space.selectedPackage.toUpperCase() || '-'
+            } Package, Total Room Price Estimate - ${space.roomPrice} Rs.`,
             width: columnWidth, // Set the width of the description column
           },
           {
