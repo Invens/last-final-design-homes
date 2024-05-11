@@ -42,7 +42,7 @@ const Steps = () => {
               </h1>
               <div className="flex justify-center items-center sm:my-16">
                 <Link
-                  href="/"
+                  href="#footerform"
                   className="sm:px-8 px-4 sm:py-4 py-2 text-gray-200 sm:text-3xl text-xl font-light rounded-xl bg-gradient-to-r from-[#fbbf24] to-[#ba8a35] hover:from-[#f59e0b] hover:to-[#805ad5]"
                 >
                   Meet A Designer

@@ -329,7 +329,7 @@ const Collection = () => {
                 variants={imagesVariants}
                 id="news"
               >
-                <Link href="/luxury-interior">
+                <Link href="/luxury-residence-designs-delhi-india/luxury-interior">
                   <Image
                     height={350}
                     width={700}

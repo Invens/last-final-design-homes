@@ -49,7 +49,7 @@ const ImageGrid = () => {
     {
       src: '/images/top-picks/kitchen_renovation-removebg-preview.png',
       text: 'Kitchen Renovation',
-      slug: '/modular-kitchen-renovation-services',
+      slug: '/modular-kitchen-top-brand-india/kitchen-renovations',
     },
     {
       src: '/images/top-picks/plumbing-removebg-preview.png',

@@ -102,7 +102,7 @@ React.useEffect(() => {
 
   return (
     <> 
-    <div className='flex justify-center'>
+    <div className='flex justify-center' id='footerform'>
       <h1 className='text-4xl font-bold uppercase text-center text-black'>Connect with us <span className='text-white underline'>Today</span></h1>
     </div>
     <div className="flex flex-col sm:flex-row lg:mx-16 mt-8">

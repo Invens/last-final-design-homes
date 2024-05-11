@@ -447,9 +447,14 @@ const Header = () => {
             </Link>
             <Link href="/home-interior-services-india/wall-panelling-designs">
               <li onMouseOver={() => handleMouseOverImage('villaRenovation')}>
-                Wall Painting Designs
+                Wall Panelling Designs
               </li>{' '}
             </Link>
+            <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-2">
+            <Link href="/selected-homes-exclusive-interior-designs-india">
+             Selected Home
+            </Link>
+          </button>
           </ul>
         </div>
         <div className="">
@@ -540,6 +545,11 @@ const Header = () => {
                 Homes by DIH
               </li>{' '}
             </Link>
+            <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-2">
+            <Link href="/luxury-residence-designs-delhi-india">
+             Luxury Interiors
+            </Link>
+          </button>
           </ul>
         </div>
         <div className="center">
@@ -555,7 +565,7 @@ const Header = () => {
             layout="fixed"
           />
 
-          <div className="flex justify-center ml-40">
+          <div className="flex justify-center ml-40 mt-2">
             <button className="bg-red-600 text-white text-sm py-3 px-6 rounded-full w-52">
               <Link href="/homes-by-design-indian-homes">Homes By DIH</Link>
             </button>

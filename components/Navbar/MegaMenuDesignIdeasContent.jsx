@@ -16,7 +16,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             Modular Interior{' '}
           </h3>
         </Link>
-        <ul className="text-xs space-y-2 mt-2">
+        <ul className="text-sm space-y-2 mt-2">
           <Link href="/modular-kitchen-top-brand-india">
             <li>Modular Kitchens</li>
           </Link>
@@ -91,7 +91,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             Home Interior Designs{' '}
           </h3>
         </Link>
-        <ul className="text-xs list mt-2">
+        <ul className="text-sm list mt-2">
           <Link href="/1bhk-apartment-interior-designs">
             <li>1BHK Residences Designs</li>
           </Link>
@@ -131,7 +131,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <li>Cottage Designs</li>
           </Link>
         </ul>
-        <ul className="text-xs list">
+        <ul className="text-sm list">
           <Link href="/luxury-residence-designs-delhi-india">
             <h3 className="text-lg font-bold border-b-4 border-green-500 mt-2">
               Luxury Residence
@@ -167,7 +167,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             All Interiors{' '}
           </h3>
         </Link>
-        <ul className="text-xs list mt-2">
+        <ul className="text-sm list mt-2">
           <Link href="/wooden-polishing-designs">
             <li>Wooden Polishing</li>
           </Link>
@@ -242,6 +242,11 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             {' '}
             <li>Commercial Interiors</li>
           </Link>
+          <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-2">
+            <Link href="/selected-homes-exclusive-interior-designs-india">
+             Selected Home
+            </Link>
+          </button>
         </ul>
       </div>
 
@@ -252,7 +257,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             Architectural Designs{' '}
           </h3>
         </Link>
-        <ul className="text-xs list mt-2">
+        <ul className="text-sm list mt-2">
           <Link href="/architectural-consultancy">
             <li>Architectural Consultancy</li>
           </Link>
@@ -267,7 +272,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </Link>
           <Link href=""></Link>
         </ul>
-        <ul className="text-xs list">
+        <ul className="text-sm list">
           <Link href="/selected-homes-exclusive-interior-designs-india">
             <h3 className="text-lg font-bold border-b-4 border-green-500 mt-2">
               Selected Homes
@@ -317,7 +322,11 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             <Link href="/mesmerizing-modern-home-interiors">
               <li>Mesmerising Modern Interiors</li>
             </Link>
-           
+            <button className="bg-red-600 text-white text-m py-3 px-6 rounded-full mt-2">
+            <Link href="/refer-and-get-rewards-interior-designers">
+             Refer for Rewards
+            </Link>
+          </button>
           </div>
         </ul>
       </div>
@@ -329,7 +338,7 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
             Home Renovation Services
           </h3>
         </Link>
-        <ul className="text-xs list mt-2">
+        <ul className="text-sm list mt-2">
           <Link href="/structural-renovation-services">
             <li>Structural Renovation</li>
           </Link>
