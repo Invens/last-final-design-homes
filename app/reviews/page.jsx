@@ -46,6 +46,7 @@ const SectionWithImage = () => {
           </div>
         </div>
         <div className="lg:w-1/2">
+          <Link href="https://www.mouthshut.com/product-reviews/Design-Indian-Kitchen-reviews-925732060" target='_blank'>
           <Image
             width={1000}
             height={1000}
@@ -53,6 +54,7 @@ const SectionWithImage = () => {
             alt="Description of your image"
             className="w-full rounded"
           />
+          </Link>
         </div>
       </section>
     </div>

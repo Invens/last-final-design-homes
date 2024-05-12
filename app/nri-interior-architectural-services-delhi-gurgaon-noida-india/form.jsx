@@ -10,6 +10,7 @@ const FileUploadForm = () => {
     email: '',
     number: '',
     qualification: '',
+    message: '',
   })
   const [btnText, setBtnText] = useState('Submit')
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -142,6 +143,23 @@ const FileUploadForm = () => {
                     className="form-input bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 rounded-md block w-full appearance-none leading-5 transition duration-150 ease-in-out"
                   />
                 </div>
+                <div className="mb-4">
+                <label
+                    htmlFor="requirements"
+                    className="block text-sm font-medium text-gray-600 mb-1"
+                  >
+                   Any Particular Requirements?
+                  </label>
+                
+                  <textarea
+                  rows="1"
+                  id="message"
+                  name='message'
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                ></textarea>
+                </div>
+
               </div>
 
               {/* Right Column */}
@@ -200,6 +218,7 @@ const FileUploadForm = () => {
                     onChange={handleFileChange}
                   />
                 </div>
+               
               </div>
             </div>
             <div className="flex justify-center">

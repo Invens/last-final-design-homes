@@ -113,6 +113,7 @@ const ContactFormSection = () => {
                 </label>
                 <input
                   type="text"
+                  onChange={handleChange}
                   id="name"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 />
@@ -122,6 +123,7 @@ const ContactFormSection = () => {
                   Number
                 </label>
                 <input
+                onChange={handleChange}
                   id="number"
                   type="text"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
@@ -133,6 +135,7 @@ const ContactFormSection = () => {
                 </label>
                 <input
                   id="date"
+                  onChange={handleChange}
                   type="date"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 />
@@ -145,6 +148,7 @@ const ContactFormSection = () => {
                 </label>
                 <input
                   id="email"
+                  onChange={handleChange}
                   type="email"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 />
@@ -154,6 +158,7 @@ const ContactFormSection = () => {
                   I am Interested in
                 </label>
                 <select
+                onChange={handleChange}
                   id="requirement"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 >
@@ -190,6 +195,7 @@ const ContactFormSection = () => {
                 </label>
                 <textarea
                   rows="1"
+                  onChange={handleChange}
                   id="message"
                   className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
                 ></textarea>

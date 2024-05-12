@@ -11,6 +11,7 @@ const FileUploadForm = () => {
     number: '',
     date: '',
     FloorPlan: '',
+    message: '',
     purpose: '',
     requirements: '',
   })
@@ -169,10 +170,10 @@ const FileUploadForm = () => {
                   />
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 ">
                   <label
                     htmlFor="file"
-                    className="block text-sm font-medium text-gray-600 mb-1"
+                    className="block text-sm font-medium text-gray-600 mb-1 mt-4"
                   >
                     Select File:
                   </label>
@@ -180,7 +181,7 @@ const FileUploadForm = () => {
                     type="file"
                     id="file"
                     name="file"
-                    className="form-input bg-white text-green-500 border border-green-500 py-2 px-4 rounded-md shadow-sm tracking-wide block w-full appearance-none leading-5 transition duration-150 ease-in-out"
+                    className="form-input bg-white text-green-500 border border-green-500 py-2 px-4 rounded-md shadow-sm tracking-wide block w-full appearance-none leading-5 transition duration-150 ease-in-out mt-3"
                     onChange={handleFileChange}
                   />
                 </div>
@@ -235,6 +236,7 @@ const FileUploadForm = () => {
                     required
                     id="purpose"
                     name="purpose"
+                    
                     className="w-full form-input-select border border-gray-300 py-[6px] px-4 rounded-md leading-5 transition duration-150 ease-in-out focus:outline-none focus:shadow-outline focus:border-blue-500"
                     onChange={handleChange}
                     defaultValue="Move In"
@@ -257,6 +259,7 @@ const FileUploadForm = () => {
                     required
                     id="requirements"
                     name="requirements"
+                    
                     className="w-full form-input-select border border-gray-300 py-[6px] px-4 rounded-md leading-5 transition duration-150 ease-in-out focus:outline-none focus:shadow-outline focus:border-blue-500"
                     onChange={handleChange}
                     defaultValue="Bedroom"
@@ -266,6 +269,22 @@ const FileUploadForm = () => {
                     </option>
                     <option value="Kitchen">Kitchen</option>
                   </select>
+                </div>
+                <div className="">
+                  <label
+                    htmlFor="requirements"
+                    className="block text-sm font-medium text-gray-600 mb-1"
+                  >
+                   Any Particular Requirements?
+                  </label>
+                
+                  <textarea
+                  rows="1"
+                  id="message"
+                  name='message'
+                  onChange={handleChange}
+                  className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+                ></textarea>
                 </div>
               </div>
             </div>
