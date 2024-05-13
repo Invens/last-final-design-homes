@@ -123,7 +123,7 @@ const Page = ({}) => {
         </div>
 
         {/* tabs */}
-        <Tabs id={2} />
+        <Tabs id={1} />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
           {images.map((image, index) => (
             <div

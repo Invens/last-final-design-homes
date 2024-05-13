@@ -2,7 +2,7 @@ export const pagesData = [
   {
     id: 0,
     name: ' Mandir',
-    slug: 'mandir',
+    slug: 'mandir-designs',
     noItems: '2047',
     heading: 'Mandir',
     desc: 'We take keen interest in delivering graceful Mandirs. We have a huge range of mandir designs for your interiors. Check out our Mandir section for a huge range of Temple designs & get a Temple today at an affordable price which can be customized as per your design. Delight yourself in our products, All Our Mandir Units are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off.',
@@ -11,7 +11,7 @@ export const pagesData = [
   {
     id: 1,
     name: 'Chest of Drawers',
-    slug: 'chest-of-drawers',
+    slug: 'chest-of-drawers-designs',
     noItems: '2874',
     heading: 'Chest of Drawers',
     desc: ' Get Beautiful designed Chest of Drawers by our design team to spice up your living areas or Bedrooms. Some of the classic chest of drawers are manufactured by our Brand, book a visit by our Team Today. Take Delight in our products, All Our Chest of Drawers are pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Chest of Drawers.',
@@ -20,7 +20,7 @@ export const pagesData = [
   {
     id: 2,
     name: 'Bar Units',
-    slug: 'bar-units',
+    slug: 'bar-units-designs',
     noItems: '1816',
     heading: 'Bar Units',
     desc: ' We have some exquisite designs for Bar Units, we can provide you some of the most creative bar designs to liven up your parties. We design bespoke bar units with different types of storage making it aesthetic for wine bottles, glass cups and for built-in chillers if required. Take Delight in our products, All Our Bar Units are pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since the past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, teak, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Bar Units.',
@@ -29,7 +29,7 @@ export const pagesData = [
   {
     id: 3,
     name: 'Side Tables',
-    slug: 'side-tables',
+    slug: 'side-tables-designs',
     noItems: '162',
     heading: 'Side Tables',
     desc: 'An Amazing Makeover for Your Bed Side Tables, Now get a customized designed side table by design Indian homes at most affordable prices. We have a huge range of drawers fitting and designers shutter options for your side tables. Check out our latest design today. Take Delight in our products, All Our Side Tables are pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, teak, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Side Tables.',
@@ -38,7 +38,7 @@ export const pagesData = [
   {
     id: 4,
     name: 'Foldable Beds',
-    slug: 'foldable-beds',
+    slug: 'foldable-beds-designs',
     noItems: '809',
     heading: 'Foldable Beds',
     desc: 'Now that is a Masterpiece and a Space Saver, Get a design by our team for your customized foldable bed with storage for space saving in your bedroom with different finishes. Check out our topmost foldable beds design. Take Delight in our products, All Our Foldable Bed Designs are pocket friendly and delivered on timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, teak, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Foldable Beds.',
@@ -47,7 +47,7 @@ export const pagesData = [
   {
     id: 5,
     name: 'Foyer Cabinets',
-    slug: 'foyer-cabinets',
+    slug: 'foyer-cabinets-designs',
     noItems: '1165',
     heading: 'Foyer Cabinets',
     desc: 'A Grand Entry for your Entrances, Now Get a designer foyer area with a beautiful chest of drawers and assorted wall panelling and lightning solutions as per custom design. Check out our beautiful foyer area designs for your interiors. Take Delight in our products, All Our Foyer Area Designs are pocket friendly and delivered on timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, teak, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Foyer Area.',
@@ -56,7 +56,7 @@ export const pagesData = [
   {
     id: 6,
     name: 'Bathroom Vanities',
-    slug: 'bathroom-vanities',
+    slug: 'bathroom-vanities-designs',
     noItems: '1012',
     heading: 'Bathroom Vanities',
     desc: 'Trending TV unit designs from Design Indian Homes that can be customised to your style, preference and TV sizes. TV units are essential piece of furniture that serves as a focal point for your room while giving you amazing storage options. From wall-mounted TV unit designs for the living room to TV cupboard units in the hall and traditional TV cabinets for your bedroom, Design Indian Homes helps you create a functional and stylish TV unit. Browse through our budget-friendly modern TV unit designs that will help you transform the look of your home.',
@@ -65,7 +65,7 @@ export const pagesData = [
   {
     id: 7,
     name: 'Kitchen',
-    slug: 'kitchen-designs',
+    slug: 'modular-kitchen-top-brand-india',
     noItems: '2047',
     heading: 'Modular Kitchen Designs',
     desc: ' Get a Top Quality, functional, Affordable & Well Lit Modular Kitchen, using the Top Notch fittings. We Design from a basic simple modular kitchen to an exclusive luxury modular kitchen which perfects for convenience and aesthetics. All Our Modular Kitchens are budget friendly, and we assure you 100% guaranteed quotes across Delhi NCR, we have claimed for the past 9 years, that you bring us any Quote and we offer you Flat 7% off. We design your Modular Kitchen exactly as per bespoke requirements, in all shapes like L shape, G, U shape, Island kitchen, Open kitchen etc with distinctive types of finishes in acrylic, membrane, designer laminates, lacquer glass and veneer shutter. Check out some of the coolest kitchen designs we have with us.',
@@ -73,7 +73,7 @@ export const pagesData = [
   {
     id: 8,
     name: 'Vanities',
-    slug: 'vanities',
+    slug: 'vanity-designs',
     noItems: '2874',
     heading: 'Vanities',
     desc: 'We at Design Indian Homes design & manufacture beautiful affordable vanities which have dedicated functions like custom drawers, internal storages and with elegant handles. All Our Bathroom Vanities are economical and delivered on a very timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off.',
@@ -82,7 +82,7 @@ export const pagesData = [
   {
     id: 9,
     name: 'Crockery Units',
-    slug: 'crockery-units',
+    slug: 'crockery-units-designs',
     noItems: '1816',
     heading: 'Crockery Units',
     desc: 'Now get a Bespoke Crockery Unit with our team, we have a myriad range of Crockery Unit designs with glass, acrylics and premium Fenix materials. All Our Crockery Units are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Crockery Units.',
@@ -91,7 +91,7 @@ export const pagesData = [
   {
     id: 10,
     name: 'Glass Partition',
-    slug: 'glass-partition',
+    slug: 'glass-partition-designs',
     noItems: '162',
     heading: 'Glass Partition',
     desc: 'When you really deserve a perfect partition, you must get one. Now get Beautiful Glass Partitions for your interiors to deck up your spaces. Delight yourself in our products, All Our Glass Partitions are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like slim profiled, zed profiled, cube profile and lacquered. Check out our designs for some of the top ideas for your Glass Partitions.',
@@ -100,7 +100,7 @@ export const pagesData = [
   {
     id: 11,
     name: 'Dressers',
-    slug: 'dressers',
+    slug: 'dressers-designs',
     noItems: '809',
     heading: 'Dressers',
     desc: 'We make you look good, by having good looking Dressers… ! Now get a bespoke dresser, made specifically as per your requirements at the most affordable quotes. All Our Dressers are very economical and delivered on a very timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off.We provide different finishes of the shutter, stone veneers, glass acrylics and lacquer glass. Check out our designs for some of the top ideas for your dressers.',
@@ -109,7 +109,7 @@ export const pagesData = [
   {
     id: 12,
     name: 'Wardrobe',
-    slug: 'wardrobe',
+    slug: 'wardrobe-designs',
     noItems: '1165',
     heading: 'Wardrobe Interior Designs',
     desc: 'We make your wardrobes look good, just as you dress up to look up, we are your Wardrobe’s Makeover Specialist. All Our Wardrobes are very affordable and we have more than 1000+ wardrobe designs to showcase, book a site visit with us and see the design magic, and we assure you 100% guaranteed quotes across Delhi NCR, we stake claim since past 9 years, that you bring us any Quote and we offer you Flat 7% off. Check out our designs for best Wardrobe Ideas and Inspirations.',
@@ -136,7 +136,7 @@ export const pagesData = [
   {
     id: 15,
     name: 'Shoes Rack',
-    slug: 'shoes-rack',
+    slug: 'shoes-rack-designs',
     noItems: '1012',
     heading: 'Shoes Rack',
     desc: ' Design a Shoe Rack storage to keep your shoes organized. We design shoe racks units as free standing units or else it can be fitted to your wardrobe base area which is fully functional modular fittings. To protect your expensive footwear from wear & tear and to look elegant and stylish in your home, we have some of the most contemporary solutions for shoe racks. Delight yourself in our products, All Shoeracks are very pocket friendly and delivered on a timely basis, we assure you 100% guaranteed quotes across Delhi NCR, we have claimed since past 9 years, that you bring us any Quote and we offer you Flat 7% off. We provide different finishes of the shutters like premium laminates, Stone Veneers, Glass Acrylics and lacquer glass. Check out our designs for some of the top ideas for your Shoe Racks.',

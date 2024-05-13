@@ -12,21 +12,21 @@ import Image from 'next/image'
 const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
   const categoryFolderMapping: Record<number, string> = {
-    106: 'mandir',
-    107: 'chest-of-drawers',
-    108: 'bar-units',
-    109: 'side-tables',
-    110: 'foldable-beds',
-    111: 'foyer-cabinets',
-    112: 'bathroom-vanities',
-    69:   'crockery-units',
-    70:  'glass-partition',
-    67: 'dressers',
-    65: 'wardrobe',
+    106: 'mandir-designs',
+    107: 'chest-of-drawers-designs',
+    108: 'bar-units-designs',
+    109: 'side-tables-designs',
+    110: 'foldable-beds-designs',
+    111: 'foyer-area-designs',
+    112: 'bathroom-vanities-designs',
+    69:   'crockery-units-designs',
+    70:  'glass-partition-designs',
+    67: 'dressers-designs',
+    65: 'wardrobe-designs',
     68: 'tv-unit-designs',
-    64: 'kitchen-designs',
-    66: 'vanities',
-    102: 'shoes-rack'
+    64: 'modular-kitchen-top-brand-india',
+    66: 'vanity-designs',
+    102: 'shoes-rack-designs'
 
 
 

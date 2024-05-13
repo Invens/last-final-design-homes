@@ -1432,7 +1432,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/mandir">
+                  <Link href="/modular-interiors/mandir-designs">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
@@ -1483,7 +1483,7 @@ const Header = () => {
                 />
                 <div>
                   <Link
-                    href="/modular-interiors/bar-units"
+                    href="/modular-interiors/bar-units-designs"
                   >
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1508,7 +1508,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/side-tables">
+                  <Link href="/modular-interiors/side-tables-designs">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('side_table')}
@@ -1532,7 +1532,7 @@ const Header = () => {
                 />
 
                 <div>
-                  <Link href="/modular-interiors/foldable-beds">
+                  <Link href="/modular-interiors/foldable-beds-designs">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('foldable_bed')}
@@ -1555,7 +1555,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/bathroom-vanities">
+                  <Link href="/modular-interiors/bathroom-vanities-designs">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1581,7 +1581,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/foyer-cabinets">
+                  <Link href="/modular-interiors/foyer-area-designs">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1644,7 +1644,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-kitchen-top-brand-india">
+                  <Link href="/modular-interiors/modular-kitchen-top-brand-india">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() =>
@@ -1695,8 +1695,7 @@ const Header = () => {
                 />
                 <div>
                   <Link
-                    href="/modular-interiors/wardrobe
-"
+                    href="/modular-interiors/wardrobe-designs"
                   >
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -1721,7 +1720,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/dressers">
+                  <Link href="/modular-interiors/dressers-designs">
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
                       onMouseOver={() => handleMouseOverImage('side_table')}
@@ -1768,7 +1767,7 @@ const Header = () => {
                   className=" rounded-lg"
                 />
                 <div>
-                  <Link href="/modular-interiors/crockery-units">
+                  <Link href="/modular-interiors/crockery-units-designs">
                     {' '}
                     <h3
                       className="text-sm font-extrabold absolute px-2 py-1  text-white bg-black"
@@ -2080,11 +2079,12 @@ const Header = () => {
           )}
 
           <div className="animated-bg text-black  sticky top-0 ">
-            <div className="flex justify-center xl:space-x-12 lg:space-x-8 mt-2">
+            <div className="flex justify-center xl:space-x-16 lg:space-x-16 mt-2">
               <div className="flex ml-0 gap-2 w-[100px]">
                 <FontAwesomeIcon
                   icon={faPhone}
-                  className="text-sm text-black mt-2 w-[24px]"
+                  className="text-sm text-black mt-[6px]"
+                 style={{width: '24px', height: '24px'}}
                 />{' '}
                 <a
                   className="text-sm text-black font-bold mt-2"

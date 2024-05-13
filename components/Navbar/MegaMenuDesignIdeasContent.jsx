@@ -17,52 +17,52 @@ const MegaMenuDesignIdeasContent = ({ handleMouseLeave }) => (
           </h3>
         </Link>
         <ul className="text-sm space-y-2 mt-2">
-          <Link href="/modular-kitchen-top-brand-india">
+          <Link href="/modular-interiors/modular-kitchen-top-brand-india">
             <li>Modular Kitchens</li>
           </Link>
-          <Link href="/wardrobe-designs">
+          <Link href="/modular-interiors/wardrobe-designs">
             <li>Wardrobes</li>
           </Link>
           <Link href="/types-of-wardrobe">
             <li>Types of Wardrobes</li>
           </Link>
-          <Link href="/vanity-designs">
+          <Link href="/modular-interiors/vanity-designs">
             {' '}
             <li>Vanities </li>
           </Link>
-          <Link href="/dressers-designs">
+          <Link href="/modular-interiors/dressers-designs">
             <li>Dressers</li>
           </Link>
-          <Link href="/tv-unit-designs">
+          <Link href="/modular-interiors/tv-unit-designs">
             <li>TV Units</li>
           </Link>
-          <Link href="/crockery-unit-designs">
+          <Link href="/modular-interiors/crockery-units-designs">
             {' '}
             <li>Crockery Units</li>
           </Link>
-          <Link href="/glass-partition-designs">
+          <Link href="/modular-interiors/glass-partition-designs">
             <li>Glass Partitions</li>
           </Link>
           <Link href="/lacquer-glass-wardrobe-designs">
-            <li>Lacquer Glass Wardrobe Designs</li>
+            <li>Lacquer Wardrobe Designs</li>
           </Link>
-          <Link href="/mandir-designs">
+          <Link href="/modular-interiors/mandir-designs">
             <li>Mandir</li>
           </Link>
-          <Link href="/bar-unit-designs">
+          <Link href="/modular-interiors/bar-units-designs">
             <li>Bar</li>
           </Link>
-          <Link href="/side-table-designs">
+          <Link href="/modular-interiors/side-tables-designs">
             <li>Side Tables</li>
           </Link>
 
           <Link href="/home-interior-designs/residential-Offices-designs">
             <li>Home Office</li>
           </Link>
-          <Link href="/foyer-area-designs">
+          <Link href="/modular-interiors/foyer-area-designs">
             <li>Foyer Cabinets</li>
           </Link>
-          <Link href="/modular-interiors/shoes-rack">
+          <Link href="/modular-interiors/shoes-rack-designs">
             <li>Shoes Rack</li>
           </Link>
           <Link href="/before-after/before-after-wardrobe">

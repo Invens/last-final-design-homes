@@ -199,7 +199,7 @@ const Page = ({}) => {
                   />
                 </Link>
               )}
-              <h2 className="text-xl font-semibold mb-4">
+              <h2 className="text-xl font-semibold mb-4 capitalize">
                 {categoryData.name}
               </h2>
               <p className="text-gray-700 mb-4">{categoryData.description}</p>

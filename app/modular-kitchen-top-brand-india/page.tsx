@@ -14,7 +14,7 @@ const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
 
   const categoryFolderMapping: Record<number, string> = {
-    89: 'types-of-modular-kitchens',
+    // 89: 'types-of-modular-kitchens',
     90: 'modular-kitchen-designs',
     91: 'luxury-modular-kitchens',
     92: 'kitchen-renovations',
@@ -26,7 +26,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [89, 90, 91, 92] // Add the category IDs you want to fetch
+        const categoryIds = [ 90, 91, 92] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -170,6 +170,31 @@ const Page = ({}) => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
+        <div
+              className="bg-white rounded-md shadow-md p-6">
+             <Link href='/types-of-modular-kitchens'>
+                  <Image
+          
+                    alt='Types of Modular Kitchen'
+                    height={1000}
+                    width={1000}
+                    src="/images/modular_kitchen/larg/best-modular-kitchen-wardrobes-designs-small-kitchen-designs-wardrobe-designs-in-delhi-gurgaon-noida-india (6).jpg"
+                    style={{
+                      width: '450px',
+                      height: '230px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                  
+           
+              <h2 className="text-xl font-semibold mb-4">
+               Types of Modular Kitchens
+              </h2>
+              <p className="text-gray-700 mb-4">
+               Best Modular Kitchens designs in Delhi, Gurgaon, Noida, Faridabad india
+              </p>
+              </Link>
+            </div>
           {categoryDataArray.map((categoryData) => (
             <Link
               key={categoryData.id}
@@ -198,6 +223,31 @@ const Page = ({}) => {
               </div>
             </Link>
           ))}
+           <div
+              className="bg-white rounded-md shadow-md p-6">
+             <Link href='/shutter-finish'>
+                  <Image
+          
+                    alt='Types of Modular Kitchen'
+                    height={1000}
+                    width={1000}
+                    src="https://api.designindianwardrobe.com/uploads/acrylic-modular-kitchen-dealers-and-manufacturers-in-delhi-gurgaon-noida-india%20(1).jpg"
+                    style={{
+                      width: '450px',
+                      height: '230px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                  
+           
+              <h2 className="text-xl font-semibold mb-4">
+               Shutter Finish
+              </h2>
+              <p className="text-gray-700 mb-4">
+               Best Shutter Finish designs in Delhi, Gurgaon, Noida, Faridabad india
+              </p>
+              </Link>
+            </div>
         </div>
       </div>
 

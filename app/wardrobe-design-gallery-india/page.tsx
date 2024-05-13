@@ -15,8 +15,8 @@ const Page = ({}) => {
   const [categoryDataArray, setCategoryDataArray] = useState<any[]>([])
 
   const categoryFolderMapping: Record<number, string> = {
-    94: 'types-of-wardrobes',
-    95: 'luxury-wardrobes',
+    // 94: 'types-of-wardrobes',
+    95: 'luxury-wardrobes-designs',
     96: 'wardrobe-designs',
     97: 'lacquer-glass-wardrobe-designs',
     98: 'wardrobe-renovations-services',
@@ -28,7 +28,7 @@ const Page = ({}) => {
     const fetchCategoryData = async () => {
       try {
         const timestamp = Date.now()
-        const categoryIds = [94, 95, 96, 97, 98] // Add the category IDs you want to fetch
+        const categoryIds = [ 95, 96, 97, 98] // Add the category IDs you want to fetch
 
         // Fetch category data
         const categoryPromises = categoryIds.map(async (categoryId) => {
@@ -174,6 +174,32 @@ const Page = ({}) => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-7 mt-16">
+        <div
+              className="bg-white rounded-md shadow-md p-6">
+             <Link href='/types-of-wardrobe'>
+                  <Image
+          
+                    alt='types of wardrobe'
+                    height={1000}
+                    width={1000}
+                    onLoad={handleImageLoad}
+                    src="/images/wardrobe/larg/complete-modular-kitchens-wardrobe-renovation-services-in-delhi-gurgaon-noida-india (7).jpg"
+                    style={{
+                      width: '450px',
+                      height: '230px',
+                      borderRadius: '10px',
+                    }}
+                  />
+                  
+           
+              <h2 className="text-xl font-semibold mb-4">
+               Types of Wardrobe
+              </h2>
+              <p className="text-gray-700 mb-4">
+               Best wardrobe designs in Delhi, Gurgaon, Noida, Faridabad india
+              </p>
+              </Link>
+            </div>
           {categoryDataArray.map((categoryData) => (
             <div
               key={categoryData.id}
@@ -205,7 +231,10 @@ const Page = ({}) => {
               <p className="text-gray-700 mb-4">{categoryData.description}</p>
             </div>
           ))}
+
+
         </div>
+       
       </div>
 
       <Footer />
