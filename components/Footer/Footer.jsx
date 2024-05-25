@@ -185,7 +185,7 @@ const DesignIdeasDropdownContainer = () => {
       id: 6,
       heading: 'Modular Interior',
       links: [
-        { label: 'Mandir', url: '/modular-interiors/mandir' },
+        { label: 'Mandir', url: '/modular-interiors/mandir-designs' },
         { label: 'Chest of Drawers', url: '/modular-interiors/chest-of-drawers' },
         { label: 'Bar Units', url: '/modular-interiors/bar-units' },
         { label: 'Side Tables', url: '/modular-interiors/side-tables' },

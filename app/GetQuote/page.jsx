@@ -12,7 +12,8 @@ const FullWidthSection = () => {
       {/* Replace 'your-image.jpg' with the actual path to your background image */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute z-10 text-white text-center">
-        <h1 className="text-4xl font-bold">Get Quote</h1>
+        <h1 className="text-4xl font-bold">Get Quotes
+        </h1>
         {/* You can add more content or customize styling here */}
       </div>
       <div
@@ -25,8 +26,6 @@ const FullWidthSection = () => {
     </section>
   )
 }
-
-
 
 const page = () => {
   return (

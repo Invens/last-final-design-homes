@@ -71,9 +71,9 @@ const Page = ({}) => {
 <meta name="Publisher" content="www.designindianhomes.com" />
 <meta name="Distribution" content="Global" />
 <meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/lacquer-glass-wardrobe-designs/" />
-<meta name="googlebot" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/lacquer-glass-wardrobe-designs/" /> 
+<meta name="googlebot" content="index, follow" /> 
 <meta name="Yahoobot" content="index, follow" />
 <meta name="MSNbot" content="Index, Follow" />
 <meta name="allow-search" content="yes" />
@@ -84,8 +84,9 @@ const Page = ({}) => {
 <meta name="geo.placename" content="Delhi" />
 <meta property="og:url" content="https://designindianhomes.com/" />
 <meta property="og:title" content="Lacquer Glass Wardrobe Designs | Lacquer Wardrobes in Delhi - India" />
-<meta property="og:description" content="We have some of the top notch lacquer glass wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for lacquer glass wardrobes across Delhi - India." />
-    </head>
+<meta property="og:description" content="We have some of the top notch lacquer glass wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for lacquer glass wardrobes across Delhi - India." /> 
+
+</head>
       <ProgressBar />
       <Omsairam />
       <Header />

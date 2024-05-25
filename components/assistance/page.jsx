@@ -32,7 +32,7 @@ const Assistance = () => {
   }
 
   return (
-    <div className="fixed bottom-0 right-4 flex flex-col items-center mb-[55px] z-50">
+    <div className="fixed bottom-0 right-4 flex flex-col items-center mb-32 sm:mb-20 z-10">
       <div className="flex flex-row justify-center items-start">
         <div>
           {isShowing && (
@@ -85,13 +85,15 @@ const Assistance = () => {
             </a>
           </div>
           <div className="border-2 bg-white cursor-pointer border-black w-12 h-12 rounded-full mb-4 flex justify-center items-center relative">
-            <a href="https://www.houzz.in/pro/webuser-436395657" target='_blank'>
+            <a
+              href="https://www.houzz.in/pro/webuser-436395657"
+              target="_blank"
+            >
               <Image
-              src="/images/houzz.webp"
-              width={1000}
-              height={1000}
-              className='w-[30px] h-[30px]'
-
+                src="/images/houzz.webp"
+                width={1000}
+                height={1000}
+                className="w-[30px] h-[30px]"
               />
               <span className="tooltip absolute bg-black text-white px-2 py-1 rounded text-xs bottom-full -left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-300">
                 Call

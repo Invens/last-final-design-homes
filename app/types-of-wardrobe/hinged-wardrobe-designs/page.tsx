@@ -56,8 +56,14 @@ const Page = () => {
   return (
     <>
       <head>
-        <title>Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India</title>
-        <meta name="description" content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India." />
+        <title>
+          Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India
+        </title>
+        <meta
+          name="description"
+          content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India."
+        />
+
         <meta name="Author" content="Design Indian Homes" />
         <meta name="Generator" content="www.designindianhomes.com" />
         <meta name="Language" content="en" />
@@ -68,7 +74,10 @@ const Page = () => {
         <meta name="Distribution" content="Global" />
         <meta name="Rating" content="general" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/hinged-wardrobe-designs/" />
+        <link
+          rel="canonical"
+          href="https://designindianhomes.com/types-of-wardrobe/hinged-wardrobe-designs/"
+        />
         <meta name="googlebot" content="index, follow" />
         <meta name="Yahoobot" content="index, follow" />
         <meta name="MSNbot" content="Index, Follow" />
@@ -79,8 +88,14 @@ const Page = () => {
         <meta name="geo.region" content="IN-DL" />
         <meta name="geo.placename" content="Delhi" />
         <meta property="og:url" content="https://designindianhomes.com/" />
-        <meta property="og:title" content="Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India" />
-        <meta property="og:description" content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India." />
+        <meta
+          property="og:title"
+          content="Hinged Wardrobe Designs | Hinged Wardrobe in Delhi - India"
+        />
+        <meta
+          property="og:description"
+          content="We have some of the top notch hinged wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for affordable wardrobes across Delhi - India."
+        />
       </head>
       <ProgressBar />
       <Omsairam />

@@ -1,17 +1,14 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import Marquee from 'react-fast-marquee'
-import { motion } from 'framer-motion'
-import Typewriter from 'typewriter-effect';
-
 import dynamic from 'next/dynamic'
+
 const TruncatedText = dynamic(() => import('./TruncatedText'))
+
 const Hero = () => {
-
-
-
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   const videoVariants = {
     initial: {
@@ -30,37 +27,16 @@ const Hero = () => {
     },
   }
 
-
-
-  const containerStyle = {
-    position: 'relative',
-    height: 'fit-content', // Adjust as needed
-    width: 'fit-content', // Adjust as needed
-    display: 'inline-block', // Ensure the container only takes the size of its content
-  }
-
-  const textContainerStyle = {
-    zIndex: '1', // Ensure text is above the background image
-    textAlign: 'center', // Center the text
-    position: 'relative', // Position the text within the container
-  }
-
-  const backgroundImageStyle = {
-    position: 'absolute', // Position the image behind the text
-    top: '0',
-    left: '0',
-    width: '100%', // Set the width to 100%
-    height: '100%', // Set the height to 100%
-    objectFit: 'cover', // Ensure the image covers the container
-    opacity: '1', // Adjust the opacity as needed
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true)
   }
 
   return (
-    <div className=''>
+    <div className="">
       <div id="fry">
-        <div style={containerStyle} className='mt-4 '>
-          <div style={textContainerStyle}>
-            <h3 className="sm:text-4xl text-lg font-bold  ">
+        <div className="relative mt-4">
+          <div className="relative z-10 text-center">
+            <h3 className="sm:text-4xl text-lg font-bold">
               INDIA’S NO.1 INTERIOR & ARCHITECTURAL BRAND
             </h3>
           </div>
@@ -69,7 +45,7 @@ const Hero = () => {
             height={1000}
             src="/images/simple-gold-brush-stroke-banner-5.png"
             alt="Paint Brush"
-            style={backgroundImageStyle}
+            className="absolute top-0 left-0 w-full h-full object-cover"
           />
         </div>
       </div>
@@ -77,7 +53,7 @@ const Hero = () => {
         <TypeAnimation
           sequence={[
             'TOP KITCHEN & CLOSET BRAND ',
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
+            1000,
             ' LARGEST KITCHEN DEALERS',
             1000,
             'MODULAR KITCHEN & CLOSET',
@@ -92,14 +68,6 @@ const Hero = () => {
           speed={50}
           repeat={Infinity}
         />
-        {/* <Typewriter
-        className="text-4xl"
-          options={{
-            strings: ['TOP KITCHEN & CLOSET BRAND', 'LARGEST KITCHEN DEALERS', 'LARGEST ARCHITECTURAL BRAND', 'LARGEST ARCHITECTURAL BRAND', 'TOP AWARDED INTERIORS'],
-            autoStart: true,
-            loop: true,
-          }}
-        /> */}
       </div>
 
       <div className="main-hero mt-5">
@@ -117,13 +85,22 @@ const Hero = () => {
               OUR STYLE
               <br />
               IS TO DELIVER SMILES
-            </h1>{' '}
+            </h1>
           </div>
         </div>
       </div>
 
-      <section className="outter hero-video">
-        <div className="videoBox mt-3 rounded-xl">
+      <section className="relative max-w-[95%] w-full mx-auto my-6">
+        <div className="relative mt-3 rounded-xl overflow-hidden h-[550px] sm:w-[90%] mx-auto">
+          {!isVideoLoaded && (
+            <Image
+              src="/images/thumbnail-hero.png"
+              alt="Video Thumbnail"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl shadow-md"
+            />
+          )}
           <video
             loop
             autoPlay
@@ -131,11 +108,14 @@ const Hero = () => {
             playsInline
             width={1600}
             height={550}
-            className="rounded-xl shadow-md mx-auto sm:w-[90%]"
+            className={`rounded-xl shadow-md w-full h-full absolute top-0 left-0 object-cover ${
+              isVideoLoaded ? 'block' : 'hidden'
+            }`}
             variants={videoVariants}
             initial="initial"
             whileInView="animate"
             preload="metadata"
+            onLoadedData={handleVideoLoaded}
           >
             <source
               src="/video/video-interior-designer-company-in-delhi-gurgaon-noida-india.mp4"
@@ -144,13 +124,13 @@ const Hero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="callout">
+        <div className="callout text-center mt-6">
           <h3 className="bg-transparent text-sm md:text-4xl">
             Looking for Interiors or Modular Works
           </h3>
           <br />
           <a
-            className=" button hover:bg-white"
+            className="button hover:bg-white inline-block text-white py-2 px-4 rounded"
             href="/book-a-interior-design-visit"
           >
             Connect with us
@@ -162,7 +142,7 @@ const Hero = () => {
         <TruncatedText />
       </div>
 
-      <Marquee style={{ backgroundColor: ' yellow ' }} className="my-6">
+      <Marquee style={{ backgroundColor: 'yellow' }} className="my-6">
         <div className="marquee">
           <h3>
             Top Interior, Architectural & Modular Kitchen - Wardrobe Brand in
@@ -173,5 +153,5 @@ const Hero = () => {
     </div>
   )
 }
-// Hero.ssr = false
+
 export default Hero

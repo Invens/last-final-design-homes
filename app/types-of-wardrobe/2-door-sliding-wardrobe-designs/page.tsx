@@ -48,36 +48,48 @@ const Page = ({}) => {
 
   return (
     <>
-    <head>
-    <title>Two Door Sliding Wardrobe Designs | Wardrobe Designs Delhi - India</title>
+      <head>
+        <title>
+          Two Door Sliding Wardrobe Designs | Wardrobe Designs Delhi - India
+        </title>
+        <meta
+          name="description"
+          content="We have some of the top 2 door sliding wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for wardrobes across Delhi - India."
+        />
 
-<meta name="description" content ="We have some of the top 2 door sliding wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for wardrobes across Delhi - India." />
-
-
-<meta name="Author" content="Design Indian Homes" />
-<meta name="Generator" content="www.designindianhomes.com" />
-<meta name="Language" content="en" />
-<meta name="robots" content="index, follow" />
-<meta name="Copyright" content="©www.designindianhomes.com" />
-<meta name="Designer" content="Design Indian Homes Unit" />
-<meta name="Publisher" content="www.designindianhomes.com" />
-<meta name="Distribution" content="Global" />
-<meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/2-door-sliding-wardrobe-designs/" />
-<meta name="googlebot" content="index, follow" />
-<meta name="Yahoobot" content="index, follow" />
-<meta name="MSNbot" content="Index, Follow" />
-<meta name="allow-search" content="yes" />
-<meta name="country" content="India"/>
-<meta name="contactNumber" content="+91-98-99-26-49-78"/>
-<meta name="dc.language" content="english"/>
-<meta name="geo.region" content="IN-DL" />
-<meta name="geo.placename" content="Delhi" />
-<meta property="og:url" content="https://designindianhomes.com/" />
-<meta property="og:title" content="Two Door Sliding Wardrobe Designs | Wardrobe Designs Delhi - India" />
-<meta property="og:description" content="We have some of the top 2 door sliding wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for wardrobes across Delhi - India." />
-    </head>
+        <meta name="Author" content="Design Indian Homes" />
+        <meta name="Generator" content="www.designindianhomes.com" />
+        <meta name="Language" content="en" />
+        <meta name="robots" content="index, follow" />
+        <meta name="Copyright" content="©www.designindianhomes.com" />
+        <meta name="Designer" content="Design Indian Homes Unit" />
+        <meta name="Publisher" content="www.designindianhomes.com" />
+        <meta name="Distribution" content="Global" />
+        <meta name="Rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="canonical"
+          href="https://designindianhomes.com/types-of-wardrobe/2-door-sliding-wardrobe-designs/"
+        />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="Yahoobot" content="index, follow" />
+        <meta name="MSNbot" content="Index, Follow" />
+        <meta name="allow-search" content="yes" />
+        <meta name="country" content="India" />
+        <meta name="contactNumber" content="+91-98-99-26-49-78" />
+        <meta name="dc.language" content="english" />
+        <meta name="geo.region" content="IN-DL" />
+        <meta name="geo.placename" content="Delhi" />
+        <meta property="og:url" content="https://designindianhomes.com/" />
+        <meta
+          property="og:title"
+          content="Two Door Sliding Wardrobe Designs | Wardrobe Designs Delhi - India"
+        />
+        <meta
+          property="og:description"
+          content="We have some of the top 2 door sliding wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for wardrobes across Delhi - India."
+        />
+      </head>
       <ProgressBar />
       <Omsairam />
       <Header />

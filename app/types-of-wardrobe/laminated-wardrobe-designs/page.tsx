@@ -51,8 +51,7 @@ const Page = ({}) => {
     <>
     <head>
     <title>Laminated Wardrobe Designs | Laminated Wardrobes in Delhi - India</title>
-
-<meta name="description" content ="We have some of the best laminated wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for laminated wardrobes across Delhi - India." />
+    	<meta name="description" content ="We have some of the best laminated wardrobe designs across delhi, gurgaon, noida and India, we are the largest manufacturers for laminated wardrobes across Delhi - India." />
 
 
 <meta name="Author" content="Design Indian Homes" />
@@ -64,9 +63,9 @@ const Page = ({}) => {
 <meta name="Publisher" content="www.designindianhomes.com" />
 <meta name="Distribution" content="Global" />
 <meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/laminated-wardrobe-designs/" />
-<meta name="googlebot" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/laminated-wardrobe-designs/" /> 
+<meta name="googlebot" content="index, follow" /> 
 <meta name="Yahoobot" content="index, follow" />
 <meta name="MSNbot" content="Index, Follow" />
 <meta name="allow-search" content="yes" />
@@ -78,7 +77,8 @@ const Page = ({}) => {
 <meta property="og:url" content="https://designindianhomes.com/" />
 <meta property="og:title" content="Laminated Wardrobe Designs | Laminated Wardrobes in Delhi - India" />
 <meta property="og:description" content="We have some of the best laminated wardrobe designs across delhi, gurgaon, noida and India, we are the Largest manufacturers for laminated wardrobes across Delhi - India." />
-    </head>
+
+</head>
       <ProgressBar />
       <Omsairam />
       <Header />

@@ -1,8 +1,9 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Stepper, Step, StepLabel, Typography, Button } from '@mui/material'
+import { Stepper, Step, StepLabel, StepIconProps } from '@mui/material'
 import Image from 'next/image'
 import MaxWidthWrapper from '../MaxWidthWrapper'
+
 const steps = [
   {
     label: '',
@@ -24,7 +25,7 @@ const steps = [
   },
   {
     label: '',
-    heading: ' Visit Our Boutique Office',
+    heading: 'Visit Our Boutique Office',
     content:
       'You Visit Our Boutique Office, we show your the presentation as per understanding of works, show tentative estimates & give further details on design execution. ',
   },
@@ -38,9 +39,31 @@ const steps = [
     label: '',
     heading: 'Approvals & Initiating Execution as per Timelines - ',
     content:
-      'We start the Modular, End to End Or Structural Works and Deliver as per Assured Time.',
+      'We start the Modular, End to End Or Structural Works and Deliver as per Assured Time.',
   },
 ]
+
+const CustomStepIcon = (props) => {
+  const { active, completed, icon } = props
+  const stepNumber = icon
+  return (
+    <div
+      style={{
+        color: active ? 'white' : 'black',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 32,
+        height: 32,
+        borderRadius: '50%',
+        border: `2px solid ${active ? 'blue' : 'grey'}`,
+        backgroundColor: active ? 'blue' : 'white',
+      }}
+    >
+      {stepNumber}
+    </div>
+  )
+}
 
 const StepperComponent = () => {
   const [activeStep, setActiveStep] = useState(0)
@@ -83,34 +106,39 @@ const StepperComponent = () => {
 
   return (
     <>
-      <MaxWidthWrapper>
-        <div className="flex justify-center items-center sm:my-8">
-          <div style={containerStyle} className="my-16">
-            <div style={textContainerStyle} className="flex justify-center ">
-              <h1 className="sm:text-4xl text-xl font-bold text-center">
-                Our Design Process
-              </h1>
-            </div>
-            <Image
-              width={1000}
-              height={1000}
-              src="/images/simple-gold-brush-stroke-banner-5.png"
-              alt="Paint Brush"
-              style={backgroundImageStyle}
-            />
+      <div className="flex justify-center items-center sm:my-8">
+        <div style={containerStyle} className="my-16">
+          <div style={textContainerStyle} className="flex justify-center ">
+            <h1 className="sm:text-4xl text-xl font-bold text-center">
+              Our Design Process
+            </h1>
           </div>
+          <Image
+            width={1000}
+            height={1000}
+            src="/images/simple-gold-brush-stroke-banner-5.png"
+            alt="Paint Brush"
+            style={backgroundImageStyle}
+          />
         </div>
-        <div
-          className="flex flex-col md:flex-row m-8"
-          style={{
-            backgroundImage: `url('/images/pinkbg-blob.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: '0.8',
-          }}
-        >
-          {/* Image Section (50% width) */}
-          <div className="w-full md:w-1/2">
+      </div>
+      <div className="flex flex-col md:flex-row sm:gap-16 relative p-16">
+        {/* Image Section (50% width) */}
+        <div className="w-full md:w-1/2">
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 rounded-lg"
+            autoPlay
+            loop
+            muted
+          >
+            <source
+              src="/video/Moving Gradient Background.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          <div className="relative w-full z-10">
             <Image
               src="/images/steps1.avif"
               width={600}
@@ -119,26 +147,28 @@ const StepperComponent = () => {
               className="w-full h-auto rounded-lg"
             />
           </div>
+        </div>
 
-          {/* Stepper Section (50% width) */}
-          <div className="w-full md:w-1/2 mt-4 my-auto flex flex-col justify-between ">
-            <Stepper activeStep={activeStep} alternativeLabel>
-              {steps.map((step, index) => (
-                <Step key={index} onClick={() => handleStepChange(index)}>
-                  <StepLabel>{step.label}</StepLabel>
-                </Step>
-              ))}
-            </Stepper>
+        {/* Stepper Section (50% width) */}
+        <div className="w-full md:w-1/2 mt-4 my-auto flex flex-col justify-between z-10">
+          <Stepper activeStep={activeStep} alternativeLabel>
+            {steps.map((step, index) => (
+              <Step key={index} onClick={() => handleStepChange(index)}>
+                <StepLabel StepIconComponent={CustomStepIcon}>
+                  {step.label}
+                </StepLabel>
+              </Step>
+            ))}
+          </Stepper>
 
-            <div className="md:mx-8 my-8 md:mt-16">
-              <h2 className="text-xl font-semibold text-red-500 mb-4">
-                {steps[activeStep].heading}
-              </h2>
-              <p className="text-sm">{steps[activeStep].content}</p>
-            </div>
+          <div className="md:mx-8 my-8 md:mt-16">
+            <h2 className="text-xl font-semibold text-red-500 mb-4">
+              {steps[activeStep].heading}
+            </h2>
+            <p className="text-sm">{steps[activeStep].content}</p>
           </div>
         </div>
-      </MaxWidthWrapper>
+      </div>
     </>
   )
 }

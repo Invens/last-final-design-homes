@@ -106,8 +106,7 @@ const Page = ({}) => {
     <>
     <head>
     <title>Types of Wardrobes | Top Wardrobe Designs in Delhi - India</title>
-
-<meta name="description" content ="We have some of the top wardrobe designs across delhi, gurgaon, noida and India, we have some of the largest collection of modular wardrobes across Delhi - India." />
+    <meta name="description" content ="We have some of the top wardrobe designs across delhi, gurgaon, noida and India, we have some of the largest collection of modular wardrobes across Delhi - India." />
 
 
 <meta name="Author" content="Design Indian Homes" />
@@ -119,7 +118,7 @@ const Page = ({}) => {
 <meta name="Publisher" content="www.designindianhomes.com" />
 <meta name="Distribution" content="Global" />
 <meta name="Rating" content="general" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="canonical" href="https://designindianhomes.com/types-of-wardrobe/" />
 <meta name="googlebot" content="index, follow" />
 <meta name="Yahoobot" content="index, follow" />
@@ -133,6 +132,8 @@ const Page = ({}) => {
 <meta property="og:url" content="https://designindianhomes.com/" />
 <meta property="og:title" content="Types of Wardrobes | Top Wardrobe Designs in Delhi - India" />
 <meta property="og:description" content="We have some of the top wardrobe designs across delhi, gurgaon, noida and India, we have some of the largest collection of modular wardrobes across Delhi - India." />
+
+
   
     </head>
       <ProgressBar />

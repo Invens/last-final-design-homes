@@ -103,7 +103,7 @@ const nextConfig = {
       },
       {
         source: '/mandir-designs',
-        destination: '/modular-interiors/mandir',
+        destination: '/modular-interiors/mandir-designs',
       },
       {
         source: '/chest-of-drawer-designs',
@@ -434,7 +434,7 @@ const nextConfig = {
       },
       {
         source: '/mandir-designs',
-        destination: '/modular-interiors/mandir',
+        destination: '/modular-interiors/mandir-designs',
       },
       {
         source: '/chest-of-drawer-designs',
