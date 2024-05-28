@@ -8,7 +8,8 @@ import { ThemeProvider } from './themeContext'
 import store from '../components/redux/store'
 import Script from 'next/script'
 import Head from 'next/head'
-import Animation from './animation/page'
+
+import ScrollProgressCircle from '../components/ScrollProgress'
 
 const bioRhyme = BioRhyme({
   weight: '400',
@@ -62,9 +63,10 @@ export default function RootLayout({ children }) {
             {/* Overlay Animation */}
             {/* <div>
 
-            <Animation />
+          
             </div> */}
             {/* Content */}
+            <ScrollProgressCircle />
             <div>{children}</div>
           </SpaceProvider>
         </ThemeProvider>
