@@ -29,9 +29,9 @@ const AccordionSection = () => {
     {
       id: 3,
       heading:
-        'What are the other services that you do apart from wardrobes, as we do need other interior services as well. ?',
+        'What are the other services that you do apart from Interiors and Architecturals Services, Modular Kitchens & Wardrobes, as we do need other interior services as well. ?',
       content:
-        'We are doing Complete End to End Interiors, Architectural Services, Modular Interiors like, Modular Kitchens, TV Units, Partitions, Shoe Racks, Bar Units, Storage units like chest of drawers, side tables, crockery units, bar units, wall niche units, Mandirs, Glass Partitions, Complete End to End Interiors, Complete Architectural Services including any Structural Engineering Works. We have a team of 27 architects, interior designers working round the clock on projects across Delhi - NCR. Apart from that we are associated with more than 950+ architects, interior designers, builders, decor vendors across North India. Check out Our Official Website for Top Modular Modular Kitchens & Wardrobe works www.designindiankichen.com & www.designindianwardrobe.com . ',
+        'We are doing Complete End to End Interiors, Architectural Services, Modular Interiors like, Modular Kitchens, TV Units, Partitions, Shoe Racks, Bar Units, Storage units like chest of drawers, side tables, crockery units, bar units, wall niche units, Mandirs, Glass Partitions, Complete End to End Interiors, Complete Architectural Services including any Structural Engineering Works. We have a team of 27 architects, interior designers working round the clock on projects across Delhi - NCR. Apart from that we are associated with more than 950+ architects, interior designers, builders, decor vendors across North India. Check out Our Official Website for Top Modular Modular Kitchens & Wardrobe works www.designindiankichen.com & www.designindianwardrobe.com .',
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const AccordionSection = () => {
       heading:
         'How can we understand that the quality and pricing you offer is correct with the market prices?',
       content:
-        'It has been more than 16 years we have been in the market and since more than 11 years we have been running a policy that, BRING us any quotes across North India and we assure you FLAT 7% less on that. This is the price commitment we offer, henceforth our quotes offered have 100% written guarantee across the Town. This is all due to our extensively spread team members, professional & certified architects, interior designers, project managers, our In-House Manufacturing Units, controlled production planning, bulk purchases, being distributors of multiple top brands and our organized structure of turnkey planning and delivering materials enables us to give you better prices than any vendor across the City. Connect with Us Today. ',
+        'It is been more than 16 years we have been in the market and since more than 11 years we have been running a policy that, BRING us any quotes across North India and we assure you FLAT 7% less on that. This is the price commitment we offer, henceforth our quotes offered have 100% written guarantee across the Town. This is all due to our extensively spread team members, professional & certified architects, interior designers, project managers, our In-House Manufacturing Units, controlled production planning, bulk purchases, being distributors of multiple top brands and our organized structure of turnkey planning and delivering materials enables us to give you better prices than any vendor across the City. Connect with Us Today.',
     },
     {
       id: 6,
@@ -59,7 +59,7 @@ const AccordionSection = () => {
       heading:
         'Is it better to get a custom built wardrobe for my residence or order something online due to very cheap prices available?',
       content:
-        'This is an important point, where we must understand differences between the materials used, a set static design by online sales companies and material used by our Brand. This plays a major role, if the purpose of usage is short term & temporary we can offer better prices than any online source using similar materials. But if looking for a permanent fixture or some detailed design, for that we suggest you to understand the materials specifications and the custom requirements and then make a call. ',
+        'This is an important point, where we must understand differences between the materials used, a set static design by online sales companies and material used by our Brand. This plays a major role, if the purpose of usage is short term & temporary we can offer better prices than any online source using similar materials. But if looking for a permanent fixture or some detailed design, for that we suggest you to understand the materials specifications and the custom requirements and then make a call.',
     },
     {
       id: 8,
@@ -73,12 +73,12 @@ const AccordionSection = () => {
       heading:
         'How can we check your reviews or see your Live projects online, where its not 3d pictures but Live installation and final handover goin on?',
       content:
-        'Regarding that, we request you visit our Reels sections on instagram, Facebook, Youtube as per below links or right side floating tab links and also visit our boutique office in Connaught Place. Whenever you connect with us, We would be having  some Live sites going on along with final handovers, you can always get regular Videos from those sites. SO why Delay,  Book a Site Visit with Us TODAY.',
+        'Regarding that, we request you visit our Reels sections on instagram, Facebook, Youtube as per below links or right side floating tab links and also visit our boutique office in Connaught Place. Whenever you connect with us, We would be having some Live sites going on along with final handovers, you can always get regular Videos from those sites. SO why Delay, Book a Site Visit with Us TODAY.',
     },
     {
       id: 10,
       heading:
-        'What are the Price ranges of wardrobes in Delhi - NCR, right from the basic to the most luxurious product.',
+        'What are the Price ranges of Modular Interiors, Architectural Services, Modular Kitchens & Wardrobes across Delhi - NCR, right from the basic to the most luxurious product.',
       content:
         'End to End Interiors & Modular Kitchens quotes completely depend on material selections and specifications. Architectural services are custom and vary depending on the scope of works, hence it varies from project to project. We have Modular Wardrobes, TV Units, Vanities, etc starting from Rs 1150 - Rs 9500 per sqft. It all depends on the material specification and selections as mentioned. Just Connect with us to know more. We assure you Lowest Quotes Across New Delhi - NCR, this is our written guarantee.',
     },
