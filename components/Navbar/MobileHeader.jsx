@@ -929,12 +929,8 @@ const MobileHeader = () => {
                       </div>
 
                       <Image
-                        src={
-                          hoveredItem
-                            ? getImageForItem(hoveredItem)
-                            : '/images/top4.jpeg'
-                        }
-                        alt=""
+                        src="/images/top4.jpeg"
+                        alt="top "
                         className="shadow-sm  border-2"
                         width={550}
                         height={250} // Set your desired width and height
@@ -1127,11 +1123,7 @@ const MobileHeader = () => {
                         </div>
                         <div className="mt-4">
                           <Image
-                            src={
-                              hoveredItem
-                                ? getImageForItem(hoveredItem)
-                                : '/images/top4.jpeg'
-                            }
+                            src="/images/top4.jpeg"
                             alt=""
                             className="shadow-sm  border-2"
                             width={550}
@@ -1383,12 +1375,8 @@ const MobileHeader = () => {
                         </div>
                         <div className="mt-2">
                           <Image
-                            src={
-                              hoveredItem
-                                ? getImageForItem(hoveredItem)
-                                : '/images/top3.jpeg'
-                            }
-                            alt=""
+                            src="/images/top3.jpeg"
+                            alt="home"
                             className="shadow-sm rounded border-2"
                             width={550}
                             height={250}
@@ -1602,12 +1590,8 @@ const MobileHeader = () => {
                         </div>
                         <div className="">
                           <Image
-                            src={
-                              hoveredItem
-                                ? getImageForItem(hoveredItem)
-                                : '/images/top4.jpeg'
-                            }
-                            alt=""
+                            src='/images/top4.jpeg'
+                            alt="wardrobe"
                             className="shadow-sm border-2 mt-4"
                             width={550}
                             height={250}
