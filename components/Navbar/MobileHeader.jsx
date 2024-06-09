@@ -1430,6 +1430,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
+                                  <Link href="/types-of-wardrobe">
                                   <h3
                                     className="text-white text-xs text-nowrap p-[2px] bg-black"
                                     onMouseOver={() =>
@@ -1438,6 +1439,7 @@ const MobileHeader = () => {
                                   >
                                     Types of Wardrobes
                                   </h3>
+                                  </Link>
                                   <p className="text-xs text-black  text-left">
                                     Connect with the top end to end interior
                                     Brand
@@ -1458,6 +1460,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
+                                  <Link href="/wardrobe-design-gallery-india/luxury-wardrobes-designs">
                                   <h3
                                     className="text-white text-xs text-nowrap p-[2px] bg-black"
                                     onMouseOver={() =>
@@ -1466,6 +1469,7 @@ const MobileHeader = () => {
                                   >
                                     Luxury Wardrobes
                                   </h3>
+                                  </Link>
                                   <p className="text-xs text-black text-left">
                                     Connect with the top end to end interior
                                     Brand
@@ -1486,6 +1490,7 @@ const MobileHeader = () => {
                                   }}
                                 />
                                 <div>
+                                  <Link href="/wardrobe-design-gallery-india/wardrobe-designs">
                                   <h3
                                     className="text-white text-xs text-nowrap p-[2px] bg-black"
                                     onMouseOver={() =>
@@ -1494,6 +1499,7 @@ const MobileHeader = () => {
                                   >
                                     Wardrobe Designs
                                   </h3>
+                                  </Link>
                                   <p className="text-xs text-left">
                                     Connect with the top end to end interior
                                     Brand
@@ -1518,6 +1524,7 @@ const MobileHeader = () => {
                               />
 
                               <div>
+                                <Link href="/wardrobe-design-gallery-india/lacquer-glass-wardrobe-designs">
                                 <h3
                                   className="text-white text-xs text-nowrap p-[2px] bg-black "
                                   onMouseOver={() =>
@@ -1526,6 +1533,7 @@ const MobileHeader = () => {
                                 >
                                   Lacquer Glass Wardrobe
                                 </h3>
+                                </Link>
                                 <p className="text-xs text-left">
                                   Connect with the top end to end interior Brand
                                 </p>
@@ -1546,6 +1554,7 @@ const MobileHeader = () => {
                               />
 
                               <div>
+                                <Link href="/wardrobe-design-gallery-india/wardrobe-renovations-services">
                                 <h3
                                   className=" text-white text-xs text-nowrap p-[2px] bg-black"
                                   onMouseOver={() =>
@@ -1554,6 +1563,7 @@ const MobileHeader = () => {
                                 >
                                   Wardrobe Renovation Services
                                 </h3>
+                                </Link>
                                 <p className="text-xs text-left">
                                   Connect with the top end to end interior Brand
                                 </p>
