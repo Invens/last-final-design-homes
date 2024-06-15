@@ -1879,6 +1879,9 @@ const Header = () => {
             <Link href="/interior-digest-magazine-india">
               <h3 className="">Magazine</h3>
             </Link>
+            <Link href="/top-interior-designing-architecture-brand-in-delhi-ncr-india">
+              <h3 className="">Inspire Me</h3>
+            </Link>
           </ul>
           <div className="flex flex-col gap-2 py-4">
             {' '}
